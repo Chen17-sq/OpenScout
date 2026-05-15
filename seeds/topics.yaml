@@ -1,0 +1,24 @@
+# OpenScout topic taxonomy. Add subtopics here as we narrow.
+# Slugs must be stable — they're used as join keys.
+
+topics:
+  - slug: embodied
+    name: Embodied AI
+    name_zh: 具身智能
+    description: |
+      Robotics, manipulation, locomotion, dexterous skills, sim-to-real, VLA,
+      foundation models for control, humanoid policies.
+
+  - slug: world_models
+    name: World Models
+    name_zh: 世界模型
+    description: |
+      Video prediction, latent dynamics, learned simulators, JEPA-family models,
+      generative simulators for embodied / autonomous-driving worlds.
+
+  - slug: ai4sci
+    name: AI for Science
+    name_zh: AI for Science
+    description: |
+      Protein structure / design, molecular generation, materials discovery,
+      crystallography, ML potentials, scientific foundation models.

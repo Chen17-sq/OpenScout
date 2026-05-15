@@ -1,0 +1,179 @@
+# Anchor researchers — the roots from which we discover 徒子徒孙 (mentees and grand-mentees).
+#
+# These are NOT necessarily the cover targets themselves. They're senior figures used
+# to:
+#   1. Build the lineage graph (advisor edges flow from these nodes downward)
+#   2. Bias topic classification (papers co-authored by anchors get topic priors)
+#   3. Seed the institutional prestige map
+#
+# Do NOT add emails, phones, or any PII here. Public homepages, Twitter handles, GitHub
+# handles are fine. The scraper fills in contact info into the DB (never into this YAML).
+#
+# Fields:
+#   slug              required, kebab-case, stable
+#   name_en           required
+#   name_zh           optional, Chinese name
+#   current_affiliation  must match an entry in institutions.yaml
+#   current_role      phd / postdoc / incoming_ap / ap / associate / full / senior / industry
+#   bio               1-2 line English summary
+#   confidence_level  low / medium / high — for the affiliation+role at time of writing
+
+researchers:
+  # ─── Embodied AI ────────────────────────────────────────────────────────────
+  - slug: shuran-song
+    name_en: Shuran Song
+    name_zh: 宋舒然
+    current_affiliation: Stanford University
+    current_role: ap
+    bio: "Robotics & manipulation; tactile and visuomotor policies. Joined Stanford from Columbia."
+    confidence_level: high
+
+  - slug: chelsea-finn
+    name_en: Chelsea Finn
+    current_affiliation: Stanford University
+    current_role: ap
+    bio: "Meta-learning, robot learning, RLHF for robots."
+    confidence_level: high
+
+  - slug: sergey-levine
+    name_en: Sergey Levine
+    current_affiliation: UC Berkeley
+    current_role: associate
+    bio: "Deep RL for robotics, offline RL, foundation models for control."
+    confidence_level: high
+
+  - slug: pieter-abbeel
+    name_en: Pieter Abbeel
+    current_affiliation: UC Berkeley
+    current_role: full
+    bio: "Robot learning, imitation, world models; co-founder Covariant."
+    confidence_level: high
+
+  - slug: yuke-zhu
+    name_en: Yuke Zhu
+    name_zh: 朱玉珂
+    current_affiliation: University of Texas at Austin
+    current_role: ap
+    bio: "Embodied AI, generalist agents, robot foundation models."
+    confidence_level: high
+
+  - slug: deepak-pathak
+    name_en: Deepak Pathak
+    current_affiliation: Carnegie Mellon University
+    current_role: ap
+    bio: "Self-supervised learning, curiosity-driven exploration, robotics."
+    confidence_level: high
+
+  - slug: he-wang
+    name_en: He Wang
+    name_zh: 王鹤
+    current_affiliation: Peking University
+    current_role: ap
+    bio: "Embodied AI, manipulation, 3D vision; founder of Galbot."
+    confidence_level: high
+
+  - slug: cewu-lu
+    name_en: Cewu Lu
+    name_zh: 卢策吾
+    current_affiliation: Shanghai Jiao Tong University
+    current_role: full
+    bio: "Embodied AI, manipulation, scene understanding."
+    confidence_level: high
+
+  # ─── World Models ───────────────────────────────────────────────────────────
+  - slug: yann-lecun
+    name_en: Yann LeCun
+    current_affiliation: New York University
+    current_role: full
+    bio: "Chief AI Scientist at Meta; JEPA, world models, self-supervised learning."
+    confidence_level: high
+
+  - slug: danijar-hafner
+    name_en: Danijar Hafner
+    current_affiliation: DeepMind
+    current_role: industry
+    bio: "Dreamer family of world models, Dreamer V3, planning in latent space."
+    confidence_level: high
+
+  - slug: david-ha
+    name_en: David Ha
+    current_affiliation: Sakana AI
+    current_role: industry
+    bio: "Co-founder Sakana AI; the original 'World Models' (2018) paper."
+    confidence_level: high
+
+  - slug: sherry-yang
+    name_en: Sherry Yang
+    name_zh: 杨梦娇
+    current_affiliation: UC Berkeley
+    current_role: ap
+    bio: "Generative simulators for decision making; ex-Google Brain / DeepMind."
+    confidence_level: medium
+
+  - slug: yilun-du
+    name_en: Yilun Du
+    name_zh: 杜逸伦
+    current_affiliation: Harvard University
+    current_role: ap
+    bio: "Energy-based models, compositional generation, world models for planning."
+    confidence_level: medium
+
+  - slug: jun-zhu
+    name_en: Jun Zhu
+    name_zh: 朱军
+    current_affiliation: Tsinghua University
+    current_role: full
+    bio: "Bayesian deep learning, generative models, world models; founder Shengshu AI."
+    confidence_level: high
+
+  # ─── AI for Science ─────────────────────────────────────────────────────────
+  - slug: john-jumper
+    name_en: John Jumper
+    current_affiliation: DeepMind
+    current_role: industry
+    bio: "AlphaFold 2/3 lead. 2024 Nobel Prize in Chemistry."
+    confidence_level: high
+
+  - slug: weinan-e
+    name_en: Weinan E
+    name_zh: 鄂维南
+    current_affiliation: Princeton University
+    current_role: full
+    bio: "ML for science, deep potentials, computational mathematics. Joint Princeton/PKU."
+    confidence_level: high
+
+  - slug: linfeng-zhang
+    name_en: Linfeng Zhang
+    name_zh: 张林峰
+    current_affiliation: DP Technology
+    current_role: industry
+    bio: "Founder/CEO DP Technology (深势科技); deep potentials, AI for molecular dynamics."
+    confidence_level: high
+
+  - slug: tess-smidt
+    name_en: Tess Smidt
+    current_affiliation: MIT
+    current_role: ap
+    bio: "Equivariant neural networks, e3nn, ML for materials and physics."
+    confidence_level: high
+
+  - slug: frank-noe
+    name_en: Frank Noé
+    current_affiliation: Microsoft Research
+    current_role: industry
+    bio: "Boltzmann generators, ML for molecular simulation."
+    confidence_level: medium
+
+  - slug: regina-barzilay
+    name_en: Regina Barzilay
+    current_affiliation: MIT
+    current_role: full
+    bio: "ML for clinical & molecular discovery; co-leads Jameel Clinic."
+    confidence_level: high
+
+  - slug: tommi-jaakkola
+    name_en: Tommi Jaakkola
+    current_affiliation: MIT
+    current_role: full
+    bio: "Generative models, ML for drug discovery, diffusion-based molecular design."
+    confidence_level: high

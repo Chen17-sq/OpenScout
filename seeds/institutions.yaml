@@ -1,0 +1,88 @@
+# Institution seeds. Keep names canonical (English) — the scraper joins on `name`.
+
+institutions:
+  # US academia
+  - name: Stanford University
+    name_zh: 斯坦福大学
+    type: university
+    country: US
+  - name: UC Berkeley
+    name_zh: 加州大学伯克利分校
+    type: university
+    country: US
+  - name: MIT
+    name_zh: 麻省理工学院
+    type: university
+    country: US
+  - name: Carnegie Mellon University
+    name_zh: 卡内基梅隆大学
+    type: university
+    country: US
+  - name: Harvard University
+    name_zh: 哈佛大学
+    type: university
+    country: US
+  - name: Princeton University
+    name_zh: 普林斯顿大学
+    type: university
+    country: US
+  - name: New York University
+    name_zh: 纽约大学
+    type: university
+    country: US
+  - name: University of Texas at Austin
+    name_zh: 德州大学奥斯汀分校
+    type: university
+    country: US
+  - name: Northeastern University
+    name_zh: 东北大学（美）
+    type: university
+    country: US
+
+  # CN academia
+  - name: Tsinghua University
+    name_zh: 清华大学
+    type: university
+    country: CN
+  - name: Peking University
+    name_zh: 北京大学
+    type: university
+    country: CN
+  - name: Shanghai Jiao Tong University
+    name_zh: 上海交通大学
+    type: university
+    country: CN
+
+  # International / industry
+  - name: Free University of Berlin
+    name_zh: 柏林自由大学
+    type: university
+    country: DE
+  - name: Mila
+    name_zh: 蒙特利尔学习算法研究所
+    type: lab
+    country: CA
+  - name: DeepMind
+    name_zh: 谷歌 DeepMind
+    type: company
+    country: UK
+  - name: Meta AI
+    name_zh: Meta AI
+    type: company
+    country: US
+  - name: Microsoft Research
+    name_zh: 微软研究院
+    type: company
+    country: US
+  - name: OpenAI
+    name_zh: OpenAI
+    type: company
+    country: US
+  - name: Sakana AI
+    name_zh: Sakana AI
+    type: company
+    country: JP
+  - name: DP Technology
+    name_zh: 深势科技
+    type: company
+    country: CN

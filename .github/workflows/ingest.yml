@@ -1,0 +1,29 @@
+name: ingest
+
+on:
+  schedule:
+    # 01:00 UTC = 09:00 Beijing — matches KS tracker cadence.
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: POST /admin/ingest
+        env:
+          API_URL: ${{ vars.API_URL }}
+          INGEST_SECRET: ${{ secrets.INGEST_SECRET }}
+        run: |
+          if [ -z "$API_URL" ] || [ -z "$INGEST_SECRET" ]; then
+            echo "::error::Set repo variable API_URL and secret INGEST_SECRET first."
+            exit 1
+          fi
+          curl -fsS --max-time 600 -X POST \
+            -H "X-Ingest-Secret: $INGEST_SECRET" \
+            -H "Content-Type: application/json" \
+            "$API_URL/admin/ingest" | tee response.json
+          echo "Daily run complete."

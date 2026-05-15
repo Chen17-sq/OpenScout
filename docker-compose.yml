@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: openscout-postgres
+    environment:
+      POSTGRES_USER: openscout
+      POSTGRES_PASSWORD: openscout_dev
+      POSTGRES_DB: openscout
+    ports:
+      - "5433:5432"
+    volumes:
+      - openscout_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U openscout"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  openscout_postgres:

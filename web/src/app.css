@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Times New Roman', 'STKaiti', Georgia, serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Menlo', monospace;
+  --color-paper: #faf9f4;
+  --color-ink: #111111;
+  --color-rule: #1a1a1a;
+  --color-accent: #c00000;
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+.masthead {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.rule-top {
+  border-top: 4px solid var(--color-rule);
+}
+.rule-bottom {
+  border-bottom: 4px solid var(--color-rule);
+}

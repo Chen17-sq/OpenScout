@@ -1,0 +1,220 @@
+"""SQLAlchemy 2.x models for OpenScout.
+
+Core entities:
+- Researcher / Institution / Topic / Paper
+- PaperAuthor, PaperTopic, ResearcherTopic — many-to-many
+- Relationship — advisor/student/coauthor graph
+- Affiliation — researcher × institution over time
+- Signal — recent activity events (paper/tweet/talk/repo/AP-announcement)
+- DailyBrief — the rendered daily report
+"""
+
+from datetime import date, datetime
+from typing import Optional
+
+from sqlalchemy import (
+    JSON,
+    Boolean,
+    Date,
+    DateTime,
+    Float,
+    ForeignKey,
+    Integer,
+    String,
+    Text,
+    func,
+)
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+
+
+class Base(DeclarativeBase):
+    pass
+
+
+class Institution(Base):
+    __tablename__ = "institutions"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(255), unique=True, index=True)
+    name_zh: Mapped[Optional[str]] = mapped_column(String(255))
+    type: Mapped[Optional[str]] = mapped_column(String(32))  # university / lab / company
+    country: Mapped[Optional[str]] = mapped_column(String(8))
+    parent_id: Mapped[Optional[int]] = mapped_column(ForeignKey("institutions.id"))
+    homepage_url: Mapped[Optional[str]] = mapped_column(Text)
+    prestige_score: Mapped[Optional[float]] = mapped_column(Float)
+
+
+class Topic(Base):
+    __tablename__ = "topics"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    slug: Mapped[str] = mapped_column(String(64), unique=True, index=True)
+    name: Mapped[str] = mapped_column(String(128))
+    name_zh: Mapped[Optional[str]] = mapped_column(String(128))
+    parent_id: Mapped[Optional[int]] = mapped_column(ForeignKey("topics.id"))
+    description: Mapped[Optional[str]] = mapped_column(Text)
+
+
+class Researcher(Base):
+    __tablename__ = "researchers"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    slug: Mapped[str] = mapped_column(String(128), unique=True, index=True)
+
+    semantic_scholar_id: Mapped[Optional[str]] = mapped_column(String(64), unique=True)
+    orcid: Mapped[Optional[str]] = mapped_column(String(32), unique=True)
+    arxiv_author_id: Mapped[Optional[str]] = mapped_column(String(64))
+
+    name_en: Mapped[str] = mapped_column(String(255), index=True)
+    name_zh: Mapped[Optional[str]] = mapped_column(String(255))
+    email: Mapped[Optional[str]] = mapped_column(String(255))
+    homepage_url: Mapped[Optional[str]] = mapped_column(Text)
+    twitter_handle: Mapped[Optional[str]] = mapped_column(String(64))
+    github_handle: Mapped[Optional[str]] = mapped_column(String(64))
+    zhihu_url: Mapped[Optional[str]] = mapped_column(Text)
+    linkedin_url: Mapped[Optional[str]] = mapped_column(Text)
+    photo_url: Mapped[Optional[str]] = mapped_column(Text)
+
+    current_affiliation_id: Mapped[Optional[int]] = mapped_column(ForeignKey("institutions.id"))
+    current_role: Mapped[Optional[str]] = mapped_column(String(32))
+    # phd / postdoc / incoming_ap / ap / associate / full / industry_researcher / senior
+    career_stage_year: Mapped[Optional[int]] = mapped_column(Integer)
+    graduation_year_estimate: Mapped[Optional[int]] = mapped_column(Integer)
+    advisor_id: Mapped[Optional[int]] = mapped_column(ForeignKey("researchers.id"))
+
+    bio: Mapped[Optional[str]] = mapped_column(Text)
+    bio_zh: Mapped[Optional[str]] = mapped_column(Text)
+    confidence_level: Mapped[str] = mapped_column(String(16), default="medium")
+    # low / medium / high — applied to identity disambiguation + advisor inference
+
+    person_score: Mapped[Optional[float]] = mapped_column(Float)
+    trajectory_score: Mapped[Optional[float]] = mapped_column(Float)
+    investability_score: Mapped[Optional[float]] = mapped_column(Float)
+
+    first_seen_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
+    )
+
+
+class Paper(Base):
+    __tablename__ = "papers"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    arxiv_id: Mapped[Optional[str]] = mapped_column(String(32), unique=True, index=True)
+    semantic_scholar_id: Mapped[Optional[str]] = mapped_column(String(64), unique=True)
+    doi: Mapped[Optional[str]] = mapped_column(String(128))
+
+    title: Mapped[str] = mapped_column(Text)
+    abstract: Mapped[Optional[str]] = mapped_column(Text)
+    abstract_zh: Mapped[Optional[str]] = mapped_column(Text)
+    one_liner_zh: Mapped[Optional[str]] = mapped_column(Text)  # like KS blurbs_zh
+
+    published_at: Mapped[Optional[date]] = mapped_column(Date, index=True)
+    venue: Mapped[Optional[str]] = mapped_column(String(128))
+    pdf_url: Mapped[Optional[str]] = mapped_column(Text)
+    code_url: Mapped[Optional[str]] = mapped_column(Text)
+
+    citation_count: Mapped[int] = mapped_column(Integer, default=0)
+    github_stars: Mapped[Optional[int]] = mapped_column(Integer)
+    buzz_score: Mapped[Optional[float]] = mapped_column(Float)
+    work_score: Mapped[Optional[float]] = mapped_column(Float)
+
+    first_seen_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), index=True
+    )
+
+
+class PaperAuthor(Base):
+    __tablename__ = "paper_authors"
+
+    paper_id: Mapped[int] = mapped_column(
+        ForeignKey("papers.id", ondelete="CASCADE"), primary_key=True
+    )
+    researcher_id: Mapped[int] = mapped_column(
+        ForeignKey("researchers.id", ondelete="CASCADE"), primary_key=True
+    )
+    position: Mapped[int] = mapped_column(Integer)  # 1-indexed
+    is_corresponding: Mapped[bool] = mapped_column(Boolean, default=False)
+
+
+class PaperTopic(Base):
+    __tablename__ = "paper_topics"
+
+    paper_id: Mapped[int] = mapped_column(
+        ForeignKey("papers.id", ondelete="CASCADE"), primary_key=True
+    )
+    topic_id: Mapped[int] = mapped_column(
+        ForeignKey("topics.id", ondelete="CASCADE"), primary_key=True
+    )
+
+
+class ResearcherTopic(Base):
+    __tablename__ = "researcher_topics"
+
+    researcher_id: Mapped[int] = mapped_column(
+        ForeignKey("researchers.id", ondelete="CASCADE"), primary_key=True
+    )
+    topic_id: Mapped[int] = mapped_column(
+        ForeignKey("topics.id", ondelete="CASCADE"), primary_key=True
+    )
+    weight: Mapped[Optional[float]] = mapped_column(Float)
+
+
+class Relationship(Base):
+    __tablename__ = "relationships"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    from_researcher_id: Mapped[int] = mapped_column(ForeignKey("researchers.id"), index=True)
+    to_researcher_id: Mapped[int] = mapped_column(ForeignKey("researchers.id"), index=True)
+    type: Mapped[str] = mapped_column(String(32))  # advisor / student / coauthor / sibling
+    confidence: Mapped[str] = mapped_column(String(16), default="medium")
+    evidence: Mapped[Optional[str]] = mapped_column(Text)
+    started_at: Mapped[Optional[date]] = mapped_column(Date)
+    ended_at: Mapped[Optional[date]] = mapped_column(Date)
+
+
+class Affiliation(Base):
+    __tablename__ = "affiliations"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    researcher_id: Mapped[int] = mapped_column(ForeignKey("researchers.id"), index=True)
+    institution_id: Mapped[int] = mapped_column(ForeignKey("institutions.id"), index=True)
+    role: Mapped[Optional[str]] = mapped_column(String(64))
+    started_at: Mapped[Optional[date]] = mapped_column(Date)
+    ended_at: Mapped[Optional[date]] = mapped_column(Date)
+    is_current: Mapped[bool] = mapped_column(Boolean, default=False)
+
+
+class Signal(Base):
+    __tablename__ = "signals"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    researcher_id: Mapped[int] = mapped_column(ForeignKey("researchers.id"), index=True)
+    type: Mapped[str] = mapped_column(String(32), index=True)
+    # paper / tweet / talk / repo / affiliation_change / ap_announcement / preprint
+    payload: Mapped[Optional[dict]] = mapped_column(JSON)
+    occurred_at: Mapped[Optional[datetime]] = mapped_column(DateTime(timezone=True), index=True)
+    detected_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+    source: Mapped[Optional[str]] = mapped_column(String(64))
+
+
+class DailyBrief(Base):
+    __tablename__ = "daily_briefs"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    brief_date: Mapped[date] = mapped_column(Date, unique=True, index=True)
+    volume: Mapped[int] = mapped_column(Integer, default=1)
+    issue: Mapped[int] = mapped_column(Integer)
+    rendered_md: Mapped[Optional[str]] = mapped_column(Text)
+    meta: Mapped[Optional[dict]] = mapped_column("metadata", JSON)
+    generated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
