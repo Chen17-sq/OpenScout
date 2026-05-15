@@ -66,8 +66,6 @@ def load_researchers(db: Session) -> int:
         existing = db.execute(
             select(Researcher).where(Researcher.slug == r["slug"])
         ).scalar_one_or_none()
-        if existing:
-            continue
         # Resolve current_affiliation by name if given as string
         affil_name = r.pop("current_affiliation", None)
         if affil_name:
@@ -76,6 +74,15 @@ def load_researchers(db: Session) -> int:
             ).scalar_one_or_none()
             if inst:
                 r["current_affiliation_id"] = inst.id
+
+        if existing:
+            # Upsert hand-curated fields that may have been added since first seed
+            # (e.g. projects added to the YAML after initial load).
+            if r.get("projects") and not existing.projects:
+                existing.projects = r["projects"]
+                n += 1
+            continue
+
         db.add(Researcher(**r))
         n += 1
     db.flush()

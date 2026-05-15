@@ -1,40 +1,29 @@
 <script lang="ts">
+  import { t } from './i18n';
   import type { StoryItem } from './api';
   import { arxivUrl, blurb } from './api';
 
   let {
-    leftLabel = 'Left',
-    leftMeta = '',
-    rightLabel = 'Right',
-    rightMeta = '',
     leftItems = [],
     rightItems = [],
     rightAccent = false,
-  }: {
-    leftLabel: string;
-    leftMeta?: string;
-    rightLabel: string;
-    rightMeta?: string;
-    leftItems: StoryItem[];
-    rightItems: StoryItem[];
-    rightAccent?: boolean;
-  } = $props();
+  }: { leftItems: StoryItem[]; rightItems: StoryItem[]; rightAccent?: boolean } = $props();
 </script>
 
 <section class="hero">
   <div class="hero-head">
-    <div class="label">FRONT PAGE</div>
-    <div class="h">Today's Edition</div>
-    <div class="meta">Top 6 each side · auto-ranked</div>
+    <div class="label">{$t('hero.label')}</div>
+    <div class="h">{$t('hero.title')}</div>
+    <div class="meta">{$t('hero.meta')}</div>
   </div>
   <div class="hero-cols">
     <div class="hero-col">
       <div class="col-label">
-        <span>{leftLabel}</span>
-        <span class="col-meta">{leftMeta}</span>
+        <span>{$t('hero.leftLabel')}</span>
+        <span class="col-meta">{$t('hero.leftMeta')}</span>
       </div>
       {#if leftItems.length === 0}
-        <div class="hero-empty">今日无候选</div>
+        <div class="hero-empty">{$t('hero.emptyLeft')}</div>
       {:else}
         {#each leftItems.slice(0, 6) as item, i}
           <div class="hero-story">
@@ -47,12 +36,12 @@
               <div class="smeta">
                 {item.researcher.name_en}{item.researcher.name_zh
                   ? ` · ${item.researcher.name_zh}`
-                  : ''} · {item.paper.n_authors} authors
+                  : ''} · {item.paper.n_authors} {$t('hero.rankAuthors')}
               </div>
             </div>
             <div class="right">
               <div class="v">{item.paper.n_authors}</div>
-              <div class="l">authors</div>
+              <div class="l">{$t('hero.rankAuthorsLabel')}</div>
             </div>
           </div>
         {/each}
@@ -60,11 +49,11 @@
     </div>
     <div class="hero-col" class:is-accent={rightAccent}>
       <div class="col-label">
-        <span>{rightLabel}</span>
-        <span class="col-meta">{rightMeta}</span>
+        <span>{$t('hero.rightLabel')}</span>
+        <span class="col-meta">{$t('hero.rightMeta')}</span>
       </div>
       {#if rightItems.length === 0}
-        <div class="hero-empty">今日无更新</div>
+        <div class="hero-empty">{$t('hero.emptyRight')}</div>
       {:else}
         {#each rightItems.slice(0, 6) as item, i}
           <div class="hero-story">

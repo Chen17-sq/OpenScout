@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { t } from './i18n';
   import type { StoryItem } from './api';
   import { arxivUrl, blurb, roleLabel } from './api';
 
@@ -7,7 +8,7 @@
     title,
     meta = '',
     items,
-    emptyMessage = '_今日无候选_',
+    emptyMessage = '',
   }: {
     label: string;
     title: string;
@@ -27,7 +28,7 @@
   {#if items.length === 0}
     <div class="story-card">
       <div></div>
-      <div class="blurb">{emptyMessage}</div>
+      <div class="blurb">{emptyMessage || $t('researcher.emptySnapshot')}</div>
       <div></div>
     </div>
   {:else}
@@ -45,7 +46,7 @@
             {#if item.researcher.current_role}
               · {roleLabel(item.researcher.current_role)}
             {/if}
-            · 第 1 作者 · {item.paper.n_authors} 人合作
+            · #1 · {item.paper.n_authors} {$t('hero.rankAuthorsLabel')}
           </div>
           {#if item.paper.one_liner_zh}
             <div class="blurb">{item.paper.one_liner_zh}</div>
@@ -53,14 +54,14 @@
             <div class="blurb">{blurb(item.paper.abstract, 250)}</div>
           {/if}
           {#if item.reasoning}
-            <div class="reason">▸ 选中原因：{item.reasoning}</div>
+            <div class="reason">▸ {item.reasoning}</div>
           {/if}
         </div>
         <div class="right">
           <span class="v">{item.paper.n_authors}</span>
-          <div>合作</div>
-          {#each item.paper.topics as t}
-            <div class="topic">{t}</div>
+          <div>{$t('hero.rankAuthorsLabel')}</div>
+          {#each item.paper.topics as topic}
+            <div class="topic">{topic}</div>
           {/each}
         </div>
       </article>

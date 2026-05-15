@@ -1,39 +1,74 @@
 <script lang="ts">
+  import { t } from '$lib/i18n';
   import { roleLabel } from '$lib/api';
 
   let { data } = $props();
   const list = $derived(data.data?.items ?? []);
   const total = $derived(data.data?.total ?? 0);
+
+  const flag = (cc: string | null) => {
+    if (!cc) return '';
+    return cc.toUpperCase().replace(/./g, (c) => String.fromCodePoint(0x1f1a5 + c.charCodeAt(0)));
+  };
 </script>
 
 <section>
   <div class="section-head">
-    <div class="label">Roster</div>
-    <div class="h">All Researchers</div>
-    <div class="meta">{total.toLocaleString()} tracked · filter via querystring</div>
+    <div class="label">{$t('list.label')}</div>
+    <div class="h">{$t('list.title')}</div>
+    <div class="meta">{$t('list.metaTotal', { n: total.toLocaleString() })}</div>
   </div>
 
-  <div class="px-7 pt-4 pb-2 font-mono text-[11px] uppercase text-n600 tracking-wider">
-    <a href="/researchers" class:underline={!data.filters.confidence && !data.filters.stage}>All</a>
-    {' · '}
-    <a href="/researchers?confidence=high" class:underline={data.filters.confidence === 'high'}>High confidence (anchors)</a>
-    {' · '}
-    <a href="/researchers?confidence=low" class:underline={data.filters.confidence === 'low'}>Low (auto-discovered)</a>
-    {' · '}
-    <a href="/researchers?topic=embodied" class:underline={data.filters.topic === 'embodied'}>具身</a>
-    {' · '}
-    <a href="/researchers?topic=world_models" class:underline={data.filters.topic === 'world_models'}>世界模型</a>
-    {' · '}
-    <a href="/researchers?topic=ai4sci" class:underline={data.filters.topic === 'ai4sci'}>AI4Sci</a>
+  <div class="filter-strip">
+    <div class="group">
+      <a href="/researchers" class:active={!data.filters.confidence && !data.filters.topic && !data.filters.country}>
+        {$t('list.filterAll')}
+      </a>
+      <a href="/researchers?confidence=high" class:active={data.filters.confidence === 'high'}>
+        {$t('list.filterHigh')}
+      </a>
+      <a href="/researchers?confidence=low" class:active={data.filters.confidence === 'low'}>
+        {$t('list.filterLow')}
+      </a>
+    </div>
+    <div class="group">
+      <a href="/researchers?topic=embodied" class:active={data.filters.topic === 'embodied'}>
+        {$t('list.filterEmbodied')}
+      </a>
+      <a href="/researchers?topic=world_models" class:active={data.filters.topic === 'world_models'}>
+        {$t('list.filterWorld')}
+      </a>
+      <a href="/researchers?topic=ai4sci" class:active={data.filters.topic === 'ai4sci'}>
+        {$t('list.filterAi4sci')}
+      </a>
+    </div>
+    <div class="group">
+      <a href="/researchers?country=CN" class:active={data.filters.country === 'CN'}>
+        🇨🇳 {$t('list.filterChina')}
+      </a>
+      <a href="/researchers?country=US" class:active={data.filters.country === 'US'}>
+        🇺🇸 {$t('list.filterUS')}
+      </a>
+    </div>
+    <div class="group sort">
+      <span class="sort-label">SORT</span>
+      <a href={`?${withSort('papers', data.filters)}`} class:active={(data.filters.sort ?? 'papers') === 'papers'}>{$t('list.sortByPapers')}</a>
+      <a href={`?${withSort('citations', data.filters)}`} class:active={data.filters.sort === 'citations'}>{$t('list.sortByCitations')}</a>
+      <a href={`?${withSort('h_index', data.filters)}`} class:active={data.filters.sort === 'h_index'}>{$t('list.sortByH')}</a>
+    </div>
   </div>
 
   <table class="board-table">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Role</th>
-        <th>Confidence</th>
-        <th class="text-right">Papers</th>
+        <th>{$t('list.colName')}</th>
+        <th>{$t('list.colRole')}</th>
+        <th>{$t('list.colCountry')}</th>
+        <th>{$t('list.colConfidence')}</th>
+        <th>{$t('list.colTags')}</th>
+        <th class="text-right">{$t('list.colCitations')}</th>
+        <th class="text-right">{$t('list.colH')}</th>
+        <th class="text-right">{$t('list.colPapers')}</th>
       </tr>
     </thead>
     <tbody>
@@ -44,18 +79,103 @@
             {#if r.name_zh}<span class="text-n500 font-serif"> · {r.name_zh}</span>{/if}
           </td>
           <td class="font-mono text-xs uppercase tracking-wider text-n600">{roleLabel(r.current_role)}</td>
+          <td class="font-mono text-xs">{r.country ? `${flag(r.country)} ${r.country}` : '—'}</td>
           <td>
             {#if r.confidence_level === 'high'}
-              <span class="badge anchor">Anchor</span>
+              <span class="badge anchor">{$t('researcher.confHigh')}</span>
             {:else if r.confidence_level === 'medium'}
-              <span class="badge">S2 verified</span>
+              <span class="badge">OpenAlex</span>
             {:else}
               <span class="badge" style="color:#737373;border-color:#a3a3a3">Auto</span>
             {/if}
           </td>
-          <td class="text-right font-mono">{r.n_papers}</td>
+          <td class="tag-cell">
+            {#if r.tags?.length}
+              {#each r.tags.slice(0, 3) as tag}
+                <a href={`/tags/${encodeURIComponent(tag.label)}`} class="mini-tag">{tag.label}</a>
+              {/each}
+            {:else}—{/if}
+          </td>
+          <td class="text-right font-mono">{(r.citation_count ?? 0).toLocaleString()}</td>
+          <td class="text-right font-mono">{r.h_index ?? '—'}</td>
+          <td class="text-right font-mono">{r.n_papers ?? 0}</td>
         </tr>
       {/each}
     </tbody>
   </table>
 </section>
+
+<script context="module" lang="ts">
+  function withSort(s: string, filters: Record<string, string>): string {
+    const params = new URLSearchParams();
+    for (const [k, v] of Object.entries(filters)) {
+      if (v && k !== 'sort') params.set(k, v);
+    }
+    params.set('sort', s);
+    return params.toString();
+  }
+</script>
+
+<style>
+  .filter-strip {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--ink);
+  }
+  .filter-strip .group {
+    display: flex;
+    gap: 0;
+    padding: 10px 14px;
+    border-right: 1px solid var(--ink);
+  }
+  .filter-strip .group:last-child {
+    border-right: none;
+  }
+  .filter-strip a {
+    display: inline-block;
+    padding: 4px 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--n600);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .filter-strip a:hover {
+    background: var(--n100);
+    color: var(--ink);
+  }
+  .filter-strip a.active {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .filter-strip .sort-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--n500);
+    padding: 4px 10px 4px 0;
+  }
+  .tag-cell {
+    max-width: 280px;
+  }
+  .mini-tag {
+    display: inline-block;
+    margin: 2px 4px 2px 0;
+    padding: 1px 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 9.5px;
+    font-weight: 600;
+    color: var(--ink);
+    border: 1px solid var(--n400);
+    text-decoration: none;
+  }
+  .mini-tag:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+</style>

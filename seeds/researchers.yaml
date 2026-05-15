@@ -27,6 +27,8 @@ researchers:
     current_role: ap
     bio: "Robotics & manipulation; tactile and visuomotor policies. Joined Stanford from Columbia."
     confidence_level: high
+    projects:
+      - {name: "REAL Lab", role: "PI", category: "lab", url: "https://real.stanford.edu"}
 
   - slug: chelsea-finn
     name_en: Chelsea Finn
@@ -48,6 +50,9 @@ researchers:
     current_role: full
     bio: "Robot learning, imitation, world models; co-founder Covariant."
     confidence_level: high
+    projects:
+      - {name: "Covariant", role: "co-founder", category: "company", url: "https://covariant.ai"}
+      - {name: "BAIR Robotics", role: "PI", category: "lab"}
 
   - slug: yuke-zhu
     name_en: Yuke Zhu
@@ -71,6 +76,9 @@ researchers:
     current_role: ap
     bio: "Embodied AI, manipulation, 3D vision; founder of Galbot."
     confidence_level: high
+    projects:
+      - {name: "Galbot 银河通用", role: "founder", category: "company", url: "https://galbot.com"}
+      - {name: "PKU EPIC Lab", role: "PI", category: "lab"}
 
   - slug: cewu-lu
     name_en: Cewu Lu
@@ -87,6 +95,10 @@ researchers:
     current_role: full
     bio: "Chief AI Scientist at Meta; JEPA, world models, self-supervised learning."
     confidence_level: high
+    projects:
+      - {name: "Meta FAIR", role: "Chief AI Scientist", category: "lab"}
+      - {name: "JEPA family", role: "lead", category: "research_line"}
+      - {name: "ConvNet / CNN", role: "lead", category: "research_line"}
 
   - slug: danijar-hafner
     name_en: Danijar Hafner
@@ -94,6 +106,8 @@ researchers:
     current_role: industry
     bio: "Dreamer family of world models, Dreamer V3, planning in latent space."
     confidence_level: high
+    projects:
+      - {name: "Dreamer / DreamerV3", role: "lead", category: "research_line", url: "https://danijar.com/dreamerv3"}
 
   - slug: david-ha
     name_en: David Ha
@@ -101,6 +115,9 @@ researchers:
     current_role: industry
     bio: "Co-founder Sakana AI; the original 'World Models' (2018) paper."
     confidence_level: high
+    projects:
+      - {name: "Sakana AI", role: "co-founder", category: "company", url: "https://sakana.ai"}
+      - {name: "World Models (NeurIPS 2018)", role: "lead", category: "research_line", url: "https://worldmodels.github.io"}
 
   - slug: sherry-yang
     name_en: Sherry Yang
@@ -125,6 +142,10 @@ researchers:
     current_role: full
     bio: "Bayesian deep learning, generative models, world models; founder Shengshu AI."
     confidence_level: high
+    projects:
+      - {name: "Shengshu AI 生数科技", role: "founder", category: "company", url: "https://shengshu.ai"}
+      - {name: "Vidu 视频生成", role: "lead", category: "product"}
+      - {name: "ZhuSuan / TianShou", role: "founder", category: "open_source", url: "https://github.com/thu-ml"}
 
   # ─── AI for Science ─────────────────────────────────────────────────────────
   - slug: john-jumper
@@ -133,6 +154,9 @@ researchers:
     current_role: industry
     bio: "AlphaFold 2/3 lead. 2024 Nobel Prize in Chemistry."
     confidence_level: high
+    projects:
+      - {name: "AlphaFold 2/3", role: "lead", category: "research_line", url: "https://deepmind.google/discover/blog/alphafold/"}
+      - {name: "Isomorphic Labs", role: "advisor", category: "company", url: "https://www.isomorphiclabs.com"}
 
   - slug: weinan-e
     name_en: Weinan E
@@ -141,6 +165,9 @@ researchers:
     current_role: full
     bio: "ML for science, deep potentials, computational mathematics. Joint Princeton/PKU."
     confidence_level: high
+    projects:
+      - {name: "DeePMD", role: "co-founder", category: "research_line"}
+      - {name: "AI for Science Institute Beijing", role: "founder", category: "lab"}
 
   - slug: linfeng-zhang
     name_en: Linfeng Zhang
@@ -149,6 +176,10 @@ researchers:
     current_role: industry
     bio: "Founder/CEO DP Technology (深势科技); deep potentials, AI for molecular dynamics."
     confidence_level: high
+    projects:
+      - {name: "深势科技 DP Technology", role: "founder/CEO", category: "company", url: "https://dp.tech"}
+      - {name: "DeePMD-kit", role: "lead", category: "open_source", url: "https://github.com/deepmodeling/deepmd-kit"}
+      - {name: "AI for Science Institute Beijing", role: "co-founder", category: "lab"}
 
   - slug: tess-smidt
     name_en: Tess Smidt

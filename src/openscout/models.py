@@ -42,6 +42,8 @@ class Institution(Base):
     parent_id: Mapped[Optional[int]] = mapped_column(ForeignKey("institutions.id"))
     homepage_url: Mapped[Optional[str]] = mapped_column(Text)
     prestige_score: Mapped[Optional[float]] = mapped_column(Float)
+    # OpenAlex Institution ID. Used to disambiguate same-name authors during enrichment.
+    openalex_id: Mapped[Optional[str]] = mapped_column(String(64), unique=True, index=True)
 
 
 class Topic(Base):
@@ -62,11 +64,15 @@ class Researcher(Base):
     slug: Mapped[str] = mapped_column(String(128), unique=True, index=True)
 
     semantic_scholar_id: Mapped[Optional[str]] = mapped_column(String(64), unique=True)
+    openalex_id: Mapped[Optional[str]] = mapped_column(String(64), unique=True, index=True)
     orcid: Mapped[Optional[str]] = mapped_column(String(32), unique=True)
     arxiv_author_id: Mapped[Optional[str]] = mapped_column(String(64))
 
     name_en: Mapped[str] = mapped_column(String(255), index=True)
     name_zh: Mapped[Optional[str]] = mapped_column(String(255))
+    # Provenance for the Chinese name — "manual" / "openalex_alt" / "openalex_chinese_alt" /
+    # "arxiv_byline" / "homepage". Never auto-fill with a guess; leave null instead.
+    name_zh_source: Mapped[Optional[str]] = mapped_column(String(32))
     email: Mapped[Optional[str]] = mapped_column(String(255))
     homepage_url: Mapped[Optional[str]] = mapped_column(Text)
     twitter_handle: Mapped[Optional[str]] = mapped_column(String(64))
@@ -84,8 +90,21 @@ class Researcher(Base):
 
     bio: Mapped[Optional[str]] = mapped_column(Text)
     bio_zh: Mapped[Optional[str]] = mapped_column(Text)
+    country: Mapped[Optional[str]] = mapped_column(String(8))
     confidence_level: Mapped[str] = mapped_column(String(16), default="medium")
     # low / medium / high — applied to identity disambiguation + advisor inference
+
+    # OpenAlex-derived metrics (refreshed by `openscout enrich`)
+    h_index: Mapped[Optional[int]] = mapped_column(Integer)
+    citation_count: Mapped[Optional[int]] = mapped_column(Integer)
+    works_count: Mapped[Optional[int]] = mapped_column(Integer)
+    # Research-direction tags — array of {slug, label_en, label_zh?, score}
+    tags: Mapped[Optional[list]] = mapped_column(JSON)
+    # Flagship projects this researcher is publicly associated with (hand-curated).
+    # Each: {name, role?, url?}. E.g. {"name":"AlphaFold","role":"lead"} for John Jumper.
+    projects: Mapped[Optional[list]] = mapped_column(JSON)
+    # Signature paper — the most cited / most-collaborative paper for this researcher
+    signature_paper_id: Mapped[Optional[int]] = mapped_column(ForeignKey("papers.id"))
 
     person_score: Mapped[Optional[float]] = mapped_column(Float)
     trajectory_score: Mapped[Optional[float]] = mapped_column(Float)
@@ -108,6 +127,7 @@ class Paper(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     arxiv_id: Mapped[Optional[str]] = mapped_column(String(32), unique=True, index=True)
     semantic_scholar_id: Mapped[Optional[str]] = mapped_column(String(64), unique=True)
+    openalex_id: Mapped[Optional[str]] = mapped_column(String(64), unique=True, index=True)
     doi: Mapped[Optional[str]] = mapped_column(String(128))
 
     title: Mapped[str] = mapped_column(Text)
@@ -121,9 +141,12 @@ class Paper(Base):
     code_url: Mapped[Optional[str]] = mapped_column(Text)
 
     citation_count: Mapped[int] = mapped_column(Integer, default=0)
+    influential_citation_count: Mapped[Optional[int]] = mapped_column(Integer)
     github_stars: Mapped[Optional[int]] = mapped_column(Integer)
     buzz_score: Mapped[Optional[float]] = mapped_column(Float)
     work_score: Mapped[Optional[float]] = mapped_column(Float)
+    # OpenAlex concept tags — array of {label, score}
+    concepts: Mapped[Optional[list]] = mapped_column(JSON)
 
     first_seen_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), index=True

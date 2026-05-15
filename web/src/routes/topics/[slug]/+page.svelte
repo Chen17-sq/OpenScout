@@ -1,31 +1,32 @@
 <script lang="ts">
+  import { t } from '$lib/i18n';
   import { arxivUrl, blurb, roleLabel } from '$lib/api';
 
   let { data } = $props();
-  const t = $derived(data.topic);
-  const maxN = $derived(Math.max(1, ...t.trend_7d.map((d) => d.n)));
+  const tp = $derived(data.topic);
+  const maxN = $derived(Math.max(1, ...tp.trend_7d.map((d) => d.n)));
 </script>
 
 <section>
   <div class="section-head">
-    <div class="label">Topic</div>
-    <div class="h">{t.name}</div>
-    <div class="meta">{t.name_zh ?? ''}</div>
+    <div class="label">{$t('topics.sectionLabel')}</div>
+    <div class="h">{tp.name}</div>
+    <div class="meta">{tp.name_zh ?? ''}</div>
   </div>
-  {#if t.description}
+  {#if tp.description}
     <div class="px-7 py-5 border-b border-ink">
-      <p class="font-serif italic text-n700">{t.description}</p>
+      <p class="font-serif italic text-n700">{tp.description}</p>
     </div>
   {/if}
 
   <div class="section-head">
     <div class="label">Trend</div>
-    <div class="h">Past 7 Days</div>
-    <div class="meta">new papers per day</div>
+    <div class="h">{$t('topics.trend')}</div>
+    <div class="meta">{$t('topics.trendMeta')}</div>
   </div>
   <div class="px-7 pt-7 pb-9">
     <div class="bars">
-      {#each t.trend_7d as d}
+      {#each tp.trend_7d as d}
         <div class="bar" style="height: {(d.n / maxN) * 100}%">
           <span class="value">{d.n}</span>
           <span class="label">{d.date.slice(5)}</span>
@@ -36,19 +37,19 @@
 
   <div class="section-head">
     <div class="label">Roster</div>
-    <div class="h">Top First-Authors</div>
-    <div class="meta">{t.top_first_authors.length} researchers</div>
+    <div class="h">{$t('topics.topAuthors')}</div>
+    <div class="meta">{tp.top_first_authors.length}</div>
   </div>
   <table class="board-table">
     <thead>
       <tr>
         <th>Name</th>
         <th>Role</th>
-        <th class="text-right">First-Author Papers</th>
+        <th class="text-right">Papers</th>
       </tr>
     </thead>
     <tbody>
-      {#each t.top_first_authors as r}
+      {#each tp.top_first_authors as r}
         <tr>
           <td>
             <a href={`/researchers/${r.slug}`}>{r.name_en}</a>
@@ -63,10 +64,10 @@
 
   <div class="section-head">
     <div class="label">Stream</div>
-    <div class="h">Recent Papers</div>
-    <div class="meta">latest 20</div>
+    <div class="h">{$t('topics.recentPapers')}</div>
+    <div class="meta">{$t('topics.recentMeta')}</div>
   </div>
-  {#each t.recent_papers as p, i}
+  {#each tp.recent_papers as p, i}
     <article class="story-card">
       <div class="no">{String(i + 1).padStart(2, '0')}</div>
       <div>

@@ -11,12 +11,17 @@ console = Console()
 
 @app.command("init-db")
 def init_db() -> None:
-    """Create all tables. DEV ONLY — use `alembic upgrade head` in production."""
+    """Create all tables + run idempotent ALTER TABLE migrations."""
     from .db import engine
+    from .migrations import upgrade_schema
     from .models import Base
 
     Base.metadata.create_all(engine)
+    added = upgrade_schema(engine)
     console.print("[green]✓[/green] tables created")
+    if added:
+        for col in added:
+            console.print(f"  [green]+[/green] added column [cyan]{col}[/cyan]")
 
 
 @app.command()
@@ -66,6 +71,69 @@ def enrich(
         f"[green]✓[/green] enriched {papers_n} papers; "
         f"updated {researchers_n} researcher records with S2 IDs / affiliations / homepages"
     )
+
+
+@app.command("resolve-institutions")
+def resolve_institutions_cmd() -> None:
+    """Resolve seed institutions → OpenAlex Institution IDs (used to disambiguate authors)."""
+    from .scraper.openalex import resolve_institutions
+
+    c = resolve_institutions()
+    console.print(
+        f"[green]✓[/green] institutions: matched {c['matched']}/{c['attempted']} · "
+        f"no_match {c['no_match']}"
+    )
+
+
+@app.command("reset-enrichment")
+def reset_enrichment() -> None:
+    """Clear openalex_id for researchers with affiliation (forces re-enrichment with institution filter)."""
+    from .scraper.openalex import reset_low_quality_matches
+
+    n = reset_low_quality_matches()
+    console.print(f"[green]✓[/green] reset {n} researchers")
+
+
+@app.command("enrich-openalex")
+def enrich_openalex(
+    limit: Annotated[int, typer.Option(help="Max researchers to enrich")] = 200,
+    only_anchors: Annotated[bool, typer.Option(help="Only anchor researchers (high/medium conf)")] = False,
+) -> None:
+    """Pull Chinese names, citation counts, h-index, and topic tags from OpenAlex."""
+    from .scraper.openalex import enrich_all
+
+    only_conf = ["high", "medium"] if only_anchors else None
+    counts = enrich_all(limit=limit, only_confidence=only_conf)
+    console.print(
+        f"[green]✓[/green] OpenAlex enrichment: "
+        f"matched {counts['matched']}/{counts['attempted']} · "
+        f"+{counts['with_zh_name']} Chinese names · "
+        f"+{counts['with_tags']} with tags · "
+        f"{counts['errors']} errors"
+    )
+
+
+@app.command()
+def lineage() -> None:
+    """Infer advisor → student edges from co-author frequency (heuristic)."""
+    from .scraper.lineage import infer_lineage
+
+    counts = infer_lineage()
+    console.print(
+        f"[green]✓[/green] lineage inference: "
+        f"+{counts['edges_added']} edges · "
+        f"{counts['juniors_scanned']} juniors scanned · "
+        f"{counts['anchors_matched']} anchor-coauthor matches"
+    )
+
+
+@app.command("signature-papers")
+def signature_papers() -> None:
+    """Assign each researcher a signature paper (highest citation among their works)."""
+    from .scraper.openalex import assign_signature_papers
+
+    n = assign_signature_papers()
+    console.print(f"[green]✓[/green] assigned {n} signature papers")
 
 
 @app.command()
