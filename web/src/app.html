@@ -1,11 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="OpenScout — All The Researchers Fit To Watch." />
-    <title>OpenScout</title>
+    <link rel="icon" href="%sveltekit.assets%/favicon.svg" type="image/svg+xml" />
+
+    <meta name="description" content="OpenScout — All The Researchers Fit To Watch. 一份每日发行的报纸 — 早期发现具身智能 / 世界模型 / AI for Science 的高潜研究者。" />
+    <meta name="keywords" content="ai, researchers, embodied, world models, ai4science, daily, 具身智能, 世界模型, 研究者追踪" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="OpenScout" />
+    <meta property="og:title" content="OpenScout · All The Researchers Fit To Watch" />
+    <meta property="og:description" content="一份每日发行的报纸 — 早期发现 AI 研究者中的高潜力量。具身智能 / 世界模型 / AI for Science。" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OpenScout" />
+    <meta name="twitter:description" content="All The Researchers Fit To Watch — daily tracker for early-stage AI researchers." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "OpenScout",
+        "url": "https://openscout.app/",
+        "description": "Daily newspaper tracking early-stage AI researchers in embodied AI, world models, and AI for Science.",
+        "inLanguage": ["zh-CN", "en"],
+        "publisher": {
+          "@type": "Organization",
+          "name": "OpenScout",
+          "url": "https://github.com/Chen17-sq/OpenScout"
+        }
+      }
+    </script>
+
+    <title>OpenScout — All The Researchers Fit To Watch</title>
     %sveltekit.head%
   </head>
   <body data-sveltekit-preload-data="hover">

@@ -68,5 +68,24 @@ def enrich(
     )
 
 
+@app.command()
+def banner() -> None:
+    """Generate web/static/banner.svg + og-card.svg with today's stamps."""
+    from sqlalchemy import func, select
+
+    from .brief.generate import generate_brief  # noqa: F401  ensures imports resolve
+    from .db import session_scope
+    from .models import Paper, Researcher
+    from .scraper.banner import write_banners
+
+    with session_scope() as db:
+        tracked = int(db.execute(select(func.count(Researcher.id))).scalar() or 0)
+        papers = int(db.execute(select(func.count(Paper.id))).scalar() or 0)
+
+    out = write_banners(tracked=tracked, papers=papers)
+    for k, v in out.items():
+        console.print(f"[green]✓[/green] {k}: [cyan]{v}[/cyan]")
+
+
 if __name__ == "__main__":
     app()
