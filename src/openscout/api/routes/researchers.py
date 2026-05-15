@@ -34,7 +34,9 @@ def list_researchers(
     if country:
         base = base.where(Researcher.country == country.upper())
     if q:
-        base = base.where(or_(Researcher.name_en.ilike(f"%{q}%"), Researcher.name_zh.ilike(f"%{q}%")))
+        base = base.where(
+            or_(Researcher.name_en.ilike(f"%{q}%"), Researcher.name_zh.ilike(f"%{q}%"))
+        )
     if topic:
         topic_row = db.execute(select(Topic).where(Topic.slug == topic)).scalar_one_or_none()
         if topic_row:
@@ -108,9 +110,9 @@ def get_researcher(slug: str, db: Session = Depends(get_db)) -> dict:
         )
 
     # Students whose advisor is set to this researcher
-    students_rows = db.execute(
-        select(Researcher).where(Researcher.advisor_id == r.id)
-    ).scalars().all()
+    students_rows = (
+        db.execute(select(Researcher).where(Researcher.advisor_id == r.id)).scalars().all()
+    )
     students = [
         {
             "slug": s.slug,
@@ -145,9 +147,7 @@ def get_researcher(slug: str, db: Session = Depends(get_db)) -> dict:
 
     signature_paper = None
     if r.signature_paper_id:
-        sp = db.execute(
-            select(Paper).where(Paper.id == r.signature_paper_id)
-        ).scalar_one_or_none()
+        sp = db.execute(select(Paper).where(Paper.id == r.signature_paper_id)).scalar_one_or_none()
         if sp:
             signature_paper = _paper_summary(sp, paper_topics_map.get(sp.id, []))
 

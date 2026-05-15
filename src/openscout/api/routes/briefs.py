@@ -1,6 +1,6 @@
 from dataclasses import asdict
+from datetime import UTC, datetime
 from datetime import date as Date
-from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import desc, select
@@ -19,7 +19,7 @@ router = APIRouter()
 @router.get("/today")
 def brief_today_structured(db: Session = Depends(get_db)) -> dict:
     """Structured brief data for the current day (UTC). Used by the SvelteKit homepage."""
-    today = datetime.now(timezone.utc).date()
+    today = datetime.now(UTC).date()
     brief = bd.collect(db, today)
     return _serialize_brief(brief)
 
@@ -40,9 +40,7 @@ def brief_by_date_structured(brief_date: str, db: Session = Depends(get_db)) -> 
 @router.get("/list")
 def list_briefs(db: Session = Depends(get_db), limit: int = 30) -> list[dict]:
     rows = (
-        db.execute(
-            select(DailyBrief).order_by(desc(DailyBrief.brief_date)).limit(limit)
-        )
+        db.execute(select(DailyBrief).order_by(desc(DailyBrief.brief_date)).limit(limit))
         .scalars()
         .all()
     )
@@ -73,9 +71,7 @@ def get_brief(brief_date: str, db: Session = Depends(get_db)) -> dict:
         parsed = Date.fromisoformat(brief_date)
     except ValueError as exc:
         raise HTTPException(400, detail="brief_date must be YYYY-MM-DD") from exc
-    b = db.execute(
-        select(DailyBrief).where(DailyBrief.brief_date == parsed)
-    ).scalar_one_or_none()
+    b = db.execute(select(DailyBrief).where(DailyBrief.brief_date == parsed)).scalar_one_or_none()
     if not b:
         raise HTTPException(404, detail=f"no brief for {brief_date}")
     return _serialize_md_brief(b)

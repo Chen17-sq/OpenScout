@@ -12,7 +12,6 @@ Polite to arXiv: download with a UA, 1-2s sleep between PDFs.
 import io
 import re
 import time
-from typing import Optional
 
 import httpx
 from pypdf import PdfReader
@@ -34,7 +33,7 @@ OBFUSCATED_RE = re.compile(
 )
 
 
-def _fetch_pdf(client: httpx.Client, url: str) -> Optional[bytes]:
+def _fetch_pdf(client: httpx.Client, url: str) -> bytes | None:
     try:
         r = client.get(url, timeout=20.0, follow_redirects=True)
         if r.status_code == 200 and r.headers.get("content-type", "").startswith("application/pdf"):

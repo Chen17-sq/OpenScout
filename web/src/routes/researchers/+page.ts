@@ -7,7 +7,10 @@ export const load: PageLoad = async ({ url, fetch }) => {
     const v = url.searchParams.get(k);
     if (v) params.set(k, v);
   }
-  params.set('limit', '150');
+  const limit = 100;
+  const offset = parseInt(url.searchParams.get('offset') ?? '0', 10) || 0;
+  params.set('limit', String(limit));
+  params.set('offset', String(offset));
 
   type ListItem = {
     slug: string;

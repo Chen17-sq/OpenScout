@@ -17,6 +17,10 @@ const zh = {
     stats: '统计',
     search: '搜索',
     watchlist: '收藏',
+    tags: '标签',
+    compare: '对比',
+    lineage: '师承',
+    print: '印刷版',
     searchPlaceholder: '搜研究者 / 论文 / 标签',
   },
   edition: {
@@ -203,6 +207,10 @@ const en = {
     stats: 'Stats',
     search: 'Search',
     watchlist: 'Watchlist',
+    tags: 'Tags',
+    compare: 'Compare',
+    lineage: 'Lineage',
+    print: 'Print',
     searchPlaceholder: 'Search researchers / papers / tags',
   },
   edition: {

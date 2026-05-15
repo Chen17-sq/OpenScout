@@ -366,3 +366,247 @@ researchers:
     current_role: incoming_ap
     bio: "Embodied AI, physics-aware ML; ex-MIT-IBM lab."
     confidence_level: medium
+
+  # ─── Round 3: China-heavy senior figures + key academic leaders ────────────
+  - slug: chunhua-shen
+    name_en: Chunhua Shen
+    name_zh: 沈春华
+    current_affiliation: Shanghai Jiao Tong University
+    current_role: full
+    bio: "Computer vision, dense prediction, vision foundation models."
+    confidence_level: high
+
+  - slug: bolei-zhou
+    name_en: Bolei Zhou
+    name_zh: 周博磊
+    current_affiliation: University of California, San Diego
+    current_role: ap
+    bio: "Interpretability, autonomous driving simulators (MetaDrive), embodied agents."
+    confidence_level: high
+
+  - slug: quanshi-zhang
+    name_en: Quanshi Zhang
+    name_zh: 张拳石
+    current_affiliation: Shanghai Jiao Tong University
+    current_role: associate
+    bio: "Interpretable deep learning; SJTU."
+    confidence_level: high
+
+  - slug: yaqin-zhang
+    name_en: Ya-Qin Zhang
+    name_zh: 张亚勤
+    current_affiliation: Tsinghua University
+    current_role: full
+    bio: "Dean of AI Industry Research Institute (AIR), Tsinghua; former Baidu COO."
+    confidence_level: high
+
+  - slug: kai-yu
+    name_en: Kai Yu
+    name_zh: 余凯
+    current_affiliation: Tsinghua University
+    current_role: industry
+    bio: "Founder of Horizon Robotics 地平线; ex-Baidu IDL VP."
+    confidence_level: high
+    projects:
+      - {name: "Horizon Robotics 地平线", role: "founder/CEO", category: "company", url: "https://horizon.ai"}
+
+  - slug: maosong-sun
+    name_en: Maosong Sun
+    name_zh: 孙茂松
+    current_affiliation: Tsinghua University
+    current_role: full
+    bio: "NLP, knowledge graphs; Tsinghua THUNLP lead."
+    confidence_level: high
+
+  - slug: xiaoyong-du
+    name_en: Xiaoyong Du
+    name_zh: 杜小勇
+    current_affiliation: Tsinghua University
+    current_role: full
+    bio: "Database systems, big data; Renmin University → Tsinghua."
+    confidence_level: medium
+
+  - slug: jiajun-wu
+    name_en: Jiajun Wu
+    name_zh: 吴佳俊
+    current_affiliation: Stanford University
+    current_role: ap
+    bio: "3D vision, intuitive physics, embodied AI; Stanford AI Lab."
+    confidence_level: high
+
+  - slug: yebin-liu
+    name_en: Yebin Liu
+    name_zh: 刘烨斌
+    current_affiliation: Tsinghua University
+    current_role: associate
+    bio: "Neural rendering, 4D reconstruction, avatar; Tsinghua."
+    confidence_level: high
+
+  - slug: ziwei-liu
+    name_en: Ziwei Liu
+    name_zh: 刘子纬
+    current_affiliation: Stanford University
+    current_role: ap
+    bio: "Generative vision, 3D avatars; Nanyang Tech → Stanford visiting."
+    confidence_level: medium
+
+  - slug: gao-huang
+    name_en: Gao Huang
+    name_zh: 黄高
+    current_affiliation: Tsinghua University
+    current_role: associate
+    bio: "DenseNet co-author, efficient deep learning; Tsinghua."
+    confidence_level: high
+
+  - slug: yi-tay
+    name_en: Yi Tay
+    current_affiliation: DeepMind
+    current_role: industry
+    bio: "Sparse expert models, long-context transformers; ex-Google → Reka."
+    confidence_level: high
+
+  - slug: stella-yu
+    name_en: Stella Yu
+    current_affiliation: University of California, San Diego
+    current_role: ap
+    bio: "Unsupervised vision, contrastive learning; UMich → UCSD."
+    confidence_level: medium
+
+  - slug: bo-li-uchicago
+    name_en: Bo Li
+    name_zh: 李博
+    current_affiliation: University of Chicago
+    current_role: ap
+    bio: "Trustworthy ML, AI safety; UIUC → Chicago."
+    confidence_level: high
+
+  - slug: jianfeng-gao
+    name_en: Jianfeng Gao
+    name_zh: 高剑峰
+    current_affiliation: Microsoft Research
+    current_role: industry
+    bio: "Deep learning for NLP / vision-language; MSR Distinguished Scientist."
+    confidence_level: high
+
+  - slug: hongwei-wang
+    name_en: Hongwei Wang
+    name_zh: 王宏伟
+    current_affiliation: Microsoft Research
+    current_role: industry
+    bio: "AI for materials; MSR AI4Science."
+    confidence_level: medium
+
+  - slug: harry-shum
+    name_en: Harry Shum
+    name_zh: 沈向洋
+    current_affiliation: Tsinghua University
+    current_role: full
+    bio: "Founder of IDEA Research; former Microsoft EVP; visual computing pioneer."
+    confidence_level: high
+    projects:
+      - {name: "IDEA Research", role: "founder", category: "lab", url: "https://idea.edu.cn"}
+
+  - slug: bo-zhao-cuhksz
+    name_en: Bo Zhao
+    name_zh: 赵波
+    current_affiliation: Tsinghua University
+    current_role: ap
+    bio: "Vision-language models; Tsinghua AIR (placeholder, confirm)."
+    confidence_level: low
+
+  - slug: jiaya-jia
+    name_en: Jiaya Jia
+    name_zh: 贾佳亚
+    current_affiliation: Shanghai Jiao Tong University
+    current_role: full
+    bio: "Vision, image generation; ex-CUHK → SmartMore co-founder."
+    confidence_level: high
+    projects:
+      - {name: "SmartMore 思谋科技", role: "co-founder", category: "company"}
+
+  - slug: dahua-lin
+    name_en: Dahua Lin
+    name_zh: 林达华
+    current_affiliation: Shanghai Jiao Tong University
+    current_role: associate
+    bio: "Video understanding, OpenMMLab; Shanghai AI Lab affiliated."
+    confidence_level: high
+    projects:
+      - {name: "OpenMMLab", role: "founder", category: "open_source"}
+
+  - slug: ping-luo
+    name_en: Ping Luo
+    name_zh: 罗平
+    current_affiliation: University of Hong Kong
+    current_role: ap
+    bio: "Visual representation, generative AI; HKU."
+    confidence_level: high
+
+  - slug: shuaicheng-liu
+    name_en: Shuaicheng Liu
+    name_zh: 刘帅成
+    current_affiliation: Shanghai Jiao Tong University
+    current_role: associate
+    bio: "Video/image enhancement; computational photography."
+    confidence_level: medium
+
+  - slug: tao-mei
+    name_en: Tao Mei
+    name_zh: 梅涛
+    current_affiliation: Tsinghua University
+    current_role: industry
+    bio: "Co-founder HiDream.ai; ex-JD AI / Microsoft Research."
+    confidence_level: high
+    projects:
+      - {name: "HiDream.ai 智象未来", role: "co-founder/CEO", category: "company"}
+
+  - slug: yunhe-wang
+    name_en: Yunhe Wang
+    name_zh: 王云鹤
+    current_affiliation: Tsinghua University
+    current_role: industry
+    bio: "Efficient deep learning, model compression; Huawei Noah's Ark Lab."
+    confidence_level: medium
+
+  - slug: percy-liang
+    name_en: Percy Liang
+    current_affiliation: Stanford University
+    current_role: associate
+    bio: "Foundation models, NLP, LLM evaluation; Stanford CRFM director."
+    confidence_level: high
+
+  - slug: christopher-manning
+    name_en: Christopher Manning
+    current_affiliation: Stanford University
+    current_role: full
+    bio: "Stanford NLP Group; Stanford AI Lab director."
+    confidence_level: high
+
+  - slug: bowen-zhou
+    name_en: Bowen Zhou
+    name_zh: 周伯文
+    current_affiliation: Tsinghua University
+    current_role: full
+    bio: "Conversational AI, multimodal; ex-JD Cloud president."
+    confidence_level: high
+
+  - slug: pieter-sermanet
+    name_en: Pierre Sermanet
+    current_affiliation: DeepMind
+    current_role: industry
+    bio: "Robot learning, embodied agents."
+    confidence_level: medium
+
+  - slug: christian-szegedy
+    name_en: Christian Szegedy
+    current_affiliation: DeepMind
+    current_role: industry
+    bio: "GoogLeNet author, transformers; xAI now."
+    confidence_level: medium
+
+  - slug: niclas-mueller
+    name_en: Nicolas Heess
+    current_affiliation: DeepMind
+    current_role: industry
+    bio: "Robot learning, RL; DeepMind."
+    confidence_level: medium

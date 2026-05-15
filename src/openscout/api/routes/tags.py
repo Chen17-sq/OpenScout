@@ -52,11 +52,7 @@ def list_tags(
 @router.get("/{label}")
 def researchers_by_tag(label: str, db: Session = Depends(get_db), limit: int = 30) -> list[dict]:
     """Researchers whose tag list contains `label` (case-sensitive substring of JSON)."""
-    rs = (
-        db.execute(select(Researcher).where(Researcher.tags.is_not(None)))
-        .scalars()
-        .all()
-    )
+    rs = db.execute(select(Researcher).where(Researcher.tags.is_not(None))).scalars().all()
     matched: list[dict] = []
     for r in rs:
         if not r.tags:

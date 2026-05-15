@@ -17,7 +17,7 @@ Provenance for Chinese name (`name_zh_source`):
 
 import re
 import time
-from typing import Any, Optional
+from typing import Any
 
 import pyalex
 from pyalex import Authors, Institutions
@@ -37,7 +37,7 @@ def _has_cjk(s: str | None) -> bool:
     return bool(s and _CJK_RE.search(s))
 
 
-def _pick_chinese_name(alternatives: list[str] | None) -> Optional[str]:
+def _pick_chinese_name(alternatives: list[str] | None) -> str | None:
     if not alternatives:
         return None
     for alt in alternatives:
@@ -50,7 +50,7 @@ def _normalize_name(s: str) -> str:
     return " ".join(s.strip().lower().split())
 
 
-def resolve_institutions(limit: Optional[int] = None) -> dict[str, int]:
+def resolve_institutions(limit: int | None = None) -> dict[str, int]:
     """Resolve each seed institution → OpenAlex ID. Idempotent."""
     counts = {"attempted": 0, "matched": 0, "skipped_already_set": 0, "no_match": 0}
     with session_scope() as db:
@@ -71,7 +71,9 @@ def resolve_institutions(limit: Optional[int] = None) -> dict[str, int]:
             picked = results[0]
             if inst.country:
                 in_country = [
-                    r for r in results if (r.get("country_code") or "").upper() == inst.country.upper()
+                    r
+                    for r in results
+                    if (r.get("country_code") or "").upper() == inst.country.upper()
                 ]
                 if in_country:
                     picked = in_country[0]
@@ -84,9 +86,9 @@ def resolve_institutions(limit: Optional[int] = None) -> dict[str, int]:
 def _find_openalex_author(
     name_en: str,
     *,
-    affiliation_openalex_id: Optional[str] = None,
-    country_hint: Optional[str] = None,
-) -> Optional[dict]:
+    affiliation_openalex_id: str | None = None,
+    country_hint: str | None = None,
+) -> dict | None:
     """Best-effort lookup. Prefers exact name + institution filter."""
     target = _normalize_name(name_en)
 
@@ -155,7 +157,7 @@ def enrich_researcher(db: Session, researcher: Researcher) -> dict[str, Any]:
     if researcher.openalex_id:
         return {"already_enriched": True}
 
-    aff_openalex_id: Optional[str] = None
+    aff_openalex_id: str | None = None
     if researcher.current_affiliation_id:
         inst = db.execute(
             select(InstitutionModel).where(InstitutionModel.id == researcher.current_affiliation_id)
@@ -272,7 +274,9 @@ def reset_low_quality_matches() -> int:
                 Researcher.current_affiliation_id.is_not(None),
                 Researcher.openalex_id.is_not(None),
             )
-            .values(openalex_id=None, h_index=None, works_count=None, citation_count=None, tags=None)
+            .values(
+                openalex_id=None, h_index=None, works_count=None, citation_count=None, tags=None
+            )
         )
         return int(result.rowcount or 0)
 

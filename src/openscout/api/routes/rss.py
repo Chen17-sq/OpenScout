@@ -5,7 +5,7 @@ Two endpoints:
   GET /rss/papers  → last 50 papers ingested
 """
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from xml.etree.ElementTree import Element, SubElement, tostring
 
 from fastapi import APIRouter, Depends, Response
@@ -32,7 +32,7 @@ def _rss_skeleton(title: str, description: str, link: str) -> tuple[Element, Ele
     SubElement(channel, "link").text = link
     SubElement(channel, "description").text = description
     SubElement(channel, "language").text = "zh-CN"
-    SubElement(channel, "lastBuildDate").text = datetime.now(timezone.utc).strftime(
+    SubElement(channel, "lastBuildDate").text = datetime.now(UTC).strftime(
         "%a, %d %b %Y %H:%M:%S GMT"
     )
     return rss, channel
@@ -52,15 +52,13 @@ def rss_daily(db: Session = Depends(get_db)) -> Response:
     )
     for b in briefs:
         item = SubElement(channel, "item")
-        SubElement(item, "title").text = (
-            f"OpenScout · Vol. {b.volume}, No. {b.issue:03d} · {b.brief_date.isoformat()}"
-        )
+        SubElement(
+            item, "title"
+        ).text = f"OpenScout · Vol. {b.volume}, No. {b.issue:03d} · {b.brief_date.isoformat()}"
         SubElement(item, "link").text = f"{PUBLIC_BASE}/daily/{b.brief_date.isoformat()}"
         SubElement(item, "guid").text = f"{PUBLIC_BASE}/daily/{b.brief_date.isoformat()}"
         if b.generated_at:
-            SubElement(item, "pubDate").text = b.generated_at.strftime(
-                "%a, %d %b %Y %H:%M:%S GMT"
-            )
+            SubElement(item, "pubDate").text = b.generated_at.strftime("%a, %d %b %Y %H:%M:%S GMT")
         desc_text = (b.rendered_md or "")[:600].replace("\n", " ")
         SubElement(item, "description").text = desc_text
     return _xml_response(rss)
@@ -74,9 +72,7 @@ def rss_papers(db: Session = Depends(get_db)) -> Response:
         link=PUBLIC_BASE,
     )
     papers = list(
-        db.execute(select(Paper).order_by(desc(Paper.first_seen_at)).limit(50))
-        .scalars()
-        .all()
+        db.execute(select(Paper).order_by(desc(Paper.first_seen_at)).limit(50)).scalars().all()
     )
     for p in papers:
         if not p.arxiv_id:
@@ -86,8 +82,6 @@ def rss_papers(db: Session = Depends(get_db)) -> Response:
         SubElement(item, "link").text = f"https://arxiv.org/abs/{p.arxiv_id}"
         SubElement(item, "guid").text = f"arxiv:{p.arxiv_id}"
         if p.first_seen_at:
-            SubElement(item, "pubDate").text = p.first_seen_at.strftime(
-                "%a, %d %b %Y %H:%M:%S GMT"
-            )
+            SubElement(item, "pubDate").text = p.first_seen_at.strftime("%a, %d %b %Y %H:%M:%S GMT")
         SubElement(item, "description").text = (p.abstract or "")[:600]
     return _xml_response(rss)

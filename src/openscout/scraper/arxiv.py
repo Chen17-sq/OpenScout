@@ -61,9 +61,7 @@ def ingest_topic(topic_slug: str, limit: int = 50) -> int:
     with session_scope() as db:
         topic = db.execute(select(Topic).where(Topic.slug == topic_slug)).scalar_one_or_none()
         if not topic:
-            raise RuntimeError(
-                f"Topic {topic_slug!r} not in DB — run `openscout seed` first."
-            )
+            raise RuntimeError(f"Topic {topic_slug!r} not in DB — run `openscout seed` first.")
 
         for result in results:
             arxiv_id = _normalize_arxiv_id(result.entry_id)
@@ -129,9 +127,7 @@ def _upsert_researcher_by_name(db: Session, name: str) -> Researcher:
     if not name:
         name = "Unknown Author"
 
-    existing = db.execute(
-        select(Researcher).where(Researcher.name_en == name)
-    ).scalar_one_or_none()
+    existing = db.execute(select(Researcher).where(Researcher.name_en == name)).scalar_one_or_none()
     if existing:
         return existing
 

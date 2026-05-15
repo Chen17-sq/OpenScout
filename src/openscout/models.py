@@ -10,7 +10,6 @@ Core entities:
 """
 
 from datetime import date, datetime
-from typing import Optional
 
 from sqlalchemy import (
     JSON,
@@ -36,14 +35,14 @@ class Institution(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(255), unique=True, index=True)
-    name_zh: Mapped[Optional[str]] = mapped_column(String(255))
-    type: Mapped[Optional[str]] = mapped_column(String(32))  # university / lab / company
-    country: Mapped[Optional[str]] = mapped_column(String(8))
-    parent_id: Mapped[Optional[int]] = mapped_column(ForeignKey("institutions.id"))
-    homepage_url: Mapped[Optional[str]] = mapped_column(Text)
-    prestige_score: Mapped[Optional[float]] = mapped_column(Float)
+    name_zh: Mapped[str | None] = mapped_column(String(255))
+    type: Mapped[str | None] = mapped_column(String(32))  # university / lab / company
+    country: Mapped[str | None] = mapped_column(String(8))
+    parent_id: Mapped[int | None] = mapped_column(ForeignKey("institutions.id"))
+    homepage_url: Mapped[str | None] = mapped_column(Text)
+    prestige_score: Mapped[float | None] = mapped_column(Float)
     # OpenAlex Institution ID. Used to disambiguate same-name authors during enrichment.
-    openalex_id: Mapped[Optional[str]] = mapped_column(String(64), unique=True, index=True)
+    openalex_id: Mapped[str | None] = mapped_column(String(64), unique=True, index=True)
 
 
 class Topic(Base):
@@ -52,9 +51,9 @@ class Topic(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     slug: Mapped[str] = mapped_column(String(64), unique=True, index=True)
     name: Mapped[str] = mapped_column(String(128))
-    name_zh: Mapped[Optional[str]] = mapped_column(String(128))
-    parent_id: Mapped[Optional[int]] = mapped_column(ForeignKey("topics.id"))
-    description: Mapped[Optional[str]] = mapped_column(Text)
+    name_zh: Mapped[str | None] = mapped_column(String(128))
+    parent_id: Mapped[int | None] = mapped_column(ForeignKey("topics.id"))
+    description: Mapped[str | None] = mapped_column(Text)
 
 
 class Researcher(Base):
@@ -63,59 +62,57 @@ class Researcher(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     slug: Mapped[str] = mapped_column(String(128), unique=True, index=True)
 
-    semantic_scholar_id: Mapped[Optional[str]] = mapped_column(String(64), unique=True)
-    openalex_id: Mapped[Optional[str]] = mapped_column(String(64), unique=True, index=True)
-    orcid: Mapped[Optional[str]] = mapped_column(String(32), unique=True)
-    arxiv_author_id: Mapped[Optional[str]] = mapped_column(String(64))
+    semantic_scholar_id: Mapped[str | None] = mapped_column(String(64), unique=True)
+    openalex_id: Mapped[str | None] = mapped_column(String(64), unique=True, index=True)
+    orcid: Mapped[str | None] = mapped_column(String(32), unique=True)
+    arxiv_author_id: Mapped[str | None] = mapped_column(String(64))
 
     name_en: Mapped[str] = mapped_column(String(255), index=True)
-    name_zh: Mapped[Optional[str]] = mapped_column(String(255))
+    name_zh: Mapped[str | None] = mapped_column(String(255))
     # Provenance for the Chinese name — "manual" / "openalex_alt" / "openalex_chinese_alt" /
     # "arxiv_byline" / "homepage". Never auto-fill with a guess; leave null instead.
-    name_zh_source: Mapped[Optional[str]] = mapped_column(String(32))
-    email: Mapped[Optional[str]] = mapped_column(String(255))
-    homepage_url: Mapped[Optional[str]] = mapped_column(Text)
-    twitter_handle: Mapped[Optional[str]] = mapped_column(String(64))
-    github_handle: Mapped[Optional[str]] = mapped_column(String(64))
-    zhihu_url: Mapped[Optional[str]] = mapped_column(Text)
-    linkedin_url: Mapped[Optional[str]] = mapped_column(Text)
-    photo_url: Mapped[Optional[str]] = mapped_column(Text)
+    name_zh_source: Mapped[str | None] = mapped_column(String(32))
+    email: Mapped[str | None] = mapped_column(String(255))
+    homepage_url: Mapped[str | None] = mapped_column(Text)
+    twitter_handle: Mapped[str | None] = mapped_column(String(64))
+    github_handle: Mapped[str | None] = mapped_column(String(64))
+    zhihu_url: Mapped[str | None] = mapped_column(Text)
+    linkedin_url: Mapped[str | None] = mapped_column(Text)
+    photo_url: Mapped[str | None] = mapped_column(Text)
 
-    current_affiliation_id: Mapped[Optional[int]] = mapped_column(ForeignKey("institutions.id"))
-    current_role: Mapped[Optional[str]] = mapped_column(String(32))
+    current_affiliation_id: Mapped[int | None] = mapped_column(ForeignKey("institutions.id"))
+    current_role: Mapped[str | None] = mapped_column(String(32))
     # phd / postdoc / incoming_ap / ap / associate / full / industry_researcher / senior
-    career_stage_year: Mapped[Optional[int]] = mapped_column(Integer)
-    graduation_year_estimate: Mapped[Optional[int]] = mapped_column(Integer)
-    advisor_id: Mapped[Optional[int]] = mapped_column(ForeignKey("researchers.id"))
+    career_stage_year: Mapped[int | None] = mapped_column(Integer)
+    graduation_year_estimate: Mapped[int | None] = mapped_column(Integer)
+    advisor_id: Mapped[int | None] = mapped_column(ForeignKey("researchers.id"))
 
-    bio: Mapped[Optional[str]] = mapped_column(Text)
-    bio_zh: Mapped[Optional[str]] = mapped_column(Text)
-    country: Mapped[Optional[str]] = mapped_column(String(8))
+    bio: Mapped[str | None] = mapped_column(Text)
+    bio_zh: Mapped[str | None] = mapped_column(Text)
+    country: Mapped[str | None] = mapped_column(String(8))
     confidence_level: Mapped[str] = mapped_column(String(16), default="medium")
     # low / medium / high — applied to identity disambiguation + advisor inference
 
     # OpenAlex-derived metrics (refreshed by `openscout enrich`)
-    h_index: Mapped[Optional[int]] = mapped_column(Integer)
-    citation_count: Mapped[Optional[int]] = mapped_column(Integer)
-    works_count: Mapped[Optional[int]] = mapped_column(Integer)
+    h_index: Mapped[int | None] = mapped_column(Integer)
+    citation_count: Mapped[int | None] = mapped_column(Integer)
+    works_count: Mapped[int | None] = mapped_column(Integer)
     # Research-direction tags — array of {slug, label_en, label_zh?, score}
-    tags: Mapped[Optional[list]] = mapped_column(JSON)
+    tags: Mapped[list | None] = mapped_column(JSON)
     # Flagship projects this researcher is publicly associated with (hand-curated).
     # Each: {name, role?, url?}. E.g. {"name":"AlphaFold","role":"lead"} for John Jumper.
-    projects: Mapped[Optional[list]] = mapped_column(JSON)
+    projects: Mapped[list | None] = mapped_column(JSON)
     # Signature paper — the most cited / most-collaborative paper for this researcher
-    signature_paper_id: Mapped[Optional[int]] = mapped_column(ForeignKey("papers.id"))
+    signature_paper_id: Mapped[int | None] = mapped_column(ForeignKey("papers.id"))
 
-    person_score: Mapped[Optional[float]] = mapped_column(Float)
-    trajectory_score: Mapped[Optional[float]] = mapped_column(Float)
-    investability_score: Mapped[Optional[float]] = mapped_column(Float)
+    person_score: Mapped[float | None] = mapped_column(Float)
+    trajectory_score: Mapped[float | None] = mapped_column(Float)
+    investability_score: Mapped[float | None] = mapped_column(Float)
 
     first_seen_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
-    created_at: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), server_default=func.now()
-    )
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
     )
@@ -125,31 +122,31 @@ class Paper(Base):
     __tablename__ = "papers"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    arxiv_id: Mapped[Optional[str]] = mapped_column(String(32), unique=True, index=True)
-    semantic_scholar_id: Mapped[Optional[str]] = mapped_column(String(64), unique=True)
-    openalex_id: Mapped[Optional[str]] = mapped_column(String(64), unique=True, index=True)
-    doi: Mapped[Optional[str]] = mapped_column(String(128))
+    arxiv_id: Mapped[str | None] = mapped_column(String(32), unique=True, index=True)
+    semantic_scholar_id: Mapped[str | None] = mapped_column(String(64), unique=True)
+    openalex_id: Mapped[str | None] = mapped_column(String(64), unique=True, index=True)
+    doi: Mapped[str | None] = mapped_column(String(128))
 
     title: Mapped[str] = mapped_column(Text)
-    abstract: Mapped[Optional[str]] = mapped_column(Text)
-    abstract_zh: Mapped[Optional[str]] = mapped_column(Text)
-    one_liner_zh: Mapped[Optional[str]] = mapped_column(Text)  # like KS blurbs_zh
+    abstract: Mapped[str | None] = mapped_column(Text)
+    abstract_zh: Mapped[str | None] = mapped_column(Text)
+    one_liner_zh: Mapped[str | None] = mapped_column(Text)  # like KS blurbs_zh
 
-    published_at: Mapped[Optional[date]] = mapped_column(Date, index=True)
-    venue: Mapped[Optional[str]] = mapped_column(String(128))
-    pdf_url: Mapped[Optional[str]] = mapped_column(Text)
-    code_url: Mapped[Optional[str]] = mapped_column(Text)
+    published_at: Mapped[date | None] = mapped_column(Date, index=True)
+    venue: Mapped[str | None] = mapped_column(String(128))
+    pdf_url: Mapped[str | None] = mapped_column(Text)
+    code_url: Mapped[str | None] = mapped_column(Text)
 
     citation_count: Mapped[int] = mapped_column(Integer, default=0)
-    influential_citation_count: Mapped[Optional[int]] = mapped_column(Integer)
-    github_stars: Mapped[Optional[int]] = mapped_column(Integer)
-    buzz_score: Mapped[Optional[float]] = mapped_column(Float)
-    work_score: Mapped[Optional[float]] = mapped_column(Float)
+    influential_citation_count: Mapped[int | None] = mapped_column(Integer)
+    github_stars: Mapped[int | None] = mapped_column(Integer)
+    buzz_score: Mapped[float | None] = mapped_column(Float)
+    work_score: Mapped[float | None] = mapped_column(Float)
     # OpenAlex concept tags — array of {label, score}
-    concepts: Mapped[Optional[list]] = mapped_column(JSON)
+    concepts: Mapped[list | None] = mapped_column(JSON)
     # Emails extracted from PDF first page — array of strings. Loose matching
     # to authors not attempted; the UI surfaces them as "possible contacts."
-    author_emails: Mapped[Optional[list]] = mapped_column(JSON)
+    author_emails: Mapped[list | None] = mapped_column(JSON)
 
     first_seen_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), index=True
@@ -189,7 +186,7 @@ class ResearcherTopic(Base):
     topic_id: Mapped[int] = mapped_column(
         ForeignKey("topics.id", ondelete="CASCADE"), primary_key=True
     )
-    weight: Mapped[Optional[float]] = mapped_column(Float)
+    weight: Mapped[float | None] = mapped_column(Float)
 
 
 class Relationship(Base):
@@ -200,9 +197,9 @@ class Relationship(Base):
     to_researcher_id: Mapped[int] = mapped_column(ForeignKey("researchers.id"), index=True)
     type: Mapped[str] = mapped_column(String(32))  # advisor / student / coauthor / sibling
     confidence: Mapped[str] = mapped_column(String(16), default="medium")
-    evidence: Mapped[Optional[str]] = mapped_column(Text)
-    started_at: Mapped[Optional[date]] = mapped_column(Date)
-    ended_at: Mapped[Optional[date]] = mapped_column(Date)
+    evidence: Mapped[str | None] = mapped_column(Text)
+    started_at: Mapped[date | None] = mapped_column(Date)
+    ended_at: Mapped[date | None] = mapped_column(Date)
 
 
 class Affiliation(Base):
@@ -211,9 +208,9 @@ class Affiliation(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     researcher_id: Mapped[int] = mapped_column(ForeignKey("researchers.id"), index=True)
     institution_id: Mapped[int] = mapped_column(ForeignKey("institutions.id"), index=True)
-    role: Mapped[Optional[str]] = mapped_column(String(64))
-    started_at: Mapped[Optional[date]] = mapped_column(Date)
-    ended_at: Mapped[Optional[date]] = mapped_column(Date)
+    role: Mapped[str | None] = mapped_column(String(64))
+    started_at: Mapped[date | None] = mapped_column(Date)
+    ended_at: Mapped[date | None] = mapped_column(Date)
     is_current: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
@@ -224,12 +221,12 @@ class Signal(Base):
     researcher_id: Mapped[int] = mapped_column(ForeignKey("researchers.id"), index=True)
     type: Mapped[str] = mapped_column(String(32), index=True)
     # paper / tweet / talk / repo / affiliation_change / ap_announcement / preprint
-    payload: Mapped[Optional[dict]] = mapped_column(JSON)
-    occurred_at: Mapped[Optional[datetime]] = mapped_column(DateTime(timezone=True), index=True)
+    payload: Mapped[dict | None] = mapped_column(JSON)
+    occurred_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), index=True)
     detected_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
-    source: Mapped[Optional[str]] = mapped_column(String(64))
+    source: Mapped[str | None] = mapped_column(String(64))
 
 
 class DailyBrief(Base):
@@ -239,8 +236,8 @@ class DailyBrief(Base):
     brief_date: Mapped[date] = mapped_column(Date, unique=True, index=True)
     volume: Mapped[int] = mapped_column(Integer, default=1)
     issue: Mapped[int] = mapped_column(Integer)
-    rendered_md: Mapped[Optional[str]] = mapped_column(Text)
-    meta: Mapped[Optional[dict]] = mapped_column("metadata", JSON)
+    rendered_md: Mapped[str | None] = mapped_column(Text)
+    meta: Mapped[dict | None] = mapped_column("metadata", JSON)
     generated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )

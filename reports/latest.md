@@ -7,7 +7,7 @@ DAILY · 具身 / 世界模型 / AI4SCI · FRIDAY, MAY 15, 2026
 
 > *All The Researchers Fit To Watch* — Vol. 1, No. 001 · 2026-05-15
 
-_Auto-generated at 2026-05-15T21:14:14+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-05-15T21:29:23+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,13 +15,49 @@ _Auto-generated at 2026-05-15T21:14:14+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **845** | 136 | 806 | 1 | 1 |
+| **874** | 447 | 807 | 1 | 1 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation
+### No. 01 · Unnatural L0 Sparse Representation for Natural Image Deblurring
+
+**Li Xu** · 一作 · 2 作者 · [arXiv:None](#)
+
+_We show in this paper that the success of previous maximum a posterior (MAP) based blur removal methods partly stems from their respective intermediate steps, which implicitly or explicitly create an unnatural represent…_
+
+→ [profile](/researchers/li-xu)
+
+---
+### No. 02 · Two-Phase Kernel Estimation for Robust Motion Deblurring
+
+**Li Xu** · 一作 · 2 作者 · [arXiv:None](#)
+
+__
+
+→ [profile](/researchers/li-xu)
+
+---
+### No. 03 · Image smoothing via<i>L</i><sub>0</sub>gradient minimization
+
+**Li Xu** · 一作 · 3 作者 · [arXiv:None](#)
+
+_We present a new image editing method, particularly effective for sharpening major edges by increasing the steepness of transition while eliminating a manageable degree of low-amplitude structures. The seemingly contrad…_
+
+→ [profile](/researchers/li-xu)
+
+---
+### No. 04 · Structure extraction from texture via relative total variation
+
+**Li Xu** · 一作 · 2 作者 · [arXiv:None](#)
+
+_It is ubiquitous that meaningful structures are formed by or appear over textured surfaces. Extracting them under the complication of texture patterns, which could be regular, near-regular, or irregular, is very challen…_
+
+→ [profile](/researchers/li-xu)
+
+---
+### No. 05 · IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation
 
 **Shijie Lian** · 一作 · 11 作者 · [arXiv:2605.14712](https://arxiv.org/abs/2605.14712)
 
@@ -30,7 +66,7 @@ _Robot imitation data are often multimodal: similar visual-language observations
 → [profile](/researchers/shijie-lian)
 
 ---
-### No. 02 · SceneFunRI: Reasoning the Invisible for Task-Driven Functional Object Localization
+### No. 06 · SceneFunRI: Reasoning the Invisible for Task-Driven Functional Object Localization
 
 **Posheng Chen** · 一作 · 5 作者 · [arXiv:2605.14704](https://arxiv.org/abs/2605.14704)
 
@@ -39,7 +75,7 @@ _In real-world scenes, target objects may reside in regions that are not visible
 → [profile](/researchers/posheng-chen)
 
 ---
-### No. 03 · SR-Platform: An Agentic Pipeline for Natural Language-Driven Robot Simulation Environment Synthesis
+### No. 07 · SR-Platform: An Agentic Pipeline for Natural Language-Driven Robot Simulation Environment Synthesis
 
 **Ben Wei Lim** · 一作 · 4 作者 · [arXiv:2605.14700](https://arxiv.org/abs/2605.14700)
 
@@ -48,7 +84,7 @@ _Generating robot simulation environments remains a major bottleneck in simulati
 → [profile](/researchers/ben-wei-lim)
 
 ---
-### No. 04 · SeaVis: Modeling and Control of a Remotely Operated Towed Vehicle for Seabed Visualization and Mapping
+### No. 08 · SeaVis: Modeling and Control of a Remotely Operated Towed Vehicle for Seabed Visualization and Mapping
 
 **Abdelhakim Amer** · 一作 · 6 作者 · [arXiv:2605.14683](https://arxiv.org/abs/2605.14683)
 
@@ -57,7 +93,7 @@ _High-resolution seafloor mapping necessitates stable and precise positioning fo
 → [profile](/researchers/abdelhakim-amer)
 
 ---
-### No. 05 · An Amortized Efficiency Threshold for Comparing Neural and Heuristic Solvers in Combinatorial Optimization
+### No. 09 · An Amortized Efficiency Threshold for Comparing Neural and Heuristic Solvers in Combinatorial Optimization
 
 **Sohaib Afifi** · 一作 · 1 作者 · [arXiv:2605.14624](https://arxiv.org/abs/2605.14624)
 
@@ -66,7 +102,7 @@ _A common critique of neural combinatorial-optimization solvers is that they are
 → [profile](/researchers/sohaib-afifi)
 
 ---
-### No. 06 · DSSP: Diffusion State Space Policy with Full-History Encoding
+### No. 10 · DSSP: Diffusion State Space Policy with Full-History Encoding
 
 **Zhiyuan Guan** · 一作 · 8 作者 · [arXiv:2605.14598](https://arxiv.org/abs/2605.14598)
 
@@ -75,48 +111,21 @@ _Diffusion-based imitation learning has shown strong promise for robot manipulat
 → [profile](/researchers/zhiyuan-guan)
 
 ---
-### No. 07 · Let Robots Feel Your Touch: Visuo-Tactile Cortical Alignment for Embodied Mirror Resonance
 
-**Tianfang Zhu** · 一作 · 7 作者 · [arXiv:2605.14571](https://arxiv.org/abs/2605.14571)
-
-_Observing touch on another's body can elicit corresponding tactile sensations in the observer, a phenomenon termed mirror touch that supports empathy and social perception. This visuo-tactile resonance is thought to rel…_
-
-→ [profile](/researchers/tianfang-zhu)
-
----
-### No. 08 · TeachAnything: A Multimodal Crowdsourcing Platform for Training Embodied AI Agents in Symmetrical Reality
-
-**Zidong Liu** · 一作 · 4 作者 · [arXiv:2605.14556](https://arxiv.org/abs/2605.14556)
-
-_Symmetrical Reality (SR) is emerging as a future trend for human-agent coexistence, placing higher demands on agents to acquire human-like intelligence. It calls for richer and more diverse human guidance. We introduce…_
-
-→ [profile](/researchers/zidong-liu)
-
----
-### No. 09 · DiffPhD: A Unified Differentiable Solver for Projective Heterogeneous Materials in Elastodynamics with Contact-Rich GPU-Acceleration
-
-**Shih-Yu Lai** · 一作 · 12 作者 · [arXiv:2605.14526](https://arxiv.org/abs/2605.14526)
-
-_Differentiable simulation of soft bodies is a foundation for system identification, trajectory optimization, and Real2Sim transfer. Yet, existing methods such as the differentiable Projective Dynamics (DiffPD) struggle…_
-
-→ [profile](/researchers/shih-yu-lai)
-
----
-### No. 10 · Quantifying Cyber-Vulnerability in Power Electronics Systems via an Impedance-Based Attack Reachable Domain
-
-**Hongwei Zhen** · 一作 · 5 作者 · [arXiv:2605.14502](https://arxiv.org/abs/2605.14502)
-
-_Power electronics systems are increasingly exposed to cyber threats due to their integration with digital controllers and communication networks. However, an attacker-oriented metric is still lacking to quantify the ext…_
-
-→ [profile](/researchers/hongwei-zhen)
-
----
-
-## Section B · 🔄 动态更新 · 1 项
+## Section B · 🔄 动态更新 · 10 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Jun Zhu](/researchers/jun-zhu) | Causal Forcing++: Scalable Few-Step Autoregressive Diffusion Distilla… | world_models | [2605.15141](https://arxiv.org/abs/2605.15141) |
+| [Jiaya Jia](/researchers/jiaya-jia) | Pyramid Scene Parsing Network | — | [None](#) |
+| [Jiaya Jia](/researchers/jiaya-jia) | Path Aggregation Network for Instance Segmentation | — | [None](#) |
+| [Jiaya Jia](/researchers/jiaya-jia) | Point Transformer | — | [None](#) |
+| [Jiaya Jia](/researchers/jiaya-jia) | Hierarchical Saliency Detection | — | [None](#) |
+| [Jiaya Jia](/researchers/jiaya-jia) | ICNet for Real-Time Semantic Segmentation on High-Resolution Images | — | [None](#) |
+| [Cewu Lu](/researchers/cewu-lu) | Abnormal Event Detection at 150 FPS in MATLAB | — | [None](#) |
+| [Jiaya Jia](/researchers/jiaya-jia) | Abnormal Event Detection at 150 FPS in MATLAB | — | [None](#) |
+| [Jiaya Jia](/researchers/jiaya-jia) | High-quality motion deblurring from a single image | — | [None](#) |
+| [Jiaya Jia](/researchers/jiaya-jia) | Scale-Recurrent Network for Deep Image Deblurring | — | [None](#) |
+| [Jiaya Jia](/researchers/jiaya-jia) | PSANet: Point-wise Spatial Attention Network for Scene Parsing | — | [None](#) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -273,15 +282,15 @@ _Real-time interactive video generation requires low-latency, streaming, and con
 → [profile](/researchers/min-zhao)
 
 ---
-### No. 05 · Slot-MPC: Goal-Conditioned Model Predictive Control with Object-Centric Representations
+### No. 05 · Unnatural L0 Sparse Representation for Natural Image Deblurring
 
-**Jonathan Spieler** · 一作 · 3 作者 · [arXiv:2605.14937](https://arxiv.org/abs/2605.14937)
+**Li Xu** · 一作 · 2 作者 · [arXiv:None](#)
 
-_Predictive world models enable agents to model scene dynamics and reason about the consequences of their actions. Inspired by human perception, object-centric world models capture scene dynamics using object-level repre…_
+_We show in this paper that the success of previous maximum a posterior (MAP) based blur removal methods partly stems from their respective intermediate steps, which implicitly or explicitly create an unnatural represent…_
 
-**▸ 选中原因：首次出现 · 跨 2 个主题（potential 跨界）**
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/jonathan-spieler)
+→ [profile](/researchers/li-xu)
 
 ---
 

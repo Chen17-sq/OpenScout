@@ -5,11 +5,22 @@
   let { data } = $props();
   const list = $derived(data.data?.items ?? []);
   const total = $derived(data.data?.total ?? 0);
+  const limit = $derived(data.data?.limit ?? 100);
+  const offset = $derived(data.data?.offset ?? 0);
+  const hasNext = $derived(offset + list.length < total);
+  const hasPrev = $derived(offset > 0);
 
   const flag = (cc: string | null) => {
     if (!cc) return '';
     return cc.toUpperCase().replace(/./g, (c) => String.fromCodePoint(0x1f1a5 + c.charCodeAt(0)));
   };
+
+  function pageUrl(newOffset: number): string {
+    const params = new URLSearchParams();
+    for (const [k, v] of Object.entries(data.filters)) if (v) params.set(k, v);
+    params.set('offset', String(newOffset));
+    return `/researchers?${params.toString()}`;
+  }
 </script>
 
 <section>
@@ -103,7 +114,57 @@
       {/each}
     </tbody>
   </table>
+
+  {#if hasNext || hasPrev}
+    <nav class="pager">
+      {#if hasPrev}
+        <a href={pageUrl(Math.max(0, offset - limit))}>← prev</a>
+      {:else}
+        <span></span>
+      {/if}
+      <span class="info">
+        {offset + 1}–{offset + list.length} of {total.toLocaleString()}
+      </span>
+      {#if hasNext}
+        <a href={pageUrl(offset + limit)}>next →</a>
+      {:else}
+        <span></span>
+      {/if}
+    </nav>
+  {/if}
 </section>
+
+<style>
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 28px;
+    border-top: 1px solid var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .pager a {
+    color: var(--ink);
+    text-decoration: none;
+    padding: 4px 12px;
+    border: 1px solid var(--ink);
+  }
+  .pager a:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .pager .info {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    color: var(--n500);
+    letter-spacing: 0.06em;
+    text-transform: none;
+  }
+</style>
 
 <script context="module" lang="ts">
   function withSort(s: string, filters: Record<string, string>): string {

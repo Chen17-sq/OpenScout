@@ -1,11 +1,11 @@
 """FastAPI app entry — `uvicorn openscout.api.main:app`."""
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from fastapi.middleware.cors import CORSMiddleware
 
 from .. import __version__
 from ..config import settings
-from .routes import admin, briefs, papers, researchers, rss, search, stats, tags, topics
+from .routes import admin, briefs, og, papers, researchers, rss, search, stats, tags, topics
 
 app = FastAPI(
     title="OpenScout API",
@@ -29,6 +29,7 @@ app.include_router(stats.router, prefix="/stats", tags=["stats"])
 app.include_router(tags.router, prefix="/tags", tags=["tags"])
 app.include_router(search.router, prefix="/search", tags=["search"])
 app.include_router(rss.router, prefix="/rss", tags=["rss"])
+app.include_router(og.router, prefix="/og", tags=["og"])
 app.include_router(admin.router, prefix="/admin", tags=["admin"])
 
 
@@ -38,9 +39,41 @@ def root() -> dict:
         "name": "OpenScout",
         "version": __version__,
         "tagline": "All The Researchers Fit To Watch",
+        "endpoints": [
+            "/health",
+            "/researchers",
+            "/researchers/{slug}",
+            "/papers",
+            "/papers/{arxiv_id}",
+            "/briefs/today",
+            "/briefs/list",
+            "/briefs/{date}",
+            "/topics",
+            "/topics/{slug}",
+            "/tags",
+            "/tags/{label}",
+            "/stats",
+            "/stats/top-collaborators",
+            "/stats/by-topic",
+            "/search?q=",
+            "/rss/daily",
+            "/rss/papers",
+            "/og/researchers/{slug}.svg",
+            "/admin/ingest (POST · auth)",
+        ],
     }
 
 
 @app.get("/health")
 def health() -> dict:
     return {"status": "ok"}
+
+
+@app.get("/robots.txt")
+def robots() -> Response:
+    from fastapi import Response as R
+
+    return R(
+        content="User-agent: *\nAllow: /\nSitemap: /sitemap.xml\n",
+        media_type="text/plain",
+    )

@@ -7,10 +7,26 @@
     { href: '/', key: 'nav.today' },
     { href: '/researchers', key: 'nav.researchers' },
     { href: '/topics', key: 'nav.topics' },
+    { href: '/tags', key: 'nav.tags' },
     { href: '/editions', key: 'nav.archive' },
     { href: '/watchlist', key: 'nav.watchlist' },
     { href: '/stats', key: 'nav.stats' },
   ];
+
+  // Global keyboard shortcut: `/` focuses the search box.
+  function onKeydown(e: KeyboardEvent) {
+    if (e.key === '/' && document.activeElement?.tagName !== 'INPUT' && document.activeElement?.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      const input = document.querySelector<HTMLInputElement>('.nav-search input');
+      input?.focus();
+    }
+  }
+
+  $effect(() => {
+    if (typeof window === 'undefined') return;
+    window.addEventListener('keydown', onKeydown);
+    return () => window.removeEventListener('keydown', onKeydown);
+  });
 
   const path = $derived(page.url.pathname);
   const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));

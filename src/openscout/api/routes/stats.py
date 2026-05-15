@@ -39,9 +39,7 @@ def overview(db: Session = Depends(get_db)) -> dict:
         )
         r_n = int(
             db.execute(
-                select(func.count(Researcher.id)).where(
-                    func.date(Researcher.first_seen_at) == d
-                )
+                select(func.count(Researcher.id)).where(func.date(Researcher.first_seen_at) == d)
             ).scalar()
             or 0
         )

@@ -266,7 +266,9 @@ def soon_graduating_picks(db: Session, limit: int = 10) -> list[StoryItem]:
         out.append(
             StoryItem(
                 researcher=_researcher_summary(r),
-                paper=_paper_summary(latest, _author_count(db, latest.id), _topics_for_paper(db, latest.id)),
+                paper=_paper_summary(
+                    latest, _author_count(db, latest.id), _topics_for_paper(db, latest.id)
+                ),
             )
         )
     return out
@@ -311,7 +313,9 @@ def incoming_ap_picks(db: Session, limit: int = 10) -> list[StoryItem]:
             out.append(
                 StoryItem(
                     researcher=_researcher_summary(r),
-                    paper=_paper_summary(latest, _author_count(db, latest.id), _topics_for_paper(db, latest.id)),
+                    paper=_paper_summary(
+                        latest, _author_count(db, latest.id), _topics_for_paper(db, latest.id)
+                    ),
                 )
             )
     return out
@@ -391,9 +395,9 @@ def sleeper_picks(db: Session, brief_date: Date, limit: int = 5) -> list[StoryIt
             Researcher.confidence_level == "low",
             func.date(Researcher.first_seen_at) == brief_date,
             Paper.id.in_(
-                select(PaperAuthor.paper_id).join(
-                    Researcher, Researcher.id == PaperAuthor.researcher_id
-                ).where(Researcher.confidence_level != "low")
+                select(PaperAuthor.paper_id)
+                .join(Researcher, Researcher.id == PaperAuthor.researcher_id)
+                .where(Researcher.confidence_level != "low")
             ),
         )
         .limit(3)

@@ -3,9 +3,8 @@
 For the structured JSON used by the frontend, call `data.collect()` directly.
 """
 
-from dataclasses import asdict
+from datetime import UTC, datetime
 from datetime import date as Date
-from datetime import datetime, timezone
 from pathlib import Path
 
 from sqlalchemy import select
@@ -26,7 +25,7 @@ def generate_brief(date: str | None = None) -> Path:
       - Writes `reports/YYYY-MM-DD.md` and `reports/latest.md`
       - Upserts a row in `daily_briefs`
     """
-    brief_date = Date.fromisoformat(date) if date else datetime.now(timezone.utc).date()
+    brief_date = Date.fromisoformat(date) if date else datetime.now(UTC).date()
 
     with session_scope() as db:
         brief = bd.collect(db, brief_date)
@@ -87,7 +86,7 @@ def _render_story_card(idx: int, story: bd.StoryItem) -> str:
 def _render(brief: bd.BriefData) -> str:
     weekday = brief.brief_date.strftime("%A").upper()
     pretty_date = brief.brief_date.strftime("%B %-d, %Y").upper()
-    gen_iso = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    gen_iso = datetime.now(UTC).isoformat(timespec="seconds")
 
     out: list[str] = []
     out.append(
@@ -151,7 +150,9 @@ _Auto-generated at {gen_iso} · [完整看板](http://localhost:5174) · [API](/
 
     # Section D 即将 AP
     out.append("\n## Section D · 🚀 即将入职 AP · Top 10\n\n")
-    out.append("_coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招聘公告 + Twitter 监听)._\n")
+    out.append(
+        "_coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招聘公告 + Twitter 监听)._\n"
+    )
 
     out.append("\n✦ &nbsp; ✦ &nbsp; ✦\n")
 

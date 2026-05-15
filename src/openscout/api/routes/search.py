@@ -32,7 +32,7 @@ def search(
             )
         )
         .group_by(Researcher.id)
-        .order_by(desc(Researcher.citation_count.nullslast()), desc(n_papers))
+        .order_by(desc(Researcher.citation_count).nulls_last(), desc(n_papers))
         .limit(limit)
     )
     researcher_rows = db.execute(r_stmt).all()

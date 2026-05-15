@@ -1,6 +1,6 @@
 """OpenScout CLI — `uv run openscout <command>`."""
 
-from typing import Annotated, Optional
+from typing import Annotated
 
 import typer
 from rich.console import Console
@@ -38,7 +38,9 @@ def seed() -> None:
 
 @app.command()
 def ingest(
-    topic: Annotated[str, typer.Option(help="Topic slug: embodied / world_models / ai4sci")] = "embodied",
+    topic: Annotated[
+        str, typer.Option(help="Topic slug: embodied / world_models / ai4sci")
+    ] = "embodied",
     limit: Annotated[int, typer.Option(help="Max papers to pull")] = 50,
 ) -> None:
     """Pull recent arXiv papers for the given topic."""
@@ -50,7 +52,7 @@ def ingest(
 
 @app.command()
 def brief(
-    date: Annotated[Optional[str], typer.Option(help="YYYY-MM-DD; defaults to today")] = None,
+    date: Annotated[str | None, typer.Option(help="YYYY-MM-DD; defaults to today")] = None,
 ) -> None:
     """Generate the daily brief Markdown."""
     from .brief.generate import generate_brief
@@ -97,7 +99,9 @@ def reset_enrichment() -> None:
 @app.command("enrich-openalex")
 def enrich_openalex(
     limit: Annotated[int, typer.Option(help="Max researchers to enrich")] = 200,
-    only_anchors: Annotated[bool, typer.Option(help="Only anchor researchers (high/medium conf)")] = False,
+    only_anchors: Annotated[
+        bool, typer.Option(help="Only anchor researchers (high/medium conf)")
+    ] = False,
 ) -> None:
     """Pull Chinese names, citation counts, h-index, and topic tags from OpenAlex."""
     from .scraper.openalex import enrich_all
@@ -136,6 +140,81 @@ def signature_papers() -> None:
     console.print(f"[green]✓[/green] assigned {n} signature papers")
 
 
+@app.command("backfill-works")
+def backfill_works(
+    per_anchor: Annotated[int, typer.Option(help="Max works per anchor")] = 80,
+) -> None:
+    """For each anchor, pull their last N works from OpenAlex and upsert Papers."""
+    from .scraper.openalex_works import backfill_anchor_works
+
+    c = backfill_anchor_works(per_anchor_limit=per_anchor)
+    console.print(
+        f"[green]✓[/green] backfill: anchors={c['anchors_processed']} · "
+        f"+{c['papers_added']} papers · {c['papers_updated']} updated · "
+        f"+{c['links_added']} co-author links · {c['errors']} errors"
+    )
+
+
+@app.command()
+def score() -> None:
+    """Compute person_score / trajectory_score / investability_score for all researchers."""
+    from .scraper.scoring import compute_scores
+
+    c = compute_scores()
+    console.print(f"[green]✓[/green] scored {c['updated']} researchers")
+
+
+@app.command("social-cards")
+def social_cards() -> None:
+    """Generate the 9 social SVG cards (today's top researchers) for sharing."""
+    from .scraper.social_cards import write_daily_cards
+
+    c = write_daily_cards()
+    console.print(f"[green]✓[/green] wrote {c['cards']} cards to [cyan]{c['out_dir']}[/cyan]")
+
+
+@app.command("classify-topics")
+def classify_topics(
+    topic: Annotated[str, typer.Option(help="topic slug to filter")] = "ai4sci",
+    limit: Annotated[int, typer.Option(help="Max papers to check")] = 30,
+) -> None:
+    """LLM hard-filter for paper↔topic relevance (Anthropic; graceful skip)."""
+    from .scraper.classify import filter_topic_papers
+
+    c = filter_topic_papers(topic, limit=limit)
+    if c["skipped_no_key"]:
+        console.print(
+            "[yellow]⚠[/yellow] ANTHROPIC_API_KEY not set; skipping topic classification."
+        )
+    else:
+        console.print(
+            f"[green]✓[/green] {topic}: kept {c['kept']} / removed {c['removed']} / checked {c['checked']}"
+        )
+
+
+@app.command("github-stars")
+def github_stars(
+    limit: Annotated[int, typer.Option(help="Max papers to scan")] = 30,
+) -> None:
+    """For papers with a GitHub code_url, fetch star count via GitHub API."""
+    from .scraper.github_stars import fetch_stars
+
+    c = fetch_stars(limit=limit)
+    console.print(f"[green]✓[/green] github stars: {c['updated']} updated · {c['errors']} errors")
+
+
+@app.command("send-digest")
+def send_digest() -> None:
+    """Send today's brief as HTML email via Resend (requires RESEND_API_KEY + NOTIFY_EMAIL_TO)."""
+    from .scraper.email_digest import send_latest_digest
+
+    r = send_latest_digest()
+    if r.get("sent"):
+        console.print(f"[green]✓[/green] sent digest for {r['brief_date']}")
+    else:
+        console.print(f"[yellow]⚠[/yellow] not sent: {r.get('reason')}")
+
+
 @app.command("extract-emails")
 def extract_emails(
     limit: Annotated[int, typer.Option(help="Max recent papers to scrape")] = 20,
@@ -160,13 +239,12 @@ def translate_papers_cmd(
     c = translate_papers(limit=limit)
     if c["skipped_no_key"]:
         console.print(
-            f"[yellow]⚠[/yellow] ANTHROPIC_API_KEY not set — skipping translation. "
-            f"Set it in .env to enable."
+            "[yellow]⚠[/yellow] ANTHROPIC_API_KEY not set — skipping translation. "
+            "Set it in .env to enable."
         )
     else:
         console.print(
-            f"[green]✓[/green] translated {c['translated']}/{c['attempted']} · "
-            f"{c['errors']} errors"
+            f"[green]✓[/green] translated {c['translated']}/{c['attempted']} · {c['errors']} errors"
         )
 
 

@@ -16,7 +16,7 @@ from manually-asserted lineage.
 
 from collections import Counter
 
-from sqlalchemy import desc, select
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from ..db import session_scope
@@ -73,8 +73,7 @@ def infer_lineage() -> dict[str, int]:
 
         for r_id, junior in candidates.items():
             n_papers = db.execute(
-                select(PaperAuthor)
-                .where(PaperAuthor.researcher_id == r_id)
+                select(PaperAuthor).where(PaperAuthor.researcher_id == r_id)
             ).all()
             n_papers = len(n_papers)
             if n_papers == 0 or n_papers > MAX_JUNIOR_PAPERS:

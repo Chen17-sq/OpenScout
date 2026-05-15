@@ -4,8 +4,8 @@ Writes `web/static/banner.svg` and `web/static/og-card.svg` with today's date st
 Called from `openscout banner` CLI; can be wired into the daily cron.
 """
 
+from datetime import UTC, datetime
 from datetime import date as Date
-from datetime import datetime, timezone
 from pathlib import Path
 
 STATIC_DIR = Path(__file__).resolve().parents[3] / "web" / "static"
@@ -71,10 +71,12 @@ def render_og_card_svg(brief_date: Date, issue: int, tracked: int, papers: int) 
 """
 
 
-def write_banners(brief_date: Date | None = None, *, tracked: int = 0, papers: int = 0) -> dict[str, Path]:
+def write_banners(
+    brief_date: Date | None = None, *, tracked: int = 0, papers: int = 0
+) -> dict[str, Path]:
     """Generate banner.svg + og-card.svg in web/static/."""
     if brief_date is None:
-        brief_date = datetime.now(timezone.utc).date()
+        brief_date = datetime.now(UTC).date()
     issue = (brief_date - Date(2026, 5, 15)).days + 1
 
     STATIC_DIR.mkdir(parents=True, exist_ok=True)

@@ -113,9 +113,7 @@ def _update_researcher(db, ad: dict) -> bool:
         return False
 
     # Fall back to exact-name match. Collisions remain a known v0 limitation.
-    target = db.execute(
-        select(Researcher).where(Researcher.name_en == name)
-    ).scalar_one_or_none()
+    target = db.execute(select(Researcher).where(Researcher.name_en == name)).scalar_one_or_none()
     if not target:
         return False
 
