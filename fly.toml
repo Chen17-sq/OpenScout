@@ -1,0 +1,43 @@
+# Fly.io deployment for OpenScout backend.
+#
+# Setup (one-time):
+#   1. brew install flyctl
+#   2. flyctl auth login
+#   3. flyctl launch --no-deploy            # answer "no" to Postgres for now
+#   4. flyctl postgres create --name openscout-db --region nrt
+#   5. flyctl postgres attach openscout-db  # sets DATABASE_URL secret automatically
+#   6. flyctl secrets set ANTHROPIC_API_KEY=sk-ant-... \
+#          INGEST_SECRET=$(openssl rand -hex 32) \
+#          FRONTEND_ORIGIN=https://openscout.vercel.app
+#   7. flyctl deploy
+#
+# On each push to main, GitHub Action `deploy.yml` re-deploys automatically.
+
+app = "openscout"
+primary_region = "nrt"  # Tokyo — close to China users
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8000"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = "stop"      # scale to zero when idle
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+  [[http_service.checks]]
+    grace_period = "10s"
+    interval = "30s"
+    method = "GET"
+    timeout = "5s"
+    path = "/health"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "512mb"

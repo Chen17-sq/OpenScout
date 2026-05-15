@@ -54,5 +54,19 @@ def brief(
     console.print(f"[green]✓[/green] brief written to [cyan]{path}[/cyan]")
 
 
+@app.command()
+def enrich(
+    limit: Annotated[int, typer.Option(help="Max papers to enrich via Semantic Scholar")] = 30,
+) -> None:
+    """Look up recent papers on Semantic Scholar; attach S2 author IDs + citation counts."""
+    from .scraper.semanticscholar import enrich_recent_papers
+
+    papers_n, researchers_n = enrich_recent_papers(limit=limit)
+    console.print(
+        f"[green]✓[/green] enriched {papers_n} papers; "
+        f"updated {researchers_n} researcher records with S2 IDs / affiliations / homepages"
+    )
+
+
 if __name__ == "__main__":
     app()

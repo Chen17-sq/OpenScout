@@ -1,38 +1,30 @@
 <script lang="ts">
-  // v0 placeholder homepage. Will fetch /briefs/latest + /researchers from the API.
+  import { marked } from 'marked';
+
+  let { data } = $props();
+
+  const html = $derived(data.brief ? marked.parse(data.brief.rendered_md) : '');
 </script>
 
-<header class="rule-bottom pb-4 mb-10">
-  <p class="font-mono text-[11px] tracking-[0.2em] uppercase">
-    VOL. 1 · NO. 001 &nbsp;·&nbsp; BEIJING EDITION
-  </p>
-  <h1 class="masthead text-6xl md:text-7xl font-bold mt-2">OpenScout</h1>
-  <p class="mt-2 italic text-base">All The Researchers Fit To Watch.</p>
-  <p class="mt-1 text-sm text-stone-600">
-    一份每日发行的报纸 — 具身智能 / 世界模型 / AI for Science 的高潜研究者追踪。
-  </p>
-</header>
+{#if data.error}
+  <header class="rule-bottom pb-4 mb-10">
+    <p class="font-mono text-[11px] tracking-[0.2em] uppercase">
+      VOL. 1 · NO. 001 &nbsp;·&nbsp; BEIJING EDITION
+    </p>
+    <h1 class="masthead text-6xl md:text-7xl font-bold mt-2">OpenScout</h1>
+    <p class="mt-2 italic text-base">All The Researchers Fit To Watch.</p>
+  </header>
 
-<section class="prose max-w-none">
-  <h2 class="masthead text-2xl font-semibold">Section A · 头版概览</h2>
-  <p class="text-stone-700">
-    后端尚未启动。Quick start：
-  </p>
-  <pre class="bg-stone-100 p-4 rounded text-sm font-mono">
-make db-up
-make install
-make init
-make seed
-make ingest TOPIC=embodied LIMIT=50
-make brief
-make dev
-  </pre>
+  <section class="bg-red-50 border border-red-200 rounded p-4 text-sm">
+    <p class="font-semibold">Backend offline</p>
+    <p class="text-stone-700">{data.error}</p>
+  </section>
+{:else if data.brief}
+  <article class="prose prose-stone max-w-none prose-headings:masthead prose-pre:bg-stone-100 prose-pre:text-stone-800 prose-table:text-sm">
+    {@html html}
+  </article>
 
-  <p class="text-stone-700 mt-6">
-    跑完后访问 <code>http://localhost:8000/briefs/latest</code>，或继续完善这个页面来渲染日报。
-  </p>
-</section>
-
-<footer class="mt-16 pt-6 rule-top text-xs text-stone-500 font-mono">
-  All the research that's fit to watch, every morning at 09:00 Beijing.
-</footer>
+  <footer class="mt-16 pt-6 rule-top text-xs text-stone-500 font-mono">
+    Vol. {data.brief.volume} · No. {String(data.brief.issue).padStart(3, '0')} · generated {data.brief.generated_at}
+  </footer>
+{/if}
