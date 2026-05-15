@@ -53,6 +53,28 @@ institutions:
     type: university
     country: CN
 
+  # Additional anchors
+  - name: University of California, San Diego
+    name_zh: 加州大学圣地亚哥分校
+    type: university
+    country: US
+  - name: University of Hong Kong
+    name_zh: 香港大学
+    type: university
+    country: HK
+  - name: ETH Zurich
+    name_zh: 苏黎世联邦理工
+    type: university
+    country: CH
+  - name: University of Chicago
+    name_zh: 芝加哥大学
+    type: university
+    country: US
+  - name: Snap Inc.
+    name_zh: Snap
+    type: company
+    country: US
+
   # International / industry
   - name: Free University of Berlin
     name_zh: 柏林自由大学

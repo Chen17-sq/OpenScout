@@ -136,6 +136,40 @@ def signature_papers() -> None:
     console.print(f"[green]✓[/green] assigned {n} signature papers")
 
 
+@app.command("extract-emails")
+def extract_emails(
+    limit: Annotated[int, typer.Option(help="Max recent papers to scrape")] = 20,
+) -> None:
+    """Download recent arXiv PDFs and extract emails from page 1."""
+    from .scraper.pdf_emails import extract_paper_emails
+
+    c = extract_paper_emails(limit=limit)
+    console.print(
+        f"[green]✓[/green] email scrape: {c['with_emails']} papers with emails / "
+        f"{c['attempted']} attempted · {c['no_pdf']} no_pdf · {c['errors']} errors"
+    )
+
+
+@app.command("translate-papers")
+def translate_papers_cmd(
+    limit: Annotated[int, typer.Option(help="Max papers to translate")] = 20,
+) -> None:
+    """LLM Chinese one-liner for paper abstracts (requires ANTHROPIC_API_KEY)."""
+    from .scraper.translator import translate_papers
+
+    c = translate_papers(limit=limit)
+    if c["skipped_no_key"]:
+        console.print(
+            f"[yellow]⚠[/yellow] ANTHROPIC_API_KEY not set — skipping translation. "
+            f"Set it in .env to enable."
+        )
+    else:
+        console.print(
+            f"[green]✓[/green] translated {c['translated']}/{c['attempted']} · "
+            f"{c['errors']} errors"
+        )
+
+
 @app.command()
 def banner() -> None:
     """Generate web/static/banner.svg + og-card.svg with today's stamps."""

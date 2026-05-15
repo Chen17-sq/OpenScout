@@ -46,8 +46,8 @@ def list_researchers(
 
     sort_map = {
         "papers": (desc(n_papers), Researcher.name_en),
-        "citations": (desc(Researcher.citation_count.nullslast()), desc(n_papers)),
-        "h_index": (desc(Researcher.h_index.nullslast()), desc(n_papers)),
+        "citations": (desc(Researcher.citation_count).nulls_last(), desc(n_papers)),
+        "h_index": (desc(Researcher.h_index).nulls_last(), desc(n_papers)),
         "name": (Researcher.name_en, desc(n_papers)),
     }
     order_cols = sort_map.get(sort, sort_map["papers"])
@@ -216,4 +216,5 @@ def _paper_summary(p: Paper, topics: list[str]) -> dict:
         "first_seen_at": p.first_seen_at.isoformat() if p.first_seen_at else None,
         "citation_count": p.citation_count,
         "topics": topics,
+        "author_emails": p.author_emails or [],
     }

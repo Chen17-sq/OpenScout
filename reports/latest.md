@@ -7,7 +7,7 @@ DAILY · 具身 / 世界模型 / AI4SCI · FRIDAY, MAY 15, 2026
 
 > *All The Researchers Fit To Watch* — Vol. 1, No. 001 · 2026-05-15
 
-_Auto-generated at 2026-05-15T20:43:54+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-05-15T21:14:14+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,100 +15,100 @@ _Auto-generated at 2026-05-15T20:43:54+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **390** | 59 | 369 | _n/a_ | _n/a_ |
+| **845** | 136 | 806 | 1 | 1 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Limitations of Debye-Waller lattice temperature extraction under electronic excitation
+### No. 01 · IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation
 
-**N. Medvedev** · 一作 · 4 作者 · [arXiv:2605.15140](https://arxiv.org/abs/2605.15140)
+**Shijie Lian** · 一作 · 11 作者 · [arXiv:2605.14712](https://arxiv.org/abs/2605.14712)
 
-_Ultrafast diffraction is the cutting-edge technique to extract the atomic temperature at femtosecond timescales, and further related quantities - in particular, electron-phonon coupling strength at elevated electronic t…_
+_Robot imitation data are often multimodal: similar visual-language observations may be followed by different action chunks because human demonstrators act with different short-horizon intents, task phases, or recent con…_
 
-→ [profile](/researchers/n-medvedev)
-
----
-### No. 02 · Rovibrational structure and electric dipole moments of the AcOCH$_3$+ ion
-
-**Anna Zakharova** · 一作 · 1 作者 · [arXiv:2605.15121](https://arxiv.org/abs/2605.15121)
-
-_The possibility of laser cooling and the presence of closely spaced rovibrational doublets make polyatomic molecules an attractive platform for the $\mathcal{P}$, $\mathcal{T}$-violation searches. We study the spectrum…_
-
-→ [profile](/researchers/anna-zakharova)
+→ [profile](/researchers/shijie-lian)
 
 ---
-### No. 03 · The Emergence of Photonic Crystalline Order and Time-Series Dynamics in NaCl Droplet Deposition
+### No. 02 · SceneFunRI: Reasoning the Invisible for Task-Driven Functional Object Localization
 
-**Grzegorz S. Żmija** · 一作 · 3 作者 · [arXiv:2605.15101](https://arxiv.org/abs/2605.15101)
+**Posheng Chen** · 一作 · 5 作者 · [arXiv:2605.14704](https://arxiv.org/abs/2605.14704)
 
-_Crystallization during droplet evaporation gives rise to complex, self-organized structures, yet the mechanisms underlying the emergence of ordered functional phases remain poorly understood. In this study, we present a…_
+_In real-world scenes, target objects may reside in regions that are not visible. While humans can often infer the locations of occluded objects from context and commonsense knowledge, this capability remains a major cha…_
 
-→ [profile](/researchers/grzegorz-s-mija)
-
----
-### No. 04 · Two Protons, Two Positrons, and Four Electrons: Covalent Bond with van der Waals Characteristics
-
-**Jorge Charry** · 一作 · 2 作者 · [arXiv:2605.15099](https://arxiv.org/abs/2605.15099)
-
-_Classifying interactions is key in the physical sciences, and bonding mechanisms in matter-antimatter systems remain particularly enigmatic. Here we focus on a paradigmatic example of positronium hydride (PsH) dimer com…_
-
-→ [profile](/researchers/jorge-charry)
+→ [profile](/researchers/posheng-chen)
 
 ---
-### No. 05 · Fast contracted Clebsch--Gordan tensor products for equivariant graph neural networks
+### No. 03 · SR-Platform: An Agentic Pipeline for Natural Language-Driven Robot Simulation Environment Synthesis
 
-**Anton Bochkarev** · 一作 · 3 作者 · [arXiv:2605.15073](https://arxiv.org/abs/2605.15073)
+**Ben Wei Lim** · 一作 · 4 作者 · [arXiv:2605.14700](https://arxiv.org/abs/2605.14700)
 
-_We present an $\mathcal{O}(L^3)$ algorithm for evaluating contracted Clebsch--Gordan tensor products in $\mathrm{O}(3)$-equivariant machine learning potentials at fixed Canonical Polyadic (CP) rank. Mapping the angular…_
+_Generating robot simulation environments remains a major bottleneck in simulation-based robot learning. Constructing a training-ready MuJoCo scene typically requires expertise in 3D asset modeling, MJCF specification, s…_
 
-→ [profile](/researchers/anton-bochkarev)
-
----
-### No. 06 · Multifunctional Barophotonic Control of Resonators and Metasurfaces
-
-**Ping-Chun Chen** · 一作 · 5 作者 · [arXiv:2605.15065](https://arxiv.org/abs/2605.15065)
-
-_Actively tunable nanophotonic platforms that control light-matter interactions enable reconfigurable optical systems and programmable photonic integrated circuits. Hydrostatic pressure provides a noninvasive and materia…_
-
-→ [profile](/researchers/ping-chun-chen)
+→ [profile](/researchers/ben-wei-lim)
 
 ---
-### No. 07 · Current induced magneto-optical Kerr effect as a probe of Dirac carriers in Bi$_{1-x}$Sb$_x$ alloy
+### No. 04 · SeaVis: Modeling and Control of a Remotely Operated Towed Vehicle for Seabed Visualization and Mapping
 
-**Ryota Miyazaki** · 一作 · 7 作者 · [arXiv:2605.14975](https://arxiv.org/abs/2605.14975)
+**Abdelhakim Amer** · 一作 · 6 作者 · [arXiv:2605.14683](https://arxiv.org/abs/2605.14683)
 
-_We study the current-induced magneto-optical Kerr effect (MOKE) in Bi$_{1-x}$Sb$_x$ semi-metalic alloys. The MOKE signal is found to be the largest in pure Bi ($x=0$), exceeding that of transition metals by nearly four…_
+_High-resolution seafloor mapping necessitates stable and precise positioning for underwater robots. This paper introduces a novel mathematical model for SeaVis remotely operated towed vehicles (ROTVs) and develops a gai…_
 
-→ [profile](/researchers/ryota-miyazaki)
-
----
-### No. 08 · Categorification of Chemical Reactions: a bottom-up tower from stoichiometry to quantum structure
-
-**Kyunghoon Han** · 一作 · 1 作者 · [arXiv:2605.14974](https://arxiv.org/abs/2605.14974)
-
-_Chemistry's rules carry exceptions: the octet rule, Hess's Law, detailed balance, orbital symmetry selection rules, all with disclaimers memorised separately. Their cause: a question from a richer structural level posed…_
-
-→ [profile](/researchers/kyunghoon-han)
+→ [profile](/researchers/abdelhakim-amer)
 
 ---
-### No. 09 · THEMol dataset: Torsion, Hessian, and Energy of Molecules
+### No. 05 · An Amortized Efficiency Threshold for Comparing Neural and Heuristic Solvers in Combinatorial Optimization
 
-**Jiashu Liang** · 一作 · 16 作者 · [arXiv:2605.14973](https://arxiv.org/abs/2605.14973)
+**Sohaib Afifi** · 一作 · 1 作者 · [arXiv:2605.14624](https://arxiv.org/abs/2605.14624)
 
-_We present THEMol (Torsion, Hessian, Energy of Molecules), a massive open-source collection of quantum mechanical properties tailored for closed-shell organic molecules, with up to 50 heavy atoms. THEMol includes a Hess…_
+_A common critique of neural combinatorial-optimization solvers is that they are less energy-efficient than CPU metaheuristics, given the operational energy cost of training them on GPUs. This paper examines the inferent…_
 
-→ [profile](/researchers/jiashu-liang)
+→ [profile](/researchers/sohaib-afifi)
 
 ---
-### No. 10 · Generative reconstruction of 2D and 3D polycrystalline microstructures using symmetrized hyperspherical harmonics
+### No. 06 · DSSP: Diffusion State Space Policy with Full-History Encoding
 
-**Ali R. Safi** · 一作 · 6 作者 · [arXiv:2605.14898](https://arxiv.org/abs/2605.14898)
+**Zhiyuan Guan** · 一作 · 8 作者 · [arXiv:2605.14598](https://arxiv.org/abs/2605.14598)
 
-_Establishing structure-property linkages in polycrystalline materials requires representative two- (2D) and three- (3D) dimensional microstructural inputs for full-field simulations. A core objective of microstructure c…_
+_Diffusion-based imitation learning has shown strong promise for robot manipulation. However, most existing policies condition only on the current observation or a short window of recent observations, limiting their abil…_
 
-→ [profile](/researchers/ali-r-safi)
+→ [profile](/researchers/zhiyuan-guan)
+
+---
+### No. 07 · Let Robots Feel Your Touch: Visuo-Tactile Cortical Alignment for Embodied Mirror Resonance
+
+**Tianfang Zhu** · 一作 · 7 作者 · [arXiv:2605.14571](https://arxiv.org/abs/2605.14571)
+
+_Observing touch on another's body can elicit corresponding tactile sensations in the observer, a phenomenon termed mirror touch that supports empathy and social perception. This visuo-tactile resonance is thought to rel…_
+
+→ [profile](/researchers/tianfang-zhu)
+
+---
+### No. 08 · TeachAnything: A Multimodal Crowdsourcing Platform for Training Embodied AI Agents in Symmetrical Reality
+
+**Zidong Liu** · 一作 · 4 作者 · [arXiv:2605.14556](https://arxiv.org/abs/2605.14556)
+
+_Symmetrical Reality (SR) is emerging as a future trend for human-agent coexistence, placing higher demands on agents to acquire human-like intelligence. It calls for richer and more diverse human guidance. We introduce…_
+
+→ [profile](/researchers/zidong-liu)
+
+---
+### No. 09 · DiffPhD: A Unified Differentiable Solver for Projective Heterogeneous Materials in Elastodynamics with Contact-Rich GPU-Acceleration
+
+**Shih-Yu Lai** · 一作 · 12 作者 · [arXiv:2605.14526](https://arxiv.org/abs/2605.14526)
+
+_Differentiable simulation of soft bodies is a foundation for system identification, trajectory optimization, and Real2Sim transfer. Yet, existing methods such as the differentiable Projective Dynamics (DiffPD) struggle…_
+
+→ [profile](/researchers/shih-yu-lai)
+
+---
+### No. 10 · Quantifying Cyber-Vulnerability in Power Electronics Systems via an Impedance-Based Attack Reachable Domain
+
+**Hongwei Zhen** · 一作 · 5 作者 · [arXiv:2605.14502](https://arxiv.org/abs/2605.14502)
+
+_Power electronics systems are increasingly exposed to cyber threats due to their integration with digital controllers and communication networks. However, an attacker-oriented metric is still lacking to quantify the ext…_
+
+→ [profile](/researchers/hongwei-zhen)
 
 ---
 
@@ -120,100 +120,9 @@ _Establishing structure-property linkages in polycrystalline materials requires 
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section C · 🎓 即将毕业 PhD · Top 10
+## Section C · 🎓 即将毕业 PhD · Top 0
 
-_v0 fallback: 最高产的 auto-discovered first-author（proxy for 活跃晚期）._
-
-### No. 01 · Articraft: An Agentic System for Scalable Articulated 3D Asset Generation
-
-**Matt Zhou** · 一作 · 9 作者 · [arXiv:2605.15187](https://arxiv.org/abs/2605.15187)
-
-_A bottleneck in learning to understand articulated 3D objects is the lack of large and diverse datasets. In this paper, we propose to leverage large language models (LLMs) to close this gap and generate articulated asse…_
-
-→ [profile](/researchers/matt-zhou)
-
----
-### No. 02 · Hand-in-the-Loop: Improving Dexterous VLA via Seamless Interventional Correction
-
-**Zhuohang Li** · 一作 · 8 作者 · [arXiv:2605.15157](https://arxiv.org/abs/2605.15157)
-
-_Vision-Language-Action (VLA) models are prone to compounding errors in dexterous manipulation, where high-dimensional action spaces and contact-rich dynamics amplify small policy deviations over long horizons. While Int…_
-
-→ [profile](/researchers/zhuohang-li)
-
----
-### No. 03 · Pelican-Unified 1.0: A Unified Embodied Intelligence Model for Understanding, Reasoning, Imagination and Action
-
-**Yi Zhang** · 一作 · 27 作者 · [arXiv:2605.15153](https://arxiv.org/abs/2605.15153)
-
-_We present Pelican-Unified 1.0, the first embodied foundation model trained according to the principle of unification. Pelican-Unified 1.0 uses a single VLM as a unified understanding module, mapping scenes, instruction…_
-
-→ [profile](/researchers/yi-zhang)
-
----
-### No. 04 · CoCo-InEKF: State Estimation with Learned Contact Covariances in Dynamic, Contact-Rich Scenarios
-
-**Michael Baumgartner** · 一作 · 7 作者 · [arXiv:2605.15122](https://arxiv.org/abs/2605.15122)
-
-_Robust state estimation for highly dynamic motion of legged robots remains challenging, especially in dynamic, contact-rich scenarios. Traditional approaches often rely on binary contact states that fail to capture the…_
-
-→ [profile](/researchers/michael-baumgartner)
-
----
-### No. 05 · CLOVER: Closed-Loop Value Estimation \& Ranking for End-to-End Autonomous Driving Planning
-
-**Sining Ang** · 一作 · 4 作者 · [arXiv:2605.15120](https://arxiv.org/abs/2605.15120)
-
-_End-to-end autonomous driving planners are commonly trained by imitating a single logged trajectory, yet evaluated by rule-based planning metrics that measure safety, feasibility, progress, and comfort. This creates a t…_
-
-→ [profile](/researchers/sining-ang)
-
----
-### No. 06 · SOCC-ICP: Semantics-Assisted Odometry based on Occupancy Grids and ICP
-
-**Johannes Scherer** · 一作 · 3 作者 · [arXiv:2605.15074](https://arxiv.org/abs/2605.15074)
-
-_Reliable pose estimation in previously unseen environments is a fundamental capability of autonomous systems. Existing LiDAR odometry methods typically employ point-, surfel-, or NDT-based map representations, which are…_
-
-→ [profile](/researchers/johannes-scherer)
-
----
-### No. 07 · A Prototyping Framework for Distributed Control of Multi-Robot Systems
-
-**Junaid Ahmed Memon** · 一作 · 4 作者 · [arXiv:2605.15049](https://arxiv.org/abs/2605.15049)
-
-_This paper presents a prototyping framework for distributed control of multi-robot systems, aimed at bridging theory and practical testing of distributed optimization algorithms. Using the Single Program, Multiple Data…_
-
-→ [profile](/researchers/junaid-ahmed-memon)
-
----
-### No. 08 · SpeakerLLM: A Speaker-Specialized Audio-LLM for Speaker Understanding and Verification Reasoning
-
-**KiHyun Nam** · 一作 · 5 作者 · [arXiv:2605.15044](https://arxiv.org/abs/2605.15044)
-
-_As audio-first agents become increasingly common in physical AI, conversational robots, and screenless wearables, audio large language models (audio-LLMs) must integrate speaker-specific understanding to support user au…_
-
-→ [profile](/researchers/kihyun-nam)
-
----
-### No. 09 · Towards Gaze-Informed AI Disclosure Interfaces: Eye-Tracking Attentional and Cognitive Load While Reading AI-Assisted News
-
-**Pooja Prajod** · 一作 · 5 作者 · [arXiv:2605.14999](https://arxiv.org/abs/2605.14999)
-
-_As generative AI becomes increasingly integrated into journalism, designing effective AI-use disclosures that inform readers without imposing unnecessary burden is a key challenge. While prior research has primarily foc…_
-
-→ [profile](/researchers/pooja-prajod)
-
----
-### No. 10 · Sat3DGen: Comprehensive Street-Level 3D Scene Generation from Single Satellite Image
-
-**Ming Qian** · 一作 · 9 作者 · [arXiv:2605.14984](https://arxiv.org/abs/2605.14984)
-
-_Generating a street-level 3D scene from a single satellite image is a crucial yet challenging task. Current methods present a stark trade-off: geometry-colorization models achieve high geometric fidelity but are typical…_
-
-→ [profile](/researchers/ming-qian)
-
----
+_数据不足 — 需要 career_stage_year 推断 (TODO)._
 
 ## Section D · 🚀 即将入职 AP · Top 10
 
@@ -250,107 +159,129 @@ _We present THEMol (Torsion, Hessian, Energy of Molecules), a massive open-sourc
 → [profile](/researchers/jiashu-liang)
 
 ---
-### No. 04 · Agentifying Patient Dynamics within LLMs through Interacting with Clinical World Model
+### No. 04 · TouchAnything: A Dataset and Framework for Bimanual Tactile Estimation from Egocentric Video
 
-**Minghao Wu** · 一作 · 12 作者 · [arXiv:2605.14723](https://arxiv.org/abs/2605.14723)
+**Jianyi Zhou** · 一作 · 14 作者 · [arXiv:2605.13083](https://arxiv.org/abs/2605.13083)
 
-_Sepsis management in the ICU requires sequential treatment decisions under rapidly evolving patient physiology. Although large language models (LLMs) encode broad clinical knowledge and can reason over guidelines, they…_
+_Egocentric human video data, which captures rich human-environment interactions and can be collected at scale, has become a key driver of embodied intelligence research. However, existing egocentric datasets typically l…_
 
-→ [profile](/researchers/minghao-wu)
-
----
-### No. 05 · EponaV2: Driving World Model with Comprehensive Future Reasoning
-
-**Jiawei Xu** · 一作 · 11 作者 · [arXiv:2605.14696](https://arxiv.org/abs/2605.14696)
-
-_Data scaling plays a pivotal role in the pursuit of general intelligence. However, the prevailing perception-planning paradigm in autonomous driving relies heavily on expensive manual annotations to supervise trajectory…_
-
-→ [profile](/researchers/jiawei-xu)
+→ [profile](/researchers/jianyi-zhou)
 
 ---
-### No. 06 · Atomically resolved intrinsic superconducting gap in (La,Pr)3Ni2O7 films
+### No. 05 · DiffPhD: A Unified Differentiable Solver for Projective Heterogeneous Materials in Elastodynamics with Contact-Rich GPU-Acceleration
 
-**Xinxin Wang** · 一作 · 10 作者 · [arXiv:2605.14806](https://arxiv.org/abs/2605.14806)
+**Shih-Yu Lai** · 一作 · 12 作者 · [arXiv:2605.14526](https://arxiv.org/abs/2605.14526)
 
-_Ruddlesden-Popper bilayer nickelates provide an emerging platform for studying high-temperature superconductivity, yet the superconducting pairing symmetry remains under debate. Here, we use atomic-resolution scanning t…_
+_Differentiable simulation of soft bodies is a foundation for system identification, trajectory optimization, and Real2Sim transfer. Yet, existing methods such as the differentiable Projective Dynamics (DiffPD) struggle…_
 
-→ [profile](/researchers/xinxin-wang)
-
----
-### No. 07 · Composable Crystals: Controllable Materials Discovery via Concept Learning
-
-**Nian Liu** · 一作 · 10 作者 · [arXiv:2605.14769](https://arxiv.org/abs/2605.14769)
-
-_De novo crystal generation, a central task in materials discovery, aims to generate crystals that are simultaneously valid, stable, unique, and novel. Existing methods mainly rely on black-box stochastic sampling, provi…_
-
-→ [profile](/researchers/nian-liu)
+→ [profile](/researchers/shih-yu-lai)
 
 ---
-### No. 08 · Learning POMDP World Models from Observations with Language-Model Priors
+### No. 06 · Before the Body Moves: Learning Anticipatory Joint Intent for Language-Conditioned Humanoid Control
 
-**Valentin Six** · 一作 · 10 作者 · [arXiv:2605.13740](https://arxiv.org/abs/2605.13740)
+**Haozhe Jia** · 一作 · 12 作者 · [arXiv:2605.14417](https://arxiv.org/abs/2605.14417)
 
-_Whether navigating a building, operating a robot, or playing a game, an agent that acts effectively in an environment must first learn an internal model of how that environment works. Partially-observable Markov decisio…_
+_Natural language is an intuitive interface for humanoid robots, yet streaming whole-body control requires control representations that are executable now and anticipatory of future physical transitions. Existing languag…_
 
-→ [profile](/researchers/valentin-six)
-
----
-### No. 09 · SANA-WM: Efficient Minute-Scale World Modeling with Hybrid Linear Diffusion Transformer
-
-**Haoyi Zhu** · 一作 · 9 作者 · [arXiv:2605.15178](https://arxiv.org/abs/2605.15178)
-
-_We introduce SANA-WM, an efficient 2.6B-parameter open-source world model natively trained for one-minute generation, synthesizing high-fidelity, 720p, minute-scale videos with precise camera control. SANA-WM achieves v…_
-
-→ [profile](/researchers/haoyi-zhu)
+→ [profile](/researchers/haozhe-jia)
 
 ---
-### No. 10 · Causal Forcing++: Scalable Few-Step Autoregressive Diffusion Distillation for Real-Time Interactive Video Generation
+### No. 07 · MAPLE: Latent Multi-Agent Play for End-to-End Autonomous Driving
 
-**Min Zhao** · 一作 · 9 作者 · [arXiv:2605.15141](https://arxiv.org/abs/2605.15141)
+**Rajeev Yasarla** · 一作 · 12 作者 · [arXiv:2605.14201](https://arxiv.org/abs/2605.14201)
 
-_Real-time interactive video generation requires low-latency, streaming, and controllable rollout. Existing autoregressive (AR) diffusion distillation methods have achieved strong results in the chunk-wise 4-step regime…_
+_Vision-language-action (VLA) models are effective as end-to-end motion planners, but can be brittle when evaluated in closed-loop settings due to being trained under traditional imitation learning framework. Existing cl…_
 
-→ [profile](/researchers/min-zhao)
+→ [profile](/researchers/rajeev-yasarla)
+
+---
+### No. 08 · OmniLiDAR: A Unified Diffusion Framework for Multi-Domain 3D LiDAR Generation
+
+**Youquan Liu** · 一作 · 12 作者 · [arXiv:2605.13815](https://arxiv.org/abs/2605.13815)
+
+_LiDAR scene generation is increasingly important for scalable simulation and synthetic data creation, especially under diverse sensing conditions that are costly to capture at scale. Typically, diffusion-based LiDAR gen…_
+
+→ [profile](/researchers/youquan-liu)
+
+---
+### No. 09 · What Limits Vision-and-Language Navigation ?
+
+**Yunheng Wang** · 一作 · 12 作者 · [arXiv:2605.13328](https://arxiv.org/abs/2605.13328)
+
+_Vision-and-Language Navigation (VLN) is a cornerstone of embodied intelligence. However, current agents often suffer from significant performance degradation when transitioning from simulation to real-world deployment,…_
+
+→ [profile](/researchers/yunheng-wang)
+
+---
+### No. 10 · D-VLA: A High-Concurrency Distributed Asynchronous Reinforcement Learning Framework for Vision-Language-Action Models
+
+**Yucheng Guo** · 一作 · 12 作者 · [arXiv:2605.13276](https://arxiv.org/abs/2605.13276)
+
+_The rapid evolution of Embodied AI has enabled Vision-Language-Action (VLA) models to excel in multimodal perception and task execution. However, applying Reinforcement Learning (RL) to these massive models in large-sca…_
+
+→ [profile](/researchers/yucheng-guo)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 3 个
+## Section F · 🌙 Sleeper Picks · 5 个
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · FU-MPC: Frontier- and Uncertainty-Aware Model Predictive Control for Efficient and Accurate UAV Exploration with Motorized LiDAR
+### No. 01 · Pelican-Unified 1.0: A Unified Embodied Intelligence Model for Understanding, Reasoning, Imagination and Action
 
-**Jianping Li** · 一作 · 9 作者 · [arXiv:2605.14920](https://arxiv.org/abs/2605.14920)
+**Yi Zhang** · 一作 · 27 作者 · [arXiv:2605.15153](https://arxiv.org/abs/2605.15153)
 
-_Efficient UAV exploration in unknown environments requires rapid coverage expansion while maintaining accurate and reliable localization, since safe navigation in complex scenes depends on consistent mapping and pose es…_
+_We present Pelican-Unified 1.0, the first embodied foundation model trained according to the principle of unification. Pelican-Unified 1.0 uses a single VLM as a unified understanding module, mapping scenes, instruction…_
 
-**▸ 选中原因：首次出现，9 作者合作（大组潜在新人）**
+**▸ 选中原因：首次出现 · 27 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/jianping-li)
-
----
-### No. 02 · SANA-WM: Efficient Minute-Scale World Modeling with Hybrid Linear Diffusion Transformer
-
-**Haoyi Zhu** · 一作 · 9 作者 · [arXiv:2605.15178](https://arxiv.org/abs/2605.15178)
-
-_We introduce SANA-WM, an efficient 2.6B-parameter open-source world model natively trained for one-minute generation, synthesizing high-fidelity, 720p, minute-scale videos with precise camera control. SANA-WM achieves v…_
-
-**▸ 选中原因：首次出现，9 作者合作（大组潜在新人）**
-
-→ [profile](/researchers/haoyi-zhu)
+→ [profile](/researchers/yi-zhang)
 
 ---
-### No. 03 · Causal Forcing++: Scalable Few-Step Autoregressive Diffusion Distillation for Real-Time Interactive Video Generation
+### No. 02 · Evo-Depth: A Lightweight Depth-Enhanced Vision-Language-Action Model
+
+**Tao Lin** · 一作 · 17 作者 · [arXiv:2605.14950](https://arxiv.org/abs/2605.14950)
+
+_Vision-Language-Action models have emerged as a promising paradigm for robotic manipulation by unifying perception, language grounding, and action generation. However, they often struggle in scenarios requiring precise…_
+
+**▸ 选中原因：首次出现 · 17 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/tao-lin)
+
+---
+### No. 03 · THEMol dataset: Torsion, Hessian, and Energy of Molecules
+
+**Jiashu Liang** · 一作 · 16 作者 · [arXiv:2605.14973](https://arxiv.org/abs/2605.14973)
+
+_We present THEMol (Torsion, Hessian, Energy of Molecules), a massive open-source collection of quantum mechanical properties tailored for closed-shell organic molecules, with up to 50 heavy atoms. THEMol includes a Hess…_
+
+**▸ 选中原因：首次出现 · 16 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/jiashu-liang)
+
+---
+### No. 04 · Causal Forcing++: Scalable Few-Step Autoregressive Diffusion Distillation for Real-Time Interactive Video Generation
 
 **Min Zhao** · 一作 · 9 作者 · [arXiv:2605.15141](https://arxiv.org/abs/2605.15141)
 
 _Real-time interactive video generation requires low-latency, streaming, and controllable rollout. Existing autoregressive (AR) diffusion distillation methods have achieved strong results in the chunk-wise 4-step regime…_
 
-**▸ 选中原因：首次出现，9 作者合作（大组潜在新人）**
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
 → [profile](/researchers/min-zhao)
+
+---
+### No. 05 · Slot-MPC: Goal-Conditioned Model Predictive Control with Object-Centric Representations
+
+**Jonathan Spieler** · 一作 · 3 作者 · [arXiv:2605.14937](https://arxiv.org/abs/2605.14937)
+
+_Predictive world models enable agents to model scene dynamics and reason about the consequences of their actions. Inspired by human perception, object-centric world models capture scene dynamics using object-level repre…_
+
+**▸ 选中原因：首次出现 · 跨 2 个主题（potential 跨界）**
+
+→ [profile](/researchers/jonathan-spieler)
 
 ---
 

@@ -14,6 +14,7 @@ type PaperRow = {
   position: number;
   topics: string[];
   citation_count?: number;
+  author_emails?: string[];
 };
 
 type Researcher = {

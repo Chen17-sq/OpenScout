@@ -147,6 +147,9 @@ class Paper(Base):
     work_score: Mapped[Optional[float]] = mapped_column(Float)
     # OpenAlex concept tags — array of {label, score}
     concepts: Mapped[Optional[list]] = mapped_column(JSON)
+    # Emails extracted from PDF first page — array of strings. Loose matching
+    # to authors not attempted; the UI surfaces them as "possible contacts."
+    author_emails: Mapped[Optional[list]] = mapped_column(JSON)
 
     first_seen_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), index=True

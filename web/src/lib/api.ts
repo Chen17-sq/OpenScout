@@ -42,6 +42,7 @@ export type BriefData = {
   new_first_authors: StoryItem[];
   anchor_activity: StoryItem[];
   soon_graduating_picks: StoryItem[];
+  incoming_ap_picks: StoryItem[];
   hot_papers: StoryItem[];
   sleeper_picks: StoryItem[];
 };

@@ -41,6 +41,14 @@
   />
 
   <SectionBlock
+    label="Section D"
+    title={$t('section.incomingApPicks')}
+    meta="hand-curated · update seeds/researchers.yaml"
+    items={brief.incoming_ap_picks}
+    emptyMessage={$t('section.incomingApEmpty')}
+  />
+
+  <SectionBlock
     label="Section E"
     title={$t('section.hotPapers')}
     meta={$t('section.hotPapersMeta')}

@@ -16,6 +16,7 @@ const zh = {
     archive: '存档',
     stats: '统计',
     search: '搜索',
+    watchlist: '收藏',
     searchPlaceholder: '搜研究者 / 论文 / 标签',
   },
   edition: {
@@ -201,6 +202,7 @@ const en = {
     archive: 'Archive',
     stats: 'Stats',
     search: 'Search',
+    watchlist: 'Watchlist',
     searchPlaceholder: 'Search researchers / papers / tags',
   },
   edition: {

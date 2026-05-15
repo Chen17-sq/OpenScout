@@ -28,6 +28,12 @@
   emptyMessage="_no data for this date_"
 />
 <SectionBlock
+  label="Section D"
+  title="🚀 即将入职 AP"
+  items={brief.incoming_ap_picks}
+  emptyMessage="_no incoming AP marked_"
+/>
+<SectionBlock
   label="Section E"
   title="🔥 热门工作"
   items={brief.hot_papers}

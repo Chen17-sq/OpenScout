@@ -108,6 +108,7 @@ def _serialize_brief(brief: bd.BriefData) -> dict:
         "new_first_authors": [asdict(s) for s in brief.new_first_authors],
         "anchor_activity": [asdict(s) for s in brief.anchor_activity],
         "soon_graduating_picks": [asdict(s) for s in brief.soon_graduating_picks],
+        "incoming_ap_picks": [asdict(s) for s in brief.incoming_ap_picks],
         "hot_papers": [asdict(s) for s in brief.hot_papers],
         "sleeper_picks": [asdict(s) for s in brief.sleeper_picks],
     }

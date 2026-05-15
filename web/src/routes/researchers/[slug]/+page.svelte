@@ -1,6 +1,7 @@
 <script lang="ts">
   import { t } from '$lib/i18n';
   import { arxivUrl, blurb, roleLabel } from '$lib/api';
+  import StarButton from '$lib/StarButton.svelte';
 
   let { data } = $props();
   const r = $derived(data.researcher);
@@ -17,7 +18,10 @@
   <div class="section-head">
     <div class="label">{$t('researcher.sectionLabel')}</div>
     <div class="h">{r.name_en}</div>
-    <div class="meta">{r.name_zh ?? ''}</div>
+    <div class="meta">
+      {r.name_zh ?? ''}
+      <span class="star-wrap"><StarButton slug={r.slug} /></span>
+    </div>
   </div>
 
   <div class="profile-grid">
@@ -188,6 +192,16 @@
             {#if (p.citation_count ?? 0) > 0}· {p.citation_count} cites{/if}
           </div>
           {#if p.abstract}<div class="blurb">{blurb(p.abstract, 240)}</div>{/if}
+          {#if p.author_emails && p.author_emails.length}
+            <details class="emails">
+              <summary>📧 {p.author_emails.length} contact{p.author_emails.length === 1 ? '' : 's'} found in PDF</summary>
+              <ul>
+                {#each p.author_emails as em}
+                  <li><code>{em}</code></li>
+                {/each}
+              </ul>
+            </details>
+          {/if}
         </div>
         <div class="right">
           <a class="v" href={arxivUrl(p.arxiv_id)} target="_blank" rel="noreferrer">{p.arxiv_id ?? '—'}</a>
@@ -386,5 +400,39 @@
     font-size: 10px;
     color: var(--n500);
     margin-left: 6px;
+  }
+  .star-wrap {
+    display: inline-block;
+    margin-left: 12px;
+  }
+  .emails {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: 1px dashed var(--n400);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+  }
+  .emails summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-weight: 600;
+    list-style: none;
+  }
+  .emails summary::-webkit-details-marker {
+    display: none;
+  }
+  .emails ul {
+    margin: 8px 0 0;
+    padding-left: 18px;
+    list-style: square;
+  }
+  .emails li {
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .emails code {
+    background: var(--n100);
+    padding: 1px 6px;
+    user-select: all;
   }
 </style>

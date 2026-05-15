@@ -28,6 +28,7 @@ COLUMNS: list[tuple[str, str, str]] = [
     ("papers", "openalex_id", "TEXT"),
     ("papers", "influential_citation_count", "INTEGER"),
     ("papers", "concepts", "TEXT"),
+    ("papers", "author_emails", "TEXT"),
 ]
 
 

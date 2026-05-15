@@ -38,6 +38,8 @@ dependencies = [
     "tenacity>=9.0",
     "pyalex>=0.18",          # OpenAlex API — no rate limit, has Chinese name alternatives
     "python-slugify>=8.0",   # cleaner slug generation with unicode handling
+    "pypdf>=5.0",            # arXiv PDF parsing for email/affiliation extraction
+    "feedgen>=1.0",          # RSS feed generation
     # LLM (for topic classification + 中文一句话)
     "anthropic>=0.40",
     # Email (v2)

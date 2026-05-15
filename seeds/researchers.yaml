@@ -208,3 +208,161 @@ researchers:
     current_role: full
     bio: "Generative models, ML for drug discovery, diffusion-based molecular design."
     confidence_level: high
+
+  # ─── Round 2: more anchors ───────────────────────────────────────────────────
+  # Embodied / Robotics
+  - slug: yi-ma
+    name_en: Yi Ma
+    name_zh: 马毅
+    current_affiliation: University of Hong Kong
+    current_role: full
+    bio: "Director of HKU IDS; visual recognition, geometric vision, white-box DL."
+    confidence_level: high
+
+  - slug: yang-gao
+    name_en: Yang Gao
+    name_zh: 高阳
+    current_affiliation: Tsinghua University
+    current_role: ap
+    bio: "Tsinghua IIIS/AIR; embodied AI, RoboGen, ManiSkill. PhD from Berkeley."
+    confidence_level: high
+
+  - slug: hao-su
+    name_en: Hao Su
+    name_zh: 苏昊
+    current_affiliation: University of California, San Diego
+    current_role: ap
+    bio: "3D vision, embodied AI, ShapeNet co-author, SAPIEN/ManiSkill."
+    confidence_level: high
+
+  - slug: saining-xie
+    name_en: Saining Xie
+    name_zh: 谢赛宁
+    current_affiliation: New York University
+    current_role: ap
+    bio: "ConvNeXt, self-supervised vision; ex-FAIR."
+    confidence_level: high
+
+  - slug: zongqing-lu
+    name_en: Zongqing Lu
+    name_zh: 卢宗青
+    current_affiliation: Peking University
+    current_role: ap
+    bio: "Multi-agent RL, open-ended decision making; PKU CFCS."
+    confidence_level: high
+
+  - slug: jianyu-chen
+    name_en: Jianyu Chen
+    name_zh: 陈建宇
+    current_affiliation: Tsinghua University
+    current_role: ap
+    bio: "Embodied AI, manipulation, humanoid; RobotEra co-founder."
+    confidence_level: high
+    projects:
+      - {name: "RobotEra 星动纪元", role: "co-founder", category: "company", url: "https://www.robotera.com"}
+
+  - slug: russ-tedrake
+    name_en: Russ Tedrake
+    current_affiliation: MIT
+    current_role: full
+    bio: "Robotic Manipulation Group at MIT CSAIL; Drake / TRI."
+    confidence_level: high
+
+  - slug: jitendra-malik
+    name_en: Jitendra Malik
+    current_affiliation: UC Berkeley
+    current_role: full
+    bio: "Computer vision pioneer; humanoid locomotion / VLA recently."
+    confidence_level: high
+
+  - slug: mingsheng-long
+    name_en: Mingsheng Long
+    name_zh: 龙明盛
+    current_affiliation: Tsinghua University
+    current_role: associate
+    bio: "Transfer learning, time series, world models for forecasting."
+    confidence_level: high
+
+  - slug: xiaolong-wang
+    name_en: Xiaolong Wang
+    current_affiliation: University of California, San Diego
+    current_role: ap
+    bio: "Embodied AI, robot learning, self-supervised vision."
+    confidence_level: high
+
+  # World Models
+  - slug: igor-mordatch
+    name_en: Igor Mordatch
+    current_affiliation: DeepMind
+    current_role: industry
+    bio: "Multi-agent, world models, embodied agents."
+    confidence_level: medium
+
+  - slug: sergey-tulyakov
+    name_en: Sergey Tulyakov
+    current_affiliation: Snap Inc.
+    current_role: industry
+    bio: "Generative video, motion modeling; Snap Research lead."
+    confidence_level: medium
+
+  - slug: stefano-ermon
+    name_en: Stefano Ermon
+    current_affiliation: Stanford University
+    current_role: associate
+    bio: "Generative models, diffusion, score-based methods; AI for sustainability."
+    confidence_level: high
+
+  # AI for Science
+  - slug: yoshua-bengio
+    name_en: Yoshua Bengio
+    current_affiliation: Mila
+    current_role: full
+    bio: "Deep learning pioneer; GFlowNets, AI safety, drug discovery."
+    confidence_level: high
+
+  - slug: jian-tang
+    name_en: Jian Tang
+    name_zh: 唐建
+    current_affiliation: Mila
+    current_role: ap
+    bio: "Graph ML for molecules, protein design; founded BioGeometry."
+    confidence_level: high
+    projects:
+      - {name: "BioGeometry", role: "founder", category: "company"}
+      - {name: "DGL-LifeSci", role: "contributor", category: "open_source"}
+
+  - slug: wengong-jin
+    name_en: Wengong Jin
+    name_zh: 金文功
+    current_affiliation: Northeastern University
+    current_role: ap
+    bio: "Generative molecular design; junction-tree VAE; ex-MIT CSAIL."
+    confidence_level: medium
+
+  - slug: hannes-stark
+    name_en: Hannes Stärk
+    current_affiliation: MIT
+    current_role: phd
+    career_stage_year: 4
+    bio: "Diffusion for molecular generation; EquiBind, DiffDock."
+    confidence_level: high
+
+  - slug: demis-hassabis
+    name_en: Demis Hassabis
+    current_affiliation: DeepMind
+    current_role: industry
+    bio: "Co-founder & CEO DeepMind; 2024 Nobel Prize in Chemistry (AlphaFold)."
+    confidence_level: high
+    projects:
+      - {name: "DeepMind", role: "co-founder/CEO", category: "company", url: "https://deepmind.google"}
+      - {name: "Isomorphic Labs", role: "co-founder", category: "company"}
+
+  # Hand-marked incoming faculty — sourced from public announcements / lab pages.
+  # Update these every recruiting season. Section D 即将入职 AP reads from here.
+  - slug: chuang-gan
+    name_en: Chuang Gan
+    name_zh: 甘创
+    current_affiliation: MIT
+    current_role: incoming_ap
+    bio: "Embodied AI, physics-aware ML; ex-MIT-IBM lab."
+    confidence_level: medium

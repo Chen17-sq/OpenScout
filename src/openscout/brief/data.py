@@ -1,8 +1,7 @@
 """Pure data layer for the daily brief.
 
 Both the markdown renderer (`brief/generate.py`) and the structured API
-endpoint (`/briefs/today`) read from these functions. Keeping queries in one
-place lets us iterate on ranking/section logic without forking two callers.
+endpoint (`/briefs/today`) read from these functions.
 """
 
 from dataclasses import dataclass, field
@@ -24,6 +23,9 @@ class ResearcherSummary:
     current_role: str | None
     homepage_url: str | None
     confidence_level: str
+    country: str | None = None
+    h_index: int | None = None
+    citation_count: int | None = None
 
 
 @dataclass
@@ -37,6 +39,7 @@ class PaperSummary:
     published_at: str | None
     n_authors: int
     topics: list[str] = field(default_factory=list)
+    citation_count: int = 0
 
 
 @dataclass
@@ -62,6 +65,7 @@ class BriefData:
     new_first_authors: list[StoryItem]
     anchor_activity: list[StoryItem]
     soon_graduating_picks: list[StoryItem]
+    incoming_ap_picks: list[StoryItem]
     hot_papers: list[StoryItem]
     sleeper_picks: list[StoryItem]
 
@@ -77,6 +81,9 @@ def _researcher_summary(r: Researcher) -> ResearcherSummary:
         current_role=r.current_role,
         homepage_url=r.homepage_url,
         confidence_level=r.confidence_level,
+        country=r.country,
+        h_index=r.h_index,
+        citation_count=r.citation_count,
     )
 
 
@@ -91,6 +98,7 @@ def _paper_summary(p: Paper, n_authors: int = 0, topics: list[str] | None = None
         published_at=p.published_at.isoformat() if p.published_at else None,
         n_authors=n_authors,
         topics=topics or [],
+        citation_count=p.citation_count or 0,
     )
 
 
@@ -165,7 +173,6 @@ def kpi_counts(db: Session, brief_date: Date) -> dict[str, int]:
 
 
 def new_first_authors(db: Session, brief_date: Date, limit: int = 10) -> list[StoryItem]:
-    """Section B 今日新冒头 — researchers first seen today, first-author on a paper today."""
     stmt = (
         select(Researcher, Paper)
         .join(PaperAuthor, PaperAuthor.researcher_id == Researcher.id)
@@ -191,7 +198,6 @@ def new_first_authors(db: Session, brief_date: Date, limit: int = 10) -> list[St
 
 
 def anchor_activity(db: Session, brief_date: Date, limit: int = 10) -> list[StoryItem]:
-    """Section B 动态更新 — known anchors (medium/high confidence) who shipped today."""
     stmt = (
         select(Researcher, Paper)
         .join(PaperAuthor, PaperAuthor.researcher_id == Researcher.id)
@@ -215,9 +221,6 @@ def anchor_activity(db: Session, brief_date: Date, limit: int = 10) -> list[Stor
 
 
 def soon_graduating_picks(db: Session, limit: int = 10) -> list[StoryItem]:
-    """Section C 即将毕业 — explicit phd-Y4/Y5 anchors; falls back to most-productive
-    low-confidence researchers if our anchor pool doesn't have stage data yet.
-    """
     stmt = (
         select(Researcher)
         .where(
@@ -231,8 +234,6 @@ def soon_graduating_picks(db: Session, limit: int = 10) -> list[StoryItem]:
     rows = list(db.execute(stmt).scalars().all())
 
     if not rows:
-        # Fallback: most-productive auto-discovered first-authors of the last 7 days.
-        # Proxy for "active in late-stage / early-career."
         author_paper_count_sq = (
             select(
                 PaperAuthor.researcher_id,
@@ -253,7 +254,6 @@ def soon_graduating_picks(db: Session, limit: int = 10) -> list[StoryItem]:
 
     out: list[StoryItem] = []
     for r in rows:
-        # attach their most recent first-author paper for context
         latest = db.execute(
             select(Paper)
             .join(PaperAuthor, and_(PaperAuthor.paper_id == Paper.id, PaperAuthor.position == 1))
@@ -272,8 +272,52 @@ def soon_graduating_picks(db: Session, limit: int = 10) -> list[StoryItem]:
     return out
 
 
+def incoming_ap_picks(db: Session, limit: int = 10) -> list[StoryItem]:
+    """Section D — researchers explicitly marked `current_role == 'incoming_ap'`."""
+    rs = list(
+        db.execute(
+            select(Researcher)
+            .where(Researcher.current_role == "incoming_ap")
+            .order_by(desc(Researcher.citation_count).nulls_last())
+            .limit(limit)
+        )
+        .scalars()
+        .all()
+    )
+    out: list[StoryItem] = []
+    for r in rs:
+        latest = db.execute(
+            select(Paper)
+            .join(PaperAuthor, and_(PaperAuthor.paper_id == Paper.id, PaperAuthor.position == 1))
+            .where(PaperAuthor.researcher_id == r.id)
+            .order_by(desc(Paper.first_seen_at))
+            .limit(1)
+        ).scalar_one_or_none()
+        # No paper available? Render a placeholder paper with the researcher's bio.
+        if not latest:
+            ph = PaperSummary(
+                arxiv_id=None,
+                title=r.bio or f"{r.name_en} · incoming AP",
+                abstract=None,
+                one_liner_zh=None,
+                venue=None,
+                pdf_url=None,
+                published_at=None,
+                n_authors=0,
+                topics=[],
+            )
+            out.append(StoryItem(researcher=_researcher_summary(r), paper=ph))
+        else:
+            out.append(
+                StoryItem(
+                    researcher=_researcher_summary(r),
+                    paper=_paper_summary(latest, _author_count(db, latest.id), _topics_for_paper(db, latest.id)),
+                )
+            )
+    return out
+
+
 def hot_papers(db: Session, brief_date: Date, limit: int = 10) -> list[StoryItem]:
-    """Section E 热门工作 — today's papers ranked by author-count (proxy for collaboration weight)."""
     author_count_sq = (
         select(PaperAuthor.paper_id, func.count(PaperAuthor.researcher_id).label("n"))
         .group_by(PaperAuthor.paper_id)
@@ -300,50 +344,101 @@ def hot_papers(db: Session, brief_date: Date, limit: int = 10) -> list[StoryItem
     return out
 
 
-def sleeper_picks(db: Session, brief_date: Date, limit: int = 3, skip_top: int = 10) -> list[StoryItem]:
-    """Section F 🌙 Sleeper Picks — algorithmic surprises.
+def sleeper_picks(db: Session, brief_date: Date, limit: int = 5) -> list[StoryItem]:
+    """Multi-strategy Sleeper Picks. Each strategy produces 0-1 picks; we dedupe by paper."""
+    picks: list[StoryItem] = []
+    seen_paper_ids: set[int] = set()
 
-    v0 algorithm: papers ranked 11+ in collaboration weight, whose first author is a
-    fresh discovery (low confidence + first seen today). Reasoning: "first paper here,
-    large collaboration" — a high-signal proxy for "junior in a big lab."
-    """
+    # Strategy 1: first paper from a large team (>= 8 authors) — junior in big lab
     author_count_sq = (
         select(PaperAuthor.paper_id, func.count(PaperAuthor.researcher_id).label("n"))
         .group_by(PaperAuthor.paper_id)
         .subquery()
     )
-    candidates_sq = (
-        select(Paper.id.label("pid"), func.coalesce(author_count_sq.c.n, 0).label("n"))
-        .outerjoin(author_count_sq, author_count_sq.c.paper_id == Paper.id)
-        .where(func.date(Paper.first_seen_at) == brief_date)
-        .order_by(desc("n"))
-        .offset(skip_top)
-        .limit(50)
-        .subquery()
-    )
-    stmt = (
-        select(Paper, Researcher, candidates_sq.c.n)
-        .join(candidates_sq, candidates_sq.c.pid == Paper.id)
+    big_team_stmt = (
+        select(Paper, Researcher, author_count_sq.c.n)
+        .join(author_count_sq, author_count_sq.c.paper_id == Paper.id)
         .join(PaperAuthor, and_(PaperAuthor.paper_id == Paper.id, PaperAuthor.position == 1))
         .join(Researcher, Researcher.id == PaperAuthor.researcher_id)
         .where(
+            func.date(Paper.first_seen_at) == brief_date,
             Researcher.confidence_level == "low",
             func.date(Researcher.first_seen_at) == brief_date,
-            candidates_sq.c.n >= 6,
+            author_count_sq.c.n >= 6,
         )
-        .order_by(desc(candidates_sq.c.n))
-        .limit(limit)
+        .order_by(desc(author_count_sq.c.n))
+        .limit(3)
     )
-    out: list[StoryItem] = []
-    for p, r, n in db.execute(stmt).all():
-        out.append(
+    for p, r, n in db.execute(big_team_stmt).all():
+        if p.id in seen_paper_ids:
+            continue
+        seen_paper_ids.add(p.id)
+        picks.append(
             StoryItem(
                 researcher=_researcher_summary(r),
                 paper=_paper_summary(p, int(n), _topics_for_paper(db, p.id)),
-                reasoning=f"首次出现，{int(n)} 作者合作（大组潜在新人）",
+                reasoning=f"首次出现 · {int(n)} 作者合作（疑似大组新人）",
             )
         )
-    return out
+
+    # Strategy 2: anchor's co-author who is brand new (potential student)
+    anchor_coauthor_stmt = (
+        select(Paper, Researcher)
+        .join(PaperAuthor, and_(PaperAuthor.paper_id == Paper.id, PaperAuthor.position == 1))
+        .join(Researcher, Researcher.id == PaperAuthor.researcher_id)
+        .where(
+            func.date(Paper.first_seen_at) == brief_date,
+            Researcher.confidence_level == "low",
+            func.date(Researcher.first_seen_at) == brief_date,
+            Paper.id.in_(
+                select(PaperAuthor.paper_id).join(
+                    Researcher, Researcher.id == PaperAuthor.researcher_id
+                ).where(Researcher.confidence_level != "low")
+            ),
+        )
+        .limit(3)
+    )
+    for p, r in db.execute(anchor_coauthor_stmt).all():
+        if p.id in seen_paper_ids:
+            continue
+        seen_paper_ids.add(p.id)
+        picks.append(
+            StoryItem(
+                researcher=_researcher_summary(r),
+                paper=_paper_summary(p, _author_count(db, p.id), _topics_for_paper(db, p.id)),
+                reasoning="首次出现 · 与已知 anchor 同作论文（疑似学生）",
+            )
+        )
+
+    # Strategy 3: any first-time first-author whose paper covers multiple topics (cross-disciplinary)
+    if len(picks) < limit:
+        cross_topic_stmt = (
+            select(Paper, Researcher, func.count(PaperTopic.topic_id).label("n_t"))
+            .join(PaperTopic, PaperTopic.paper_id == Paper.id)
+            .join(PaperAuthor, and_(PaperAuthor.paper_id == Paper.id, PaperAuthor.position == 1))
+            .join(Researcher, Researcher.id == PaperAuthor.researcher_id)
+            .where(
+                func.date(Paper.first_seen_at) == brief_date,
+                Researcher.confidence_level == "low",
+                func.date(Researcher.first_seen_at) == brief_date,
+            )
+            .group_by(Paper.id)
+            .having(func.count(PaperTopic.topic_id) >= 2)
+            .limit(2)
+        )
+        for p, r, n_t in db.execute(cross_topic_stmt).all():
+            if p.id in seen_paper_ids:
+                continue
+            seen_paper_ids.add(p.id)
+            picks.append(
+                StoryItem(
+                    researcher=_researcher_summary(r),
+                    paper=_paper_summary(p, _author_count(db, p.id), _topics_for_paper(db, p.id)),
+                    reasoning=f"首次出现 · 跨 {int(n_t)} 个主题（potential 跨界）",
+                )
+            )
+
+    return picks[:limit]
 
 
 # ─── Orchestrator ───────────────────────────────────────────────────────────
@@ -357,7 +452,6 @@ def _issue_number(brief_date: Date) -> int:
 
 
 def collect(db: Session, brief_date: Date) -> BriefData:
-    """Pull everything needed for one day's brief in a single coordinated pass."""
     kpi = kpi_counts(db, brief_date)
     return BriefData(
         brief_date=brief_date,
@@ -370,6 +464,7 @@ def collect(db: Session, brief_date: Date) -> BriefData:
         new_first_authors=new_first_authors(db, brief_date),
         anchor_activity=anchor_activity(db, brief_date),
         soon_graduating_picks=soon_graduating_picks(db),
+        incoming_ap_picks=incoming_ap_picks(db),
         hot_papers=hot_papers(db, brief_date),
         sleeper_picks=sleeper_picks(db, brief_date),
     )

@@ -8,6 +8,7 @@
     { href: '/researchers', key: 'nav.researchers' },
     { href: '/topics', key: 'nav.topics' },
     { href: '/editions', key: 'nav.archive' },
+    { href: '/watchlist', key: 'nav.watchlist' },
     { href: '/stats', key: 'nav.stats' },
   ];
 
