@@ -76,20 +76,37 @@
   {/if}
 
   {#if result}
+    {@const sources = Object.entries(result.sources)}
+    {@const ranOk = sources.filter(([, info]) => info.ran && info.ok).length}
+    {@const noId = sources.filter(([, info]) => info.note?.startsWith('no ')).length}
+    {@const cached = sources.filter(([, info]) => !info.ran).length}
     <div class="result" class:err={error}>
       {#if error}
         ✗ {error}
       {:else}
-        ✓ {$t('deepDive.done')}: +{result.fields_total} {$t('deepDive.fields')}
+        <div class="hdr">
+          ✓ {$t('deepDive.done')}: +{result.fields_total} {$t('deepDive.fields')}
+          {#if cached > 0}
+            <span class="note">· {cached} {$t('deepDive.cached')}</span>
+          {/if}
+          {#if noId > 0}
+            <span class="note">· {noId} {$t('deepDive.skippedNoId')}</span>
+          {/if}
+        </div>
         <ul>
-          {#each Object.entries(result.sources) as [name, info]}
-            <li>
-              {info.ran ? (info.ok ? '✓' : '✗') : '·'}
+          {#each sources as [name, info]}
+            <li class:dim={!info.ran || (info.note ?? '').startsWith('no ')}>
+              {info.ran ? (info.ok ? '✓' : '✗') : '⋯'}
               <code>{name}</code>
               <span class="note">{info.note}</span>
             </li>
           {/each}
         </ul>
+        {#if result.fields_total === 0 && ranOk > 0}
+          <div class="hint">
+            {$t('deepDive.allCachedHint')}
+          </div>
+        {/if}
       {/if}
     </div>
   {/if}
@@ -167,5 +184,19 @@
   .result .note {
     color: var(--n500);
     margin-left: 6px;
+  }
+  .result .hdr {
+    margin-bottom: 4px;
+  }
+  .result li.dim {
+    color: var(--n500);
+    opacity: 0.7;
+  }
+  .result .hint {
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 1px dotted var(--n400);
+    font-style: italic;
+    color: var(--n600);
   }
 </style>

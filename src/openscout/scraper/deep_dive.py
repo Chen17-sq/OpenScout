@@ -139,6 +139,113 @@ def _arxiv_author(db, r: Researcher, http: httpx.Client) -> dict:
     }
 
 
+# ── source 1.5: OpenAlex author auto-match ─────────────────────────────────
+
+
+def _openalex_match(db, r: Researcher, http: httpx.Client) -> dict:
+    """For researchers WITHOUT an openalex_id, try to find one.
+
+    Strategy: search OpenAlex authors by name, then disambiguate by checking
+    whether any of the returned candidates' top works overlap with the
+    researcher's known paper DOIs in our DB. The first candidate with
+    overlap wins.
+
+    Without this, every auto-discovered researcher (the 1,200+ we surfaced
+    via surname inference) hits a wall on the 3 OpenAlex-dependent sources.
+    """
+    if r.openalex_id:
+        return {"ok": True, "fields_set": 0, "note": "already matched"}
+    if not r.name_en:
+        return {"ok": False, "fields_set": 0, "note": "no name"}
+
+    # Get our known DOIs for this researcher — used to disambiguate candidates
+    our_dois = {
+        doi.lower()
+        for (doi,) in db.execute(
+            select(Paper.doi)
+            .join(PaperAuthor, PaperAuthor.paper_id == Paper.id)
+            .where(PaperAuthor.researcher_id == r.id, Paper.doi.is_not(None))
+        ).all()
+    }
+    our_arxiv_ids = {
+        aid
+        for (aid,) in db.execute(
+            select(Paper.arxiv_id)
+            .join(PaperAuthor, PaperAuthor.paper_id == Paper.id)
+            .where(
+                PaperAuthor.researcher_id == r.id,
+                Paper.arxiv_id.is_not(None),
+                Paper.arxiv_id.notlike("or-%"),
+            )
+        ).all()
+    }
+
+    name_q = httpx.QueryParams({"search": r.name_en, "per-page": "10"})
+    try:
+        rr = http.get(f"https://api.openalex.org/authors?{name_q}", timeout=15.0)
+        if rr.status_code != 200:
+            return {"ok": False, "fields_set": 0, "note": f"http {rr.status_code}"}
+        candidates = rr.json().get("results") or []
+    except Exception as e:
+        return {"ok": False, "fields_set": 0, "note": f"err: {type(e).__name__}"}
+
+    if not candidates:
+        return {"ok": True, "fields_set": 0, "note": "no OpenAlex hits for name"}
+
+    # Strict mode: require DOI / arxiv overlap to claim a match. Without overlap
+    # signal, fall back to top-candidate ONLY if the researcher has just one
+    # OpenAlex hit (i.e. unambiguous name).
+    for cand in candidates[:5]:
+        cand_id = (cand.get("id") or "").rsplit("/", 1)[-1]
+        if not cand_id:
+            continue
+        try:
+            wr = http.get(
+                f"https://api.openalex.org/works?filter=author.id:{cand_id}&per-page=25"
+                "&select=doi,ids,title",
+                timeout=15.0,
+            )
+            if wr.status_code != 200:
+                continue
+            works = wr.json().get("results") or []
+        except Exception:
+            continue
+
+        overlap = False
+        for w in works:
+            wdoi = (w.get("doi") or "").lower().replace("https://doi.org/", "")
+            if wdoi and wdoi in our_dois:
+                overlap = True
+                break
+            ids = w.get("ids") or {}
+            mag = (ids.get("mag") or "").lower()
+            if mag and any(aid in mag for aid in our_arxiv_ids):
+                overlap = True
+                break
+
+        if overlap:
+            r.openalex_id = cand.get("id")
+            if not r.h_index and cand.get("summary_stats"):
+                r.h_index = cand["summary_stats"].get("h_index")
+            return {
+                "ok": True,
+                "fields_set": 1,
+                "note": f"matched {cand_id} via DOI/arxiv overlap",
+            }
+
+    # Single-hit fallback: rare name, only 1 candidate, no overlap available
+    if len(candidates) == 1 and (our_dois or our_arxiv_ids):
+        cand = candidates[0]
+        r.openalex_id = cand.get("id")
+        return {
+            "ok": True,
+            "fields_set": 1,
+            "note": f"matched {cand.get('id', '').rsplit('/', 1)[-1]} (unambiguous name)",
+        }
+
+    return {"ok": True, "fields_set": 0, "note": f"{len(candidates)} candidates, no overlap"}
+
+
 # ── source 2: OpenAlex full works ──────────────────────────────────────────
 
 
@@ -394,14 +501,141 @@ def _homepage_llm(db, r: Researcher, http: httpx.Client) -> dict:
     }
 
 
+# ── source 6: bio synthesis from paper history ─────────────────────────────
+
+
+BIO_SYNTH_PROMPT = """You are summarizing a researcher's work for an investor.
+You will be given a list of their paper titles + abstract snippets. Write a
+TWO-sentence bio in English, ~280 chars total.
+
+Style: factual, concrete, name the techniques/domains they actually work on.
+DO NOT speculate about their personality, university, or career stage.
+DO NOT use first-person. Start with their research area (e.g. "Researcher
+working on video segmentation and long-context vision models" — not
+"This person is...").
+
+Reply with ONLY the bio sentence(s), no JSON, no markdown."""
+
+
+def _bio_synth(db, r: Researcher, http: httpx.Client) -> dict:
+    """Synthesize a bio from the researcher's paper titles + abstracts.
+
+    Critical for the auto-discovered tail: we may have 28 papers' worth of
+    titles but the bio field is null, so the detail page looks empty even
+    after deep-dive. This generates a one-shot summary that gives the
+    investor a "what do they actually work on" line in 2 seconds.
+    """
+    if r.bio:
+        return {"ok": True, "fields_set": 0, "note": "already has bio"}
+    if not llm.is_available():
+        return {"ok": False, "fields_set": 0, "note": "no LLM provider configured"}
+
+    rows = db.execute(
+        select(Paper.title, Paper.abstract, PaperAuthor.position)
+        .join(PaperAuthor, PaperAuthor.paper_id == Paper.id)
+        .where(PaperAuthor.researcher_id == r.id)
+        .order_by(PaperAuthor.position.asc(), Paper.first_seen_at.desc())
+        .limit(12)
+    ).all()
+    if len(rows) < 3:
+        return {"ok": True, "fields_set": 0, "note": f"only {len(rows)} papers (need ≥3)"}
+
+    # Build a compact input — titles always, abstracts only for first-authored
+    # papers (we care most about what they DROVE, not co-authored).
+    lines = []
+    for title, abstract, position in rows:
+        marker = "[FIRST AUTHOR]" if position == 1 else f"[#{position}]"
+        if position == 1 and abstract:
+            snippet = re.sub(r"\s+", " ", abstract)[:300]
+            lines.append(f"{marker} {title}\n  {snippet}")
+        else:
+            lines.append(f"{marker} {title}")
+    paper_block = "\n".join(lines)
+
+    prompt = f"{BIO_SYNTH_PROMPT}\n\nResearcher: {r.name_en}\nPapers:\n{paper_block}"
+    raw, err = llm.complete(prompt, max_tokens=200)
+    if raw is None:
+        return {"ok": False, "fields_set": 0, "note": f"llm err: {err}"}
+
+    bio = raw.strip().strip('"').strip()
+    # Trim any leading "Bio:" / "Summary:" wrapper the model might add
+    bio = re.sub(r"^(?:bio|summary)\s*[:：]\s*", "", bio, flags=re.IGNORECASE)
+    if len(bio) < 40:
+        return {"ok": False, "fields_set": 0, "note": "llm returned too-short bio"}
+
+    r.bio = bio[:600]
+    return {"ok": True, "fields_set": 1, "note": f"bio synthesized ({len(rows)} papers)"}
+
+
+# ── source 7: refresh signature paper ──────────────────────────────────────
+
+
+def _signature_paper(db, r: Researcher, http: httpx.Client) -> dict:
+    """Assign / refresh the researcher's signature paper.
+
+    Pick the FIRST-AUTHORED paper with the best signal, where "best" =
+    citations (when any > 0) else work_score (which folds in github stars +
+    buzz + breakthrough). Falls back to any-position if no first-author papers.
+
+    This is the difference between "代表作: WildClawBench (random arbitrary
+    pick from a list of 0-cite papers)" and "代表作: SAM2Long (the one with
+    real github + buzz)".
+    """
+    from sqlalchemy import func
+
+    # Composite signal — citations dominate when present, else work_score
+    signal = func.coalesce(Paper.citation_count, 0) * 100.0 + func.coalesce(Paper.work_score, 0.0)
+
+    first_authored = db.execute(
+        select(Paper.id, Paper.citation_count, Paper.work_score, Paper.title)
+        .join(PaperAuthor, PaperAuthor.paper_id == Paper.id)
+        .where(PaperAuthor.researcher_id == r.id, PaperAuthor.position == 1)
+        .order_by(signal.desc())
+        .limit(1)
+    ).first()
+
+    pick = first_authored
+    fallback = False
+    if not pick:
+        pick = db.execute(
+            select(Paper.id, Paper.citation_count, Paper.work_score, Paper.title)
+            .join(PaperAuthor, PaperAuthor.paper_id == Paper.id)
+            .where(PaperAuthor.researcher_id == r.id)
+            .order_by(signal.desc())
+            .limit(1)
+        ).first()
+        fallback = True
+
+    if not pick:
+        return {"ok": True, "fields_set": 0, "note": "no papers"}
+
+    pid, cites, ws, title = pick
+    if r.signature_paper_id == pid:
+        return {"ok": True, "fields_set": 0, "note": f"unchanged: {(title or '')[:50]}"}
+
+    r.signature_paper_id = int(pid)
+    descriptor = "first-author" if not fallback else "co-author fallback"
+    return {
+        "ok": True,
+        "fields_set": 1,
+        "note": f"→ {(title or '')[:50]} ({cites or 0} cites · work_score={ws or 0:.2f} · {descriptor})",
+    }
+
+
 # ── orchestrator ───────────────────────────────────────────────────────────
 
+# Order matters: openalex_match (rare path that unlocks openalex_full) and
+# arxiv_author both go first so their data is available to downstream sources
+# (bio_synth needs the papers; openalex_full needs the id).
 SOURCES: list[tuple[str, Callable]] = [
     ("arxiv_author", _arxiv_author),
+    ("openalex_match", _openalex_match),
     ("openalex_full", _openalex_full),
     ("github_profile", _github_profile),
     ("huggingface_profile", _huggingface_profile),
     ("homepage_llm", _homepage_llm),
+    ("bio_synth", _bio_synth),
+    ("signature_paper", _signature_paper),
 ]
 
 
