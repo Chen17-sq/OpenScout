@@ -541,13 +541,30 @@ def _dblp_discover(db, r: Researcher, http: httpx.Client) -> dict:
 
 
 def _openalex_full(db, r: Researcher, http: httpx.Client) -> dict:
-    """For researchers with an openalex_id, pull their FULL works list — the
-    anchor backfill caps at 80 per anchor; we want everything for deep-dive.
+    """For researchers with an openalex_id, pull their FULL works list AND
+    their author profile (for x_concepts → research-direction tags + h-index).
+
+    Anchor backfill caps at 80 works per anchor; we want everything for
+    deep-dive. Plus the author profile has `x_concepts` (topic distribution)
+    which we use to populate `tags` — the "Research Directions" section of
+    the UI that was previously empty for everyone.
     """
     if not r.openalex_id:
         return {"ok": False, "fields_set": 0, "note": "no openalex_id"}
     aid = r.openalex_id.rsplit("/", 1)[-1]
-    works_url = f"https://api.openalex.org/works?filter=author.id:{aid}&per-page=200&select=id,title,publication_year,cited_by_count,doi"
+
+    # Author profile — for tags + summary_stats (h-index, mean citedness)
+    try:
+        ar = http.get(f"https://api.openalex.org/authors/{aid}", timeout=15.0)
+        author = ar.json() if ar.status_code == 200 else {}
+    except Exception:
+        author = {}
+
+    # Works list — for cumulative counts + recency
+    works_url = (
+        f"https://api.openalex.org/works?filter=author.id:{aid}&per-page=200"
+        "&select=id,title,publication_year,cited_by_count,doi"
+    )
     try:
         rr = http.get(works_url, timeout=20.0)
         if rr.status_code != 200:
@@ -557,8 +574,6 @@ def _openalex_full(db, r: Researcher, http: httpx.Client) -> dict:
         return {"ok": False, "fields_set": 0, "note": f"err: {type(e).__name__}"}
 
     results = data.get("results") or []
-    # We only update the researcher's cumulative metrics here, not insert
-    # papers (which is the full backfill_works pipeline). Cheap and useful.
     total = len(results)
     total_cited = sum(int(w.get("cited_by_count") or 0) for w in results)
     most_recent_year = max((int(w.get("publication_year") or 0) for w in results), default=0)
@@ -581,7 +596,42 @@ def _openalex_full(db, r: Researcher, http: httpx.Client) -> dict:
         r.career_stage_year = 4
         updated += 1
 
-    return {"ok": True, "fields_set": updated, "note": f"{total} works · {total_cited:,} cites"}
+    # ── Research-direction tags from x_concepts (the big new field!) ──
+    # Reuse the existing OpenAlex enrichment's extraction so the format
+    # matches what the UI already renders.
+    from .openalex import _extract_tags
+
+    new_tags = _extract_tags(author) if author else []
+    if new_tags and not r.tags:
+        r.tags = new_tags
+        updated += 1
+    elif new_tags and len(new_tags) > len(r.tags or []):
+        # Existing tags are weaker (e.g. from homepage_llm with 3 interests);
+        # OpenAlex has more — merge by label, keep the higher score.
+        merged_by_label: dict[str, dict] = {t.get("label", ""): t for t in (r.tags or [])}
+        for nt in new_tags:
+            label = nt.get("label", "")
+            if not label:
+                continue
+            existing = merged_by_label.get(label)
+            if not existing or (nt.get("score", 0) > existing.get("score", 0)):
+                merged_by_label[label] = nt
+        r.tags = list(merged_by_label.values())
+        updated += 1
+
+    # h-index from summary_stats (S2 may have it too; whichever is higher wins)
+    if author.get("summary_stats"):
+        oa_h = author["summary_stats"].get("h_index")
+        if oa_h and (not r.h_index or r.h_index < oa_h):
+            r.h_index = int(oa_h)
+            updated += 1
+
+    n_tags = len(r.tags or [])
+    return {
+        "ok": True,
+        "fields_set": updated,
+        "note": f"{total} works · {total_cited:,} cites · {n_tags} tags",
+    }
 
 
 # ── source 3: GitHub profile ───────────────────────────────────────────────
@@ -796,28 +846,38 @@ def _homepage_llm(db, r: Researcher, http: httpx.Client) -> dict:
 
 
 BIO_SYNTH_PROMPT = """You are summarizing a researcher's work for an investor.
-You will be given a list of their paper titles + abstract snippets. Write a
-TWO-sentence bio in English, ~280 chars total.
+You will be given a list of their paper titles + abstract snippets. Reply
+with a JSON object — NO markdown, NO commentary — matching this schema:
 
-Style: factual, concrete, name the techniques/domains they actually work on.
-DO NOT speculate about their personality, university, or career stage.
-DO NOT use first-person. Start with their research area (e.g. "Researcher
-working on video segmentation and long-context vision models" — not
-"This person is...").
-
-Reply with ONLY the bio sentence(s), no JSON, no markdown."""
+{
+  "bio": "TWO sentences, ~280 chars, factual. Name the SPECIFIC techniques/
+          domains. Start with their research area (e.g. 'Researcher working
+          on video segmentation and long-context vision models'). Do NOT
+          speculate about personality, university, or career stage. No
+          first-person.",
+  "tags": ["3-6 specific research-direction tags",
+           "e.g. 'video object segmentation', 'long-context VLM',
+           'symbolic music generation' — concrete topic names, NOT broad
+           umbrellas like 'AI' or 'Computer Vision'. Lowercase, ≤4 words each."]
+}"""
 
 
 def _bio_synth(db, r: Researcher, http: httpx.Client) -> dict:
-    """Synthesize a bio from the researcher's paper titles + abstracts.
+    """Synthesize a bio AND specific research-direction tags from papers.
 
-    Critical for the auto-discovered tail: we may have 28 papers' worth of
-    titles but the bio field is null, so the detail page looks empty even
-    after deep-dive. This generates a one-shot summary that gives the
-    investor a "what do they actually work on" line in 2 seconds.
+    Two birds: gives the auto-discovered tail (a) a 2-sentence bio for the
+    detail page and (b) concrete tags for the "Research Directions" section.
+    OpenAlex x_concepts is too coarse ("Computer Science / AI / CV") — the
+    LLM read of actual paper abstracts gives "video object segmentation",
+    "long-context VLM", etc.
     """
-    if r.bio:
-        return {"ok": True, "fields_set": 0, "note": "already has bio"}
+    need_bio = not r.bio
+    # OpenAlex tags often arrive level=0 ("Computer Science") only — treat
+    # those as "still needs LLM-synth tags" too.
+    has_specific_tags = any((t.get("level") or 0) >= 2 for t in (r.tags or []))
+    need_tags = not r.tags or not has_specific_tags
+    if not need_bio and not need_tags:
+        return {"ok": True, "fields_set": 0, "note": "bio + specific tags both present"}
     if not llm.is_available():
         return {"ok": False, "fields_set": 0, "note": "no LLM provider configured"}
 
@@ -844,18 +904,53 @@ def _bio_synth(db, r: Researcher, http: httpx.Client) -> dict:
     paper_block = "\n".join(lines)
 
     prompt = f"{BIO_SYNTH_PROMPT}\n\nResearcher: {r.name_en}\nPapers:\n{paper_block}"
-    raw, err = llm.complete(prompt, max_tokens=200)
+    raw, err = llm.complete(prompt, max_tokens=400)
     if raw is None:
         return {"ok": False, "fields_set": 0, "note": f"llm err: {err}"}
 
-    bio = raw.strip().strip('"').strip()
-    # Trim any leading "Bio:" / "Summary:" wrapper the model might add
-    bio = re.sub(r"^(?:bio|summary)\s*[:：]\s*", "", bio, flags=re.IGNORECASE)
-    if len(bio) < 40:
-        return {"ok": False, "fields_set": 0, "note": "llm returned too-short bio"}
+    raw_stripped = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw.strip(), flags=re.M)
+    match = re.search(r"\{.*\}", raw_stripped, re.DOTALL)
+    if not match:
+        return {"ok": False, "fields_set": 0, "note": "llm: no JSON in response"}
+    try:
+        data = json.loads(match.group(0))
+    except json.JSONDecodeError as e:
+        return {"ok": False, "fields_set": 0, "note": f"llm: bad JSON ({e})"}
 
-    r.bio = bio[:600]
-    return {"ok": True, "fields_set": 1, "note": f"bio synthesized ({len(rows)} papers)"}
+    updated = 0
+    bio_text = (data.get("bio") or "").strip().strip('"').strip()
+    bio_text = re.sub(r"^(?:bio|summary)\s*[:：]\s*", "", bio_text, flags=re.IGNORECASE)
+    if need_bio and len(bio_text) >= 40:
+        r.bio = bio_text[:600]
+        updated += 1
+
+    new_tags_raw = data.get("tags") or []
+    if need_tags and new_tags_raw:
+        # Synth tags get level=2 (specific) and a high score, so they don't
+        # get crowded out by OpenAlex's level=0 generic ones in UI sort.
+        synth_tags = [
+            {"label": t.strip().lower(), "score": 0.8, "level": 2, "source": "bio_synth"}
+            for t in new_tags_raw
+            if isinstance(t, str) and 2 < len(t.strip()) < 50
+        ][:6]
+        if synth_tags:
+            # Merge with existing tags (e.g. OpenAlex level-0 ones) — by label.
+            merged: dict[str, dict] = {t.get("label", ""): t for t in (r.tags or [])}
+            for nt in synth_tags:
+                # Don't overwrite OpenAlex high-confidence tag with same label
+                existing = merged.get(nt["label"])
+                if not existing or nt["score"] > existing.get("score", 0):
+                    merged[nt["label"]] = nt
+            r.tags = list(merged.values())
+            updated += 1
+
+    if updated == 0:
+        return {"ok": False, "fields_set": 0, "note": "llm output unusable"}
+    return {
+        "ok": True,
+        "fields_set": updated,
+        "note": f"bio:{need_bio and bool(bio_text)} +{len(new_tags_raw)} tags",
+    }
 
 
 # ── source 7: refresh signature paper ──────────────────────────────────────
