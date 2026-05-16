@@ -4,8 +4,7 @@
 
 <p align="center">
   <strong><em>All The Researchers Fit To Watch.</em></strong><br>
-  A daily newspaper for early-stage AI researchers — embodied AI, world models, AI for Science.<br>
-  一份每日发行的报纸 — 早期发现 AI 研究者中的高潜力量。
+  A daily newspaper for early-stage AI researchers — embodied AI, world models, AI for Science.
 </p>
 
 <p align="center">
@@ -20,48 +19,50 @@
 
 ## What it does
 
-OpenScout reverse-maps from papers to authors. Every morning at 09:00 Beijing it
-ingests the previous 24 hours from **arXiv**, **HuggingFace Daily Papers**, and
-**OpenReview**-tracked conferences (ICLR / NeurIPS / ICML), then enriches every
-researcher from **OpenAlex** (h-index, citations, topic concepts, ORCID) and
-**DBLP** (stable PIDs), cross-references with **Papers with Code**, and pulls
-**arxiv.org/html/{id}** for contact emails. The output:
+OpenScout reverse-maps from papers to authors. Every morning at 09:00 Beijing
+it ingests the previous 24 hours of **arXiv**, **HuggingFace Daily Papers**,
+and **OpenReview**-tracked conferences (ICLR / NeurIPS / ICML), then enriches
+every researcher from **OpenAlex** (h-index, citations, topic concepts, ORCID)
+and **DBLP** (stable PIDs), cross-references with **Papers with Code**, and
+pulls **arxiv.org/html/{id}** for contact emails. The output:
 
 - A newsprint-style daily brief — Sections A–F: KPIs, new emergences, anchor
-  activity, graduating PhDs, incoming APs, hot papers, algorithmic Sleeper Picks
-- Per-researcher detail pages with research-direction tags, signature paper,
-  flagship projects, advisor lineage (inferred), and contact emails
-- Filterable rosters by topic, country, citation rank, h-index
-- Conference accepted-paper view, institution rosters, tag cloud, side-by-side
-  compare, archive of past briefs
-- RSS feeds, 9-image social cards for sharing, dynamic OG images per researcher,
-  print-friendly PDF view, browser-local watchlist
+  activity, graduating PhDs, incoming faculty, hot papers, algorithmic
+  Sleeper Picks.
+- Per-researcher profiles with research-direction tags, signature paper,
+  flagship projects, inferred advisor lineage, and contact emails.
+- Filterable rosters by topic, country, citation rank, h-index.
+- Conference accepted-paper view, institution rosters, tag cloud,
+  side-by-side compare, archive of past briefs.
+- RSS feeds, 9-image social cards, dynamic OG cards per researcher,
+  print-friendly view, browser-local watchlist.
 
-Bilingual chrome (中 / EN toggle in the nav). Paper titles and abstracts stay
-in their original language; LLM-generated one-line Chinese summaries appear next
-to each card.
+The chrome is bilingual (Chinese / English toggle). Paper titles and abstracts
+stay in their original language; an LLM-generated Chinese one-liner appears
+next to each card.
 
 ## Why
 
-Investors covering early-career AI researchers face one problem: by the time a
-paper trends on alphaXiv or the media picks it up, the window is closed. The
-delta between *"this person is going to matter"* and *"everyone knows"* is six
-months to a year. OpenScout aggressively backfills lineage so unknown junior
-names surface the moment they co-author with someone already tracked.
+Investors covering early-career AI researchers face one problem: by the time
+a paper trends on alphaXiv or the media picks it up, the window is closed.
+The delta between *"this person is going to matter"* and *"everyone knows"*
+is six months to a year. OpenScout aggressively backfills advisor → student
+lineage so unknown junior names surface the moment they co-author with a
+researcher already tracked.
 
 ## Inside this issue
 
 | Surface | What | URL |
 | --- | --- | --- |
-| Live dashboard | Today's brief + roster · bilingual | `/` |
+| Live dashboard | Today's brief + roster | `/` |
 | Researcher detail | Stage · affiliation · advisor · signature paper · tags · projects · contact | `/researchers/{slug}` |
 | Compare | Side-by-side two researchers | `/compare?a=...&b=...` |
 | Lineage tree | Advisor + students | `/researchers/{slug}/tree` |
-| Paper detail | Authors with positions · topics · emails · GitHub stars | `/papers/{arxiv_id}` |
+| Paper detail | Authors · topics · emails · GitHub stars | `/papers/{arxiv_id}` |
 | Conferences | By venue · oral / spotlight tinted | `/conferences` |
 | Institutions | Roster by institution | `/institutions` |
-| Tags | Tag cloud (font-size by count) | `/tags` |
-| Watchlist | Personal star · browser-local | `/watchlist` |
+| Tags | Tag cloud (font size by count) | `/tags` |
+| Watchlist | Personal star, browser-local | `/watchlist` |
 | Stats | KPIs · 7-day trend bars | `/stats` |
 | Print | A4 print stylesheet | `/print/{date}` |
 | Markdown brief | Permanent archive in repo | `reports/{date}.md` |
@@ -82,7 +83,7 @@ Researchers       2,168
 Paper-author links 2,561
 Advisor edges        55    (co-author × same-country × h-index)
 SQLite DB         1.9 MB
-External services   ✓ all 200 OK
+External services   all 7 ✓ HTTP 200
 ```
 
 ## Data sources
@@ -116,7 +117,7 @@ exposes a public API or HTML view; each is hit politely (rate-limited, UA-tagged
 | Scrapers | `pyalex` · `httpx` · `selectolax` · `pypdf` · `arxiv` |
 | LLM | DeepSeek or Anthropic Claude — unified `llm.complete()` |
 | Cron | GitHub Actions → `POST /admin/ingest` |
-| Tests | pytest (31 unit) · ruff format/lint · svelte-check |
+| Tests | pytest (31 unit) · ruff format / lint · svelte-check |
 
 ## Quick start
 
@@ -129,7 +130,7 @@ uv sync --all-extras
 uv run openscout init-db
 uv run openscout seed
 
-# (optional) LLM provider — DeepSeek or Anthropic
+# Optional: pick an LLM provider (DeepSeek or Anthropic)
 echo "DEEPSEEK_API_KEY=sk-..." >> .env
 echo "LLM_PROVIDER=deepseek"   >> .env
 
@@ -141,16 +142,16 @@ cd web && npm install && npm run dev      # http://localhost:5174
 ```
 
 `openscout doctor` reports DB state, key availability, external-service
-reachability, and disk usage — run it whenever something looks off.
+reachability, and disk usage. Run it whenever something looks off.
 
 ## Pipeline
 
-`openscout daily` runs this sequence; each step is isolated so a single failure
-doesn't kill the run. The exit code is the count of failed steps.
+`openscout daily` runs this sequence; each step is isolated so a single
+failure does not stop the rest. The exit code is the count of failed steps.
 
 ```
 Phase 1 — ingest
-  arxiv (embodied)  →  arxiv (world_models)  →  arxiv (ai4sci)  →  HF daily
+  arxiv (embodied)   →  arxiv (world_models)  →  arxiv (ai4sci)  →  HF daily
 
 Phase 2 — researcher enrichment
   resolve-institutions  →  enrich-openalex (anchors)  →  backfill-anchor-works
@@ -225,7 +226,7 @@ openscout send-digest              # needs RESEND_API_KEY
                               │
                               ▼
        ┌──────────────────────────────────────────────────────┐
-       │  scraper/*  ── one module per source, all idempotent │
+       │  scraper/*  — one module per source, all idempotent  │
        └──────────────────────┬───────────────────────────────┘
                               ▼
                        ┌──────────────┐
@@ -235,13 +236,13 @@ openscout send-digest              # needs RESEND_API_KEY
                               │
         ┌─────────────────────┼─────────────────────┐
         ▼                     ▼                     ▼
-  ┌────────────┐       ┌────────────┐         ┌──────────────┐
-  │ brief/     │       │ api/       │         │ web/         │
-  │ generate.py│       │ FastAPI    │ ◀────── │ SvelteKit    │
-  │ → markdown │       │ /briefs    │         │ pages        │
-  └─────┬──────┘       │ /researchers│         └──────────────┘
+  ┌────────────┐       ┌─────────────┐        ┌──────────────┐
+  │ brief/     │       │ api/        │        │ web/         │
+  │ generate.py│       │ FastAPI     │ ◀───── │ SvelteKit    │
+  │ → markdown │       │ /briefs     │        │ pages        │
+  └─────┬──────┘       │ /researchers│        └──────────────┘
         │              │ /og/*.svg   │
-        ▼              └────────────┘
+        ▼              └─────────────┘
   reports/{date}.md
 ```
 
@@ -251,13 +252,13 @@ daily_briefs`.
 
 ## Configuration
 
-API keys + secrets are looked up in this order:
+API keys and secrets are looked up in this order:
 
 1. Shell environment variable
 2. `OpenScout/.env` (gitignored)
-3. **macOS Keychain** — `service=OpenScout`, account = key name
+3. macOS Keychain — `service=OpenScout`, account = key name
 
-Layer 3 survives re-cloning the repo. On non-macOS hosts it's silently skipped.
+Layer 3 survives re-cloning the repo. On non-macOS hosts it is silently skipped.
 
 ```bash
 # Persist a key in Keychain (Touch-ID protected after first unlock):
@@ -271,19 +272,18 @@ gh secret set DEEPSEEK_API_KEY -R Chen17-sq/OpenScout
 
 **Shipped in v1.0**
 - All ingest pipelines · LLM abstraction (DeepSeek / Anthropic interchangeable)
-- 11 bilingual page routes · search · watchlist · compare · lineage tree
+- 11 page routes · search · watchlist · compare · lineage tree
 - Pre-commit · pytest · CI
 
 **Next**
-- Postgres + pgvector for prod (current SQLite caps comfortably at ~10k researchers)
+- Postgres + pgvector for production (current SQLite caps comfortably at ~10k researchers)
 - Twitter / X paper-announcement scraper
-- 知乎 column tracker
-- D3 force-directed lineage graph (current view is text-tree)
+- D3 force-directed lineage graph (current view is a text tree)
 - Conference rebuttal / acceptance-probability signals
 
 **Deliberately out of scope**
 - CRM features (notes, ratings) — this is a display layer, not workflow
-- Lead-gen / outreach — emails surface for manual research, not bulk-send
+- Lead-gen / outreach automation — emails surface for manual research, not bulk-send
 
 ## Contributing
 
@@ -293,9 +293,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Especially welcome:
 - New seed institutions or topics
 - New aggregator sources
 
-The "do not guess Chinese names" rule is firm — only add `name_zh` when verified
-from a public source the researcher controls (homepage, 知乎 column, paper
-byline). The OpenAlex enricher fills the rest where it can.
+The "do not guess Chinese names" rule is firm — only add `name_zh` when
+verified from a source the researcher controls (their homepage, paper byline,
+or a column they author). The OpenAlex enricher fills the rest where it can.
 
 ## Acknowledgments
 
