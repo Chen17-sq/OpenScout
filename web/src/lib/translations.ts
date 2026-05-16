@@ -120,6 +120,14 @@ const zh = {
     sourceVerifiedTitle: '已验证 — 来自权威源',
     sourceInferredTitle: '启发式推断 — 仅作参考',
   },
+  investment: {
+    title: '投资视角 · 今日重点',
+    meta: '按"突破 × 商业化 × 热度"三轴排序',
+    posFirst: '一作',
+    legendB: '突破 (S2 高质量引用 / oral)',
+    legendC: '商业化 (代码 / star / 工业邮箱)',
+    legendZ: '热度 (HF likes / alphaXiv)',
+  },
   list: {
     label: 'Roster',
     title: '全部研究者',
@@ -316,6 +324,14 @@ const en = {
     sourceArxivHtml: 'arXiv HTML',
     sourceVerifiedTitle: 'Verified — from an authoritative source',
     sourceInferredTitle: 'Heuristic — indicative only',
+  },
+  investment: {
+    title: "Investment Lens · Today's Picks",
+    meta: 'Ranked by breakthrough × commercial × buzz',
+    posFirst: '1st author',
+    legendB: 'breakthrough (S2 high-quality cites / oral)',
+    legendC: 'commercial (code / stars / industry email)',
+    legendZ: 'buzz (HF likes / alphaXiv)',
   },
   list: {
     label: 'Roster',

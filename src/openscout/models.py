@@ -116,7 +116,11 @@ class Researcher(Base):
 
     person_score: Mapped[float | None] = mapped_column(Float)
     trajectory_score: Mapped[float | None] = mapped_column(Float)
+    # v1 (legacy): stage + tag_count + projects — kept for A/B comparison.
     investability_score: Mapped[float | None] = mapped_column(Float)
+    # v2: rolls up paper.work_score from the researcher's top-3 recent papers.
+    # See scraper/work_scoring.py compute_investability_v2().
+    investability_score_v2: Mapped[float | None] = mapped_column(Float)
 
     first_seen_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
@@ -149,8 +153,17 @@ class Paper(Base):
     citation_count: Mapped[int] = mapped_column(Integer, default=0)
     influential_citation_count: Mapped[int | None] = mapped_column(Integer)
     github_stars: Mapped[int | None] = mapped_column(Integer)
+    # Three-pillar investability score (see scraper/work_scoring.py):
+    #   breakthrough_score — academic-impact signal (S2 influential cites + oral/spotlight)
+    #   commercial_score   — adoption signal (github stars + code_url + industry email)
+    #   buzz_score         — community attention (HF likes + alphaXiv comments)
+    #   work_score         — weighted combination, used for "Investment Lens" ranking
+    # work_score_reasons stores per-paper "why this scored high" tokens for the UI.
     buzz_score: Mapped[float | None] = mapped_column(Float)
+    breakthrough_score: Mapped[float | None] = mapped_column(Float)
+    commercial_score: Mapped[float | None] = mapped_column(Float)
     work_score: Mapped[float | None] = mapped_column(Float)
+    work_score_reasons: Mapped[list | None] = mapped_column(JSON)
     # OpenAlex concept tags — array of {label, score}
     concepts: Mapped[list | None] = mapped_column(JSON)
     # Emails extracted from PDF first page — array of strings. Loose matching

@@ -164,6 +164,30 @@ def score() -> None:
     console.print(f"[green]✓[/green] scored {c['updated']} researchers")
 
 
+@app.command("score-papers")
+def score_papers(
+    limit: int | None = None,
+) -> None:
+    """Three-pillar work_score per paper + investability_score_v2 per researcher.
+
+    The 'Investment Lens' replaces the v1 stage-based investability heuristic
+    with one rooted in actual paper-level signals: breakthrough × commercial
+    × buzz. Reasons are stored so the UI can show why each pick was picked.
+    """
+    from .scraper.work_scoring import compute_investability_v2, score_all_papers
+
+    p = score_all_papers(limit=limit)
+    console.print(
+        f"[green]✓[/green] paper scoring: {p['scored']} scored · "
+        f"{p['skipped_nosignal']} skipped (no signal)"
+    )
+    r = compute_investability_v2()
+    console.print(
+        f"[green]✓[/green] investability_v2: {r['updated']} rolled up · "
+        f"{r['no_recent_papers']} have no recent papers"
+    )
+
+
 @app.command("social-cards")
 def social_cards() -> None:
     """Generate the 9 social SVG cards (today's top researchers) for sharing."""

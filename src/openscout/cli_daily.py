@@ -89,12 +89,22 @@ def run_daily() -> list[dict]:
 
     # ── Phase 4: compute derived data ──────────────────────────────────────
     from .scraper.lineage import infer_lineage
+    from .scraper.name_inference import infer_country_from_names
     from .scraper.openalex import assign_signature_papers
+    from .scraper.peer_inference import infer_from_peers
     from .scraper.scoring import compute_scores
+    from .scraper.work_scoring import compute_investability_v2, score_all_papers
 
     steps.append(_step("signature papers", assign_signature_papers))
     steps.append(_step("lineage inference", infer_lineage))
-    steps.append(_step("compute scores", compute_scores))
+    # Cheap heuristic enrichment for the auto-discovered tail (v1.2)
+    steps.append(_step("surname → country", infer_country_from_names))
+    steps.append(_step("peer inheritance", infer_from_peers))
+    steps.append(_step("compute scores (v1 legacy)", compute_scores))
+    # v1.4 three-pillar Investment Lens — must run AFTER all paper signals are
+    # in (citations, github stars, buzz, emails) so work_score uses fresh data.
+    steps.append(_step("work_score (3-pillar)", score_all_papers))
+    steps.append(_step("investability_v2 rollup", compute_investability_v2))
 
     # ── Phase 5: optional LLM enrichment ───────────────────────────────────
     from .scraper.classify import filter_topic_papers

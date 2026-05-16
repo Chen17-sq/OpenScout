@@ -10,6 +10,7 @@ from .routes import (
     briefs,
     conferences,
     institutions,
+    investment,
     og,
     papers,
     researchers,
@@ -45,6 +46,7 @@ app.include_router(rss.router, prefix="/rss", tags=["rss"])
 app.include_router(og.router, prefix="/og", tags=["og"])
 app.include_router(institutions.router, prefix="/institutions", tags=["institutions"])
 app.include_router(conferences.router, prefix="/conferences", tags=["conferences"])
+app.include_router(investment.router, prefix="/investment", tags=["investment"])
 app.include_router(admin.router, prefix="/admin", tags=["admin"])
 
 
@@ -74,6 +76,7 @@ def root() -> dict:
             "/rss/daily",
             "/rss/papers",
             "/og/researchers/{slug}.svg",
+            "/investment/picks",
             "/admin/ingest (POST · auth)",
         ],
     }

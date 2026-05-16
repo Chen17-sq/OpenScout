@@ -4,10 +4,12 @@
   import KpiBand from '$lib/KpiBand.svelte';
   import HeroSection from '$lib/HeroSection.svelte';
   import SectionBlock from '$lib/SectionBlock.svelte';
+  import InvestmentLens from '$lib/InvestmentLens.svelte';
   import { t } from '$lib/i18n';
 
   let { data } = $props();
   const brief = $derived(data.brief);
+  const investment = $derived(data.investment);
 </script>
 
 {#if !brief}
@@ -25,6 +27,8 @@
   <Masthead briefDate={brief.brief_date} issue={brief.issue} />
 
   <KpiBand kpi={brief.kpi} />
+
+  <InvestmentLens investment={investment} />
 
   <HeroSection
     leftItems={brief.new_first_authors}

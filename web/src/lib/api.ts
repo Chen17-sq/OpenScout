@@ -47,6 +47,33 @@ export type BriefData = {
   sleeper_picks: StoryItem[];
 };
 
+// Investment Lens — top researchers under the user's three-pillar
+// (breakthrough × commercial × buzz) framing. See work_scoring.py.
+export type InvestmentPick = {
+  slug: string;
+  name_en: string;
+  name_zh: string | null;
+  country: string | null;
+  current_role: string | null;
+  score: number;
+  top_paper: {
+    arxiv_id: string | null;
+    title: string;
+    work_score: number;
+    breakthrough: number;
+    commercial: number;
+    buzz: number;
+    reasons: string[];
+    position: number | null;
+  } | null;
+};
+
+export type InvestmentPicks = {
+  window_days: number;
+  count: number;
+  picks: InvestmentPick[];
+};
+
 export async function apiFetch<T = unknown>(
   path: string,
   fetchFn: typeof fetch = fetch,
