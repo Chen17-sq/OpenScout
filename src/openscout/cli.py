@@ -256,6 +256,47 @@ def refresh_citations(
     )
 
 
+@app.command("code-urls")
+def code_urls(
+    limit: Annotated[int, typer.Option(help="Max papers to scan")] = 300,
+) -> None:
+    """Backfill paper.code_url by regex-scanning abstracts for github URLs."""
+    from .scraper.code_urls import backfill_code_urls
+
+    c = backfill_code_urls(limit=limit)
+    console.print(
+        f"[green]✓[/green] code_url: {c['matched']}/{c['checked']} papers got a github URL"
+    )
+
+
+@app.command("wikidata-photos")
+def wikidata_photos(
+    limit: Annotated[int, typer.Option(help="Max anchors to enrich")] = 40,
+) -> None:
+    """Fetch photo_url from Wikidata P18 via OpenAlex external ids."""
+    from .scraper.wikidata import enrich_photos
+
+    c = enrich_photos(limit=limit)
+    console.print(
+        f"[green]✓[/green] wikidata: {c['attempted']} attempted · "
+        f"{c['found_wikidata']} had QIDs · +{c['found_photo']} photo_urls"
+    )
+
+
+@app.command("hf-models")
+def hf_models(
+    limit: Annotated[int, typer.Option(help="Max anchors to scan")] = 30,
+) -> None:
+    """Discover HuggingFace model releases by searching anchors' names."""
+    from .scraper.hf_models import discover_models
+
+    c = discover_models(limit=limit)
+    console.print(
+        f"[green]✓[/green] HF models: {c['hits']}/{c['attempted']} researchers had hits · "
+        f"+{c['signals_added']} signals"
+    )
+
+
 @app.command("extract-emails")
 def extract_emails(
     limit: Annotated[int, typer.Option(help="Max recent papers to scrape")] = 20,

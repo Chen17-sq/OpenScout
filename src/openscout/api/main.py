@@ -5,7 +5,20 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from .. import __version__
 from ..config import settings
-from .routes import admin, briefs, og, papers, researchers, rss, search, stats, tags, topics
+from .routes import (
+    admin,
+    briefs,
+    conferences,
+    institutions,
+    og,
+    papers,
+    researchers,
+    rss,
+    search,
+    stats,
+    tags,
+    topics,
+)
 
 app = FastAPI(
     title="OpenScout API",
@@ -30,6 +43,8 @@ app.include_router(tags.router, prefix="/tags", tags=["tags"])
 app.include_router(search.router, prefix="/search", tags=["search"])
 app.include_router(rss.router, prefix="/rss", tags=["rss"])
 app.include_router(og.router, prefix="/og", tags=["og"])
+app.include_router(institutions.router, prefix="/institutions", tags=["institutions"])
+app.include_router(conferences.router, prefix="/conferences", tags=["conferences"])
 app.include_router(admin.router, prefix="/admin", tags=["admin"])
 
 
