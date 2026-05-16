@@ -218,9 +218,7 @@ def _recency_multiplier(paper: Paper) -> tuple[float, str | None]:
 
     reason = None
     if mult < 0.85:
-        reason = (
-            f"{int(months_old / 12)}y old" if months_old >= 24 else f"{int(months_old)}mo old"
-        )
+        reason = f"{int(months_old / 12)}y old" if months_old >= 24 else f"{int(months_old)}mo old"
     return mult, reason
 
 

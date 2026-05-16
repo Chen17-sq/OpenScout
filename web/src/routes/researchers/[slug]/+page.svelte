@@ -3,6 +3,7 @@
   import { arxivUrl, blurb, roleLabel } from '$lib/api';
   import StarButton from '$lib/StarButton.svelte';
   import SourceBadge from '$lib/SourceBadge.svelte';
+  import DeepDiveButton from '$lib/DeepDiveButton.svelte';
 
   let { data } = $props();
   const r = $derived(data.researcher);
@@ -27,6 +28,12 @@
       <span class="star-wrap"><StarButton slug={r.slug} /></span>
     </div>
   </div>
+
+  <DeepDiveButton
+    slug={r.slug}
+    lastRunAt={r.deep_dive_run_at}
+    sourcesUsed={r.deep_dive_sources_used}
+  />
 
   <div class="profile-grid">
     <div>

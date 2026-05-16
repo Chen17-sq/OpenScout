@@ -4,8 +4,20 @@ from sqlalchemy.orm import Session
 
 from ...db import get_db
 from ...models import Institution, Paper, PaperAuthor, PaperTopic, Relationship, Researcher, Topic
+from ...scraper.deep_dive import deep_dive_one
 
 router = APIRouter()
+
+
+@router.post("/{slug}/deep-dive")
+def trigger_deep_dive(slug: str, force: bool = Query(False)) -> dict:
+    """Run all 5 deep-dive sources for this researcher (~30s). Skips sources
+    that ran successfully in the last 30 days unless `force=true`.
+    """
+    result = deep_dive_one(slug, force=force)
+    if result.get("error"):
+        raise HTTPException(404, detail=result["error"])
+    return result
 
 
 @router.get("/")
@@ -209,6 +221,10 @@ def _serialize_full(r: Researcher) -> dict:
         "person_score": r.person_score,
         "trajectory_score": r.trajectory_score,
         "investability_score": r.investability_score,
+        "investability_score_v2": r.investability_score_v2,
+        # Deep-dive freshness — UI shows "深挖于 YYYY-MM-DD · N 源命中" badge
+        "deep_dive_run_at": r.deep_dive_run_at.isoformat() if r.deep_dive_run_at else None,
+        "deep_dive_sources_used": r.deep_dive_sources_used or {},
     }
 
 

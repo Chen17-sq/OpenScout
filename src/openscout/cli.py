@@ -415,6 +415,51 @@ def infer(
     )
 
 
+@app.command("deep-dive")
+def deep_dive_cmd(
+    slug: Annotated[str, typer.Argument(help="Researcher slug")],
+    force: Annotated[bool, typer.Option(help="Re-run all sources even if <30d old")] = False,
+) -> None:
+    """Intensive enrichment for one researcher (5 sources, ~30s).
+
+    Per-source cache: each source is skipped if it ran successfully in the last
+    30 days. Use --force to refresh everything.
+    """
+    from .scraper.deep_dive import deep_dive_one
+
+    result = deep_dive_one(slug, force=force)
+    if "error" in result:
+        console.print(f"[red]✗[/red] {result['error']}")
+        raise typer.Exit(1)
+    console.print(f"[bold]{slug}[/bold] · {result['fields_total']} fields updated\n")
+    for name, info in result["sources"].items():
+        if not info.get("ran"):
+            console.print(f"  [dim]·[/dim] {name:24s} [dim]{info['note']}[/dim]")
+            continue
+        marker = "[green]✓[/green]" if info.get("ok") else "[red]✗[/red]"
+        console.print(
+            f"  {marker} {name:24s} "
+            f"[cyan]+{info.get('fields_set', 0)}[/cyan] · [dim]{info.get('note')}[/dim]"
+        )
+
+
+@app.command("deep-dive-queue")
+def deep_dive_queue_cmd(
+    limit: Annotated[int, typer.Option(help="Max researchers per run")] = 20,
+) -> None:
+    """Auto-pick top investment-score researchers + run deep-dive on them.
+
+    Designed to run from cron (post-`daily`). Skips anyone deep-dived in the
+    last 30 days.
+    """
+    from .scraper.deep_dive import auto_queue
+
+    c = auto_queue(limit=limit)
+    console.print(
+        f"[green]✓[/green] deep-dive queue: attempted {c['attempted']} · succeeded {c['succeeded']}"
+    )
+
+
 @app.command()
 def daily() -> None:
     """One-command full pipeline: ingest → enrich → score → brief → cards.

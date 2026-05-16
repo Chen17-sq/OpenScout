@@ -37,6 +37,10 @@ type Researcher = {
   country_source: string | null;
   role_source: string | null;
   affiliation_source: string | null;
+  investability_score_v2: number | null;
+  // Deep-dive freshness — null until the first dive
+  deep_dive_run_at: string | null;
+  deep_dive_sources_used: Record<string, string>;
   bio: string | null;
   bio_zh: string | null;
   confidence_level: string;

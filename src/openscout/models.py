@@ -121,6 +121,12 @@ class Researcher(Base):
     # v2: rolls up paper.work_score from the researcher's top-3 recent papers.
     # See scraper/work_scoring.py compute_investability_v2().
     investability_score_v2: Mapped[float | None] = mapped_column(Float)
+    # "Deep dive" — on-demand intensive enrichment for a single researcher.
+    # `deep_dive_sources_used` is a JSON dict of {source_name: ISO timestamp}.
+    # `deep_dive_run_at` is the LAST run time (any source). A source older than
+    # 30d is considered stale and gets refreshed on the next dive.
+    deep_dive_run_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    deep_dive_sources_used: Mapped[dict | None] = mapped_column(JSON)
 
     first_seen_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()

@@ -28,6 +28,8 @@ COLUMNS: list[tuple[str, str, str]] = [
     ("researchers", "role_source", "TEXT"),
     ("researchers", "affiliation_source", "TEXT"),
     ("researchers", "investability_score_v2", "REAL"),
+    ("researchers", "deep_dive_run_at", "TIMESTAMP"),
+    ("researchers", "deep_dive_sources_used", "TEXT"),
     ("institutions", "openalex_id", "TEXT"),
     ("papers", "openalex_id", "TEXT"),
     ("papers", "influential_citation_count", "INTEGER"),

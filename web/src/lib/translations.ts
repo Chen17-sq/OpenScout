@@ -128,6 +128,16 @@ const zh = {
     legendC: '商业化 (代码 / star / 工业邮箱)',
     legendZ: '热度 (HF likes / alphaXiv)',
   },
+  deepDive: {
+    label: '深挖',
+    running: '深挖中… 约 30s',
+    lastRun: '深挖于',
+    sources: '源命中',
+    fields: '条字段更新',
+    done: '完成',
+    titleFresh: '首次深挖：扫 arxiv / OpenAlex / GitHub / HuggingFace / 主页，结果永久保存',
+    titleStale: '已深挖过（{date}）；再点会刷新 30 天以上的过期源',
+  },
   list: {
     label: 'Roster',
     title: '全部研究者',
@@ -332,6 +342,16 @@ const en = {
     legendB: 'breakthrough (S2 high-quality cites / oral)',
     legendC: 'commercial (code / stars / industry email)',
     legendZ: 'buzz (HF likes / alphaXiv)',
+  },
+  deepDive: {
+    label: 'Deep Dive',
+    running: 'Diving… ~30s',
+    lastRun: 'Last dived',
+    sources: 'sources hit',
+    fields: 'fields updated',
+    done: 'Done',
+    titleFresh: 'First dive: scan arxiv / OpenAlex / GitHub / HuggingFace / homepage. Results persisted.',
+    titleStale: 'Dived on {date}; clicking refreshes any source older than 30 days.',
   },
   list: {
     label: 'Roster',

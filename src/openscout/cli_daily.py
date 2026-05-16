@@ -109,6 +109,12 @@ def run_daily() -> list[dict]:
     steps.append(_step("work_score (3-pillar)", score_all_papers))
     steps.append(_step("investability_v2 rollup", compute_investability_v2))
 
+    # v1.6 deep-dive queue: top investment-score researchers get the 5-source
+    # intensive enrichment. Bounded to keep daily runtime under control.
+    from .scraper.deep_dive import auto_queue
+
+    steps.append(_step("deep-dive queue (top 10)", auto_queue, limit=10))
+
     # ── Phase 5: optional LLM enrichment ───────────────────────────────────
     from .scraper.classify import filter_topic_papers
     from .scraper.translator import translate_papers
