@@ -819,7 +819,14 @@ def _homepage_llm(db, r: Researcher, http: httpx.Client) -> dict:
         updated += 1
     if data.get("interests") and not r.tags:
         r.tags = [
-            {"label": t, "score": 0.5, "source": "homepage_llm"} for t in data["interests"][:8]
+            {
+                "label": t,
+                "score": 0.5,
+                "level": 1,
+                "type": "topic",
+                "source": "homepage_llm",
+            }
+            for t in data["interests"][:8]
         ]
         updated += 1
     if data.get("current_role") and not r.current_role:
@@ -929,7 +936,13 @@ def _bio_synth(db, r: Researcher, http: httpx.Client) -> dict:
         # Synth tags get level=2 (specific) and a high score, so they don't
         # get crowded out by OpenAlex's level=0 generic ones in UI sort.
         synth_tags = [
-            {"label": t.strip().lower(), "score": 0.8, "level": 2, "source": "bio_synth"}
+            {
+                "label": t.strip().lower(),
+                "score": 0.8,
+                "level": 2,
+                "type": "topic",
+                "source": "bio_synth",
+            }
             for t in new_tags_raw
             if isinstance(t, str) and 2 < len(t.strip()) < 50
         ][:6]
@@ -951,6 +964,155 @@ def _bio_synth(db, r: Researcher, http: httpx.Client) -> dict:
         "fields_set": updated,
         "note": f"bio:{need_bio and bool(bio_text)} +{len(new_tags_raw)} tags",
     }
+
+
+# ── source 6.5: institution + signal tags ──────────────────────────────────
+
+
+def _merge_tags(existing: list[dict] | None, new: list[dict]) -> tuple[list[dict], int]:
+    """Merge `new` tags into `existing` by (label, type). Returns (merged, n_added)."""
+    by_key: dict[tuple[str, str], dict] = {
+        (t.get("label", ""), t.get("type", "topic")): t for t in (existing or [])
+    }
+    n_added = 0
+    for nt in new:
+        key = (nt.get("label", ""), nt.get("type", "topic"))
+        if not key[0]:
+            continue
+        if key not in by_key:
+            n_added += 1
+        existing_score = by_key.get(key, {}).get("score", 0)
+        if key not in by_key or nt.get("score", 0) > existing_score:
+            by_key[key] = nt
+    return list(by_key.values()), n_added
+
+
+def _institution_tag(db, r: Researcher, http: httpx.Client) -> dict:
+    """Emit the researcher's current affiliation as an `institution`-typed tag.
+
+    The 机构 (affiliation) cell already shows the institution name, but tagging
+    it lets the user filter "show me all Tsinghua people" via the tag system
+    and gives the chip a visual home in the Tags row.
+    """
+    if not r.current_affiliation_id:
+        return {"ok": True, "fields_set": 0, "note": "no affiliation"}
+
+    from ..models import Institution
+
+    inst = db.execute(
+        select(Institution).where(Institution.id == r.current_affiliation_id)
+    ).scalar_one_or_none()
+    if not inst or not inst.name:
+        return {"ok": True, "fields_set": 0, "note": "affiliation not resolvable"}
+
+    new_tag = {
+        "label": inst.name,
+        "label_zh": inst.name_zh,
+        "score": 1.0,
+        "level": 3,
+        "type": "institution",
+        "country": inst.country,
+        "source": "current_affiliation",
+    }
+    merged, added = _merge_tags(r.tags, [new_tag])
+    if not added:
+        return {"ok": True, "fields_set": 0, "note": f"already tagged: {inst.name}"}
+    r.tags = merged
+    return {"ok": True, "fields_set": 1, "note": f"+ {inst.name}"}
+
+
+def _signal_tag(db, r: Researcher, http: httpx.Client) -> dict:
+    """Emit "high-potential" / "rising star" / status tags based on combined signals.
+
+    These are the chips the investor scans for first — "is this person worth
+    a closer look?" Computed every dive (cheap; idempotent). All tagged with
+    type="signal" so the UI styles them prominently.
+    """
+    new_tags: list[dict] = []
+
+    # Top investment lens — anyone v2 >= 0.5 is among the strongest investable
+    v2 = r.investability_score_v2 or 0
+    if v2 >= 0.5:
+        new_tags.append(
+            {
+                "label": "🔥 high-potential",
+                "label_zh": "🔥 高潜",
+                "score": min(1.0, v2),
+                "level": 3,
+                "type": "signal",
+                "source": f"investability_v2={v2:.2f}",
+            }
+        )
+
+    # Senior already — flag accordingly so we don't confuse them with rising stars
+    if r.current_role == "incoming_ap":
+        new_tags.append(
+            {
+                "label": "⭐ incoming AP",
+                "label_zh": "⭐ 即将入职 AP",
+                "score": 1.0,
+                "level": 3,
+                "type": "signal",
+                "source": "current_role",
+            }
+        )
+
+    # Prolific junior — PhD/postdoc with high h-index relative to career stage
+    if r.current_role in ("phd", "postdoc") and (r.h_index or 0) >= 10:
+        new_tags.append(
+            {
+                "label": "🚀 prolific junior",
+                "label_zh": "🚀 学界新星",
+                "score": min(1.0, (r.h_index or 0) / 20.0),
+                "level": 3,
+                "type": "signal",
+                "source": f"h_index={r.h_index}",
+            }
+        )
+
+    # High-impact-per-paper — citation density > 100 means each paper landed
+    if (r.h_index or 0) >= 5 and (r.citation_count or 0) >= 500:
+        density = (r.citation_count or 0) / max((r.h_index or 1), 1)
+        if density >= 80:
+            new_tags.append(
+                {
+                    "label": "📈 high-impact per paper",
+                    "label_zh": "📈 单篇高引",
+                    "score": min(1.0, density / 200.0),
+                    "level": 3,
+                    "type": "signal",
+                    "source": f"cites_per_h={density:.0f}",
+                }
+            )
+
+    # PhD Y4+ marker — the user's investment sweet spot (graduating soon)
+    if r.current_role == "phd" and (r.career_stage_year or 0) >= 4:
+        new_tags.append(
+            {
+                "label": "🎓 graduating soon",
+                "label_zh": "🎓 即将毕业",
+                "score": 0.9,
+                "level": 3,
+                "type": "signal",
+                "source": f"PhD-Y{r.career_stage_year}",
+            }
+        )
+
+    # GitHub momentum — has a model release with significant downloads
+    # (handled when huggingface_profile fires, but tag it here for consistency)
+    # Note: signals_by_type would be cleaner if Signal had a 'has_recent' helper
+
+    if not new_tags:
+        return {"ok": True, "fields_set": 0, "note": "no signals triggered"}
+
+    # ALWAYS remove any prior signal tags before re-adding — signals are
+    # computed fresh each dive, so stale ones (e.g. "graduating soon" set
+    # last year when they were Y3 PhD, now they're a postdoc) should clear.
+    non_signal = [t for t in (r.tags or []) if t.get("type") != "signal"]
+    merged, added = _merge_tags(non_signal, new_tags)
+    r.tags = merged
+    labels = ", ".join(t["label"] for t in new_tags)
+    return {"ok": True, "fields_set": added, "note": labels}
 
 
 # ── source 7: refresh signature paper ──────────────────────────────────────
@@ -1030,7 +1192,9 @@ SOURCES: list[tuple[str, Callable]] = [
     ("huggingface_profile", _huggingface_profile),  # name guess → HF user + models
     ("homepage_llm", _homepage_llm),  # homepage_url → bio/advisor/interests
     # ── SYNTHESIS: fill remaining gaps from what we have ──
-    ("bio_synth", _bio_synth),  # papers → 2-sentence bio (if still empty)
+    ("bio_synth", _bio_synth),  # papers → 2-sentence bio + topic tags
+    ("institution_tag", _institution_tag),  # affiliation → institution-typed tag chip
+    ("signal_tag", _signal_tag),  # combined signals → 🔥 高潜 / 🚀 学界新星 / etc.
     ("signature_paper", _signature_paper),  # papers + work_score → featured paper
 ]
 

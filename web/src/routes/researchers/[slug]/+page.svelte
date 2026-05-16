@@ -117,11 +117,31 @@
   {/if}
 
   {#if r.tags?.length}
+    {@const signalTags = r.tags.filter((t) => t.type === 'signal')}
+    {@const instTags = r.tags.filter((t) => t.type === 'institution')}
+    {@const topicTags = r.tags
+      .filter((t) => !t.type || t.type === 'topic')
+      .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))}
     <div class="bio-block">
       <div class="lbl-mini">{$t('researcher.researchDirections')}</div>
       <div class="tag-list">
-        {#each r.tags as tag}
-          <a class="tag" href={`/tags/${encodeURIComponent(tag.label)}`}>
+        {#each signalTags as tag}
+          <span class="tag t-signal" title={tag.source ?? ''}>
+            {tag.label_zh ?? tag.label}
+          </span>
+        {/each}
+        {#each instTags as tag}
+          <a class="tag t-institution" href={`/institutions`}>
+            {tag.label}
+            {#if tag.country}<span class="tag-meta">{tag.country}</span>{/if}
+          </a>
+        {/each}
+        {#each topicTags as tag}
+          <a
+            class="tag t-topic"
+            class:t-generic={(tag.level ?? 0) === 0}
+            href={`/tags/${encodeURIComponent(tag.label)}`}
+          >
             {tag.label}
             <span class="tag-score">{tag.score.toFixed(2)}</span>
           </a>
@@ -390,6 +410,41 @@
   .tag:hover .tag-score {
     color: var(--paper);
     opacity: 0.7;
+  }
+  /* Signal: amber chip, draws the eye first */
+  .tag.t-signal {
+    background: #fffaf0;
+    border: 1px dashed #b8860b;
+    color: #8a6300;
+    cursor: help;
+  }
+  .tag.t-signal:hover {
+    background: #b8860b;
+    color: var(--paper);
+  }
+  /* Institution: solid ink chip */
+  .tag.t-institution {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+  .tag.t-institution:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .tag-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    opacity: 0.75;
+    margin-left: 2px;
+  }
+  /* Generic topic tags (level=0 OpenAlex catch-alls): faded */
+  .tag.t-topic.t-generic {
+    border-color: var(--n400);
+    color: var(--n500);
+  }
+  .tag.t-topic.t-generic .tag-score {
+    color: var(--n400);
   }
   .project-list {
     list-style: none;

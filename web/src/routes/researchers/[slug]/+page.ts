@@ -2,7 +2,17 @@ import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 import { apiFetch } from '$lib/api';
 
-type Tag = { label: string; score: number; level?: number; wikidata?: string };
+type Tag = {
+  label: string;
+  label_zh?: string | null;
+  score: number;
+  level?: number;
+  wikidata?: string;
+  // v1.10: tag taxonomy
+  type?: 'topic' | 'institution' | 'signal' | 'venue';
+  source?: string; // e.g. "investability_v2=0.62" — shown as tooltip
+  country?: string | null;
+};
 type Project = { name: string; role?: string; category?: string; url?: string };
 type PaperRow = {
   arxiv_id: string | null;

@@ -127,7 +127,12 @@ def _find_openalex_author(
 
 
 def _extract_tags(author: dict) -> list[dict]:
-    """OpenAlex x_concepts → tag schema. Scores are 0-1 floats."""
+    """OpenAlex x_concepts → tag schema. Scores are 0-1 floats.
+
+    All tags emitted here are `type: "topic"` (research direction). Other
+    tag types (institution / signal / venue) come from the deep-dive
+    scraper, see `scraper/deep_dive.py`.
+    """
     concepts = author.get("x_concepts") or author.get("concepts") or []
     out: list[dict] = []
     for c in concepts[:10]:
@@ -146,6 +151,7 @@ def _extract_tags(author: dict) -> list[dict]:
                 "label": label,
                 "score": round(s, 3),
                 "level": int(level),
+                "type": "topic",
                 "wikidata": c.get("wikidata"),
             }
         )
