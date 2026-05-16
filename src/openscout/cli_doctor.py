@@ -70,11 +70,15 @@ def _check_db() -> Table:
 
 
 def _check_env() -> Table:
+    from .scraper import llm
+
     t = Table(title="API keys", title_style="bold", show_header=False)
     t.add_column("var")
     t.add_column("status")
     keys = [
-        ("ANTHROPIC_API_KEY", settings.anthropic_api_key, "translator + topic classifier"),
+        ("ANTHROPIC_API_KEY", settings.anthropic_api_key, "Anthropic Claude"),
+        ("DEEPSEEK_API_KEY", settings.deepseek_api_key, "DeepSeek (cheaper, OpenAI-compatible)"),
+        ("LLM_PROVIDER", settings.llm_provider, f"active: {llm.provider_name()}"),
         (
             "SEMANTIC_SCHOLAR_API_KEY",
             settings.semantic_scholar_api_key,

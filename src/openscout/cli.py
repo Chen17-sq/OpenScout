@@ -182,13 +182,15 @@ def classify_topics(
     from .scraper.classify import filter_topic_papers
 
     c = filter_topic_papers(topic, limit=limit)
-    if c["skipped_no_key"]:
+    if c.get("skipped_no_provider"):
         console.print(
-            "[yellow]⚠[/yellow] ANTHROPIC_API_KEY not set; skipping topic classification."
+            "[yellow]⚠[/yellow] no LLM provider configured — set ANTHROPIC_API_KEY "
+            "or DEEPSEEK_API_KEY in .env"
         )
     else:
         console.print(
-            f"[green]✓[/green] {topic}: kept {c['kept']} / removed {c['removed']} / checked {c['checked']}"
+            f"[green]✓[/green] {topic}: kept {c['kept']} / removed {c['removed']} / "
+            f"skipped_api_error {c.get('skipped_api_error', 0)} / checked {c['checked']}"
         )
 
 
@@ -397,14 +399,15 @@ def translate_papers_cmd(
     from .scraper.translator import translate_papers
 
     c = translate_papers(limit=limit)
-    if c["skipped_no_key"]:
+    if c.get("skipped_no_provider"):
         console.print(
-            "[yellow]⚠[/yellow] ANTHROPIC_API_KEY not set — skipping translation. "
-            "Set it in .env to enable."
+            "[yellow]⚠[/yellow] no LLM provider configured — set ANTHROPIC_API_KEY "
+            "or DEEPSEEK_API_KEY in .env"
         )
     else:
         console.print(
-            f"[green]✓[/green] translated {c['translated']}/{c['attempted']} · {c['errors']} errors"
+            f"[green]✓[/green] translated {c['translated']}/{c['attempted']} · "
+            f"skipped_api_error {c.get('skipped_api_error', 0)} · errors {c['errors']}"
         )
 
 

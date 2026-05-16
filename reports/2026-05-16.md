@@ -7,7 +7,7 @@ DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, MAY 16, 2026
 
 > *All The Researchers Fit To Watch* — Vol. 1, No. 002 · 2026-05-16
 
-_Auto-generated at 2026-05-16T05:28:21+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-05-16T06:17:45+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -25,6 +25,8 @@ _Auto-generated at 2026-05-16T05:28:21+00:00 · [完整看板](http://localhost:
 
 **Mohammad Reza Rahmani** · 一作 · 4 作者 · [arXiv:or-biE1uHyG0l](https://arxiv.org/abs/or-biE1uHyG0l)
 
+*分布式协方差矩阵估计的通信-精度权衡下界与近最优算法。*
+
 _Estimating high-dimensional covariance matrices is crucial in various domains. This work considers a scenario where two collaborating agents access disjoint dimensions of $m$ samples from a high--dimensional random vect…_
 
 → [profile](/researchers/mohammad-reza-rahmani)
@@ -33,6 +35,8 @@ _Estimating high-dimensional covariance matrices is crucial in various domains. 
 ### No. 02 · Case-Based or Rule-Based: How Do Transformers Do the Math?
 
 **Yi Hu** · 一作 · 4 作者 · [arXiv:or-4Vqr8SRfyX](https://arxiv.org/abs/or-4Vqr8SRfyX)
+
+*通过规则微调使Transformer从案例推理转向规则推理。*
 
 _Despite the impressive performance in a variety of complex tasks, modern large language models (LLMs) still have trouble dealing with some math problems that are simple and intuitive for humans, such as addition. While…_
 
@@ -43,6 +47,8 @@ _Despite the impressive performance in a variety of complex tasks, modern large 
 
 **Valérie Castin** · 一作 · 3 作者 · [arXiv:or-aP0H8A1ywk](https://arxiv.org/abs/or-aP0H8A1ywk)
 
+*量化自注意力Lipschitz常数，证明其与序列长度平方根成正比。*
+
 _Self-attention and masked self-attention are at the heart of Transformers' outstanding success. Still, our mathematical understanding of attention, in particular of its Lipschitz properties — which are key when it comes…_
 
 → [profile](/researchers/val-rie-castin)
@@ -51,6 +57,8 @@ _Self-attention and masked self-attention are at the heart of Transformers' outs
 ### No. 04 · Causal Action Influence Aware Counterfactual Data Augmentation
 
 **Núria Armengol Urpí** · 一作 · 4 作者 · [arXiv:or-6Zl9rv6PDx](https://arxiv.org/abs/or-6Zl9rv6PDx)
+
+*利用因果影响量化交换状态中动作无关部分进行反事实数据增强。*
 
 _Offline data are both valuable and practical resources for teaching robots complex behaviors. Ideally, learning agents should not be constrained by the scarcity of available demonstrations, but rather generalize beyond…_
 
@@ -61,6 +69,8 @@ _Offline data are both valuable and practical resources for teaching robots comp
 
 **Samuel Garcin** · 一作 · 5 作者 · [arXiv:or-uku9r6RROl](https://arxiv.org/abs/or-uku9r6RROl)
 
+*通过数据正则化环境设计提升强化学习零样本泛化。*
+
 _Autonomous agents trained using deep reinforcement learning (RL) often lack the ability to successfully generalise to new environments, even when these environments share characteristics with the ones they have encounte…_
 
 → [profile](/researchers/samuel-garcin)
@@ -69,6 +79,8 @@ _Autonomous agents trained using deep reinforcement learning (RL) often lack the
 ### No. 06 · EvIL: Evolution Strategies for Generalisable Imitation Learning
 
 **Silvia Sapora** · 一作 · 5 作者 · [arXiv:or-9DMMvMTDur](https://arxiv.org/abs/or-9DMMvMTDur)
+
+*用奖励模型集成与进化策略优化模仿学习迁移效率。*
 
 _Often times in imitation learning (IL), the environment we collect expert demonstrations in and the environment we want to deploy our learned policy in aren't exactly the same (e.g. demonstrations collected in simulatio…_
 
@@ -79,6 +91,8 @@ _Often times in imitation learning (IL), the environment we collect expert demon
 
 **Riccardo Grazzi** · 一作 · 3 作者 · [arXiv:or-SlRcJvf1yd](https://arxiv.org/abs/or-SlRcJvf1yd)
 
+*非光滑隐式微分线性收敛率及随机NSID方法。*
+
 _We study the problem of efficiently computing the derivative of the fixed-point of a parametric nondifferentiable contraction map. This problem has wide applications in machine learning, including hyperparameter optimiz…_
 
 → [profile](/researchers/riccardo-grazzi)
@@ -87,6 +101,8 @@ _We study the problem of efficiently computing the derivative of the fixed-point
 ### No. 08 · Predictive Performance Comparison of Decision Policies Under Confounding
 
 **Luke Guerdan** · 一作 · 4 作者 · [arXiv:or-HrzQZXzrN2](https://arxiv.org/abs/or-HrzQZXzrN2)
+
+*用因果推断方法比较决策策略的预测性能，忽略不确定性区域。*
 
 _Predictive models are often introduced to decision-making tasks under the rationale that they improve performance over an existing decision-making policy. However, it is challenging to compare predictive performance aga…_
 
@@ -97,6 +113,8 @@ _Predictive models are often introduced to decision-making tasks under the ratio
 
 **Alexander Munteanu** · 一作 · 2 作者 · [arXiv:or-ohH3sbUue2](https://arxiv.org/abs/or-ohH3sbUue2)
 
+*用ℓ₂增强ℓ_p敏感性采样，实现最优线性复杂度。*
+
 _Data subsampling is one of the most natural methods to approximate a massively large data set by a small representative proxy. In particular, sensitivity sampling received a lot of attention, which samples points propor…_
 
 → [profile](/researchers/alexander-munteanu)
@@ -105,6 +123,8 @@ _Data subsampling is one of the most natural methods to approximate a massively 
 ### No. 10 · Stochastic Conditional Diffusion Models for Robust Semantic Image Synthesis
 
 **Juyeon Ko** · 一作 · 4 作者 · [arXiv:or-rMV86cAOh6](https://arxiv.org/abs/or-rMV86cAOh6)
+
+*通过标签扩散与类别噪声调度增强语义图像合成鲁棒性。*
 
 _Semantic image synthesis (SIS) is a task to generate realistic images corresponding to semantic maps (labels). However, in real-world applications, SIS often encounters noisy user inputs. To address this, we propose Sto…_
 
@@ -142,6 +162,8 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 ### No. 01 · Training Large Language Models for Reasoning through Reverse Curriculum Reinforcement Learning
 
 **Zhiheng Xi** · 一作 · 21 作者 · [arXiv:or-t82Y3fmRtk](https://arxiv.org/abs/or-t82Y3fmRtk)
+
+*用逆向课程强化学习实现结果监督的逐步推理信号。*
 
 _In this paper, we propose **R**$^3$: Learning **R**easoning through **R**everse Curriculum **R**einforcement Learning (RL), a novel method that employs only outcome supervision to achieve the benefits of process supervi…_
 
@@ -197,6 +219,8 @@ _Evaluating instruction-guided image edits requires rewards that reflect subtle 
 
 **Huilai Chen** · 一作 · 12 作者 · [arXiv:or-Rp8R9C0Sth](https://arxiv.org/abs/or-Rp8R9C0Sth)
 
+*用大语言模型自动优化Linux内核配置，性能提升25%。*
+
 _With the rapid development of Artificial Intelligence of Things (AIoT), customizing and optimizing operating system (OS) kernel configurations for various AIoT application scenarios is crucial for maximizing system perf…_
 
 → [profile](/researchers/huilai-chen)
@@ -205,6 +229,8 @@ _With the rapid development of Artificial Intelligence of Things (AIoT), customi
 ### No. 08 · Stop Regressing: Training Value Functions via Classification for Scalable Deep RL
 
 **Jesse Farebrother** · 一作 · 12 作者 · [arXiv:or-dVpFKfqF3R](https://arxiv.org/abs/or-dVpFKfqF3R)
+
+*用分类交叉熵替代回归训练价值函数，提升深度RL可扩展性。*
 
 _Value functions are an essential component in deep reinforcement learning (RL), that are typically trained via mean squared error regression to match bootstrapped target values. However, scaling value-based RL methods t…_
 
@@ -239,6 +265,8 @@ _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 ### No. 01 · Training Large Language Models for Reasoning through Reverse Curriculum Reinforcement Learning
 
 **Zhiheng Xi** · 一作 · 21 作者 · [arXiv:or-t82Y3fmRtk](https://arxiv.org/abs/or-t82Y3fmRtk)
+
+*用逆向课程强化学习实现结果监督的逐步推理信号。*
 
 _In this paper, we propose **R**$^3$: Learning **R**easoning through **R**everse Curriculum **R**einforcement Learning (RL), a novel method that employs only outcome supervision to achieve the benefits of process supervi…_
 
