@@ -5,7 +5,10 @@
 
   let { data, children } = $props();
 
-  hydrateLocale(data.locale);
+  // Hydrate locale on every navigation (data is reactive in Svelte 5 runes mode).
+  $effect(() => {
+    hydrateLocale(data.locale);
+  });
 </script>
 
 <div class="wrap">

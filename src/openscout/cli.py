@@ -351,6 +351,30 @@ def alphaxiv(
     )
 
 
+@app.command()
+def daily() -> None:
+    """One-command full pipeline: ingest → enrich → score → brief → cards.
+
+    Each step is isolated — one failure doesn't stop the rest. This is what
+    the GitHub Actions cron should call once a day. Prints a colored summary
+    of what succeeded / failed.
+    """
+    from .cli_daily import print_summary, run_daily
+
+    steps = run_daily()
+    n_failed = print_summary(steps)
+    if n_failed:
+        raise typer.Exit(code=1)
+
+
+@app.command()
+def doctor() -> None:
+    """Health check: DB state, API keys, external service reachability, disk."""
+    from .cli_doctor import run_doctor
+
+    raise typer.Exit(run_doctor())
+
+
 @app.command("extract-emails")
 def extract_emails(
     limit: Annotated[int, typer.Option(help="Max recent papers to scrape")] = 20,

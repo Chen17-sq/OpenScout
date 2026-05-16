@@ -28,6 +28,7 @@ type Researcher = {
   github_handle: string | null;
   zhihu_url: string | null;
   linkedin_url: string | null;
+  photo_url: string | null;
   current_role: string | null;
   career_stage_year: number | null;
   graduation_year_estimate: number | null;

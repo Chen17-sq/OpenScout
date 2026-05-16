@@ -14,13 +14,15 @@
     </header>
 
     <table class="kpi-print">
-      <tr>
-        <td><div class="num">{brief.kpi.tracked.toLocaleString()}</div><div>tracked</div></td>
-        <td><div class="num accent">{brief.kpi.today_papers}</div><div>today papers</div></td>
-        <td><div class="num accent">{brief.kpi.today_emergences}</div><div>new faces</div></td>
-        <td><div class="num">{brief.kpi.soon_graduating}</div><div>grad PhD</div></td>
-        <td><div class="num">{brief.kpi.incoming_ap}</div><div>incoming AP</div></td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><div class="num">{brief.kpi.tracked.toLocaleString()}</div><div>tracked</div></td>
+          <td><div class="num accent">{brief.kpi.today_papers}</div><div>today papers</div></td>
+          <td><div class="num accent">{brief.kpi.today_emergences}</div><div>new faces</div></td>
+          <td><div class="num">{brief.kpi.soon_graduating}</div><div>grad PhD</div></td>
+          <td><div class="num">{brief.kpi.incoming_ap}</div><div>incoming AP</div></td>
+        </tr>
+      </tbody>
     </table>
 
     {#each [

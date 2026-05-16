@@ -13,10 +13,6 @@
 <Masthead briefDate={brief.brief_date} issue={brief.issue} />
 <KpiBand kpi={brief.kpi} />
 <HeroSection
-  leftLabel="🆕 今日新冒头"
-  leftMeta="first-authors first seen this issue"
-  rightLabel="🔄 动态更新"
-  rightMeta="anchor activity"
   leftItems={brief.new_first_authors}
   rightItems={brief.anchor_activity}
   rightAccent

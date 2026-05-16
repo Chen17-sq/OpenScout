@@ -23,12 +23,17 @@ export const load: PageLoad = async ({ url, fetch }) => {
     citation_count: number | null;
     n_papers: number;
     tags: Array<{ label: string; score?: number }>;
+    photo_url: string | null;
   };
 
-  const data = await apiFetch<{ total: number; items: ListItem[] }>(
-    `/researchers/?${params.toString()}`,
-    fetch,
-  );
+  type ListResponse = {
+    total: number;
+    items: ListItem[];
+    limit: number;
+    offset: number;
+  };
+
+  const data = await apiFetch<ListResponse>(`/researchers/?${params.toString()}`, fetch);
   return {
     data,
     filters: {

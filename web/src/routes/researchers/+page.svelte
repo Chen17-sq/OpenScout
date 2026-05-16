@@ -21,6 +21,15 @@
     params.set('offset', String(newOffset));
     return `/researchers?${params.toString()}`;
   }
+
+  function withSort(s: string, filters: Record<string, string>): string {
+    const params = new URLSearchParams();
+    for (const [k, v] of Object.entries(filters)) {
+      if (v && k !== 'sort') params.set(k, v);
+    }
+    params.set('sort', s);
+    return params.toString();
+  }
 </script>
 
 <section>
@@ -165,20 +174,6 @@
     letter-spacing: 0.06em;
     text-transform: none;
   }
-</style>
-
-<script context="module" lang="ts">
-  function withSort(s: string, filters: Record<string, string>): string {
-    const params = new URLSearchParams();
-    for (const [k, v] of Object.entries(filters)) {
-      if (v && k !== 'sort') params.set(k, v);
-    }
-    params.set('sort', s);
-    return params.toString();
-  }
-</script>
-
-<style>
   .filter-strip {
     display: flex;
     gap: 0;
