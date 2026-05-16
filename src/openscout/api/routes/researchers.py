@@ -176,6 +176,11 @@ def _serialize_summary(r: Researcher) -> dict:
         "name_zh_source": r.name_zh_source,
         "current_role": r.current_role,
         "country": r.country,
+        # Provenance markers — the UI uses these to render an "inferred" vs
+        # "verified" badge so the user can spot-check what to trust.
+        "country_source": r.country_source,
+        "role_source": r.role_source,
+        "affiliation_source": r.affiliation_source,
         "confidence_level": r.confidence_level,
         "h_index": r.h_index,
         "citation_count": r.citation_count,

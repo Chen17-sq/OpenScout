@@ -33,6 +33,10 @@ type Researcher = {
   career_stage_year: number | null;
   graduation_year_estimate: number | null;
   country: string | null;
+  // Provenance of inferred fields — see SourceBadge.svelte
+  country_source: string | null;
+  role_source: string | null;
+  affiliation_source: string | null;
   bio: string | null;
   bio_zh: string | null;
   confidence_level: string;

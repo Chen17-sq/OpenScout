@@ -2,6 +2,7 @@
   import { t } from '$lib/i18n';
   import { arxivUrl, blurb, roleLabel } from '$lib/api';
   import StarButton from '$lib/StarButton.svelte';
+  import SourceBadge from '$lib/SourceBadge.svelte';
 
   let { data } = $props();
   const r = $derived(data.researcher);
@@ -30,19 +31,27 @@
   <div class="profile-grid">
     <div>
       <div class="lbl">{$t('researcher.stage')}</div>
-      <div class="val">{roleLabel(r.current_role) || '—'}</div>
+      <div class="val">
+        {roleLabel(r.current_role) || '—'}<SourceBadge source={r.role_source} />
+      </div>
       {#if r.career_stage_year}<div class="sub">Year {r.career_stage_year}</div>{/if}
     </div>
     <div>
       <div class="lbl">{$t('researcher.affiliation')}</div>
-      <div class="val">{r.current_affiliation?.name ?? '—'}</div>
+      <div class="val">
+        {r.current_affiliation?.name ?? '—'}<SourceBadge source={r.affiliation_source} />
+      </div>
       {#if r.current_affiliation?.name_zh}
         <div class="sub">{r.current_affiliation.name_zh}</div>
       {/if}
     </div>
     <div>
       <div class="lbl">{$t('researcher.affiliationCountry')}</div>
-      <div class="val">{r.country ? `${flag(r.country)} ${r.country}` : '—'}</div>
+      <div class="val">
+        {r.country ? `${flag(r.country)} ${r.country}` : '—'}<SourceBadge
+          source={r.country_source}
+        />
+      </div>
     </div>
     <div>
       <div class="lbl">{$t('researcher.advisor')}</div>
