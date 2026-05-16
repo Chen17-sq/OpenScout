@@ -966,6 +966,56 @@ def _bio_synth(db, r: Researcher, http: httpx.Client) -> dict:
     }
 
 
+# ── source 6.4: per-researcher affiliation discovery (v1.11) ───────────────
+
+
+def _affiliation_discover_wrapper(db, r: Researcher, http: httpx.Client) -> dict:
+    """Single-researcher affiliation discovery for the deep-dive pipeline.
+
+    Mirrors the bulk `discover_affiliations` orchestrator but reuses the
+    deep-dive's open session + http client (one researcher only).
+    """
+    if r.current_affiliation_id:
+        return {"ok": True, "fields_set": 0, "note": "already set"}
+    has_signal = bool(
+        r.openalex_id or r.semantic_scholar_id or (r.bio and "· (per Semantic Scholar)" in r.bio)
+    )
+    if not has_signal:
+        return {"ok": True, "fields_set": 0, "note": "no source signal"}
+
+    from .affiliation_discovery import (
+        _bio_lookup,
+        _get_or_create,
+        _openalex_lookup,
+        _semantic_scholar_lookup,
+    )
+
+    inst_name = inst_oa_id = inst_country = source = None
+    if r.openalex_id:
+        n, oid, cc = _openalex_lookup(http, r.openalex_id)
+        if n:
+            inst_name, inst_oa_id, inst_country, source = n, oid, cc, "openalex"
+    if not inst_name and r.semantic_scholar_id:
+        n = _semantic_scholar_lookup(http, r.semantic_scholar_id)
+        if n:
+            inst_name, source = n, "semantic_scholar"
+    if not inst_name:
+        n = _bio_lookup(r.bio)
+        if n:
+            inst_name, source = n, "bio_s2_leftover"
+    if not inst_name:
+        return {"ok": True, "fields_set": 0, "note": "no affiliation found"}
+
+    inst, created = _get_or_create(db, inst_name, openalex_id=inst_oa_id, country=inst_country)
+    if not inst:
+        return {"ok": True, "fields_set": 0, "note": "could not match/create"}
+
+    r.current_affiliation_id = inst.id
+    r.affiliation_source = source
+    suffix = " (new)" if created else ""
+    return {"ok": True, "fields_set": 1, "note": f"{source} → {inst.name}{suffix}"}
+
+
 # ── source 6.5: institution + signal tags ──────────────────────────────────
 
 
@@ -1188,6 +1238,7 @@ SOURCES: list[tuple[str, Callable]] = [
     ("dblp_discover", _dblp_discover),  # name → DBLP PID + affiliation hint
     # ── CONSUMPTION: use IDs to pull rich data ──
     ("openalex_full", _openalex_full),  # openalex_id → all works
+    ("affiliation_discover", _affiliation_discover_wrapper),  # IDs → current_affiliation_id (v1.11)
     ("github_profile", _github_profile),  # github_handle → bio/blog/twitter
     ("huggingface_profile", _huggingface_profile),  # name guess → HF user + models
     ("homepage_llm", _homepage_llm),  # homepage_url → bio/advisor/interests

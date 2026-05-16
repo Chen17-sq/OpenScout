@@ -103,6 +103,11 @@ def run_daily() -> list[dict]:
     steps.append(_step("surname → country", infer_country_from_names))
     steps.append(_step("peer inheritance", infer_from_peers))
     steps.append(_step("publication-pattern → phd", infer_roles))
+    # v1.11: affiliation discovery — fills current_affiliation_id for
+    # researchers with openalex_id / s2_id but no resolved institution.
+    from .scraper.affiliation_discovery import discover_affiliations
+
+    steps.append(_step("affiliation discovery", discover_affiliations))
     steps.append(_step("compute scores (v1 legacy)", compute_scores))
     # v1.4 three-pillar Investment Lens — must run AFTER all paper signals are
     # in (citations, github stars, buzz, emails) so work_score uses fresh data.
@@ -114,6 +119,25 @@ def run_daily() -> list[dict]:
     from .scraper.deep_dive import auto_queue
 
     steps.append(_step("deep-dive queue (top 10)", auto_queue, limit=10))
+
+    # v1.11 new scrapers — each runs in its own try/except via _step, so a
+    # broken upstream feed never kills the rest of the pipeline. Limits are
+    # conservative; bump after watching a few daily runs.
+    from .scraper.awards import scrape_awards
+    from .scraper.conference_committees import scrape_conference_committees
+    from .scraper.faculty_announcements import scrape_faculty_pages
+    from .scraper.news_mentions import scan_news_mentions
+    from .scraper.patents import scrape_patents
+    from .scraper.twitter import scrape_twitter
+    from .scraper.zhihu import scrape_zhihu
+
+    steps.append(_step("news mentions (RSS scan)", scan_news_mentions, days=7))
+    steps.append(_step("twitter / nitter scrape", scrape_twitter, limit=20))
+    steps.append(_step("zhihu profile scrape", scrape_zhihu, limit=10))
+    steps.append(_step("google patents", scrape_patents, limit=20))
+    steps.append(_step("faculty page diff", scrape_faculty_pages))
+    steps.append(_step("conference PC/AC", scrape_conference_committees))
+    steps.append(_step("awards roster", scrape_awards))
 
     # ── Phase 5: optional LLM enrichment ───────────────────────────────────
     from .scraper.classify import filter_topic_papers

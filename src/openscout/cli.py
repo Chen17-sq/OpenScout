@@ -164,6 +164,105 @@ def score() -> None:
     console.print(f"[green]✓[/green] scored {c['updated']} researchers")
 
 
+@app.command("affiliations")
+def affiliations_cmd(limit: int | None = None) -> None:
+    """Discover current_affiliation_id from OpenAlex / S2 / bio (v1.11)."""
+    from .scraper.affiliation_discovery import discover_affiliations
+
+    c = discover_affiliations(limit=limit)
+    console.print(f"[green]✓[/green] affiliations: {c}")
+
+
+@app.command()
+def twitter(
+    limit: Annotated[int, typer.Option(help="Max researchers")] = 30,
+) -> None:
+    """Scrape Twitter/X (via Nitter) bio + recent tweets for known handles."""
+    from .scraper.twitter import scrape_twitter
+
+    c = scrape_twitter(limit=limit)
+    console.print(f"[green]✓[/green] twitter: {c}")
+
+
+@app.command()
+def zhihu(
+    limit: Annotated[int, typer.Option(help="Max researchers")] = 20,
+) -> None:
+    """Scrape Zhihu profiles for researchers with zhihu_url set."""
+    from .scraper.zhihu import scrape_zhihu
+
+    c = scrape_zhihu(limit=limit)
+    console.print(f"[green]✓[/green] zhihu: {c}")
+
+
+@app.command("news-mentions")
+def news_mentions_cmd(
+    days: Annotated[int, typer.Option(help="Window (days)")] = 14,
+) -> None:
+    """Scan AI tech news feeds for paper/researcher mentions; bump buzz."""
+    from .scraper.news_mentions import scan_news_mentions
+
+    c = scan_news_mentions(days=days)
+    console.print(f"[green]✓[/green] news: {c}")
+
+
+@app.command("faculty-scan")
+def faculty_scan_cmd() -> None:
+    """Scrape top-school faculty pages for incoming APs."""
+    from .scraper.faculty_announcements import scrape_faculty_pages
+
+    c = scrape_faculty_pages()
+    console.print(f"[green]✓[/green] faculty: {c}")
+
+
+@app.command()
+def patents(
+    limit: Annotated[int, typer.Option(help="Max researchers")] = 30,
+) -> None:
+    """Search Google Patents for industry researchers' inventions."""
+    from .scraper.patents import scrape_patents
+
+    c = scrape_patents(limit=limit)
+    console.print(f"[green]✓[/green] patents: {c}")
+
+
+@app.command()
+def awards() -> None:
+    """Scrape recipient lists from prestigious awards (ACM / TR35 / Sloan / Packard)."""
+    from .scraper.awards import scrape_awards
+
+    c = scrape_awards()
+    console.print(f"[green]✓[/green] awards: {c}")
+
+
+@app.command("conference-committees")
+def conference_committees_cmd() -> None:
+    """Scrape PC/AC/SAC members of top AI conferences; match to DB."""
+    from .scraper.conference_committees import scrape_conference_committees
+
+    c = scrape_conference_committees()
+    console.print(f"[green]✓[/green] committees: {c}")
+
+
+@app.command()
+def dedupe(
+    apply: Annotated[bool, typer.Option(help="Actually merge (else dry run)")] = False,
+) -> None:
+    """Find and merge duplicate Researcher rows by openalex_id / s2_id / orcid / email.
+
+    DEFAULT IS DRY-RUN. Pass --apply to execute. Per-merge decisions go to logging
+    at INFO level — we enable basicConfig here so they actually show on screen.
+    """
+    import logging
+
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
+    from .scraper.dedupe import dedupe_researchers
+
+    c = dedupe_researchers(dry_run=not apply)
+    tag = "APPLIED" if apply else "dry-run"
+    console.print(f"[green]✓[/green] dedupe ({tag}): {c}")
+
+
 @app.command("score-papers")
 def score_papers(
     limit: int | None = None,
