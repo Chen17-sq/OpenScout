@@ -5,11 +5,9 @@ catches non-ML biology; etc.). This classifier reads each paper's title +
 abstract and decides whether it's actually about the topic, with a confidence
 in [0, 1].
 
-Re-uses on cache: once a (paper_id, topic_id) pair is classified, we don't
-re-call. Graceful skip without ANTHROPIC_API_KEY.
-
-Effect on the pipeline: only papers that pass the LLM filter remain linked
-to the topic via paper_topics. Borderline papers get unlinked.
+Critical safety: an API error (model 404, rate limit, account out of credit,
+network) **must NOT** be treated as "not relevant" — that would silently delete
+paper-topic links. On any API failure we leave the link alone.
 """
 
 import time
@@ -37,8 +35,13 @@ TOPIC_DESCRIPTIONS = {
     ),
 }
 
+# Current Anthropic model alias — tracked here so we can update in one place.
+MODEL = "claude-haiku-4-5"
 
-def _classify_one(client, title: str, abstract: str, topic_slug: str) -> tuple[bool, float]:
+
+def _classify_one(client, title: str, abstract: str, topic_slug: str) -> tuple[bool | None, float]:
+    """Return (relevant, confidence). `relevant=None` means API error — caller
+    MUST NOT remove the topic link in this case."""
     desc_text = TOPIC_DESCRIPTIONS.get(topic_slug, topic_slug)
     prompt = f"""Topic: {topic_slug}
 Definition: {desc_text}
@@ -52,12 +55,16 @@ Question: Is this paper centrally about the topic above? Respond with ONLY a JSO
 
     try:
         resp = client.messages.create(
-            model="claude-haiku-4-5",
+            model=MODEL,
             max_tokens=120,
             messages=[{"role": "user", "content": prompt}],
         )
+    except Exception:
+        # API/network/credit/model-id failure. Skip — do not touch the topic link.
+        return None, 0.0
+
+    try:
         text = (resp.content[0].text if resp.content else "").strip()
-        # Extract JSON
         import json
         import re
 
@@ -67,15 +74,24 @@ Question: Is this paper centrally about the topic above? Respond with ONLY a JSO
         data = json.loads(m.group(0))
         return bool(data.get("relevant")), float(data.get("confidence", 0.0))
     except Exception:
-        return False, 0.0
+        # Parse failure on a successful API call — treat as inconclusive (skip).
+        return None, 0.0
 
 
 def filter_topic_papers(topic_slug: str, limit: int = 30) -> dict[str, int]:
-    """Run LLM filter on papers currently linked to `topic_slug` but unverified.
+    """Run LLM filter on papers currently linked to `topic_slug`.
 
-    Removes the PaperTopic link for papers the LLM judges irrelevant.
+    Removes the PaperTopic link only when the LLM explicitly judges the paper
+    irrelevant. API failures are skipped (no removal).
     """
-    counts = {"checked": 0, "kept": 0, "removed": 0, "skipped_no_key": 0, "errors": 0}
+    counts = {
+        "checked": 0,
+        "kept": 0,
+        "removed": 0,
+        "skipped_no_key": 0,
+        "skipped_api_error": 0,
+        "errors": 0,
+    }
 
     if not settings.anthropic_api_key:
         counts["skipped_no_key"] = limit
@@ -105,16 +121,30 @@ def filter_topic_papers(topic_slug: str, limit: int = 30) -> dict[str, int]:
             .all()
         )
 
+        # Stop early if API errors pile up — likely a systemic problem (auth,
+        # credit, model id). No point burning through the queue.
+        consecutive_errors = 0
+
         for p in papers:
             counts["checked"] += 1
             relevant, conf = _classify_one(client, p.title, p.abstract or "", topic_slug)
+            if relevant is None:
+                counts["skipped_api_error"] += 1
+                consecutive_errors += 1
+                if consecutive_errors >= 3:
+                    # 3 in a row → bail; don't waste more API calls.
+                    counts["errors"] = limit - counts["checked"]
+                    break
+                time.sleep(0.5)
+                continue
+            consecutive_errors = 0
             if relevant and conf > 0.5:
                 counts["kept"] += 1
             else:
-                # Remove the PaperTopic link
                 db.execute(
                     PaperTopic.__table__.delete().where(
-                        PaperTopic.paper_id == p.id, PaperTopic.topic_id == topic.id
+                        PaperTopic.paper_id == p.id,
+                        PaperTopic.topic_id == topic.id,
                     )
                 )
                 counts["removed"] += 1
