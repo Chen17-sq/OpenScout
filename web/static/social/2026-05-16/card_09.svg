@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" font-family="Playfair Display, Times New Roman, serif">
+  <rect width="720" height="720" fill="#F9F9F7"/>
+  <pattern id="d" width="4" height="4" patternUnits="userSpaceOnUse">
+    <path d="M1 3h1v1H1V3zm2-2h1v1H3V1z" fill="#111" fill-opacity="0.05"/>
+  </pattern>
+  <rect width="720" height="720" fill="url(#d)"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="720" height="56" fill="#111"/>
+  <text x="36" y="36" fill="#F9F9F7" font-family="Inter, sans-serif" font-size="14" font-weight="700" letter-spacing="3">OPENSCOUT · DAILY · MAY 16 2026</text>
+  <text x="684" y="36" fill="#F9F9F7" font-family="Inter, sans-serif" font-size="14" font-weight="700" letter-spacing="3" text-anchor="end">№ 09 / 09</text>
+
+  <!-- Rank number -->
+  <text x="36" y="220" font-family="Playfair Display, serif" font-weight="900" font-size="180" fill="#CC0000" letter-spacing="-6">09</text>
+
+  <!-- Name -->
+  <text x="36" y="280" font-family="Playfair Display, serif" font-weight="900" font-size="48" fill="#111" letter-spacing="-1">Siyin Wang</text>
+  
+
+  <!-- Country + role -->
+  <text x="684" y="280" font-family="JetBrains Mono, monospace" font-size="22" font-weight="700" fill="#111" text-anchor="end"></text>
+
+  <!-- Title block -->
+  <text x="36" y="360" font-family="Playfair Display, serif" font-size="30" font-weight="700" fill="#111">World Action Models: The Next</text>
+<text x="36" y="396" font-family="Playfair Display, serif" font-size="30" font-weight="700" fill="#111">Frontier in Embodied AI</text>
+
+
+  <!-- Bottom: stats -->
+  <line x1="36" y1="580" x2="684" y2="580" stroke="#111" stroke-width="2"/>
+  <text x="36" y="624" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#737373" letter-spacing="3">CITATIONS</text>
+  <text x="36" y="666" font-family="Playfair Display, serif" font-weight="900" font-size="44" fill="#111">0</text>
+
+  <text x="240" y="624" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#737373" letter-spacing="3">H-INDEX</text>
+  <text x="240" y="666" font-family="Playfair Display, serif" font-weight="900" font-size="44" fill="#111">0</text>
+
+  <text x="420" y="624" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#CC0000" letter-spacing="3">TAG</text>
+  <text x="420" y="660" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#111"></text>
+
+  <text x="684" y="690" font-family="JetBrains Mono, monospace" font-size="11" fill="#737373" text-anchor="end">openscout.app/researchers/siyin-wang</text>
+</svg>

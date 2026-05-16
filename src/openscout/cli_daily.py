@@ -24,13 +24,18 @@ def _step(
     /,
     **kwargs,
 ) -> dict[str, object]:
+    # Live progress line — important when daily is piped (rich buffers
+    # console.print() until process exit if stdout isn't a TTY).
+    print(f"→ {label} ...", flush=True)
     start = time.monotonic()
     try:
         result = fn(**kwargs)
         elapsed = time.monotonic() - start
+        print(f"  ✓ {label} ({elapsed:.1f}s)", flush=True)
         return {"label": label, "ok": True, "result": result, "elapsed_s": round(elapsed, 1)}
     except Exception as exc:
         elapsed = time.monotonic() - start
+        print(f"  ✗ {label} ({elapsed:.1f}s) — {type(exc).__name__}: {exc}", flush=True)
         return {
             "label": label,
             "ok": False,

@@ -7,7 +7,7 @@ DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, MAY 16, 2026
 
 > *All The Researchers Fit To Watch* — Vol. 1, No. 002 · 2026-05-16
 
-_Auto-generated at 2026-05-16T06:17:45+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-05-16T06:33:13+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,135 +15,117 @@ _Auto-generated at 2026-05-16T06:17:45+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **2168** | 267 | 1294 | 1 | 1 |
+| **2568** | 862 | 1694 | 1 | 1 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Fundamental Limits of Distributed Covariance Matrix Estimation Under Communication Constraints
+### No. 01 · GossipFL: A Decentralized Federated Learning Framework With Sparsified and Adaptive Communication
 
-**Mohammad Reza Rahmani** · 一作 · 4 作者 · [arXiv:or-biE1uHyG0l](https://arxiv.org/abs/or-biE1uHyG0l)
+**Zhenheng Tang** · 一作 · 3 作者 · [arXiv:None](#)
 
-*分布式协方差矩阵估计的通信-精度权衡下界与近最优算法。*
+_Recently, federated learning (FL) techniques have enabled multiple users to train machine learning models collaboratively without data sharing. However, existing FL algorithms suffer from the communication bottleneck du…_
 
-_Estimating high-dimensional covariance matrices is crucial in various domains. This work considers a scenario where two collaborating agents access disjoint dimensions of $m$ samples from a high--dimensional random vect…_
-
-→ [profile](/researchers/mohammad-reza-rahmani)
+→ [profile](/researchers/zhenheng-tang)
 
 ---
-### No. 02 · Case-Based or Rule-Based: How Do Transformers Do the Math?
+### No. 02 · Flow Event Telemetry on Programmable Data Plane
 
-**Yi Hu** · 一作 · 4 作者 · [arXiv:or-4Vqr8SRfyX](https://arxiv.org/abs/or-4Vqr8SRfyX)
+**Yu Zhou** · 一作 · 2 作者 · [arXiv:None](#)
 
-*通过规则微调使Transformer从案例推理转向规则推理。*
+_Network performance anomalies (NPAs), e.g. long-tailed latency, bandwidth decline, etc., are increasingly crucial to cloud providers as applications are getting more sensitive to performance. The fundamental difficulty…_
 
-_Despite the impressive performance in a variety of complex tasks, modern large language models (LLMs) still have trouble dealing with some math problems that are simple and intuitive for humans, such as addition. While…_
-
-→ [profile](/researchers/yi-hu)
+→ [profile](/researchers/yu-zhou)
 
 ---
-### No. 03 · How Smooth Is Attention?
+### No. 03 · DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset
 
-**Valérie Castin** · 一作 · 3 作者 · [arXiv:or-aP0H8A1ywk](https://arxiv.org/abs/or-aP0H8A1ywk)
+**Alexander Khazatsky** · 一作 · 10 作者 · [arXiv:None](#)
 
-*量化自注意力Lipschitz常数，证明其与序列长度平方根成正比。*
+_Fig_
 
-_Self-attention and masked self-attention are at the heart of Transformers' outstanding success. Still, our mathematical understanding of attention, in particular of its Lipschitz properties — which are key when it comes…_
-
-→ [profile](/researchers/val-rie-castin)
+→ [profile](/researchers/alexander-khazatsky)
 
 ---
-### No. 04 · Causal Action Influence Aware Counterfactual Data Augmentation
+### No. 04 · Reinforced Cross-Modal Matching and Self-Supervised Imitation Learning for Vision-Language Navigation
 
-**Núria Armengol Urpí** · 一作 · 4 作者 · [arXiv:or-6Zl9rv6PDx](https://arxiv.org/abs/or-6Zl9rv6PDx)
+**Xin Wang** · 一作 · 3 作者 · [arXiv:None](#)
 
-*利用因果影响量化交换状态中动作无关部分进行反事实数据增强。*
+_Vision-language navigation (VLN) is the task of navigating an embodied agent to carry out natural language instructions inside real 3D environments. In this paper, we study how to address three critical challenges for t…_
 
-_Offline data are both valuable and practical resources for teaching robots complex behaviors. Ideally, learning agents should not be constrained by the scarcity of available demonstrations, but rather generalize beyond…_
-
-→ [profile](/researchers/n-ria-armengol-urp)
+→ [profile](/researchers/xin-wang)
 
 ---
-### No. 05 · DRED: Zero-Shot Transfer in Reinforcement Learning via Data-Regularised Environment Design
+### No. 05 · Deep Gaussian Process for Crop Yield Prediction Based on Remote Sensing Data
 
-**Samuel Garcin** · 一作 · 5 作者 · [arXiv:or-uku9r6RROl](https://arxiv.org/abs/or-uku9r6RROl)
+**Jiaxuan You** · 一作 · 2 作者 · [arXiv:None](#)
 
-*通过数据正则化环境设计提升强化学习零样本泛化。*
+_Agricultural monitoring, especially in developing countries, can help prevent famine and support humanitarian efforts. A central challenge is yield estimation, i.e., predicting crop yields before harvest. We introduce a…_
 
-_Autonomous agents trained using deep reinforcement learning (RL) often lack the ability to successfully generalise to new environments, even when these environments share characteristics with the ones they have encounte…_
-
-→ [profile](/researchers/samuel-garcin)
+→ [profile](/researchers/jiaxuan-you)
 
 ---
-### No. 06 · EvIL: Evolution Strategies for Generalisable Imitation Learning
+### No. 06 · Cluster Alignment With a Teacher for Unsupervised Domain Adaptation
 
-**Silvia Sapora** · 一作 · 5 作者 · [arXiv:or-9DMMvMTDur](https://arxiv.org/abs/or-9DMMvMTDur)
+**Zhijie Deng** · 一作 · 2 作者 · [arXiv:None](#)
 
-*用奖励模型集成与进化策略优化模仿学习迁移效率。*
+_Deep learning methods have shown promise in unsupervised domain adaptation, which aims to leverage a labeled source domain to learn a classifier for the unlabeled target domain with a different distribution. However, su…_
 
-_Often times in imitation learning (IL), the environment we collect expert demonstrations in and the environment we want to deploy our learned policy in aren't exactly the same (e.g. demonstrations collected in simulatio…_
-
-→ [profile](/researchers/silvia-sapora)
+→ [profile](/researchers/zhijie-deng)
 
 ---
-### No. 07 · Nonsmooth Implicit Differentiation: Deterministic and Stochastic Convergence Rates
+### No. 07 · DocRED: A Large-Scale Document-Level Relation Extraction Dataset
 
-**Riccardo Grazzi** · 一作 · 3 作者 · [arXiv:or-SlRcJvf1yd](https://arxiv.org/abs/or-SlRcJvf1yd)
+**Yuan Yao** · 一作 · 4 作者 · [arXiv:None](#)
 
-*非光滑隐式微分线性收敛率及随机NSID方法。*
+_Yuan Yao, Deming Ye, Peng Li, Xu Han, Yankai Lin, Zhenghao Liu, Zhiyuan Liu, Lixin Huang, Jie Zhou, Maosong Sun. Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics. 2019._
 
-_We study the problem of efficiently computing the derivative of the fixed-point of a parametric nondifferentiable contraction map. This problem has wide applications in machine learning, including hyperparameter optimiz…_
-
-→ [profile](/researchers/riccardo-grazzi)
+→ [profile](/researchers/yuan-yao)
 
 ---
-### No. 08 · Predictive Performance Comparison of Decision Policies Under Confounding
+### No. 08 · Topical Word Embeddings
 
-**Luke Guerdan** · 一作 · 4 作者 · [arXiv:or-HrzQZXzrN2](https://arxiv.org/abs/or-HrzQZXzrN2)
+**Yang Liu** · 一作 · 2 作者 · [arXiv:None](#)
 
-*用因果推断方法比较决策策略的预测性能，忽略不确定性区域。*
+_Most word embedding models typically represent each word using a single vector, which makes these models indiscriminative for ubiquitous homonymy and polysemy. In order to enhance discriminativeness, we employ latent to…_
 
-_Predictive models are often introduced to decision-making tasks under the rationale that they improve performance over an existing decision-making policy. However, it is challenging to compare predictive performance aga…_
-
-→ [profile](/researchers/luke-guerdan)
+→ [profile](/researchers/yang-liu)
 
 ---
-### No. 09 · Optimal bounds for $\ell_p$ sensitivity sampling via $\ell_2$ augmentation
+### No. 09 · Iterative Entity Alignment via Joint Knowledge Embeddings
 
-**Alexander Munteanu** · 一作 · 2 作者 · [arXiv:or-ohH3sbUue2](https://arxiv.org/abs/or-ohH3sbUue2)
+**Hao Zhu** · 一作 · 2 作者 · [arXiv:None](#)
 
-*用ℓ₂增强ℓ_p敏感性采样，实现最优线性复杂度。*
+_Entity alignment aims to link entities and their counterparts among multiple knowledge graphs (KGs). Most existing methods typically rely on external information of entities such as Wikipedia links and require costly ma…_
 
-_Data subsampling is one of the most natural methods to approximate a massively large data set by a small representative proxy. In particular, sensitivity sampling received a lot of attention, which samples points propor…_
-
-→ [profile](/researchers/alexander-munteanu)
+→ [profile](/researchers/hao-zhu)
 
 ---
-### No. 10 · Stochastic Conditional Diffusion Models for Robust Semantic Image Synthesis
+### No. 10 · Revisiting Skeleton-based Action Recognition
 
-**Juyeon Ko** · 一作 · 4 作者 · [arXiv:or-rMV86cAOh6](https://arxiv.org/abs/or-rMV86cAOh6)
+**Haodong Duan** · 一作 · 4 作者 · [arXiv:None](#)
 
-*通过标签扩散与类别噪声调度增强语义图像合成鲁棒性。*
+_Human skeleton, as a compact representation of human action, has received increasing attention in recent years. Many skeleton-based action recognition methods adopt GCNs to extract features on top of human skeletons. De…_
 
-_Semantic image synthesis (SIS) is a task to generate realistic images corresponding to semantic maps (labels). However, in real-world applications, SIS often encounters noisy user inputs. To address this, we propose Sto…_
-
-→ [profile](/researchers/juyeon-ko)
+→ [profile](/researchers/haodong-duan)
 
 ---
 
-## Section B · 🔄 动态更新 · 8 项
+## Section B · 🔄 动态更新 · 10 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Jun Zhu](/researchers/jun-zhu) | Fourier Controller Networks for Real-Time Decision-Making in Embodied… | — | [or-nDps3Q8j2l](https://arxiv.org/abs/or-nDps3Q8j2l) |
-| [Bo Li](/researchers/bo-li-uchicago) | RigorLLM: Resilient Guardrails for Large Language Models against Unde… | — | [or-QAGRPiC3FS](https://arxiv.org/abs/or-QAGRPiC3FS) |
-| [Chelsea Finn](/researchers/chelsea-finn) | RLVF: Learning from Verbal Feedback without Overgeneralization | — | [or-ngcZhfXCBW](https://arxiv.org/abs/or-ngcZhfXCBW) |
-| [Sergey Levine](/researchers/sergey-levine) | Stop Regressing: Training Value Functions via Classification for Scal… | — | [or-dVpFKfqF3R](https://arxiv.org/abs/or-dVpFKfqF3R) |
-| [Sergey Levine](/researchers/sergey-levine) | Prompting is a Double-Edged Sword: Improving Worst-Group Robustness o… | — | [or-fdroxYsgzQ](https://arxiv.org/abs/or-fdroxYsgzQ) |
-| [Bo Li](/researchers/bo-li-uchicago) | HarmBench: A Standardized Evaluation Framework for Automated Red Team… | — | [or-f3TUipYU3U](https://arxiv.org/abs/or-f3TUipYU3U) |
-| [Dahua Lin](/researchers/dahua-lin) | WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluat… | — | [2605.10912](https://arxiv.org/abs/2605.10912) |
-| [Bo Li](/researchers/bo-li-uchicago) | RewardHarness: Self-Evolving Agentic Post-Training | — | [2605.08703](https://arxiv.org/abs/2605.08703) |
+| [Yebin Liu](/researchers/yebin-liu) | Light Field Image Processing: An Overview | — | [None](#) |
+| [Yebin Liu](/researchers/yebin-liu) | DeepHuman: 3D Human Reconstruction From a Single Image | — | [None](#) |
+| [Yebin Liu](/researchers/yebin-liu) | Function4D: Real-time Human Volumetric Capture from Very Sparse Consu… | — | [None](#) |
+| [Yebin Liu](/researchers/yebin-liu) | PyMAF: 3D Human Pose and Shape Regression with Pyramidal Mesh Alignme… | — | [None](#) |
+| [Yebin Liu](/researchers/yebin-liu) | Spatial-spectral encoded compressive hyperspectral imaging | — | [None](#) |
+| [Yebin Liu](/researchers/yebin-liu) | PaMIR: Parametric Model-Conditioned Implicit Representation for Image… | — | [None](#) |
+| [Yebin Liu](/researchers/yebin-liu) | DoubleFusion: Real-Time Capture of Human Performances with Inner Body… | — | [None](#) |
+| [Yebin Liu](/researchers/yebin-liu) | CrossNet: An End-to-End Reference-Based Super Resolution Network Usin… | — | [None](#) |
+| [Yebin Liu](/researchers/yebin-liu) | Light Field Reconstruction Using Deep Convolutional Network on EPI | — | [None](#) |
+| [Yebin Liu](/researchers/yebin-liu) | BodyFusion: Real-Time Capture of Human Motion and Surface Geometry Us… | — | [None](#) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -159,7 +141,25 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Training Large Language Models for Reasoning through Reverse Curriculum Reinforcement Learning
+### No. 01 · SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify Architecture
+
+**Haiwen Diao** · 一作 · 58 作者 · [arXiv:2605.12500](https://arxiv.org/abs/2605.12500)
+
+_Recent large vision-language models (VLMs) remain fundamentally constrained by a persistent dichotomy: understanding and generation are treated as distinct problems, leading to fragmented architectures, cascaded pipelin…_
+
+→ [profile](/researchers/haiwen-diao)
+
+---
+### No. 02 · Is Your Driving World Model an All-Around Player?
+
+**Lingdong Kong** · 一作 · 23 作者 · [arXiv:2605.10858](https://arxiv.org/abs/2605.10858)
+
+_Today's driving world models can generate remarkably realistic dash-cam videos, yet no single model excels universally. Some generate photorealistic textures but violate basic physics; others maintain geometric consiste…_
+
+→ [profile](/researchers/lingdong-kong)
+
+---
+### No. 03 · Training Large Language Models for Reasoning through Reverse Curriculum Reinforcement Learning
 
 **Zhiheng Xi** · 一作 · 21 作者 · [arXiv:or-t82Y3fmRtk](https://arxiv.org/abs/or-t82Y3fmRtk)
 
@@ -170,7 +170,7 @@ _In this paper, we propose **R**$^3$: Learning **R**easoning through **R**everse
 → [profile](/researchers/zhiheng-xi)
 
 ---
-### No. 02 · Cell2Sentence: Teaching Large Language Models the Language of Biology
+### No. 04 · Cell2Sentence: Teaching Large Language Models the Language of Biology
 
 **Daniel Levine** · 一作 · 18 作者 · [arXiv:or-EWt5wsEdvc](https://arxiv.org/abs/or-EWt5wsEdvc)
 
@@ -179,7 +179,16 @@ _We introduce Cell2Sentence (C2S), a novel method to directly adapt large langua
 → [profile](/researchers/daniel-levine)
 
 ---
-### No. 03 · WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation
+### No. 05 · Do Enterprise Systems Need Learned World Models? The Importance of Context to Infer Dynamics
+
+**Jishnu Sethumadhavan Nair** · 一作 · 17 作者 · [arXiv:2605.12178](https://arxiv.org/abs/2605.12178)
+
+_World models enable agents to anticipate the effects of their actions by internalizing environment dynamics. In enterprise systems, however, these dynamics are often defined by tenant-specific business logic that varies…_
+
+→ [profile](/researchers/jishnu-sethumadhavan-nair)
+
+---
+### No. 06 · WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation
 
 **Shuangrui Ding** · 一作 · 17 作者 · [arXiv:2605.10912](https://arxiv.org/abs/2605.10912)
 
@@ -188,7 +197,7 @@ _Large language and vision-language models increasingly power agents that act on
 → [profile](/researchers/shuangrui-ding)
 
 ---
-### No. 04 · FrontierSmith: Synthesizing Open-Ended Coding Problems at Scale
+### No. 07 · FrontierSmith: Synthesizing Open-Ended Coding Problems at Scale
 
 **Runyuan He** · 一作 · 17 作者 · [arXiv:2605.14445](https://arxiv.org/abs/2605.14445)
 
@@ -197,62 +206,31 @@ _Many real-world coding challenges are open-ended and admit no known optimal sol
 → [profile](/researchers/runyuan-he)
 
 ---
-### No. 05 · MemLens: Benchmarking Multimodal Long-Term Memory in Large Vision-Language Models
+### No. 08 · PhyGround: Benchmarking Physical Reasoning in Generative World Models
+
+**Juyi Lin** · 一作 · 16 作者 · [arXiv:2605.10806](https://arxiv.org/abs/2605.10806)
+
+_Generative world models are increasingly used for video generation, where learned simulators are expected to capture the physical rules that govern real-world dynamics. However, evaluating whether generated videos actua…_
+
+→ [profile](/researchers/juyi-lin)
+
+---
+### No. 09 · World Action Models: The Next Frontier in Embodied AI
+
+**Siyin Wang** · 一作 · 14 作者 · [arXiv:2605.12090](https://arxiv.org/abs/2605.12090)
+
+_Vision-Language-Action (VLA) models have achieved strong semantic generalization for embodied policy learning, yet they learn reactive observation-to-action mappings without explicitly modeling how the physical world ev…_
+
+→ [profile](/researchers/siyin-wang)
+
+---
+### No. 10 · MemLens: Benchmarking Multimodal Long-Term Memory in Large Vision-Language Models
 
 **Xiyu Ren** · 一作 · 14 作者 · [arXiv:2605.14906](https://arxiv.org/abs/2605.14906)
 
 _Memory is essential for large vision-language models (LVLMs) to handle long, multimodal interactions, with two method directions providing this capability: long-context LVLMs and memory-augmented agents. However, no exi…_
 
 → [profile](/researchers/xiyu-ren)
-
----
-### No. 06 · RewardHarness: Self-Evolving Agentic Post-Training
-
-**Yuxuan Zhang** · 一作 · 14 作者 · [arXiv:2605.08703](https://arxiv.org/abs/2605.08703)
-
-_Evaluating instruction-guided image edits requires rewards that reflect subtle human preferences, yet current reward models typically depend on large-scale preference annotation and additional model training. This creat…_
-
-→ [profile](/researchers/yuxuan-zhang)
-
----
-### No. 07 · AutoOS: Make Your OS More Powerful by Exploiting Large Language Models
-
-**Huilai Chen** · 一作 · 12 作者 · [arXiv:or-Rp8R9C0Sth](https://arxiv.org/abs/or-Rp8R9C0Sth)
-
-*用大语言模型自动优化Linux内核配置，性能提升25%。*
-
-_With the rapid development of Artificial Intelligence of Things (AIoT), customizing and optimizing operating system (OS) kernel configurations for various AIoT application scenarios is crucial for maximizing system perf…_
-
-→ [profile](/researchers/huilai-chen)
-
----
-### No. 08 · Stop Regressing: Training Value Functions via Classification for Scalable Deep RL
-
-**Jesse Farebrother** · 一作 · 12 作者 · [arXiv:or-dVpFKfqF3R](https://arxiv.org/abs/or-dVpFKfqF3R)
-
-*用分类交叉熵替代回归训练价值函数，提升深度RL可扩展性。*
-
-_Value functions are an essential component in deep reinforcement learning (RL), that are typically trained via mean squared error regression to match bootstrapped target values. However, scaling value-based RL methods t…_
-
-→ [profile](/researchers/jesse-farebrother)
-
----
-### No. 09 · Actions Speak Louder than Words: Trillion-Parameter Sequential Transducers for Generative Recommendations
-
-**Jiaqi Zhai** · 一作 · 12 作者 · [arXiv:or-xye7iNsgXn](https://arxiv.org/abs/or-xye7iNsgXn)
-
-_Large-scale recommendation systems are characterized by their reliance on high cardinality, heterogeneous features and the need to handle tens of billions of user actions on a daily basis. Despite being trained on huge…_
-
-→ [profile](/researchers/jiaqi-zhai)
-
----
-### No. 10 · HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal
-
-**Mantas Mazeika** · 一作 · 12 作者 · [arXiv:or-f3TUipYU3U](https://arxiv.org/abs/or-f3TUipYU3U)
-
-_Automated red teaming holds substantial promise for uncovering and mitigating the risks associated with the malicious use of large language models (LLMs), yet the field lacks a standardized evaluation framework to rigor…_
-
-→ [profile](/researchers/mantas-mazeika)
 
 ---
 
@@ -262,7 +240,18 @@ _Automated red teaming holds substantial promise for uncovering and mitigating t
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · Training Large Language Models for Reasoning through Reverse Curriculum Reinforcement Learning
+### No. 01 · SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify Architecture
+
+**Haiwen Diao** · 一作 · 58 作者 · [arXiv:2605.12500](https://arxiv.org/abs/2605.12500)
+
+_Recent large vision-language models (VLMs) remain fundamentally constrained by a persistent dichotomy: understanding and generation are treated as distinct problems, leading to fragmented architectures, cascaded pipelin…_
+
+**▸ 选中原因：首次出现 · 58 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/haiwen-diao)
+
+---
+### No. 02 · Training Large Language Models for Reasoning through Reverse Curriculum Reinforcement Learning
 
 **Zhiheng Xi** · 一作 · 21 作者 · [arXiv:or-t82Y3fmRtk](https://arxiv.org/abs/or-t82Y3fmRtk)
 
@@ -275,7 +264,7 @@ _In this paper, we propose **R**$^3$: Learning **R**easoning through **R**everse
 → [profile](/researchers/zhiheng-xi)
 
 ---
-### No. 02 · Cell2Sentence: Teaching Large Language Models the Language of Biology
+### No. 03 · Cell2Sentence: Teaching Large Language Models the Language of Biology
 
 **Daniel Levine** · 一作 · 18 作者 · [arXiv:or-EWt5wsEdvc](https://arxiv.org/abs/or-EWt5wsEdvc)
 
@@ -284,17 +273,6 @@ _We introduce Cell2Sentence (C2S), a novel method to directly adapt large langua
 **▸ 选中原因：首次出现 · 18 作者合作（疑似大组新人）**
 
 → [profile](/researchers/daniel-levine)
-
----
-### No. 03 · FrontierSmith: Synthesizing Open-Ended Coding Problems at Scale
-
-**Runyuan He** · 一作 · 17 作者 · [arXiv:2605.14445](https://arxiv.org/abs/2605.14445)
-
-_Many real-world coding challenges are open-ended and admit no known optimal solution. Yet, recent progress in LLM coding has focused on well-defined tasks such as feature implementation, bug fixing, and competitive prog…_
-
-**▸ 选中原因：首次出现 · 17 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/runyuan-he)
 
 ---
 ### No. 04 · RewardHarness: Self-Evolving Agentic Post-Training

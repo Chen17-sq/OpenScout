@@ -126,11 +126,26 @@ def _abstract_from_inverted_index(idx: dict) -> str | None:
 
 
 def _link_anchor_authorship(db: Session, paper: Paper, anchor: Researcher, work: dict) -> None:
-    """Attach anchor + any other already-known co-authors to the paper."""
+    """Attach anchor + any other already-known co-authors to the paper.
+
+    OpenAlex's `authorships` array occasionally duplicates the same author
+    across positions (one entry per affiliation, or just dupes). We track
+    seen researcher_ids in a session-local set to avoid the UNIQUE constraint
+    on (paper_id, researcher_id).
+    """
     authorships = work.get("authorships") or []
     anchor_name = _normalize_name(anchor.name_en)
 
-    # Position the anchor
+    # Track who we've already linked in *this paper, this session*.
+    # The DB query alone misses rows pending in the session before flush.
+    seen_researcher_ids: set[int] = set(
+        rid
+        for (rid,) in db.execute(
+            select(PaperAuthor.researcher_id).where(PaperAuthor.paper_id == paper.id)
+        ).all()
+    )
+
+    # Position the anchor (first occurrence wins)
     anchor_position: int | None = None
     for idx, a in enumerate(authorships, start=1):
         name = _normalize_name((a.get("author") or {}).get("display_name") or "")
@@ -138,20 +153,15 @@ def _link_anchor_authorship(db: Session, paper: Paper, anchor: Researcher, work:
             anchor_position = idx
             break
 
-    if anchor_position:
-        existing = db.execute(
-            select(PaperAuthor).where(
-                PaperAuthor.paper_id == paper.id, PaperAuthor.researcher_id == anchor.id
+    if anchor_position and anchor.id not in seen_researcher_ids:
+        db.add(
+            PaperAuthor(
+                paper_id=paper.id,
+                researcher_id=anchor.id,
+                position=anchor_position,
             )
-        ).scalar_one_or_none()
-        if not existing:
-            db.add(
-                PaperAuthor(
-                    paper_id=paper.id,
-                    researcher_id=anchor.id,
-                    position=anchor_position,
-                )
-            )
+        )
+        seen_researcher_ids.add(anchor.id)
 
     # For each other co-author, try to find an existing Researcher by name
     for idx, a in enumerate(authorships, start=1):
@@ -166,19 +176,16 @@ def _link_anchor_authorship(db: Session, paper: Paper, anchor: Researcher, work:
         ).scalar_one_or_none()
         if not existing_r:
             continue
-        existing_pa = db.execute(
-            select(PaperAuthor).where(
-                PaperAuthor.paper_id == paper.id, PaperAuthor.researcher_id == existing_r.id
+        if existing_r.id in seen_researcher_ids:
+            continue  # dupe in this paper — skip
+        db.add(
+            PaperAuthor(
+                paper_id=paper.id,
+                researcher_id=existing_r.id,
+                position=idx,
             )
-        ).scalar_one_or_none()
-        if not existing_pa:
-            db.add(
-                PaperAuthor(
-                    paper_id=paper.id,
-                    researcher_id=existing_r.id,
-                    position=idx,
-                )
-            )
+        )
+        seen_researcher_ids.add(existing_r.id)
 
 
 def backfill_anchor_works(per_anchor_limit: int = 80, sleep_between: float = 0.2) -> dict[str, int]:
