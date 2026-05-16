@@ -86,6 +86,7 @@
       {#each list as r}
         <tr>
           <td>
+            {#if r.photo_url}<img class="row-photo" src={r.photo_url} alt={r.name_en} />{/if}
             <a href={`/researchers/${r.slug}`}>{r.name_en}</a>
             {#if r.name_zh}<span class="text-n500 font-serif"> · {r.name_zh}</span>{/if}
           </td>
@@ -238,5 +239,14 @@
   .mini-tag:hover {
     background: var(--ink);
     color: var(--paper);
+  }
+  .row-photo {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    object-fit: cover;
+    border: 1px solid var(--n400);
+    vertical-align: middle;
+    margin-right: 8px;
   }
 </style>

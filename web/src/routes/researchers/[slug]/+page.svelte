@@ -17,7 +17,10 @@
 <section>
   <div class="section-head">
     <div class="label">{$t('researcher.sectionLabel')}</div>
-    <div class="h">{r.name_en}</div>
+    <div class="h">
+      {#if r.photo_url}<img class="profile-photo" src={r.photo_url} alt={r.name_en} />{/if}
+      {r.name_en}
+    </div>
     <div class="meta">
       {r.name_zh ?? ''}
       <span class="star-wrap"><StarButton slug={r.slug} /></span>
@@ -404,6 +407,15 @@
   .star-wrap {
     display: inline-block;
     margin-left: 12px;
+  }
+  .profile-photo {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border: 2px solid var(--ink);
+    vertical-align: middle;
+    margin-right: 14px;
   }
   .emails {
     margin-top: 10px;

@@ -57,6 +57,17 @@ def load_institutions(db: Session) -> int:
     return n
 
 
+# YAML keys that map to columns. We pop the affiliation name separately because
+# it has to be resolved to an id.
+_RESEARCHER_KEYS = {
+    "slug", "name_en", "name_zh", "name_zh_source", "email", "homepage_url",
+    "twitter_handle", "github_handle", "zhihu_url", "linkedin_url", "photo_url",
+    "current_role", "career_stage_year", "graduation_year_estimate",
+    "bio", "bio_zh", "country", "confidence_level", "tags", "projects",
+    "current_affiliation_id",
+}
+
+
 def load_researchers(db: Session) -> int:
     data = _load_yaml("researchers.yaml")
     if not data:
@@ -81,9 +92,13 @@ def load_researchers(db: Session) -> int:
             if r.get("projects") and not existing.projects:
                 existing.projects = r["projects"]
                 n += 1
+            if r.get("photo_url") and not existing.photo_url:
+                existing.photo_url = r["photo_url"]
             continue
 
-        db.add(Researcher(**r))
+        # Filter to only valid columns; ignore stray fields gracefully
+        clean = {k: v for k, v in r.items() if k in _RESEARCHER_KEYS}
+        db.add(Researcher(**clean))
         n += 1
     db.flush()
     return n

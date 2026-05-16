@@ -215,6 +215,47 @@ def send_digest() -> None:
         console.print(f"[yellow]⚠[/yellow] not sent: {r.get('reason')}")
 
 
+@app.command("hf-papers")
+def hf_papers(
+    limit: Annotated[int, typer.Option(help="Max HF Daily Papers to ingest")] = 30,
+) -> None:
+    """Ingest HuggingFace Daily Papers (trending list). High-signal source."""
+    from .scraper.huggingface import fetch_hf_daily
+
+    c = fetch_hf_daily(limit=limit)
+    console.print(
+        f"[green]✓[/green] HF: fetched {c['fetched']} · added {c['added']} · "
+        f"updated buzz on {c['updated']} · errors {c['errors']}"
+    )
+
+
+@app.command("conference-papers")
+def conference_papers() -> None:
+    """Ingest accepted papers from ICLR/NeurIPS/ICML via OpenReview API."""
+    from .scraper.openreview_conf import fetch_all
+
+    results = fetch_all()
+    for venue, c in results.items():
+        console.print(
+            f"[green]✓[/green] {venue}: fetched {c['fetched']} · "
+            f"+{c['added']} · {c['tiered']} oral/spotlight · errors {c['errors']}"
+        )
+
+
+@app.command("refresh-citations")
+def refresh_citations(
+    limit: Annotated[int, typer.Option(help="Top-N papers to refresh from OpenAlex")] = 100,
+) -> None:
+    """Refresh citation_count for top papers from OpenAlex."""
+    from .scraper.citation_refresh import refresh_citation_counts
+
+    c = refresh_citation_counts(limit=limit)
+    console.print(
+        f"[green]✓[/green] citations: checked {c['checked']} · "
+        f"updated {c['updated']} · errors {c['errors']}"
+    )
+
+
 @app.command("extract-emails")
 def extract_emails(
     limit: Annotated[int, typer.Option(help="Max recent papers to scrape")] = 20,

@@ -195,6 +195,7 @@ def _serialize_full(r: Researcher) -> dict:
         "github_handle": r.github_handle,
         "zhihu_url": r.zhihu_url,
         "linkedin_url": r.linkedin_url,
+        "photo_url": r.photo_url,
         "career_stage_year": r.career_stage_year,
         "graduation_year_estimate": r.graduation_year_estimate,
         "bio_zh": r.bio_zh,
