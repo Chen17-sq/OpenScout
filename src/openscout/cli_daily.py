@@ -97,9 +97,12 @@ def run_daily() -> list[dict]:
 
     steps.append(_step("signature papers", assign_signature_papers))
     steps.append(_step("lineage inference", infer_lineage))
-    # Cheap heuristic enrichment for the auto-discovered tail (v1.2)
+    # Cheap heuristic enrichment for the auto-discovered tail (v1.2 + v1.5)
+    from .scraper.role_inference import infer_roles
+
     steps.append(_step("surname → country", infer_country_from_names))
     steps.append(_step("peer inheritance", infer_from_peers))
+    steps.append(_step("publication-pattern → phd", infer_roles))
     steps.append(_step("compute scores (v1 legacy)", compute_scores))
     # v1.4 three-pillar Investment Lens — must run AFTER all paper signals are
     # in (citations, github stars, buzz, emails) so work_score uses fresh data.

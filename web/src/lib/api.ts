@@ -91,6 +91,16 @@ export function arxivUrl(id: string | null): string {
   return id ? `https://arxiv.org/abs/${id}` : '#';
 }
 
+// `paperUrl` knows about openreview_conf.py's synthetic ids ("or-xxxx" — no
+// real arxiv counterpart) and falls back to our internal /papers/{id} page
+// so users don't hit 404s on arxiv.org. Use this for any link that comes from
+// `paper.arxiv_id`.
+export function paperUrl(id: string | null): string {
+  if (!id) return '#';
+  if (id.startsWith('or-')) return `/papers/${encodeURIComponent(id)}`;
+  return `https://arxiv.org/abs/${id}`;
+}
+
 export function blurb(text: string | null | undefined, max = 180): string {
   if (!text) return '';
   const clean = text.replace(/\s+/g, ' ').trim();

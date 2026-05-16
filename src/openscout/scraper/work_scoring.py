@@ -186,6 +186,44 @@ def _buzz(paper: Paper) -> tuple[float, list[str]]:
     return score, reasons
 
 
+def _recency_multiplier(paper: Paper) -> tuple[float, str | None]:
+    """Time decay for the 'invest now' view.
+
+    An investor doesn't want LeCun's 2021 MDETR ranking above a 2026 PhD
+    first-author paper. We multiply the breakthrough + commercial pillars
+    by an exponential decay on age — buzz is naturally already-recent so
+    we leave it alone.
+
+      months_old   multiplier
+       0 (today)   1.00
+       6           0.61
+       12          0.37
+       24          0.14
+       36          0.05
+
+    Uses paper.published_at when present (true publication), falls back to
+    first_seen_at (when we ingested). Returns the reason token only when
+    the multiplier visibly cuts the score (<0.85), to avoid clutter.
+    """
+    ref_date = paper.published_at
+    if ref_date is None and paper.first_seen_at is not None:
+        ref_date = paper.first_seen_at.date()
+    if ref_date is None:
+        return 1.0, None
+
+    today = datetime.now(UTC).date()
+    days_old = max(0, (today - ref_date).days)
+    months_old = days_old / 30.4
+    mult = math.exp(-months_old / 12.0)  # 12-month half-life-ish
+
+    reason = None
+    if mult < 0.85:
+        reason = (
+            f"{int(months_old / 12)}y old" if months_old >= 24 else f"{int(months_old)}mo old"
+        )
+    return mult, reason
+
+
 def score_one_paper(paper: Paper) -> dict:
     """Compute and persist all three pillars + the combined work_score.
 
@@ -194,10 +232,18 @@ def score_one_paper(paper: Paper) -> dict:
     b, b_reasons = _breakthrough(paper)
     c, c_reasons = _commercial(paper)
     z, z_reasons = _buzz(paper)
+    # Recency cuts breakthrough + commercial (the long-horizon pillars).
+    # Buzz is already a now-signal (HF likes spike + decay on their own).
+    mult, age_reason = _recency_multiplier(paper)
+    b *= mult
+    c *= mult
     paper.breakthrough_score = round(b, 3)
     paper.commercial_score = round(c, 3)
     paper.work_score = round(0.35 * b + 0.35 * c + 0.30 * z, 3)
-    paper.work_score_reasons = b_reasons + c_reasons + z_reasons
+    reasons = b_reasons + c_reasons + z_reasons
+    if age_reason:
+        reasons.append(age_reason)
+    paper.work_score_reasons = reasons
     return {
         "breakthrough": paper.breakthrough_score,
         "commercial": paper.commercial_score,
@@ -269,6 +315,15 @@ def _junior_boost(role: str | None, career_year: int | None) -> float:
     return 1.0
 
 
+def _effective_date_expr():
+    """SQL: COALESCE(published_at, DATE(first_seen_at)) — the paper's
+    true age for ranking, falling back to ingestion time if we never got
+    a publication date. Important for v2: we want a 2026 paper we ingested
+    a week ago to rank as "fresh," not because of when we crawled it.
+    """
+    return func.coalesce(Paper.published_at, func.date(Paper.first_seen_at))
+
+
 def compute_investability_v2(window_days: int = 365) -> dict[str, int]:
     """Roll up Researcher.investability_score_v2 from their recent papers.
 
@@ -278,7 +333,8 @@ def compute_investability_v2(window_days: int = 365) -> dict[str, int]:
     quality still helps tie-breaking.
     """
     counts = {"updated": 0, "no_recent_papers": 0}
-    cutoff = datetime.now(UTC) - timedelta(days=window_days)
+    cutoff_date = (datetime.now(UTC) - timedelta(days=window_days)).date()
+    effective_date = _effective_date_expr()
     with session_scope() as db:
         # Map paper_id → n_authors (one query, cached in memory — cheap)
         n_authors_by_paper: dict[int, int] = {
@@ -297,7 +353,7 @@ def compute_investability_v2(window_days: int = 365) -> dict[str, int]:
                 .where(
                     PaperAuthor.researcher_id == r.id,
                     Paper.work_score.is_not(None),
-                    Paper.first_seen_at >= cutoff,
+                    effective_date >= cutoff_date,
                 )
                 .order_by(desc(Paper.work_score))
                 .limit(15)
@@ -333,7 +389,8 @@ def top_investment_picks(
     (otherwise a single hot paper with 12 authors fills the entire board).
     We over-fetch and then sieve.
     """
-    cutoff = datetime.now(UTC) - timedelta(days=window_days)
+    cutoff_date = (datetime.now(UTC) - timedelta(days=window_days)).date()
+    effective_date = _effective_date_expr()
     picks: list[dict] = []
     seen_paper_count: dict[int, int] = {}
     with session_scope() as db:
@@ -343,7 +400,7 @@ def top_investment_picks(
                 .join(PaperAuthor, PaperAuthor.researcher_id == Researcher.id)
                 .join(Paper, Paper.id == PaperAuthor.paper_id)
                 .where(
-                    Paper.first_seen_at >= cutoff,
+                    effective_date >= cutoff_date,
                     Paper.work_score.is_not(None),
                     Researcher.investability_score_v2.is_not(None),
                     Researcher.investability_score_v2 > 0,
@@ -364,7 +421,7 @@ def top_investment_picks(
                 .join(PaperAuthor, PaperAuthor.paper_id == Paper.id)
                 .where(
                     PaperAuthor.researcher_id == r.id,
-                    Paper.first_seen_at >= cutoff,
+                    effective_date >= cutoff_date,
                     Paper.work_score.is_not(None),
                 )
                 .order_by(desc(Paper.work_score))

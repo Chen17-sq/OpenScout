@@ -383,15 +383,18 @@ def infer(
 ) -> None:
     """Heuristic enrichment for auto-discovered researchers.
 
-    Two passes, both record provenance in `country_source` / `role_source` /
+    Three passes, each records provenance in `country_source` / `role_source` /
     `affiliation_source` so the UI can show 'inferred' vs 'verified':
 
-      1. Pinyin surname → country=CN   (source: surname_pinyin)
-      2. Co-author anchor → country / current_affiliation_id / role=phd
-         (source: peer_inheritance)
+      1. Pinyin surname → country=CN              (source: surname_pinyin)
+      2. Co-author anchor → country / affiliation / role=phd
+                                                  (source: peer_inheritance)
+      3. Publication pattern → role=phd           (source: publication_pattern)
+         (first-author, ≤8 papers, h-index≤3)
     """
     from .scraper.name_inference import infer_country_from_names
     from .scraper.peer_inference import infer_from_peers
+    from .scraper.role_inference import infer_roles
 
     n = infer_country_from_names(limit=limit)
     console.print(f"[green]✓[/green] surname → CN: tagged {n['tagged']} / scanned {n['scanned']}")
@@ -403,6 +406,12 @@ def infer(
         f"+{p['affiliation_inherited']} affiliation · "
         f"+{p['role_inherited']} role=phd · "
         f"scanned {p['scanned']}"
+    )
+
+    r = infer_roles()
+    console.print(
+        f"[green]✓[/green] publication-pattern → phd: "
+        f"+{r['tagged_phd']} tagged / scanned {r['scanned']}"
     )
 
 

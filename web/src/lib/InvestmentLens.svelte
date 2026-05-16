@@ -6,7 +6,7 @@
   // v1.3 provenance badges.
 
   import type { InvestmentPicks, InvestmentPick } from '$lib/api';
-  import { arxivUrl, roleLabel } from '$lib/api';
+  import { paperUrl, roleLabel } from '$lib/api';
   import { t } from '$lib/i18n';
 
   let { investment }: { investment: InvestmentPicks | null } = $props();
@@ -59,7 +59,7 @@
                 {#if p.top_paper.position}
                   <span class="pos">{positionLabel(p.top_paper.position)}</span>
                 {/if}
-                <a class="title" href={arxivUrl(p.top_paper.arxiv_id)} target="_blank" rel="noreferrer">
+                <a class="title" href={paperUrl(p.top_paper.arxiv_id)} target="_blank" rel="noreferrer">
                   {p.top_paper.title}
                 </a>
               </div>
