@@ -90,6 +90,15 @@ class Researcher(Base):
     bio: Mapped[str | None] = mapped_column(Text)
     bio_zh: Mapped[str | None] = mapped_column(Text)
     country: Mapped[str | None] = mapped_column(String(8))
+    # Provenance for country / current_role / current_affiliation_id. Values:
+    #   "manual"           — seeds/researchers.yaml
+    #   "openalex"         — from OpenAlex last_known_institution
+    #   "surname_pinyin"   — Pinyin family-name heuristic (country=CN only)
+    #   "peer_inheritance" — inherited from co-author anchor
+    #   "arxiv_html"       — extracted from arXiv HTML author footnote
+    country_source: Mapped[str | None] = mapped_column(String(32))
+    role_source: Mapped[str | None] = mapped_column(String(32))
+    affiliation_source: Mapped[str | None] = mapped_column(String(32))
     confidence_level: Mapped[str] = mapped_column(String(16), default="medium")
     # low / medium / high — applied to identity disambiguation + advisor inference
 

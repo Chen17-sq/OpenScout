@@ -354,6 +354,35 @@ def alphaxiv(
 
 
 @app.command()
+def infer(
+    limit: Annotated[int, typer.Option(help="Max researchers per pass")] = 5000,
+) -> None:
+    """Heuristic enrichment for auto-discovered researchers.
+
+    Two passes, both record provenance in `country_source` / `role_source` /
+    `affiliation_source` so the UI can show 'inferred' vs 'verified':
+
+      1. Pinyin surname → country=CN   (source: surname_pinyin)
+      2. Co-author anchor → country / current_affiliation_id / role=phd
+         (source: peer_inheritance)
+    """
+    from .scraper.name_inference import infer_country_from_names
+    from .scraper.peer_inference import infer_from_peers
+
+    n = infer_country_from_names(limit=limit)
+    console.print(f"[green]✓[/green] surname → CN: tagged {n['tagged']} / scanned {n['scanned']}")
+
+    p = infer_from_peers(limit=limit)
+    console.print(
+        f"[green]✓[/green] peer inheritance: "
+        f"+{p['country_inherited']} country · "
+        f"+{p['affiliation_inherited']} affiliation · "
+        f"+{p['role_inherited']} role=phd · "
+        f"scanned {p['scanned']}"
+    )
+
+
+@app.command()
 def daily() -> None:
     """One-command full pipeline: ingest → enrich → score → brief → cards.
 
