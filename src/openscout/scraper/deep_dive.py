@@ -246,6 +246,297 @@ def _openalex_match(db, r: Researcher, http: httpx.Client) -> dict:
     return {"ok": True, "fields_set": 0, "note": f"{len(candidates)} candidates, no overlap"}
 
 
+# ── source 1.6: Semantic Scholar author discovery ──────────────────────────
+
+
+def _semantic_scholar_discover(db, r: Researcher, http: httpx.Client) -> dict:
+    """Search S2 by name → set semantic_scholar_id + homepage_url + h_index + cites.
+
+    This is the BIG unlock: most researchers have an S2 profile with a
+    `homepage` field that we'd otherwise never know. With homepage populated,
+    `homepage_llm` below can finally run.
+
+    Disambiguation: if we have S2 paper IDs for this researcher (from the
+    existing semanticscholar enrichment), pick the author whose top papers
+    overlap. Otherwise prefer the first candidate whose `paperCount` is
+    plausible (3-500 range).
+    """
+    if r.semantic_scholar_id and r.h_index is not None:
+        return {"ok": True, "fields_set": 0, "note": "already matched"}
+    if not r.name_en:
+        return {"ok": False, "fields_set": 0, "note": "no name"}
+
+    from ..config import settings
+
+    s2_headers = {}
+    if settings.semantic_scholar_api_key:
+        s2_headers["x-api-key"] = settings.semantic_scholar_api_key
+
+    try:
+        rr = http.get(
+            "https://api.semanticscholar.org/graph/v1/author/search",
+            params={
+                "query": r.name_en,
+                "limit": 10,
+                "fields": "name,affiliations,homepage,paperCount,citationCount,hIndex,papers.title",
+            },
+            headers=s2_headers,
+            timeout=15.0,
+        )
+        if rr.status_code != 200:
+            return {"ok": False, "fields_set": 0, "note": f"http {rr.status_code}"}
+        data = rr.json().get("data") or []
+    except Exception as e:
+        return {"ok": False, "fields_set": 0, "note": f"err: {type(e).__name__}"}
+
+    if not data:
+        return {"ok": True, "fields_set": 0, "note": "no S2 hits"}
+
+    # Get our paper titles for fuzzy overlap matching
+    our_titles = {
+        (t or "").lower().strip()
+        for (t,) in db.execute(
+            select(Paper.title)
+            .join(PaperAuthor, PaperAuthor.paper_id == Paper.id)
+            .where(PaperAuthor.researcher_id == r.id)
+        ).all()
+    }
+
+    # Score by title overlap ONLY — plausibility-band is too weak, multiple
+    # "Wang Jing"s pass it. With title overlap we know it's the same person.
+    best = None
+    best_overlap = 0
+    for cand in data[:8]:
+        cand_titles = {(p.get("title") or "").lower().strip() for p in (cand.get("papers") or [])}
+        overlap = len(cand_titles & our_titles)
+        if overlap > best_overlap:
+            best_overlap = overlap
+            best = cand
+
+    if not best or best_overlap == 0:
+        # No overlap = ambiguous; only safe to accept single-candidate
+        # AND only if that candidate has a plausible paper count for our researcher
+        if len(data) == 1 and our_titles:
+            single = data[0]
+            pc = single.get("paperCount") or 0
+            if 3 <= pc <= 500:
+                best = single
+            else:
+                return {
+                    "ok": True,
+                    "fields_set": 0,
+                    "note": f"1 candidate but implausible (pc={pc})",
+                }
+        else:
+            return {
+                "ok": True,
+                "fields_set": 0,
+                "note": f"{len(data)} candidates, no title overlap (ambiguous)",
+            }
+
+    updated = 0
+    if not r.semantic_scholar_id and best.get("authorId"):
+        r.semantic_scholar_id = best["authorId"]
+        updated += 1
+    if not r.homepage_url and best.get("homepage"):
+        r.homepage_url = best["homepage"]
+        updated += 1
+    if not r.h_index and best.get("hIndex") is not None:
+        r.h_index = int(best["hIndex"])
+        updated += 1
+    if (not r.citation_count or r.citation_count < (best.get("citationCount") or 0)) and best.get(
+        "citationCount"
+    ):
+        r.citation_count = int(best["citationCount"])
+        updated += 1
+    affs = best.get("affiliations") or []
+    if affs and not r.bio:
+        # Provisional bio if homepage_llm hasn't fired yet; will be overwritten
+        # by the LLM-synthesized one later in the pipeline.
+        r.bio = f"{affs[0]} · (per Semantic Scholar)"
+        updated += 1
+
+    return {
+        "ok": True,
+        "fields_set": updated,
+        "note": (
+            f"S2 {best.get('authorId')} · h={best.get('hIndex')} · {best.get('paperCount')} papers"
+            + (" · homepage ✓" if best.get("homepage") else "")
+        ),
+    }
+
+
+# ── source 1.7: GitHub user discovery ──────────────────────────────────────
+
+
+def _github_discover(db, r: Researcher, http: httpx.Client) -> dict:
+    """Search GitHub users by name + heuristic-pick a research-y account.
+
+    Without this, github_profile below only fires for the ~50 researchers
+    we manually entered github_handle for. With this, any researcher gets
+    a GitHub auto-discovery attempt.
+
+    Heuristic: prefer accounts where bio mentions PhD/research/CS/AI, or
+    company is a known academic affiliation. Skip handles that look like
+    bots / companies (uppercase, > 14 chars, etc.).
+    """
+    if r.github_handle:
+        return {"ok": True, "fields_set": 0, "note": "already has handle"}
+    if not r.name_en:
+        return {"ok": False, "fields_set": 0, "note": "no name"}
+
+    gh_headers = HEADERS.copy()
+    gh_token = os.environ.get("GITHUB_TOKEN")
+    if gh_token:
+        gh_headers["Authorization"] = f"Bearer {gh_token}"
+
+    try:
+        rr = http.get(
+            "https://api.github.com/search/users",
+            params={"q": f'"{r.name_en}" in:name type:user', "per_page": 10},
+            headers=gh_headers,
+            timeout=12.0,
+        )
+        if rr.status_code != 200:
+            return {"ok": False, "fields_set": 0, "note": f"http {rr.status_code}"}
+        items = rr.json().get("items") or []
+    except Exception as e:
+        return {"ok": False, "fields_set": 0, "note": f"err: {type(e).__name__}"}
+
+    if not items:
+        return {"ok": True, "fields_set": 0, "note": "no GitHub hits"}
+
+    # Score each candidate by research signals. Need to fetch each profile
+    # for bio/company (expensive — cap at top 5 candidates).
+    research_kw = re.compile(
+        r"\b(ph\.?d|research|cs|computer science|ai|ml|machine learning|nlp|cv|vision|robotics|hci|ai4science|university|mit|stanford|berkeley|cmu|tsinghua|deepmind|google|microsoft|nvidia|meta|anthropic)\b",
+        re.IGNORECASE,
+    )
+    best = None
+    best_score = -1
+    for item in items[:5]:
+        login = item.get("login")
+        if not login:
+            continue
+        # Skip obvious org accounts
+        if item.get("type") != "User":
+            continue
+        try:
+            pr = http.get(f"https://api.github.com/users/{login}", headers=gh_headers, timeout=8.0)
+            if pr.status_code != 200:
+                continue
+            profile = pr.json()
+        except Exception:
+            continue
+
+        score = 0
+        bio = profile.get("bio") or ""
+        company = profile.get("company") or ""
+        if research_kw.search(bio):
+            score += 50
+        if research_kw.search(company):
+            score += 30
+        if (profile.get("public_repos") or 0) >= 5:
+            score += 10
+        if (profile.get("followers") or 0) >= 20:
+            score += 5
+        # Name match boost — bio or `name` field contains our exact name
+        if r.name_en.lower() in (profile.get("name") or "").lower():
+            score += 20
+        if score > best_score:
+            best_score = score
+            best = (login, profile)
+
+    if not best or best_score < 30:
+        # Not confident enough — better to skip than guess wrong
+        return {
+            "ok": True,
+            "fields_set": 0,
+            "note": f"{len(items)} hits, best score {best_score} (need ≥30)",
+        }
+
+    login, profile = best
+    r.github_handle = login
+    updated = 1
+    if profile.get("bio") and not r.bio:
+        r.bio = profile["bio"]
+        updated += 1
+    if profile.get("blog") and not r.homepage_url:
+        blog = profile["blog"]
+        if not blog.startswith(("http://", "https://")):
+            blog = "https://" + blog
+        r.homepage_url = blog
+        updated += 1
+    return {
+        "ok": True,
+        "fields_set": updated,
+        "note": f"@{login} · score {best_score} · bio:{bool(profile.get('bio'))}",
+    }
+
+
+# ── source 1.8: DBLP author discovery ──────────────────────────────────────
+
+
+def _dblp_discover(db, r: Researcher, http: httpx.Client) -> dict:
+    """DBLP author search → store PID, infer affiliation from `notes`.
+
+    DBLP profile pages are well-maintained for academic CS researchers and
+    often include institution affiliations in the notes field that we don't
+    get elsewhere.
+    """
+    if not r.name_en:
+        return {"ok": False, "fields_set": 0, "note": "no name"}
+
+    try:
+        rr = http.get(
+            "https://dblp.org/search/author/api",
+            params={"q": r.name_en, "format": "json", "h": 5},
+            timeout=10.0,
+        )
+        if rr.status_code != 200:
+            return {"ok": False, "fields_set": 0, "note": f"http {rr.status_code}"}
+        hits = rr.json().get("result", {}).get("hits", {}).get("hit") or []
+    except Exception as e:
+        return {"ok": False, "fields_set": 0, "note": f"err: {type(e).__name__}"}
+
+    if not hits:
+        return {"ok": True, "fields_set": 0, "note": "no DBLP hits"}
+
+    # Prefer the first hit (DBLP sorts by relevance); record as a Signal
+    info = hits[0].get("info", {})
+    pid_url = info.get("url", "")
+    affiliations = []
+    notes = info.get("notes")
+    if isinstance(notes, dict):
+        note_items = (
+            notes.get("note") if isinstance(notes.get("note"), list) else [notes.get("note")]
+        )
+        for n in note_items or []:
+            if isinstance(n, dict) and n.get("@type") == "affiliation" and n.get("text"):
+                affiliations.append(n["text"])
+
+    db.add(
+        Signal(
+            researcher_id=r.id,
+            type="dblp_profile",
+            payload={
+                "pid_url": pid_url,
+                "name": info.get("author"),
+                "affiliations": affiliations,
+                "n_hits": len(hits),
+            },
+            occurred_at=datetime.now(UTC),
+        )
+    )
+
+    return {
+        "ok": True,
+        "fields_set": 0,
+        "note": f"DBLP {pid_url.rsplit('/', 1)[-1] if pid_url else '?'}"
+        + (f" · {len(affiliations)} aff" if affiliations else ""),
+    }
+
+
 # ── source 2: OpenAlex full works ──────────────────────────────────────────
 
 
@@ -624,18 +915,28 @@ def _signature_paper(db, r: Researcher, http: httpx.Client) -> dict:
 
 # ── orchestrator ───────────────────────────────────────────────────────────
 
-# Order matters: openalex_match (rare path that unlocks openalex_full) and
-# arxiv_author both go first so their data is available to downstream sources
-# (bio_synth needs the papers; openalex_full needs the id).
+# Two-phase pipeline:
+#   DISCOVERY  — fan out, find missing IDs (no IDs needed to run)
+#   CONSUMPTION — use those IDs to pull rich data
+# Order matters: discovery sources MUST run first so their writes (homepage_url,
+# github_handle, openalex_id, semantic_scholar_id) are available to consumers.
+#
+# Discovery first:
 SOURCES: list[tuple[str, Callable]] = [
-    ("arxiv_author", _arxiv_author),
-    ("openalex_match", _openalex_match),
-    ("openalex_full", _openalex_full),
-    ("github_profile", _github_profile),
-    ("huggingface_profile", _huggingface_profile),
-    ("homepage_llm", _homepage_llm),
-    ("bio_synth", _bio_synth),
-    ("signature_paper", _signature_paper),
+    # ── DISCOVERY: find IDs ──
+    ("arxiv_author", _arxiv_author),  # name → ingest missing papers
+    ("openalex_match", _openalex_match),  # name → openalex_id
+    ("semantic_scholar_discover", _semantic_scholar_discover),  # name → S2 id, homepage, h-index
+    ("github_discover", _github_discover),  # name → github_handle (+ bio fallback)
+    ("dblp_discover", _dblp_discover),  # name → DBLP PID + affiliation hint
+    # ── CONSUMPTION: use IDs to pull rich data ──
+    ("openalex_full", _openalex_full),  # openalex_id → all works
+    ("github_profile", _github_profile),  # github_handle → bio/blog/twitter
+    ("huggingface_profile", _huggingface_profile),  # name guess → HF user + models
+    ("homepage_llm", _homepage_llm),  # homepage_url → bio/advisor/interests
+    # ── SYNTHESIS: fill remaining gaps from what we have ──
+    ("bio_synth", _bio_synth),  # papers → 2-sentence bio (if still empty)
+    ("signature_paper", _signature_paper),  # papers + work_score → featured paper
 ]
 
 
