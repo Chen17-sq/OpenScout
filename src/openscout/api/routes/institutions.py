@@ -39,9 +39,7 @@ def list_institutions(db: Session = Depends(get_db)) -> list[dict]:
 
 @router.get("/{inst_id}")
 def get_institution(inst_id: int, db: Session = Depends(get_db)) -> dict:
-    inst = db.execute(
-        select(Institution).where(Institution.id == inst_id)
-    ).scalar_one_or_none()
+    inst = db.execute(select(Institution).where(Institution.id == inst_id)).scalar_one_or_none()
     if not inst:
         raise HTTPException(404, detail=f"institution {inst_id} not found")
 

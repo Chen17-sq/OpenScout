@@ -76,9 +76,7 @@ def infer_lineage() -> dict[str, int]:
 
     with session_scope() as db:
         # Candidates: low-confidence researchers with ≤ MAX_JUNIOR_PAPERS papers
-        candidates_stmt = (
-            select(Researcher).where(Researcher.confidence_level == "low")
-        )
+        candidates_stmt = select(Researcher).where(Researcher.confidence_level == "low")
         candidates = list(db.execute(candidates_stmt).scalars().all())
 
         for junior in candidates:

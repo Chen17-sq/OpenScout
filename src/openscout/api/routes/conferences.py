@@ -54,7 +54,11 @@ def papers_by_venue_prefix(prefix: str, db: Session = Depends(get_db)) -> dict:
                 "first_seen_at": p.first_seen_at.isoformat() if p.first_seen_at else None,
                 "buzz_score": p.buzz_score,
                 "first_author": (
-                    {"slug": first_author.slug, "name_en": first_author.name_en, "name_zh": first_author.name_zh}
+                    {
+                        "slug": first_author.slug,
+                        "name_en": first_author.name_en,
+                        "name_zh": first_author.name_zh,
+                    }
                     if first_author
                     else None
                 ),

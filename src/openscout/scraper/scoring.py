@@ -18,7 +18,6 @@ investability_score ∈ [0, 1]
 """
 
 import math
-from datetime import UTC, datetime
 
 from sqlalchemy import func, select
 
@@ -66,7 +65,6 @@ def _project_bonus(projects: list | None) -> float:
 def compute_scores() -> dict[str, int]:
     """Compute and persist all three scores for every researcher with enough data."""
     counts = {"updated": 0, "skipped_no_data": 0}
-    now = datetime.now(UTC)
 
     with session_scope() as db:
         rs = list(db.execute(select(Researcher)).scalars().all())

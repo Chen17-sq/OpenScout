@@ -226,7 +226,6 @@ def backfill_anchor_works(per_anchor_limit: int = 80, sleep_between: float = 0.2
                 time.sleep(sleep_between)
                 continue
 
-            before_links = 0
             for work in (works or [])[:per_anchor_limit]:
                 paper = _upsert_paper(db, work)
                 if not paper:

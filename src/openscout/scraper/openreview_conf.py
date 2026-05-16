@@ -14,7 +14,7 @@ Tag papers with the venue prefix so the brief can highlight them.
 
 import re
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import httpx
 from sqlalchemy import select
@@ -41,9 +41,7 @@ def _ensure_researcher(db, name: str) -> Researcher:
     name = (name or "").strip()
     if not name:
         name = "Unknown"
-    existing = db.execute(
-        select(Researcher).where(Researcher.name_en == name)
-    ).scalar_one_or_none()
+    existing = db.execute(select(Researcher).where(Researcher.name_en == name)).scalar_one_or_none()
     if existing:
         return existing
     base = _slug_from_name(name)
@@ -61,7 +59,11 @@ def _ensure_researcher(db, name: str) -> Researcher:
 def _is_accepted(note: dict) -> tuple[bool, str | None]:
     """Inspect the note for accept/reject status. Returns (accepted, tier_label_or_none)."""
     content = note.get("content") or {}
-    venue_value = (content.get("venue") or {}).get("value") if isinstance(content.get("venue"), dict) else content.get("venue")
+    venue_value = (
+        (content.get("venue") or {}).get("value")
+        if isinstance(content.get("venue"), dict)
+        else content.get("venue")
+    )
     if not venue_value:
         return False, None
     venue_value = str(venue_value)
@@ -110,9 +112,10 @@ def fetch_venue(venue_id: str, label: str, max_papers: int = 200) -> dict[str, i
                         continue
                     content = note.get("content") or {}
 
-                    # Extract paper metadata
-                    def _v(key: str) -> str | None:
-                        val = content.get(key)
+                    # Extract paper metadata. Bind `content` as default arg to
+                    # silence B023 (closure capturing loop var).
+                    def _v(key: str, _c=content) -> str | None:
+                        val = _c.get(key)
                         if isinstance(val, dict):
                             return val.get("value")
                         return val
@@ -124,7 +127,9 @@ def fetch_venue(venue_id: str, label: str, max_papers: int = 200) -> dict[str, i
                         authors_field = []
 
                     # Look for an arxiv reference in title or abstract — rare but try
-                    arxiv_match = re.search(r"arXiv:(\d{4}\.\d{4,5})", " ".join([title, abstract or ""]))
+                    arxiv_match = re.search(
+                        r"arXiv:(\d{4}\.\d{4,5})", " ".join([title, abstract or ""])
+                    )
                     arxiv_id = arxiv_match.group(1) if arxiv_match else None
 
                     or_id = note.get("id")
@@ -156,8 +161,10 @@ def fetch_venue(venue_id: str, label: str, max_papers: int = 200) -> dict[str, i
                         title=title[:1000],
                         abstract=abstract,
                         venue=venue_label,
-                        buzz_score=1.5 if tier in ("oral", "spotlight", "best_paper", "outstanding") else 1.0,
-                        first_seen_at=datetime.now(timezone.utc),
+                        buzz_score=1.5
+                        if tier in ("oral", "spotlight", "best_paper", "outstanding")
+                        else 1.0,
+                        first_seen_at=datetime.now(UTC),
                     )
                     db.add(paper)
                     db.flush()
@@ -166,9 +173,7 @@ def fetch_venue(venue_id: str, label: str, max_papers: int = 200) -> dict[str, i
                         if not aname:
                             continue
                         r_obj = _ensure_researcher(db, str(aname))
-                        db.add(
-                            PaperAuthor(paper_id=paper.id, researcher_id=r_obj.id, position=pos)
-                        )
+                        db.add(PaperAuthor(paper_id=paper.id, researcher_id=r_obj.id, position=pos))
                     counts["added"] += 1
                     if tier in ("oral", "spotlight", "best_paper", "outstanding"):
                         counts["tiered"] += 1

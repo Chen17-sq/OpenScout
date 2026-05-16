@@ -28,9 +28,7 @@ def test_filters_image_extensions():
     emails = _extract_emails(text)
     # The regex would still match "logo.png@example.com"; our filter drops
     # those ending in .png. Verify.
-    assert "logo.png@example.com" not in emails or all(
-        not e.endswith(".png") for e in emails
-    )
+    assert "logo.png@example.com" not in emails or all(not e.endswith(".png") for e in emails)
 
 
 def test_empty():

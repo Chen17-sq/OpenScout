@@ -11,8 +11,7 @@ Public, no auth needed. Polite: one request per minute is plenty.
 
 import re
 import time
-from datetime import date as Date
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import httpx
 from sqlalchemy import select
@@ -33,9 +32,7 @@ def _ensure_researcher(db, name: str) -> Researcher:
     name = (name or "").strip()
     if not name:
         name = "Unknown"
-    existing = db.execute(
-        select(Researcher).where(Researcher.name_en == name)
-    ).scalar_one_or_none()
+    existing = db.execute(select(Researcher).where(Researcher.name_en == name)).scalar_one_or_none()
     if existing:
         return existing
 
@@ -108,7 +105,7 @@ def fetch_hf_daily(limit: int = 30) -> dict[str, int]:
                 pdf_url=f"https://arxiv.org/pdf/{arxiv_id}.pdf",
                 venue="arXiv (HF featured)",
                 buzz_score=1.0 + (upvotes / 50.0),
-                first_seen_at=datetime.now(timezone.utc),
+                first_seen_at=datetime.now(UTC),
             )
             db.add(paper)
             db.flush()

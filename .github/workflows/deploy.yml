@@ -1,22 +1,20 @@
 name: deploy
 
+# Only fires on tagged releases. For continuous-deploy on push, remove the
+# `tags:` filter and add `branches: [main]`. We keep it tag-gated because
+# Fly deploys require FLY_API_TOKEN secret (not set in fresh forks).
+
 on:
   push:
-    branches: [main]
-    paths:
-      - 'src/**'
-      - 'seeds/**'
-      - 'pyproject.toml'
-      - 'uv.lock'
-      - 'Dockerfile'
-      - 'fly.toml'
-      - '.github/workflows/deploy.yml'
+    tags:
+      - "v*"
   workflow_dispatch:
 
 jobs:
   fly:
     name: Deploy backend to Fly.io
     runs-on: ubuntu-latest
+    if: ${{ vars.FLY_DEPLOY_ENABLED == 'true' }}
     concurrency:
       group: fly-deploy
       cancel-in-progress: true

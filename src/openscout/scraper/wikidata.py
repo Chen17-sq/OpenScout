@@ -9,7 +9,6 @@ metadata; images are typically CC-BY-SA so we should attribute on render.
 """
 
 import time
-from typing import Optional
 
 import httpx
 from sqlalchemy import select
@@ -30,7 +29,7 @@ def _image_url(filename: str, width: int = 256) -> str:
     return f"{COMMONS_BASE}/{md5[0]}/{md5[:2]}/{name}/{width}px-{name}"
 
 
-def _wikidata_p18(qid: str, client: httpx.Client) -> Optional[str]:
+def _wikidata_p18(qid: str, client: httpx.Client) -> str | None:
     """For a Wikidata Q-id, return the URL to the P18 (image) thumbnail."""
     try:
         r = client.get(
@@ -49,9 +48,7 @@ def _wikidata_p18(qid: str, client: httpx.Client) -> Optional[str]:
         claims = (data.get("claims") or {}).get("P18") or []
         if not claims:
             return None
-        filename = (
-            claims[0].get("mainsnak", {}).get("datavalue", {}).get("value")
-        )
+        filename = claims[0].get("mainsnak", {}).get("datavalue", {}).get("value")
         if not filename:
             return None
         return _image_url(filename)
@@ -59,7 +56,7 @@ def _wikidata_p18(qid: str, client: httpx.Client) -> Optional[str]:
         return None
 
 
-def _openalex_wikidata_id(openalex_url: str, client: httpx.Client) -> Optional[str]:
+def _openalex_wikidata_id(openalex_url: str, client: httpx.Client) -> str | None:
     """Query OpenAlex author API for the wikidata external id."""
     try:
         author_id = openalex_url.rsplit("/", 1)[-1]

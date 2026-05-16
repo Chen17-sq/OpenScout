@@ -7,7 +7,7 @@ DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, MAY 16, 2026
 
 > *All The Researchers Fit To Watch* — Vol. 1, No. 002 · 2026-05-16
 
-_Auto-generated at 2026-05-16T05:17:15+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-05-16T05:28:21+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 

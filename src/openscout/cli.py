@@ -297,6 +297,60 @@ def hf_models(
     )
 
 
+@app.command("arxiv-html")
+def arxiv_html(
+    limit: Annotated[int, typer.Option(help="Max papers to scrape")] = 30,
+) -> None:
+    """Scrape arxiv.org/html/<id> for emails + code URLs (replaces PDF scraper)."""
+    from .scraper.arxiv_html import scrape_papers
+
+    c = scrape_papers(limit=limit)
+    console.print(
+        f"[green]✓[/green] arxiv HTML: {c['with_emails']} emails · "
+        f"{c['with_code']} code URLs / {c['attempted']} attempted · "
+        f"{c['no_html']} no html · {c['errors']} errors"
+    )
+
+
+@app.command("pwc")
+def pwc(
+    limit: Annotated[int, typer.Option(help="Max papers to enrich")] = 50,
+) -> None:
+    """Papers with Code lookup: code_url + github_stars from PwC's curated DB."""
+    from .scraper.paperswithcode import enrich_papers
+
+    c = enrich_papers(limit=limit)
+    console.print(
+        f"[green]✓[/green] PwC: {c['matched']}/{c['attempted']} matched · "
+        f"+{c['got_repo']} code URLs · +{c['got_stars']} star counts"
+    )
+
+
+@app.command("dblp")
+def dblp(
+    limit: Annotated[int, typer.Option(help="Max anchors to look up")] = 30,
+) -> None:
+    """DBLP author lookup: store stable PIDs for cleaner cross-referencing."""
+    from .scraper.dblp import enrich_anchors
+
+    c = enrich_anchors(limit=limit)
+    console.print(f"[green]✓[/green] DBLP: {c['found_pid']}/{c['attempted']} anchors got PIDs")
+
+
+@app.command("alphaxiv")
+def alphaxiv(
+    limit: Annotated[int, typer.Option(help="Max papers to scan")] = 30,
+) -> None:
+    """alphaXiv comment-count buzz signal (lightweight community discussion proxy)."""
+    from .scraper.alphaxiv import boost_from_alphaxiv
+
+    c = boost_from_alphaxiv(limit=limit)
+    console.print(
+        f"[green]✓[/green] alphaXiv: {c['with_comments']}/{c['attempted']} papers with comments · "
+        f"+{c['boosted']} boosted"
+    )
+
+
 @app.command("extract-emails")
 def extract_emails(
     limit: Annotated[int, typer.Option(help="Max recent papers to scrape")] = 20,

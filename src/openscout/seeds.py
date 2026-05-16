@@ -60,10 +60,26 @@ def load_institutions(db: Session) -> int:
 # YAML keys that map to columns. We pop the affiliation name separately because
 # it has to be resolved to an id.
 _RESEARCHER_KEYS = {
-    "slug", "name_en", "name_zh", "name_zh_source", "email", "homepage_url",
-    "twitter_handle", "github_handle", "zhihu_url", "linkedin_url", "photo_url",
-    "current_role", "career_stage_year", "graduation_year_estimate",
-    "bio", "bio_zh", "country", "confidence_level", "tags", "projects",
+    "slug",
+    "name_en",
+    "name_zh",
+    "name_zh_source",
+    "email",
+    "homepage_url",
+    "twitter_handle",
+    "github_handle",
+    "zhihu_url",
+    "linkedin_url",
+    "photo_url",
+    "current_role",
+    "career_stage_year",
+    "graduation_year_estimate",
+    "bio",
+    "bio_zh",
+    "country",
+    "confidence_level",
+    "tags",
+    "projects",
     "current_affiliation_id",
 }
 

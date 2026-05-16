@@ -45,8 +45,9 @@ def _call_claude(client, title: str, abstract: str) -> str | None:
         if not resp.content:
             return None
         text = resp.content[0].text.strip()
-        # Strip quote chars sometimes added
-        text = text.strip("\"'「」「")
+        # Strip quote chars sometimes added (one char at a time to keep ruff B005 happy)
+        for ch in "\"'「」":
+            text = text.strip(ch)
         # Cap length defensively
         if len(text) > 40:
             text = text[:40].rstrip() + "…"

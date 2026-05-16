@@ -9,7 +9,7 @@ This is called from inside enrichment functions OR run as a periodic
 For v0 we use the periodic approach so the existing enricher code stays simple.
 """
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from sqlalchemy import desc, select
 from sqlalchemy.orm import Session
@@ -39,7 +39,7 @@ def record_change(
                 "new": new_value,
             },
             source=source,
-            occurred_at=datetime.now(timezone.utc),
+            occurred_at=datetime.now(UTC),
         )
     )
 

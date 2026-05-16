@@ -42,4 +42,6 @@ jobs:
           cache: npm
           cache-dependency-path: web/package-lock.json
       - run: npm ci
+      - name: svelte-kit sync (generates .svelte-kit/tsconfig.json)
+        run: npx svelte-kit sync
       - run: npm run check

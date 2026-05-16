@@ -37,13 +37,7 @@ def backfill_code_urls(limit: int = 500) -> dict[str, int]:
 
     with session_scope() as db:
         papers = list(
-            db.execute(
-                select(Paper)
-                .where(Paper.code_url.is_(None))
-                .limit(limit)
-            )
-            .scalars()
-            .all()
+            db.execute(select(Paper).where(Paper.code_url.is_(None)).limit(limit)).scalars().all()
         )
         for p in papers:
             counts["checked"] += 1

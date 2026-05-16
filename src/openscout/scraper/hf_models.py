@@ -25,7 +25,8 @@ def discover_models(limit: int = 30, sleep_between: float = 0.6) -> dict[str, in
         with session_scope() as db:
             anchors = list(
                 db.execute(
-                    select(Researcher).where(
+                    select(Researcher)
+                    .where(
                         Researcher.confidence_level.in_(["high", "medium"]),
                         Researcher.github_handle.is_not(None),
                     )
