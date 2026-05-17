@@ -65,6 +65,8 @@ kill_timeout = "30s"
   source = "openscout_data"
   destination = "/data"
 
-# Apply schema migrations every release (idempotent — ADD COLUMN no-ops if present)
+# Apply schema migrations every release.
+# init-db is dual-path: SQLite → idempotent ADD COLUMN; Postgres → alembic upgrade head.
+# When DATABASE_URL is switched to postgres://… on Fly, this same command handles it.
 [deploy]
   release_command = "python -m openscout.cli init-db"

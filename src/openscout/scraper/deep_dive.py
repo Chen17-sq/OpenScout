@@ -537,6 +537,125 @@ def _dblp_discover(db, r: Researcher, http: httpx.Client) -> dict:
     }
 
 
+# ── source 1.9: institution discover (DISCOVERY phase) ─────────────────────
+
+
+# Loose heuristic: name contains any of these → company; else university/lab.
+# Used only when we CREATE a new Institution from a name string and have no
+# OpenAlex country/type metadata to lean on.
+_COMPANY_HINTS = re.compile(
+    r"\b(google|deepmind|microsoft|nvidia|meta|facebook|apple|amazon|openai|"
+    r"anthropic|huawei|baidu|tencent|alibaba|bytedance|tiktok|ibm|adobe|"
+    r"intel|qualcomm|snap|snapchat|tesla|spacex|stripe|salesforce|"
+    r"research\b|labs?\b|inc\.?|corp\.?|ltd\.?|gmbh|technologies|technology)\b",
+    re.IGNORECASE,
+)
+
+
+def _guess_institution_type(name: str) -> str:
+    """Coarse heuristic: 'company' if name hits a known industry token, else
+    'university'. Lab-style names (e.g. 'X-Lab', 'Foo Research') also map to
+    'company'. Falls back to 'university' which is the safe default for
+    academic profiles surfaced by S2 / OpenAlex.
+    """
+    if _COMPANY_HINTS.search(name or ""):
+        return "company"
+    return "university"
+
+
+def _institution_discover(db, r: Researcher, http: httpx.Client) -> dict:
+    """Fill `current_affiliation_id` from S2 / OpenAlex BEFORE consumption.
+
+    Why early: `_institution_tag` (later in the pipeline) needs an
+    affiliation to emit its tag chip; researchers like Shuangrui Ding land
+    here with semantic_scholar_id + openalex_id set but no
+    current_affiliation_id, so the tag step no-ops. Running this in the
+    DISCOVERY phase means the rest of the pipeline can use the fresh
+    affiliation immediately.
+
+    Strategy — stop at first hit:
+      A. Semantic Scholar  affiliations[0] from author/{id}?fields=affiliations
+                          (same shape that `_semantic_scholar_discover` already
+                          pulled, just re-queried via the existing helper so
+                          we don't have to mutate that function's contract)
+      B. OpenAlex          authors/{id}.last_known_institution{,s}
+
+    If the institution name has no matching row, CREATE one with a
+    type-heuristic (company vs university). Country is filled only when
+    OpenAlex gives us `country_code`.
+
+    This co-exists with `_affiliation_discover_wrapper` (later) on purpose —
+    that one runs once consumption has populated more bio context, and is
+    the safer fallback. Per project memory: "preserve alternatives on major
+    changes".
+    """
+    if r.current_affiliation_id:
+        return {"ok": True, "fields_set": 0, "note": "already set"}
+    if not (r.semantic_scholar_id or r.openalex_id):
+        return {"ok": True, "fields_set": 0, "note": "no S2/OpenAlex id"}
+
+    from .affiliation_discovery import (
+        _get_or_create,
+        _openalex_lookup,
+        _semantic_scholar_lookup,
+    )
+
+    inst_name: str | None = None
+    inst_oa_id: str | None = None
+    inst_country: str | None = None
+    source: str | None = None
+
+    # Source A — Semantic Scholar
+    if r.semantic_scholar_id:
+        try:
+            n = _semantic_scholar_lookup(http, r.semantic_scholar_id)
+        except Exception:
+            n = None
+        if n:
+            inst_name = n
+            source = "s2_affiliations"
+
+    # Source B — OpenAlex
+    if not inst_name and r.openalex_id:
+        try:
+            n, oa_id, cc = _openalex_lookup(http, r.openalex_id)
+        except Exception:
+            n, oa_id, cc = None, None, None
+        if n:
+            inst_name, inst_oa_id, inst_country = n, oa_id, cc
+            source = "openalex_last_known"
+
+    if not inst_name:
+        return {"ok": True, "fields_set": 0, "note": "no aff in S2/OpenAlex"}
+
+    try:
+        inst, created = _get_or_create(
+            db,
+            inst_name,
+            openalex_id=inst_oa_id,
+            country=inst_country,
+        )
+    except Exception as e:
+        return {"ok": False, "fields_set": 0, "note": f"create err: {type(e).__name__}"}
+
+    if not inst:
+        return {"ok": True, "fields_set": 0, "note": "could not match/create"}
+
+    # New row: stamp the heuristic type (the bulk discover_affiliations path
+    # leaves type=NULL — this is a small improvement we can afford here).
+    if created and not inst.type:
+        inst.type = _guess_institution_type(inst.name or "")
+
+    r.current_affiliation_id = inst.id
+    r.affiliation_source = "deep_dive_discover"
+    suffix = " (new)" if created else ""
+    return {
+        "ok": True,
+        "fields_set": 1,
+        "note": f"{source} → {inst.name}{suffix}",
+    }
+
+
 # ── source 2: OpenAlex full works ──────────────────────────────────────────
 
 
@@ -779,22 +898,46 @@ Extract the following as a JSON object. Use null when not stated. Be terse.
 Reply with ONLY the JSON object, no markdown, no commentary."""
 
 
+def _fetch_homepage(http: httpx.Client, url: str) -> tuple[str | None, str | None, str | None]:
+    """Fetch researcher homepage HTML once and cache on the http client.
+
+    Returns (raw_html, visible_text, error_note). `error_note` is None on
+    success. The cache key is the URL itself — sources later in the pipeline
+    that need the same page (homepage_llm + twitter_discover) get a single
+    network round-trip per deep-dive run.
+    """
+    cache: dict[str, tuple[str | None, str | None, str | None]] = (
+        getattr(http, "_openscout_homepage_cache", None) or {}
+    )
+    if url in cache:
+        return cache[url]
+    try:
+        rr = http.get(url, timeout=15.0, follow_redirects=True)
+        if rr.status_code != 200:
+            result = (None, None, f"http {rr.status_code}")
+        else:
+            tree = HTMLParser(rr.text)
+            body = tree.body
+            text = body.text(separator=" ", strip=True) if body else ""
+            text = re.sub(r"\s+", " ", text)[:8000]
+            result = (rr.text, text, None)
+    except Exception as e:
+        result = (None, None, f"fetch err: {type(e).__name__}")
+    cache[url] = result
+    # First-time attach — httpx.Client allows attribute assignment.
+    if not hasattr(http, "_openscout_homepage_cache"):
+        http._openscout_homepage_cache = cache  # type: ignore[attr-defined]
+    return result
+
+
 def _homepage_llm(db, r: Researcher, http: httpx.Client) -> dict:
     if not r.homepage_url:
         return {"ok": False, "fields_set": 0, "note": "no homepage_url"}
-    try:
-        rr = http.get(r.homepage_url, timeout=15.0, follow_redirects=True)
-        if rr.status_code != 200:
-            return {"ok": False, "fields_set": 0, "note": f"http {rr.status_code}"}
-        # Strip HTML, take the first 8000 chars of visible text
-        tree = HTMLParser(rr.text)
-        body = tree.body
-        text = body.text(separator=" ", strip=True) if body else ""
-        text = re.sub(r"\s+", " ", text)[:8000]
-        if len(text) < 200:
-            return {"ok": True, "fields_set": 0, "note": "homepage too sparse"}
-    except Exception as e:
-        return {"ok": False, "fields_set": 0, "note": f"fetch err: {type(e).__name__}"}
+    _, text, err = _fetch_homepage(http, r.homepage_url)
+    if err:
+        return {"ok": False, "fields_set": 0, "note": err}
+    if not text or len(text) < 200:
+        return {"ok": True, "fields_set": 0, "note": "homepage too sparse"}
 
     if not llm.is_available():
         return {"ok": False, "fields_set": 0, "note": "no LLM provider configured"}
@@ -846,6 +989,68 @@ def _homepage_llm(db, r: Researcher, http: httpx.Client) -> dict:
         "ok": True,
         "fields_set": updated,
         "note": f"bio:{bool(data.get('bio'))} adv:{bool(data.get('advisor'))} role:{data.get('current_role')}",
+    }
+
+
+# ── source 5.5: twitter handle discovery from homepage ─────────────────────
+
+
+# `username` per Twitter rules: alphanumeric + underscore, 1-15 chars.
+# Match twitter.com/<u> or x.com/<u>; allow optional `www.`/`mobile.` subdomains.
+# Reject /intent/, /share, /home, /search, /i/, etc.
+_TWITTER_HANDLE_RE = re.compile(
+    r"https?://(?:www\.|mobile\.)?(?:twitter\.com|x\.com)/"
+    r"(?!intent/|share|home|search|i/|hashtag/|explore|notifications|messages)"
+    r"([A-Za-z0-9_]{1,15})(?:[/?#]|$)",
+    re.IGNORECASE,
+)
+
+
+def _twitter_discover(db, r: Researcher, http: httpx.Client) -> dict:
+    """Scan homepage HTML for twitter.com / x.com links → set twitter_handle.
+
+    Many researcher homepages link their Twitter from a "contact" / "social"
+    icon strip that the LLM-extraction prompt doesn't capture (it's after
+    page chrome stripping). Cheap regex over the raw HTML is more reliable
+    here than another LLM call.
+
+    Shares the homepage fetch with `_homepage_llm` via the per-run
+    `_fetch_homepage` cache, so a deep dive on a researcher with a homepage
+    incurs ONE HTTP round-trip for both sources combined.
+    """
+    if r.twitter_handle:
+        return {"ok": True, "fields_set": 0, "note": "already has handle"}
+    if not r.homepage_url:
+        return {"ok": False, "fields_set": 0, "note": "no homepage_url"}
+
+    html, _, err = _fetch_homepage(http, r.homepage_url)
+    if err:
+        return {"ok": False, "fields_set": 0, "note": err}
+    if not html:
+        return {"ok": True, "fields_set": 0, "note": "empty homepage"}
+
+    # Tally each candidate handle; pick the most frequently linked one. This
+    # filters incidental "share this paper on X" footer icons that link to
+    # /intent/ (already rejected) or to neutral handles.
+    counts: dict[str, int] = {}
+    for m in _TWITTER_HANDLE_RE.finditer(html):
+        handle = m.group(1)
+        # Skip obvious non-personal accounts (case-insensitive)
+        if handle.lower() in {"twitter", "x", "verified", "support", "help"}:
+            continue
+        counts[handle] = counts.get(handle, 0) + 1
+
+    if not counts:
+        return {"ok": True, "fields_set": 0, "note": "no twitter links found"}
+
+    # Highest-count handle wins; tie → first-seen alphabetical for determinism
+    best = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))[0][0]
+    r.twitter_handle = best
+    return {
+        "ok": True,
+        "fields_set": 1,
+        "note": f"@{best} ({counts[best]}x)"
+        + (f" · {len(counts)} candidates" if len(counts) > 1 else ""),
     }
 
 
@@ -1236,12 +1441,14 @@ SOURCES: list[tuple[str, Callable]] = [
     ("semantic_scholar_discover", _semantic_scholar_discover),  # name → S2 id, homepage, h-index
     ("github_discover", _github_discover),  # name → github_handle (+ bio fallback)
     ("dblp_discover", _dblp_discover),  # name → DBLP PID + affiliation hint
+    ("institution_discover", _institution_discover),  # S2/OpenAlex → current_affiliation_id
     # ── CONSUMPTION: use IDs to pull rich data ──
     ("openalex_full", _openalex_full),  # openalex_id → all works
     ("affiliation_discover", _affiliation_discover_wrapper),  # IDs → current_affiliation_id (v1.11)
     ("github_profile", _github_profile),  # github_handle → bio/blog/twitter
     ("huggingface_profile", _huggingface_profile),  # name guess → HF user + models
     ("homepage_llm", _homepage_llm),  # homepage_url → bio/advisor/interests
+    ("twitter_discover", _twitter_discover),  # homepage HTML → twitter_handle
     # ── SYNTHESIS: fill remaining gaps from what we have ──
     ("bio_synth", _bio_synth),  # papers → 2-sentence bio + topic tags
     ("institution_tag", _institution_tag),  # affiliation → institution-typed tag chip
@@ -1299,34 +1506,124 @@ def deep_dive_one(slug: str, force: bool = False) -> dict:
     return out
 
 
-def auto_queue(limit: int = 20) -> dict[str, int]:
-    """Auto-pick researchers most worth deep-diving:
-      - investability_score_v2 > 0.4
-      - never deep-dived OR last dive > 30 days ago
-    Ordered by score desc so the top picks get covered first.
+def _auto_queue_candidates(db, limit: int) -> list[str]:
+    """Build the ordered union of researchers worth deep-diving.
+
+    Three reasoned buckets (priority order — earlier buckets take limit
+    capacity first):
+
+      a) Never-deep-dived AND `investability_score_v2 >= 0.4`
+         The cold-start backlog. Ranked by score desc.
+
+      b) Stale-but-active: `deep_dive_run_at` older than 30 days AND has
+         a paper published in the last 60 days.
+         Catches researchers who were dived once, then dropped a new
+         paper that changed their trajectory. Ranked by score desc.
+
+      c) Newly-flagged 🔥 high-potential: signal_tag added (proxied by
+         `updated_at`) in the last 7 days AND tags JSON includes the
+         high-potential label. These are the freshest investability
+         spikes. Ranked by updated_at desc.
+
+    Union is deduped by slug — earlier-bucket assignment wins.
+
+    Extracted to its own function so it can be tested / inspected without
+    actually firing the deep-dive HTTP calls.
     """
-    from sqlalchemy import desc, or_
+    from sqlalchemy import desc
 
-    cutoff = datetime.now(UTC) - timedelta(days=STALE_AFTER_DAYS)
+    now = datetime.now(UTC)
+    stale_cutoff = now - timedelta(days=STALE_AFTER_DAYS)
+    recent_paper_cutoff = (now - timedelta(days=60)).date()
+    fresh_signal_cutoff = now - timedelta(days=7)
 
+    ordered: list[str] = []
+    seen: set[str] = set()
+
+    def _add(slug: str) -> None:
+        if slug and slug not in seen and len(ordered) < limit:
+            ordered.append(slug)
+            seen.add(slug)
+
+    # Bucket A — never dived, score ≥ 0.4
+    rows_a = db.execute(
+        select(Researcher.slug)
+        .where(
+            Researcher.deep_dive_run_at.is_(None),
+            Researcher.investability_score_v2.is_not(None),
+            Researcher.investability_score_v2 >= 0.4,
+        )
+        .order_by(desc(Researcher.investability_score_v2))
+        .limit(limit)
+    ).all()
+    for (slug,) in rows_a:
+        _add(slug)
+
+    # Bucket B — stale dive + recent paper. The join filters to researchers
+    # with at least one paper published in the last 60 days; DISTINCT keeps
+    # one row per researcher even if they have multiple recent papers.
+    if len(ordered) < limit:
+        rows_b = db.execute(
+            select(Researcher.slug)
+            .join(PaperAuthor, PaperAuthor.researcher_id == Researcher.id)
+            .join(Paper, Paper.id == PaperAuthor.paper_id)
+            .where(
+                Researcher.deep_dive_run_at.is_not(None),
+                Researcher.deep_dive_run_at < stale_cutoff,
+                Paper.published_at.is_not(None),
+                Paper.published_at >= recent_paper_cutoff,
+            )
+            .order_by(desc(Researcher.investability_score_v2))
+            .distinct()
+            .limit(limit)
+        ).all()
+        for (slug,) in rows_b:
+            _add(slug)
+
+    # Bucket C — recently-updated AND tags JSON has a high-potential signal.
+    # We can't index into JSON portably across SQLite/Postgres, so fetch
+    # candidates by updated_at and filter in Python. Cheap because the
+    # updated_at window is narrow (7 days).
+    if len(ordered) < limit:
+        rows_c = db.execute(
+            select(Researcher.slug, Researcher.tags)
+            .where(
+                Researcher.updated_at >= fresh_signal_cutoff,
+                Researcher.tags.is_not(None),
+            )
+            .order_by(desc(Researcher.updated_at))
+            .limit(limit * 4)  # over-fetch; filter below
+        ).all()
+        for slug, tags in rows_c:
+            if not isinstance(tags, list):
+                continue
+            for t in tags:
+                if not isinstance(t, dict):
+                    continue
+                label = t.get("label", "")
+                if t.get("type") == "signal" and "high-potential" in label:
+                    _add(slug)
+                    break
+            if len(ordered) >= limit:
+                break
+
+    return ordered
+
+
+def auto_queue(limit: int = 10) -> dict[str, int]:
+    """Auto-pick researchers most worth deep-diving.
+
+    Picks top-N from a UNION of three buckets (see `_auto_queue_candidates`):
+      a) Never-dived + investability_score_v2 ≥ 0.4
+      b) Stale dive (>30d) + a paper in the last 60d (active trajectory)
+      c) Newly-tagged 🔥 high-potential (signal added in last 7 days)
+
+    Capped to `limit`. Default 10 — tuned for a daily cron that doesn't
+    burn API quota in one shot.
+    """
     counts = {"attempted": 0, "succeeded": 0, "skipped_fresh": 0}
     with session_scope() as db:
-        slugs = [
-            slug
-            for (slug,) in db.execute(
-                select(Researcher.slug)
-                .where(
-                    Researcher.investability_score_v2.is_not(None),
-                    Researcher.investability_score_v2 > 0.4,
-                    or_(
-                        Researcher.deep_dive_run_at.is_(None),
-                        Researcher.deep_dive_run_at < cutoff,
-                    ),
-                )
-                .order_by(desc(Researcher.investability_score_v2))
-                .limit(limit)
-            ).all()
-        ]
+        slugs = _auto_queue_candidates(db, limit=limit)
     for slug in slugs:
         counts["attempted"] += 1
         result = deep_dive_one(slug)

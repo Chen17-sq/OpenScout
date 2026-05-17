@@ -1,11 +1,19 @@
 """Lightweight schema migrations for SQLite.
 
-We don't (yet) use Alembic. For the v0 single-DB-file deployment, this script
-runs idempotent `ALTER TABLE ... ADD COLUMN` statements. Errors from a column
-already existing are swallowed silently — it's the only failure mode for an
-ADD COLUMN that we don't want to halt on.
+Dual-path schema management
+---------------------------
+For SQLite (local + small deploys) we use this module — idempotent
+`ALTER TABLE ... ADD COLUMN` runs. No version table, no rollbacks.
+Errors from "column already exists" are swallowed silently — it's the
+only failure mode for an ADD COLUMN that we don't want to halt on.
+This keeps the SQLite story zero-friction: clone, `init-db`, done.
 
-Called from `openscout init-db` after `Base.metadata.create_all`.
+For Postgres (prod scale) we use Alembic instead — see
+`src/openscout/alembic/`. Alembic carries proper version history and
+reversible migrations, which matter once a DB has irreplaceable rows.
+
+Both paths are dispatched from `openscout init-db` (see `cli.py`):
+the CLI branches on the `DATABASE_URL` prefix.
 """
 
 from sqlalchemy import text

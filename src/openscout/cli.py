@@ -11,17 +11,39 @@ console = Console()
 
 @app.command("init-db")
 def init_db() -> None:
-    """Create all tables + run idempotent ALTER TABLE migrations."""
-    from .db import engine
-    from .migrations import upgrade_schema
-    from .models import Base
+    """Create / migrate the schema.
 
-    Base.metadata.create_all(engine)
-    added = upgrade_schema(engine)
-    console.print("[green]✓[/green] tables created")
-    if added:
-        for col in added:
-            console.print(f"  [green]+[/green] added column [cyan]{col}[/cyan]")
+    Dual path (matches `migrations.py` rationale):
+      - SQLite → `Base.metadata.create_all` + idempotent ADD COLUMN runner.
+      - Postgres → `alembic upgrade head`. We do NOT call create_all so the
+        alembic version table is the single source of truth for what's applied.
+    """
+    from .config import settings
+
+    if settings.database_url.startswith("sqlite"):
+        from .db import engine
+        from .migrations import upgrade_schema
+        from .models import Base
+
+        Base.metadata.create_all(engine)
+        added = upgrade_schema(engine)
+        console.print("[green]✓[/green] tables created (sqlite)")
+        if added:
+            for col in added:
+                console.print(f"  [green]+[/green] added column [cyan]{col}[/cyan]")
+        return
+
+    # Postgres (or any non-sqlite dialect) → run alembic.
+    from pathlib import Path
+
+    from alembic import command
+    from alembic.config import Config
+
+    ini_path = Path(__file__).resolve().parent / "alembic.ini"
+    cfg = Config(str(ini_path))
+    # env.py reads settings.database_url itself, so we don't need to stamp the URL here.
+    command.upgrade(cfg, "head")
+    console.print("[green]✓[/green] alembic upgrade head (postgres)")
 
 
 @app.command()
@@ -432,7 +454,9 @@ def arxiv_html(
     c = scrape_papers(limit=limit)
     console.print(
         f"[green]✓[/green] arxiv HTML: {c['with_emails']} emails · "
-        f"{c['with_code']} code URLs / {c['attempted']} attempted · "
+        f"{c['with_code']} code URLs · "
+        f"{c['with_affiliations']} aff / {c['affiliations_assigned']} assigned"
+        f" / {c['attempted']} attempted · "
         f"{c['no_html']} no html · {c['errors']} errors"
     )
 
