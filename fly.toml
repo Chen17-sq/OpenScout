@@ -3,29 +3,42 @@
 # Setup (one-time):
 #   1. brew install flyctl
 #   2. flyctl auth login
-#   3. flyctl launch --no-deploy            # answer "no" to Postgres for now
-#   4. flyctl postgres create --name openscout-db --region nrt
-#   5. flyctl postgres attach openscout-db  # sets DATABASE_URL secret automatically
-#   6. flyctl secrets set ANTHROPIC_API_KEY=sk-ant-... \
+#   3. flyctl launch --no-deploy           # don't add Postgres yet — SQLite-on-volume
+#                                            is sufficient for v1.12 launch
+#   4. flyctl volumes create openscout_data --size 1 --region nrt
+#   5. flyctl secrets set \
+#          DEEPSEEK_API_KEY=sk-... \
+#          SEMANTIC_SCHOLAR_API_KEY=... \
+#          GITHUB_TOKEN=ghp_... \
+#          RESEND_API_KEY=re_... \
+#          NOTIFY_EMAIL_TO=you@example.com \
 #          INGEST_SECRET=$(openssl rand -hex 32) \
+#          SENTRY_DSN=https://...@sentry.io/... \
 #          FRONTEND_ORIGIN=https://openscout.vercel.app
-#   7. flyctl deploy
+#   6. flyctl deploy
+#
+# Daily cron: GitHub Actions hits the deployed /admin/ingest with INGEST_SECRET
+# every morning at 01:00 UTC (09:00 Beijing). See .github/workflows/daily.yml.
 #
 # On each push to main, GitHub Action `deploy.yml` re-deploys automatically.
 
 app = "openscout"
-primary_region = "nrt"  # Tokyo — close to China users
+primary_region = "nrt"  # Tokyo — close to CN users + low latency to S2/OpenAlex
+kill_signal = "SIGTERM"
+kill_timeout = "30s"
 
 [build]
   dockerfile = "Dockerfile"
 
 [env]
   PORT = "8000"
+  DATABASE_URL = "sqlite:////data/openscout.db"
+  SENTRY_ENV = "production"
 
 [http_service]
   internal_port = 8000
   force_https = true
-  auto_stop_machines = "stop"      # scale to zero when idle
+  auto_stop_machines = "stop"      # scale to zero when idle (cheap)
   auto_start_machines = true
   min_machines_running = 0
   processes = ["app"]
@@ -37,7 +50,21 @@ primary_region = "nrt"  # Tokyo — close to China users
     timeout = "5s"
     path = "/health"
 
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 25
+    hard_limit = 50
+
 [[vm]]
   cpu_kind = "shared"
   cpus = 1
   memory = "512mb"
+
+# Volume for SQLite — survives deploys. Migrate to Postgres in a later release.
+[mounts]
+  source = "openscout_data"
+  destination = "/data"
+
+# Apply schema migrations every release (idempotent — ADD COLUMN no-ops if present)
+[deploy]
+  release_command = "python -m openscout.cli init-db"

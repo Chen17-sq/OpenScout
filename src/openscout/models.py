@@ -56,6 +56,55 @@ class Topic(Base):
     description: Mapped[str | None] = mapped_column(Text)
 
 
+class DeepDiveQuota(Base):
+    """Per-IP daily quota for the deep-dive endpoint.
+
+    Rationale: deep-dive burns S2 + OpenAlex + DeepSeek API quota and can take
+    30s. Without a quota, an open page is trivially abusable (refresh the
+    button on a popular researcher → 1000s of dives in minutes). 3 dives/day
+    per IP is generous for a real investor browsing a few profiles, harsh
+    for bots.
+
+    Rolls over at UTC midnight (we just key on `day` as ISO date).
+    """
+
+    __tablename__ = "deep_dive_quota"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    ip_address: Mapped[str] = mapped_column(String(64), index=True)
+    day: Mapped[str] = mapped_column(String(10), index=True)  # ISO YYYY-MM-DD
+    count: Mapped[int] = mapped_column(Integer, default=0)
+    first_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    last_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
+    )
+
+
+class DeepDiveJob(Base):
+    """Background-job state for deep-dive. The endpoint enqueues, returns
+    job_id, and the frontend polls (or subscribes to SSE) for progress.
+
+    Lifecycle: queued → running → succeeded | failed | cancelled.
+    `progress` is a JSON list of per-source result dicts, appended as each
+    source completes so SSE can stream them.
+    """
+
+    __tablename__ = "deep_dive_jobs"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    slug: Mapped[str] = mapped_column(String(128), index=True)
+    state: Mapped[str] = mapped_column(String(16), index=True, default="queued")
+    progress: Mapped[list | None] = mapped_column(JSON)
+    result: Mapped[dict | None] = mapped_column(JSON)
+    error: Mapped[str | None] = mapped_column(Text)
+    ip_address: Mapped[str | None] = mapped_column(String(64))
+    enqueued_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+    started_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    finished_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
 class Researcher(Base):
     __tablename__ = "researchers"
 

@@ -1,23 +1,58 @@
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from sqlalchemy import desc, func, or_, select
 from sqlalchemy.orm import Session
 
 from ...db import get_db
 from ...models import Institution, Paper, PaperAuthor, PaperTopic, Relationship, Researcher, Topic
+from ...scraper import jobs as jobs_mod
 from ...scraper.deep_dive import deep_dive_one
+
+# Daily quota for the deep-dive endpoint (per IP, resets UTC midnight).
+# Set conservatively — a real investor browses a handful; bots would spike.
+DEEP_DIVE_DAILY_LIMIT = 3
 
 router = APIRouter()
 
 
+@router.get("/{slug}/deep-dive/quota")
+def deep_dive_quota(request: Request) -> dict:
+    """Read-only: how many dives the caller has left today."""
+    from ...api.quota import status
+
+    return status(request, daily_limit=DEEP_DIVE_DAILY_LIMIT)
+
+
 @router.post("/{slug}/deep-dive")
-def trigger_deep_dive(slug: str, force: bool = Query(False)) -> dict:
-    """Run all 5 deep-dive sources for this researcher (~30s). Skips sources
-    that ran successfully in the last 30 days unless `force=true`.
+def trigger_deep_dive(
+    slug: str,
+    request: Request,
+    force: bool = Query(False),
+    async_mode: bool = Query(True, alias="async"),
+) -> dict:
+    """Trigger a deep dive for this researcher.
+
+    - **async=true (default)**: enqueue a background job, return `{job_id, state}`
+      immediately. Frontend polls `GET /jobs/{id}` for progress. Best UX.
+    - **async=false**: legacy synchronous mode (blocks ~30s, returns the full
+      result). Kept for backwards compat + CLI testing.
+
+    Per-IP daily quota: `DEEP_DIVE_DAILY_LIMIT` dives/day. Returns 429 when
+    exceeded (header `Retry-After` set to seconds-until-UTC-midnight).
     """
-    result = deep_dive_one(slug, force=force)
-    if result.get("error"):
-        raise HTTPException(404, detail=result["error"])
-    return result
+    from ...api.quota import _ip_for_request, check_and_increment
+
+    state = check_and_increment(request, daily_limit=DEEP_DIVE_DAILY_LIMIT)
+
+    if not async_mode:
+        result = deep_dive_one(slug, force=force)
+        if result.get("error"):
+            raise HTTPException(404, detail=result["error"])
+        return {**result, "quota": state}
+
+    enq = jobs_mod.enqueue(slug, ip_address=_ip_for_request(request), force=force)
+    if enq.get("error"):
+        raise HTTPException(404, detail=enq["error"])
+    return {**enq, "quota": state}
 
 
 @router.get("/")

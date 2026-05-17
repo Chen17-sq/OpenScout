@@ -5,12 +5,18 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from .. import __version__
 from ..config import settings
-from .routes import (
+from .sentry_init import init_sentry
+
+# Sentry must be initialized BEFORE the FastAPI app is created so it wraps
+# the middleware stack. No-ops cleanly when SENTRY_DSN is unset.
+init_sentry()
+from .routes import (  # noqa: E402 — must follow init_sentry()
     admin,
     briefs,
     conferences,
     institutions,
     investment,
+    jobs,
     og,
     papers,
     researchers,
@@ -47,6 +53,7 @@ app.include_router(og.router, prefix="/og", tags=["og"])
 app.include_router(institutions.router, prefix="/institutions", tags=["institutions"])
 app.include_router(conferences.router, prefix="/conferences", tags=["conferences"])
 app.include_router(investment.router, prefix="/investment", tags=["investment"])
+app.include_router(jobs.router, prefix="/jobs", tags=["jobs"])
 app.include_router(admin.router, prefix="/admin", tags=["admin"])
 
 
