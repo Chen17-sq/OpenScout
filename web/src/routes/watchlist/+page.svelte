@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { untrack } from 'svelte';
   import { watchlist, toggle, compareSlots, addToCompare, COMPARE_MAX } from '$lib/watchlist';
   import { apiFetch, roleLabel } from '$lib/api';
   import { t } from '$lib/i18n';
@@ -33,17 +34,29 @@
   let roleFilter = $state<string>('all');
   let sortKey = $state<'added' | 'score' | 'name'>('added');
 
+  // Reactive on $watchlist only — all internal bookkeeping reads/writes are
+  // wrapped in `untrack()` so the effect doesn't self-trigger.
   $effect(() => {
     const slugs = $watchlist;
-    // remember first-seen times
-    const now = Date.now();
-    for (const s of slugs) {
-      if (!(s in addedAt)) addedAt = { ...addedAt, [s]: now };
-    }
-    // drop selections for slugs that disappeared
-    const next = new Set<string>();
-    for (const s of selected) if (slugs.includes(s)) next.add(s);
-    selected = next;
+    untrack(() => {
+      const now = Date.now();
+      const prevAdded = addedAt;
+      const nextAdded: Record<string, number> = { ...prevAdded };
+      let changedAdded = false;
+      for (const s of slugs) {
+        if (!(s in nextAdded)) {
+          nextAdded[s] = now;
+          changedAdded = true;
+        }
+      }
+      if (changedAdded) addedAt = nextAdded;
+
+      // drop selections for slugs that disappeared from the watchlist
+      const prevSel = selected;
+      const nextSel = new Set<string>();
+      for (const s of prevSel) if (slugs.includes(s)) nextSel.add(s);
+      if (nextSel.size !== prevSel.size) selected = nextSel;
+    });
 
     loading = true;
     Promise.all(slugs.map((slug) => apiFetch<R>(`/researchers/${slug}`))).then((rs) => {
