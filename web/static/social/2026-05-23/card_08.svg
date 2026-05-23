@@ -43,7 +43,7 @@
   <text x="220" y="666" font-family="Playfair Display, serif" font-weight="900" font-size="36" fill="#111">0</text>
 
   <text x="360" y="624" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#CC0000" letter-spacing="3">TAG</text>
-  <text x="360" y="660" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#111"></text>
+  <text x="360" y="660" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#111">route recommendation</text>
 
   <text x="684" y="690" font-family="JetBrains Mono, monospace" font-size="11" fill="#737373" text-anchor="end">openscout.app/researchers/hanyu-guo</text>
 </svg>

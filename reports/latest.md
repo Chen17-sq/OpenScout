@@ -7,7 +7,7 @@ DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, MAY 23, 2026
 
 > *All The Researchers Fit To Watch* — Vol. 1, No. 009 · 2026-05-23
 
-_Auto-generated at 2026-05-23T14:22:08+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-05-23T15:52:02+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,100 +15,100 @@ _Auto-generated at 2026-05-23T14:22:08+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **7917** | 1228 | 1590 | 3 | 38 |
+| **12151** | 1943 | 5824 | 6 | 38 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · On Sharding Open Blockchains with Smart Contracts
+### No. 01 · Perceptual Flow Network for Visually Grounded Reasoning
 
-**Yuechen Tao** · 一作 · 3 作者 · [arXiv:None](#)
+**Yangfu Li** · 一作 · 11 作者 · [arXiv:2605.02730](https://arxiv.org/abs/2605.02730)
 
-_Current blockchain systems suffer from a number of inherent drawbacks in its scalability, latency, and processing throughput. By enabling parallel confirmations of transactions, sharding has been proposed to mitigate th…_
+_Despite the success of Large-Vision Language Models (LVLMs), general optimization objectives (e.g., standard MLE) fail to constrain visual trajectories, leading to language bias and hallucination. To mitigate this, curr…_
 
-→ [profile](/researchers/yuechen-tao)
-
----
-### No. 02 · StNet: Local and Global Spatial-Temporal Modeling for Action Recognition
-
-**Dongliang He** · 一作 · 2 作者 · [arXiv:None](#)
-
-_Despite the success of deep learning for static image understanding, it remains unclear what are the most effective network architectures for spatial-temporal modeling in videos. In this paper, in contrast to the existi…_
-
-→ [profile](/researchers/dongliang-he)
+→ [profile](/researchers/yangfu-li)
 
 ---
-### No. 03 · MS-Celeb-1M: Challenge of Recognizing One Million Celebrities in the Real World
+### No. 02 · COSMO-Agent: Tool-Augmented Agent for Closed-loop Optimization,Simulation,and Modeling Orchestration
 
-**Yandong Guo** · 一作 · 3 作者 · [arXiv:None](#)
+**Liyuan Deng** · 一作 · 9 作者 · [arXiv:2604.05547](https://arxiv.org/abs/2604.05547)
 
-_Face recognition, as one of the most well-studied problems in computer vision, consists of two subproblems, verification and identification. Face verification is to determine whether two given face images belong to the…_
+_Iterative industrial design-simulation optimization is bottlenecked by the CAD-CAE semantic gap: translating simulation feedback into valid geometric edits under diverse, coupled constraints. To fill this gap, we propos…_
 
-→ [profile](/researchers/yandong-guo)
-
----
-### No. 04 · Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots
-
-**Cheng Chi** · 一作 · 8 作者 · [arXiv:None](#)
-
-__
-
-→ [profile](/researchers/cheng-chi)
+→ [profile](/researchers/liyuan-deng)
 
 ---
-### No. 05 · Adversarial Training for Unsupervised Bilingual Lexicon Induction
+### No. 03 · Tool-Augmented Agent for Closed-loop Optimization,Simulation,and Modeling Orchestration
 
-**Meng Zhang** · 一作 · 3 作者 · [arXiv:None](#)
+**Liyuan Deng** · 一作 · 9 作者 · [arXiv:2605.20190](https://arxiv.org/abs/2605.20190)
 
-_Word embeddings are well known to capture linguistic regularities of the language on which they are trained. Researchers also observe that these regularities can transfer across languages. However, previous endeavors to…_
+_Iterative industrial design-simulation optimization is bottlenecked by the CAD-CAE semantic gap: translating simulation feedback into valid geometric edits under diverse, coupled constraints. To fill this gap, we propos…_
 
-→ [profile](/researchers/meng-zhang)
-
----
-### No. 06 · Deep Flow-Guided Video Inpainting
-
-**Rui Xu** · 一作 · 3 作者 · [arXiv:None](#)
-
-_Video inpainting, which aims at filling in missing regions in a video, remains challenging due to the difficulty of preserving the precise spatial and temporal coherence of video contents. In this work we propose a nove…_
-
-→ [profile](/researchers/rui-xu)
+→ [profile](/researchers/liyuan-deng)
 
 ---
-### No. 07 · Exploiting Deep Generative Prior for Versatile Image Restoration and Manipulation
+### No. 04 · GRADE: Benchmarking Discipline-Informed Reasoning in Image Editing
 
-**Xingang Pan** · 一作 · 6 作者 · [arXiv:None](#)
+**Mingxin Liu** · 一作 · 16 作者 · [arXiv:2603.12264](https://arxiv.org/abs/2603.12264)
 
-_Learning a good image prior is a long-term goal for image restoration and manipulation. While existing methods like deep image prior (DIP) capture low-level image statistics, there are still gaps toward an image prior t…_
+_Unified multimodal models target joint understanding, reasoning, and generation, but current image editing benchmarks are largely confined to natural images and shallow commonsense reasoning, offering limited assessment…_
 
-→ [profile](/researchers/xingang-pan)
-
----
-### No. 08 · Distribution-Balanced Loss for Multi-label Classification in Long-Tailed Datasets
-
-**Tong Wu** · 一作 · 4 作者 · [arXiv:None](#)
-
-__
-
-→ [profile](/researchers/tong-wu)
+→ [profile](/researchers/mingxin-liu)
 
 ---
-### No. 09 · TCTrack: Temporal Contexts for Aerial Tracking
+### No. 05 · Stepping VLMs onto the Court: Benchmarking Spatial Intelligence in Sports
 
-**Ziang Cao** · 一作 · 4 作者 · [arXiv:None](#)
+**Yuchen Yang** · 一作 · 14 作者 · [arXiv:2603.09896](https://arxiv.org/abs/2603.09896)
 
-_Temporal contexts among consecutive frames are far from being fully utilized in existing visual trackers. In this work, we present TCTrack <sup xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.o…_
+_Sports have long attracted broad attention as they push the limits of human physical and cognitive capabilities. Amid growing interest in spatial intelligence for vision-language models (VLMs), sports provide a natural…_
 
-→ [profile](/researchers/ziang-cao)
+→ [profile](/researchers/yuchen-yang)
 
 ---
-### No. 10 · AvatarCLIP
+### No. 06 · InternVL-U: Democratizing Unified Multimodal Models for Understanding, Reasoning, Generation and Editing
 
-**Fangzhou Hong** · 一作 · 5 作者 · [arXiv:None](#)
+**Changyao Tian** · 一作 · 29 作者 · [arXiv:2603.09877](https://arxiv.org/abs/2603.09877)
 
-_3D avatar creation plays a crucial role in the digital age. However, the whole production process is prohibitively time-consuming and labor-intensive. To democratize this technology to a larger audience, we propose Avat…_
+_Unified multimodal models (UMMs) that integrate understanding, reasoning, generation, and editing face inherent trade-offs between maintaining strong semantic comprehension and acquiring powerful generation capabilities…_
 
-→ [profile](/researchers/fangzhou-hong)
+→ [profile](/researchers/changyao-tian)
+
+---
+### No. 07 · Holi-Spatial: Evolving Video Streams into Holistic 3D Spatial Intelligence
+
+**Yuanyuan Gao** · 一作 · 17 作者 · [arXiv:2603.07660](https://arxiv.org/abs/2603.07660)
+
+_The pursuit of spatial intelligence fundamentally relies on access to large-scale, fine-grained 3D data. However, existing approaches predominantly construct spatial understanding benchmarks by generating question-answe…_
+
+→ [profile](/researchers/yuanyuan-gao)
+
+---
+### No. 08 · RISE-Video: Can Video Generators Decode Implicit World Rules?
+
+**Mingxin Liu** · 一作 · 12 作者 · [arXiv:2602.05986](https://arxiv.org/abs/2602.05986)
+
+_While generative video models have achieved remarkable visual fidelity, their capacity to internalize and reason over implicit world rules remains a critical yet under-explored frontier. To bridge this gap, we present R…_
+
+→ [profile](/researchers/mingxin-liu)
+
+---
+### No. 09 · Visionary: The World Model Carrier Built on WebGPU-Powered Gaussian Splatting Platform
+
+**Yuning Gong** · 一作 · 24 作者 · [arXiv:2512.08478](https://arxiv.org/abs/2512.08478)
+
+_Neural rendering, particularly 3D Gaussian Splatting (3DGS), has evolved rapidly and become a key component for building world models. However, existing viewer solutions remain fragmented, heavy, or constrained by legac…_
+
+→ [profile](/researchers/yuning-gong)
+
+---
+### No. 10 · RacketVision: A Multiple Racket Sports Benchmark for Unified Ball and Racket Analysis
+
+**Linfeng Dong** · 一作 · 7 作者 · [arXiv:2511.17045](https://arxiv.org/abs/2511.17045)
+
+_We introduce RacketVision, a novel dataset and benchmark for advancing computer vision in sports analytics, covering table tennis, tennis, and badminton. The dataset is the first to provide large-scale, fine-grained ann…_
+
+→ [profile](/researchers/linfeng-dong)
 
 ---
 
@@ -116,24 +116,51 @@ _3D avatar creation plays a crucial role in the digital age. However, the whole 
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [David Ha](/researchers/david-ha) | INSIDE-OUT: Introduction of Speakers at IDWeek Events—Observing for U… | — | [None](#) |
-| [David Ha](/researchers/david-ha) | Qualitative Investigation of Community Pharmacy Immunization Enhancem… | — | [None](#) |
-| [David Ha](/researchers/david-ha) | Determinants to immunization information system implementation in ind… | — | [None](#) |
-| [David Ha](/researchers/david-ha) | Assessing barriers and increasing use of immunization information sys… | — | [None](#) |
-| [David Ha](/researchers/david-ha) | Outcomes of Bedside Nurse-Driven Interdisciplinary Antibiotic Steward… | — | [None](#) |
-| [David Ha](/researchers/david-ha) | 2085. Bedside Nurses Improve Antimicrobial Stewardship and Infection… | — | [None](#) |
-| [David Ha](/researchers/david-ha) | 542. Los Angeles County Acute Care Regional Antibiogram Suggests Chan… | — | [None](#) |
-| [David Ha](/researchers/david-ha) | 1489. Safety and Performance of a Pharmacist-Driven Nasal MRSA PCR Pr… | — | [None](#) |
-| [David Ha](/researchers/david-ha) | A quality-improvement approach to urgent-care antibiotic stewardship… | — | [None](#) |
-| [David Ha](/researchers/david-ha) | 824. Combination Antifungal Therapy for Invasive Mucormycosis in Immu… | — | [None](#) |
+| [Junchi Yan](/researchers/junchi-yan) | GRADE: Benchmarking Discipline-Informed Reasoning in Image Editing | — | [2603.12264](https://arxiv.org/abs/2603.12264) |
+| [Kai Chen](/researchers/kai-chen) | InternVL-U: Democratizing Unified Multimodal Models for Understanding… | — | [2603.09877](https://arxiv.org/abs/2603.09877) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Holi-Spatial: Evolving Video Streams into Holistic 3D Spatial Intelli… | — | [2603.07660](https://arxiv.org/abs/2603.07660) |
+| [Junchi Yan](/researchers/junchi-yan) | Visionary: The World Model Carrier Built on WebGPU-Powered Gaussian S… | — | [2512.08478](https://arxiv.org/abs/2512.08478) |
+| [Xiaopeng Lin](/researchers/xiaopeng-lin) | MDN: Parallelizing Stepwise Momentum for Delta Linear Attention | — | [2605.05838](https://arxiv.org/abs/2605.05838) |
+| [Bo Li](/researchers/bo-li-uchicago) | Is Your LLM-as-a-Recommender Agent Trustable? LLMs' Recommendation is… | — | [2603.17417](https://arxiv.org/abs/2603.17417) |
+| [Bo Li](/researchers/bo-li-uchicago) | Are Dilemmas and Conflicts in LLM Alignment Solvable? A View from Pri… | — | [2603.15527](https://arxiv.org/abs/2603.15527) |
+| [Tongliang Liu](/researchers/tongliang-liu) | Rethinking Deep Research from the Perspective of Web Content Distribu… | — | [2603.07241](https://arxiv.org/abs/2603.07241) |
+| [Xiang Li](/researchers/xiang-li) | Janus-Q: End-to-End Event-Driven Trading via Hierarchical-Gated Rewar… | — | [2602.19919](https://arxiv.org/abs/2602.19919) |
+| [Bo Li](/researchers/bo-li-uchicago) | On the Spectral Flattening of Quantized Embeddings | — | [2602.00969](https://arxiv.org/abs/2602.00969) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section C · 🎓 即将毕业 PhD · Top 2
+## Section C · 🎓 即将毕业 PhD · Top 5
 
 _v0 fallback: 最高产的 auto-discovered first-author（proxy for 活跃晚期）._
 
-### No. 01 · SAM2Long: Enhancing SAM 2 for Long Video Segmentation with a Training-Free Memory Tree
+### No. 01 · UltraImage: Rethinking Resolution Extrapolation in Image Diffusion Transformers
+
+**Min Zhao** · 一作 · 8 作者 · [arXiv:2512.04504](https://arxiv.org/abs/2512.04504)
+
+_Recent image diffusion transformers achieve high-fidelity generation, but struggle to generate images beyond these scales, suffering from content repetition and quality degradation. In this work, we present UltraImage,…_
+
+→ [profile](/researchers/min-zhao)
+
+---
+### No. 02 · High-Dimensional Tests for Elliptical Models via Radial--Directional Dependence
+
+**Haoran Zhang** · 一作 · 2 作者 · [arXiv:2605.03592](https://arxiv.org/abs/2605.03592)
+
+_We develop high-dimensional goodness-of-fit tests for elliptical models by testing radial--directional independence after affine standardization. The method forms coordinatewise correlations between the log-radius and d…_
+
+→ [profile](/researchers/haoran-zhang)
+
+---
+### No. 03 · Efficient Pre-Training with Token Superposition
+
+**Bowen Peng** · 一作 · 3 作者 · [arXiv:2605.06546](https://arxiv.org/abs/2605.06546)
+
+_Pre-training of Large Language Models is often prohibitively expensive and inefficient at scale, requiring complex and invasive modifications in order to achieve high data throughput. In this work, we present Token-Supe…_
+
+→ [profile](/researchers/bowen-peng)
+
+---
+### No. 04 · SAM2Long: Enhancing SAM 2 for Long Video Segmentation with a Training-Free Memory Tree
 
 **Shuangrui Ding** · 一作 · 9 作者 · [arXiv:2410.16268](https://arxiv.org/abs/2410.16268)
 
@@ -142,7 +169,7 @@ _The Segment Anything Model 2 (SAM 2) has emerged as a powerful foundation model
 → [profile](/researchers/shuangrui-ding)
 
 ---
-### No. 02 · Test-Time Degradation Adaptation for Open-Set Image Restoration
+### No. 05 · Test-Time Degradation Adaptation for Open-Set Image Restoration
 
 **Yuanbiao Gou** · 一作 · 5 作者 · [arXiv:2312.02197](https://arxiv.org/abs/2312.02197)
 
@@ -160,9 +187,54 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section E · 🔥 热门工作 · Top 9
+## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Intern-S1-Pro: Scientific Multimodal Foundation Model at Trillion Scale
+### No. 01 · OpenAI GPT-5 System Card
+
+**Aaditya Singh** · 一作 · 486 作者 · [arXiv:2601.03267](https://arxiv.org/abs/2601.03267)
+
+_This is the system card published alongside the OpenAI GPT-5 launch, August 2025. GPT-5 is a unified system with a smart and fast model that answers most questions, a deeper reasoning model for harder problems, and a re…_
+
+→ [profile](/researchers/aaditya-singh)
+
+---
+### No. 02 · GPT-4o System Card
+
+**OpenAI** · 一作 · 419 作者 · [arXiv:2410.21276](https://arxiv.org/abs/2410.21276)
+
+_GPT-4o is an autoregressive omni model that accepts as input any combination of text, audio, image, and video, and generates any combination of text, audio, and image outputs. It's trained end-to-end across text, vision…_
+
+→ [profile](/researchers/openai)
+
+---
+### No. 03 · Ultrahigh-Energy Gamma-ray Emission Associated with Black Hole-Jet Systems
+
+**The LHAASO Collaboration** · 一作 · 318 作者 · [arXiv:2410.08988](https://arxiv.org/abs/2410.08988)
+
+_Black holes (BH), one of the most intriguing objects in the universe, can manifest themselves through electromagnetic radiation initiated by the accretion flow. Some stellar-mass BHs drive relativistic jets when accreti…_
+
+→ [profile](/researchers/the-lhaaso-collaboration)
+
+---
+### No. 04 · A Giant Peanut-shaped Ultra-High-Energy Gamma-Ray Emitter Off the Galactic Plane
+
+**Zhen Cao** · 一作 · 315 作者 · [arXiv:2510.06786](https://arxiv.org/abs/2510.06786)
+
+_Ultra-high-energy (UHE), exceeding 100 TeV (10^12 electronvolts), γ-rays manifests extreme particle acceleration in astrophysical sources. Recent observations by γ-ray telescopes, particularly by the Large High Altitude…_
+
+→ [profile](/researchers/zhen-cao)
+
+---
+### No. 05 · OpenAI o1 System Card
+
+**OpenAI** · 一作 · 264 作者 · [arXiv:2412.16720](https://arxiv.org/abs/2412.16720)
+
+_The o1 model series is trained with large-scale reinforcement learning to reason using chain of thought. These advanced reasoning capabilities provide new avenues for improving the safety and robustness of our models. I…_
+
+→ [profile](/researchers/openai)
+
+---
+### No. 06 · Intern-S1-Pro: Scientific Multimodal Foundation Model at Trillion Scale
 
 **Yicheng Zou** · 一作 · 177 作者 · [arXiv:2603.25040](https://arxiv.org/abs/2603.25040)
 
@@ -171,7 +243,7 @@ _We introduce Intern-S1-Pro, the first one-trillion-parameter scientific multimo
 → [profile](/researchers/yicheng-zou)
 
 ---
-### No. 02 · Intern-S1: A Scientific Multimodal Foundation Model
+### No. 07 · Intern-S1: A Scientific Multimodal Foundation Model
 
 **Lei Bai** · 一作 · 176 作者 · [arXiv:2508.15763](https://arxiv.org/abs/2508.15763)
 
@@ -180,7 +252,7 @@ _In recent years, a plethora of open-source foundation models have emerged, achi
 → [profile](/researchers/lei-bai)
 
 ---
-### No. 03 · GRID: a Student Project to Monitor the Transient Gamma-Ray Sky in the Multi-Messenger Astronomy Era
+### No. 08 · GRID: a Student Project to Monitor the Transient Gamma-Ray Sky in the Multi-Messenger Astronomy Era
 
 **Jiaxing Wen** · 一作 · 142 作者 · [arXiv:1907.06842](https://arxiv.org/abs/1907.06842)
 
@@ -191,60 +263,22 @@ _The Gamma-Ray Integrated Detectors (GRID) is a space mission concept dedicated 
 → [profile](/researchers/jiaxing-wen)
 
 ---
-### No. 04 · MinerU2.5: A Decoupled Vision-Language Model for Efficient High-Resolution Document Parsing
+### No. 09 · The RoboDrive Challenge: Drive Anytime Anywhere in Any Condition
 
-**Junbo Niu** · 一作 · 61 作者 · [arXiv:2509.22186](https://arxiv.org/abs/2509.22186)
+**Lingdong Kong** · 一作 · 91 作者 · [arXiv:2405.08816](https://arxiv.org/abs/2405.08816)
 
-*粗到细两阶段解析解耦布局分析与内容识别。*
+_In the realm of autonomous driving, robust perception under out-of-distribution conditions is paramount for the safe deployment of vehicles. Challenges such as adverse weather, sensor malfunctions, and environmental unp…_
 
-_We introduce MinerU2.5, a 1.2B-parameter document parsing vision-language model that achieves state-of-the-art recognition accuracy while maintaining exceptional computational efficiency. Our approach employs a coarse-t…_
-
-→ [profile](/researchers/junbo-niu)
+→ [profile](/researchers/lingdong-kong)
 
 ---
-### No. 05 · AIM 2022 Challenge on Super-Resolution of Compressed Image and Video: Dataset, Methods and Results
+### No. 10 · MiniCPM4: Ultra-Efficient LLMs on End Devices
 
-**Ren Yang** · 一作 · 52 作者 · [arXiv:2208.11184](https://arxiv.org/abs/2208.11184)
+**MiniCPM Team** · 一作 · 83 作者 · [arXiv:2506.07900](https://arxiv.org/abs/2506.07900)
 
-_This paper reviews the Challenge on Super-Resolution of Compressed Image and Video at AIM 2022. This challenge includes two tracks. Track 1 aims at the super-resolution of compressed image, and Track~2 targets the super…_
+_This paper introduces MiniCPM4, a highly efficient large language model (LLM) designed explicitly for end-side devices. We achieve this efficiency through systematic innovation in four key dimensions: model architecture…_
 
-→ [profile](/researchers/ren-yang)
-
----
-### No. 06 · TabPFN-3: Technical Report
-
-**Léo Grinsztajn** · 一作 · 42 作者 · [arXiv:2605.13986](https://arxiv.org/abs/2605.13986)
-
-_Tabular data underpins most high-value prediction problems in science and industry, and TabPFN has driven the foundation model revolution for this modality. Designed with feedback from our users, TabPFN-3 builds on this…_
-
-→ [profile](/researchers/l-o-grinsztajn)
-
----
-### No. 07 · Xiaomi EV World Model: A Joint World Model Integrating Reconstruction and Generation for Autonomous Driving
-
-**Lijun Zhou** · 一作 · 37 作者 · [arXiv:2605.18137](https://arxiv.org/abs/2605.18137)
-
-_This report presents a unified technical system addressing the two core capabilities of world models for autonomous driving: world representation and world generation. For world representation, we propose WorldRec, a fe…_
-
-→ [profile](/researchers/lijun-zhou)
-
----
-### No. 08 · AI+HW 2035: Shaping the Next Decade
-
-**Deming Chen** · 一作 · 30 作者 · [arXiv:2603.05225](https://arxiv.org/abs/2603.05225)
-
-_Artificial intelligence (AI) and hardware (HW) are advancing at unprecedented rates, yet their trajectories have become inseparably intertwined. The global research community lacks a cohesive, long-term vision to strate…_
-
-→ [profile](/researchers/deming-chen)
-
----
-### No. 09 · WorldArena 2.0: Extending Embodied World Model Benchmarking on Modality, Functionality and Platform
-
-**Yu Shang** · 一作 · 25 作者 · [arXiv:2605.17912](https://arxiv.org/abs/2605.17912)
-
-_World models have emerged as a central paradigm for embodied intelligence, enabling agents to predict action-conditioned future and reason about environmental dynamics. However, existing embodied world model benchmarks…_
-
-→ [profile](/researchers/yu-shang)
+→ [profile](/researchers/minicpm-team)
 
 ---
 
@@ -254,39 +288,37 @@ _World models have emerged as a central paradigm for embodied intelligence, enab
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · Intern-S1-Pro: Scientific Multimodal Foundation Model at Trillion Scale
+### No. 01 · OpenAI GPT-5 System Card
 
-**Yicheng Zou** · 一作 · 177 作者 · [arXiv:2603.25040](https://arxiv.org/abs/2603.25040)
+**Aaditya Singh** · 一作 · 486 作者 · [arXiv:2601.03267](https://arxiv.org/abs/2601.03267)
 
-_We introduce Intern-S1-Pro, the first one-trillion-parameter scientific multimodal foundation model. Scaling to this unprecedented size, the model delivers a comprehensive enhancement across both general and scientific…_
+_This is the system card published alongside the OpenAI GPT-5 launch, August 2025. GPT-5 is a unified system with a smart and fast model that answers most questions, a deeper reasoning model for harder problems, and a re…_
 
-**▸ 选中原因：首次出现 · 177 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 486 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/yicheng-zou)
-
----
-### No. 02 · Intern-S1: A Scientific Multimodal Foundation Model
-
-**Lei Bai** · 一作 · 176 作者 · [arXiv:2508.15763](https://arxiv.org/abs/2508.15763)
-
-_In recent years, a plethora of open-source foundation models have emerged, achieving remarkable progress in some widely attended fields, with performance being quite close to that of closed-source models. However, in hi…_
-
-**▸ 选中原因：首次出现 · 176 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/lei-bai)
+→ [profile](/researchers/aaditya-singh)
 
 ---
-### No. 03 · GRID: a Student Project to Monitor the Transient Gamma-Ray Sky in the Multi-Messenger Astronomy Era
+### No. 02 · GPT-4o System Card
 
-**Jiaxing Wen** · 一作 · 142 作者 · [arXiv:1907.06842](https://arxiv.org/abs/1907.06842)
+**OpenAI** · 一作 · 419 作者 · [arXiv:2410.21276](https://arxiv.org/abs/2410.21276)
 
-*用CubeSat星座全天监测伽马暴，协同引力波定位。*
+_GPT-4o is an autoregressive omni model that accepts as input any combination of text, audio, image, and video, and generates any combination of text, audio, and image outputs. It's trained end-to-end across text, vision…_
 
-_The Gamma-Ray Integrated Detectors (GRID) is a space mission concept dedicated to monitoring the transient gamma-ray sky in the energy range from 10 keV to 2 MeV using scintillation detectors onboard CubeSats in low Ear…_
+**▸ 选中原因：首次出现 · 419 作者合作（疑似大组新人）**
 
-**▸ 选中原因：首次出现 · 142 作者合作（疑似大组新人）**
+→ [profile](/researchers/openai)
 
-→ [profile](/researchers/jiaxing-wen)
+---
+### No. 03 · Ultrahigh-Energy Gamma-ray Emission Associated with Black Hole-Jet Systems
+
+**The LHAASO Collaboration** · 一作 · 318 作者 · [arXiv:2410.08988](https://arxiv.org/abs/2410.08988)
+
+_Black holes (BH), one of the most intriguing objects in the universe, can manifest themselves through electromagnetic radiation initiated by the accretion flow. Some stellar-mass BHs drive relativistic jets when accreti…_
+
+**▸ 选中原因：首次出现 · 318 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/the-lhaaso-collaboration)
 
 ---
 ### No. 04 · MoSA: Motion-constrained Stress Adaptation for Mitigating Real-to-Sim Gap in Continuum Dynamics via Learning Residual Anisotropy
