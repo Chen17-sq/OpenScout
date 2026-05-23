@@ -48,6 +48,11 @@ class Settings(BaseSettings):
     semantic_scholar_api_key: str = ""
     resend_api_key: str = ""
     notify_email_to: str = ""
+    # Sender for the digest. Defaults to Resend's shared sandbox sender
+    # (only delivers to the email that owns the Resend account; works without
+    # DNS setup). Override with `EMAIL_FROM="Name <you@your-domain.com>"`
+    # once you've verified a custom domain on resend.com/domains.
+    email_from: str = ""
     ingest_secret: str = "change-me"
     frontend_origin: str = "http://localhost:5174"
 

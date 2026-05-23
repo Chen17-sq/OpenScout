@@ -88,7 +88,12 @@ def send_latest_digest() -> dict:
                 "Content-Type": "application/json",
             },
             json={
-                "from": "OpenScout <noreply@openscout.app>",
+                # `from` must be a domain you've verified in Resend. Default to
+                # Resend's shared sender (`onboarding@resend.dev`) which works
+                # without any DNS setup but ONLY delivers to the email address
+                # that owns the Resend account. Override via EMAIL_FROM env to
+                # use your own verified domain once you have one.
+                "from": settings.email_from or "OpenScout <onboarding@resend.dev>",
                 "to": [settings.notify_email_to],
                 "subject": subject,
                 "html": html_body,
