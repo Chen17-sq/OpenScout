@@ -584,16 +584,48 @@ def deep_dive_queue_cmd(
 
 
 @app.command()
-def daily() -> None:
+def daily(
+    only: Annotated[
+        str | None,
+        typer.Option(
+            "--only",
+            help="Comma-separated label substrings; run ONLY matching steps "
+            "(e.g. --only=score,brief)",
+        ),
+    ] = None,
+    skip: Annotated[
+        str | None,
+        typer.Option(
+            "--skip",
+            help="Comma-separated label substrings; SKIP matching steps "
+            "(e.g. --skip=arxiv,twitter)",
+        ),
+    ] = None,
+    force: Annotated[
+        bool,
+        typer.Option(
+            "--force",
+            help="Ignore per-step freshness gates (re-run even if last successful run is fresh)",
+        ),
+    ] = False,
+) -> None:
     """One-command full pipeline: ingest → enrich → score → brief → cards.
 
     Each step is isolated — one failure doesn't stop the rest. This is what
     the GitHub Actions cron should call once a day. Prints a colored summary
     of what succeeded / failed.
+
+    Filters (additive — combine freely):
+        --only=score,brief    only run steps whose label contains 'score' or 'brief'
+        --skip=arxiv,twitter  skip steps whose label contains 'arxiv' or 'twitter'
+        --force               override the per-step `min_hours` freshness gate
+                              (faculty/PC/awards/lineage/banner/etc.)
     """
     from .cli_daily import print_summary, run_daily
 
-    steps = run_daily()
+    only_list = [t.strip() for t in only.split(",")] if only else []
+    skip_list = [t.strip() for t in skip.split(",")] if skip else []
+    steps = run_daily(only=only_list, skip=skip_list, force=force)
     n_failed = print_summary(steps)
     if n_failed:
         raise typer.Exit(code=1)

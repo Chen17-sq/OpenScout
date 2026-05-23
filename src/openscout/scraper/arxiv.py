@@ -85,8 +85,17 @@ def ingest_topic(topic_slug: str, limit: int = 50) -> int:
 
             _ensure_paper_topic(db, paper.id, topic.id)
 
+            # Per-paper dedupe: arXiv sometimes lists the same author twice with
+            # different spellings ("X. Wang" + "Xinyi Wang") which collapse to
+            # the same Researcher row via _upsert_researcher_by_name and would
+            # violate PaperAuthor (paper_id, researcher_id) UNIQUE. Same fix
+            # pattern as v1.1 backfill_anchor_works and v1.6 deep_dive._arxiv_author.
+            seen_rids: set[int] = set()
             for position, author in enumerate(result.authors, start=1):
                 researcher = _upsert_researcher_by_name(db, author.name)
+                if researcher.id in seen_rids:
+                    continue
+                seen_rids.add(int(researcher.id))
                 db.add(
                     PaperAuthor(
                         paper_id=paper.id,

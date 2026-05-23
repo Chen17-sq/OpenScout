@@ -18,10 +18,17 @@ class _FakeClient:
 class _FakeRequest:
     """Minimal stand-in for fastapi.Request — only what `_ip_for_request` reads."""
 
-    def __init__(self, ip: str = "1.2.3.4", xff: str | None = None) -> None:
+    def __init__(
+        self,
+        ip: str = "1.2.3.4",
+        xff: str | None = None,
+        ingest_secret: str | None = None,
+    ) -> None:
         self.headers: dict[str, str] = {}
         if xff is not None:
             self.headers["x-forwarded-for"] = xff
+        if ingest_secret is not None:
+            self.headers["x-ingest-secret"] = ingest_secret
         self.client = _FakeClient(ip)
 
 
@@ -119,3 +126,48 @@ def test_endpoint_label_in_429_detail():
     with pytest.raises(HTTPException) as exc_info:
         quota_mod.check_and_increment(req, daily_limit=1, endpoint="custom_endpoint")
     assert "custom_endpoint" in exc_info.value.detail
+
+
+def test_admin_secret_bypasses_429(monkeypatch):
+    """A request carrying the matching X-Ingest-Secret header skips the
+    quota even when an anonymous IP has been exhausted.
+
+    Scenario: IP 10.0.0.11 exhausts the limit (cap=2). A third call with
+    no secret would 429. A fourth call with the admin secret on the same
+    IP succeeds anyway — and crucially must not bump the counter (it's an
+    operator override, not a normal dive).
+    """
+    monkeypatch.setattr(quota_mod.settings, "ingest_secret", "real-secret")
+
+    # Exhaust the IP's daily quota
+    req_anon = _FakeRequest(ip="10.0.0.11")
+    quota_mod.check_and_increment(req_anon, daily_limit=2)
+    quota_mod.check_and_increment(req_anon, daily_limit=2)
+    with pytest.raises(HTTPException) as exc_info:
+        quota_mod.check_and_increment(req_anon, daily_limit=2)
+    assert exc_info.value.status_code == 429
+
+    # Same IP, but now with the admin header — must succeed
+    req_admin = _FakeRequest(ip="10.0.0.11", ingest_secret="real-secret")
+    out = quota_mod.check_and_increment(req_admin, daily_limit=2)
+    assert out.get("admin_bypass") is True
+    assert out["remaining"] == 2  # not decremented
+
+    # The DB row for this IP must remain at the exhausted count
+    with session_scope() as db:
+        row = db.query(DeepDiveQuota).filter_by(ip_address="10.0.0.11").one()
+        assert row.count == 2
+
+    # Sanity: wrong secret falls through to the real quota path → still 429
+    req_wrong = _FakeRequest(ip="10.0.0.11", ingest_secret="not-the-secret")
+    with pytest.raises(HTTPException) as exc_info:
+        quota_mod.check_and_increment(req_wrong, daily_limit=2)
+    assert exc_info.value.status_code == 429
+
+    # Sanity: even a correct-looking secret is refused when the server is
+    # still on the default "change-me" — closes the prod-misconfig hole
+    monkeypatch.setattr(quota_mod.settings, "ingest_secret", "change-me")
+    req_default = _FakeRequest(ip="10.0.0.11", ingest_secret="change-me")
+    with pytest.raises(HTTPException) as exc_info:
+        quota_mod.check_and_increment(req_default, daily_limit=2)
+    assert exc_info.value.status_code == 429

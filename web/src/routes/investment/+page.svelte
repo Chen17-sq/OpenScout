@@ -14,7 +14,7 @@
   import { goto } from '$app/navigation';
   import { page } from '$app/state';
   import type { InvestmentPick } from '$lib/api';
-  import { paperUrl, roleLabel } from '$lib/api';
+  import { API_BASE, paperUrl, roleLabel } from '$lib/api';
   import { t } from '$lib/i18n';
   import type { ResearcherMeta } from './+page';
 
@@ -346,6 +346,14 @@
       <button type="button" class="export-btn" onclick={exportCsv}>
         ⤓ {$t('investment.exportCsv')}
       </button>
+      <a
+        class="export-btn"
+        href={`${API_BASE}/investment/picks.csv?limit=50&window_days=${window_days}`}
+        download
+        title="Server-rendered CSV — full 50 picks with all columns"
+      >
+        ↓ Export CSV
+      </a>
     </div>
   </div>
 
@@ -643,6 +651,12 @@
   .export-btn {
     background: var(--ink);
     color: var(--paper);
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1.4;
+  }
+  .export-btn + .export-btn {
+    margin-left: 6px;
   }
   .export-btn:hover {
     background: var(--accent);

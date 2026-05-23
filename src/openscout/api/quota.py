@@ -20,6 +20,7 @@ from datetime import UTC, datetime
 from fastapi import HTTPException, Request
 from sqlalchemy import select
 
+from ..config import settings
 from ..db import session_scope
 from ..models import DeepDiveQuota
 
@@ -39,6 +40,22 @@ def _today() -> str:
     return datetime.now(UTC).strftime("%Y-%m-%d")
 
 
+def _is_admin_request(req: Request) -> bool:
+    """Admin override: request carries `X-Ingest-Secret` matching `settings.ingest_secret`.
+
+    Header-only — never read from query strings (would leak in logs / Referer).
+    Refuses to bypass when the secret is still the default `"change-me"` —
+    otherwise prod with an unconfigured secret accepts the literal "change-me".
+    """
+    provided = req.headers.get("x-ingest-secret")
+    if not provided:
+        return False
+    expected = settings.ingest_secret
+    if not expected or expected == "change-me":
+        return False
+    return provided == expected
+
+
 def check_and_increment(
     req: Request,
     *,
@@ -49,7 +66,20 @@ def check_and_increment(
 
     Returns the post-increment counter state so the endpoint can echo it back
     (e.g. as `X-RateLimit-Remaining` header).
+
+    Admin bypass: if the request carries a valid `X-Ingest-Secret` header,
+    quota is skipped entirely and a sentinel state is returned (count/remaining
+    surface "admin" so the caller sees the override happened).
     """
+    if _is_admin_request(req):
+        return {
+            "ip": _ip_for_request(req),
+            "day": _today(),
+            "count": 0,
+            "limit": daily_limit,
+            "remaining": daily_limit,
+            "admin_bypass": True,
+        }
     ip = _ip_for_request(req)
     day = _today()
 

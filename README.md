@@ -118,6 +118,19 @@ A single `POST /researchers/{slug}/deep-dive` runs **12 sources** in three phase
 The limit and per-IP counter live in the `deep_dive_quota` table; swap
 `_ip_for_request` for a user-id helper once auth lands.
 
+**Admin bypass**: scripted dives (ops, batch refresh, cron) can skip the
+quota by passing the same `X-Ingest-Secret` header used by `/admin/ingest`:
+
+```bash
+curl -X POST \
+  -H "X-Ingest-Secret: $INGEST_SECRET" \
+  http://localhost:8000/researchers/yann-lecun/deep-dive
+```
+
+Header-only — never expose the secret in a query string, and never expose
+it to the browser. The bypass is silently refused when `INGEST_SECRET` is
+unset or still the default `"change-me"`.
+
 **Persistence**: results write into the researcher row directly. The
 `deep_dive_sources_used` JSON records the timestamp per source; a re-dive
 skips any source <30 days old unless `--force`. Results live forever — a

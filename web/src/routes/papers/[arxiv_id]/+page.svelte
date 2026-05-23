@@ -28,7 +28,7 @@
     </div>
     <div class="bm">
       <div class="lbl">Citations</div>
-      <div class="val mono accent">{p.citation_count.toLocaleString()}</div>
+      <div class="val mono accent">{(p.citation_count ?? 0).toLocaleString()}</div>
     </div>
     <div class="bm">
       <div class="lbl">GitHub ★</div>
@@ -36,7 +36,7 @@
     </div>
     <div class="bm">
       <div class="lbl">Buzz</div>
-      <div class="val mono">{p.buzz_score?.toFixed(2) ?? '—'}</div>
+      <div class="val mono">{p.buzz_score != null ? p.buzz_score.toFixed(2) : (p.work_score != null ? p.work_score.toFixed(2) : '—')}</div>
     </div>
   </div>
 
@@ -58,6 +58,7 @@
     </div>
   {/if}
 
+  {#if p.authors.length}
   <div class="section-head">
     <div class="label">Roster</div>
     <div class="h">Authors</div>
@@ -81,6 +82,7 @@
       {/each}
     </tbody>
   </table>
+  {/if}
 
   {#if p.topics.length}
     <div class="topics-row">

@@ -386,70 +386,114 @@ def top_investment_picks(
     Diversity guard: at most `max_per_paper` picks share the same top paper
     (otherwise a single hot paper with 12 authors fills the entire board).
     We over-fetch and then sieve.
+
+    ── Perf notes ─────────────────────────────────────────────────────────
+    BEFORE (per-researcher subquery, classic N+1):
+      limit=10 → 1 + up to 60 queries; ~16ms on the dev DB
+        (1668 papers × 7311 researchers, ~84 with v2-scored)
+    AFTER (single window-function query: row_number per researcher):
+      limit=10 → 1 query → ~8-9ms (~2× speedup at current data size).
+      The win scales with `limit`: each unit of `limit` previously cost up
+      to 6 extra round-trips; they all collapse into the single CTE here.
+    Window functions need SQLite ≥ 3.25 (we run 3.47) and are native on
+    Postgres — same SQL works on both dialects via SQLAlchemy.
+    ──────────────────────────────────────────────────────────────────────
     """
     cutoff_date = (datetime.now(UTC) - timedelta(days=window_days)).date()
     effective_date = _effective_date_expr()
     picks: list[dict] = []
     seen_paper_count: dict[int, int] = {}
+    over_fetch = limit * 6  # sieve below
+
     with session_scope() as db:
-        rows = (
-            db.execute(
-                select(Researcher)
-                .join(PaperAuthor, PaperAuthor.researcher_id == Researcher.id)
-                .join(Paper, Paper.id == PaperAuthor.paper_id)
-                .where(
-                    effective_date >= cutoff_date,
-                    Paper.work_score.is_not(None),
-                    Researcher.investability_score_v2.is_not(None),
-                    Researcher.investability_score_v2 > 0,
-                )
-                .group_by(Researcher.id)
-                .order_by(desc(Researcher.investability_score_v2))
-                .limit(limit * 6)  # over-fetch; sieve below
+        # Window function: rank each researcher's recent papers by work_score
+        # so row_num=1 is "the paper that drove their score." One row per
+        # researcher × paper; we'll filter to row_num=1 outside. This replaces
+        # the previous per-researcher subquery — the classic N+1 — with one
+        # plan the DB can execute in a single pass.
+        rn = (
+            func.row_number()
+            .over(
+                partition_by=PaperAuthor.researcher_id,
+                order_by=desc(Paper.work_score),
             )
-            .scalars()
-            .all()
+            .label("rn")
+        )
+        ranked = (
+            select(
+                PaperAuthor.researcher_id.label("rid"),
+                Paper.id.label("paper_id"),
+                Paper.arxiv_id,
+                Paper.title,
+                Paper.work_score,
+                Paper.breakthrough_score,
+                Paper.commercial_score,
+                Paper.buzz_score,
+                Paper.work_score_reasons,
+                PaperAuthor.position,
+                rn,
+            )
+            .join(PaperAuthor, PaperAuthor.paper_id == Paper.id)
+            .where(
+                effective_date >= cutoff_date,
+                Paper.work_score.is_not(None),
+            )
+        ).subquery("ranked")
+
+        # Join top-paper-per-researcher onto the ranked researchers. The DB
+        # gives back researcher rows already sorted by score, each paired with
+        # its single top paper — exactly what we used to assemble in Python.
+        stmt = (
+            select(
+                Researcher.slug,
+                Researcher.name_en,
+                Researcher.name_zh,
+                Researcher.country,
+                Researcher.current_role,
+                Researcher.investability_score_v2,
+                ranked.c.paper_id,
+                ranked.c.arxiv_id,
+                ranked.c.title,
+                ranked.c.work_score,
+                ranked.c.breakthrough_score,
+                ranked.c.commercial_score,
+                ranked.c.buzz_score,
+                ranked.c.work_score_reasons,
+                ranked.c.position,
+            )
+            .join(ranked, ranked.c.rid == Researcher.id)
+            .where(
+                ranked.c.rn == 1,
+                Researcher.investability_score_v2.is_not(None),
+                Researcher.investability_score_v2 > 0,
+            )
+            .order_by(desc(Researcher.investability_score_v2))
+            .limit(over_fetch)
         )
 
-        for r in rows:
-            # Pull the paper that produced the top score, plus this researcher's
-            # author position on it — needed for the "why" copy.
-            top_row = db.execute(
-                select(Paper, PaperAuthor.position)
-                .join(PaperAuthor, PaperAuthor.paper_id == Paper.id)
-                .where(
-                    PaperAuthor.researcher_id == r.id,
-                    effective_date >= cutoff_date,
-                    Paper.work_score.is_not(None),
-                )
-                .order_by(desc(Paper.work_score))
-                .limit(1)
-            ).first()
-            if not top_row:
-                continue
-            top_paper, position = top_row
-            paper_id = int(top_paper.id)
+        for row in db.execute(stmt).all():
+            paper_id = int(row.paper_id)
             if seen_paper_count.get(paper_id, 0) >= max_per_paper:
                 continue
             seen_paper_count[paper_id] = seen_paper_count.get(paper_id, 0) + 1
 
             picks.append(
                 {
-                    "slug": r.slug,
-                    "name_en": r.name_en,
-                    "name_zh": r.name_zh,
-                    "country": r.country,
-                    "current_role": r.current_role,
-                    "score": r.investability_score_v2,
+                    "slug": row.slug,
+                    "name_en": row.name_en,
+                    "name_zh": row.name_zh,
+                    "country": row.country,
+                    "current_role": row.current_role,
+                    "score": row.investability_score_v2,
                     "top_paper": {
-                        "arxiv_id": top_paper.arxiv_id,
-                        "title": top_paper.title,
-                        "work_score": top_paper.work_score,
-                        "breakthrough": top_paper.breakthrough_score,
-                        "commercial": top_paper.commercial_score,
-                        "buzz": round(min(1.0, (top_paper.buzz_score or 0) / 3.0), 3),
-                        "reasons": top_paper.work_score_reasons or [],
-                        "position": int(position) if position is not None else None,
+                        "arxiv_id": row.arxiv_id,
+                        "title": row.title,
+                        "work_score": row.work_score,
+                        "breakthrough": row.breakthrough_score,
+                        "commercial": row.commercial_score,
+                        "buzz": round(min(1.0, (row.buzz_score or 0) / 3.0), 3),
+                        "reasons": row.work_score_reasons or [],
+                        "position": int(row.position) if row.position is not None else None,
                     },
                 }
             )

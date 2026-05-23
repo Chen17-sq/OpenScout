@@ -16,5 +16,31 @@ services:
       timeout: 5s
       retries: 5
 
+  app:
+    build: .
+    container_name: openscout-app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      # Talk to the postgres service on the compose network (5432, not the 5433 host port).
+      DATABASE_URL: "postgresql+psycopg://openscout:openscout_dev@postgres:5432/openscout"
+      # Dummy keys so settings load. Override via .env / -e for real ingest runs.
+      DEEPSEEK_API_KEY: "${DEEPSEEK_API_KEY:-test}"
+      ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY:-}"
+      INGEST_SECRET: "${INGEST_SECRET:-dev-secret}"
+      FRONTEND_ORIGIN: "${FRONTEND_ORIGIN:-http://localhost:5174}"
+    ports:
+      - "8000:8000"
+    # Run alembic on Postgres before serving — mirrors fly.toml release_command.
+    command: >
+      sh -c "python -m openscout.cli init-db && exec uvicorn openscout.api.main:app --host 0.0.0.0 --port 8000"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
 volumes:
   openscout_postgres:

@@ -38,6 +38,10 @@ def trigger_deep_dive(
 
     Per-IP daily quota: `DEEP_DIVE_DAILY_LIMIT` dives/day. Returns 429 when
     exceeded (header `Retry-After` set to seconds-until-UTC-midnight).
+
+    Admin bypass: pass header `X-Ingest-Secret: <settings.ingest_secret>` to
+    skip the quota (CLI / GH Actions / ops scripts). Header-only — never
+    expose this to the browser.
     """
     from ...api.quota import _ip_for_request, check_and_increment
 

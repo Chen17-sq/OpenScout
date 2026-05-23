@@ -4,9 +4,12 @@
   import StarButton from '$lib/StarButton.svelte';
   import SourceBadge from '$lib/SourceBadge.svelte';
   import DeepDiveButton from '$lib/DeepDiveButton.svelte';
+  import { compareSlots, addToCompare, COMPARE_MAX } from '$lib/watchlist';
 
   let { data } = $props();
   const r = $derived(data.researcher);
+  const inCompare = $derived($compareSlots.includes(r.slug));
+  const compareFull = $derived($compareSlots.length >= COMPARE_MAX && !inCompare);
   const firstAuthored = $derived(r.papers.filter((p) => p.position === 1));
   const coAuthored = $derived(r.papers.filter((p) => p.position !== 1));
 
@@ -26,6 +29,21 @@
     <div class="meta">
       {r.name_zh ?? ''}
       <span class="star-wrap"><StarButton slug={r.slug} /></span>
+      <button
+        type="button"
+        class="cmp-btn"
+        class:on={inCompare}
+        onclick={() => addToCompare(r.slug)}
+        disabled={compareFull}
+        title={inCompare
+          ? $t('watchlist.inCompare')
+          : compareFull
+            ? $t('watchlist.compareFull')
+            : $t('watchlist.addToCompare')}
+        aria-label={$t('watchlist.addToCompare')}
+      >
+        {#if inCompare}✓ compare{:else}➕ compare{/if}
+      </button>
     </div>
   </div>
 
@@ -478,6 +496,31 @@
   .star-wrap {
     display: inline-block;
     margin-left: 12px;
+  }
+  .cmp-btn {
+    background: transparent;
+    border: 1px solid var(--n400);
+    color: var(--n600);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    margin-left: 6px;
+    cursor: pointer;
+    line-height: 1.2;
+  }
+  .cmp-btn:hover:not(:disabled) {
+    border-color: var(--ink);
+    color: var(--ink);
+  }
+  .cmp-btn.on {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--paper);
+  }
+  .cmp-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
   .profile-photo {
     display: inline-block;

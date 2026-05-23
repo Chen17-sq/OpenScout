@@ -318,3 +318,28 @@ class DailyBrief(Base):
     generated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
+
+
+class StepLog(Base):
+    """One row per orchestrator step — backs the per-step freshness gate.
+
+    The `openscout daily` orchestrator runs ~25 steps; some (faculty page diff,
+    conference PC, awards roster, lineage inference, banner) don't need to run
+    every day. We record each step's last successful run here so the wrapper in
+    `cli_daily._step()` can skip a step if its last OK run is within N hours.
+
+    Schema: one row per `step_name` (label). Latest run replaces the previous.
+    `last_result_json` is the raw return value of the step (any JSON-able dict
+    is fine) — used by callers that want to short-circuit on "no change" logic
+    (e.g. banner re-renders only if the input numbers moved).
+    """
+
+    __tablename__ = "step_log"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    step_name: Mapped[str] = mapped_column(String(128), unique=True, index=True)
+    last_run_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
+    )
+    last_status: Mapped[str] = mapped_column(String(16))  # ok / failed / skipped
+    last_result_json: Mapped[dict | None] = mapped_column(JSON)
