@@ -1,4 +1,17 @@
-name: ingest
+name: daily
+
+# Runs the FULL pipeline inside the GitHub-Actions runner — no Fly / Vercel
+# deploy needed. Persistence model:
+#   - openscout.db lives on the `data` branch (one orphan commit, force-pushed
+#     each day). Repo stays small (~5MB), and `git clone data` always gets the
+#     latest snapshot.
+#   - Brief markdown + social SVGs land on `main` so the site (Vercel / Pages /
+#     local) can serve them.
+#
+# Email digest sends via Resend during the run — make sure RESEND_API_KEY +
+# NOTIFY_EMAIL_TO are in repo Secrets, otherwise the digest step skips cleanly.
+#
+# To trigger manually: Actions tab → "daily" → "Run workflow"
 
 on:
   schedule:
@@ -7,23 +20,111 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write   # need to push to data + main
+
+concurrency:
+  group: daily-${{ github.ref }}
+  cancel-in-progress: false   # never cancel a half-run; data could be inconsistent
 
 jobs:
-  trigger:
+  ingest:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - name: POST /admin/ingest
-        env:
-          API_URL: ${{ vars.API_URL }}
-          INGEST_SECRET: ${{ secrets.INGEST_SECRET }}
+      - name: Checkout main (code)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          # Use a deploy key OR the auto-provided GITHUB_TOKEN. The latter has
+          # contents:write because of the permissions: block above.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull yesterday's DB from `data` branch
+        id: pull_db
+        continue-on-error: true
         run: |
-          if [ -z "$API_URL" ] || [ -z "$INGEST_SECRET" ]; then
-            echo "::error::Set repo variable API_URL and secret INGEST_SECRET first."
-            exit 1
+          if git fetch origin data 2>/dev/null; then
+            git checkout origin/data -- openscout.db || echo "data branch exists but openscout.db missing"
+            ls -lh openscout.db || echo "no DB pulled"
+          else
+            echo "data branch doesn't exist yet — first run will create it"
           fi
-          curl -fsS --max-time 600 -X POST \
-            -H "X-Ingest-Secret: $INGEST_SECRET" \
-            -H "Content-Type: application/json" \
-            "$API_URL/admin/ingest" | tee response.json
-          echo "Daily run complete."
+
+      - name: Setup Python + uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          version: "latest"
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Install deps
+        run: uv sync --no-dev
+
+      - name: init-db (idempotent — applies any new ALTER TABLE columns)
+        env:
+          DATABASE_URL: sqlite:///./openscout.db
+        run: uv run openscout init-db
+
+      - name: Seed (no-op if already seeded)
+        env:
+          DATABASE_URL: sqlite:///./openscout.db
+        run: uv run openscout seed
+
+      - name: Run full daily pipeline
+        env:
+          DATABASE_URL: sqlite:///./openscout.db
+          # Scraper APIs
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+          # GITHUB_TOKEN auto-provided — used by github_stars + github_discover
+          # Email digest
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NOTIFY_EMAIL_TO: ${{ secrets.NOTIFY_EMAIL_TO }}
+          # Sentry (optional)
+          SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+          # Misc
+          INGEST_SECRET: ${{ secrets.INGEST_SECRET }}
+        run: uv run openscout daily
+
+      - name: Force-push DB → `data` branch (orphan, no history)
+        run: |
+          set -e
+          git config user.name "openscout-bot[github-actions]"
+          git config user.email "openscout-bot@users.noreply.github.com"
+
+          # Build a fresh orphan tree with ONLY the DB (no history).
+          # `git worktree` keeps main checkout intact while we craft the data commit.
+          rm -rf /tmp/data-wt
+          git worktree add --detach /tmp/data-wt
+          cd /tmp/data-wt
+          git checkout --orphan data-snapshot
+          git rm -rf . 2>/dev/null || true
+          cp "${GITHUB_WORKSPACE}/openscout.db" ./openscout.db
+          git add openscout.db
+          git commit -m "data: daily $(date -u +%Y-%m-%d) · openscout.db snapshot"
+          git push --force origin data-snapshot:data
+          cd "${GITHUB_WORKSPACE}"
+          git worktree remove --force /tmp/data-wt
+
+      - name: Commit brief + social cards to `main`
+        run: |
+          set -e
+          # Only commit if something actually changed
+          if [ -n "$(git status --porcelain reports/ web/static/social/ 2>/dev/null)" ]; then
+            git pull --rebase origin main || true   # in case someone else pushed
+            git add reports/ web/static/social/
+            git commit -m "daily: $(date -u +%Y-%m-%d) brief + social cards" -m "Auto-generated by .github/workflows/ingest.yml"
+            git push origin main
+          else
+            echo "No new brief / social cards to commit"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## Daily run summary" >> $GITHUB_STEP_SUMMARY
+          echo "- Date: $(date -u +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+          echo "- DB size: $(du -h openscout.db | cut -f1)" >> $GITHUB_STEP_SUMMARY
+          echo "- Reports: $(ls reports/ 2>/dev/null | wc -l) files" >> $GITHUB_STEP_SUMMARY
+          echo "- Social cards: $(ls web/static/social/ 2>/dev/null | wc -l) folders" >> $GITHUB_STEP_SUMMARY
