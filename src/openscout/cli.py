@@ -177,6 +177,32 @@ def backfill_works(
     )
 
 
+@app.command("expand-anchors")
+def expand_anchors_cmd(
+    limit_per_concept: Annotated[int, typer.Option(help="Top-N OpenAlex works per concept")] = 25,
+) -> None:
+    """Auto-discover medium-confidence anchors from OpenAlex top-cited works + HF Daily.
+
+    Pulls first+last authors of 2024-2025 top-cited works across 7 OpenAlex
+    concepts (robotics, CV, embodied cognition, deep learning, RL, computational
+    biology, computational chemistry) and HuggingFace Daily Papers first-authors.
+
+    Idempotent — skips by openalex_id or exact name match. Existing high/medium
+    hand-curated anchors are untouched.
+    """
+    from .scraper.anchor_expansion import expand_anchors
+
+    c = expand_anchors(limit_per_concept=limit_per_concept)
+    console.print(
+        f"[green]✓[/green] expand-anchors: "
+        f"+{c['total_added']} new researchers · "
+        f"OpenAlex {c['openalex_added']}/{c['openalex_candidates']} candidates "
+        f"({c['openalex_works_fetched']} works) · "
+        f"HF {c['hf_added']}/{c['hf_fetched']} · "
+        f"errors OA={c['openalex_errors']} HF={c['hf_errors']}"
+    )
+
+
 @app.command()
 def score() -> None:
     """Compute person_score / trajectory_score / investability_score for all researchers."""
