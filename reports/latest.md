@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 013                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · WEDNESDAY, MAY 27, 2026
+VOL. 1 · NO. 014                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · THURSDAY, MAY 28, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 013 · 2026-05-27
+> *All The Researchers Fit To Watch* — Vol. 1, No. 014 · 2026-05-28
 
-_Auto-generated at 2026-05-27T05:11:44+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-05-28T05:06:49+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,108 +15,114 @@ _Auto-generated at 2026-05-27T05:11:44+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **6274** | 223 | 1071 | 1 | 2 |
+| **7847** | 239 | 1573 | 1 | 2 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Dynamics Distillation for Efficient and Transferable Control Learning
+### No. 01 · Prebiotic magnetite enables chirality-magnetic surface feedback
 
-**Xunjiang Gu** · 一作 · 5 作者 · [arXiv:2605.01516](https://arxiv.org/abs/2605.01516)
+**Jose A. P. M. Devienne** · 一作 · 8 作者 · [arXiv:2605.19387](https://arxiv.org/abs/2605.19387)
 
-_Robust control policy learning for autonomous driving requires training environments to be both physically realistic and computationally scalable, properties that existing simulators provide only in isolation. We introd…_
+_The emergence of biomolecular homochirality requires both an initial symmetry-breaking event and a mechanism to amplify and preserve a chiral imbalance. Magnetic minerals have been shown to function as chiral agents thr…_
 
-→ [profile](/researchers/xunjiang-gu)
-
----
-### No. 02 · LongTail Driving Scenarios with Reasoning Traces: The KITScenes LongTail Dataset
-
-**Royden Wagner** · 一作 · 21 作者 · [arXiv:2603.23607](https://arxiv.org/abs/2603.23607)
-
-_In real-world domains such as self-driving, generalization to rare scenarios remains a fundamental challenge. To address this, we introduce a new dataset designed for end-to-end driving that focuses on long-tail driving…_
-
-→ [profile](/researchers/royden-wagner)
+→ [profile](/researchers/jose-a-p-m-devienne)
 
 ---
-### No. 03 · Material Magic Wand: Material-Aware Grouping of 3D Parts in Untextured Meshes
+### No. 02 · AI for Auto-Research: Roadmap & User Guide
 
-**Umangi Jain** · 一作 · 5 作者 · [arXiv:2603.17370](https://arxiv.org/abs/2603.17370)
+**Lingdong Kong** · 一作 · 20 作者 · [arXiv:2605.18661](https://arxiv.org/abs/2605.18661)
 
-_We introduce the problem of material-aware part grouping in untextured meshes. Many real-world shapes, such as scales of pinecones or windows of buildings, contain repeated structures that share the same material but ex…_
+_AI-assisted research is crossing a threshold: fully automated systems can now generate research papers for as little as $15, while long-horizon agents can execute experiments, draft manuscripts, and simulate critique wi…_
 
-→ [profile](/researchers/umangi-jain)
-
----
-### No. 04 · Update-Free On-Policy Steering via Verifiers
-
-**Maria Attarian** · 一作 · 9 作者 · [arXiv:2603.10282](https://arxiv.org/abs/2603.10282)
-
-_In recent years, Behavior Cloning (BC) has become one of the most prevalent methods for enabling robots to mimic human demonstrations. However, despite their successes, BC policies are often brittle and struggle with pr…_
-
-→ [profile](/researchers/maria-attarian)
+→ [profile](/researchers/lingdong-kong)
 
 ---
-### No. 05 · The Impact of Class Uncertainty Propagation in Perception-Based Motion Planning
+### No. 03 · Senses Wide Shut: A Representation-Action Gap in Omnimodal LLMs
 
-**Jibran Iqbal Shah** · 一作 · 7 作者 · [arXiv:2602.16035](https://arxiv.org/abs/2602.16035)
+**Trung Nguyen Quang** · 一作 · 6 作者 · [arXiv:2605.13737](https://arxiv.org/abs/2605.13737)
 
-_Autonomous vehicles (AVs) are being increasingly deployed in urban environments. In order to operate safely and reliably, AVs need to account for the inherent uncertainty associated with perceiving the world through sen…_
+_When an omnimodal large language model accepts a question whose textual premise contradicts what it actually sees or hears, does the failure lie in perception or in action? Recent omnimodal models are positioned as perc…_
 
-→ [profile](/researchers/jibran-iqbal-shah)
-
----
-### No. 06 · Test-Time Graph Search for Goal-Conditioned Reinforcement Learning
-
-**Evgenii Opryshko** · 一作 · 5 作者 · [arXiv:2510.07257](https://arxiv.org/abs/2510.07257)
-
-_Offline goal-conditioned reinforcement learning (GCRL) often struggles with long-horizon tasks, where errors in value estimation accumulate and produce unreliable policies. It is typically assumed that effective long-te…_
-
-→ [profile](/researchers/evgenii-opryshko)
+→ [profile](/researchers/trung-nguyen-quang)
 
 ---
-### No. 07 · LuxDiT: Lighting Estimation with Video Diffusion Transformer
+### No. 04 · Is Your Driving World Model an All-Around Player?
 
-**Ruofan Liang** · 一作 · 7 作者 · [arXiv:2509.03680](https://arxiv.org/abs/2509.03680)
+**Lingdong Kong** · 一作 · 23 作者 · [arXiv:2605.10858](https://arxiv.org/abs/2605.10858)
 
-*微调视频扩散Transformer生成HDR环境图实现光照估计。*
+*提出WorldLens统一评测驾驶世界模型的像素、几何与行为保真度。*
 
-_Estimating scene lighting from a single image or video remains a longstanding challenge in computer vision and graphics. Learning-based approaches are constrained by the scarcity of ground-truth HDR environment maps, wh…_
+_Today's driving world models can generate remarkably realistic dash-cam videos, yet no single model excels universally. Some generate photorealistic textures but violate basic physics; others maintain geometric consiste…_
 
-→ [profile](/researchers/ruofan-liang)
-
----
-### No. 08 · VibES: Induced Vibration for Persistent Event-Based Sensing
-
-**Vincenzo Polizzi** · 一作 · 6 作者 · [arXiv:2508.19094](https://arxiv.org/abs/2508.19094)
-
-*用旋转偏心质量诱发振动，结合运动补偿实现持续事件感知。*
-
-_Event cameras are a bio-inspired class of sensors that asynchronously measure per-pixel intensity changes. Under fixed illumination conditions in static or low-motion scenes, rigidly mounted event cameras are unable to…_
-
-→ [profile](/researchers/vincenzo-polizzi)
+→ [profile](/researchers/lingdong-kong)
 
 ---
-### No. 09 · TESPEC: Temporally-Enhanced Self-Supervised Pretraining for Event Cameras
+### No. 05 · Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond
 
-**Mohammad Mohammadi** · 一作 · 3 作者 · [arXiv:2508.00913](https://arxiv.org/abs/2508.00913)
+**Meng Chu** · 一作 · 42 作者 · [arXiv:2604.22748](https://arxiv.org/abs/2604.22748)
 
-*用长事件序列预训练循环模型，重建伪灰度视频。*
+*提出“层级×法则”世界模型分类法，统一预测、模拟与自演化能力。*
 
-_Long-term temporal information is crucial for event-based perception tasks, as raw events only encode pixel brightness changes. Recent works show that when trained from scratch, recurrent models achieve better results t…_
+_As AI systems move from generating text to accomplishing goals through sustained interaction, the ability to model environment dynamics becomes a central bottleneck. Agents that manipulate objects, navigate software, co…_
 
-→ [profile](/researchers/mohammad-mohammadi)
+→ [profile](/researchers/meng-chu)
 
 ---
-### No. 10 · Delving into Mapping Uncertainty for Mapless Trajectory Prediction
+### No. 06 · Prompt Relay: Inference-Time Temporal Control for Multi-Event Video Generation
 
-**Zongzheng Zhang** · 一作 · 14 作者 · [arXiv:2507.18498](https://arxiv.org/abs/2507.18498)
+**Gordon Chen** · 一作 · 3 作者 · [arXiv:2604.10030](https://arxiv.org/abs/2604.10030)
 
-*通过自监督场景门控融合地图不确定性提升无地图轨迹预测。*
+*在交叉注意力中引入惩罚实现多事件视频时序控制。*
 
-_Recent advances in autonomous driving are moving towards mapless approaches, where High-Definition (HD) maps are generated online directly from sensor data, reducing the need for expensive labeling and maintenance. Howe…_
+_Video diffusion models have achieved remarkable progress in generating high-quality videos. However, these models struggle to represent the temporal succession of multiple events in real-world videos and lack explicit m…_
 
-→ [profile](/researchers/zongzheng-zhang)
+→ [profile](/researchers/gordon-chen)
+
+---
+### No. 07 · Video-MME-v2: Towards the Next Stage in Benchmarks for Comprehensive Video Understanding
+
+**Chaoyou Fu** · 一作 · 19 作者 · [arXiv:2604.05015](https://arxiv.org/abs/2604.05015)
+
+*提出渐进三级层次与群组非线性评估的视频理解基准。*
+
+_With the rapid advancement of video understanding, existing benchmarks are becoming increasingly saturated, exposing a critical discrepancy between inflated leaderboard scores and real-world model capabilities. To addre…_
+
+→ [profile](/researchers/chaoyou-fu)
+
+---
+### No. 08 · FileGram: Grounding Agent Personalization in File-System Behavioral Traces
+
+**Shuai Liu** · 一作 · 9 作者 · [arXiv:2604.04901](https://arxiv.org/abs/2604.04901)
+
+*用文件操作行为轨迹实现智能体个性化记忆。*
+
+_Coworking AI agents operating within local file systems are rapidly emerging as a paradigm in human-AI interaction; however, effective personalization remains limited by severe data constraints, as strict privacy barrie…_
+
+→ [profile](/researchers/shuai-liu)
+
+---
+### No. 09 · A Simple Baseline for Streaming Video Understanding
+
+**Yujiao Shen** · 一作 · 4 作者 · [arXiv:2604.02317](https://arxiv.org/abs/2604.02317)
+
+*滑动窗口用4帧VLM即超越复杂记忆模型。*
+
+_Recent streaming video understanding methods increasingly rely on complex memory mechanisms to handle long video streams. We challenge this trend with a simple finding: a sliding-window baseline that feeds only the most…_
+
+→ [profile](/researchers/yujiao-shen)
+
+---
+### No. 10 · HippoCamp: Benchmarking Contextual Agents on Personal Computers
+
+**Zhe Yang** · 一作 · 12 作者 · [arXiv:2604.01221](https://arxiv.org/abs/2604.01221)
+
+*构建多模态个人文件系统基准，评估MLLM长程检索与跨模态推理。*
+
+_We present HippoCamp, a new benchmark designed to evaluate agents' capabilities on multimodal file management. Unlike existing agent benchmarks that focus on tasks like web interaction, tool use, or software automation…_
+
+→ [profile](/researchers/zhe-yang)
 
 ---
 
@@ -124,16 +130,16 @@ _Recent advances in autonomous driving are moving towards mapless approaches, wh
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Sergey Tulyakov](/researchers/sergey-tulyakov) | ActionParty: Multi-Subject Action Binding in Generative Video Games | — | [2604.02330](https://arxiv.org/abs/2604.02330) |
-| [Yilun Du](/researchers/yilun-du) | Update-Free On-Policy Steering via Verifiers | — | [2603.10282](https://arxiv.org/abs/2603.10282) |
-| [Yilun Du](/researchers/yilun-du) | Test-Time Graph Search for Goal-Conditioned Reinforcement Learning | — | [2510.07257](https://arxiv.org/abs/2510.07257) |
-| [Pieter Abbeel](/researchers/pieter-abbeel) | Relative Entropy Pathwise Policy Optimization | — | [2507.11019](https://arxiv.org/abs/2507.11019) |
-| [Sergey Tulyakov](/researchers/sergey-tulyakov) | DenseDPO: Fine-Grained Temporal Preference Optimization for Video Dif… | — | [2506.03517](https://arxiv.org/abs/2506.03517) |
-| [Sergey Tulyakov](/researchers/sergey-tulyakov) | Mind the Time: Temporally-Controlled Multi-Event Video Generation | — | [2412.05263](https://arxiv.org/abs/2412.05263) |
-| [Ziwei Liu](/researchers/ziwei-liu) | Feed-Forward Bullet-Time Reconstruction of Dynamic Scenes from Monocu… | — | [2412.03526](https://arxiv.org/abs/2412.03526) |
-| [Yilun Du](/researchers/yilun-du) | 3D-LLM: Injecting the 3D World into Large Language Models | — | [2307.12981](https://arxiv.org/abs/2307.12981) |
-| [Chuang Gan](/researchers/chuang-gan) | 3D-LLM: Injecting the 3D World into Large Language Models | — | [2307.12981](https://arxiv.org/abs/2307.12981) |
-| [Percy Liang](/researchers/percy-liang) | Language Models Prefer What They Know: Relative Confidence Estimation… | — | [2502.01126](https://arxiv.org/abs/2502.01126) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Prebiotic magnetite enables chirality-magnetic surface feedback | — | [2605.19387](https://arxiv.org/abs/2605.19387) |
+| [Ziwei Liu](/researchers/ziwei-liu) | AI for Auto-Research: Roadmap & User Guide | — | [2605.18661](https://arxiv.org/abs/2605.18661) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Senses Wide Shut: A Representation-Action Gap in Omnimodal LLMs | — | [2605.13737](https://arxiv.org/abs/2605.13737) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Conditional Memory Enhanced Item Representation for Generative Recomm… | — | [2605.11447](https://arxiv.org/abs/2605.11447) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Is Your Driving World Model an All-Around Player? | — | [2605.10858](https://arxiv.org/abs/2605.10858) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond | — | [2604.22748](https://arxiv.org/abs/2604.22748) |
+| [Jiaya Jia](/researchers/jiaya-jia) | Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond | — | [2604.22748](https://arxiv.org/abs/2604.22748) |
+| [Ziwei Liu](/researchers/ziwei-liu) | A Faster Path to Continual Learning | — | [2604.11064](https://arxiv.org/abs/2604.11064) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Prompt Relay: Inference-Time Temporal Control for Multi-Event Video G… | — | [2604.10030](https://arxiv.org/abs/2604.10030) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Video-MME-v2: Towards the Next Stage in Benchmarks for Comprehensive… | — | [2604.05015](https://arxiv.org/abs/2604.05015) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -149,94 +155,98 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Atomically precise mechanosynthesis of carbon structures on hydrogenated Si(100) by inverted-mode STM
+### No. 01 · Global PIQA: Evaluating Physical Commonsense Reasoning Across 100+ Languages and Cultures
 
-**Megan Cowie** · 一作 · 47 作者 · [arXiv:2605.27250](https://arxiv.org/abs/2605.27250)
+**Tyler A. Chang** · 一作 · 337 作者 · [arXiv:2510.24081](https://arxiv.org/abs/2510.24081)
 
-_The ability to build atomically precise structures on surfaces with complete control over both atomic placement and chemical bonding remains a central challenge in nanoscale fabrication. Here, we demonstrate simultaneou…_
+_To date, there exist almost no culturally-specific evaluation benchmarks for large language models (LLMs) that cover a large number of languages and cultures. In this paper, we present Global PIQA, a participatory commo…_
 
-→ [profile](/researchers/megan-cowie)
-
----
-### No. 02 · The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence
-
-**MiniMax** · 一作 · 30 作者 · [arXiv:2605.26494](https://arxiv.org/abs/2605.26494)
-
-_We introduce the MiniMax-M2 series, a family of Mixture-of-Experts language models built around the principle that mini activations can unleash maximum real-world intelligence. The flagship M2 contains 229.9B total para…_
-
-→ [profile](/researchers/minimax)
+→ [profile](/researchers/tyler-a-chang)
 
 ---
-### No. 03 · EvalVerse: Pipeline-Aware and Expert-Calibrated Benchmarking for Professional Cinematic Video Generation
+### No. 02 · Soohak: A Mathematician-Curated Benchmark for Evaluating Research-level Math Capabilities of LLMs
 
-**Songlin Yang** · 一作 · 26 作者 · [arXiv:2605.23271](https://arxiv.org/abs/2605.23271)
+**Guijin Son** · 一作 · 76 作者 · [arXiv:2605.09063](https://arxiv.org/abs/2605.09063)
 
-_The rapid evolution of generative video foundation models has propelled the field toward professional-grade cinematic synthesis. To achieve such demanding quality, the community transitions towards Reinforcement Learnin…_
+_Following the recent achievement of gold-medal performance on the IMO by frontier LLMs, the community is searching for the next meaningful and challenging target for measuring LLM reasoning. Whereas olympiad-style probl…_
 
-→ [profile](/researchers/songlin-yang)
-
----
-### No. 04 · Phi-4-reasoning Technical Report
-
-**Marah Abdin** · 一作 · 23 作者 · [arXiv:2504.21318](https://arxiv.org/abs/2504.21318)
-
-_We introduce Phi-4-reasoning, a 14-billion parameter reasoning model that achieves strong performance on complex reasoning tasks. Trained via supervised fine-tuning of Phi-4 on carefully curated set of "teachable" promp…_
-
-→ [profile](/researchers/marah-abdin)
+→ [profile](/researchers/guijin-son)
 
 ---
-### No. 05 · LongTail Driving Scenarios with Reasoning Traces: The KITScenes LongTail Dataset
+### No. 03 · SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify Architecture
 
-**Royden Wagner** · 一作 · 21 作者 · [arXiv:2603.23607](https://arxiv.org/abs/2603.23607)
+**Haiwen Diao** · 一作 · 58 作者 · [arXiv:2605.12500](https://arxiv.org/abs/2605.12500)
 
-_In real-world domains such as self-driving, generalization to rare scenarios remains a fundamental challenge. To address this, we introduce a new dataset designed for end-to-end driving that focuses on long-tail driving…_
+_Recent large vision-language models (VLMs) remain fundamentally constrained by a persistent dichotomy: understanding and generation are treated as distinct problems, leading to fragmented architectures, cascaded pipelin…_
 
-→ [profile](/researchers/royden-wagner)
-
----
-### No. 06 · LongAV-Compass: Towards Unified Evaluation of Minute-Scale Audio-Visual Generation Across T2AV, I2AV, and V2AV
-
-**Tengfei Liu** · 一作 · 20 作者 · [arXiv:2605.26244](https://arxiv.org/abs/2605.26244)
-
-_Audio-visual generation is rapidly advancing from short clips to minute-long content, while existing evaluation protocols remain largely confined to short-form settings. Existing benchmarks primarily focus on 5--10 seco…_
-
-→ [profile](/researchers/tengfei-liu)
+→ [profile](/researchers/haiwen-diao)
 
 ---
-### No. 07 · Resilience of the physicochemical properties of graphene-based materials for applications in harsh radiation environments
+### No. 04 · Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond
 
-**Marcilei A. Guazzelli** · 一作 · 19 作者 · [arXiv:2605.26311](https://arxiv.org/abs/2605.26311)
+**Meng Chu** · 一作 · 42 作者 · [arXiv:2604.22748](https://arxiv.org/abs/2604.22748)
 
-_The development of radiation-tolerant materials capable of maintaining structural, electrical, and thermal stability in extreme, radiation-rich environments remains a critical challenge in materials science. In this wor…_
+*提出“层级×法则”世界模型分类法，统一预测、模拟与自演化能力。*
 
-→ [profile](/researchers/marcilei-a-guazzelli)
+_As AI systems move from generating text to accomplishing goals through sustained interaction, the ability to model environment dynamics becomes a central bottleneck. Agents that manipulate objects, navigate software, co…_
 
----
-### No. 08 · CrossCheck-Bench: Diagnosing Compositional Failures in Multimodal Conflict Resolution
-
-**Baoliang Tian** · 一作 · 16 作者 · [arXiv:2511.21717](https://arxiv.org/abs/2511.21717)
-
-_Multimodal Large Language Models are primarily trained and evaluated on aligned image-text pairs, which leaves their ability to detect and resolve real-world inconsistencies largely unexplored. In open-domain applicatio…_
-
-→ [profile](/researchers/baoliang-tian)
+→ [profile](/researchers/meng-chu)
 
 ---
-### No. 09 · Towards Shared Embodied Intelligence in Humanoid Robots through Optimization Development and Testing of the Human Aware ergoCub Robot
+### No. 05 · The BiGGen Bench: A Principled Benchmark for Fine-grained Evaluation of Language Models with Language Models
 
-**Carlotta Sartore** · 一作 · 16 作者 · [arXiv:2605.26991](https://arxiv.org/abs/2605.26991)
+**Seungone Kim** · 一作 · 32 作者 · [arXiv:2406.05761](https://arxiv.org/abs/2406.05761)
 
-_Collaboration is central to human behavior, enabling tasks beyond individual capability. This ability arises from coordinating actions through internal representations of others, a concept known as shared intelligence.…_
+_As language models (LMs) become capable of handling a wide range of tasks, their evaluation is becoming as challenging as their development. Most generation benchmarks currently assess LMs using abstract evaluation crit…_
 
-→ [profile](/researchers/carlotta-sartore)
+→ [profile](/researchers/seungone-kim)
 
 ---
-### No. 10 · Ultrafast signatures of Dirac / flat-band hybrid states from time-resolved ARPES
+### No. 06 · Infinity-MM: Scaling Multimodal Performance with Large-Scale and High-Quality Instruction Data
 
-**Maria-Elisabeth Federl** · 一作 · 15 作者 · [arXiv:2605.26873](https://arxiv.org/abs/2605.26873)
+**Shuhao Gu** · 一作 · 26 作者 · [arXiv:2410.18558](https://arxiv.org/abs/2410.18558)
 
-_Hybridization of highly itinerant Dirac electrons with localized flat-band states is predicted to yield emergent phenomena such as exotic heavy-fermion behaviour. Epitaxial graphene on two-dimensional adsorbate structur…_
+_Recently, Vision-Language Models (VLMs) have achieved remarkable progress in multimodal tasks, and multimodal instruction data serves as the foundation for enhancing VLM capabilities. Despite the availability of several…_
 
-→ [profile](/researchers/maria-elisabeth-federl)
+→ [profile](/researchers/shuhao-gu)
+
+---
+### No. 07 · Is Your Driving World Model an All-Around Player?
+
+**Lingdong Kong** · 一作 · 23 作者 · [arXiv:2605.10858](https://arxiv.org/abs/2605.10858)
+
+*提出WorldLens统一评测驾驶世界模型的像素、几何与行为保真度。*
+
+_Today's driving world models can generate remarkably realistic dash-cam videos, yet no single model excels universally. Some generate photorealistic textures but violate basic physics; others maintain geometric consiste…_
+
+→ [profile](/researchers/lingdong-kong)
+
+---
+### No. 08 · Atomic-Scale Observation of Symmetry Breaking in Altermagnetic MnTe
+
+**Guodong Ren** · 一作 · 22 作者 · [arXiv:2605.27543](https://arxiv.org/abs/2605.27543)
+
+_The recent discovery of altermagnetism has sparked growing interest in compensated magnetic systems as promising platforms for highly scalable spintronics. Altermagnetism is a distinct magnetic order where opposite spin…_
+
+→ [profile](/researchers/guodong-ren)
+
+---
+### No. 09 · From Pixels to Words -- Towards Native One-Vision Models at Scale
+
+**Haiwen Diao** · 一作 · 21 作者 · [arXiv:2605.28820](https://arxiv.org/abs/2605.28820)
+
+_Current vision-language models (VLMs) typically stitch together separate image encoders and language decoders via multi-stage alignment, a modular framework that inevitably fragments pixel-level signals across frames an…_
+
+→ [profile](/researchers/haiwen-diao)
+
+---
+### No. 10 · AI for Auto-Research: Roadmap & User Guide
+
+**Lingdong Kong** · 一作 · 20 作者 · [arXiv:2605.18661](https://arxiv.org/abs/2605.18661)
+
+_AI-assisted research is crossing a threshold: fully automated systems can now generate research papers for as little as $15, while long-horizon agents can execute experiments, draft manuscripts, and simulate critique wi…_
+
+→ [profile](/researchers/lingdong-kong)
 
 ---
 
@@ -246,59 +256,61 @@ _Hybridization of highly itinerant Dirac electrons with localized flat-band stat
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · Atomically precise mechanosynthesis of carbon structures on hydrogenated Si(100) by inverted-mode STM
+### No. 01 · Global PIQA: Evaluating Physical Commonsense Reasoning Across 100+ Languages and Cultures
 
-**Megan Cowie** · 一作 · 47 作者 · [arXiv:2605.27250](https://arxiv.org/abs/2605.27250)
+**Tyler A. Chang** · 一作 · 337 作者 · [arXiv:2510.24081](https://arxiv.org/abs/2510.24081)
 
-_The ability to build atomically precise structures on surfaces with complete control over both atomic placement and chemical bonding remains a central challenge in nanoscale fabrication. Here, we demonstrate simultaneou…_
+_To date, there exist almost no culturally-specific evaluation benchmarks for large language models (LLMs) that cover a large number of languages and cultures. In this paper, we present Global PIQA, a participatory commo…_
 
-**▸ 选中原因：首次出现 · 47 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 337 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/megan-cowie)
-
----
-### No. 02 · The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence
-
-**MiniMax** · 一作 · 30 作者 · [arXiv:2605.26494](https://arxiv.org/abs/2605.26494)
-
-_We introduce the MiniMax-M2 series, a family of Mixture-of-Experts language models built around the principle that mini activations can unleash maximum real-world intelligence. The flagship M2 contains 229.9B total para…_
-
-**▸ 选中原因：首次出现 · 30 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/minimax)
+→ [profile](/researchers/tyler-a-chang)
 
 ---
-### No. 03 · EvalVerse: Pipeline-Aware and Expert-Calibrated Benchmarking for Professional Cinematic Video Generation
+### No. 02 · SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify Architecture
 
-**Songlin Yang** · 一作 · 26 作者 · [arXiv:2605.23271](https://arxiv.org/abs/2605.23271)
+**Haiwen Diao** · 一作 · 58 作者 · [arXiv:2605.12500](https://arxiv.org/abs/2605.12500)
 
-_The rapid evolution of generative video foundation models has propelled the field toward professional-grade cinematic synthesis. To achieve such demanding quality, the community transitions towards Reinforcement Learnin…_
+_Recent large vision-language models (VLMs) remain fundamentally constrained by a persistent dichotomy: understanding and generation are treated as distinct problems, leading to fragmented architectures, cascaded pipelin…_
 
-**▸ 选中原因：首次出现 · 26 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 58 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/songlin-yang)
+→ [profile](/researchers/haiwen-diao)
 
 ---
-### No. 04 · HyperSim: A Holistic Sim-To-Real Framework For Robust Robotic Manipulation
+### No. 03 · Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond
 
-**Junyi Dong** · 一作 · 14 作者 · [arXiv:2605.26638](https://arxiv.org/abs/2605.26638)
+**Meng Chu** · 一作 · 42 作者 · [arXiv:2604.22748](https://arxiv.org/abs/2604.22748)
 
-_Scaling data volume and diversity is critical for generalizing embodied intelligence. While synthetic data generation offers a scalable alternative to expensive physical data acquisition, transferring robotic manipulati…_
+*提出“层级×法则”世界模型分类法，统一预测、模拟与自演化能力。*
+
+_As AI systems move from generating text to accomplishing goals through sustained interaction, the ability to model environment dynamics becomes a central bottleneck. Agents that manipulate objects, navigate software, co…_
+
+**▸ 选中原因：首次出现 · 42 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/meng-chu)
+
+---
+### No. 04 · Beyond Binary: Sim-to-Real Dexterous Manipulation with Physics-Grounded Contact Representation
+
+**Jiahe Pan** · 一作 · 4 作者 · [arXiv:2605.28812](https://arxiv.org/abs/2605.28812)
+
+_A primary bottleneck in contact-rich manipulation is the difficulty of collecting real-world data. Sim-to-real reinforcement learning offers a scalable alternative, but the simulation-reality gap prevents information-de…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/junyi-dong)
+→ [profile](/researchers/jiahe-pan)
 
 ---
-### No. 05 · When Does LeJEPA Learn a World Model?
+### No. 05 · GEM: Generative Supervision Helps Embodied Intelligence
 
-**David Klindt** · 一作 · 3 作者 · [arXiv:2605.26379](https://arxiv.org/abs/2605.26379)
+**Ruowen Zhao** · 一作 · 12 作者 · [arXiv:2605.28548](https://arxiv.org/abs/2605.28548)
 
-_A representation that scrambles the true degrees of freedom of the world cannot support reliable planning or compositional generalization. We prove that LeJEPA (alignment plus Gaussian regularization) linearly recovers…_
+_Embodied Vision-Language Models (VLMs) have demonstrated impressive performance and generalization in robotics, particularly within Vision-Language-Action frameworks. However, a significant gap remains between the high-…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/david-klindt)
+→ [profile](/researchers/ruowen-zhao)
 
 ---
 
