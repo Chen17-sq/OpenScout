@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 017                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · SUNDAY, MAY 31, 2026
+VOL. 1 · NO. 018                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · MONDAY, JUNE 1, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 017 · 2026-05-31
+> *All The Researchers Fit To Watch* — Vol. 1, No. 018 · 2026-06-01
 
-_Auto-generated at 2026-05-31T05:19:13+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-06-01T05:56:48+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,116 +15,125 @@ _Auto-generated at 2026-05-31T05:19:13+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **9237** | 27 | 61 | 1 | 17 |
+| **10770** | 323 | 1533 | 1 | 17 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · GlobalSplat: Efficient Feed-Forward 3D Gaussian Splatting via Global Scene Tokens
+### No. 01 · GenRec: A Preference-Oriented Generative Framework for Large-Scale Recommendation
 
-**Roni Itkin** · 一作 · 6 作者 · [arXiv:2604.15284](https://arxiv.org/abs/2604.15284)
+**Yanyan Zou** · 一作 · 10 作者 · [arXiv:2604.14878](https://arxiv.org/abs/2604.14878)
 
-_The efficient spatial allocation of primitives serves as the foundation of 3D Gaussian Splatting, as it directly dictates the synergy between representation compactness, reconstruction speed, and rendering fidelity. Pre…_
+*提出页面级NTP与GRPO-SR强化学习优化大规模推荐。*
 
-→ [profile](/researchers/roni-itkin)
+_Generative Retrieval (GR) offers a promising paradigm for recommendation through next-token prediction (NTP). However, scaling it to large-scale industrial systems introduces three challenges: (i) within a single reques…_
 
----
-### No. 02 · RAD: Retrieval-Augmented Monocular Metric Depth Estimation for Underrepresented Classes
-
-**Michael Baltaxe** · 一作 · 3 作者 · [arXiv:2602.09532](https://arxiv.org/abs/2602.09532)
-
-_Monocular Metric Depth Estimation (MMDE) is essential for physically intelligent systems, yet accurate depth estimation for underrepresented classes in complex scenes remains a persistent challenge. To address this, we…_
-
-→ [profile](/researchers/michael-baltaxe)
+→ [profile](/researchers/yanyan-zou)
 
 ---
-### No. 03 · SemanticMoments: Training-Free Motion Similarity via Third Moment Features
+### No. 02 · Towards Federated Domain Unlearning: Verification Methodologies and Challenges
 
-**Saar Huberman** · 一作 · 5 作者 · [arXiv:2602.09146](https://arxiv.org/abs/2602.09146)
+**Kahou Tam** · 一作 · 4 作者 · [arXiv:2406.03078](https://arxiv.org/abs/2406.03078)
 
-_Retrieving videos based on semantic motion is a fundamental, yet unsolved, problem. Existing video representation approaches overly rely on static appearance and scene context rather than motion dynamics, a bias inherit…_
+*提出联邦域遗忘评估方法，解决多域遗忘影响深层表征问题。*
 
-→ [profile](/researchers/saar-huberman)
+_Federated Learning (FL) has evolved as a powerful tool for collaborative model training across multiple entities, ensuring data privacy in sensitive sectors such as healthcare and finance. However, the introduction of t…_
 
----
-### No. 04 · Splat and Distill: Augmenting Teachers with Feed-Forward 3D Reconstruction For 3D-Aware Distillation
-
-**David Shavin** · 一作 · 2 作者 · [arXiv:2602.06032](https://arxiv.org/abs/2602.06032)
-
-_Vision Foundation Models (VFMs) have achieved remarkable success when applied to various downstream 2D tasks. Despite their effectiveness, they often exhibit a critical lack of 3D awareness. To this end, we introduce Sp…_
-
-→ [profile](/researchers/david-shavin)
+→ [profile](/researchers/kahou-tam)
 
 ---
-### No. 05 · Lang3D-XL: Language Embedded 3D Gaussians for Large-scale Scenes
+### No. 03 · Enhancement of hydroxyapatite dissolution through structure modification by Krypton ion irradiation
 
-**Shai Krakovsky** · 一作 · 4 作者 · [arXiv:2512.07807](https://arxiv.org/abs/2512.07807)
+**Hui Zhu** · 一作 · 7 作者 · [arXiv:2001.11808](https://arxiv.org/abs/2001.11808)
 
-_Embedding a language field in a 3D representation enables richer semantic understanding of spatial environments by linking geometry with descriptive meaning. This allows for a more intuitive human-computer interaction,…_
+*用氪离子辐照改性羟基磷灰石结构以增强其体外溶解性能。*
 
-→ [profile](/researchers/shai-krakovsky)
+_Hydroxyapatite synthesized by a wet chemical route was subjected to heavy Krypton ion irradiation of 4MeV at various fluences. Glancing incidence Xray diffraction results confirmed the phase purity of irradiated HA with…_
 
----
-### No. 06 · RewardSDS: Aligning Score Distillation via Reward-Weighted Sampling
-
-**Itay Chachy** · 一作 · 3 作者 · [arXiv:2503.09601](https://arxiv.org/abs/2503.09601)
-
-*用奖励模型加权噪声采样，改进SDS与VSD的对齐质量。*
-
-_Score Distillation Sampling (SDS) has emerged as an effective technique for leveraging 2D diffusion priors for tasks such as text-to-3D generation. While powerful, SDS struggles with achieving fine-grained alignment to…_
-
-→ [profile](/researchers/itay-chachy)
+→ [profile](/researchers/hui-zhu)
 
 ---
-### No. 07 · Structurally Disentangled Feature Fields Distillation for 3D Understanding and Editing
+### No. 04 · Nanostructural insights into the dissolution behavior of Sr doped hydroxyapatite
 
-**Yoel Levy** · 一作 · 4 作者 · [arXiv:2502.14789](https://arxiv.org/abs/2502.14789)
+**Hui Zhu** · 一作 · 7 作者 · [arXiv:1910.10610](https://arxiv.org/abs/1910.10610)
 
-*用多解耦特征场分离视角依赖与不变成分实现3D编辑。*
+*用HRTEM揭示掺锶羟基磷灰石纳米结构溶解演变。*
 
-_Recent work has demonstrated the ability to leverage or distill pre-trained 2D features obtained using large pre-trained 2D models into 3D features, enabling impressive 3D editing and understanding capabilities using on…_
+_In this study, high resolution transmission electron microscopy, HRTEM, was employed to characterize the nanostructure of strontium substituted hydroxyapatite, Sr HA, and its evolution following in vitro immersion in ph…_
 
-→ [profile](/researchers/yoel-levy)
-
----
-### No. 08 · Through-The-Mask: Mask-based Motion Trajectories for Image-to-Video Generation
-
-**Guy Yariv** · 一作 · 8 作者 · [arXiv:2501.03059](https://arxiv.org/abs/2501.03059)
-
-*用掩码运动轨迹分解图像到视频生成，提升多物体运动一致性。*
-
-_We consider the task of Image-to-Video (I2V) generation, which involves transforming static images into realistic video sequences based on a textual description. While recent advancements produce photorealistic outputs,…_
-
-→ [profile](/researchers/guy-yariv)
+→ [profile](/researchers/hui-zhu)
 
 ---
-### No. 09 · Generating Intermediate Representations for Compositional Text-To-Image Generation
+### No. 05 · EHRBench: An Automated and Reliable EHR-based Benchmark for Clinical Decision Making with LLMs
 
-**Ran Galun** · 一作 · 2 作者 · [arXiv:2410.09792](https://arxiv.org/abs/2410.09792)
+**Yuzhang Xie** · 一作 · 10 作者 · [arXiv:2605.30637](https://arxiv.org/abs/2605.30637)
 
-*用扩散模型生成中间表征（深度/分割图）提升文生图空间一致性。*
+_Clinical decision-making (CDM) is central to real-world clinical workflows, where clinicians infer diagnoses, select treatments, or anticipate future health outcomes under incomplete evidence. LLMs are increasingly used…_
 
-_Text-to-image diffusion models have demonstrated an impressive ability to produce high-quality outputs. However, they often struggle to accurately follow fine-grained spatial information in an input text. To this end, w…_
-
-→ [profile](/researchers/ran-galun)
+→ [profile](/researchers/yuzhang-xie)
 
 ---
-### No. 10 · LaMI: Augmenting Large Language Models via Late Multi-Image Fusion
+### No. 06 · AgentSchool: An LLM-Powered Multi-Agent Simulation for Education
 
-**Guy Yariv** · 一作 · 4 作者 · [arXiv:2406.13621](https://arxiv.org/abs/2406.13621)
+**Yulei Ye** · 一作 · 26 作者 · [arXiv:2605.30144](https://arxiv.org/abs/2605.30144)
 
-*通过多图像后期融合增强大语言模型视觉常识推理。*
+_Despite the rapid deployment of LLMs into classrooms, validating educational AI remains uniquely intractable: interventions act on developing learners whose cognitive and social trajectories are irreversibly shaped, whi…_
 
-_Commonsense reasoning often requires both textual and visual knowledge, yet Large Language Models (LLMs) trained solely on text lack visual grounding (e.g., "what color is an emperor penguin's belly?"). Visual Language…_
+→ [profile](/researchers/yulei-ye)
 
-→ [profile](/researchers/guy-yariv)
+---
+### No. 07 · Three-component superconductivity: the effect of second-order Josephson couplings
+
+**Shen-Yi Peng** · 一作 · 3 作者 · [arXiv:2605.28221](https://arxiv.org/abs/2605.28221)
+
+_Recently, a three-component Ginzburg-Landau (GL) model compatible with the 3Q pair-density-wave state has been proposed to explain the fractional quantum magnetic resistance oscillations of period $φ_0/3 = hc/6e$ observ…_
+
+→ [profile](/researchers/shen-yi-peng)
+
+---
+### No. 08 · AgentHijack: Benchmarking Computer Use Agent Robustness to Common Environment Corruptions
+
+**Jingwei Sun** · 一作 · 6 作者 · [arXiv:2605.25707](https://arxiv.org/abs/2605.25707)
+
+_Autonomous computer use agents that powered by multimodal large language models (MLLMs) are emerging as capable assistants for completing complex digital workflows. However, real-world execution environments are far fro…_
+
+→ [profile](/researchers/jingwei-sun)
+
+---
+### No. 09 · A Survey of Large Audio Language Models: Generalization, Trustworthiness, and Outlook
+
+**Kaiwen Luo** · 一作 · 34 作者 · [arXiv:2605.20266](https://arxiv.org/abs/2605.20266)
+
+_The foundational capabilities established by Large Language Models (LLMs) have paved the way for Multimodal Large Language Models (MLLMs), within which Large Audio Language Models (LALMs) are essential for realizing uni…_
+
+→ [profile](/researchers/kaiwen-luo)
+
+---
+### No. 10 · Brain Vascular Age Prediction Using Cerebral Blood Flow Velocity and Machine Learning Algorithms
+
+**Anni Zhao** · 一作 · 5 作者 · [arXiv:2605.16969](https://arxiv.org/abs/2605.16969)
+
+_Defining vascular age in terms of physiological function has become one focal point of the extensive studies to categorize and track chronological age. Transcranial Doppler (TCD) is a method by which cerebral blood flow…_
+
+→ [profile](/researchers/anni-zhao)
 
 ---
 
-## Section B · 🔄 动态更新 · 0 项
+## Section B · 🔄 动态更新 · 10 项
 
-_库内已知人今日无新动作。_
+| 研究者 | 新工作 | 主题 | arXiv |
+| --- | --- | --- | --- |
+| [Quanshi Zhang](/researchers/quanshi-zhang) | Understanding Generalization through Decision Pattern Shift | — | [2605.13148](https://arxiv.org/abs/2605.13148) |
+| [Quanshi Zhang](/researchers/quanshi-zhang) | What Do EEG Foundation Models Capture from Human Brain Signals? | — | [2605.11410](https://arxiv.org/abs/2605.11410) |
+| [Linfeng Zhang](/researchers/linfeng-zhang) | Attributing Emergence in Million-Agent Systems | — | [2605.11404](https://arxiv.org/abs/2605.11404) |
+| [Quanshi Zhang](/researchers/quanshi-zhang) | Attributing Emergence in Million-Agent Systems | — | [2605.11404](https://arxiv.org/abs/2605.11404) |
+| [Quanshi Zhang](/researchers/quanshi-zhang) | Rethinking Generalization in Reasoning SFT: A Conditional Analysis on… | — | [2604.06628](https://arxiv.org/abs/2604.06628) |
+| [Yi Ma](/researchers/yi-ma) | CodePlot-CoT: Mathematical Visual Reasoning by Thinking with Code-Dri… | — | [2510.11718](https://arxiv.org/abs/2510.11718) |
+| [Yilun Du](/researchers/yilun-du) | ComSim: Building Scalable Real-World Robot Data Generation via Compos… | — | [2604.11386](https://arxiv.org/abs/2604.11386) |
+| [Jun Zhu](/researchers/jun-zhu) | WorldArena: A Unified Benchmark for Evaluating Perception and Functio… | — | [2602.08971](https://arxiv.org/abs/2602.08971) |
+| [Linfeng Zhang](/researchers/linfeng-zhang) | AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI A… | — | [2605.29801](https://arxiv.org/abs/2605.29801) |
+| [Quanshi Zhang](/researchers/quanshi-zhang) | AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI A… | — | [2605.29801](https://arxiv.org/abs/2605.29801) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -140,154 +149,160 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Reward Finetuning for Faster and More Accurate Unsupervised Object Discovery
+### No. 01 · The Eleventh NTIRE 2026 Efficient Super-Resolution Challenge Report
 
-**Katie Z Luo** · 一作 · 10 作者 · [arXiv:2310.19080](https://arxiv.org/abs/2310.19080)
+**Bin Ren** · 一作 · 63 作者 · [arXiv:2604.03198](https://arxiv.org/abs/2604.03198)
 
-*用奖励函数微调扩散模型实现无监督物体发现。*
+_This paper reviews the NTIRE 2026 challenge on efficient single-image super-resolution with a focus on the proposed solutions and results. The aim of this challenge is to devise a network that reduces one or several asp…_
 
-_Recent advances in machine learning have shown that Reinforcement Learning from Human Feedback (RLHF) can improve machine learning models and align them with human preferences. Although very successful for Large Languag…_
-
-→ [profile](/researchers/katie-z-luo)
+→ [profile](/researchers/bin-ren)
 
 ---
-### No. 02 · Through-The-Mask: Mask-based Motion Trajectories for Image-to-Video Generation
+### No. 02 · AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security
 
-**Guy Yariv** · 一作 · 8 作者 · [arXiv:2501.03059](https://arxiv.org/abs/2501.03059)
+**Dongrui Liu** · 一作 · 50 作者 · [arXiv:2605.29801](https://arxiv.org/abs/2605.29801)
 
-*用掩码运动轨迹分解图像到视频生成，提升多物体运动一致性。*
+_Modern open-world agents such as OpenClaw exhibit powerful cross-environment execution capabilities yet introduce broad new safety risk sources. Meanwhile, advanced frontier AI models drastically lower attack barriers,…_
 
-_We consider the task of Image-to-Video (I2V) generation, which involves transforming static images into realistic video sequences based on a textual description. While recent advancements produce photorealistic outputs,…_
-
-→ [profile](/researchers/guy-yariv)
+→ [profile](/researchers/dongrui-liu)
 
 ---
-### No. 03 · Polynomial Neural Fields for Subband Decomposition and Manipulation
+### No. 03 · Safactory: A Scalable Agentic Infrastructure for Training Trustworthy Autonomous Intelligence
 
-**Guandao Yang** · 一作 · 8 作者 · [arXiv:2302.04862](https://arxiv.org/abs/2302.04862)
+**Xinquan Chen** · 一作 · 41 作者 · [arXiv:2605.06230](https://arxiv.org/abs/2605.06230)
 
-*多项式神经场实现信号子带分解与可操控分量。*
+*提出统一进化管线的Safactory框架，集成并行仿真与强化学习。*
 
-_Neural fields have emerged as a new paradigm for representing signals, thanks to their ability to do it compactly while being easy to optimize. In most applications, however, neural fields are treated like black boxes,…_
+_As large models evolve from conversational assistants into autonomous agents, challenges increasingly arise from long-horizon decision making, tool use, and real environment interaction. Existing agenticinfrastructure r…_
 
-→ [profile](/researchers/guandao-yang)
-
----
-### No. 04 · Discriminative Class Tokens for Text-to-Image Diffusion Models
-
-**Idan Schwartz** · 一作 · 7 作者 · [arXiv:2303.17155](https://arxiv.org/abs/2303.17155)
-
-*用判别性类标记微调扩散模型提升生成准确率。*
-
-_Recent advances in text-to-image diffusion models have enabled the generation of diverse and high-quality images. While impressive, the images often fall short of depicting subtle details and are susceptible to errors d…_
-
-→ [profile](/researchers/idan-schwartz)
+→ [profile](/researchers/xinquan-chen)
 
 ---
-### No. 05 · GlobalSplat: Efficient Feed-Forward 3D Gaussian Splatting via Global Scene Tokens
+### No. 04 · The Latent Space: Foundation, Evolution, Mechanism, Ability, and Outlook
 
-**Roni Itkin** · 一作 · 6 作者 · [arXiv:2604.15284](https://arxiv.org/abs/2604.15284)
+**Xinlei Yu** · 一作 · 37 作者 · [arXiv:2604.02029](https://arxiv.org/abs/2604.02029)
 
-_The efficient spatial allocation of primitives serves as the foundation of 3D Gaussian Splatting, as it directly dictates the synergy between representation compactness, reconstruction speed, and rendering fidelity. Pre…_
+_Latent space is rapidly emerging as a native substrate for language-based models. While modern systems are still commonly understood through explicit token-level generation, an increasing body of work shows that many cr…_
 
-→ [profile](/researchers/roni-itkin)
-
----
-### No. 06 · DyPE: Dynamic Position Extrapolation for Ultra High Resolution Diffusion
-
-**Noam Issachar** · 一作 · 6 作者 · [arXiv:2510.20766](https://arxiv.org/abs/2510.20766)
-
-_Diffusion Transformer models can generate images with remarkable fidelity and detail, yet training them at ultra-high resolutions remains extremely costly due to the self-attention mechanism's quadratic scaling with the…_
-
-→ [profile](/researchers/noam-issachar)
+→ [profile](/researchers/xinlei-yu)
 
 ---
-### No. 07 · Coarse-To-Fine Tensor Trains for Compact Visual Representations
+### No. 05 · A Survey of Large Audio Language Models: Generalization, Trustworthiness, and Outlook
 
-**Sebastian Loeschcke** · 一作 · 6 作者 · [arXiv:2406.04332](https://arxiv.org/abs/2406.04332)
+**Kaiwen Luo** · 一作 · 34 作者 · [arXiv:2605.20266](https://arxiv.org/abs/2605.20266)
 
-*粗到细张量列车实现紧凑视觉表示的高效优化。*
+_The foundational capabilities established by Large Language Models (LLMs) have paved the way for Multimodal Large Language Models (MLLMs), within which Large Audio Language Models (LALMs) are essential for realizing uni…_
 
-_The ability to learn compact, high-quality, and easy-to-optimize representations for visual data is paramount to many applications such as novel view synthesis and 3D reconstruction. Recent work has shown substantial su…_
-
-→ [profile](/researchers/sebastian-loeschcke)
+→ [profile](/researchers/kaiwen-luo)
 
 ---
-### No. 08 · Diverse and Aligned Audio-to-Video Generation via Text-to-Video Model Adaptation
+### No. 06 · Wall-OSS-0.5 Technical Report
 
-**Guy Yariv** · 一作 · 6 作者 · [arXiv:2309.16429](https://arxiv.org/abs/2309.16429)
+**Ryan Yu** · 一作 · 27 作者 · [arXiv:2605.30877](https://arxiv.org/abs/2605.30877)
 
-*轻量适配网络映射音频特征至文生视频模型，实现音视频对齐生成。*
+_Large-scale Vision-Language-Action (VLA) pretraining is increasingly adopted as the foundation for robot policies, yet the evidence for pretrained VLAs is almost invariably reported after task-specific fine-tuning.This…_
 
-_We consider the task of generating diverse and realistic videos guided by natural audio samples from a wide variety of semantic classes. For this task, the videos are required to be aligned both globally and temporally…_
-
-→ [profile](/researchers/guy-yariv)
+→ [profile](/researchers/ryan-yu)
 
 ---
-### No. 09 · SemanticMoments: Training-Free Motion Similarity via Third Moment Features
+### No. 07 · AgentSchool: An LLM-Powered Multi-Agent Simulation for Education
 
-**Saar Huberman** · 一作 · 5 作者 · [arXiv:2602.09146](https://arxiv.org/abs/2602.09146)
+**Yulei Ye** · 一作 · 26 作者 · [arXiv:2605.30144](https://arxiv.org/abs/2605.30144)
 
-_Retrieving videos based on semantic motion is a fundamental, yet unsolved, problem. Existing video representation approaches overly rely on static appearance and scene context rather than motion dynamics, a bias inherit…_
+_Despite the rapid deployment of LLMs into classrooms, validating educational AI remains uniquely intractable: interventions act on developing learners whose cognitive and social trajectories are irreversibly shaped, whi…_
 
-→ [profile](/researchers/saar-huberman)
+→ [profile](/researchers/yulei-ye)
 
 ---
-### No. 10 · Assessing Neural Network Robustness via Adversarial Pivotal Tuning
+### No. 08 · Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization
 
-**Peter Ebert Christensen** · 一作 · 5 作者 · [arXiv:2211.09782](https://arxiv.org/abs/2211.09782)
+**Qianben Chen** · 一作 · 24 作者 · [arXiv:2602.22675](https://arxiv.org/abs/2602.22675)
 
-*用生成器语义操控图像评估分类器鲁棒性。*
+_Recent deep research agents primarily improve performance by scaling reasoning depth, but this leads to high inference cost and latency in search-intensive scenarios. Moreover, generalization across heterogeneous resear…_
 
-_The robustness of image classifiers is essential to their deployment in the real world. The ability to assess this resilience to manipulations or deviations from the training data is thus crucial. These modifications ha…_
+→ [profile](/researchers/qianben-chen)
 
-→ [profile](/researchers/peter-ebert-christensen)
+---
+### No. 09 · MSAVBench: Towards Comprehensive and Reliable Evaluation of Multi-Shot Audio-Video Generation
+
+**Yujie Wei** · 一作 · 23 作者 · [arXiv:2605.20183](https://arxiv.org/abs/2605.20183)
+
+_Video generation is rapidly evolving from single-shot synthesis to complex multi-shot audio-video (MSAV) narratives to meet real-world demands. However, evaluating such frontier models remains a fundamental challenge. E…_
+
+→ [profile](/researchers/yujie-wei)
+
+---
+### No. 10 · AMix-2: Establishing Protein as a Native Modality in Large Language Models
+
+**Keyue Qiu** · 一作 · 22 作者 · [arXiv:2605.30963](https://arxiv.org/abs/2605.30963)
+
+_We present AMix-2, a protein-text foundation model that establishes protein as a native modality in large language models (LLMs), unifying protein understanding and sequence design within a single foundation model. AMix…_
+
+→ [profile](/researchers/keyue-qiu)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 3 个
+## Section F · 🌙 Sleeper Picks · 5 个
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · Reward Finetuning for Faster and More Accurate Unsupervised Object Discovery
+### No. 01 · The Eleventh NTIRE 2026 Efficient Super-Resolution Challenge Report
 
-**Katie Z Luo** · 一作 · 10 作者 · [arXiv:2310.19080](https://arxiv.org/abs/2310.19080)
+**Bin Ren** · 一作 · 63 作者 · [arXiv:2604.03198](https://arxiv.org/abs/2604.03198)
 
-*用奖励函数微调扩散模型实现无监督物体发现。*
+_This paper reviews the NTIRE 2026 challenge on efficient single-image super-resolution with a focus on the proposed solutions and results. The aim of this challenge is to devise a network that reduces one or several asp…_
 
-_Recent advances in machine learning have shown that Reinforcement Learning from Human Feedback (RLHF) can improve machine learning models and align them with human preferences. Although very successful for Large Languag…_
+**▸ 选中原因：首次出现 · 63 作者合作（疑似大组新人）**
 
-**▸ 选中原因：首次出现 · 10 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/katie-z-luo)
+→ [profile](/researchers/bin-ren)
 
 ---
-### No. 02 · Through-The-Mask: Mask-based Motion Trajectories for Image-to-Video Generation
+### No. 02 · AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security
 
-**Guy Yariv** · 一作 · 8 作者 · [arXiv:2501.03059](https://arxiv.org/abs/2501.03059)
+**Dongrui Liu** · 一作 · 50 作者 · [arXiv:2605.29801](https://arxiv.org/abs/2605.29801)
 
-*用掩码运动轨迹分解图像到视频生成，提升多物体运动一致性。*
+_Modern open-world agents such as OpenClaw exhibit powerful cross-environment execution capabilities yet introduce broad new safety risk sources. Meanwhile, advanced frontier AI models drastically lower attack barriers,…_
 
-_We consider the task of Image-to-Video (I2V) generation, which involves transforming static images into realistic video sequences based on a textual description. While recent advancements produce photorealistic outputs,…_
+**▸ 选中原因：首次出现 · 50 作者合作（疑似大组新人）**
 
-**▸ 选中原因：首次出现 · 8 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/guy-yariv)
+→ [profile](/researchers/dongrui-liu)
 
 ---
-### No. 03 · Polynomial Neural Fields for Subband Decomposition and Manipulation
+### No. 03 · Safactory: A Scalable Agentic Infrastructure for Training Trustworthy Autonomous Intelligence
 
-**Guandao Yang** · 一作 · 8 作者 · [arXiv:2302.04862](https://arxiv.org/abs/2302.04862)
+**Xinquan Chen** · 一作 · 41 作者 · [arXiv:2605.06230](https://arxiv.org/abs/2605.06230)
 
-*多项式神经场实现信号子带分解与可操控分量。*
+*提出统一进化管线的Safactory框架，集成并行仿真与强化学习。*
 
-_Neural fields have emerged as a new paradigm for representing signals, thanks to their ability to do it compactly while being easy to optimize. In most applications, however, neural fields are treated like black boxes,…_
+_As large models evolve from conversational assistants into autonomous agents, challenges increasingly arise from long-horizon decision making, tool use, and real environment interaction. Existing agenticinfrastructure r…_
 
-**▸ 选中原因：首次出现 · 8 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 41 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/guandao-yang)
+→ [profile](/researchers/xinquan-chen)
+
+---
+### No. 04 · HARP-VLA: Human-Robot Aligned Representation Learning for Vision-Language-Action Model
+
+**Xiang Zhu** · 一作 · 4 作者 · [arXiv:2605.31234](https://arxiv.org/abs/2605.31234)
+
+_Learning generalizable vision-language-action (VLA) models from large-scale human videos is promising but challenging due to cross-embodiment discrepancies in both visual observations and executable actions. While laten…_
+
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+
+→ [profile](/researchers/xiang-zhu)
+
+---
+### No. 05 · AMix-2: Establishing Protein as a Native Modality in Large Language Models
+
+**Keyue Qiu** · 一作 · 22 作者 · [arXiv:2605.30963](https://arxiv.org/abs/2605.30963)
+
+_We present AMix-2, a protein-text foundation model that establishes protein as a native modality in large language models (LLMs), unifying protein understanding and sequence design within a single foundation model. AMix…_
+
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+
+→ [profile](/researchers/keyue-qiu)
 
 ---
 
