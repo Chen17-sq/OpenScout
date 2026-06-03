@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 019                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · TUESDAY, JUNE 2, 2026
+VOL. 1 · NO. 020                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · WEDNESDAY, JUNE 3, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 019 · 2026-06-02
+> *All The Researchers Fit To Watch* — Vol. 1, No. 020 · 2026-06-03
 
-_Auto-generated at 2026-06-02T05:25:04+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-06-03T05:58:23+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,133 +15,140 @@ _Auto-generated at 2026-06-02T05:25:04+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **11852** | 217 | 1082 | 2 | 17 |
+| **12776** | 140 | 924 | 3 | 17 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Annotations Are Not All You Need: A Cross-modal Knowledge Transfer Network for Unsupervised Temporal Sentence Grounding
+### No. 01 · VoMP: Predicting Volumetric Mechanical Property Fields
 
-**Xiang Fang** · 一作 · 7 作者 · [arXiv:2605.30742](https://arxiv.org/abs/2605.30742)
+**Rishit Dagli** · 一作 · 10 作者 · [arXiv:2510.22975](https://arxiv.org/abs/2510.22975)
 
-_This paper addresses the task of temporal sentence grounding (TSG). Although many respectable works have made decent achievements in this important topic, they severely rely on massive expensive video-query paired annot…_
+*用多视图特征与几何Transformer预测体素材料属性。*
 
-→ [profile](/researchers/xiang-fang)
+_Physical simulation relies on spatially-varying mechanical properties, often laboriously hand-crafted. VoMP is a feed-forward method trained to predict Young's modulus ($E$), Poisson's ratio ($ν$), and density ($ρ$) thr…_
 
----
-### No. 02 · Not All Inputs Are Valid: Towards Open-Set Video Moment Retrieval Using Language
-
-**Xiang Fang** · 一作 · 11 作者 · [arXiv:2605.29812](https://arxiv.org/abs/2605.29812)
-
-_Video Moment Retrieval (VMR) targets to retrieve the specific moment corresponding to a sentence query from an untrimmed video. Although recent works have made remarkable progress in this task, they implicitly are roote…_
-
-→ [profile](/researchers/xiang-fang)
+→ [profile](/researchers/rishit-dagli)
 
 ---
-### No. 03 · Fully coherent short wavelength free-electron laser driven by a single sub-microjoule seed
+### No. 02 · PARTFIELD: Learning 3D Feature Fields for Part Segmentation and Beyond
 
-**Lanpeng Ni** · 一作 · 36 作者 · [arXiv:2605.27821](https://arxiv.org/abs/2605.27821)
+**Minghua Liu** · 一作 · 7 作者 · [arXiv:2504.11451](https://arxiv.org/abs/2504.11451)
 
-_High-repetition-rate, fully coherent extreme-ultraviolet (EUV) and X-ray free-electron lasers (FELs) are essential for advanced time-resolved ultrafast spectroscopies. While external seeding serves as the standard techn…_
+*用对比学习蒸馏2D/3D提案，生成层级化3D特征场。*
 
-→ [profile](/researchers/lanpeng-ni)
+_We propose PartField, a feedforward approach for learning part-based 3D features, which captures the general concept of parts and their hierarchy without relying on predefined templates or text-based names, and can be a…_
 
----
-### No. 04 · Rethinking Weakly-supervised Video Temporal Grounding From a Game Perspective
-
-**Xiang Fang** · 一作 · 10 作者 · [arXiv:2605.26441](https://arxiv.org/abs/2605.26441)
-
-_This paper addresses the challenging task of weakly-supervised video temporal grounding. Existing approaches are generally based on the moment proposal selection framework that utilizes contrastive learning and reconstr…_
-
-→ [profile](/researchers/xiang-fang)
+→ [profile](/researchers/minghua-liu)
 
 ---
-### No. 05 · SceneCode: Executable World Programs for Editable Indoor Scenes with Articulated Objects
+### No. 03 · Articulated Kinematics Distillation from Video Diffusion Models
 
-**Puyi Wang** · 一作 · 7 作者 · [arXiv:2605.19587](https://arxiv.org/abs/2605.19587)
+**Xuan Li** · 一作 · 7 作者 · [arXiv:2504.01204](https://arxiv.org/abs/2504.01204)
 
-*用代码生成程序替代静态网格，实现可编辑铰接物体场景合成。*
+*用骨架控制与视频扩散模型蒸馏生成高保真4D动画。*
 
-_Indoor scene synthesis underpins embodied AI, robotic manipulation, and simulation-based policy evaluation, where a useful scene must specify not only what the environment looks like, but also how its objects are struct…_
+_We present Articulated Kinematics Distillation (AKD), a framework for generating high-fidelity character animations by merging the strengths of skeleton-based animation and modern generative models. AKD uses a skeleton-…_
 
-→ [profile](/researchers/puyi-wang)
-
----
-### No. 06 · JODA: Composable Joint Dynamics for Articulated Objects
-
-**Tianhong Gao** · 一作 · 4 作者 · [arXiv:2605.09954](https://arxiv.org/abs/2605.09954)
-
-*用三通道PCHIP场建模关节动力学，支持多模态推理与优化。*
-
-_Articulated objects used in simulation and embodied AI are typically specified by geometry and kinematic structure, but lack the fine-grained dynamical effects that govern realistic mechanical behavior, such as friction…_
-
-→ [profile](/researchers/tianhong-gao)
+→ [profile](/researchers/xuan-li)
 
 ---
-### No. 07 · The Cancellation Hypothesis in Critic-Free RL: From Outcome Rewards to Token Credits
+### No. 04 · CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models
 
-**Tianhao Cheng** · 一作 · 8 作者 · [arXiv:2605.08666](https://arxiv.org/abs/2605.08666)
+**Qingqing Zhao** · 一作 · 15 作者 · [arXiv:2503.22020](https://arxiv.org/abs/2503.22020)
 
-*揭示无评论强化学习中令牌耦合导致的隐式信用分配机制。*
+*在VLA中引入自回归视觉思维链预测未来帧提升操控。*
 
-_A commonly accepted explanation of critic-free RL for LLMs, based on sequence-level rewards, is that it reinforces successful rollouts with a positive advantage while penalizing failed ones. In contrast, we study critic…_
+_Vision-language-action models (VLAs) have shown potential in leveraging pretrained vision-language models and diverse robot demonstrations for learning generalizable sensorimotor control. While this paradigm effectively…_
 
-→ [profile](/researchers/tianhao-cheng)
-
----
-### No. 08 · Teaching Thinking Models to Reason with Tools: A Full-Pipeline Recipe for Tool-Integrated Reasoning
-
-**Qianjia Cheng** · 一作 · 12 作者 · [arXiv:2605.06326](https://arxiv.org/abs/2605.06326)
-
-*通过可控SFT与稳定RLVR注入工具使用，避免推理退化。*
-
-_Tool-integrated reasoning (TIR) offers a direct way to extend thinking models beyond the limits of text-only reasoning. Paradoxically, we observe that tool-enabled evaluation can degrade reasoning performance even when…_
-
-→ [profile](/researchers/qianjia-cheng)
+→ [profile](/researchers/qingqing-zhao)
 
 ---
-### No. 09 · TabEmbed: Benchmarking and Learning Generalist Embeddings for Tabular Understanding
+### No. 05 · DressRecon: Freeform 4D Human Reconstruction from Monocular Video
 
-**Minjie Qiang** · 一作 · 8 作者 · [arXiv:2605.04962](https://arxiv.org/abs/2605.04962)
+**Jeff Tan** · 一作 · 5 作者 · [arXiv:2409.20563](https://arxiv.org/abs/2409.20563)
 
-*用对比学习统一表格分类与检索的通用嵌入模型。*
+*解耦人体与衣物形变的神经隐式模型，结合视频优化与图像先验。*
 
-_Foundation models have established unified representations for natural language processing, yet this paradigm remains largely unexplored for tabular data. Existing methods face fundamental limitations: LLM-based approac…_
+_We present a method to reconstruct time-consistent human body models from monocular videos, focusing on extremely loose clothing or handheld object interactions. Prior work in human reconstruction is either limited to t…_
 
-→ [profile](/researchers/minjie-qiang)
-
----
-### No. 10 · The Keplerian disk, envelope, and streamers surrounding an early O-type protostar in the Sagittarius C cloud of the Central Molecular Zone
-
-**Jixiang Weng** · 一作 · 25 作者 · [arXiv:2605.03883](https://arxiv.org/abs/2605.03883)
-
-*利用ALMA观测到CMZ中早期O型原恒星的开普勒盘与吸积流。*
-
-_Disk-mediated accretion is central to theories of massive star formation, setting the initial conditions for their evolution. Yet observations of Keplerian disks around early O-type protostars remain scarce, as they are…_
-
-→ [profile](/researchers/jixiang-weng)
+→ [profile](/researchers/jeff-tan)
 
 ---
+### No. 06 · PhysAvatar: Learning the Physics of Dressed 3D Avatars from Visual Observations
 
-## Section B · 🔄 动态更新 · 10 项
+**Yang Zheng** · 一作 · 11 作者 · [arXiv:2404.04421](https://arxiv.org/abs/2404.04421)
+
+*结合逆向渲染与物理模拟的4D高斯人体服装建模。*
+
+_Modeling and rendering photorealistic avatars is of crucial importance in many applications. Existing methods that build a 3D avatar from visual observations, however, struggle to reconstruct clothed humans. We introduc…_
+
+→ [profile](/researchers/yang-zheng)
+
+---
+### No. 07 · Diffusion Shape Prior for Wrinkle-Accurate Cloth Registration
+
+**Jingfan Guo** · 一作 · 8 作者 · [arXiv:2311.05828](https://arxiv.org/abs/2311.05828)
+
+*利用扩散模型学习形状先验，实现无纹理布料高精度注册。*
+
+_Registering clothes from 4D scans with vertex-accurate correspondence is challenging, yet important for dynamic appearance modeling and physics parameter estimation from real-world data. However, previous methods either…_
+
+→ [profile](/researchers/jingfan-guo)
+
+---
+### No. 08 · Drivable Avatar Clothing: Faithful Full-Body Telepresence with Dynamic Clothing Driven by Sparse RGB-D Input
+
+**Donglai Xiang** · 一作 · 7 作者 · [arXiv:2310.05917](https://arxiv.org/abs/2310.05917)
+
+*用N-ICP和RGB-D驱动动态服装的逼真全身化身。*
+
+_Clothing is an important part of human appearance but challenging to model in photorealistic avatars. In this work we present avatars with dynamically moving loose clothing that can be faithfully driven by sparse RGB-D…_
+
+→ [profile](/researchers/donglai-xiang)
+
+---
+### No. 09 · Dressing Avatars: Deep Photorealistic Appearance for Physically Simulated Clothing
+
+**Donglai Xiang** · 一作 · 13 作者 · [arXiv:2206.15470](https://arxiv.org/abs/2206.15470)
+
+*用物理模拟几何驱动神经外观网络生成逼真衣物动态。*
+
+_Despite recent progress in developing animatable full-body avatars, realistic modeling of clothing - one of the core aspects of human self-expression - remains an open challenge. State-of-the-art physical simulation met…_
+
+→ [profile](/researchers/donglai-xiang)
+
+---
+### No. 10 · Garment Avatars: Realistic Cloth Driving using Pattern Registration
+
+**Oshri Halimi** · 一作 · 10 作者 · [arXiv:2206.03373](https://arxiv.org/abs/2206.03373)
+
+*多视图图案配准驱动高精度服装几何模型生成。*
+
+_Virtual telepresence is the future of online communication. Clothing is an essential part of a person's identity and self-expression. Yet, ground truth data of registered clothes is currently unavailable in the required…_
+
+→ [profile](/researchers/oshri-halimi)
+
+---
+
+## Section B · 🔄 动态更新 · 9 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Bowen Zhou](/researchers/bowen-zhou) | Teaching Thinking Models to Reason with Tools: A Full-Pipeline Recipe… | — | [2605.06326](https://arxiv.org/abs/2605.06326) |
-| [Yang Gao](/researchers/yang-gao) | Distractor-free Generalizable 3D Gaussian Splatting | — | [2411.17605](https://arxiv.org/abs/2411.17605) |
-| [Yang Gao](/researchers/yang-gao) | Analogist: Out-of-the-box Visual In-Context Learning with Image Diffu… | — | [2405.10316](https://arxiv.org/abs/2405.10316) |
-| [Bowen Zhou](/researchers/bowen-zhou) | Achieving Gold-Medal-Level Olympiad Reasoning via Simple and Unified… | — | [2605.13301](https://arxiv.org/abs/2605.13301) |
-| [Bowen Zhou](/researchers/bowen-zhou) | P1-VL: Bridging Visual Perception and Scientific Reasoning in Physics… | — | [2602.09443](https://arxiv.org/abs/2602.09443) |
-| [Maosong Sun](/researchers/maosong-sun) | Crafter: A Multi-Agent Harness for Editable Scientific Figure Generat… | — | [2605.30611](https://arxiv.org/abs/2605.30611) |
-| [Bowen Zhou](/researchers/bowen-zhou) | Draft-OPD: On-Policy Distillation for Speculative Draft Models | — | [2605.29343](https://arxiv.org/abs/2605.29343) |
-| [Chunhua Shen](/researchers/chunhua-shen) | Where to Look: Can Foundation Models Reach a Target Viewpoint Through… | — | [2606.01247](https://arxiv.org/abs/2606.01247) |
-| [Linfeng Zhang](/researchers/linfeng-zhang) | DPA4: Pushing the Accuracy-Cost Frontier of Interatomic Potentials wi… | ai4sci | [2606.02419](https://arxiv.org/abs/2606.02419) |
-| [Ziwei Liu](/researchers/ziwei-liu) | Not All Points Are Equal: Uncertainty-Aware 4D LiDAR Scene Synthesis | embodied | [2606.02510](https://arxiv.org/abs/2606.02510) |
+| [Hao Su](/researchers/hao-su) | PARTFIELD: Learning 3D Feature Fields for Part Segmentation and Beyond | — | [2504.11451](https://arxiv.org/abs/2504.11451) |
+| [Chelsea Finn](/researchers/chelsea-finn) | CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action… | — | [2503.22020](https://arxiv.org/abs/2503.22020) |
+| [Saining Xie](/researchers/saining-xie) | Benchmarking Visual State Tracking in Multimodal Video Understanding | — | [2606.03920](https://arxiv.org/abs/2606.03920) |
+| [Shuran Song](/researchers/shuran-song) | Cosmos 3: Omnimodal World Models for Physical AI | world_models | [2606.02800](https://arxiv.org/abs/2606.02800) |
+| [Yuke Zhu](/researchers/yuke-zhu) | Cosmos 3: Omnimodal World Models for Physical AI | world_models | [2606.02800](https://arxiv.org/abs/2606.02800) |
+| [Yilun Du](/researchers/yilun-du) | Cosmos 3: Omnimodal World Models for Physical AI | world_models | [2606.02800](https://arxiv.org/abs/2606.02800) |
+| [He Wang](/researchers/he-wang) | Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking | embodied | [2606.03985](https://arxiv.org/abs/2606.03985) |
+| [Yang Gao](/researchers/yang-gao) | Bionic Human-Motion Style Transfer for Physically Executable Whole-Bo… | embodied | [2606.03536](https://arxiv.org/abs/2606.03536) |
+| [Cewu Lu](/researchers/cewu-lu) | OpenEAI-Platform: An Open-source Embodied Artificial Intelligence Har… | embodied | [2606.03392](https://arxiv.org/abs/2606.03392) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section C · 🎓 即将毕业 PhD · Top 1
+## Section C · 🎓 即将毕业 PhD · Top 2
 
 _v0 fallback: 最高产的 auto-discovered first-author（proxy for 活跃晚期）._
 
@@ -154,6 +161,17 @@ _Speculative decoding accelerates large language model inference by pairing a ta
 → [profile](/researchers/haodi-lei)
 
 ---
+### No. 02 · Drivable Avatar Clothing: Faithful Full-Body Telepresence with Dynamic Clothing Driven by Sparse RGB-D Input
+
+**Donglai Xiang** · 一作 · 7 作者 · [arXiv:2310.05917](https://arxiv.org/abs/2310.05917)
+
+*用N-ICP和RGB-D驱动动态服装的逼真全身化身。*
+
+_Clothing is an important part of human appearance but challenging to model in photorealistic avatars. In this work we present avatars with dynamically moving loose clothing that can be faithfully driven by sparse RGB-D…_
+
+→ [profile](/researchers/donglai-xiang)
+
+---
 
 ## Section D · 🚀 即将入职 AP · Top 10
 
@@ -163,98 +181,98 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Fully coherent short wavelength free-electron laser driven by a single sub-microjoule seed
+### No. 01 · Cosmos 3: Omnimodal World Models for Physical AI
 
-**Lanpeng Ni** · 一作 · 36 作者 · [arXiv:2605.27821](https://arxiv.org/abs/2605.27821)
+**Aditi** · 一作 · 291 作者 · [arXiv:2606.02800](https://arxiv.org/abs/2606.02800)
 
-_High-repetition-rate, fully coherent extreme-ultraviolet (EUV) and X-ray free-electron lasers (FELs) are essential for advanced time-resolved ultrafast spectroscopies. While external seeding serves as the standard techn…_
+_We introduce Cosmos 3, a family of omnimodal world models designed to jointly process and generate language, image, video, audio, and action sequences within a unified mixture-of-transformers architecture. By supporting…_
 
-→ [profile](/researchers/lanpeng-ni)
-
----
-### No. 02 · Suppression of p-Wave Altermagnetism by Localized 4f Electrons in CeNiAsO
-
-**Jiuxiang Zhang** · 一作 · 35 作者 · [arXiv:2606.02422](https://arxiv.org/abs/2606.02422)
-
-_Altermagnetism, characterized by momentum-dependent spin splitting and zero net magnetization, has so far been explored mainly in weakly or moderately correlated d-electron systems. How such symmetry-allowed band splitt…_
-
-→ [profile](/researchers/jiuxiang-zhang)
+→ [profile](/researchers/aditi)
 
 ---
-### No. 03 · P1-VL: Bridging Visual Perception and Scientific Reasoning in Physics Olympiads
+### No. 02 · NVIDIA OmniDreams: Real-Time Generative World Model for Closed-Loop Autonomous Vehicle Simulation
 
-**Yun Luo** · 一作 · 31 作者 · [arXiv:2602.09443](https://arxiv.org/abs/2602.09443)
+**NVIDIA** · 一作 · 35 作者 · [arXiv:2606.03159](https://arxiv.org/abs/2606.03159)
 
-_The transition from symbolic manipulation to science-grade reasoning represents a pivotal frontier for Large Language Models (LLMs), with physics serving as the critical test anchor for binding abstract logic to physica…_
+_As autonomous vehicle capabilities advance, the safe evaluation of driving policies in long-tail scenarios remains a critical bottleneck. In closed-loop simulation, the driving policy model actively interacts with the e…_
 
-→ [profile](/researchers/yun-luo)
-
----
-### No. 04 · WALL-WM: Carving World Action Modeling at the Event Joints
-
-**Shalfun Li** · 一作 · 31 作者 · [arXiv:2606.01955](https://arxiv.org/abs/2606.01955)
-
-_WALL-WM is a World Action Model that shifts video-action learning from chunk-centric optimization to event-grounded Vision-Language-Action pretraining, using semantically coherent action events as the atomic unit of lea…_
-
-→ [profile](/researchers/shalfun-li)
+→ [profile](/researchers/nvidia)
 
 ---
-### No. 05 · On the Scaling of PEFT: Towards Million Personal Models of Trillion Parameters
+### No. 03 · Edify 3D: Scalable High-Quality 3D Asset Generation
 
-**Mind Lab** · 一作 · 30 作者 · [arXiv:2606.02437](https://arxiv.org/abs/2606.02437)
+**NVIDIA** · 一作 · 25 作者 · [arXiv:2411.07135](https://arxiv.org/abs/2411.07135)
 
-_Parameter-efficient fine-tuning (PEFT) is usually treated as a cheaper alternative to full fine-tuning. We study a broader role: small trainable adapters as persistent local state on top of strong shared foundation mode…_
+*用扩散模型生成多视图RGB与法线图以重建3D资产。*
 
-→ [profile](/researchers/mind-lab)
+_We introduce Edify 3D, an advanced solution designed for high-quality 3D asset generation. Our method first synthesizes RGB and surface normal images of the described object at multiple viewpoints using a diffusion mode…_
 
----
-### No. 06 · Achieving Gold-Medal-Level Olympiad Reasoning via Simple and Unified Scaling
-
-**Yafu Li** · 一作 · 28 作者 · [arXiv:2605.13301](https://arxiv.org/abs/2605.13301)
-
-_Recent progress in reasoning models has substantially advanced long-horizon mathematical and scientific problem solving, with several systems now reaching gold-medal-level performance on International Mathematical Olymp…_
-
-→ [profile](/researchers/yafu-li)
+→ [profile](/researchers/nvidia)
 
 ---
-### No. 07 · World Models: A Comprehensive Survey of Architectures, Methodologies, Reasoning Paradigms, and Applications
+### No. 04 · TVIR: Building Deep Research Agents Towards Text--Visual Interleaved Report Generation
 
-**Arif Hassan Zidan** · 一作 · 26 作者 · [arXiv:2606.00133](https://arxiv.org/abs/2606.00133)
+**Xinkai Ma** · 一作 · 24 作者 · [arXiv:2606.02320](https://arxiv.org/abs/2606.02320)
 
-_World models, internal simulators that learn the structure and dynamics of an environment, have emerged as a central paradigm in the pursuit of artificial general intelligence, enabling agents to predict, plan, and reas…_
+_Deep Research Agents have shown strong capability in multi-step information retrieval, reasoning, and long-form report generation, but existing benchmarks and systems remain predominantly text-centric, with limited eval…_
 
-→ [profile](/researchers/arif-hassan-zidan)
-
----
-### No. 08 · The Keplerian disk, envelope, and streamers surrounding an early O-type protostar in the Sagittarius C cloud of the Central Molecular Zone
-
-**Jixiang Weng** · 一作 · 25 作者 · [arXiv:2605.03883](https://arxiv.org/abs/2605.03883)
-
-*利用ALMA观测到CMZ中早期O型原恒星的开普勒盘与吸积流。*
-
-_Disk-mediated accretion is central to theories of massive star formation, setting the initial conditions for their evolution. Yet observations of Keplerian disks around early O-type protostars remain scarce, as they are…_
-
-→ [profile](/researchers/jixiang-weng)
+→ [profile](/researchers/xinkai-ma)
 
 ---
-### No. 09 · HOTDISK. Finding Massive Protostellar Disks with Water and Refractory Molecular Species
+### No. 05 · Multiferroicity in the two-dimensional limit in hexagonal LuFeO3 films
 
-**Kai Yang** · 一作 · 19 作者 · [arXiv:2604.19366](https://arxiv.org/abs/2604.19366)
+**Huilin Lai** · 一作 · 18 作者 · [arXiv:2606.03053](https://arxiv.org/abs/2606.03053)
 
-*利用振动激发水、NaCl、SiS示踪大质量原恒星盘结构。*
+_Multiferroic oxides, which combine coupled ferroelectric and magnetic orders, are central to understanding correlated quantum phenomena. Yet, as thickness approaches the two-dimensional (2D) limit, both ferroelectricity…_
 
-_We present high-angular-resolution ($\sim0.05^{\prime\prime}$) ALMA Band~6 observations from the HOTDISK project (Hot-Origin Tracer survey of DISKs of massive protostars) aimed at investigating the "hot-disk" chemical p…_
-
-→ [profile](/researchers/kai-yang)
+→ [profile](/researchers/huilin-lai)
 
 ---
-### No. 10 · Evolution of the intertwining correlated topological phases in iron-based superconductor Fe(Te,Se)
+### No. 06 · Mechanochemical Nano-Writing of an Atomically Thin Metal
 
-**Yue Sun** · 一作 · 19 作者 · [arXiv:2606.01786](https://arxiv.org/abs/2606.01786)
+**Shuai Zhang** · 一作 · 17 作者 · [arXiv:2606.03710](https://arxiv.org/abs/2606.03710)
 
-_Multiple topological electronic phases can coexist within a single quantum material and induce different topological superconducting states, offering deeper insights into interplay of topological superconducting states…_
+_Mechanical energy accelerates many physicochemical processes, including materials syntheses that are hard to produce with thermal energy alone. However, physical understanding connecting applied mechanical forces with i…_
 
-→ [profile](/researchers/yue-sun)
+→ [profile](/researchers/shuai-zhang)
+
+---
+### No. 07 · Reversible Superdense Ordering of Tetragonal Lithium in a Layered Material
+
+**Natalie L. Williams** · 一作 · 17 作者 · [arXiv:2606.03563](https://arxiv.org/abs/2606.03563)
+
+_Understanding lithium (Li) ordering and dynamics is foundational in energy storage. X-ray based experimental methods do not simultaneously provide atomic structure information together with chemical composition and loca…_
+
+→ [profile](/researchers/natalie-l-williams)
+
+---
+### No. 08 · CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models
+
+**Qingqing Zhao** · 一作 · 15 作者 · [arXiv:2503.22020](https://arxiv.org/abs/2503.22020)
+
+*在VLA中引入自回归视觉思维链预测未来帧提升操控。*
+
+_Vision-language-action models (VLAs) have shown potential in leveraging pretrained vision-language models and diverse robot demonstrations for learning generalizable sensorimotor control. While this paradigm effectively…_
+
+→ [profile](/researchers/qingqing-zhao)
+
+---
+### No. 09 · AutoMedBench: Towards Medical AutoResearch with Agentic AI Models
+
+**Junqi Liu** · 一作 · 15 作者 · [arXiv:2606.01961](https://arxiv.org/abs/2606.01961)
+
+_Autonomous agents are increasingly expected to support end-to-end medical-AI research workflows, moving beyond isolated prediction tasks or short-form clinical question answering. However, existing medical agent benchma…_
+
+→ [profile](/researchers/junqi-liu)
+
+---
+### No. 10 · Magneto-optical evidence for single-crystal-like magnetic switching of epitaxial antiferromagnetic LaFeO3 films
+
+**A. Rieche** · 一作 · 14 作者 · [arXiv:2606.03286](https://arxiv.org/abs/2606.03286)
+
+_Strained epitaxial films of the antiferromagnetic orthoferrite LaFeO3 offer a promising platform for antiferromagnetic spintronics, yet their magnetic switching behavior and domain structure have remained largely unexpl…_
+
+→ [profile](/researchers/a-rieche)
 
 ---
 
@@ -264,59 +282,59 @@ _Multiple topological electronic phases can coexist within a single quantum mate
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · Fully coherent short wavelength free-electron laser driven by a single sub-microjoule seed
+### No. 01 · Cosmos 3: Omnimodal World Models for Physical AI
 
-**Lanpeng Ni** · 一作 · 36 作者 · [arXiv:2605.27821](https://arxiv.org/abs/2605.27821)
+**Aditi** · 一作 · 291 作者 · [arXiv:2606.02800](https://arxiv.org/abs/2606.02800)
 
-_High-repetition-rate, fully coherent extreme-ultraviolet (EUV) and X-ray free-electron lasers (FELs) are essential for advanced time-resolved ultrafast spectroscopies. While external seeding serves as the standard techn…_
+_We introduce Cosmos 3, a family of omnimodal world models designed to jointly process and generate language, image, video, audio, and action sequences within a unified mixture-of-transformers architecture. By supporting…_
 
-**▸ 选中原因：首次出现 · 36 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 291 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/lanpeng-ni)
-
----
-### No. 02 · Suppression of p-Wave Altermagnetism by Localized 4f Electrons in CeNiAsO
-
-**Jiuxiang Zhang** · 一作 · 35 作者 · [arXiv:2606.02422](https://arxiv.org/abs/2606.02422)
-
-_Altermagnetism, characterized by momentum-dependent spin splitting and zero net magnetization, has so far been explored mainly in weakly or moderately correlated d-electron systems. How such symmetry-allowed band splitt…_
-
-**▸ 选中原因：首次出现 · 35 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/jiuxiang-zhang)
+→ [profile](/researchers/aditi)
 
 ---
-### No. 03 · P1-VL: Bridging Visual Perception and Scientific Reasoning in Physics Olympiads
+### No. 02 · TVIR: Building Deep Research Agents Towards Text--Visual Interleaved Report Generation
 
-**Yun Luo** · 一作 · 31 作者 · [arXiv:2602.09443](https://arxiv.org/abs/2602.09443)
+**Xinkai Ma** · 一作 · 24 作者 · [arXiv:2606.02320](https://arxiv.org/abs/2606.02320)
 
-_The transition from symbolic manipulation to science-grade reasoning represents a pivotal frontier for Large Language Models (LLMs), with physics serving as the critical test anchor for binding abstract logic to physica…_
+_Deep Research Agents have shown strong capability in multi-step information retrieval, reasoning, and long-form report generation, but existing benchmarks and systems remain predominantly text-centric, with limited eval…_
 
-**▸ 选中原因：首次出现 · 31 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 24 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/yun-luo)
+→ [profile](/researchers/xinkai-ma)
 
 ---
-### No. 04 · Not All Points Are Equal: Uncertainty-Aware 4D LiDAR Scene Synthesis
+### No. 03 · Multiferroicity in the two-dimensional limit in hexagonal LuFeO3 films
 
-**Xiang Xu** · 一作 · 8 作者 · [arXiv:2606.02510](https://arxiv.org/abs/2606.02510)
+**Huilin Lai** · 一作 · 18 作者 · [arXiv:2606.03053](https://arxiv.org/abs/2606.03053)
 
-_Constructing faithful 4D worlds from LiDAR-acquired sequences is crucial for embodied AI, yet current generative frameworks apply uniform modeling capacity across all spatial regions. This ignores that perceptual diffic…_
+_Multiferroic oxides, which combine coupled ferroelectric and magnetic orders, are central to understanding correlated quantum phenomena. Yet, as thickness approaches the two-dimensional (2D) limit, both ferroelectricity…_
+
+**▸ 选中原因：首次出现 · 18 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/huilin-lai)
+
+---
+### No. 04 · Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking
+
+**Zekun Qi** · 一作 · 13 作者 · [arXiv:2606.03985](https://arxiv.org/abs/2606.03985)
+
+_We introduce Humanoid-GPT, a GPT-style Transformer with causal attention trained on a billion-scale motion corpus for whole-body control. Unlike prior shallow MLP trackers constrained by scarce data and an agility-gener…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/xiang-xu)
+→ [profile](/researchers/zekun-qi)
 
 ---
-### No. 05 · DPA4: Pushing the Accuracy-Cost Frontier of Interatomic Potentials with EMFA SO(2) Convolution
+### No. 05 · Bionic Human-Motion Style Transfer for Physically Executable Whole-Body Control of Humanoid Robots
 
-**Tiancheng Li** · 一作 · 7 作者 · [arXiv:2606.02419](https://arxiv.org/abs/2606.02419)
+**Tianchen Huang** · 一作 · 11 作者 · [arXiv:2606.03536](https://arxiv.org/abs/2606.03536)
 
-_Machine-learning interatomic potentials now approach quantum-mechanical accuracy on standard benchmarks, but the training cost of the most expressive equivariant architectures has become a serious bottleneck. We introdu…_
+_Expressive whole-body motion is important for humanoid robots operating in human environments, where robots are expected to move stably while presenting readable and adjustable body behaviors. However, most expressive m…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/tiancheng-li)
+→ [profile](/researchers/tianchen-huang)
 
 ---
 
