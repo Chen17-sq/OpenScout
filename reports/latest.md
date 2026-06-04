@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 020                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · WEDNESDAY, JUNE 3, 2026
+VOL. 1 · NO. 021                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · THURSDAY, JUNE 4, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 020 · 2026-06-03
+> *All The Researchers Fit To Watch* — Vol. 1, No. 021 · 2026-06-04
 
-_Auto-generated at 2026-06-03T05:58:23+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-06-04T05:36:01+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,136 +15,113 @@ _Auto-generated at 2026-06-03T05:58:23+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **12776** | 140 | 924 | 3 | 17 |
+| **13235** | 95 | 459 | 3 | 17 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · VoMP: Predicting Volumetric Mechanical Property Fields
+### No. 01 · Variational low-energy subspaces for chemically accurate excited states
 
-**Rishit Dagli** · 一作 · 10 作者 · [arXiv:2510.22975](https://arxiv.org/abs/2510.22975)
+**Clemens Giuliani** · 一作 · 4 作者 · [arXiv:2606.05148](https://arxiv.org/abs/2606.05148)
 
-*用多视图特征与几何Transformer预测体素材料属性。*
+_Accurate electronic excited states are essential for photochemistry, spectroscopy and non-adiabatic molecular dynamics, but high-level calculations often scale steeply and require prior knowledge of the target state's c…_
 
-_Physical simulation relies on spatially-varying mechanical properties, often laboriously hand-crafted. VoMP is a feed-forward method trained to predict Young's modulus ($E$), Poisson's ratio ($ν$), and density ($ρ$) thr…_
-
-→ [profile](/researchers/rishit-dagli)
+→ [profile](/researchers/clemens-giuliani)
 
 ---
-### No. 02 · PARTFIELD: Learning 3D Feature Fields for Part Segmentation and Beyond
+### No. 02 · MicroCup: A Cryogenic Specimen Preparation Strategy for Atom Probe Tomography of Organic Molecular Liquids
 
-**Minghua Liu** · 一作 · 7 作者 · [arXiv:2504.11451](https://arxiv.org/abs/2504.11451)
+**Kuan Meng** · 一作 · 4 作者 · [arXiv:2606.05147](https://arxiv.org/abs/2606.05147)
 
-*用对比学习蒸馏2D/3D提案，生成层级化3D特征场。*
+_Atom probe tomography (APT) of organic molecular liquids is limited by poorly reproducible specimen geometry, reduced milling rates, and beam sensitivity during cryo-FIB preparation. Here we introduce a MicroCup strateg…_
 
-_We propose PartField, a feedforward approach for learning part-based 3D features, which captures the general concept of parts and their hierarchy without relying on predefined templates or text-based names, and can be a…_
-
-→ [profile](/researchers/minghua-liu)
+→ [profile](/researchers/kuan-meng)
 
 ---
-### No. 03 · Articulated Kinematics Distillation from Video Diffusion Models
+### No. 03 · Non-covalent Interactions at cm$^{-1}$ Accuracy: Data Efficient Physics-Informed Distillation for Machine Learning Interatomic Potentials
 
-**Xuan Li** · 一作 · 7 作者 · [arXiv:2504.01204](https://arxiv.org/abs/2504.01204)
+**Yulin Shen** · 一作 · 7 作者 · [arXiv:2606.05127](https://arxiv.org/abs/2606.05127)
 
-*用骨架控制与视频扩散模型蒸馏生成高保真4D动画。*
+_Foundation models in atomistic machine learning encode interaction physics across diverse atomic environments, but whether that structure can be transferred when building specialist potentials at quantum-chemical accura…_
 
-_We present Articulated Kinematics Distillation (AKD), a framework for generating high-fidelity character animations by merging the strengths of skeleton-based animation and modern generative models. AKD uses a skeleton-…_
-
-→ [profile](/researchers/xuan-li)
+→ [profile](/researchers/yulin-shen)
 
 ---
-### No. 04 · CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models
+### No. 04 · Density-functional theory calculation of hydrogen solubility in cubic silicon carbide at finite temperatures
 
-**Qingqing Zhao** · 一作 · 15 作者 · [arXiv:2503.22020](https://arxiv.org/abs/2503.22020)
+**Jonathan S. Evarts** · 一作 · 3 作者 · [arXiv:2606.05100](https://arxiv.org/abs/2606.05100)
 
-*在VLA中引入自回归视觉思维链预测未来帧提升操控。*
+_An ab initio framework using density-functional theory has been developed to predict hydrogen solubility in both pristine and defective \b{eta}-SiC. This study is motivated by the critical need for accurate hydrogen per…_
 
-_Vision-language-action models (VLAs) have shown potential in leveraging pretrained vision-language models and diverse robot demonstrations for learning generalizable sensorimotor control. While this paradigm effectively…_
-
-→ [profile](/researchers/qingqing-zhao)
+→ [profile](/researchers/jonathan-s-evarts)
 
 ---
-### No. 05 · DressRecon: Freeform 4D Human Reconstruction from Monocular Video
+### No. 05 · Exchange-mediated exciton splitting and linear dichroism in monolayer transition metal dichalcogenide induced by ferroelectric substrates
 
-**Jeff Tan** · 一作 · 5 作者 · [arXiv:2409.20563](https://arxiv.org/abs/2409.20563)
+**Sudipta Kundu** · 一作 · 2 作者 · [arXiv:2606.05093](https://arxiv.org/abs/2606.05093)
 
-*解耦人体与衣物形变的神经隐式模型，结合视频优化与图像先验。*
+_Valley-polarized excitons in two-dimensional transition metal dichalcogenides (TMDs) offer a promising platform for quantum applications, yet the addressability and decoherence of these states remain fundamental challen…_
 
-_We present a method to reconstruct time-consistent human body models from monocular videos, focusing on extremely loose clothing or handheld object interactions. Prior work in human reconstruction is either limited to t…_
-
-→ [profile](/researchers/jeff-tan)
+→ [profile](/researchers/sudipta-kundu)
 
 ---
-### No. 06 · PhysAvatar: Learning the Physics of Dressed 3D Avatars from Visual Observations
+### No. 06 · Mechanoluminescence in crystalline inorganic materials: local disorder and the elastic distortion hypothesis
 
-**Yang Zheng** · 一作 · 11 作者 · [arXiv:2404.04421](https://arxiv.org/abs/2404.04421)
+**T. Rouxel** · 一作 · 3 作者 · [arXiv:2606.05065](https://arxiv.org/abs/2606.05065)
 
-*结合逆向渲染与物理模拟的4D高斯人体服装建模。*
+_In this exploratory work, we aim to understand the mechanoluminescence (ML) phenomenon manifested by various inorganic compounds by focusing on the influence of mechanical loading on local distortion and loss of symmetr…_
 
-_Modeling and rendering photorealistic avatars is of crucial importance in many applications. Existing methods that build a 3D avatar from visual observations, however, struggle to reconstruct clothed humans. We introduc…_
-
-→ [profile](/researchers/yang-zheng)
+→ [profile](/researchers/t-rouxel)
 
 ---
-### No. 07 · Diffusion Shape Prior for Wrinkle-Accurate Cloth Registration
+### No. 07 · Bulk and surface excitons in the van der Waals magnet CrSBr: Magneto-optical studies to 55 tesla
 
-**Jingfan Guo** · 一作 · 8 作者 · [arXiv:2311.05828](https://arxiv.org/abs/2311.05828)
+**Junho Choi** · 一作 · 7 作者 · [arXiv:2606.05057](https://arxiv.org/abs/2606.05057)
 
-*利用扩散模型学习形状先验，实现无纹理布料高精度注册。*
+_In thin layers of the 2D magnetic semiconductor CrSBr, very recent studies identified two distinct band-edge optical resonances, believed to arise from distinguishable bulk and surface excitons. This behavior reportedly…_
 
-_Registering clothes from 4D scans with vertex-accurate correspondence is challenging, yet important for dynamic appearance modeling and physics parameter estimation from real-world data. However, previous methods either…_
-
-→ [profile](/researchers/jingfan-guo)
+→ [profile](/researchers/junho-choi)
 
 ---
-### No. 08 · Drivable Avatar Clothing: Faithful Full-Body Telepresence with Dynamic Clothing Driven by Sparse RGB-D Input
+### No. 08 · Autonomous heterogeneous catalyst discovery with a self-evolving multi-agent digital twin
 
-**Donglai Xiang** · 一作 · 7 作者 · [arXiv:2310.05917](https://arxiv.org/abs/2310.05917)
+**Zhilong Song** · 一作 · 3 作者 · [arXiv:2606.05050](https://arxiv.org/abs/2606.05050)
 
-*用N-ICP和RGB-D驱动动态服装的逼真全身化身。*
+_Theoretical heterogeneous catalysis promises rapid catalyst discovery, yet computational and machine-learning predictions often deviate from experiment and stay confined to narrow material families, for want of a faithf…_
 
-_Clothing is an important part of human appearance but challenging to model in photorealistic avatars. In this work we present avatars with dynamically moving loose clothing that can be faithfully driven by sparse RGB-D…_
-
-→ [profile](/researchers/donglai-xiang)
+→ [profile](/researchers/zhilong-song)
 
 ---
-### No. 09 · Dressing Avatars: Deep Photorealistic Appearance for Physically Simulated Clothing
+### No. 09 · Berry-Curvature Activation by Orbital Flux in a Kagome Altermagnet
 
-**Donglai Xiang** · 一作 · 13 作者 · [arXiv:2206.15470](https://arxiv.org/abs/2206.15470)
+**Meysam Bagheri Tagani** · 一作 · 2 作者 · [arXiv:2606.04984](https://arxiv.org/abs/2606.04984)
 
-*用物理模拟几何驱动神经外观网络生成逼真衣物动态。*
+_We investigate topological electronic responses in a kagome altermagnetic metal hosting a compensated coplanar $120^\circ$ magnetic texture. Using a minimal tight-binding model incorporating nearest-neighbor hopping, no…_
 
-_Despite recent progress in developing animatable full-body avatars, realistic modeling of clothing - one of the core aspects of human self-expression - remains an open challenge. State-of-the-art physical simulation met…_
-
-→ [profile](/researchers/donglai-xiang)
+→ [profile](/researchers/meysam-bagheri-tagani)
 
 ---
-### No. 10 · Garment Avatars: Realistic Cloth Driving using Pattern Registration
+### No. 10 · SLUSCHI-UP: A Web Infrastructure for SLUSCHI Melting-Temperature Calculations Using Universal Machine-Learning Interatomic Potentials
 
-**Oshri Halimi** · 一作 · 10 作者 · [arXiv:2206.03373](https://arxiv.org/abs/2206.03373)
+**Qi-Jun Hong** · 一作 · 1 作者 · [arXiv:2606.04973](https://arxiv.org/abs/2606.04973)
 
-*多视图图案配准驱动高精度服装几何模型生成。*
+_Melting temperature is a critical property for high-temperature materials design, but first-principles melting calculations based on finite-temperature molecular dynamics can require substantial computational resources.…_
 
-_Virtual telepresence is the future of online communication. Clothing is an essential part of a person's identity and self-expression. Yet, ground truth data of registered clothes is currently unavailable in the required…_
-
-→ [profile](/researchers/oshri-halimi)
+→ [profile](/researchers/qi-jun-hong)
 
 ---
 
-## Section B · 🔄 动态更新 · 9 项
+## Section B · 🔄 动态更新 · 6 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Hao Su](/researchers/hao-su) | PARTFIELD: Learning 3D Feature Fields for Part Segmentation and Beyond | — | [2504.11451](https://arxiv.org/abs/2504.11451) |
-| [Chelsea Finn](/researchers/chelsea-finn) | CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action… | — | [2503.22020](https://arxiv.org/abs/2503.22020) |
-| [Saining Xie](/researchers/saining-xie) | Benchmarking Visual State Tracking in Multimodal Video Understanding | — | [2606.03920](https://arxiv.org/abs/2606.03920) |
-| [Shuran Song](/researchers/shuran-song) | Cosmos 3: Omnimodal World Models for Physical AI | world_models | [2606.02800](https://arxiv.org/abs/2606.02800) |
-| [Yuke Zhu](/researchers/yuke-zhu) | Cosmos 3: Omnimodal World Models for Physical AI | world_models | [2606.02800](https://arxiv.org/abs/2606.02800) |
-| [Yilun Du](/researchers/yilun-du) | Cosmos 3: Omnimodal World Models for Physical AI | world_models | [2606.02800](https://arxiv.org/abs/2606.02800) |
-| [He Wang](/researchers/he-wang) | Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking | embodied | [2606.03985](https://arxiv.org/abs/2606.03985) |
-| [Yang Gao](/researchers/yang-gao) | Bionic Human-Motion Style Transfer for Physically Executable Whole-Bo… | embodied | [2606.03536](https://arxiv.org/abs/2606.03536) |
-| [Cewu Lu](/researchers/cewu-lu) | OpenEAI-Platform: An Open-source Embodied Artificial Intelligence Har… | embodied | [2606.03392](https://arxiv.org/abs/2606.03392) |
+| [Shuaicheng Liu](/researchers/shuaicheng-liu) | C3AE: Exploring the Limits of Compact Model for Age Estimation | — | [None](#) |
+| [Chuang Gan](/researchers/chuang-gan) | UniCanvas: A Diffusion-base Unified Model for Text-in-Image Joint Gen… | world_models | [2606.04264](https://arxiv.org/abs/2606.04264) |
+| [Yuke Zhu](/researchers/yuke-zhu) | GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video… | embodied | [2606.05160](https://arxiv.org/abs/2606.05160) |
+| [Chunhua Shen](/researchers/chunhua-shen) | HORIZON: Recoverability-Governed Curriculum for Physical-Domain Scali… | embodied | [2606.05143](https://arxiv.org/abs/2606.05143) |
+| [Gao Huang](/researchers/gao-huang) | Potential-Guided Flow Matching for Vision-Language-Action Policy Impr… | embodied | [2606.04968](https://arxiv.org/abs/2606.04968) |
+| [Chuang Gan](/researchers/chuang-gan) | DLO-Lab: Benchmarking Deformable Linear Object Manipulations with Dif… | embodied | [2606.04206](https://arxiv.org/abs/2606.04206) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -181,160 +158,149 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Cosmos 3: Omnimodal World Models for Physical AI
+### No. 01 · GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors
 
-**Aditi** · 一作 · 291 作者 · [arXiv:2606.02800](https://arxiv.org/abs/2606.02800)
+**Tianyi Xie** · 一作 · 20 作者 · [arXiv:2606.05160](https://arxiv.org/abs/2606.05160)
 
-_We introduce Cosmos 3, a family of omnimodal world models designed to jointly process and generate language, image, video, audio, and action sequences within a unified mixture-of-transformers architecture. By supporting…_
+_Scaling humanoid loco-manipulation requires robot-compatible demonstrations across diverse objects, whole-body motions, and scene geometries, but teleoperation and motion capture are difficult to scale because each coll…_
 
-→ [profile](/researchers/aditi)
-
----
-### No. 02 · NVIDIA OmniDreams: Real-Time Generative World Model for Closed-Loop Autonomous Vehicle Simulation
-
-**NVIDIA** · 一作 · 35 作者 · [arXiv:2606.03159](https://arxiv.org/abs/2606.03159)
-
-_As autonomous vehicle capabilities advance, the safe evaluation of driving policies in long-tail scenarios remains a critical bottleneck. In closed-loop simulation, the driving policy model actively interacts with the e…_
-
-→ [profile](/researchers/nvidia)
+→ [profile](/researchers/tianyi-xie)
 
 ---
-### No. 03 · Edify 3D: Scalable High-Quality 3D Asset Generation
+### No. 02 · Curvature-driven revival of charge density waves in non-Euclidean space
 
-**NVIDIA** · 一作 · 25 作者 · [arXiv:2411.07135](https://arxiv.org/abs/2411.07135)
+**Zhipeng Song** · 一作 · 15 作者 · [arXiv:2606.04728](https://arxiv.org/abs/2606.04728)
 
-*用扩散模型生成多视图RGB与法线图以重建3D资产。*
+_Strongly correlated quantum states, such as charge density waves (CDWs), are exquisitely sensitive to Fermi surface topology and lattice symmetry, and are typically quenched by heavy carrier doping. In two-dimensional (…_
 
-_We introduce Edify 3D, an advanced solution designed for high-quality 3D asset generation. Our method first synthesizes RGB and surface normal images of the described object at multiple viewpoints using a diffusion mode…_
-
-→ [profile](/researchers/nvidia)
+→ [profile](/researchers/zhipeng-song)
 
 ---
-### No. 04 · TVIR: Building Deep Research Agents Towards Text--Visual Interleaved Report Generation
+### No. 03 · Potential-Guided Flow Matching for Vision-Language-Action Policy Improvement
 
-**Xinkai Ma** · 一作 · 24 作者 · [arXiv:2606.02320](https://arxiv.org/abs/2606.02320)
+**Yunpeng Mei** · 一作 · 15 作者 · [arXiv:2606.04968](https://arxiv.org/abs/2606.04968)
 
-_Deep Research Agents have shown strong capability in multi-step information retrieval, reasoning, and long-form report generation, but existing benchmarks and systems remain predominantly text-centric, with limited eval…_
+_Large vision-language-action (VLA) policies are increasingly trained as conditional generative models over action chunks. Yet deployment produces mixed-quality experience-successful demonstrations, partial completions,…_
 
-→ [profile](/researchers/xinkai-ma)
-
----
-### No. 05 · Multiferroicity in the two-dimensional limit in hexagonal LuFeO3 films
-
-**Huilin Lai** · 一作 · 18 作者 · [arXiv:2606.03053](https://arxiv.org/abs/2606.03053)
-
-_Multiferroic oxides, which combine coupled ferroelectric and magnetic orders, are central to understanding correlated quantum phenomena. Yet, as thickness approaches the two-dimensional (2D) limit, both ferroelectricity…_
-
-→ [profile](/researchers/huilin-lai)
+→ [profile](/researchers/yunpeng-mei)
 
 ---
-### No. 06 · Mechanochemical Nano-Writing of an Atomically Thin Metal
+### No. 04 · Local multiferroic ordering at room temperature in collinear magnetoelectric antiferromagnets induced by flexo-Zeeman coupling
 
-**Shuai Zhang** · 一作 · 17 作者 · [arXiv:2606.03710](https://arxiv.org/abs/2606.03710)
+**Paulina J. Prusik** · 一作 · 14 作者 · [arXiv:2606.04738](https://arxiv.org/abs/2606.04738)
 
-_Mechanical energy accelerates many physicochemical processes, including materials syntheses that are hard to produce with thermal energy alone. However, physical understanding connecting applied mechanical forces with i…_
+_Spin-driven multiferroicity attracts significant interest due to its tunability and inherently strong magnetoelectric coupling. While this mechanism induces sizeable electric polarization, it typically occurs at low tem…_
 
-→ [profile](/researchers/shuai-zhang)
-
----
-### No. 07 · Reversible Superdense Ordering of Tetragonal Lithium in a Layered Material
-
-**Natalie L. Williams** · 一作 · 17 作者 · [arXiv:2606.03563](https://arxiv.org/abs/2606.03563)
-
-_Understanding lithium (Li) ordering and dynamics is foundational in energy storage. X-ray based experimental methods do not simultaneously provide atomic structure information together with chemical composition and loca…_
-
-→ [profile](/researchers/natalie-l-williams)
+→ [profile](/researchers/paulina-j-prusik)
 
 ---
-### No. 08 · CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models
+### No. 05 · Mechanical bistability and hysteresis in graphene-CNT hybrid systems: from atomistic simulations to macroscale structural responses
 
-**Qingqing Zhao** · 一作 · 15 作者 · [arXiv:2503.22020](https://arxiv.org/abs/2503.22020)
+**Mingda Ding** · 一作 · 14 作者 · [arXiv:2606.04504](https://arxiv.org/abs/2606.04504)
 
-*在VLA中引入自回归视觉思维链预测未来帧提升操控。*
+*发现石墨烯-碳管杂化体系机械双稳态与滞后现象。*
 
-_Vision-language-action models (VLAs) have shown potential in leveraging pretrained vision-language models and diverse robot demonstrations for learning generalizable sensorimotor control. While this paradigm effectively…_
+_Hybrid systems composed of graphene (Gr) and carbon nanotubes (CNTs), such as films and aerogels, have attracted broad attention for applications in electronics, mechanics, energy, and environmental science. Since the m…_
 
-→ [profile](/researchers/qingqing-zhao)
-
----
-### No. 09 · AutoMedBench: Towards Medical AutoResearch with Agentic AI Models
-
-**Junqi Liu** · 一作 · 15 作者 · [arXiv:2606.01961](https://arxiv.org/abs/2606.01961)
-
-_Autonomous agents are increasingly expected to support end-to-end medical-AI research workflows, moving beyond isolated prediction tasks or short-form clinical question answering. However, existing medical agent benchma…_
-
-→ [profile](/researchers/junqi-liu)
+→ [profile](/researchers/mingda-ding)
 
 ---
-### No. 10 · Magneto-optical evidence for single-crystal-like magnetic switching of epitaxial antiferromagnetic LaFeO3 films
+### No. 06 · Strain-induced suppression of thermochromism in divalent cobalt molybdate thin films
 
-**A. Rieche** · 一作 · 14 作者 · [arXiv:2606.03286](https://arxiv.org/abs/2606.03286)
+**Kiri Van Koughnet** · 一作 · 13 作者 · [arXiv:2606.04745](https://arxiv.org/abs/2606.04745)
 
-_Strained epitaxial films of the antiferromagnetic orthoferrite LaFeO3 offer a promising platform for antiferromagnetic spintronics, yet their magnetic switching behavior and domain structure have remained largely unexpl…_
+_Thermochromic oxides provide a platform for coupling lattice, electronic, and magnetic degrees of freedom, with divalent cobalt molybdate $CoMoO_4$ as a prototypical example. Despite extensive studies on powders, its th…_
 
-→ [profile](/researchers/a-rieche)
+→ [profile](/researchers/kiri-van-koughnet)
+
+---
+### No. 07 · VISTA: Vision-Grounded and Physics-Validated Adaptation of UMI data for VLA Training
+
+**Siyuan Yang** · 一作 · 13 作者 · [arXiv:2606.04708](https://arxiv.org/abs/2606.04708)
+
+_Universal Manipulation Interface (UMI) enables scalable real-world robot data collection without hardware-specific teleoperation, yet leveraging UMI data to train large-scale Vision-Language-Action (VLA) models remains…_
+
+→ [profile](/researchers/siyuan-yang)
+
+---
+### No. 08 · WAM-Nav: Asymmetric Latent World-Action Modeling for Unified Visual Navigation
+
+**Ning Yang** · 一作 · 12 作者 · [arXiv:2606.04907](https://arxiv.org/abs/2606.04907)
+
+_Visual navigation requires generating smooth and collision-free trajectories under complex geometric and physical constraints. Existing reactive policies that directly map observations to actions lack anticipatory reaso…_
+
+→ [profile](/researchers/ning-yang)
+
+---
+### No. 09 · Affordance2Action: Task-Conditioned Scene-level Affordance Grounding for Real-Time Manipulation
+
+**Litao Liu** · 一作 · 12 作者 · [arXiv:2606.04172](https://arxiv.org/abs/2606.04172)
+
+_Task-conditioned manipulation requires grounding instructions to task-relevant functional parts rather than object categories. This setting is scene-dependent and often one-to-many in cluttered scenes: the same object m…_
+
+→ [profile](/researchers/litao-liu)
+
+---
+### No. 10 · Antiferromagnetic Quantum Criticality in Infinite-Layer Cuprates Sr1-xNdxCuO2
+
+**Bin-Jie Wu** · 一作 · 11 作者 · [arXiv:2606.04559](https://arxiv.org/abs/2606.04559)
+
+*用臭氧辅助MBE合成高质量Sr1-xNdxCuO2薄膜，揭示反铁磁量子临界性。*
+
+_The interplay between quantum criticality and Fermi surface reconstruction is central to elucidating the phase diagram of high-temperature cuprate superconductors. While studies on electron-doped T'-structure cuprates s…_
+
+→ [profile](/researchers/bin-jie-wu)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 5 个
+## Section F · 🌙 Sleeper Picks · 4 个
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · Cosmos 3: Omnimodal World Models for Physical AI
+### No. 01 · GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors
 
-**Aditi** · 一作 · 291 作者 · [arXiv:2606.02800](https://arxiv.org/abs/2606.02800)
+**Tianyi Xie** · 一作 · 20 作者 · [arXiv:2606.05160](https://arxiv.org/abs/2606.05160)
 
-_We introduce Cosmos 3, a family of omnimodal world models designed to jointly process and generate language, image, video, audio, and action sequences within a unified mixture-of-transformers architecture. By supporting…_
+_Scaling humanoid loco-manipulation requires robot-compatible demonstrations across diverse objects, whole-body motions, and scene geometries, but teleoperation and motion capture are difficult to scale because each coll…_
 
-**▸ 选中原因：首次出现 · 291 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 20 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/aditi)
-
----
-### No. 02 · TVIR: Building Deep Research Agents Towards Text--Visual Interleaved Report Generation
-
-**Xinkai Ma** · 一作 · 24 作者 · [arXiv:2606.02320](https://arxiv.org/abs/2606.02320)
-
-_Deep Research Agents have shown strong capability in multi-step information retrieval, reasoning, and long-form report generation, but existing benchmarks and systems remain predominantly text-centric, with limited eval…_
-
-**▸ 选中原因：首次出现 · 24 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/xinkai-ma)
+→ [profile](/researchers/tianyi-xie)
 
 ---
-### No. 03 · Multiferroicity in the two-dimensional limit in hexagonal LuFeO3 films
+### No. 02 · Potential-Guided Flow Matching for Vision-Language-Action Policy Improvement
 
-**Huilin Lai** · 一作 · 18 作者 · [arXiv:2606.03053](https://arxiv.org/abs/2606.03053)
+**Yunpeng Mei** · 一作 · 15 作者 · [arXiv:2606.04968](https://arxiv.org/abs/2606.04968)
 
-_Multiferroic oxides, which combine coupled ferroelectric and magnetic orders, are central to understanding correlated quantum phenomena. Yet, as thickness approaches the two-dimensional (2D) limit, both ferroelectricity…_
+_Large vision-language-action (VLA) policies are increasingly trained as conditional generative models over action chunks. Yet deployment produces mixed-quality experience-successful demonstrations, partial completions,…_
 
-**▸ 选中原因：首次出现 · 18 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 15 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/huilin-lai)
+→ [profile](/researchers/yunpeng-mei)
 
 ---
-### No. 04 · Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking
+### No. 03 · Curvature-driven revival of charge density waves in non-Euclidean space
 
-**Zekun Qi** · 一作 · 13 作者 · [arXiv:2606.03985](https://arxiv.org/abs/2606.03985)
+**Zhipeng Song** · 一作 · 15 作者 · [arXiv:2606.04728](https://arxiv.org/abs/2606.04728)
 
-_We introduce Humanoid-GPT, a GPT-style Transformer with causal attention trained on a billion-scale motion corpus for whole-body control. Unlike prior shallow MLP trackers constrained by scarce data and an agility-gener…_
+_Strongly correlated quantum states, such as charge density waves (CDWs), are exquisitely sensitive to Fermi surface topology and lattice symmetry, and are typically quenched by heavy carrier doping. In two-dimensional (…_
+
+**▸ 选中原因：首次出现 · 15 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/zhipeng-song)
+
+---
+### No. 04 · HORIZON: Recoverability-Governed Curriculum for Physical-Domain Scaling
+
+**Chenhao Bai** · 一作 · 8 作者 · [arXiv:2606.05143](https://arxiv.org/abs/2606.05143)
+
+_Scaling robust robot policies requires more than broader randomization, because physical-domain experience must remain organized and learnable throughout training. We study when a policy can benefit from harder physics…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/zekun-qi)
-
----
-### No. 05 · Bionic Human-Motion Style Transfer for Physically Executable Whole-Body Control of Humanoid Robots
-
-**Tianchen Huang** · 一作 · 11 作者 · [arXiv:2606.03536](https://arxiv.org/abs/2606.03536)
-
-_Expressive whole-body motion is important for humanoid robots operating in human environments, where robots are expected to move stably while presenting readable and adjustable body behaviors. However, most expressive m…_
-
-**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
-
-→ [profile](/researchers/tianchen-huang)
+→ [profile](/researchers/chenhao-bai)
 
 ---
 
