@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 021                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · THURSDAY, JUNE 4, 2026
+VOL. 1 · NO. 023                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, JUNE 6, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 021 · 2026-06-04
+> *All The Researchers Fit To Watch* — Vol. 1, No. 023 · 2026-06-06
 
-_Auto-generated at 2026-06-04T05:36:01+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-06-06T04:50:01+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,121 +15,151 @@ _Auto-generated at 2026-06-04T05:36:01+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **13235** | 95 | 459 | 3 | 17 |
+| **13761** | 121 | 526 | 4 | 17 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Variational low-energy subspaces for chemically accurate excited states
+### No. 01 · Generative Lines Matching Models
 
-**Clemens Giuliani** · 一作 · 4 作者 · [arXiv:2606.05148](https://arxiv.org/abs/2606.05148)
+**Ori Matityahu** · 一作 · 2 作者 · [arXiv:2412.06403](https://arxiv.org/abs/2412.06403)
 
-_Accurate electronic excited states are essential for photochemistry, spectroscopy and non-adiabatic molecular dynamics, but high-level calculations often scale steeply and require prior knowledge of the target state's c…_
+*用ODE采样器匹配全局直线，解决扩散模型训练奇异点。*
 
-→ [profile](/researchers/clemens-giuliani)
+_In this paper we identify the source of a singularity in the training loss of key denoising models, that causes the denoiser's predictions to collapse towards the mean of the source or target distributions. This degener…_
 
----
-### No. 02 · MicroCup: A Cryogenic Specimen Preparation Strategy for Atom Probe Tomography of Organic Molecular Liquids
-
-**Kuan Meng** · 一作 · 4 作者 · [arXiv:2606.05147](https://arxiv.org/abs/2606.05147)
-
-_Atom probe tomography (APT) of organic molecular liquids is limited by poorly reproducible specimen geometry, reduced milling rates, and beam sensitivity during cryo-FIB preparation. Here we introduce a MicroCup strateg…_
-
-→ [profile](/researchers/kuan-meng)
+→ [profile](/researchers/ori-matityahu)
 
 ---
-### No. 03 · Non-covalent Interactions at cm$^{-1}$ Accuracy: Data Efficient Physics-Informed Distillation for Machine Learning Interatomic Potentials
+### No. 02 · ContactNet: Geometric-Based Deep Learning Model for Predicting Protein-Protein Interactions
 
-**Yulin Shen** · 一作 · 7 作者 · [arXiv:2606.05127](https://arxiv.org/abs/2606.05127)
+**Matan Halfon** · 一作 · 4 作者 · [arXiv:2406.18314](https://arxiv.org/abs/2406.18314)
 
-_Foundation models in atomistic machine learning encode interaction physics across diverse atomic environments, but whether that structure can be transferred when building specialist potentials at quantum-chemical accura…_
+*用注意力图神经网络分类对接构象，无需MSA。*
 
-→ [profile](/researchers/yulin-shen)
+_Deep learning approaches achieved significant progress in predicting protein structures. These methods are often applied to protein-protein interactions (PPIs) yet require Multiple Sequence Alignment (MSA) which is unav…_
 
----
-### No. 04 · Density-functional theory calculation of hydrogen solubility in cubic silicon carbide at finite temperatures
-
-**Jonathan S. Evarts** · 一作 · 3 作者 · [arXiv:2606.05100](https://arxiv.org/abs/2606.05100)
-
-_An ab initio framework using density-functional theory has been developed to predict hydrogen solubility in both pristine and defective \b{eta}-SiC. This study is motivated by the critical need for accurate hydrogen per…_
-
-→ [profile](/researchers/jonathan-s-evarts)
+→ [profile](/researchers/matan-halfon)
 
 ---
-### No. 05 · Exchange-mediated exciton splitting and linear dichroism in monolayer transition metal dichalcogenide induced by ferroelectric substrates
+### No. 03 · Single Image Object Counting and Localizing using Active-Learning
 
-**Sudipta Kundu** · 一作 · 2 作者 · [arXiv:2606.05093](https://arxiv.org/abs/2606.05093)
+**Inbar Huberman-Spiegelglas** · 一作 · 2 作者 · [arXiv:2111.08383](https://arxiv.org/abs/2111.08383)
 
-_Valley-polarized excitons in two-dimensional transition metal dichalcogenides (TMDs) offer a promising platform for quantum applications, yet the addressability and decoherence of these states remain fundamental challen…_
+*用主动学习迭代采样最小标签训练CNN实现单图计数定位。*
 
-→ [profile](/researchers/sudipta-kundu)
+_The need to count and localize repeating objects in an image arises in different scenarios, such as biological microscopy studies, production lines inspection, and surveillance recordings analysis. The use of supervised…_
 
----
-### No. 06 · Mechanoluminescence in crystalline inorganic materials: local disorder and the elastic distortion hypothesis
-
-**T. Rouxel** · 一作 · 3 作者 · [arXiv:2606.05065](https://arxiv.org/abs/2606.05065)
-
-_In this exploratory work, we aim to understand the mechanoluminescence (ML) phenomenon manifested by various inorganic compounds by focusing on the influence of mechanical loading on local distortion and loss of symmetr…_
-
-→ [profile](/researchers/t-rouxel)
+→ [profile](/researchers/inbar-huberman-spiegelglas)
 
 ---
-### No. 07 · Bulk and surface excitons in the van der Waals magnet CrSBr: Magneto-optical studies to 55 tesla
+### No. 04 · Unpaired Learning for High Dynamic Range Image Tone Mapping
 
-**Junho Choi** · 一作 · 7 作者 · [arXiv:2606.05057](https://arxiv.org/abs/2606.05057)
+**Yael Vinker** · 一作 · 3 作者 · [arXiv:2111.00219](https://arxiv.org/abs/2111.00219)
 
-_In thin layers of the 2D magnetic semiconductor CrSBr, very recent studies identified two distinct band-edge optical resonances, believed to arise from distinguishable bulk and surface excitons. This behavior reportedly…_
+*用未配对HDR与LDR图像对抗训练实现色调映射。*
 
-→ [profile](/researchers/junho-choi)
+_High dynamic range (HDR) photography is becoming increasingly popular and available by DSLR and mobile-phone cameras. While deep neural networks (DNN) have greatly impacted other domains of image manipulation, their use…_
 
----
-### No. 08 · Autonomous heterogeneous catalyst discovery with a self-evolving multi-agent digital twin
-
-**Zhilong Song** · 一作 · 3 作者 · [arXiv:2606.05050](https://arxiv.org/abs/2606.05050)
-
-_Theoretical heterogeneous catalysis promises rapid catalyst discovery, yet computational and machine-learning predictions often deviate from experiment and stay confined to narrow material families, for want of a faithf…_
-
-→ [profile](/researchers/zhilong-song)
+→ [profile](/researchers/yael-vinker)
 
 ---
-### No. 09 · Berry-Curvature Activation by Orbital Flux in a Kagome Altermagnet
+### No. 05 · Deblurring using Analysis-Synthesis Networks Pair
 
-**Meysam Bagheri Tagani** · 一作 · 2 作者 · [arXiv:2606.04984](https://arxiv.org/abs/2606.04984)
+**Adam Kaufman** · 一作 · 2 作者 · [arXiv:2004.02956](https://arxiv.org/abs/2004.02956)
 
-_We investigate topological electronic responses in a kagome altermagnetic metal hosting a compensated coplanar $120^\circ$ magnetic texture. Using a minimal tight-binding model incorporating nearest-neighbor hopping, no…_
+*分析-合成网络对引入交叉相关层实现盲去模糊。*
 
-→ [profile](/researchers/meysam-bagheri-tagani)
+_Blind image deblurring remains a challenging problem for modern artificial neural networks. Unlike other image restoration problems, deblurring networks fail behind the performance of existing deblurring algorithms in c…_
 
----
-### No. 10 · SLUSCHI-UP: A Web Infrastructure for SLUSCHI Melting-Temperature Calculations Using Universal Machine-Learning Interatomic Potentials
-
-**Qi-Jun Hong** · 一作 · 1 作者 · [arXiv:2606.04973](https://arxiv.org/abs/2606.04973)
-
-_Melting temperature is a critical property for high-temperature materials design, but first-principles melting calculations based on finite-temperature molecular dynamics can require substantial computational resources.…_
-
-→ [profile](/researchers/qi-jun-hong)
+→ [profile](/researchers/adam-kaufman)
 
 ---
+### No. 06 · Detecting Repeating Objects using Patch Correlation Analysis
 
-## Section B · 🔄 动态更新 · 6 项
+**Inbar Huberman** · 一作 · 2 作者 · [arXiv:1904.05629](https://arxiv.org/abs/1904.05629)
+
+*利用补丁相关性分析无监督学习重复物体检测。*
+
+_In this paper we describe a new method for detecting and counting a repeating object in an image. While the method relies on a fairly sophisticated deformable part model, unlike existing techniques it estimates the mode…_
+
+→ [profile](/researchers/inbar-huberman)
+
+---
+### No. 07 · Reducing Lateral Visual Biases in Displays
+
+**Inbar Huberman** · 一作 · 2 作者 · [arXiv:1904.05614](https://arxiv.org/abs/1904.05614)
+
+*用反偏置图像抵消视网膜侧抑制产生的视觉偏差。*
+
+_The human visual system is composed of multiple physiological components that apply multiple mechanisms in order to cope with the rich visual content it encounters. The complexity of this system leads to non-trivial rel…_
+
+→ [profile](/researchers/inbar-huberman)
+
+---
+### No. 08 · RAFT: Data Refinement and Adaptive Distillation for Domain Fine-Tuning with Alleviated Forgetting
+
+**Yuduo Li** · 一作 · 5 作者 · [arXiv:2606.00147](https://arxiv.org/abs/2606.00147)
+
+*数据精炼与轨迹级蒸馏缓解领域微调遗忘。*
+
+_Domain-specific supervised fine-tuning (SFT) often improves in-domain performance at the cost of degrading a model's general capabilities. We view this degradation through two practical gaps in domain SFT: a supervision…_
+
+→ [profile](/researchers/yuduo-li)
+
+---
+### No. 09 · Rethinking Supervised Fine-Tuning: Emphasizing Key Answer Tokens for Improved LLM Accuracy
+
+**Xiaofeng Shi** · 一作 · 4 作者 · [arXiv:2512.21017](https://arxiv.org/abs/2512.21017)
+
+*用SFTKey两阶段微调强化答案令牌提升LLM准确率。*
+
+_With the rapid advancement of Large Language Models (LLMs), the Chain-of-Thought (CoT) component has become significant for complex reasoning tasks. However, in conventional Supervised Fine-Tuning (SFT), the model could…_
+
+→ [profile](/researchers/xiaofeng-shi)
+
+---
+### No. 10 · SPAR: Scholar Paper Retrieval with LLM-based Agents for Enhanced Academic Search
+
+**Xiaofeng Shi** · 一作 · 6 作者 · [arXiv:2507.15245](https://arxiv.org/abs/2507.15245)
+
+*多智能体框架用RefChain分解查询提升学术检索F1达56%。*
+
+_Recent advances in large language models (LLMs) have opened new opportunities for academic literature retrieval. However, existing systems often rely on rigid pipelines and exhibit limited reasoning capabilities. We int…_
+
+→ [profile](/researchers/xiaofeng-shi)
+
+---
+
+## Section B · 🔄 动态更新 · 5 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Shuaicheng Liu](/researchers/shuaicheng-liu) | C3AE: Exploring the Limits of Compact Model for Age Estimation | — | [None](#) |
-| [Chuang Gan](/researchers/chuang-gan) | UniCanvas: A Diffusion-base Unified Model for Text-in-Image Joint Gen… | world_models | [2606.04264](https://arxiv.org/abs/2606.04264) |
-| [Yuke Zhu](/researchers/yuke-zhu) | GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video… | embodied | [2606.05160](https://arxiv.org/abs/2606.05160) |
-| [Chunhua Shen](/researchers/chunhua-shen) | HORIZON: Recoverability-Governed Curriculum for Physical-Domain Scali… | embodied | [2606.05143](https://arxiv.org/abs/2606.05143) |
-| [Gao Huang](/researchers/gao-huang) | Potential-Guided Flow Matching for Vision-Language-Action Policy Impr… | embodied | [2606.04968](https://arxiv.org/abs/2606.04968) |
-| [Chuang Gan](/researchers/chuang-gan) | DLO-Lab: Benchmarking Deformable Linear Object Manipulations with Dif… | embodied | [2606.04206](https://arxiv.org/abs/2606.04206) |
+| [Yang Gao](/researchers/yang-gao) | The Shape of Addition: Geometric Structures of Arithmetic in Large La… | — | [2606.03645](https://arxiv.org/abs/2606.03645) |
+| [Zongqing Lu](/researchers/zongqing-lu) | RealDexUMI: A Wearable Universal Manipulation Interface for Dexterous… | embodied | [2606.06033](https://arxiv.org/abs/2606.06033) |
+| [Pieter Abbeel](/researchers/pieter-abbeel) | LadderMan: Learning Humanoid Perceptive Ladder Climbing | embodied | [2606.05873](https://arxiv.org/abs/2606.05873) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Towards World Models in Biomedical Research | world_models | [2606.05925](https://arxiv.org/abs/2606.05925) |
+| [Gao Huang](/researchers/gao-huang) | Towards World Models in Biomedical Research | world_models | [2606.05925](https://arxiv.org/abs/2606.05925) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section C · 🎓 即将毕业 PhD · Top 2
+## Section C · 🎓 即将毕业 PhD · Top 3
 
 _v0 fallback: 最高产的 auto-discovered first-author（proxy for 活跃晚期）._
 
-### No. 01 · Draft-OPD: On-Policy Distillation for Speculative Draft Models
+### No. 01 · Complexity-Balanced Diffusion Splitting
+
+**Noam Issachar** · 一作 · 3 作者 · [arXiv:2606.06477](https://arxiv.org/abs/2606.06477)
+
+*提出复杂度均衡扩散分裂，按近似难度分配扩散模型容量。*
+
+_Standard continuous-time generative models rely on monolithic architectures that must navigate vastly different signal regimes, from isotropic noise to intricate data distributions. While scaling model capacity improves…_
+
+→ [profile](/researchers/noam-issachar)
+
+---
+### No. 02 · Draft-OPD: On-Policy Distillation for Speculative Draft Models
 
 **Haodi Lei** · 一作 · 11 作者 · [arXiv:2605.29343](https://arxiv.org/abs/2605.29343)
 
@@ -138,7 +168,7 @@ _Speculative decoding accelerates large language model inference by pairing a ta
 → [profile](/researchers/haodi-lei)
 
 ---
-### No. 02 · Drivable Avatar Clothing: Faithful Full-Body Telepresence with Dynamic Clothing Driven by Sparse RGB-D Input
+### No. 03 · Drivable Avatar Clothing: Faithful Full-Body Telepresence with Dynamic Clothing Driven by Sparse RGB-D Input
 
 **Donglai Xiang** · 一作 · 7 作者 · [arXiv:2310.05917](https://arxiv.org/abs/2310.05917)
 
@@ -158,149 +188,156 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors
+### No. 01 · The Road Ahead in Autonomous Driving: The KITScenes Multimodal Dataset
 
-**Tianyi Xie** · 一作 · 20 作者 · [arXiv:2606.05160](https://arxiv.org/abs/2606.05160)
+**Richard Schwarzkopf** · 一作 · 24 作者 · [arXiv:2606.02956](https://arxiv.org/abs/2606.02956)
 
-_Scaling humanoid loco-manipulation requires robot-compatible demonstrations across diverse objects, whole-body motions, and scene geometries, but teleoperation and motion capture are difficult to scale because each coll…_
+_Existing autonomous driving datasets have enabled major progress, but fall short in sensor fidelity, map completeness, or geographic diversity. We present KITScenes Multimodal, a European dataset built around high-fidel…_
 
-→ [profile](/researchers/tianyi-xie)
-
----
-### No. 02 · Curvature-driven revival of charge density waves in non-Euclidean space
-
-**Zhipeng Song** · 一作 · 15 作者 · [arXiv:2606.04728](https://arxiv.org/abs/2606.04728)
-
-_Strongly correlated quantum states, such as charge density waves (CDWs), are exquisitely sensitive to Fermi surface topology and lattice symmetry, and are typically quenched by heavy carrier doping. In two-dimensional (…_
-
-→ [profile](/researchers/zhipeng-song)
+→ [profile](/researchers/richard-schwarzkopf)
 
 ---
-### No. 03 · Potential-Guided Flow Matching for Vision-Language-Action Policy Improvement
+### No. 02 · Towards World Models in Biomedical Research
 
-**Yunpeng Mei** · 一作 · 15 作者 · [arXiv:2606.04968](https://arxiv.org/abs/2606.04968)
+**Guangyu Wang** · 一作 · 22 作者 · [arXiv:2606.05925](https://arxiv.org/abs/2606.05925)
 
-_Large vision-language-action (VLA) policies are increasingly trained as conditional generative models over action chunks. Yet deployment produces mixed-quality experience-successful demonstrations, partial completions,…_
+_A central goal of biomedicine is to understand, predict and ultimately control the dynamic mechanisms by which biological systems respond to perturbations, disease progression and therapeutic intervention. Although foun…_
 
-→ [profile](/researchers/yunpeng-mei)
-
----
-### No. 04 · Local multiferroic ordering at room temperature in collinear magnetoelectric antiferromagnets induced by flexo-Zeeman coupling
-
-**Paulina J. Prusik** · 一作 · 14 作者 · [arXiv:2606.04738](https://arxiv.org/abs/2606.04738)
-
-_Spin-driven multiferroicity attracts significant interest due to its tunability and inherently strong magnetoelectric coupling. While this mechanism induces sizeable electric polarization, it typically occurs at low tem…_
-
-→ [profile](/researchers/paulina-j-prusik)
+→ [profile](/researchers/guangyu-wang)
 
 ---
-### No. 05 · Mechanical bistability and hysteresis in graphene-CNT hybrid systems: from atomistic simulations to macroscale structural responses
+### No. 03 · BCS-BEC crossover driven by small Fermi pockets of a high-Tc cuprate superconductor
 
-**Mingda Ding** · 一作 · 14 作者 · [arXiv:2606.04504](https://arxiv.org/abs/2606.04504)
+**Junhyeok Jeong** · 一作 · 19 作者 · [arXiv:2606.05653](https://arxiv.org/abs/2606.05653)
 
-*发现石墨烯-碳管杂化体系机械双稳态与滞后现象。*
+_Fermi arcs observed in underdoped cuprates have sparked debate over whether they represent segments of a large Fermi surface or small Fermi pockets. This ambiguity has long hindered their classification as either the co…_
 
-_Hybrid systems composed of graphene (Gr) and carbon nanotubes (CNTs), such as films and aerogels, have attracted broad attention for applications in electronics, mechanics, energy, and environmental science. Since the m…_
-
-→ [profile](/researchers/mingda-ding)
+→ [profile](/researchers/junhyeok-jeong)
 
 ---
-### No. 06 · Strain-induced suppression of thermochromism in divalent cobalt molybdate thin films
+### No. 04 · Ferroelectric brightening of spin forbidden dark excitons in a WSe2/hybrid perovskite heterostructure
 
-**Kiri Van Koughnet** · 一作 · 13 作者 · [arXiv:2606.04745](https://arxiv.org/abs/2606.04745)
+**Xinyun Wang** · 一作 · 17 作者 · [arXiv:2606.06128](https://arxiv.org/abs/2606.06128)
 
-_Thermochromic oxides provide a platform for coupling lattice, electronic, and magnetic degrees of freedom, with divalent cobalt molybdate $CoMoO_4$ as a prototypical example. Despite extensive studies on powders, its th…_
+_Long-lived dark excitons in monolayer WSe2 present promising candidates for carrying spin and valley information, but their optical access and spin manipulation have conventionally required the use of strong external ma…_
 
-→ [profile](/researchers/kiri-van-koughnet)
-
----
-### No. 07 · VISTA: Vision-Grounded and Physics-Validated Adaptation of UMI data for VLA Training
-
-**Siyuan Yang** · 一作 · 13 作者 · [arXiv:2606.04708](https://arxiv.org/abs/2606.04708)
-
-_Universal Manipulation Interface (UMI) enables scalable real-world robot data collection without hardware-specific teleoperation, yet leveraging UMI data to train large-scale Vision-Language-Action (VLA) models remains…_
-
-→ [profile](/researchers/siyuan-yang)
+→ [profile](/researchers/xinyun-wang)
 
 ---
-### No. 08 · WAM-Nav: Asymmetric Latent World-Action Modeling for Unified Visual Navigation
+### No. 05 · The KNN rollercoaster: from bulk ceramics to phase engineered wafer-scale thin films
 
-**Ning Yang** · 一作 · 12 作者 · [arXiv:2606.04907](https://arxiv.org/abs/2606.04907)
+**Giulia Pavese** · 一作 · 15 作者 · [arXiv:2606.05974](https://arxiv.org/abs/2606.05974)
 
-_Visual navigation requires generating smooth and collision-free trajectories under complex geometric and physical constraints. Existing reactive policies that directly map observations to actions lack anticipatory reaso…_
+_Since the initial disclosure of the extraordinary piezoelectric coefficients of Potassium sodium niobate (KNN) in near-equimolar bulk ceramics, its development trajectory has resembled a rollercoaster, with its integrat…_
 
-→ [profile](/researchers/ning-yang)
-
----
-### No. 09 · Affordance2Action: Task-Conditioned Scene-level Affordance Grounding for Real-Time Manipulation
-
-**Litao Liu** · 一作 · 12 作者 · [arXiv:2606.04172](https://arxiv.org/abs/2606.04172)
-
-_Task-conditioned manipulation requires grounding instructions to task-relevant functional parts rather than object categories. This setting is scene-dependent and often one-to-many in cluttered scenes: the same object m…_
-
-→ [profile](/researchers/litao-liu)
+→ [profile](/researchers/giulia-pavese)
 
 ---
-### No. 10 · Antiferromagnetic Quantum Criticality in Infinite-Layer Cuprates Sr1-xNdxCuO2
+### No. 06 · Optical Signature of Moiré Superlattices Formed by Twisted SrTiO$_3$ Membranes
 
-**Bin-Jie Wu** · 一作 · 11 作者 · [arXiv:2606.04559](https://arxiv.org/abs/2606.04559)
+**T. A. M. Ragib Shahriar** · 一作 · 14 作者 · [arXiv:2606.06289](https://arxiv.org/abs/2606.06289)
 
-*用臭氧辅助MBE合成高质量Sr1-xNdxCuO2薄膜，揭示反铁磁量子临界性。*
+_Moiré superlattices formed at the interfaces of mismatched lattices have attracted significant interest over the past decade due to their large tunability of band parameters and interactions among electrons, spins, and…_
 
-_The interplay between quantum criticality and Fermi surface reconstruction is central to elucidating the phase diagram of high-temperature cuprate superconductors. While studies on electron-doped T'-structure cuprates s…_
+→ [profile](/researchers/t-a-m-ragib-shahriar)
 
-→ [profile](/researchers/bin-jie-wu)
+---
+### No. 07 · AffordanceVLA: A Vision-Language-Action Model Empowering Action Generation through Affordance-Aware Understanding
+
+**Qize Yu** · 一作 · 13 作者 · [arXiv:2606.06155](https://arxiv.org/abs/2606.06155)
+
+_Vision-Language-Action (VLA) models leverage the rich world knowledge of pretrained vision-language models (VLMs) to enable instruction-following robotic manipulation. However, the structural mismatch between VLM semant…_
+
+→ [profile](/researchers/qize-yu)
+
+---
+### No. 08 · Hydrogen-induced lattice cohesion weakening favors atomic displacement
+
+**Liang Gao** · 一作 · 12 作者 · [arXiv:2606.05325](https://arxiv.org/abs/2606.05325)
+
+_Atomic displacement -- the fundamental process underlying diverse deformation and damage phenomena in metals, from irradiation defect production to stress-driven dislocation motion -- is governed by interatomic cohesion…_
+
+→ [profile](/researchers/liang-gao)
+
+---
+### No. 09 · World-Language-Action Model for Unified World Modeling, Language Reasoning, and Action Synthesis
+
+**Yi Yang** · 一作 · 12 作者 · [arXiv:2606.05979](https://arxiv.org/abs/2606.05979)
+
+_We propose world-language-action (WLA) models as a new class of embodied foundation models. WLA takes textual instructions, images, and robot states as inputs to jointly predict textual subtasks, subgoal images, and rob…_
+
+→ [profile](/researchers/yi-yang)
+
+---
+### No. 10 · TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion
+
+**Peizhuo Li** · 一作 · 12 作者 · [arXiv:2606.05880](https://arxiv.org/abs/2606.05880)
+
+_Agile humanoid locomotion across diverse challenging terrain demands both wide perceptual coverage and precise local geometry understanding. Motivated by the way humans selectively look at relevant terrain during locomo…_
+
+→ [profile](/researchers/peizhuo-li)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 4 个
+## Section F · 🌙 Sleeper Picks · 5 个
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors
+### No. 01 · BCS-BEC crossover driven by small Fermi pockets of a high-Tc cuprate superconductor
 
-**Tianyi Xie** · 一作 · 20 作者 · [arXiv:2606.05160](https://arxiv.org/abs/2606.05160)
+**Junhyeok Jeong** · 一作 · 19 作者 · [arXiv:2606.05653](https://arxiv.org/abs/2606.05653)
 
-_Scaling humanoid loco-manipulation requires robot-compatible demonstrations across diverse objects, whole-body motions, and scene geometries, but teleoperation and motion capture are difficult to scale because each coll…_
+_Fermi arcs observed in underdoped cuprates have sparked debate over whether they represent segments of a large Fermi surface or small Fermi pockets. This ambiguity has long hindered their classification as either the co…_
 
-**▸ 选中原因：首次出现 · 20 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 19 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/tianyi-xie)
+→ [profile](/researchers/junhyeok-jeong)
 
 ---
-### No. 02 · Potential-Guided Flow Matching for Vision-Language-Action Policy Improvement
+### No. 02 · Ferroelectric brightening of spin forbidden dark excitons in a WSe2/hybrid perovskite heterostructure
 
-**Yunpeng Mei** · 一作 · 15 作者 · [arXiv:2606.04968](https://arxiv.org/abs/2606.04968)
+**Xinyun Wang** · 一作 · 17 作者 · [arXiv:2606.06128](https://arxiv.org/abs/2606.06128)
 
-_Large vision-language-action (VLA) policies are increasingly trained as conditional generative models over action chunks. Yet deployment produces mixed-quality experience-successful demonstrations, partial completions,…_
+_Long-lived dark excitons in monolayer WSe2 present promising candidates for carrying spin and valley information, but their optical access and spin manipulation have conventionally required the use of strong external ma…_
+
+**▸ 选中原因：首次出现 · 17 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/xinyun-wang)
+
+---
+### No. 03 · The KNN rollercoaster: from bulk ceramics to phase engineered wafer-scale thin films
+
+**Giulia Pavese** · 一作 · 15 作者 · [arXiv:2606.05974](https://arxiv.org/abs/2606.05974)
+
+_Since the initial disclosure of the extraordinary piezoelectric coefficients of Potassium sodium niobate (KNN) in near-equimolar bulk ceramics, its development trajectory has resembled a rollercoaster, with its integrat…_
 
 **▸ 选中原因：首次出现 · 15 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/yunpeng-mei)
+→ [profile](/researchers/giulia-pavese)
 
 ---
-### No. 03 · Curvature-driven revival of charge density waves in non-Euclidean space
+### No. 04 · LadderMan: Learning Humanoid Perceptive Ladder Climbing
 
-**Zhipeng Song** · 一作 · 15 作者 · [arXiv:2606.04728](https://arxiv.org/abs/2606.04728)
+**Siheng Zhao** · 一作 · 9 作者 · [arXiv:2606.05873](https://arxiv.org/abs/2606.05873)
 
-_Strongly correlated quantum states, such as charge density waves (CDWs), are exquisitely sensitive to Fermi surface topology and lattice symmetry, and are typically quenched by heavy carrier doping. In two-dimensional (…_
-
-**▸ 选中原因：首次出现 · 15 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/zhipeng-song)
-
----
-### No. 04 · HORIZON: Recoverability-Governed Curriculum for Physical-Domain Scaling
-
-**Chenhao Bai** · 一作 · 8 作者 · [arXiv:2606.05143](https://arxiv.org/abs/2606.05143)
-
-_Scaling robust robot policies requires more than broader randomization, because physical-domain experience must remain organized and learnable throughout training. We study when a policy can benefit from harder physics…_
+_Humanoid robots hold great promise for operating in human-centered environments, yet ladder climbing remains one of the most challenging tasks due to sparse footholds and handholds, complex whole-body coordination, and…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/chenhao-bai)
+→ [profile](/researchers/siheng-zhao)
+
+---
+### No. 05 · The Shape of Addition: Geometric Structures of Arithmetic in Large Language Models
+
+**Liuyuan Wen** · 一作 · 5 作者 · [arXiv:2606.03645](https://arxiv.org/abs/2606.03645)
+
+_Large Language Models exhibit paradoxical fragility in fundamental arithmetic, implying a disconnect between internal computation and discrete output. By analyzing the residual stream geometry during multi-operand addit…_
+
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+
+→ [profile](/researchers/liuyuan-wen)
 
 ---
 
