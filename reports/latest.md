@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 026                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · TUESDAY, JUNE 9, 2026
+VOL. 1 · NO. 027                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · WEDNESDAY, JUNE 10, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 026 · 2026-06-09
+> *All The Researchers Fit To Watch* — Vol. 1, No. 027 · 2026-06-10
 
-_Auto-generated at 2026-06-09T05:02:18+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-06-10T05:15:44+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,125 +15,132 @@ _Auto-generated at 2026-06-09T05:02:18+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **15581** | 200 | 1286 | 4 | 31 |
+| **18148** | 148 | 2567 | 4 | 31 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs
+### No. 01 · VectraYX-Nano: A 42M-Parameter Spanish Cybersecurity Language Model with Curriculum Learning and Native Tool Use
 
-**Junyi Wu** · 一作 · 6 作者 · [arXiv:2605.18165](https://arxiv.org/abs/2605.18165)
+**Juan S. Santillana** · 一作 · 1 作者 · [arXiv:2605.13989](https://arxiv.org/abs/2605.13989)
 
-*通过位置保留压缩冗余[MASK]计算加速扩散LLM解码。*
+*42M西班牙语网络安全模型用课程学习与MCP工具调用。*
 
-_Unlike autoregressive models, which generate one token at a time, dLLMs denoise a chunk of [MASK] tokens jointly and sample one or more tokens per step; despite enabling parallel decoding, this process incurs substantia…_
+_We present VectraYX-Nano, a 41.95M-parameter decoder-only language model trained from scratch in Spanish for cybersecurity, with a Latin-American regional focus and native tool invocation via the Model Context Protocol…_
 
-→ [profile](/researchers/junyi-wu)
-
----
-### No. 02 · AdaTSQ: Pushing the Pareto Frontier of Diffusion Transformers via Temporal-Sensitivity Quantization
-
-**Shaoqiu Zhang** · 一作 · 9 作者 · [arXiv:2602.09883](https://arxiv.org/abs/2602.09883)
-
-*用时序敏感量化与束搜索分配扩散模型比特位宽。*
-
-_Diffusion Transformers (DiTs) have emerged as the state-of-the-art backbone for high-fidelity image and video generation. However, their massive computational cost and memory footprint hinder deployment on edge devices.…_
-
-→ [profile](/researchers/shaoqiu-zhang)
+→ [profile](/researchers/juan-s-santillana)
 
 ---
-### No. 03 · D$^2$Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs
+### No. 02 · ProvAgent: Threat Detection Based on Identity-Behavior Binding and Multi-Agent Collaborative Attack Investigation
 
-**Xianglong Yan** · 一作 · 8 作者 · [arXiv:2602.02546](https://arxiv.org/abs/2602.02546)
+**Wenhao Yan** · 一作 · 9 作者 · [arXiv:2603.09358](https://arxiv.org/abs/2603.09358)
 
-*双尺度量化器与偏差感知校正实现低比特LLM权重量化。*
+*用身份-行为绑定和多智能体协作实现自主攻击溯源。*
 
-_Large language models (LLMs) deliver strong performance, but their high compute and memory costs make deployment difficult in resource-constrained scenarios. Weight-only post-training quantization (PTQ) is appealing, as…_
+_Advanced Persistent Threats (APTs) pose critical challenges to modern cybersecurity due to their multi-stage and stealthy nature. While provenance-based detection approaches show promise in capturing causal attack seman…_
 
-→ [profile](/researchers/xianglong-yan)
-
----
-### No. 04 · CLQ: Cross-Layer Guided Orthogonal-based Quantization for Diffusion Transformers
-
-**Kai Liu** · 一作 · 4 作者 · [arXiv:2509.24416](https://arxiv.org/abs/2509.24416)
-
-*用正交化平滑与跨层搜索实现DiT的4比特量化。*
-
-_Visual generation quality has been greatly promoted with the rapid advances in diffusion transformers (DiTs), which is attributed to the scaling of model size and complexity. However, these attributions also hinder the…_
-
-→ [profile](/researchers/kai-liu)
+→ [profile](/researchers/wenhao-yan)
 
 ---
-### No. 05 · Dynamic Mixture of Latent Memories for Self-Evolving Agents
+### No. 03 · SCAIL: Towards Studio-Grade Character Animation via In-Context Learning of 3D-Consistent Pose Representations
 
-**Dianzhi Yu** · 一作 · 10 作者 · [arXiv:2605.21951](https://arxiv.org/abs/2605.21951)
+**Wenhao Yan** · 一作 · 9 作者 · [arXiv:2512.05905](https://arxiv.org/abs/2512.05905)
 
-_Achieving self-evolution in intelligent agents requires the continual accumulation of new knowledge across changing task sequences without forgetting previously acquired abilities. Existing approaches either internalize…_
+*提出3D姿态表示与全上下文注入的扩散Transformer动画框架。*
 
-→ [profile](/researchers/dianzhi-yu)
+_Achieving controllable character animation that meets studio-grade standards remains challenging despite recent progress. Existing approaches can transfer motion from a driving video to a reference image, but often fail…_
 
----
-### No. 06 · ReCrit: Transition-Aware Reinforcement Learning for Scientific Critic Reasoning
-
-**Wanghan Xu** · 一作 · 11 作者 · [arXiv:2605.18799](https://arxiv.org/abs/2605.18799)
-
-_Large language models can fail in critic interaction not only by answering incorrectly, but also by abandoning an initially correct scientific solution after user criticism. This is especially risky in scientific reason…_
-
-→ [profile](/researchers/wanghan-xu)
+→ [profile](/researchers/wenhao-yan)
 
 ---
-### No. 07 · Intern-S1-Pro: Scientific Multimodal Foundation Model at Trillion Scale
+### No. 04 · Entropy-Constrained Strategy Optimization in Urban Floods: A Multi-Agent Framework with LLM and Knowledge Graph Integration
 
-**Yicheng Zou** · 一作 · 177 作者 · [arXiv:2603.25040](https://arxiv.org/abs/2603.25040)
+**Peilin Ji** · 一作 · 4 作者 · [arXiv:2508.14654](https://arxiv.org/abs/2508.14654)
 
-_We introduce Intern-S1-Pro, the first one-trillion-parameter scientific multimodal foundation model. Scaling to this unprecedented size, the model delivers a comprehensive enhancement across both general and scientific…_
+*熵约束多智能体框架融合知识图谱与LLM优化城市洪水策略。*
 
-→ [profile](/researchers/yicheng-zou)
+_In recent years, the increasing frequency of extreme urban rainfall events has posed significant challenges to emergency scheduling systems. Urban flooding often leads to severe traffic congestion and service disruption…_
 
----
-### No. 08 · InternAgent-1.5: A Unified Agentic Framework for Long-Horizon Autonomous Scientific Discovery
-
-**Shiyang Feng** · 一作 · 56 作者 · [arXiv:2602.08990](https://arxiv.org/abs/2602.08990)
-
-_We introduce InternAgent-1.5, a unified system designed for end-to-end scientific discovery across computational and empirical domains. The system is built on a structured architecture composed of three coordinated subs…_
-
-→ [profile](/researchers/shiyang-feng)
+→ [profile](/researchers/peilin-ji)
 
 ---
-### No. 09 · SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence
+### No. 05 · Images are Worth Variable Length of Representations
 
-**Yiheng Wang** · 一作 · 36 作者 · [arXiv:2512.22334](https://arxiv.org/abs/2512.22334)
+**Lingjun Mao** · 一作 · 5 作者 · [arXiv:2506.03643](https://arxiv.org/abs/2506.03643)
 
-_We introduce SciEvalKit, a unified benchmarking toolkit designed to evaluate AI models for science across a broad range of scientific disciplines and task capabilities. Unlike general-purpose evaluation platforms, SciEv…_
+*提出DOVE动态视觉编码器，按图像信息量生成可变长度token。*
 
-→ [profile](/researchers/yiheng-wang)
+_Most existing vision encoders map images into a fixed-length sequence of tokens, overlooking the fact that different images contain varying amounts of information. For example, a visually complex image (e.g., a cluttere…_
 
----
-### No. 10 · Omni-Weather: A Unified Multimodal Model for Weather Radar Understanding and Generation
-
-**Zhiwang Zhou** · 一作 · 13 作者 · [arXiv:2512.21643](https://arxiv.org/abs/2512.21643)
-
-_Weather modeling requires both accurate prediction and mechanistic interpretation, yet existing methods treat these goals in isolation, separating generation from understanding. To address this gap, we present Omni-Weat…_
-
-→ [profile](/researchers/zhiwang-zhou)
+→ [profile](/researchers/lingjun-mao)
 
 ---
+### No. 06 · Sentient: Detecting APTs Via Capturing Indirect Dependencies and Behavioral Logic
 
-## Section B · 🔄 动态更新 · 10 项
+**Wenhao Yan** · 一作 · 8 作者 · [arXiv:2502.06521](https://arxiv.org/abs/2502.06521)
+
+*用图Transformer捕获间接依赖与行为逻辑检测APT。*
+
+_Advanced Persistent Threats (APTs) are difficult to detect due to their complexity and stealthiness. To mitigate such attacks, many approaches model entities and their relationship using provenance graphs to detect the…_
+
+→ [profile](/researchers/wenhao-yan)
+
+---
+### No. 07 · Winemaking: Extracting Essential Insights for Efficient Threat Detection in Audit Logs
+
+**Weiheng Wu** · 一作 · 8 作者 · [arXiv:2411.02775](https://arxiv.org/abs/2411.02775)
+
+*知识蒸馏框架结合图拉普拉斯降噪实现轻量级APT检测。*
+
+_Advanced Persistent Threats (APTs) are continuously evolving, leveraging their stealthiness and persistence to put increasing pressure on current provenance-based Intrusion Detection Systems (IDS). This evolution expose…_
+
+→ [profile](/researchers/weiheng-wu)
+
+---
+### No. 08 · An Efficient Imbalance-Aware Federated Learning Approach for Wearable Healthcare with Autoregressive Ratio Observation
+
+**Wenhao Yan** · 一作 · 4 作者 · [arXiv:2310.14784](https://arxiv.org/abs/2310.14784)
+
+*提出FedImT框架，用自衰减迭代估计解决联邦学习类别不平衡。*
+
+_Widely available healthcare services are now getting popular because of advancements in wearable sensing techniques and mobile edge computing. People's health information is collected by edge devices such as smartphones…_
+
+→ [profile](/researchers/wenhao-yan)
+
+---
+### No. 09 · Measurement of the CKM angle $γ$ in $B^{\pm} \rightarrow D(\rightarrow K^{0}_{\rm S} h^{\prime+}h^{\prime-})h^{\pm}$ decays with a novel approach
+
+**The BESIII** · 一作 · 1906 作者 · [arXiv:2604.05701](https://arxiv.org/abs/2604.05701)
+
+*用BESIII与LHCb联合数据，模型无关法测CKM角γ达最高精度。*
+
+_A measurement of the CKM angle $γ$ and related strong-phase parameters is performed using a novel, model-independent approach in ${B^{\pm}\rightarrow D(\rightarrow K^{0}_{\rm S} h^{\prime+}h^{\prime-}) h^{\pm}}$ decays,…_
+
+→ [profile](/researchers/the-besiii)
+
+---
+### No. 10 · SDR: Set-Distance Rewards for Radiology Report Generation
+
+**Halil Ibrahim Gulluk** · 一作 · 4 作者 · [arXiv:2606.00440](https://arxiv.org/abs/2606.00440)
+
+*用集合距离奖励替代精确匹配，提升X光报告生成质量。*
+
+_Reinforcement learning with verifiable rewards has rapidly advanced reasoning in vision--language models. However, for chest X-ray report generation, the standard rewards (i.e. exact-match accuracy and step-level proces…_
+
+→ [profile](/researchers/halil-ibrahim-gulluk)
+
+---
+
+## Section B · 🔄 动态更新 · 5 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Linfeng Zhang](/researchers/linfeng-zhang) | Elastic-dLLM: Position Preserving Context Compression and Augmentatio… | — | [2605.18165](https://arxiv.org/abs/2605.18165) |
-| [Dahua Lin](/researchers/dahua-lin) | Intern-S1-Pro: Scientific Multimodal Foundation Model at Trillion Sca… | — | [2603.25040](https://arxiv.org/abs/2603.25040) |
-| [Bowen Zhou](/researchers/bowen-zhou) | Intern-S1-Pro: Scientific Multimodal Foundation Model at Trillion Sca… | — | [2603.25040](https://arxiv.org/abs/2603.25040) |
-| [Dahua Lin](/researchers/dahua-lin) | InternAgent-1.5: A Unified Agentic Framework for Long-Horizon Autonom… | — | [2602.08990](https://arxiv.org/abs/2602.08990) |
-| [Bowen Zhou](/researchers/bowen-zhou) | InternAgent-1.5: A Unified Agentic Framework for Long-Horizon Autonom… | — | [2602.08990](https://arxiv.org/abs/2602.08990) |
-| [Bowen Zhou](/researchers/bowen-zhou) | Probing Scientific General Intelligence of LLMs with Scientist-Aligne… | — | [2512.16969](https://arxiv.org/abs/2512.16969) |
-| [Bowen Zhou](/researchers/bowen-zhou) | A Survey of Scientific Large Language Models: From Data Foundations t… | — | [2508.21148](https://arxiv.org/abs/2508.21148) |
-| [Yang Gao](/researchers/yang-gao) | Intern-S1: A Scientific Multimodal Foundation Model | — | [2508.15763](https://arxiv.org/abs/2508.15763) |
-| [Dahua Lin](/researchers/dahua-lin) | Intern-S1: A Scientific Multimodal Foundation Model | — | [2508.15763](https://arxiv.org/abs/2508.15763) |
-| [Bowen Zhou](/researchers/bowen-zhou) | Intern-S1: A Scientific Multimodal Foundation Model | — | [2508.15763](https://arxiv.org/abs/2508.15763) |
+| [Sergey Levine](/researchers/sergey-levine) | Test-Time Gradient Guidance of Flow Policies in Reinforcement Learning | embodied | [2606.11087](https://arxiv.org/abs/2606.11087) |
+| [He Wang](/researchers/he-wang) | AllDayNav: Lifelong Navigation via Real-World Reinforcement Learning | embodied | [2606.10927](https://arxiv.org/abs/2606.10927) |
+| [Yilun Du](/researchers/yilun-du) | IMPACT: Learning Internal-Model Predictive Control for Forceful Robot… | embodied | [2606.10818](https://arxiv.org/abs/2606.10818) |
+| [Yang Gao](/researchers/yang-gao) | A Practical Recipe Towards Improving Sim-and-Real Correlation for VLA… | embodied | [2606.10366](https://arxiv.org/abs/2606.10366) |
+| [Pieter Abbeel](/researchers/pieter-abbeel) | SARM2: Multi-Task Stage Aware Reward Modeling for Self Improving Robo… | embodied | [2606.10305](https://arxiv.org/abs/2606.10305) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -181,98 +188,100 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Intern-S1-Pro: Scientific Multimodal Foundation Model at Trillion Scale
+### No. 01 · Measurement of the CKM angle $γ$ in $B^{\pm} \rightarrow D(\rightarrow K^{0}_{\rm S} h^{\prime+}h^{\prime-})h^{\pm}$ decays with a novel approach
 
-**Yicheng Zou** · 一作 · 177 作者 · [arXiv:2603.25040](https://arxiv.org/abs/2603.25040)
+**The BESIII** · 一作 · 1906 作者 · [arXiv:2604.05701](https://arxiv.org/abs/2604.05701)
 
-_We introduce Intern-S1-Pro, the first one-trillion-parameter scientific multimodal foundation model. Scaling to this unprecedented size, the model delivers a comprehensive enhancement across both general and scientific…_
+*用BESIII与LHCb联合数据，模型无关法测CKM角γ达最高精度。*
 
-→ [profile](/researchers/yicheng-zou)
+_A measurement of the CKM angle $γ$ and related strong-phase parameters is performed using a novel, model-independent approach in ${B^{\pm}\rightarrow D(\rightarrow K^{0}_{\rm S} h^{\prime+}h^{\prime-}) h^{\pm}}$ decays,…_
 
----
-### No. 02 · Intern-S1: A Scientific Multimodal Foundation Model
-
-**Lei Bai** · 一作 · 176 作者 · [arXiv:2508.15763](https://arxiv.org/abs/2508.15763)
-
-*多模态MoE模型经混合奖励强化学习提升科学任务性能。*
-
-_In recent years, a plethora of open-source foundation models have emerged, achieving remarkable progress in some widely attended fields, with performance being quite close to that of closed-source models. However, in hi…_
-
-→ [profile](/researchers/lei-bai)
+→ [profile](/researchers/the-besiii)
 
 ---
-### No. 03 · A Survey of Scientific Large Language Models: From Data Foundations to Agent Frontiers
+### No. 02 · Workflow-GYM: Towards Long-Horizon Evaluation of Computer-use Agentic tasks in Real-World Professional Fields
 
-**Ming Hu** · 一作 · 120 作者 · [arXiv:2508.21148](https://arxiv.org/abs/2508.21148)
+**Liya Zhu** · 一作 · 30 作者 · [arXiv:2606.11042](https://arxiv.org/abs/2606.11042)
 
-*提出数据驱动的Sci-LLM协同进化框架与闭环自主智能体范式。*
+_Recent years have witnessed the rapid evolution of AI agents toward handling increasingly complex, real-world tasks. However, existing benchmarks rarely evaluate whether agents can operate graphical user interfaces to c…_
 
-_Scientific Large Language Models (Sci-LLMs) are transforming how knowledge is represented, integrated, and applied in scientific research, yet their progress is shaped by the complex nature of scientific data. This surv…_
-
-→ [profile](/researchers/ming-hu)
+→ [profile](/researchers/liya-zhu)
 
 ---
-### No. 04 · Probing Scientific General Intelligence of LLMs with Scientist-Aligned Workflows
+### No. 03 · ABot-Earth 0.5: Generative 3D Earth Model
 
-**Wanghan Xu** · 一作 · 107 作者 · [arXiv:2512.16969](https://arxiv.org/abs/2512.16969)
+**Ming Qian** · 一作 · 28 作者 · [arXiv:2606.09967](https://arxiv.org/abs/2606.09967)
 
-_Despite advances in scientific AI, a coherent framework for Scientific General Intelligence (SGI)-the ability to autonomously conceive, investigate, and reason across scientific domains-remains lacking. We present an op…_
+*用3D高斯泼溅生成卫星图驱动的无缝地球环境。*
 
-→ [profile](/researchers/wanghan-xu)
+_We present ABot-Earth 0.5, a generative 3D framework designed to synthesize vast, seamless 3D environments from ubiquitous, geospatially referenced satellite imagery. To achieve this, we propose a novel generative model…_
 
----
-### No. 05 · InternAgent-1.5: A Unified Agentic Framework for Long-Horizon Autonomous Scientific Discovery
-
-**Shiyang Feng** · 一作 · 56 作者 · [arXiv:2602.08990](https://arxiv.org/abs/2602.08990)
-
-_We introduce InternAgent-1.5, a unified system designed for end-to-end scientific discovery across computational and empirical domains. The system is built on a structured architecture composed of three coordinated subs…_
-
-→ [profile](/researchers/shiyang-feng)
+→ [profile](/researchers/ming-qian)
 
 ---
-### No. 06 · Protein Dynamics Beyond Structure Prediction
+### No. 04 · ARM: An AutoRegressive Large Multimodal Model with Unified Discrete Representations
 
-**Juliette Griffié** · 一作 · 44 作者 · [arXiv:2606.08647](https://arxiv.org/abs/2606.08647)
+**Junke Wang** · 一作 · 19 作者 · [arXiv:2606.11188](https://arxiv.org/abs/2606.11188)
 
-_The ability to predict protein three-dimensional structures from amino acid sequences is a landmark achievement in molecular biology, where recent deep learning approaches such as AlphaFold are the culmination of decade…_
+_This paper introduces ARM, a discrete representation-based AutoRegressive Model that unifies image understanding, generation, and editing within a next-token prediction framework. ARM is built on three efforts: first, w…_
 
-→ [profile](/researchers/juliette-griffi)
-
----
-### No. 07 · SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence
-
-**Yiheng Wang** · 一作 · 36 作者 · [arXiv:2512.22334](https://arxiv.org/abs/2512.22334)
-
-_We introduce SciEvalKit, a unified benchmarking toolkit designed to evaluate AI models for science across a broad range of scientific disciplines and task capabilities. Unlike general-purpose evaluation platforms, SciEv…_
-
-→ [profile](/researchers/yiheng-wang)
+→ [profile](/researchers/junke-wang)
 
 ---
-### No. 08 · ResearchClawBench: A Benchmark for End-to-End Autonomous Scientific Research
+### No. 05 · UMI-Bench 1.0: An Open and Reproducible Real-World Benchmark for Tabletop Robotic Manipulation with UMI Data
 
-**Wanghan Xu** · 一作 · 30 作者 · [arXiv:2606.07591](https://arxiv.org/abs/2606.07591)
+**Shi Jin** · 一作 · 19 作者 · [arXiv:2606.10382](https://arxiv.org/abs/2606.10382)
 
-_AI coding agents are increasingly used for scientific work, but their end-to-end autonomous research capability remains difficult to verify. We present ResearchClawBench, a benchmark for evaluating autonomous scientific…_
+_Real-robot evaluation is essential for understanding whether learned manipulation policies can operate reliably outside curated demonstrations. This need is particularly pressing for Universal Manipulation Interface (UM…_
 
-→ [profile](/researchers/wanghan-xu)
-
----
-### No. 09 · Evaluation Cards: An Interpretive Layer for AI Evaluation Reporting
-
-**Avijit Ghosh** · 一作 · 30 作者 · [arXiv:2606.09809](https://arxiv.org/abs/2606.09809)
-
-_AI evaluation results are produced at scale but reported inconsistently across leaderboards, model cards, benchmark papers, and company blogs. The cost is interpretive: readers cannot reliably compare results across sou…_
-
-→ [profile](/researchers/avijit-ghosh)
+→ [profile](/researchers/shi-jin)
 
 ---
-### No. 10 · Cognibit: From Digital Exhaustion to Real-World Connection Through Gamified Territory Control and LLM-Powered Twin Networking
+### No. 06 · Extending Field Limits in Nanoscale Magnetic Imaging with Metamaterial-inspired Magnetic Flux Concentrators
 
-**Wanghao Ye** · 一作 · 23 作者 · [arXiv:2604.04351](https://arxiv.org/abs/2604.04351)
+**A. Barrera** · 一作 · 17 作者 · [arXiv:2606.10570](https://arxiv.org/abs/2606.10570)
 
-_We present an LLM-powered social discovery platform that uses digital twins to autonomously evaluate interpersonal compatibility through behavioral simulation. The platform unifies three key pillars: (1) digital twins t…_
+_Many nanoscale magnetic imaging techniques are constrained by the maximum magnetic field that can be applied during measurements, due to geometrical limitations or interactions with the probe or the detected signal (e.g…_
 
-→ [profile](/researchers/wanghao-ye)
+→ [profile](/researchers/a-barrera)
+
+---
+### No. 07 · Bridging the Agent-World Gap: Text World Models for LLM-based Agents
+
+**Yixia Li** · 一作 · 16 作者 · [arXiv:2606.09032](https://arxiv.org/abs/2606.09032)
+
+_Large language model (LLM)-based agents are increasingly used in interactive textual environments, from web navigation and code editing to tool use and long-horizon dialogue. Yet many remain largely reactive, mapping ob…_
+
+→ [profile](/researchers/yixia-li)
+
+---
+### No. 08 · HiMem-WAM: Hierarchical Memory-Gated World Action Models for Robotic Manipulation
+
+**Xiaoquan Sun** · 一作 · 15 作者 · [arXiv:2606.10363](https://arxiv.org/abs/2606.10363)
+
+_World Action Models (WAMs) have emerged as a new powerful paradigm for embodied intelligence, learning action-relevant visual dynamics that significantly enhance generalization and robustness. However, existing WAMs sti…_
+
+→ [profile](/researchers/xiaoquan-sun)
+
+---
+### No. 09 · Low-Dose 3D Bonding Mapping Through "Soft" Core-Loss EELS Tomography and Unsupervised Deep Learning
+
+**Mario Pelaez-Fernandez** · 一作 · 13 作者 · [arXiv:2606.10893](https://arxiv.org/abs/2606.10893)
+
+_Resolving the 3D chemical configuration of beam-sensitive nanomaterials at high spatial resolution remains a persistent frontier in scanning transmission electron microscopy (STEM). The main limitation lies in the trade…_
+
+→ [profile](/researchers/mario-pelaez-fernandez)
+
+---
+### No. 10 · VoLo: A Physical Orchestrator for Open-Vocabulary Long-Horizon Manipulation
+
+**Siyi Chen** · 一作 · 12 作者 · [arXiv:2606.07723](https://arxiv.org/abs/2606.07723)
+
+*用VLM将VLA/WAM作为可中断工具实现物理编排。*
+
+_Open-vocabulary long-horizon manipulation requires robots to reason over flexible instructions and complex multi-object scenes while adaptively planning, executing, monitoring, and recovering from failures. We address t…_
+
+→ [profile](/researchers/siyi-chen)
 
 ---
 
@@ -282,59 +291,63 @@ _We present an LLM-powered social discovery platform that uses digital twins to 
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · Intern-S1-Pro: Scientific Multimodal Foundation Model at Trillion Scale
+### No. 01 · Measurement of the CKM angle $γ$ in $B^{\pm} \rightarrow D(\rightarrow K^{0}_{\rm S} h^{\prime+}h^{\prime-})h^{\pm}$ decays with a novel approach
 
-**Yicheng Zou** · 一作 · 177 作者 · [arXiv:2603.25040](https://arxiv.org/abs/2603.25040)
+**The BESIII** · 一作 · 1906 作者 · [arXiv:2604.05701](https://arxiv.org/abs/2604.05701)
 
-_We introduce Intern-S1-Pro, the first one-trillion-parameter scientific multimodal foundation model. Scaling to this unprecedented size, the model delivers a comprehensive enhancement across both general and scientific…_
+*用BESIII与LHCb联合数据，模型无关法测CKM角γ达最高精度。*
 
-**▸ 选中原因：首次出现 · 177 作者合作（疑似大组新人）**
+_A measurement of the CKM angle $γ$ and related strong-phase parameters is performed using a novel, model-independent approach in ${B^{\pm}\rightarrow D(\rightarrow K^{0}_{\rm S} h^{\prime+}h^{\prime-}) h^{\pm}}$ decays,…_
 
-→ [profile](/researchers/yicheng-zou)
+**▸ 选中原因：首次出现 · 1906 作者合作（疑似大组新人）**
 
----
-### No. 02 · Probing Scientific General Intelligence of LLMs with Scientist-Aligned Workflows
-
-**Wanghan Xu** · 一作 · 107 作者 · [arXiv:2512.16969](https://arxiv.org/abs/2512.16969)
-
-_Despite advances in scientific AI, a coherent framework for Scientific General Intelligence (SGI)-the ability to autonomously conceive, investigate, and reason across scientific domains-remains lacking. We present an op…_
-
-**▸ 选中原因：首次出现 · 107 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/wanghan-xu)
+→ [profile](/researchers/the-besiii)
 
 ---
-### No. 03 · InternAgent-1.5: A Unified Agentic Framework for Long-Horizon Autonomous Scientific Discovery
+### No. 02 · Workflow-GYM: Towards Long-Horizon Evaluation of Computer-use Agentic tasks in Real-World Professional Fields
 
-**Shiyang Feng** · 一作 · 56 作者 · [arXiv:2602.08990](https://arxiv.org/abs/2602.08990)
+**Liya Zhu** · 一作 · 30 作者 · [arXiv:2606.11042](https://arxiv.org/abs/2606.11042)
 
-_We introduce InternAgent-1.5, a unified system designed for end-to-end scientific discovery across computational and empirical domains. The system is built on a structured architecture composed of three coordinated subs…_
+_Recent years have witnessed the rapid evolution of AI agents toward handling increasingly complex, real-world tasks. However, existing benchmarks rarely evaluate whether agents can operate graphical user interfaces to c…_
 
-**▸ 选中原因：首次出现 · 56 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 30 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/shiyang-feng)
+→ [profile](/researchers/liya-zhu)
 
 ---
-### No. 04 · MemoryVLA++: Temporal Modeling via Memory and Imagination in Vision-Language-Action Models
+### No. 03 · ABot-Earth 0.5: Generative 3D Earth Model
 
-**Hao Shi** · 一作 · 9 作者 · [arXiv:2606.09827](https://arxiv.org/abs/2606.09827)
+**Ming Qian** · 一作 · 28 作者 · [arXiv:2606.09967](https://arxiv.org/abs/2606.09967)
 
-_Temporal modeling is essential for robotic manipulation, as effective control requires both memory of past interactions and imagination of future states. However, most VLA models rely primarily on the current observatio…_
+*用3D高斯泼溅生成卫星图驱动的无缝地球环境。*
+
+_We present ABot-Earth 0.5, a generative 3D framework designed to synthesize vast, seamless 3D environments from ubiquitous, geospatially referenced satellite imagery. To achieve this, we propose a novel generative model…_
+
+**▸ 选中原因：首次出现 · 28 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/ming-qian)
+
+---
+### No. 04 · Test-Time Gradient Guidance of Flow Policies in Reinforcement Learning
+
+**Zhiyuan Zhou** · 一作 · 7 作者 · [arXiv:2606.11087](https://arxiv.org/abs/2606.11087)
+
+_Expressive continuous control policies, such as diffusion and flow models, form the backbone of recent advances in scaling imitation learning for simulated and real robot control. While they are known to scale stably in…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/hao-shi)
+→ [profile](/researchers/zhiyuan-zhou)
 
 ---
-### No. 05 · KPGrasp: Scalable Keypoint Flow Matching for Dexterous Grasp Generation
+### No. 05 · IMPACT: Learning Internal-Model Predictive Control for Forceful Robotic Manipulation
 
-**Yuansen Huang** · 一作 · 9 作者 · [arXiv:2606.09314](https://arxiv.org/abs/2606.09314)
+**Jiawei Gao** · 一作 · 5 作者 · [arXiv:2606.10818](https://arxiv.org/abs/2606.10818)
 
-_Generating high-quality dexterous grasps remains challenging for learning-based methods, which often depend on carefully tuned contact losses or costly contact-based test-time refinement. We present KPGrasp, a flow-matc…_
+_Real-world robotic manipulation tasks often involve forceful interactions with the environment, such as using tools of varying weights, transporting objects with different masses, and performing contact-rich tasks like…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/yuansen-huang)
+→ [profile](/researchers/jiawei-gao)
 
 ---
 
