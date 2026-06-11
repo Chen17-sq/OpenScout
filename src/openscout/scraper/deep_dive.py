@@ -24,6 +24,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
 
@@ -1276,6 +1277,49 @@ def _institution_tag(db, r: Researcher, http: httpx.Client) -> dict:
     return {"ok": True, "fields_set": 1, "note": f"+ {inst.name}"}
 
 
+# ── 🔥 high-potential cutoff: percentile-based, not hardcoded ──────────────
+# A fixed v2 >= 0.5 broke when the pool grew 6k → 12k (anchor expansion +
+# paper backfill compressed the distribution; only 1 researcher cleared 0.5).
+# Instead we tag the top ~2% of SCORED researchers (nonzero v2), clamped:
+#   floor 0.35  — never call someone 🔥 below this, even in a weak pool
+#   ceiling 0.6 — if the distribution shifts high, still tag the top
+SIGNAL_V2_PERCENTILE = 0.98
+SIGNAL_V2_FLOOR = 0.35
+SIGNAL_V2_CEILING = 0.6
+_V2_CUTOFF_TTL_SECONDS = 600.0  # 10 min — mass dives reuse one computation
+_v2_cutoff_cache: dict[float, tuple[float, float]] = {}  # pct → (cutoff, monotonic_ts)
+
+
+def _clamp_signal_cutoff(raw: float) -> float:
+    """Clamp a raw percentile value into the [floor, ceiling] band."""
+    return max(SIGNAL_V2_FLOOR, min(SIGNAL_V2_CEILING, raw))
+
+
+def _v2_percentile_cutoff(db, pct: float = SIGNAL_V2_PERCENTILE) -> float:
+    """The 🔥 threshold: pct-th percentile of nonzero v2 across the DB, clamped.
+
+    One scalar-column query; result cached in-process for 10 minutes so a
+    mass dive over 50 researchers doesn't recompute 50×. Empty pool (no
+    nonzero scores yet) falls back to the floor.
+    """
+    now = time.monotonic()
+    cached = _v2_cutoff_cache.get(pct)
+    if cached is not None and now - cached[1] < _V2_CUTOFF_TTL_SECONDS:
+        return cached[0]
+
+    from .work_scoring import percentile
+
+    vals = sorted(
+        float(v)
+        for (v,) in db.execute(
+            select(Researcher.investability_score_v2).where(Researcher.investability_score_v2 > 0)
+        ).all()
+    )
+    cutoff = _clamp_signal_cutoff(percentile(vals, pct)) if vals else SIGNAL_V2_FLOOR
+    _v2_cutoff_cache[pct] = (cutoff, now)
+    return cutoff
+
+
 def _signal_tag(db, r: Researcher, http: httpx.Client) -> dict:
     """Emit "high-potential" / "rising star" / status tags based on combined signals.
 
@@ -1285,9 +1329,10 @@ def _signal_tag(db, r: Researcher, http: httpx.Client) -> dict:
     """
     new_tags: list[dict] = []
 
-    # Top investment lens — anyone v2 >= 0.5 is among the strongest investable
+    # Top investment lens — top ~2% of scored researchers (percentile cutoff,
+    # clamped to [0.35, 0.6]; see _v2_percentile_cutoff above)
     v2 = r.investability_score_v2 or 0
-    if v2 >= 0.5:
+    if v2 >= _v2_percentile_cutoff(db):
         new_tags.append(
             {
                 "label": "🔥 high-potential",

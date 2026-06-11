@@ -78,11 +78,13 @@ def test_scrape_faculty_pages_empty_db_returns_expected_keys():
         "names_seen",
         "matched_researchers",
         "promoted_to_incoming_ap",
+        "skipped_small",
         "errors",
     }
     # 404 counts as an error and does not increment matched/promoted
     assert out["universities"] == 1
     assert out["errors"] == 1
+    assert out["skipped_small"] == 0
     assert out["matched_researchers"] == 0
     assert out["promoted_to_incoming_ap"] == 0
 
@@ -166,3 +168,28 @@ def test_scrape_faculty_pages_does_not_re_promote_already_incoming_ap():
     assert out1["promoted_to_incoming_ap"] >= 1
     # Second run: Alice is already incoming_ap → no fresh promotion
     assert out2["promoted_to_incoming_ap"] == 0
+
+
+# ── small 200-OK page is skipped, not an error ────────────────────────────────
+
+
+def test_scrape_faculty_pages_small_page_counts_skipped_small_not_errors():
+    """A 200 response whose body is under _fetch_html's 200-char floor is a
+    JS-only shell / stub page — counted as `skipped_small`, no longer
+    conflated with HTTP/network failures in `errors`."""
+    tiny_pages = [
+        {"slug": "test_u", "name": "Test University", "url": "https://x.test", "selector": "h3"}
+    ]
+    small_html = "<html><body><h3>Tiny</h3></body></html>"
+    assert len(small_html) < 200
+
+    with (
+        patch("httpx.Client.get", return_value=_make_response(200, small_html)),
+        patch("time.sleep"),
+    ):
+        out = fa_mod.scrape_faculty_pages(universities=tiny_pages)
+
+    assert out["skipped_small"] == 1
+    assert out["errors"] == 0
+    assert out["names_seen"] == 0
+    assert out["promoted_to_incoming_ap"] == 0

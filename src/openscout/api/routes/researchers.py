@@ -3,7 +3,16 @@ from sqlalchemy import desc, func, or_, select
 from sqlalchemy.orm import Session
 
 from ...db import get_db
-from ...models import Institution, Paper, PaperAuthor, PaperTopic, Relationship, Researcher, Topic
+from ...models import (
+    Institution,
+    MetricSnapshot,
+    Paper,
+    PaperAuthor,
+    PaperTopic,
+    Relationship,
+    Researcher,
+    Topic,
+)
 from ...scraper import jobs as jobs_mod
 from ...scraper.deep_dive import deep_dive_one
 
@@ -215,6 +224,44 @@ def get_researcher(slug: str, db: Session = Depends(get_db)) -> dict:
                 "position": int(pos),
             }
             for p, pos in papers
+        ],
+    }
+
+
+@router.get("/{slug}/history")
+def researcher_history(slug: str, db: Session = Depends(get_db)) -> dict:
+    """Daily metric snapshots for this researcher — the trend-sparkline feed.
+
+    Returns the most recent 90 snapshots ordered date **asc** (oldest first,
+    ready to plot left-to-right). Empty list, not 404, when the researcher
+    exists but has no snapshots yet (history accrues one row per daily run).
+    """
+    r = db.execute(select(Researcher).where(Researcher.slug == slug)).scalar_one_or_none()
+    if not r:
+        raise HTTPException(404, detail=f"researcher {slug!r} not found")
+
+    # Window = latest 90 days: select desc + limit, then flip to asc.
+    rows = list(
+        db.execute(
+            select(MetricSnapshot)
+            .where(MetricSnapshot.researcher_id == r.id)
+            .order_by(desc(MetricSnapshot.snapshot_date))
+            .limit(90)
+        ).scalars()
+    )
+    rows.reverse()
+
+    return {
+        "slug": slug,
+        "snapshots": [
+            {
+                "date": s.snapshot_date,
+                "h_index": s.h_index,
+                "citation_count": s.citation_count,
+                "works_count": s.works_count,
+                "investability_v2": s.investability_v2,
+            }
+            for s in rows
         ],
     }
 

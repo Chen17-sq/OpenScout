@@ -87,8 +87,24 @@ type Researcher = {
   papers: PaperRow[];
 };
 
+// One point per daily-pipeline run — see GET /researchers/{slug}/history.
+type HistorySnapshot = {
+  date: string;
+  h_index: number | null;
+  citation_count: number | null;
+  works_count: number | null;
+  investability_v2: number | null;
+};
+
 export const load: PageLoad = async ({ params, fetch }) => {
-  const r = await apiFetch<Researcher>(`/researchers/${params.slug}`, fetch);
+  // History is non-fatal: endpoint missing / researcher unscored → [].
+  const [r, history] = await Promise.all([
+    apiFetch<Researcher>(`/researchers/${params.slug}`, fetch),
+    apiFetch<{ slug: string; snapshots: HistorySnapshot[] }>(
+      `/researchers/${params.slug}/history`,
+      fetch,
+    ),
+  ]);
   if (!r) throw error(404, `researcher ${params.slug} not found`);
-  return { researcher: r };
+  return { researcher: r, history: history?.snapshots ?? [] };
 };

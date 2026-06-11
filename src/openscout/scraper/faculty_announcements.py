@@ -213,8 +213,16 @@ def _normalize_for_match(name: str) -> str:
 # ── HTTP + parse ────────────────────────────────────────────────────────────
 
 
-def _fetch_html(client: httpx.Client, url: str) -> str | None:
-    """GET the page, return HTML or None on error. Never raises."""
+# Sentinel: page answered HTTP 200 but the body was too small to be a real
+# directory page (JS-only shell, stub error page). Distinct from None (HTTP /
+# network error) so the caller can count `skipped_small` separately from
+# `errors`.
+SMALL_PAGE = object()
+
+
+def _fetch_html(client: httpx.Client, url: str) -> str | None | object:
+    """GET the page. Returns the HTML text, the SMALL_PAGE sentinel for a
+    tiny 200-OK body, or None on HTTP / network error. Never raises."""
     try:
         r = client.get(url, timeout=20.0, follow_redirects=True)
     except (httpx.HTTPError, httpx.InvalidURL):
@@ -223,7 +231,7 @@ def _fetch_html(client: httpx.Client, url: str) -> str | None:
         return None
     # Some Chinese university servers serve GBK; httpx defaults to declared charset.
     if not r.text or len(r.text) < 200:
-        return None
+        return SMALL_PAGE
     return r.text
 
 
@@ -421,13 +429,14 @@ def scrape_faculty_pages(
 
     Returns:
         {"universities": N, "names_seen": A, "matched_researchers": M,
-         "promoted_to_incoming_ap": P, "errors": E}
+         "promoted_to_incoming_ap": P, "skipped_small": S, "errors": E}
     """
     counts = {
         "universities": 0,
         "names_seen": 0,
         "matched_researchers": 0,
         "promoted_to_incoming_ap": 0,
+        "skipped_small": 0,
         "errors": 0,
     }
 
@@ -445,6 +454,11 @@ def scrape_faculty_pages(
             selector = entry["selector"]
 
             html = _fetch_html(client, url)
+            if html is SMALL_PAGE:
+                # 200 OK but tiny body — JS shell / stub, not a fetch failure.
+                counts["skipped_small"] += 1
+                time.sleep(1.0)
+                continue
             if not html:
                 counts["errors"] += 1
                 # Sleep before moving on — be polite even on failure.

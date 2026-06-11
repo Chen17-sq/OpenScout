@@ -299,7 +299,15 @@ def _position_weight(position: int | None, n_authors: int | None) -> float:
 
 
 def _junior_boost(role: str | None, career_year: int | None) -> float:
-    """Multiply for early-career researchers — the user's investment thesis."""
+    """Multiply for early-career researchers — the user's investment thesis.
+
+    Note on role=None (deliberate): medium-confidence auto-anchors from
+    anchor_expansion land without a role, so they fall through to the
+    neutral 1.0 — neither boosted as juniors nor discounted as seniors.
+    That's the right default: we don't know their stage yet, and a deep
+    dive / classify pass will assign current_role later, at which point
+    the next compute_investability_v2 run re-applies the proper boost.
+    """
     if role == "incoming_ap":
         return 1.30
     if role == "phd" and (career_year or 0) >= 4:
@@ -373,6 +381,57 @@ def compute_investability_v2(window_days: int = 365) -> dict[str, int]:
             r.investability_score_v2 = round(min(1.0, 0.7 * top + 0.3 * mean), 3)
             counts["updated"] += 1
     return counts
+
+
+def percentile(sorted_vals: list[float], pct: float) -> float:
+    """Nearest-rank percentile of an ASCENDING-sorted list.
+
+    pct in (0, 1]; e.g. pct=0.98 on 100 values returns the 98th value.
+    Deterministic and dependency-free (no numpy) — used both for the
+    🔥 signal-tag cutoff (deep_dive) and score_distribution() below.
+    Raises ValueError on an empty list: callers decide their own fallback.
+    """
+    if not sorted_vals:
+        raise ValueError("percentile() of empty list")
+    n = len(sorted_vals)
+    idx = min(n - 1, max(0, math.ceil(pct * n) - 1))
+    return sorted_vals[idx]
+
+
+def score_distribution() -> dict[str, float | int]:
+    """Snapshot of the nonzero investability_score_v2 distribution.
+
+    For `doctor` / debugging — answers "is the score calibration sane after
+    the pool grew?" without ad-hoc SQL. Returns zeros when nothing is scored.
+    """
+    with session_scope() as db:
+        vals = sorted(
+            float(v)
+            for (v,) in db.execute(
+                select(Researcher.investability_score_v2).where(
+                    Researcher.investability_score_v2 > 0
+                )
+            ).all()
+        )
+    if not vals:
+        return {
+            "count_scored": 0,
+            "p50": 0.0,
+            "p90": 0.0,
+            "p95": 0.0,
+            "p98": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+        }
+    return {
+        "count_scored": len(vals),
+        "p50": percentile(vals, 0.50),
+        "p90": percentile(vals, 0.90),
+        "p95": percentile(vals, 0.95),
+        "p98": percentile(vals, 0.98),
+        "p99": percentile(vals, 0.99),
+        "max": vals[-1],
+    }
 
 
 def top_investment_picks(

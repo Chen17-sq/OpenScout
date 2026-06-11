@@ -22,6 +22,7 @@ from .routes import (  # noqa: E402 — must follow init_sentry()
     researchers,
     rss,
     search,
+    sitemap,
     stats,
     tags,
     topics,
@@ -55,6 +56,7 @@ app.include_router(conferences.router, prefix="/conferences", tags=["conferences
 app.include_router(investment.router, prefix="/investment", tags=["investment"])
 app.include_router(jobs.router, prefix="/jobs", tags=["jobs"])
 app.include_router(admin.router, prefix="/admin", tags=["admin"])
+app.include_router(sitemap.router, tags=["seo"])
 
 
 @app.get("/")
@@ -82,6 +84,7 @@ def root() -> dict:
             "/search?q=",
             "/rss/daily",
             "/rss/papers",
+            "/sitemap.xml",
             "/og/researchers/{slug}.svg",
             "/investment/picks",
             "/admin/ingest (POST · auth)",

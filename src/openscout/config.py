@@ -55,6 +55,9 @@ class Settings(BaseSettings):
     email_from: str = ""
     ingest_secret: str = "change-me"
     frontend_origin: str = "http://localhost:5174"
+    # Public base URL of the frontend — used for absolute links in sitemap.xml.
+    # Set SITE_BASE_URL=https://openscout.app in the deploy env.
+    site_base_url: str = "http://localhost:5174"
 
 
 settings = Settings()

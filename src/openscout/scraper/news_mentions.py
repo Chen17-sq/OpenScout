@@ -305,6 +305,12 @@ def scan_news_mentions(days: int = 14, limit_papers: int = 500) -> dict[str, int
 
     # ── 3. Scan + write hits ───────────────────────────────────────────────
     with session_scope() as db:
+        # Per-run dedup guard. The session runs with autoflush=False, so the
+        # SELECT-based dedup below can't see rows added earlier in THIS run —
+        # the same article URL served by two feeds would otherwise write two
+        # Signal rows for the same (researcher_id, url_hash). Same fix pattern
+        # as the arxiv per-paper author guard.
+        inserted_keys: set[tuple[int, str]] = set()
         for art in articles:
             blob = " ".join([art["title"], art.get("summary") or ""])
             blob_lower = blob.lower()
@@ -340,16 +346,22 @@ def scan_news_mentions(days: int = 14, limit_papers: int = 500) -> dict[str, int
                     counts["paper_hits"] += 1
                     continue
 
-                # Dedup: (researcher_id, url_hash) is unique enough.
+                # Dedup: (researcher_id, url_hash) is unique enough. `.first()`
+                # (not scalar_one_or_none) so rows duplicated by pre-guard runs
+                # don't raise MultipleResultsFound.
+                key = (int(first_author_id), url_hash)
+                if key in inserted_keys:
+                    continue
                 exists = db.execute(
                     select(Signal.id).where(
                         Signal.researcher_id == first_author_id,
                         Signal.type == "news_mention",
                         Signal.source == url_hash,
                     )
-                ).scalar_one_or_none()
+                ).first()
                 if exists:
                     continue
+                inserted_keys.add(key)
 
                 db.add(
                     Signal(
@@ -391,16 +403,21 @@ def scan_news_mentions(days: int = 14, limit_papers: int = 500) -> dict[str, int
                 if name_lower not in blob_lower:
                     continue
 
-                # Dedup: (researcher_id, url_hash) again.
+                # Dedup: (researcher_id, url_hash) again — same per-run guard
+                # plus a duplicate-tolerant committed-row lookup.
+                key = (int(rid), url_hash)
+                if key in inserted_keys:
+                    continue
                 exists = db.execute(
                     select(Signal.id).where(
                         Signal.researcher_id == rid,
                         Signal.type == "news_mention",
                         Signal.source == url_hash,
                     )
-                ).scalar_one_or_none()
+                ).first()
                 if exists:
                     continue
+                inserted_keys.add(key)
 
                 db.add(
                     Signal(

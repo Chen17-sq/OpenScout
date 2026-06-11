@@ -102,10 +102,11 @@ def _fake_get_one_rss_only():
 
     Why: news_mentions scans 36kr (HTML) + 3 RSS feeds in one DB session. If
     every RSS call got the same body, three Signal writes would land in the
-    SAME session before commit. Since conftest sets `autoflush=False`, the
-    per-Signal dedup `select` doesn't see uncommitted writes — all three writes
-    go through → re-running the scrape later trips MultipleResultsFound. We
-    intentionally serve the body only on the first `the-decoder.com` call.
+    SAME session before commit — historically (pre per-run guard) that wrote
+    duplicate rows and tripped MultipleResultsFound on the next run. Serving
+    the body only on the first `the-decoder.com` call keeps this helper a
+    single-hit fixture; the all-feeds-same-body case is covered explicitly by
+    test_scan_news_mentions_same_url_across_feeds_writes_one_signal.
     """
 
     def fake_get(self, url, **kwargs):
@@ -155,3 +156,41 @@ def test_scan_news_mentions_is_idempotent():
 
     assert count_second == count_first
     assert count_first >= 1
+
+
+def _fake_get_same_rss_everywhere():
+    """Serve the SAME canned RSS body for every RSS feed (404 for 36kr's HTML).
+
+    The same article URL therefore arrives three times in a single run — the
+    regression case for the per-run dedup guard: with `autoflush=False` the
+    SELECT-based dedup can't see uncommitted rows from the same session, so a
+    guard-less scraper writes one Signal per feed for the same (researcher,
+    url_hash) and the NEXT run's scalar lookup trips MultipleResultsFound.
+    """
+
+    def fake_get(self, url, **kwargs):
+        if "36kr.com" in url:
+            return _make_response(404)
+        return _make_response(200, text=_RSS_WITH_ARXIV_HIT)
+
+    return fake_get
+
+
+def test_scan_news_mentions_same_url_across_feeds_writes_one_signal():
+    """The same article URL served by all three RSS feeds in ONE run produces
+    exactly one Signal row, and the re-run neither raises nor adds rows."""
+    _, researcher_id = _make_paper_with_author("2401.12345", "Anchor Person")
+
+    with patch("httpx.Client.get", new=_fake_get_same_rss_everywhere()), patch("time.sleep"):
+        nm_mod.scan_news_mentions()
+    with session_scope() as db:
+        rows = db.query(Signal).filter(Signal.type == "news_mention").all()
+        assert len(rows) == 1
+        assert rows[0].researcher_id == researcher_id
+
+    # Re-run against the same feeds: must not raise MultipleResultsFound and
+    # must not duplicate the row.
+    with patch("httpx.Client.get", new=_fake_get_same_rss_everywhere()), patch("time.sleep"):
+        nm_mod.scan_news_mentions()
+    with session_scope() as db:
+        assert db.query(Signal).filter(Signal.type == "news_mention").count() == 1

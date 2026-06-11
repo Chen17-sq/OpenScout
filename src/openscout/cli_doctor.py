@@ -221,10 +221,12 @@ def _check_deep_dive() -> Table:
 def _check_tags() -> Table:
     """Tag coverage across the researcher catalog.
 
-    `tags` is a JSON array of {slug, label_en, label_zh?, score, type?}.
-    The 'type' key was introduced in v1.10's tag taxonomy split
-    (signal / institution / topic). We materialize the JSON in Python
-    rather than SQL JSON ops to stay portable across SQLite & Postgres.
+    `tags` is a JSON array of {slug, label_en, label_zh?, score, type?};
+    signal-type tags (emitted by deep_dive._signal_tag) instead carry
+    {label, label_zh, score, level, type, source}. The 'type' key was
+    introduced in v1.10's tag taxonomy split (signal / institution / topic).
+    We materialize the JSON in Python rather than SQL JSON ops to stay
+    portable across SQLite & Postgres.
     """
     from .models import Researcher
 
@@ -253,7 +255,9 @@ def _check_tags() -> Table:
             if ttype:
                 types.add(ttype)
             if ttype == "signal":
-                label = tag.get("label_en") or tag.get("slug") or "?"
+                # Signal tags use `label` (see deep_dive._signal_tag); keep the
+                # legacy label_en/slug fallbacks for older-shaped rows.
+                label = tag.get("label") or tag.get("label_en") or tag.get("slug") or "?"
                 signal_counter[label] += 1
         if "signal" in types:
             has_signal += 1

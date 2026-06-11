@@ -7,6 +7,7 @@ Core entities:
 - Affiliation — researcher × institution over time
 - Signal — recent activity events (paper/tweet/talk/repo/AP-announcement)
 - DailyBrief — the rendered daily report
+- MetricSnapshot — daily researcher metric snapshots for trend lines
 """
 
 from datetime import date, datetime
@@ -318,6 +319,23 @@ class DailyBrief(Base):
     generated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
+
+
+class MetricSnapshot(Base):
+    """Daily researcher metric snapshots for trend lines. One row per
+    researcher per day, written by the daily pipeline's snapshot step.
+    Only researchers with investability_score_v2 > 0 get snapshotted
+    (snapshotting all 12k+ rows daily would bloat SQLite for no value)."""
+
+    __tablename__ = "metric_snapshots"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    researcher_id: Mapped[int] = mapped_column(ForeignKey("researchers.id"), index=True)
+    snapshot_date: Mapped[str] = mapped_column(String(10), index=True)  # ISO date
+    h_index: Mapped[int | None] = mapped_column(Integer)
+    citation_count: Mapped[int | None] = mapped_column(Integer)
+    works_count: Mapped[int | None] = mapped_column(Integer)
+    investability_v2: Mapped[float | None] = mapped_column(Float)
 
 
 class StepLog(Base):

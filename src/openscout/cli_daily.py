@@ -266,11 +266,29 @@ def run_daily(
     steps.append(_step("work_score (3-pillar)", score_all_papers))
     steps.append(_step("investability_v2 rollup", compute_investability_v2))
 
+    # Trend snapshots — one row per scored researcher per day, backing the
+    # profile sparklines. MUST be right after the rollup so today's row
+    # captures the fresh investability_v2. Idempotent (same-day overwrite).
+    from .scraper.metric_snapshot import take_snapshots
+
+    steps.append(_step("metric snapshots (trends)", take_snapshots))
+
     # ── Phase 6: deep-dive top investability researchers ───────────────────
     # MUST be after investability_v2 — it queues based on the rollup.
     from .scraper.deep_dive import auto_queue
 
     steps.append(_step("deep-dive queue (top 10)", auto_queue, limit=10))
+
+    # v1.15 backlog chippers — both idempotent, both ordered by investability,
+    # both bounded so the daily run stays cron-friendly:
+    #   s2-sweep: 100/day at 1 req/s ≈ 2-4 min; S2's standard tier throttles
+    #             hard, so errors are normal — tomorrow's run retries the rest.
+    #   backfill-bios: 50/day of DeepSeek bio synthesis (~$0.05/day).
+    from .scraper.bio_backfill import backfill_bios
+    from .scraper.s2_sweep import sweep_s2
+
+    steps.append(_step("s2 id sweep (top 100)", sweep_s2, limit=100))
+    steps.append(_step("bio backfill (top 50)", backfill_bios, limit=50))
 
     # ── Phase 7: optional LLM enrichment ───────────────────────────────────
     from .scraper.classify import filter_topic_papers

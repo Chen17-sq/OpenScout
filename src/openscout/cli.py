@@ -203,6 +203,55 @@ def expand_anchors_cmd(
     )
 
 
+@app.command("s2-sweep")
+def s2_sweep_cmd(
+    limit: Annotated[int, typer.Option(help="Max researchers to match against S2")] = 300,
+) -> None:
+    """Match researchers → Semantic Scholar IDs (top by investability, 1 req/s).
+
+    Fills semantic_scholar_id / h_index / citation_count / homepage_url for
+    researchers that don't have them yet. Title-overlap disambiguation; skips
+    ambiguous names. S2's standard tier throttles aggressively — re-runs are
+    cheap and idempotent, so the daily cron chips away at the backlog.
+    """
+    from .scraper.s2_sweep import sweep_s2
+
+    c = sweep_s2(limit=limit)
+    console.print(
+        f"[green]✓[/green] s2-sweep: matched {c['matched']}/{c['attempted']} · "
+        f"+{c['fields_updated']} fields · ambiguous {c['ambiguous_skipped']} · "
+        f"no_hits {c['no_hits']} · errors {c['errors']}"
+    )
+
+
+@app.command("backfill-bios")
+def backfill_bios_cmd(
+    limit: Annotated[int, typer.Option(help="Max researchers to synthesize bios for")] = 400,
+) -> None:
+    """LLM bio + topic-tag synthesis for top researchers missing a bio.
+
+    Reuses deep-dive's bio_synth source (DeepSeek). Short-circuits after 5
+    consecutive LLM errors so an API outage doesn't burn the whole run.
+    """
+    from .scraper.bio_backfill import backfill_bios
+
+    c = backfill_bios(limit=limit)
+    console.print(
+        f"[green]✓[/green] backfill-bios: +{c['bio_set']} bios · "
+        f"+{c['tags_set']} tag sets · {c['attempted']} attempted · "
+        f"llm_errors {c['llm_errors']}"
+    )
+
+
+@app.command("take-snapshots")
+def take_snapshots_cmd() -> None:
+    """Write today's MetricSnapshot rows (h-index / cites / invest) for trend lines."""
+    from .scraper.metric_snapshot import take_snapshots
+
+    c = take_snapshots()
+    console.print(f"[green]✓[/green] snapshots: {c}")
+
+
 @app.command()
 def score() -> None:
     """Compute person_score / trajectory_score / investability_score for all researchers."""

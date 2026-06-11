@@ -4,6 +4,8 @@
   import StarButton from '$lib/StarButton.svelte';
   import SourceBadge from '$lib/SourceBadge.svelte';
   import DeepDiveButton from '$lib/DeepDiveButton.svelte';
+  import Sparkline from '$lib/Sparkline.svelte';
+  import NotesPanel from '$lib/NotesPanel.svelte';
   import { compareSlots, addToCompare, COMPARE_MAX } from '$lib/watchlist';
 
   let { data } = $props();
@@ -118,6 +120,32 @@
     </div>
   </div>
 
+  <!-- Trend sparklines — daily metric_snapshots via /researchers/{slug}/history.
+       Hidden until ≥2 snapshot days exist (one point is not a trend). -->
+  {#if (data.history ?? []).length >= 2}
+    {@const hVals = data.history.map((s) => s.h_index).filter((v): v is number => v != null)}
+    {@const cVals = data.history
+      .map((s) => s.citation_count)
+      .filter((v): v is number => v != null)}
+    {@const iVals = data.history
+      .map((s) => s.investability_v2)
+      .filter((v): v is number => v != null)}
+    <div class="trend-row">
+      {#if hVals.length >= 2}
+        <div class="trend"><span class="trend-lbl">h-index</span><Sparkline values={hVals} /></div>
+      {/if}
+      {#if cVals.length >= 2}
+        <div class="trend">
+          <span class="trend-lbl">citations</span><Sparkline values={cVals} />
+        </div>
+      {/if}
+      {#if iVals.length >= 2}
+        <div class="trend"><span class="trend-lbl">invest</span><Sparkline values={iVals} /></div>
+      {/if}
+      <span class="trend-window">{data.history.length}d</span>
+    </div>
+  {/if}
+
   <div class="contact-row">
     {#if r.homepage_url}<a class="badge" href={r.homepage_url} target="_blank" rel="noreferrer">{$t('researcher.homepage')} ↗</a>{/if}
     {#if r.twitter_handle}<a class="badge" href={`https://x.com/${r.twitter_handle}`} target="_blank" rel="noreferrer">@{r.twitter_handle}</a>{/if}
@@ -126,6 +154,8 @@
     {#if r.orcid}<a class="badge" href={r.orcid} target="_blank" rel="noreferrer">ORCID</a>{/if}
     {#if r.openalex_id}<a class="badge" href={r.openalex_id} target="_blank" rel="noreferrer">OpenAlex</a>{/if}
   </div>
+
+  <NotesPanel slug={r.slug} />
 
   {#if r.bio}
     <div class="bio-block">
@@ -560,5 +590,32 @@
     background: var(--n100);
     padding: 1px 6px;
     user-select: all;
+  }
+  .trend-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 28px;
+    padding: 12px 28px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .trend {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .trend-lbl {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--n500);
+  }
+  .trend-window {
+    margin-left: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    color: var(--n500);
   }
 </style>
