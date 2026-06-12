@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 028                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · THURSDAY, JUNE 11, 2026
+VOL. 1 · NO. 029                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · FRIDAY, JUNE 12, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 028 · 2026-06-11
+> *All The Researchers Fit To Watch* — Vol. 1, No. 029 · 2026-06-12
 
-_Auto-generated at 2026-06-11T05:24:09+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-06-12T05:46:08+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,120 +15,108 @@ _Auto-generated at 2026-06-11T05:24:09+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **18855** | 143 | 707 | 5 | 31 |
+| **19743** | 246 | 888 | 5 | 31 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Constructing and Expanding Low-Resource and Underrepresented Parallel Datasets for Indonesian Local Languages
+### No. 01 · Imitate, Explore, and Self-Improve: A Reproduction Report on Slow-thinking Reasoning Systems
 
-**Joanito Agili Lopo** · 一作 · 2 作者 · [arXiv:2404.01009](https://arxiv.org/abs/2404.01009)
+**Yingqian Min** · 一作 · 14 作者 · [arXiv:2412.09413](https://arxiv.org/abs/2412.09413)
 
-*构建含五种印尼地方语言的多语平行语料库Bhinneka Korpus。*
+*提出模仿-探索-自改进框架训练慢思考推理系统。*
 
-_In Indonesia, local languages play an integral role in the culture. However, the available Indonesian language resources still fall into the category of limited data in the Natural Language Processing (NLP) field. This…_
+_Recently, slow-thinking reasoning systems, such as o1, have demonstrated remarkable capabilities in solving complex reasoning tasks. These systems typically engage in an extended thinking process before responding to a…_
 
-→ [profile](/researchers/joanito-agili-lopo)
-
----
-### No. 02 · Improving Lexical Difficulty Prediction with Context-Aligned Contrastive Learning and Ridge Ensembling
-
-**Wicaksono Leksono Muhamad** · 一作 · 5 作者 · [arXiv:2605.08950](https://arxiv.org/abs/2605.08950)
-
-*用对比回归与岭集成提升跨语言词汇难度预测。*
-
-_Lexical difficulty prediction is a fundamental problem in language learning and readability assessment, requiring models to estimate word difficulty across different first-language (L1) backgrounds. However, existing ap…_
-
-→ [profile](/researchers/wicaksono-leksono-muhamad)
+→ [profile](/researchers/yingqian-min)
 
 ---
-### No. 03 · ITLC at SemEval-2026 Task 11: Normalization and Deterministic Parsing for Formal Reasoning in LLMs
+### No. 02 · OMNI-DC: Highly Robust Depth Completion with Multiresolution Depth Integration
 
-**Wicaksono Leksono Muhamad** · 一作 · 5 作者 · [arXiv:2603.02676](https://arxiv.org/abs/2603.02676)
+**Yiming Zuo** · 一作 · 4 作者 · [arXiv:2411.19278](https://arxiv.org/abs/2411.19278)
 
-*用规范化逻辑表示与确定性解析消除LLM推理内容偏差。*
+*多分辨率深度集成与拉普拉斯损失实现零样本鲁棒深度补全。*
 
-_Large language models suffer from content effects in reasoning tasks, particularly in multi-lingual contexts. We introduce a novel method that reduces these biases through explicit structural abstraction that transforms…_
+_Depth completion (DC) aims to predict a dense depth map from an RGB image and a sparse depth map. Existing DC methods generalize poorly to new datasets or unseen sparse depth patterns, limiting their real-world applicat…_
 
-→ [profile](/researchers/wicaksono-leksono-muhamad)
-
----
-### No. 04 · Language Surgery in Multilingual Large Language Models
-
-**Joanito Agili Lopo** · 一作 · 9 作者 · [arXiv:2506.12450](https://arxiv.org/abs/2506.12450)
-
-*利用中间层表征对齐与隐变量注入实现跨语言控制。*
-
-_Large Language Models (LLMs) have demonstrated remarkable generalization capabilities across tasks and languages, revolutionizing natural language processing. This paper investigates the naturally emerging representatio…_
-
-→ [profile](/researchers/joanito-agili-lopo)
+→ [profile](/researchers/yiming-zuo)
 
 ---
-### No. 05 · CIKMar: A Dual-Encoder Approach to Prompt-Based Reranking in Educational Dialogue Systems
+### No. 03 · GraspGen-X: Cross-Embodiment 6-DOF Diffusion-based Grasping
 
-**Joanito Agili Lopo** · 一作 · 3 作者 · [arXiv:2408.08805](https://arxiv.org/abs/2408.08805)
+**Beining Han** · 一作 · 8 作者 · [arXiv:2606.00998](https://arxiv.org/abs/2606.00998)
 
-*用双编码器（BERT+SBERT）优化提示重排序提升教育对话相关性。*
+_We study cross-embodiment 6-DOF robot grasping. Unlike prior works, we require the model not only to generalize to novel objects / scenes but also to novel gripper morphologies and physical grasping processes. Our metho…_
 
-_In this study, we introduce CIKMar, an efficient approach to educational dialogue systems powered by the Gemma Language model. By leveraging a Dual-Encoder ranking system that incorporates both BERT and SBERT model, we…_
-
-→ [profile](/researchers/joanito-agili-lopo)
+→ [profile](/researchers/beining-han)
 
 ---
-### No. 06 · SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages
+### No. 04 · SeeGroup: Multi-Layer Depth Estimation of Transparent Surfaces via Self-Determined Grouping
 
-**Holy Lovenia** · 一作 · 61 作者 · [arXiv:2406.10118](https://arxiv.org/abs/2406.10118)
+**Hongyu Wen** · 一作 · 2 作者 · [arXiv:2605.28735](https://arxiv.org/abs/2605.28735)
 
-*构建含近千种东南亚语言的多模态标准化数据基准。*
+_Transparent objects are common in daily life, and it is important to understand their multilayer depth, including the transparent surface and the objects behind it. Existing methods for multilayer depth typically extend…_
 
-_Southeast Asia (SEA) is a region rich in linguistic diversity and cultural variety, with over 1,300 indigenous languages and a population of 671 million people. However, prevailing AI models suffer from a significant la…_
-
-→ [profile](/researchers/holy-lovenia)
+→ [profile](/researchers/hongyu-wen)
 
 ---
-### No. 07 · On Symmetric Losses for Robust Policy Optimization with Noisy Preferences
+### No. 05 · ProcFunc: Function-Oriented Abstractions for Procedural 3D Generation in Python
 
-**Soichiro Nishimori** · 一作 · 4 作者 · [arXiv:2505.24709](https://arxiv.org/abs/2505.24709)
+**Alexander Raistrick** · 一作 · 11 作者 · [arXiv:2604.26943](https://arxiv.org/abs/2604.26943)
 
-*用对称损失函数实现含噪偏好下的鲁棒策略优化。*
+_We introduce ProcFunc, a library for Blender-based procedural 3D generation in Python. ProcFunc provides a library of easy-to-use Python functions, which streamline creating, combining, analyzing, and executing procedur…_
 
-_Optimizing policies based on human preferences is key to aligning language models with human intent. This work focuses on reward modeling, a core component in reinforcement learning from human feedback (RLHF), and offli…_
-
-→ [profile](/researchers/soichiro-nishimori)
+→ [profile](/researchers/alexander-raistrick)
 
 ---
-### No. 08 · CapBencher: Give Your LLM Benchmark a Built-in Alarm for Test-Set Overfitting
+### No. 06 · Zero-Shot Depth from Defocus
 
-**Takashi Ishida** · 一作 · 3 作者 · [arXiv:2505.18102](https://arxiv.org/abs/2505.18102)
+**Yiming Zuo** · 一作 · 8 作者 · [arXiv:2603.26658](https://arxiv.org/abs/2603.26658)
 
-*通过注入随机答案降低贝叶斯准确率，检测测试集过拟合。*
+_Depth from Defocus (DfD) is the task of estimating a dense metric depth map from a focus stack. Unlike previous works overfitting to a certain dataset, this paper focuses on the challenging and practical setting of zero…_
 
-_Publishing a large language model (LLM) benchmark (especially its ground-truth answers) on the Internet risks contaminating future LLMs and enabling evaluation gaming: it may be unintentionally (or intentionally) used t…_
-
-→ [profile](/researchers/takashi-ishida)
+→ [profile](/researchers/yiming-zuo)
 
 ---
-### No. 09 · THaLLE: Text Hyperlocally Augmented Large Language Extension -- Technical Report
+### No. 07 · Confined non-Hermitian skin effect in a semi-infinite Fock-state lattice
 
-**KBTG Labs** · 一作 · 9 作者 · [arXiv:2406.07505](https://arxiv.org/abs/2406.07505)
+**Zhi Jiao Deng** · 一作 · 5 作者 · [arXiv:2601.13540](https://arxiv.org/abs/2601.13540)
 
-*用Flare CFA数据集微调8B模型，在CFA考试中达最优性能。*
+_In this paper, we investigate the non-Hermitian skin effect in a semi-infinite Fock-state lattice, where the inherent coupling scales as \sqrt{n}. By analytically solving a non-uniform, non-reciprocal SSH model, we demo…_
 
-_Recent advancements in Large Language Models (LLMs) have revealed new capabilities and opportunities across the technological landscape. However, the practicality of very large LLMs is challenged by their high compute c…_
-
-→ [profile](/researchers/kbtg-labs)
+→ [profile](/researchers/zhi-jiao-deng)
 
 ---
-### No. 10 · Interpreting and Steering a Text-to-Speech Language Model with Sparse Autoencoders
+### No. 08 · InFlux: A Benchmark for Self-Calibration of Dynamic Intrinsics of Video Cameras
 
-**Nikita Koriagin** · 一作 · 4 作者 · [arXiv:2606.10029](https://arxiv.org/abs/2606.10029)
+**Erich Liang** · 一作 · 11 作者 · [arXiv:2510.23589](https://arxiv.org/abs/2510.23589)
 
-*用稀疏自编码器解释并控制TTS语言模型的语音特征。*
+_Accurately tracking camera intrinsics is crucial for achieving 3D understanding from 2D video. However, most 3D algorithms assume that camera intrinsics stay constant throughout a video, which is often not true for many…_
 
-_Language models increasingly serve as the backbone of text-to-speech (TTS) systems, yet we understand little about the representations they build when text and generated speech tokens share a single residual stream. We…_
+→ [profile](/researchers/erich-liang)
 
-→ [profile](/researchers/nikita-koriagin)
+---
+### No. 09 · Toward A Better Understanding of Monocular Depth Evaluation
+
+**Siyang Wu** · 一作 · 4 作者 · [arXiv:2510.19814](https://arxiv.org/abs/2510.19814)
+
+*提出基于相对表面法线的新深度评估指标。*
+
+_Monocular depth estimation is an important task with rapid progress, but how to evaluate it is not fully resolved, as evidenced by a lack of standardization in existing literature and a large selection of evaluation met…_
+
+→ [profile](/researchers/siyang-wu)
+
+---
+### No. 10 · LabOS: The AI-XR Co-Scientist That Sees and Works With Humans
+
+**Le Cong** · 一作 · 33 作者 · [arXiv:2510.14861](https://arxiv.org/abs/2510.14861)
+
+*融合多模态感知与XR的AI共科学家系统。*
+
+_Modern science advances fastest when thought meets action. LabOS represents the first AI co-scientist that unites computational reasoning with physical experimentation through multimodal perception, self-evolving agents…_
+
+→ [profile](/researchers/le-cong)
 
 ---
 
@@ -136,16 +124,16 @@ _Language models increasingly serve as the backbone of text-to-speech (TTS) syst
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Bowen Zhou](/researchers/bowen-zhou) | A Review of Industrial Load Flexibility Enhancement for Demand-Respon… | — | [None](#) |
-| [Demis Hassabis](/researchers/demis-hassabis) | TacticAI: an AI assistant for football tactics | — | [None](#) |
-| [Nicolas Heess](/researchers/niclas-mueller) | TacticAI: an AI assistant for football tactics | — | [None](#) |
-| [Yi Ma](/researchers/yi-ma) | Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation… | — | [2606.11324](https://arxiv.org/abs/2606.11324) |
-| [Yunhe Wang](/researchers/yunhe-wang) | Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harne… | — | [2606.12344](https://arxiv.org/abs/2606.12344) |
-| [Deepak Pathak](/researchers/deepak-pathak) | FACTR 2: Learning External Force Sensing for Commodity Robot Arms Imp… | embodied | [2606.12406](https://arxiv.org/abs/2606.12406) |
-| [Chelsea Finn](/researchers/chelsea-finn) | DIRECT: When and Where Should You Allocate Test-Time Compute in Embod… | embodied | [2606.12402](https://arxiv.org/abs/2606.12402) |
-| [Jiajun Wu](/researchers/jiajun-wu) | DIRECT: When and Where Should You Allocate Test-Time Compute in Embod… | embodied | [2606.12402](https://arxiv.org/abs/2606.12402) |
-| [Russ Tedrake](/researchers/russ-tedrake) | Ambient Diffusion Policy: Imitation Learning from Suboptimal Data in… | embodied | [2606.12365](https://arxiv.org/abs/2606.12365) |
-| [Chelsea Finn](/researchers/chelsea-finn) | CHORUS: Decentralized Multi-Embodiment Collaboration with One VLA Pol… | embodied | [2606.12352](https://arxiv.org/abs/2606.12352) |
+| [David Ha](/researchers/david-ha) | EDINET-Bench: Evaluating LLMs on Complex Financial Tasks using Japane… | — | [2506.08762](https://arxiv.org/abs/2506.08762) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Uni-MMMU: A Massive Multi-discipline Multimodal Unified Benchmark | — | [2510.13759](https://arxiv.org/abs/2510.13759) |
+| [Ziwei Liu](/researchers/ziwei-liu) | ShotBench: Expert-Level Cinematic Understanding in Vision-Language Mo… | — | [2506.21356](https://arxiv.org/abs/2506.21356) |
+| [Ziwei Liu](/researchers/ziwei-liu) | VBench-2.0: Advancing Video Generation Benchmark Suite for Intrinsic… | — | [2503.21755](https://arxiv.org/abs/2503.21755) |
+| [Ziwei Liu](/researchers/ziwei-liu) | UniG2U-Bench: Do Unified Models Advance Multimodal Understanding? | — | [2603.03241](https://arxiv.org/abs/2603.03241) |
+| [Bo Li](/researchers/bo-li-uchicago) | UniG2U-Bench: Do Unified Models Advance Multimodal Understanding? | — | [2603.03241](https://arxiv.org/abs/2603.03241) |
+| [Bowen Zhou](/researchers/bowen-zhou) | Efficient Long-Horizon GUI Agents via Training-Free KV Cache Compress… | — | [2603.00188](https://arxiv.org/abs/2603.00188) |
+| [Danijar Hafner](/researchers/danijar-hafner) | Sample-Efficient Reinforcement Learning with Stochastic Ensemble Valu… | — | [1807.01675](https://arxiv.org/abs/1807.01675) |
+| [Bowen Zhou](/researchers/bowen-zhou) | WeaveBench: A Long-Horizon, Real-World Benchmark for Computer-Use Age… | — | [2606.09426](https://arxiv.org/abs/2606.09426) |
+| [Bo Li](/researchers/bo-li-uchicago) | Who Pays the Price? Stakeholder-Centric Prompt Injection Benchmarking… | embodied | [2606.13385](https://arxiv.org/abs/2606.13385) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -204,98 +192,98 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages
+### No. 01 · LongCat-Next: Lexicalizing Modalities as Discrete Tokens
 
-**Holy Lovenia** · 一作 · 61 作者 · [arXiv:2406.10118](https://arxiv.org/abs/2406.10118)
+**Meituan LongCat Team** · 一作 · 89 作者 · [arXiv:2603.27538](https://arxiv.org/abs/2603.27538)
 
-*构建含近千种东南亚语言的多模态标准化数据基准。*
+_The prevailing Next-Token Prediction (NTP) paradigm has driven the success of large language models through discrete autoregressive modeling. However, contemporary multimodal systems remain language-centric, often treat…_
 
-_Southeast Asia (SEA) is a region rich in linguistic diversity and cultural variety, with over 1,300 indigenous languages and a population of 671 million people. However, prevailing AI models suffer from a significant la…_
-
-→ [profile](/researchers/holy-lovenia)
+→ [profile](/researchers/meituan-longcat-team)
 
 ---
-### No. 02 · Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models
+### No. 02 · LabOS: The AI-XR Co-Scientist That Sees and Works With Humans
 
-**Yifu Yuan** · 一作 · 23 作者 · [arXiv:2606.11324](https://arxiv.org/abs/2606.11324)
+**Le Cong** · 一作 · 33 作者 · [arXiv:2510.14861](https://arxiv.org/abs/2510.14861)
 
-_We introduce Embodied-R1.5, a unified Embodied Foundation Model (EFM) that integrates comprehensive embodied reasoning capabilities, spanning embodied cognition, task planning, correction, and pointing, within a single…_
+*融合多模态感知与XR的AI共科学家系统。*
 
-→ [profile](/researchers/yifu-yuan)
+_Modern science advances fastest when thought meets action. LabOS represents the first AI co-scientist that unites computational reasoning with physical experimentation through multimodal perception, self-evolving agents…_
 
----
-### No. 03 · PaperMentor: A Human-Centered Multi-Agent Writing Tutor for AI Research Papers on Overleaf
-
-**Jiarui Liu** · 一作 · 20 作者 · [arXiv:2606.08857](https://arxiv.org/abs/2606.08857)
-
-*多智能体协作与专家技能库驱动的论文写作反馈系统。*
-
-_Expert writing feedback from experienced researchers is critical for early-career scholars to improve their manuscripts, yet high-quality feedback often remains scarce because reviewing research papers is labor-intensiv…_
-
-→ [profile](/researchers/jiarui-liu)
+→ [profile](/researchers/le-cong)
 
 ---
-### No. 04 · Toward Generalist Autonomous Research via Hypothesis-Tree Refinement
+### No. 03 · MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Population-Level Test-Time Scaling
 
-**Jiajie Jin** · 一作 · 18 作者 · [arXiv:2606.11926](https://arxiv.org/abs/2606.11926)
+**Jiacheng Chen** · 一作 · 23 作者 · [arXiv:2606.13473](https://arxiv.org/abs/2606.13473)
 
-_Scientific progress depends on a repeated loop of exploration, experimentation, and abstraction. Researchers test candidate directions, interpret the evidence, and carry the resulting lessons into later attempts. We stu…_
+_We present MaxProof, a population-level test-time scaling framework for competition-level mathematical proof in the MiniMax-M3 series. M3 first trains three proof-oriented capabilities -- proof generation, proof verific…_
 
-→ [profile](/researchers/jiajie-jin)
-
----
-### No. 05 · ComBench: A Benchmark for Rigorous Proof Reasoning and Constructive Realization in Olympiad-Level Combinatorics
-
-**Shunkai Zhang** · 一作 · 18 作者 · [arXiv:2606.10479](https://arxiv.org/abs/2606.10479)
-
-_Combinatorics is central to Olympiad-level mathematical problem solving, requiring deep discrete reasoning, creative constructions, and rigorous structural insight. Recent evidence suggests that even today's strongest f…_
-
-→ [profile](/researchers/shunkai-zhang)
+→ [profile](/researchers/jiacheng-chen)
 
 ---
-### No. 06 · Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling
+### No. 04 · OmniGen2: Towards Instruction-Aligned Multimodal Generation
 
-**Yucheng Li** · 一作 · 17 作者 · [arXiv:2606.12370](https://arxiv.org/abs/2606.12370)
+**Chenyuan Wu** · 一作 · 22 作者 · [arXiv:2506.18871](https://arxiv.org/abs/2506.18871)
 
-_Reinforcement learning (RL) has become a key component in modern large language models, yet the rollout stage remains the key bottleneck in RL training pipelines. Although Multi-Token Prediction (MTP) offers a natural s…_
+_In this work, we introduce OmniGen2, a versatile and open-source generative model designed to provide a unified solution for diverse generation tasks, including text-to-image, image editing, and in-context generation. U…_
 
-→ [profile](/researchers/yucheng-li)
-
----
-### No. 07 · Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks
-
-**Mengyu Zheng** · 一作 · 16 作者 · [arXiv:2606.12344](https://arxiv.org/abs/2606.12344)
-
-_General-purpose agents such as OpenClaw are increasingly used as autonomous tool users, but their coding ability is difficult to measure under SWE-bench: a generic agent does not by itself satisfy the clean Docker works…_
-
-→ [profile](/researchers/mengyu-zheng)
+→ [profile](/researchers/chenyuan-wu)
 
 ---
-### No. 08 · Scalable Conformal MoSx Catalyst for Efficient Hydrogen Evolution at Industrial-Level Current Density in Alkaline Electrolyzers
+### No. 05 · LabVLA: Grounding Vision-Language-Action Models in Scientific Laboratories
 
-**Yong Zuo** · 一作 · 16 作者 · [arXiv:2606.12110](https://arxiv.org/abs/2606.12110)
+**Baochang Ren** · 一作 · 18 作者 · [arXiv:2606.13578](https://arxiv.org/abs/2606.13578)
 
-_The development of simple and scalable fabrication strategies for cost-effective electrodes is crucial to advance water splitting in alkaline water electrolyzers (AWEs). Here, we present a coating-annealing method to co…_
+_Scientific laboratories increasingly rely on AI systems to reason about experiments, but the physical act of doing science remains largely outside their reach. AI can help read literature, generate hypotheses, and plan…_
 
-→ [profile](/researchers/yong-zuo)
-
----
-### No. 09 · Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application
-
-**Jiachun Li** · 一作 · 15 作者 · [arXiv:2606.12191](https://arxiv.org/abs/2606.12191)
-
-_Environments serve as interactive systems for large language model (LLM) based agents across diverse scenarios and play a crucial role in driving the continual evolution of model capabilities. Despite this importance, e…_
-
-→ [profile](/researchers/jiachun-li)
+→ [profile](/researchers/baochang-ren)
 
 ---
-### No. 10 · Superconductivity in the pressure-amorphized topological insulator CrP$_4$
+### No. 06 · WT-UMI: Tactile-based Whole-Body Manipulation via Force-Supervised Contact-Aware Planning
 
-**Chutong Zhang** · 一作 · 15 作者 · [arXiv:2606.12241](https://arxiv.org/abs/2606.12241)
+**Jaehwi Jang** · 一作 · 18 作者 · [arXiv:2606.13232](https://arxiv.org/abs/2606.13232)
 
-_The interplay among superconductivity, magnetism, and nontrivial band topology represents one of the most compelling frontiers in condensed matter physics. The exploration of novel superconductivity in 3d transition-met…_
+_Whole-body humanoid manipulation of bulky, deformable, and shared-load objects requires distributed contact sensing and explicit force regulation, yet most imitation policies treat contact force only implicitly. On the…_
 
-→ [profile](/researchers/chutong-zhang)
+→ [profile](/researchers/jaehwi-jang)
+
+---
+### No. 07 · Chain-of-Model Learning for Language Model
+
+**Kaitao Song** · 一作 · 17 作者 · [arXiv:2505.11820](https://arxiv.org/abs/2505.11820)
+
+_In this paper, we propose a novel learning paradigm, termed Chain-of-Model (CoM), which incorporates the causal relationship into the hidden states of each layer as a chain style, thereby introducing great scaling effic…_
+
+→ [profile](/researchers/kaitao-song)
+
+---
+### No. 08 · Conditional spinodal decomposition in Li-Mg anodes for lithium metal batteries
+
+**Leonardo Shoji Aota** · 一作 · 17 作者 · [arXiv:2606.12932](https://arxiv.org/abs/2606.12932)
+
+_The development of batteries with high energy density, short charging times and use of sustainable materials is critical for decarbonization. Magnesium (Mg)-based anodes for lithium (Li) metal batteries promote homogene…_
+
+→ [profile](/researchers/leonardo-shoji-aota)
+
+---
+### No. 09 · FTP-1: A Generalist Foundation Tactile Policy Across Tactile Sensors for Contact-Rich Manipulation
+
+**Chengbo Yuan** · 一作 · 17 作者 · [arXiv:2606.13102](https://arxiv.org/abs/2606.13102)
+
+_Despite the success of vision-based generalist robotic policies, existing tactile-based policies remain tied to fixed embodiments and sensor setups. This is because tactile signals are highly heterogeneous across hardwa…_
+
+→ [profile](/researchers/chengbo-yuan)
+
+---
+### No. 10 · Procedural Generation of Articulated Simulation-Ready Assets
+
+**Abhishek Joshi** · 一作 · 15 作者 · [arXiv:2505.10755](https://arxiv.org/abs/2505.10755)
+
+*用程序化生成18类铰接资产，支持物理仿真与强化学习。*
+
+_We introduce Infinigen-Articulated, a toolkit for generating realistic, procedurally generated articulated assets for robotics simulation. We include procedural generators for 18 common articulated object categories alo…_
+
+→ [profile](/researchers/abhishek-joshi)
 
 ---
 
@@ -305,63 +293,61 @@ _The interplay among superconductivity, magnetism, and nontrivial band topology 
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages
+### No. 01 · LongCat-Next: Lexicalizing Modalities as Discrete Tokens
 
-**Holy Lovenia** · 一作 · 61 作者 · [arXiv:2406.10118](https://arxiv.org/abs/2406.10118)
+**Meituan LongCat Team** · 一作 · 89 作者 · [arXiv:2603.27538](https://arxiv.org/abs/2603.27538)
 
-*构建含近千种东南亚语言的多模态标准化数据基准。*
+_The prevailing Next-Token Prediction (NTP) paradigm has driven the success of large language models through discrete autoregressive modeling. However, contemporary multimodal systems remain language-centric, often treat…_
 
-_Southeast Asia (SEA) is a region rich in linguistic diversity and cultural variety, with over 1,300 indigenous languages and a population of 671 million people. However, prevailing AI models suffer from a significant la…_
+**▸ 选中原因：首次出现 · 89 作者合作（疑似大组新人）**
 
-**▸ 选中原因：首次出现 · 61 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/holy-lovenia)
+→ [profile](/researchers/meituan-longcat-team)
 
 ---
-### No. 02 · Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models
+### No. 02 · LabOS: The AI-XR Co-Scientist That Sees and Works With Humans
 
-**Yifu Yuan** · 一作 · 23 作者 · [arXiv:2606.11324](https://arxiv.org/abs/2606.11324)
+**Le Cong** · 一作 · 33 作者 · [arXiv:2510.14861](https://arxiv.org/abs/2510.14861)
 
-_We introduce Embodied-R1.5, a unified Embodied Foundation Model (EFM) that integrates comprehensive embodied reasoning capabilities, spanning embodied cognition, task planning, correction, and pointing, within a single…_
+*融合多模态感知与XR的AI共科学家系统。*
 
-**▸ 选中原因：首次出现 · 23 作者合作（疑似大组新人）**
+_Modern science advances fastest when thought meets action. LabOS represents the first AI co-scientist that unites computational reasoning with physical experimentation through multimodal perception, self-evolving agents…_
 
-→ [profile](/researchers/yifu-yuan)
+**▸ 选中原因：首次出现 · 33 作者合作（疑似大组新人）**
 
----
-### No. 03 · PaperMentor: A Human-Centered Multi-Agent Writing Tutor for AI Research Papers on Overleaf
-
-**Jiarui Liu** · 一作 · 20 作者 · [arXiv:2606.08857](https://arxiv.org/abs/2606.08857)
-
-*多智能体协作与专家技能库驱动的论文写作反馈系统。*
-
-_Expert writing feedback from experienced researchers is critical for early-career scholars to improve their manuscripts, yet high-quality feedback often remains scarce because reviewing research papers is labor-intensiv…_
-
-**▸ 选中原因：首次出现 · 20 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/jiarui-liu)
+→ [profile](/researchers/le-cong)
 
 ---
-### No. 04 · FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning
+### No. 03 · OmniGen2: Towards Instruction-Aligned Multimodal Generation
 
-**Steven Oh** · 一作 · 8 作者 · [arXiv:2606.12406](https://arxiv.org/abs/2606.12406)
+**Chenyuan Wu** · 一作 · 22 作者 · [arXiv:2506.18871](https://arxiv.org/abs/2506.18871)
 
-_Contact-rich manipulation requires force sensitivity, but many robot arms lack dedicated force sensors due to their high cost. We present Neural External Torque Estimation (NEXT), a data-driven method that estimates ext…_
+_In this work, we introduce OmniGen2, a versatile and open-source generative model designed to provide a unified solution for diverse generation tasks, including text-to-image, image editing, and in-context generation. U…_
+
+**▸ 选中原因：首次出现 · 22 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/chenyuan-wu)
+
+---
+### No. 04 · Mana: Dexterous Manipulation of Articulated Tools
+
+**Zhao-Heng Yin** · 一作 · 4 作者 · [arXiv:2606.13677](https://arxiv.org/abs/2606.13677)
+
+_Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid object…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/steven-oh)
+→ [profile](/researchers/zhao-heng-yin)
 
 ---
-### No. 05 · DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?
+### No. 05 · Improving Robotic Generalist Policies via Flow Reversal Steering
 
-**Jadelynn Dao** · 一作 · 10 作者 · [arXiv:2606.12402](https://arxiv.org/abs/2606.12402)
+**Andy Tang** · 一作 · 5 作者 · [arXiv:2606.13675](https://arxiv.org/abs/2606.13675)
 
-_Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe that doing so increas…_
+_Generalist policies can learn a wide range of skills from diverse robot datasets. In order to solve or improve on challenging news tasks, we need a way to infer and invoke the appropriate actions from the policy's rich…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/jadelynn-dao)
+→ [profile](/researchers/andy-tang)
 
 ---
 
