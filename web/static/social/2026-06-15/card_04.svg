@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" font-family="Playfair Display, Times New Roman, serif">
+  <rect width="720" height="720" fill="#F9F9F7"/>
+  <pattern id="d" width="4" height="4" patternUnits="userSpaceOnUse">
+    <path d="M1 3h1v1H1V3zm2-2h1v1H3V1z" fill="#111" fill-opacity="0.05"/>
+  </pattern>
+  <rect width="720" height="720" fill="url(#d)"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="720" height="56" fill="#111"/>
+  <text x="36" y="36" fill="#F9F9F7" font-family="Inter, sans-serif" font-size="14" font-weight="700" letter-spacing="3">OPENSCOUT · DAILY · JUN 15 2026</text>
+  <text x="684" y="36" fill="#F9F9F7" font-family="Inter, sans-serif" font-size="14" font-weight="700" letter-spacing="3" text-anchor="end">№ 04 / 09</text>
+
+  <!-- Rank number -->
+  <text x="36" y="220" font-family="Playfair Display, serif" font-weight="900" font-size="180" fill="#CC0000" letter-spacing="-6">04</text>
+
+  <!-- Invest score (top-right, under the flag) -->
+  <text x="684" y="160" font-family="Inter, sans-serif" font-size="11" font-weight="700" letter-spacing="3" fill="#CC0000" text-anchor="end">INVEST SCORE</text>
+  <text x="684" y="220" font-family="Playfair Display, serif" font-weight="900" font-size="64" fill="#CC0000" text-anchor="end" letter-spacing="-2">0.59</text>
+
+  <!-- Name -->
+  <text x="36" y="280" font-family="Playfair Display, serif" font-weight="900" font-size="44" fill="#111" letter-spacing="-1">Yuqing Wang</text>
+  
+
+  <!-- Country flag + role -->
+  <text x="684" y="280" font-family="JetBrains Mono, monospace" font-size="22" font-weight="700" fill="#111" text-anchor="end">🇨🇳</text>
+  <text x="684" y="308" font-family="Inter, sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#737373" text-anchor="end">PHD</text>
+
+  <!-- Paper title -->
+  <text x="36" y="360" font-family="Playfair Display, serif" font-size="26" font-weight="700" fill="#111">Representation Forcing for</text>
+<text x="36" y="392" font-family="Playfair Display, serif" font-size="26" font-weight="700" fill="#111">Bottleneck-Free Unified</text>
+<text x="36" y="424" font-family="Playfair Display, serif" font-size="26" font-weight="700" fill="#111">Multimodal Models</text>
+
+
+  <!-- Pillar bars -->
+  <g transform="translate(36, 480)"><text font-family="Inter, sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#737373">C · COMMERCIAL</text><text x="200" y="0" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#111">96</text><rect x="0" y="8" width="200" height="10" fill="#E5E5E0" stroke="#111" stroke-width="1.2"/><rect x="0" y="8" width="192" height="10" fill="#0B6B3A"/></g><g transform="translate(36, 520)"><text font-family="Inter, sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#737373">Z · BUZZ</text><text x="200" y="0" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#111">51</text><rect x="0" y="8" width="200" height="10" fill="#E5E5E0" stroke="#111" stroke-width="1.2"/><rect x="0" y="8" width="101" height="10" fill="#B45309"/></g>
+
+  <!-- Bottom: stats -->
+  <line x1="36" y1="580" x2="684" y2="580" stroke="#111" stroke-width="2"/>
+  <text x="36" y="624" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#737373" letter-spacing="3">CITATIONS</text>
+  <text x="36" y="666" font-family="Playfair Display, serif" font-weight="900" font-size="36" fill="#111">0</text>
+
+  <text x="220" y="624" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#737373" letter-spacing="3">H-INDEX</text>
+  <text x="220" y="666" font-family="Playfair Display, serif" font-weight="900" font-size="36" fill="#111">0</text>
+
+  <text x="360" y="624" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#CC0000" letter-spacing="3">TAG</text>
+  <text x="360" y="660" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#111">🔥 high-potential</text>
+
+  <text x="684" y="690" font-family="JetBrains Mono, monospace" font-size="11" fill="#737373" text-anchor="end">openscout.app/researchers/yuqing-wang</text>
+</svg>
