@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 032                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · MONDAY, JUNE 15, 2026
+VOL. 1 · NO. 033                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · TUESDAY, JUNE 16, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 032 · 2026-06-15
+> *All The Researchers Fit To Watch* — Vol. 1, No. 033 · 2026-06-16
 
-_Auto-generated at 2026-06-15T06:34:16+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-06-16T06:42:16+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,120 +15,125 @@ _Auto-generated at 2026-06-15T06:34:16+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **20842** | 149 | 637 | 6 | 53 |
+| **22397** | 251 | 1555 | 6 | 53 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · TANDEM: Bi-Level Data Mixture Optimization with Twin Networks
+### No. 01 · Efficient Reinforcement for Visual-Textual Thinking with Discrete Diffusion Model
 
-**Jiaxing Wang** · 一作 · 12 作者 · [arXiv:2606.04401](https://arxiv.org/abs/2606.04401)
+**Yoonjeon Kim** · 一作 · 5 作者 · [arXiv:2606.14792](https://arxiv.org/abs/2606.14792)
 
-_The capabilities of large language models (LLMs) significantly depend on training data drawn from various domains. Optimizing domain-specific mixture ratios can be modeled as a bi-level optimization problem, which we si…_
+_RL-based post-training has been widely adopted to enable interleaved visual and textual reasoning in unified multimodal models capable of both text and image generation. However, most existing approaches are built upon…_
 
-→ [profile](/researchers/jiaxing-wang)
-
----
-### No. 02 · Towards Characterizing Scientific Image Utility and Upgradability
-
-**WenZhe Li** · 一作 · 9 作者 · [arXiv:2606.03401](https://arxiv.org/abs/2606.03401)
-
-_Scientific images function as critical evidence in research communication, yet their integrity faces unprecedented threats from AI-generated content that introduces subtle but consequential errors. Existing evaluation p…_
-
-→ [profile](/researchers/wenzhe-li)
+→ [profile](/researchers/yoonjeon-kim)
 
 ---
-### No. 03 · Resolving Endpoint Underfitting in Diffusion Bridges via Noise Alignment
+### No. 02 · TRIAGE: Dialectical Reasoning for Explainable Risk Prediction on Irregularly Sampled Medical Time Series with LLMs
 
-**Yurong Gao** · 一作 · 5 作者 · [arXiv:2605.28962](https://arxiv.org/abs/2605.28962)
+**Hyeongwon Jang** · 一作 · 6 作者 · [arXiv:2606.09030](https://arxiv.org/abs/2606.09030)
 
-_Diffusion bridge models offer a powerful framework for connecting two data distributions, such as in image restoration and translation. Many existing methods learn this bridge by mimicking the score-matching formulation…_
+_Clinical early warning systems built on electronic health records, in which clinical observations are recorded as irregularly sampled medical time series (ISMTS), must deliver both calibrated risk scores for patient tri…_
 
-→ [profile](/researchers/yurong-gao)
-
----
-### No. 04 · DyCoRM: Dynamic Criterion-Aware Reward Modeling for Text-to-Image Generation
-
-**Jiaying Qian** · 一作 · 8 作者 · [arXiv:2605.25876](https://arxiv.org/abs/2605.25876)
-
-_With the continued advancement of text-to-image (T2I) generation, producing high-quality images is becoming increasingly attainable; consequently, user demands are shifting toward images that better satisfy their specif…_
-
-→ [profile](/researchers/jiaying-qian)
+→ [profile](/researchers/hyeongwon-jang)
 
 ---
-### No. 05 · GeoR-Bench: Evaluating Geoscience Visual Reasoning
+### No. 03 · LFQ: Logit-aware Final-block Quantization for Boosting the Generation Quality of Low-Bit Quantized LLMs
 
-**Yushuo Zheng** · 一作 · 10 作者 · [arXiv:2605.11541](https://arxiv.org/abs/2605.11541)
+**Jung Hyun Lee** · 一作 · 4 作者 · [arXiv:2605.29756](https://arxiv.org/abs/2605.29756)
 
-_Geoscience intelligence is expected to understand, reason about, and predict earth system changes to support human decision-making in critical domains such as disaster response, climate adaptation and environmental prot…_
+_As large language models continue to scale, low-bit weight-only post-training quantization (PTQ) offers a practical solution to their memory-efficient deployment. Although block-wise PTQ is capable of matching the full-…_
 
-→ [profile](/researchers/yushuo-zheng)
-
----
-### No. 06 · MirrorBench: Evaluating Self-centric Intelligence in MLLMs by Introducing a Mirror
-
-**Shengyu Guo** · 一作 · 6 作者 · [arXiv:2604.14785](https://arxiv.org/abs/2604.14785)
-
-_Recent progress in Multimodal Large Language Models (MLLMs) has demonstrated remarkable advances in perception and reasoning, suggesting their potential for embodied intelligence. While recent studies have evaluated emb…_
-
-→ [profile](/researchers/shengyu-guo)
+→ [profile](/researchers/jung-hyun-lee)
 
 ---
-### No. 07 · Market-Bench: Benchmarking Large Language Models on Economic and Trade Competition
+### No. 04 · TreeText-CTS: Compact, Source-Traceable Tree-Path Evidence for Irregular Clinical Time-Series Prediction
 
-**Yushuo Zheng** · 一作 · 6 作者 · [arXiv:2604.05523](https://arxiv.org/abs/2604.05523)
+**Kwanhyung Lee** · 一作 · 6 作者 · [arXiv:2605.20292](https://arxiv.org/abs/2605.20292)
 
-_The ability of large language models (LLMs) to manage and acquire economic resources remains unclear. In this paper, we introduce \textbf{Market-Bench}, a comprehensive benchmark that evaluates the capabilities of LLMs…_
+_Numerical time-series models can effectively process irregular electronic health record (EHR) trajectories, but they do not naturally expose the measurements and temporal patterns supporting each risk estimate as readab…_
 
-→ [profile](/researchers/yushuo-zheng)
-
----
-### No. 08 · Learning to Wander: Improving the Global Image Geolocation Ability of LMMs via Actionable Reasoning
-
-**Yushuo Zheng** · 一作 · 5 作者 · [arXiv:2603.10463](https://arxiv.org/abs/2603.10463)
-
-*提出GeoAoT框架，用行动推理增强LMMs全球图像定位能力。*
-
-_Geolocation, the task of identifying the geographic location of an image, requires abundant world knowledge and complex reasoning abilities. Though advanced large multimodal models (LMMs) have shown superior aforementio…_
-
-→ [profile](/researchers/yushuo-zheng)
+→ [profile](/researchers/kwanhyung-lee)
 
 ---
-### No. 09 · SIQA: Toward Reliable Scientific Image Quality Assessment
+### No. 05 · CollabVR: Collaborative Video Reasoning with Vision-Language and Video Generation Models
 
-**Wenzhe Li** · 一作 · 9 作者 · [arXiv:2603.06700](https://arxiv.org/abs/2603.06700)
+**Joowon Kim** · 一作 · 4 作者 · [arXiv:2605.08735](https://arxiv.org/abs/2605.08735)
 
-*提出双维度科学图像质量评估框架SIQA，含理解与评分协议。*
+_Recent "Thinking with Video" approaches use Video Generation Models (VGMs) for visual reasoning by producing temporally coherent Chain-of-Frames as reasoning artifacts. Even strong VGMs, however, exhibit two recurring f…_
 
-_Scientific images fundamentally differ from natural and AI-generated images in that they encode structured domain knowledge rather than merely depict visual scenes. Assessing their quality therefore requires evaluating…_
-
-→ [profile](/researchers/wenzhe-li-2)
+→ [profile](/researchers/joowon-kim)
 
 ---
-### No. 10 · STAR : Bridging Statistical and Agentic Reasoning for Large Model Performance Prediction
+### No. 06 · CURaTE: Continual Unlearning in Real Time with Ensured Preservation of LLM Knowledge
 
-**Xiaoxiao Wang** · 一作 · 9 作者 · [arXiv:2602.12143](https://arxiv.org/abs/2602.12143)
+**Seyun Bae** · 一作 · 3 作者 · [arXiv:2604.14644](https://arxiv.org/abs/2604.14644)
 
-*融合统计期望与智能推理的STAR框架提升模型性能预测。*
+_The inability to filter out in advance all potentially problematic data from the pre-training of large language models has given rise to the need for methods for unlearning specific pieces of knowledge after training. E…_
 
-_As comprehensive large model evaluation becomes prohibitively expensive, predicting model performance from limited observations has become essential. However, existing statistical methods struggle with pattern shifts, d…_
+→ [profile](/researchers/seyun-bae)
 
-→ [profile](/researchers/xiaoxiao-wang)
+---
+### No. 07 · Discounted Beta-Bernoulli Reward Estimation for Sample-Efficient Reinforcement Learning with Verifiable Rewards
+
+**Haechan Kim** · 一作 · 5 作者 · [arXiv:2603.18444](https://arxiv.org/abs/2603.18444)
+
+*用折扣贝塔-伯努利估计降低奖励方差，提升强化学习样本效率。*
+
+_Reinforcement learning with verifiable rewards (RLVR) has emerged as an effective post-training paradigm for improving the reasoning capabilities of large language models. However, existing group-based RLVR methods ofte…_
+
+→ [profile](/researchers/haechan-kim)
+
+---
+### No. 08 · Argument Reconstruction as Supervision for Critical Thinking in LLMs
+
+**Hyun Ryu** · 一作 · 6 作者 · [arXiv:2603.17432](https://arxiv.org/abs/2603.17432)
+
+*用GAAR引擎生成数据集训练LLM，提升批判性推理。*
+
+_To think critically about arguments, human learners are trained to identify, reconstruct, and evaluate arguments. Argument reconstruction is especially important because it makes an argument's underlying inferences expl…_
+
+→ [profile](/researchers/hyun-ryu)
+
+---
+### No. 09 · Structure-Aware Set Transformers: Temporal and Variable-Type Attention Biases for Asynchronous Clinical Time Series
+
+**Joohyung Lee** · 一作 · 4 作者 · [arXiv:2603.06605](https://arxiv.org/abs/2603.06605)
+
+*在集合变换器中引入可学习时间与变量类型注意力偏置。*
+
+_Electronic health records (EHR) are irregular, asynchronous multivariate time series. As time-series foundation models increasingly tokenize events rather than discretizing time, the input layout becomes a key design ch…_
+
+→ [profile](/researchers/joohyung-lee)
+
+---
+### No. 10 · Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines
+
+**Jean Seo** · 一作 · 8 作者 · [arXiv:2601.03627](https://arxiv.org/abs/2601.03627)
+
+*引入EPAG基准，用诊断指南评估LLM预咨询能力。*
+
+_We introduce EPAG, a benchmark dataset and framework designed for Evaluating the Pre-consultation Ability of LLMs using diagnostic Guidelines. LLMs are evaluated directly through HPI-diagnostic guideline comparison and…_
+
+→ [profile](/researchers/jean-seo)
 
 ---
 
-## Section B · 🔄 动态更新 · 7 项
+## Section B · 🔄 动态更新 · 10 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Hao Su](/researchers/hao-su) | Surface characteristics and corrosion behavior of TC11 titanium alloy… | — | [None](#) |
-| [Hao Su](/researchers/hao-su) | Material flow velocity, strain and strain rate in ultrasonic vibratio… | — | [None](#) |
-| [Saining Xie](/researchers/saining-xie) | RepFusion: Leveraging Multimodal Priors for Denoising in Representati… | — | [2606.14700](https://arxiv.org/abs/2606.14700) |
-| [Wengong Jin](/researchers/wengong-jin) | Benchmarking AI Agents for Addressing Scientific Challenges Across Sc… | — | [2606.12736](https://arxiv.org/abs/2606.12736) |
-| [Russ Tedrake](/researchers/russ-tedrake) | Semidefinite Relaxations for Collision-Free Motion Planning | embodied | [2606.14063](https://arxiv.org/abs/2606.14063) |
-| [Jian Tang](/researchers/jian-tang) | WAM4D: Fast 4D World Action Model via Spatial Register Tokens | embodied | [2606.14048](https://arxiv.org/abs/2606.14048) |
-| [Yang Gao](/researchers/yang-gao) | Pronounced in-plane anomalous Hall effect with vanishing out-of-plane… | ai4sci | [2606.14272](https://arxiv.org/abs/2606.14272) |
+| [Yuke Zhu](/researchers/yuke-zhu) | Isaac Lab: A GPU-Accelerated Simulation Framework for Multi-Modal Rob… | — | [2511.04831](https://arxiv.org/abs/2511.04831) |
+| [Shuran Song](/researchers/shuran-song) | World Simulation with Video Foundation Models for Physical AI | — | [2511.00062](https://arxiv.org/abs/2511.00062) |
+| [Yuke Zhu](/researchers/yuke-zhu) | World Simulation with Video Foundation Models for Physical AI | — | [2511.00062](https://arxiv.org/abs/2511.00062) |
+| [Shuran Song](/researchers/shuran-song) | Cosmos-Reason1: From Physical Common Sense To Embodied Reasoning | — | [2503.15558](https://arxiv.org/abs/2503.15558) |
+| [Yuke Zhu](/researchers/yuke-zhu) | GR00T N1: An Open Foundation Model for Generalist Humanoid Robots | — | [2503.14734](https://arxiv.org/abs/2503.14734) |
+| [Dahua Lin](/researchers/dahua-lin) | CapRL++: Unified Reinforcement Learning with Verifiable Rewards for D… | — | [2606.09393](https://arxiv.org/abs/2606.09393) |
+| [Dahua Lin](/researchers/dahua-lin) | AdaGRPO: A Capability-Aware Adaptive Enhancement for Flow-based GRPO | — | [2606.06828](https://arxiv.org/abs/2606.06828) |
+| [Dahua Lin](/researchers/dahua-lin) | WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluat… | — | [2605.10912](https://arxiv.org/abs/2605.10912) |
+| [Xiaoyong Du](/researchers/xiaoyong-du) | CODA-BENCH: Can Code Agents Handle Data-Intensive Tasks? | — | [2606.15300](https://arxiv.org/abs/2606.15300) |
+| [Ziwei Liu](/researchers/ziwei-liu) | PermaVid: Consistent Video Generation Across Edits via Disentangled C… | — | [2606.16449](https://arxiv.org/abs/2606.16449) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -196,96 +201,94 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Towards Atom-by-Atom Fabrication: Mechanosynthetic donation and abstraction
+### No. 01 · Nemotron 3 Super: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning
 
-**Brandon Blue** · 一作 · 58 作者 · [arXiv:2606.13876](https://arxiv.org/abs/2606.13876)
+**NVIDIA** · 一作 · 547 作者 · [arXiv:2604.12374](https://arxiv.org/abs/2604.12374)
 
-_Enabled by inverted-mode scanning tunneling microscopy (IM-STM) and the use of functionalized molecular tools, we demonstrate positionally-controlled mechanosynthetic addition (donation) of carbon and subtraction (abstr…_
+_We describe the pre-training, post-training, and quantization of Nemotron 3 Super, a 120 billion (active 12 billion) parameter hybrid Mamba-Attention Mixture-of-Experts model. Nemotron 3 Super is the first model in the…_
 
-→ [profile](/researchers/brandon-blue)
-
----
-### No. 02 · Benchmarking AI Agents for Addressing Scientific Challenges Across Scales
-
-**Tianyu Liu** · 一作 · 30 作者 · [arXiv:2606.12736](https://arxiv.org/abs/2606.12736)
-
-_AI agents are increasingly being developed to accelerate scientific discovery, yet their practical capabilities in real research settings remain poorly understood. Existing benchmarks for AI agents rarely capture the co…_
-
-→ [profile](/researchers/tianyu-liu)
+→ [profile](/researchers/nvidia)
 
 ---
-### No. 03 · Hy-Embodied-0.5-VLA: From Vision-Language-Action Models to a Real-World Robot Learning Stack
+### No. 02 · NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model
 
-**He Zhang** · 一作 · 26 作者 · [arXiv:2606.14409](https://arxiv.org/abs/2606.14409)
+**NVIDIA** · 一作 · 217 作者 · [arXiv:2508.14444](https://arxiv.org/abs/2508.14444)
 
-_In this report, we present Hy-Embodied-0.5-VLA, abbreviated as HyVLA-0.5, an end-to-end system that spans the full robot learning stack: data collection, model design, continued pre-training and supervised fine-tuning,…_
+_We introduce Nemotron-Nano-9B-v2, a hybrid Mamba-Transformer language model designed to increase throughput for reasoning workloads while achieving state-of-the-art accuracy compared to similarly-sized models. Nemotron-…_
 
-→ [profile](/researchers/he-zhang)
-
----
-### No. 04 · Avatar V: Scaling Video-Reference Avatar Video Generation
-
-**Benjamin Liang** · 一作 · 23 作者 · [arXiv:2606.13872](https://arxiv.org/abs/2606.13872)
-
-_Generating avatar videos that are not merely visually similar to a target individual but behaviorally recognizable, faithfully reproducing their talking rhythm, gestural tendencies, and expression dynamics, remains an o…_
-
-→ [profile](/researchers/benjamin-liang)
+→ [profile](/researchers/nvidia)
 
 ---
-### No. 05 · Measuring Epistemic Resilience of LLMs Under Misleading Medical Context
+### No. 03 · Nemotron 3 Nano Omni: Efficient and Open Multimodal Intelligence
 
-**Hongjian Zhou** · 一作 · 22 作者 · [arXiv:2606.12291](https://arxiv.org/abs/2606.12291)
+**NVIDIA** · 一作 · 207 作者 · [arXiv:2604.24954](https://arxiv.org/abs/2604.24954)
 
-_Large language models (LLMs) now reach expert-level scores on medical licensing exams, encouraging the assumption that high scores imply safe medical judgment while patients increasingly use them for health advice. We s…_
+_We introduce Nemotron 3 Nano Omni, the latest model in the Nemotron multimodal series and the first to natively support audio inputs alongside text, images, and video. Nemotron 3 Nano Omni delivers consistent accuracy i…_
 
-→ [profile](/researchers/hongjian-zhou)
-
----
-### No. 06 · From Chatbot to Digital Colleague: The Paradigm Shift Toward Persistent Autonomous AI
-
-**Yongheng Zhang** · 一作 · 20 作者 · [arXiv:2606.14502](https://arxiv.org/abs/2606.14502)
-
-_Large Language Models (LLMs) are undergoing a fundamental transformation from conversational generators into integrated AI systems capable of reasoning, action, memory, and self-improvement. We conceptualize this transi…_
-
-→ [profile](/researchers/yongheng-zhang)
+→ [profile](/researchers/nvidia)
 
 ---
-### No. 07 · Self-Improving VLA Policies: Selected Diffusion Noise for Spurious-Robust Action Smoothing
+### No. 04 · Nemotron-H: A Family of Accurate and Efficient Hybrid Mamba-Transformer Models
 
-**Duc Minh Nguyen** · 一作 · 18 作者 · [arXiv:2606.14084](https://arxiv.org/abs/2606.14084)
+**NVIDIA** · 一作 · 201 作者 · [arXiv:2504.03624](https://arxiv.org/abs/2504.03624)
 
-_Diffusion-based Vision-Language-Action (VLA) policies enable strong generalization in robotic manipulation, but remain sensitive to spurious visual correlations and noisy action generation, leading to brittle behavior u…_
+_As inference-time scaling becomes critical for enhanced reasoning capabilities, it is increasingly becoming important to build models that are efficient to infer. We introduce Nemotron-H, a family of 8B and 56B/47B hybr…_
 
-→ [profile](/researchers/duc-minh-nguyen)
-
----
-### No. 08 · SafeSci: Safety Evaluation of Large Language Models in Science Domains and Beyond
-
-**Xiangyang Zhu** · 一作 · 17 作者 · [arXiv:2603.01589](https://arxiv.org/abs/2603.01589)
-
-*提出含25万样本的多学科安全评测基准SafeSciBench。*
-
-_The success of large language models (LLMs) in scientific domains has heightened safety concerns, prompting numerous benchmarks to evaluate their scientific safety. Existing benchmarks often suffer from limited risk cov…_
-
-→ [profile](/researchers/xiangyang-zhu)
+→ [profile](/researchers/nvidia)
 
 ---
-### No. 09 · From AGI to ASI
+### No. 05 · NVIDIA Nemotron Nano V2 VL
 
-**Tim Genewein** · 一作 · 14 作者 · [arXiv:2606.12683](https://arxiv.org/abs/2606.12683)
+**NVIDIA** · 一作 · 124 作者 · [arXiv:2511.03929](https://arxiv.org/abs/2511.03929)
 
-_Over the last decade, building human-level artificial general intelligence has moved from far-fetched speculation to being a concrete next-decade target for many of the largest AI organisations. Achieving this goal woul…_
+_We introduce Nemotron Nano V2 VL, the latest model of the Nemotron vision-language series designed for strong real-world document understanding, long video comprehension, and reasoning tasks. Nemotron Nano V2 VL deliver…_
 
-→ [profile](/researchers/tim-genewein)
+→ [profile](/researchers/nvidia)
 
 ---
-### No. 10 · HarnessX: A Composable, Adaptive, and Evolvable Agent Harness Foundry
+### No. 06 · Isaac Lab: A GPU-Accelerated Simulation Framework for Multi-Modal Robot Learning
 
-**Tingyang Chen** · 一作 · 14 作者 · [arXiv:2606.14249](https://arxiv.org/abs/2606.14249)
+**NVIDIA** · 一作 · 107 作者 · [arXiv:2511.04831](https://arxiv.org/abs/2511.04831)
 
-_AI agent performance depends critically on the runtime harness, comprising the prompts, tools, memory, and control flow that mediate how a model observes, reasons, and acts. Yet today's harnesses remain largely hand-cra…_
+_We present Isaac Lab, the natural successor to Isaac Gym, which extends the paradigm of GPU-native robotics simulation into the era of large-scale multi-modal learning. Isaac Lab combines high-fidelity GPU parallel phys…_
 
-→ [profile](/researchers/tingyang-chen)
+→ [profile](/researchers/nvidia)
+
+---
+### No. 07 · World Simulation with Video Foundation Models for Physical AI
+
+**NVIDIA** · 一作 · 90 作者 · [arXiv:2511.00062](https://arxiv.org/abs/2511.00062)
+
+_We introduce [Cosmos-Predict2.5], the latest generation of the Cosmos World Foundation Models for Physical AI. Built on a flow-based architecture, [Cosmos-Predict2.5] unifies Text2World, Image2World, and Video2World gen…_
+
+→ [profile](/researchers/nvidia)
+
+---
+### No. 08 · Pretraining Large Language Models with NVFP4
+
+**NVIDIA** · 一作 · 90 作者 · [arXiv:2509.25149](https://arxiv.org/abs/2509.25149)
+
+_Large Language Models (LLMs) today are powerful problem solvers across many domains, and they continue to get stronger as they scale in model size, training set size, and training set quality, as shown by extensive rese…_
+
+→ [profile](/researchers/nvidia)
+
+---
+### No. 09 · Nemotron-4 340B Technical Report
+
+**NVIDIA** · 一作 · 83 作者 · [arXiv:2406.11704](https://arxiv.org/abs/2406.11704)
+
+_We release the Nemotron-4 340B model family, including Nemotron-4-340B-Base, Nemotron-4-340B-Instruct, and Nemotron-4-340B-Reward. Our models are open access under the NVIDIA Open Model License Agreement, a permissive m…_
+
+→ [profile](/researchers/nvidia)
+
+---
+### No. 10 · Cosmos World Foundation Model Platform for Physical AI
+
+**NVIDIA** · 一作 · 79 作者 · [arXiv:2501.03575](https://arxiv.org/abs/2501.03575)
+
+_Physical AI needs to be trained digitally first. It needs a digital twin of itself, the policy model, and a digital twin of the world, the world model. In this paper, we present the Cosmos World Foundation Model Platfor…_
+
+→ [profile](/researchers/nvidia)
 
 ---
 
@@ -295,59 +298,59 @@ _AI agent performance depends critically on the runtime harness, comprising the 
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · Avatar V: Scaling Video-Reference Avatar Video Generation
+### No. 01 · DataLadder: A Simulation-Enabled Interconversion Toolchain for the Embodied Data Pyramid
 
-**Benjamin Liang** · 一作 · 23 作者 · [arXiv:2606.13872](https://arxiv.org/abs/2606.13872)
+**Peidong Liu** · 一作 · 31 作者 · [arXiv:2606.16776](https://arxiv.org/abs/2606.16776)
 
-_Generating avatar videos that are not merely visually similar to a target individual but behaviorally recognizable, faithfully reproducing their talking rhythm, gestural tendencies, and expression dynamics, remains an o…_
+_Generalist robot policies require trustworthy evaluation and robot-usable training data, but both are difficult to scale with physical robots alone. Real-robot trials and demonstrations remain the most faithful source o…_
 
-**▸ 选中原因：首次出现 · 23 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 31 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/benjamin-liang)
-
----
-### No. 02 · Measuring Epistemic Resilience of LLMs Under Misleading Medical Context
-
-**Hongjian Zhou** · 一作 · 22 作者 · [arXiv:2606.12291](https://arxiv.org/abs/2606.12291)
-
-_Large language models (LLMs) now reach expert-level scores on medical licensing exams, encouraging the assumption that high scores imply safe medical judgment while patients increasingly use them for health advice. We s…_
-
-**▸ 选中原因：首次出现 · 22 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/hongjian-zhou)
+→ [profile](/researchers/peidong-liu)
 
 ---
-### No. 03 · From Chatbot to Digital Colleague: The Paradigm Shift Toward Persistent Autonomous AI
+### No. 02 · Dynamically suppressed lattice rotations in SrTiO$_3$ as a basis for photo-induced ferroelectricity
 
-**Yongheng Zhang** · 一作 · 20 作者 · [arXiv:2606.14502](https://arxiv.org/abs/2606.14502)
+**Huaiyu Hugo Wang** · 一作 · 25 作者 · [arXiv:2606.16267](https://arxiv.org/abs/2606.16267)
 
-_Large Language Models (LLMs) are undergoing a fundamental transformation from conversational generators into integrated AI systems capable of reasoning, action, memory, and self-improvement. We conceptualize this transi…_
+_Photo-induced ferroelectricity in the quantum paraelectric SrTiO$_3$ involves the dynamical interplay between a coherently driven Ti-O stretching vibration and multiple structural degrees of freedom, including antiferro…_
 
-**▸ 选中原因：首次出现 · 20 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 25 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/yongheng-zhang)
+→ [profile](/researchers/huaiyu-hugo-wang)
 
 ---
-### No. 04 · Semidefinite Relaxations for Collision-Free Motion Planning
+### No. 03 · On-chain Peak Shaving
 
-**Bernhard Paus Graesdal** · 一作 · 4 作者 · [arXiv:2606.14063](https://arxiv.org/abs/2606.14063)
+**Irene Aldridge** · 一作 · 24 作者 · [arXiv:2604.19956](https://arxiv.org/abs/2604.19956)
 
-_We study semidefinite relaxations for collision-free motion planning. We focus on a point robot moving from start to goal through spherical obstacles in $\mathbb{R}^n$, subject to path continuity constraints and squared…_
+_Blockchain technology is widely expected to reduce transaction costs by automating contract enforcement and eliminating intermediaries; yet, the execution costs imposed by network congestion have received little attenti…_
+
+**▸ 选中原因：首次出现 · 24 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/irene-aldridge)
+
+---
+### No. 04 · SidewalkBench: Benchmarking Visual Navigation on Urban Sidewalks
+
+**Zhizheng Liu** · 一作 · 7 作者 · [arXiv:2606.16953](https://arxiv.org/abs/2606.16953)
+
+_Urban sidewalk navigation presents significant challenges due to complex structural layouts, dynamic pedestrian behaviors, and long distances. While recent visual navigation models offer a promising solution, the lack o…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/bernhard-paus-graesdal)
+→ [profile](/researchers/zhizheng-liu)
 
 ---
-### No. 05 · Pronounced in-plane anomalous Hall effect with vanishing out-of-plane response in Cr1.2Te2
+### No. 05 · Training and Evaluating Diffusion Policies with Long Context Lengths
 
-**Wenzhi Peng** · 一作 · 11 作者 · [arXiv:2606.14272](https://arxiv.org/abs/2606.14272)
+**Abhinav Agarwal** · 一作 · 9 作者 · [arXiv:2606.16447](https://arxiv.org/abs/2606.16447)
 
-_We report an unconventional anomalous Hall regime in the van der Waals ferromagnet Cr1.2Te2, in which the anomalous Hall effect (AHE) is present for in-plane magnetization but absent for out-of-plane magnetization. In t…_
+_Imitation learning has enabled highly-dexterous robotic manipulation from RGB observations. Policies trained with these methods, however, typically condition robot actions on only a short history of observations. These…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/wenzhi-peng)
+→ [profile](/researchers/abhinav-agarwal)
 
 ---
 
