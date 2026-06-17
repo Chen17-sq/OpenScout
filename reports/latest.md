@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 033                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · TUESDAY, JUNE 16, 2026
+VOL. 1 · NO. 034                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · WEDNESDAY, JUNE 17, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 033 · 2026-06-16
+> *All The Researchers Fit To Watch* — Vol. 1, No. 034 · 2026-06-17
 
-_Auto-generated at 2026-06-16T06:42:16+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-06-17T06:19:37+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,108 +15,112 @@ _Auto-generated at 2026-06-16T06:42:16+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **22397** | 251 | 1555 | 6 | 53 |
+| **23273** | 173 | 876 | 6 | 53 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Efficient Reinforcement for Visual-Textual Thinking with Discrete Diffusion Model
+### No. 01 · ExoActor: Exocentric Video Generation as Generalizable Interactive Humanoid Control
 
-**Yoonjeon Kim** · 一作 · 5 作者 · [arXiv:2606.14792](https://arxiv.org/abs/2606.14792)
+**Yanghao Zhou** · 一作 · 6 作者 · [arXiv:2604.27711](https://arxiv.org/abs/2604.27711)
 
-_RL-based post-training has been widely adopted to enable interleaved visual and textual reasoning in unified multimodal models capable of both text and image generation. However, most existing approaches are built upon…_
+_Humanoid control systems have made significant progress in recent years, yet modeling fluent interaction-rich behavior between a robot, its surrounding environment, and task-relevant objects remains a fundamental challe…_
 
-→ [profile](/researchers/yoonjeon-kim)
-
----
-### No. 02 · TRIAGE: Dialectical Reasoning for Explainable Risk Prediction on Irregularly Sampled Medical Time Series with LLMs
-
-**Hyeongwon Jang** · 一作 · 6 作者 · [arXiv:2606.09030](https://arxiv.org/abs/2606.09030)
-
-_Clinical early warning systems built on electronic health records, in which clinical observations are recorded as irregularly sampled medical time series (ISMTS), must deliver both calibrated risk scores for patient tri…_
-
-→ [profile](/researchers/hyeongwon-jang)
+→ [profile](/researchers/yanghao-zhou)
 
 ---
-### No. 03 · LFQ: Logit-aware Final-block Quantization for Boosting the Generation Quality of Low-Bit Quantized LLMs
+### No. 02 · EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models
 
-**Jung Hyun Lee** · 一作 · 4 作者 · [arXiv:2605.29756](https://arxiv.org/abs/2605.29756)
+**Yu Bai** · 一作 · 6 作者 · [arXiv:2602.04515](https://arxiv.org/abs/2602.04515)
 
-_As large language models continue to scale, low-bit weight-only post-training quantization (PTQ) offers a practical solution to their memory-efficient deployment. Although block-wise PTQ is capable of matching the full-…_
+_Deploying humanoid robots in real-world settings is fundamentally challenging, as it demands tight integration of perception, locomotion, and manipulation under partial-information observations and dynamically changing…_
 
-→ [profile](/researchers/jung-hyun-lee)
-
----
-### No. 04 · TreeText-CTS: Compact, Source-Traceable Tree-Path Evidence for Irregular Clinical Time-Series Prediction
-
-**Kwanhyung Lee** · 一作 · 6 作者 · [arXiv:2605.20292](https://arxiv.org/abs/2605.20292)
-
-_Numerical time-series models can effectively process irregular electronic health record (EHR) trajectories, but they do not naturally expose the measurements and temporal patterns supporting each risk estimate as readab…_
-
-→ [profile](/researchers/kwanhyung-lee)
+→ [profile](/researchers/yu-bai)
 
 ---
-### No. 05 · CollabVR: Collaborative Video Reasoning with Vision-Language and Video Generation Models
+### No. 03 · RANGER: A Monocular Zero-Shot Semantic Navigation Framework through Visual Contextual Adaptation
 
-**Joowon Kim** · 一作 · 4 作者 · [arXiv:2605.08735](https://arxiv.org/abs/2605.08735)
+**Ming-Ming Yu** · 一作 · 4 作者 · [arXiv:2512.24212](https://arxiv.org/abs/2512.24212)
 
-_Recent "Thinking with Video" approaches use Video Generation Models (VGMs) for visual reasoning by producing temporally coherent Chain-of-Frames as reasoning artifacts. Even strong VGMs, however, exhibit two recurring f…_
+_Efficient target localization and autonomous navigation in complex environments are fundamental to real-world embodied applications. While recent advances in multimodal foundation models have enabled zero-shot object go…_
 
-→ [profile](/researchers/joowon-kim)
-
----
-### No. 06 · CURaTE: Continual Unlearning in Real Time with Ensured Preservation of LLM Knowledge
-
-**Seyun Bae** · 一作 · 3 作者 · [arXiv:2604.14644](https://arxiv.org/abs/2604.14644)
-
-_The inability to filter out in advance all potentially problematic data from the pre-training of large language models has given rise to the need for methods for unlearning specific pieces of knowledge after training. E…_
-
-→ [profile](/researchers/seyun-bae)
+→ [profile](/researchers/ming-ming-yu)
 
 ---
-### No. 07 · Discounted Beta-Bernoulli Reward Estimation for Sample-Efficient Reinforcement Learning with Verifiable Rewards
+### No. 04 · SWITCH: Benchmarking Modeling and Handling of Tangible Interfaces in Long-horizon Embodied Scenarios
 
-**Haechan Kim** · 一作 · 5 作者 · [arXiv:2603.18444](https://arxiv.org/abs/2603.18444)
+**Jieru Lin** · 一作 · 3 作者 · [arXiv:2511.17649](https://arxiv.org/abs/2511.17649)
 
-*用折扣贝塔-伯努利估计降低奖励方差，提升强化学习样本效率。*
+_Autonomous agents operating in the real world must interact continuously with existing physical and semantic infrastructure, track delayed consequences, and verify outcomes over time. Everyday environments are rich in t…_
 
-_Reinforcement learning with verifiable rewards (RLVR) has emerged as an effective post-training paradigm for improving the reasoning capabilities of large language models. However, existing group-based RLVR methods ofte…_
-
-→ [profile](/researchers/haechan-kim)
+→ [profile](/researchers/jieru-lin)
 
 ---
-### No. 08 · Argument Reconstruction as Supervision for Critical Thinking in LLMs
+### No. 05 · Taking Notes Brings Focus? Towards Multi-Turn Multimodal Dialogue Learning
 
-**Hyun Ryu** · 一作 · 6 作者 · [arXiv:2603.17432](https://arxiv.org/abs/2603.17432)
+**Jiazheng Liu** · 一作 · 4 作者 · [arXiv:2503.07002](https://arxiv.org/abs/2503.07002)
 
-*用GAAR引擎生成数据集训练LLM，提升批判性推理。*
+*用 MMDiag 数据集和 DiagNote 模型增强多轮多模态对话的定位与推理…*
 
-_To think critically about arguments, human learners are trained to identify, reconstruct, and evaluate arguments. Argument reconstruction is especially important because it makes an argument's underlying inferences expl…_
+_Multimodal large language models (MLLMs), built on large-scale pre-trained vision towers and language models, have shown great capabilities in multimodal understanding. However, most existing MLLMs are trained on single…_
 
-→ [profile](/researchers/hyun-ryu)
-
----
-### No. 09 · Structure-Aware Set Transformers: Temporal and Variable-Type Attention Biases for Asynchronous Clinical Time Series
-
-**Joohyung Lee** · 一作 · 4 作者 · [arXiv:2603.06605](https://arxiv.org/abs/2603.06605)
-
-*在集合变换器中引入可学习时间与变量类型注意力偏置。*
-
-_Electronic health records (EHR) are irregular, asynchronous multivariate time series. As time-series foundation models increasingly tokenize events rather than discretizing time, the input layout becomes a key design ch…_
-
-→ [profile](/researchers/joohyung-lee)
+→ [profile](/researchers/jiazheng-liu)
 
 ---
-### No. 10 · Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines
+### No. 06 · INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge
 
-**Jean Seo** · 一作 · 8 作者 · [arXiv:2601.03627](https://arxiv.org/abs/2601.03627)
+**Angelika Romanou** · 一作 · 59 作者 · [arXiv:2411.19799](https://arxiv.org/abs/2411.19799)
 
-*引入EPAG基准，用诊断指南评估LLM预咨询能力。*
+*构建含44种语言区域知识的197k问答对评估多语言LLM。*
 
-_We introduce EPAG, a benchmark dataset and framework designed for Evaluating the Pre-consultation Ability of LLMs using diagnostic Guidelines. LLMs are evaluated directly through HPI-diagnostic guideline comparison and…_
+_The performance differential of large language models (LLM) between languages hinders their effective deployment in many regions, inhibiting the potential economic and societal value of generative AI tools in many commu…_
 
-→ [profile](/researchers/jean-seo)
+→ [profile](/researchers/angelika-romanou)
+
+---
+### No. 07 · MLLM as Retriever: Interactively Learning Multimodal Retrieval for Embodied Agents
+
+**Junpeng Yue** · 一作 · 4 作者 · [arXiv:2410.03450](https://arxiv.org/abs/2410.03450)
+
+*用偏好学习微调MLLM作为检索器评估轨迹有效性。*
+
+_MLLM agents demonstrate potential for complex embodied tasks by retrieving multimodal task-relevant trajectory data. However, current retrieval methods primarily focus on surface-level similarities of textual or visual…_
+
+→ [profile](/researchers/junpeng-yue)
+
+---
+### No. 08 · Cradle: Empowering Foundation Agents Towards General Computer Control
+
+**Weihao Tan** · 一作 · 28 作者 · [arXiv:2403.03186](https://arxiv.org/abs/2403.03186)
+
+*用截图输入、键盘鼠标输出实现通用计算机控制。*
+
+_Despite the success in specific scenarios, existing foundation agents still struggle to generalize across various virtual scenarios, mainly due to the dramatically different encapsulations of environments with manually…_
+
+→ [profile](/researchers/weihao-tan)
+
+---
+### No. 09 · GenDec: A robust generative Question-decomposition method for Multi-hop reasoning
+
+**Jian Wu** · 一作 · 6 作者 · [arXiv:2402.11166](https://arxiv.org/abs/2402.11166)
+
+*生成式分解问题并融合检索证据增强多跳推理。*
+
+_Multi-hop QA (MHQA) involves step-by-step reasoning to answer complex questions and find multiple relevant supporting facts. However, Existing large language models'(LLMs) reasoning ability in multi-hop question answeri…_
+
+→ [profile](/researchers/jian-wu)
+
+---
+### No. 10 · Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning
+
+**Shivalika Singh** · 一作 · 33 作者 · [arXiv:2402.06619](https://arxiv.org/abs/2402.06619)
+
+*构建含65种语言人工标注及114种语言模板化翻译的多语种指令微调数据集。*
+
+_Datasets are foundational to many breakthroughs in modern artificial intelligence. Many recent achievements in the space of natural language processing (NLP) can be attributed to the finetuning of pre-trained models on…_
+
+→ [profile](/researchers/shivalika-singh)
 
 ---
 
@@ -124,16 +128,16 @@ _We introduce EPAG, a benchmark dataset and framework designed for Evaluating th
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Yuke Zhu](/researchers/yuke-zhu) | Isaac Lab: A GPU-Accelerated Simulation Framework for Multi-Modal Rob… | — | [2511.04831](https://arxiv.org/abs/2511.04831) |
-| [Shuran Song](/researchers/shuran-song) | World Simulation with Video Foundation Models for Physical AI | — | [2511.00062](https://arxiv.org/abs/2511.00062) |
-| [Yuke Zhu](/researchers/yuke-zhu) | World Simulation with Video Foundation Models for Physical AI | — | [2511.00062](https://arxiv.org/abs/2511.00062) |
-| [Shuran Song](/researchers/shuran-song) | Cosmos-Reason1: From Physical Common Sense To Embodied Reasoning | — | [2503.15558](https://arxiv.org/abs/2503.15558) |
-| [Yuke Zhu](/researchers/yuke-zhu) | GR00T N1: An Open Foundation Model for Generalist Humanoid Robots | — | [2503.14734](https://arxiv.org/abs/2503.14734) |
-| [Dahua Lin](/researchers/dahua-lin) | CapRL++: Unified Reinforcement Learning with Verifiable Rewards for D… | — | [2606.09393](https://arxiv.org/abs/2606.09393) |
-| [Dahua Lin](/researchers/dahua-lin) | AdaGRPO: A Capability-Aware Adaptive Enhancement for Flow-based GRPO | — | [2606.06828](https://arxiv.org/abs/2606.06828) |
-| [Dahua Lin](/researchers/dahua-lin) | WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluat… | — | [2605.10912](https://arxiv.org/abs/2605.10912) |
-| [Xiaoyong Du](/researchers/xiaoyong-du) | CODA-BENCH: Can Code Agents Handle Data-Intensive Tasks? | — | [2606.15300](https://arxiv.org/abs/2606.15300) |
-| [Ziwei Liu](/researchers/ziwei-liu) | PermaVid: Consistent Video Generation Across Edits via Disentangled C… | — | [2606.16449](https://arxiv.org/abs/2606.16449) |
+| [Zongqing Lu](/researchers/zongqing-lu) | Towards Proprioception-Aware Embodied Planning for Dual-Arm Humanoid… | — | [2510.07882](https://arxiv.org/abs/2510.07882) |
+| [Zongqing Lu](/researchers/zongqing-lu) | DualTHOR: A Dual-Arm Humanoid Simulation Platform for Contingency-Awa… | — | [2506.16012](https://arxiv.org/abs/2506.16012) |
+| [Zongqing Lu](/researchers/zongqing-lu) | Being-0: A Humanoid Robotic Agent with Vision-Language Models and Mod… | — | [2503.12533](https://arxiv.org/abs/2503.12533) |
+| [Zongqing Lu](/researchers/zongqing-lu) | Taking Notes Brings Focus? Towards Multi-Turn Multimodal Dialogue Lea… | — | [2503.07002](https://arxiv.org/abs/2503.07002) |
+| [Zongqing Lu](/researchers/zongqing-lu) | MLLM as Retriever: Interactively Learning Multimodal Retrieval for Em… | — | [2410.03450](https://arxiv.org/abs/2410.03450) |
+| [Zongqing Lu](/researchers/zongqing-lu) | Cradle: Empowering Foundation Agents Towards General Computer Control | — | [2403.03186](https://arxiv.org/abs/2403.03186) |
+| [Xiaolong Wang](/researchers/xiaolong-wang) | Hierarchical Style-Based Networks for Motion Synthesis | — | [None](#) |
+| [Xiaolong Wang](/researchers/xiaolong-wang) | EgoPhys: Learning Generalizable Physics Models of Deformable Objects… | — | [2606.16202](https://arxiv.org/abs/2606.16202) |
+| [Yann LeCun](/researchers/yann-lecun) | You Don't Need Strong Assumptions: Visual Representation Learning via… | — | [2606.15956](https://arxiv.org/abs/2606.15956) |
+| [Linfeng Zhang](/researchers/linfeng-zhang) | GameCraft-Bench: Can Agents Build Playable Games End-to-End in a Real… | — | [2606.17861](https://arxiv.org/abs/2606.17861) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -201,94 +205,102 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Nemotron 3 Super: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning
+### No. 01 · Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia
 
-**NVIDIA** · 一作 · 547 作者 · [arXiv:2604.12374](https://arxiv.org/abs/2604.12374)
+**Samuel Cahyawijaya** · 一作 · 92 作者 · [arXiv:2503.07920](https://arxiv.org/abs/2503.07920)
 
-_We describe the pre-training, post-training, and quantization of Nemotron 3 Super, a 120 billion (active 12 billion) parameter hybrid Mamba-Attention Mixture-of-Experts model. Nemotron 3 Super is the first model in the…_
+*通过众包、爬取与生成构建东南亚多文化视觉语言数据集。*
 
-→ [profile](/researchers/nvidia)
+_Southeast Asia (SEA) is a region of extraordinary linguistic and cultural diversity, yet it remains significantly underrepresented in vision-language (VL) research. This often results in artificial intelligence (AI) mod…_
 
----
-### No. 02 · NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model
-
-**NVIDIA** · 一作 · 217 作者 · [arXiv:2508.14444](https://arxiv.org/abs/2508.14444)
-
-_We introduce Nemotron-Nano-9B-v2, a hybrid Mamba-Transformer language model designed to increase throughput for reasoning workloads while achieving state-of-the-art accuracy compared to similarly-sized models. Nemotron-…_
-
-→ [profile](/researchers/nvidia)
+→ [profile](/researchers/samuel-cahyawijaya)
 
 ---
-### No. 03 · Nemotron 3 Nano Omni: Efficient and Open Multimodal Intelligence
+### No. 02 · INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge
 
-**NVIDIA** · 一作 · 207 作者 · [arXiv:2604.24954](https://arxiv.org/abs/2604.24954)
+**Angelika Romanou** · 一作 · 59 作者 · [arXiv:2411.19799](https://arxiv.org/abs/2411.19799)
 
-_We introduce Nemotron 3 Nano Omni, the latest model in the Nemotron multimodal series and the first to natively support audio inputs alongside text, images, and video. Nemotron 3 Nano Omni delivers consistent accuracy i…_
+*构建含44种语言区域知识的197k问答对评估多语言LLM。*
 
-→ [profile](/researchers/nvidia)
+_The performance differential of large language models (LLM) between languages hinders their effective deployment in many regions, inhibiting the potential economic and societal value of generative AI tools in many commu…_
 
----
-### No. 04 · Nemotron-H: A Family of Accurate and Efficient Hybrid Mamba-Transformer Models
-
-**NVIDIA** · 一作 · 201 作者 · [arXiv:2504.03624](https://arxiv.org/abs/2504.03624)
-
-_As inference-time scaling becomes critical for enhanced reasoning capabilities, it is increasingly becoming important to build models that are efficient to infer. We introduce Nemotron-H, a family of 8B and 56B/47B hybr…_
-
-→ [profile](/researchers/nvidia)
+→ [profile](/researchers/angelika-romanou)
 
 ---
-### No. 05 · NVIDIA Nemotron Nano V2 VL
+### No. 03 · Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning
 
-**NVIDIA** · 一作 · 124 作者 · [arXiv:2511.03929](https://arxiv.org/abs/2511.03929)
+**Shivalika Singh** · 一作 · 33 作者 · [arXiv:2402.06619](https://arxiv.org/abs/2402.06619)
 
-_We introduce Nemotron Nano V2 VL, the latest model of the Nemotron vision-language series designed for strong real-world document understanding, long video comprehension, and reasoning tasks. Nemotron Nano V2 VL deliver…_
+*构建含65种语言人工标注及114种语言模板化翻译的多语种指令微调数据集。*
 
-→ [profile](/researchers/nvidia)
+_Datasets are foundational to many breakthroughs in modern artificial intelligence. Many recent achievements in the space of natural language processing (NLP) can be attributed to the finetuning of pre-trained models on…_
 
----
-### No. 06 · Isaac Lab: A GPU-Accelerated Simulation Framework for Multi-Modal Robot Learning
-
-**NVIDIA** · 一作 · 107 作者 · [arXiv:2511.04831](https://arxiv.org/abs/2511.04831)
-
-_We present Isaac Lab, the natural successor to Isaac Gym, which extends the paradigm of GPU-native robotics simulation into the era of large-scale multi-modal learning. Isaac Lab combines high-fidelity GPU parallel phys…_
-
-→ [profile](/researchers/nvidia)
+→ [profile](/researchers/shivalika-singh)
 
 ---
-### No. 07 · World Simulation with Video Foundation Models for Physical AI
+### No. 04 · Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System
 
-**NVIDIA** · 一作 · 90 作者 · [arXiv:2511.00062](https://arxiv.org/abs/2511.00062)
+**Jiazhao Zhang** · 一作 · 33 作者 · [arXiv:2606.18112](https://arxiv.org/abs/2606.18112)
 
-_We introduce [Cosmos-Predict2.5], the latest generation of the Cosmos World Foundation Models for Physical AI. Built on a flow-based architecture, [Cosmos-Predict2.5] unifies Text2World, Image2World, and Video2World gen…_
+_Agentic navigation systems require a base navigation model whose observation strategy can be externally reconfigured at inference time, because instruction following, object search, target tracking, and autonomous drivi…_
 
-→ [profile](/researchers/nvidia)
-
----
-### No. 08 · Pretraining Large Language Models with NVFP4
-
-**NVIDIA** · 一作 · 90 作者 · [arXiv:2509.25149](https://arxiv.org/abs/2509.25149)
-
-_Large Language Models (LLMs) today are powerful problem solvers across many domains, and they continue to get stronger as they scale in model size, training set size, and training set quality, as shown by extensive rese…_
-
-→ [profile](/researchers/nvidia)
+→ [profile](/researchers/jiazhao-zhang)
 
 ---
-### No. 09 · Nemotron-4 340B Technical Report
+### No. 05 · Looped World Models
 
-**NVIDIA** · 一作 · 83 作者 · [arXiv:2406.11704](https://arxiv.org/abs/2406.11704)
+**Hongyuan Adam Lu** · 一作 · 31 作者 · [arXiv:2606.18208](https://arxiv.org/abs/2606.18208)
 
-_We release the Nemotron-4 340B model family, including Nemotron-4-340B-Base, Nemotron-4-340B-Instruct, and Nemotron-4-340B-Reward. Our models are open access under the NVIDIA Open Model License Agreement, a permissive m…_
+_Current world models face a fundamental tension: faithful long-horizon simulation demands deep computation, but deeper models are expensive to deploy and prone to compounding errors. We resolve this by introducing Loope…_
 
-→ [profile](/researchers/nvidia)
+→ [profile](/researchers/hongyuan-adam-lu)
 
 ---
-### No. 10 · Cosmos World Foundation Model Platform for Physical AI
+### No. 06 · Ling and Ring 2.6 Technical Report: Efficient and Instant Agentic Intelligence at Trillion-Parameter Scale
 
-**NVIDIA** · 一作 · 79 作者 · [arXiv:2501.03575](https://arxiv.org/abs/2501.03575)
+**Ang Li** · 一作 · 30 作者 · [arXiv:2606.15079](https://arxiv.org/abs/2606.15079)
 
-_Physical AI needs to be trained digitally first. It needs a digital twin of itself, the policy model, and a digital twin of the world, the world model. In this paper, we present the Cosmos World Foundation Model Platfor…_
+_Efficient and scalable agentic intelligence requires models that can deliver both low-latency responses and strong reasoning capabilities while remaining practical to train, serve, and deploy. In this report, we present…_
 
-→ [profile](/researchers/nvidia)
+→ [profile](/researchers/ang-li)
+
+---
+### No. 07 · Evaluating the Expressive Appropriateness of Speech in Rich Contexts
+
+**Tianrui Wang** · 一作 · 29 作者 · [arXiv:2605.09413](https://arxiv.org/abs/2605.09413)
+
+_Evaluating expressive speech remains challenging, as existing methods mainly assess emotional intensity and overlook whether a speech sample is expressively appropriate for its contextual setting. This limitation hinder…_
+
+→ [profile](/researchers/tianrui-wang)
+
+---
+### No. 08 · Photoinduced enhancement of chemical shift sensitivity to local vibrations
+
+**Ana Martínez Gutiérrez** · 一作 · 29 作者 · [arXiv:2606.17776](https://arxiv.org/abs/2606.17776)
+
+_The advent of novel free-electron laser sources enabling time-resolved x-ray photoelectron spectroscopy (tr-XPS) provides a unique opportunity to monitor local chemical environments in real time by measuring sub-eV shif…_
+
+→ [profile](/researchers/ana-mart-nez-guti-rrez)
+
+---
+### No. 09 · Cradle: Empowering Foundation Agents Towards General Computer Control
+
+**Weihao Tan** · 一作 · 28 作者 · [arXiv:2403.03186](https://arxiv.org/abs/2403.03186)
+
+*用截图输入、键盘鼠标输出实现通用计算机控制。*
+
+_Despite the success in specific scenarios, existing foundation agents still struggle to generalize across various virtual scenarios, mainly due to the dramatically different encapsulations of environments with manually…_
+
+→ [profile](/researchers/weihao-tan)
+
+---
+### No. 10 · GameCraft-Bench: Can Agents Build Playable Games End-to-End in a Real Game Engine?
+
+**Tongxu Luo** · 一作 · 25 作者 · [arXiv:2606.17861](https://arxiv.org/abs/2606.17861)
+
+_Game generation is an emerging application of coding agents, requiring models to transform natural-language specifications into playable interactive systems. Unlike traditional coding tasks, game generation takes place…_
+
+→ [profile](/researchers/tongxu-luo)
 
 ---
 
@@ -298,59 +310,63 @@ _Physical AI needs to be trained digitally first. It needs a digital twin of its
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · DataLadder: A Simulation-Enabled Interconversion Toolchain for the Embodied Data Pyramid
+### No. 01 · INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge
 
-**Peidong Liu** · 一作 · 31 作者 · [arXiv:2606.16776](https://arxiv.org/abs/2606.16776)
+**Angelika Romanou** · 一作 · 59 作者 · [arXiv:2411.19799](https://arxiv.org/abs/2411.19799)
 
-_Generalist robot policies require trustworthy evaluation and robot-usable training data, but both are difficult to scale with physical robots alone. Real-robot trials and demonstrations remain the most faithful source o…_
+*构建含44种语言区域知识的197k问答对评估多语言LLM。*
+
+_The performance differential of large language models (LLM) between languages hinders their effective deployment in many regions, inhibiting the potential economic and societal value of generative AI tools in many commu…_
+
+**▸ 选中原因：首次出现 · 59 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/angelika-romanou)
+
+---
+### No. 02 · Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning
+
+**Shivalika Singh** · 一作 · 33 作者 · [arXiv:2402.06619](https://arxiv.org/abs/2402.06619)
+
+*构建含65种语言人工标注及114种语言模板化翻译的多语种指令微调数据集。*
+
+_Datasets are foundational to many breakthroughs in modern artificial intelligence. Many recent achievements in the space of natural language processing (NLP) can be attributed to the finetuning of pre-trained models on…_
+
+**▸ 选中原因：首次出现 · 33 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/shivalika-singh)
+
+---
+### No. 03 · Looped World Models
+
+**Hongyuan Adam Lu** · 一作 · 31 作者 · [arXiv:2606.18208](https://arxiv.org/abs/2606.18208)
+
+_Current world models face a fundamental tension: faithful long-horizon simulation demands deep computation, but deeper models are expensive to deploy and prone to compounding errors. We resolve this by introducing Loope…_
 
 **▸ 选中原因：首次出现 · 31 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/peidong-liu)
+→ [profile](/researchers/hongyuan-adam-lu)
 
 ---
-### No. 02 · Dynamically suppressed lattice rotations in SrTiO$_3$ as a basis for photo-induced ferroelectricity
+### No. 04 · EBench: Elemental Diagnosis of Generalist Mobile Manipulation Policies
 
-**Huaiyu Hugo Wang** · 一作 · 25 作者 · [arXiv:2606.16267](https://arxiv.org/abs/2606.16267)
+**Ning Gao** · 一作 · 25 作者 · [arXiv:2606.18239](https://arxiv.org/abs/2606.18239)
 
-_Photo-induced ferroelectricity in the quantum paraelectric SrTiO$_3$ involves the dynamical interplay between a coherently driven Ti-O stretching vibration and multiple structural degrees of freedom, including antiferro…_
-
-**▸ 选中原因：首次出现 · 25 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/huaiyu-hugo-wang)
-
----
-### No. 03 · On-chain Peak Shaving
-
-**Irene Aldridge** · 一作 · 24 作者 · [arXiv:2604.19956](https://arxiv.org/abs/2604.19956)
-
-_Blockchain technology is widely expected to reduce transaction costs by automating contract enforcement and eliminating intermediaries; yet, the execution costs imposed by network congestion have received little attenti…_
-
-**▸ 选中原因：首次出现 · 24 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/irene-aldridge)
-
----
-### No. 04 · SidewalkBench: Benchmarking Visual Navigation on Urban Sidewalks
-
-**Zhizheng Liu** · 一作 · 7 作者 · [arXiv:2606.16953](https://arxiv.org/abs/2606.16953)
-
-_Urban sidewalk navigation presents significant challenges due to complex structural layouts, dynamic pedestrian behaviors, and long distances. While recent visual navigation models offer a promising solution, the lack o…_
+_We present EBench, a simulation benchmark that diagnoses generalist mobile manipulation policies beyond a single success-rate scalar. EBench comprises 26 diverse and challenging manipulation tasks annotated along 5 capa…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/zhizheng-liu)
+→ [profile](/researchers/ning-gao)
 
 ---
-### No. 05 · Training and Evaluating Diffusion Policies with Long Context Lengths
+### No. 05 · Reversal Q-Learning
 
-**Abhinav Agarwal** · 一作 · 9 作者 · [arXiv:2606.16447](https://arxiv.org/abs/2606.16447)
+**Aditya Oberai** · 一作 · 3 作者 · [arXiv:2606.17551](https://arxiv.org/abs/2606.17551)
 
-_Imitation learning has enabled highly-dexterous robotic manipulation from RGB observations. Policies trained with these methods, however, typically condition robot actions on only a short history of observations. These…_
+_Iterative generative modeling techniques, such as flow matching, provide powerful tools to model complex behaviors for effective offline reinforcement learning (RL). In this work, we propose a new off-policy RL algorith…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/abhinav-agarwal)
+→ [profile](/researchers/aditya-oberai)
 
 ---
 
