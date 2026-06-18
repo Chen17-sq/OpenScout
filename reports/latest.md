@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 034                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · WEDNESDAY, JUNE 17, 2026
+VOL. 1 · NO. 035                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · THURSDAY, JUNE 18, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 034 · 2026-06-17
+> *All The Researchers Fit To Watch* — Vol. 1, No. 035 · 2026-06-18
 
-_Auto-generated at 2026-06-17T06:19:37+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-06-18T05:49:07+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,112 +15,108 @@ _Auto-generated at 2026-06-17T06:19:37+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **23273** | 173 | 876 | 6 | 53 |
+| **23979** | 160 | 706 | 6 | 54 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · ExoActor: Exocentric Video Generation as Generalizable Interactive Humanoid Control
+### No. 01 · V-GRPO: Online Reinforcement Learning for Denoising Generative Models Is Easier than You Think
 
-**Yanghao Zhou** · 一作 · 6 作者 · [arXiv:2604.27711](https://arxiv.org/abs/2604.27711)
+**Bingda Tang** · 一作 · 6 作者 · [arXiv:2604.23380](https://arxiv.org/abs/2604.23380)
 
-_Humanoid control systems have made significant progress in recent years, yet modeling fluent interaction-rich behavior between a robot, its surrounding environment, and task-relevant objects remains a fundamental challe…_
+_Aligning denoising generative models with human preferences or verifiable rewards remains a key challenge. While policy-gradient online reinforcement learning (RL) offers a principled post-training framework, its direct…_
 
-→ [profile](/researchers/yanghao-zhou)
-
----
-### No. 02 · EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models
-
-**Yu Bai** · 一作 · 6 作者 · [arXiv:2602.04515](https://arxiv.org/abs/2602.04515)
-
-_Deploying humanoid robots in real-world settings is fundamentally challenging, as it demands tight integration of perception, locomotion, and manipulation under partial-information observations and dynamically changing…_
-
-→ [profile](/researchers/yu-bai)
+→ [profile](/researchers/bingda-tang)
 
 ---
-### No. 03 · RANGER: A Monocular Zero-Shot Semantic Navigation Framework through Visual Contextual Adaptation
+### No. 02 · E3-TIR: Enhanced Experience Exploitation for Tool-Integrated Reasoning
 
-**Ming-Ming Yu** · 一作 · 4 作者 · [arXiv:2512.24212](https://arxiv.org/abs/2512.24212)
+**Weiyang Guo** · 一作 · 8 作者 · [arXiv:2604.09455](https://arxiv.org/abs/2604.09455)
 
-_Efficient target localization and autonomous navigation in complex environments are fundamental to real-world embodied applications. While recent advances in multimodal foundation models have enabled zero-shot object go…_
+_While Large Language Models (LLMs) have demonstrated significant potential in Tool-Integrated Reasoning (TIR), existing training paradigms face significant limitations: Zero-RL suffers from inefficient exploration and m…_
 
-→ [profile](/researchers/ming-ming-yu)
-
----
-### No. 04 · SWITCH: Benchmarking Modeling and Handling of Tangible Interfaces in Long-horizon Embodied Scenarios
-
-**Jieru Lin** · 一作 · 3 作者 · [arXiv:2511.17649](https://arxiv.org/abs/2511.17649)
-
-_Autonomous agents operating in the real world must interact continuously with existing physical and semantic infrastructure, track delayed consequences, and verify outcomes over time. Everyday environments are rich in t…_
-
-→ [profile](/researchers/jieru-lin)
+→ [profile](/researchers/weiyang-guo)
 
 ---
-### No. 05 · Taking Notes Brings Focus? Towards Multi-Turn Multimodal Dialogue Learning
+### No. 03 · Scaling Reinforcement Learning for Content Moderation with Large Language Models
 
-**Jiazheng Liu** · 一作 · 4 作者 · [arXiv:2503.07002](https://arxiv.org/abs/2503.07002)
+**Hamed Firooz** · 一作 · 18 作者 · [arXiv:2512.20061](https://arxiv.org/abs/2512.20061)
 
-*用 MMDiag 数据集和 DiagNote 模型增强多轮多模态对话的定位与推理…*
+_Content moderation at scale remains one of the most pressing challenges in today's digital ecosystem, where billions of user- and AI-generated artifacts must be continuously evaluated for policy violations. Although rec…_
 
-_Multimodal large language models (MLLMs), built on large-scale pre-trained vision towers and language models, have shown great capabilities in multimodal understanding. However, most existing MLLMs are trained on single…_
-
-→ [profile](/researchers/jiazheng-liu)
+→ [profile](/researchers/hamed-firooz)
 
 ---
-### No. 06 · INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge
+### No. 04 · Implicit State Estimation via Video Replanning
 
-**Angelika Romanou** · 一作 · 59 作者 · [arXiv:2411.19799](https://arxiv.org/abs/2411.19799)
+**Po-Chen Ko** · 一作 · 8 作者 · [arXiv:2510.17315](https://arxiv.org/abs/2510.17315)
 
-*构建含44种语言区域知识的197k问答对评估多语言LLM。*
+_Video-based representations have gained prominence in planning and decision-making due to their ability to encode rich spatiotemporal dynamics and geometric relationships. These representations enable flexible and gener…_
 
-_The performance differential of large language models (LLM) between languages hinders their effective deployment in many regions, inhibiting the potential economic and societal value of generative AI tools in many commu…_
-
-→ [profile](/researchers/angelika-romanou)
+→ [profile](/researchers/po-chen-ko)
 
 ---
-### No. 07 · MLLM as Retriever: Interactively Learning Multimodal Retrieval for Embodied Agents
+### No. 05 · Composition-Grounded Data Synthesis for Visual Reasoning
 
-**Junpeng Yue** · 一作 · 4 作者 · [arXiv:2410.03450](https://arxiv.org/abs/2410.03450)
+**Xinyi Gu** · 一作 · 8 作者 · [arXiv:2510.15040](https://arxiv.org/abs/2510.15040)
 
-*用偏好学习微调MLLM作为检索器评估轨迹有效性。*
+_Pretrained multi-modal large language models (MLLMs) demonstrate strong performance on diverse multimodal tasks, but remain limited in reasoning capabilities for domains where annotations are difficult to collect. In th…_
 
-_MLLM agents demonstrate potential for complex embodied tasks by retrieving multimodal task-relevant trajectory data. However, current retrieval methods primarily focus on surface-level similarities of textual or visual…_
-
-→ [profile](/researchers/junpeng-yue)
+→ [profile](/researchers/xinyi-gu)
 
 ---
-### No. 08 · Cradle: Empowering Foundation Agents Towards General Computer Control
+### No. 06 · "Set It Up": Functional Object Arrangement with Compositional Generative Models (Journal Version)
 
-**Weihao Tan** · 一作 · 28 作者 · [arXiv:2403.03186](https://arxiv.org/abs/2403.03186)
+**Yiqing Xu** · 一作 · 7 作者 · [arXiv:2508.02068](https://arxiv.org/abs/2508.02068)
 
-*用截图输入、键盘鼠标输出实现通用计算机控制。*
+_Functional object arrangement (FORM) is the task of arranging objects to fulfill a function, e.g., "set up a dining table for two". One key challenge here is that the instructions for FORM are often under-specified and…_
 
-_Despite the success in specific scenarios, existing foundation agents still struggle to generalize across various virtual scenarios, mainly due to the dramatically different encapsulations of environments with manually…_
-
-→ [profile](/researchers/weihao-tan)
+→ [profile](/researchers/yiqing-xu)
 
 ---
-### No. 09 · GenDec: A robust generative Question-decomposition method for Multi-hop reasoning
+### No. 07 · Lost in Pronunciation: Detecting Chinese Offensive Language Disguised by Phonetic Cloaking Replacement
 
-**Jian Wu** · 一作 · 6 作者 · [arXiv:2402.11166](https://arxiv.org/abs/2402.11166)
+**Haotan Guo** · 一作 · 11 作者 · [arXiv:2507.07640](https://arxiv.org/abs/2507.07640)
 
-*生成式分解问题并融合检索证据增强多跳推理。*
+*提出中文PCR四类表层形式及拼音提示策略提升检测。*
 
-_Multi-hop QA (MHQA) involves step-by-step reasoning to answer complex questions and find multiple relevant supporting facts. However, Existing large language models'(LLMs) reasoning ability in multi-hop question answeri…_
+_Phonetic Cloaking Replacement (PCR), defined as the deliberate use of homophonic or near-homophonic variants to hide toxic intent, has become a major obstacle to Chinese content moderation. While this problem is well-re…_
 
-→ [profile](/researchers/jian-wu)
+→ [profile](/researchers/haotan-guo)
 
 ---
-### No. 10 · Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning
+### No. 08 · WHEN TO ACT, WHEN TO WAIT: Modeling the Intent-Action Alignment Problem in Dialogue
 
-**Shivalika Singh** · 一作 · 33 作者 · [arXiv:2402.06619](https://arxiv.org/abs/2402.06619)
+**Yaoyao Qian** · 一作 · 8 作者 · [arXiv:2506.01881](https://arxiv.org/abs/2506.01881)
 
-*构建含65种语言人工标注及114种语言模板化翻译的多语种指令微调数据集。*
+*提出STORM框架建模对话中意图-行动对齐的不对称信息动态。*
 
-_Datasets are foundational to many breakthroughs in modern artificial intelligence. Many recent achievements in the space of natural language processing (NLP) can be attributed to the finetuning of pre-trained models on…_
+_Dialogue systems often fail when user utterances are semantically complete yet lack the clarity and completeness required for appropriate system action. This mismatch arises because users frequently do not fully underst…_
 
-→ [profile](/researchers/shivalika-singh)
+→ [profile](/researchers/yaoyao-qian)
+
+---
+### No. 09 · Learning Compositional Behaviors from Demonstration and Language
+
+**Weiyu Liu** · 一作 · 5 作者 · [arXiv:2505.21981](https://arxiv.org/abs/2505.21981)
+
+*融合模仿学习与模型规划，用LLM构建可泛化动作库。*
+
+_We introduce Behavior from Language and Demonstration (BLADE), a framework for long-horizon robotic manipulation by integrating imitation learning and model-based planning. BLADE leverages language-annotated demonstrati…_
+
+→ [profile](/researchers/weiyu-liu)
+
+---
+### No. 10 · Creativity or Brute Force? Using Brainteasers as a Window into the Problem-Solving Abilities of Large Language Models
+
+**Simeng Han** · 一作 · 10 作者 · [arXiv:2505.10844](https://arxiv.org/abs/2505.10844)
+
+*用脑经急转弯基准揭示LLM创造性推理与暴力求解的差异。*
+
+_Accuracy remains a standard metric for evaluating AI systems, but it offers limited insight into how models arrive at their solutions. In this work, we introduce a benchmark based on brainteasers written in long narrati…_
+
+→ [profile](/researchers/simeng-han)
 
 ---
 
@@ -128,16 +124,16 @@ _Datasets are foundational to many breakthroughs in modern artificial intelligen
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Zongqing Lu](/researchers/zongqing-lu) | Towards Proprioception-Aware Embodied Planning for Dual-Arm Humanoid… | — | [2510.07882](https://arxiv.org/abs/2510.07882) |
-| [Zongqing Lu](/researchers/zongqing-lu) | DualTHOR: A Dual-Arm Humanoid Simulation Platform for Contingency-Awa… | — | [2506.16012](https://arxiv.org/abs/2506.16012) |
-| [Zongqing Lu](/researchers/zongqing-lu) | Being-0: A Humanoid Robotic Agent with Vision-Language Models and Mod… | — | [2503.12533](https://arxiv.org/abs/2503.12533) |
-| [Zongqing Lu](/researchers/zongqing-lu) | Taking Notes Brings Focus? Towards Multi-Turn Multimodal Dialogue Lea… | — | [2503.07002](https://arxiv.org/abs/2503.07002) |
-| [Zongqing Lu](/researchers/zongqing-lu) | MLLM as Retriever: Interactively Learning Multimodal Retrieval for Em… | — | [2410.03450](https://arxiv.org/abs/2410.03450) |
-| [Zongqing Lu](/researchers/zongqing-lu) | Cradle: Empowering Foundation Agents Towards General Computer Control | — | [2403.03186](https://arxiv.org/abs/2403.03186) |
-| [Xiaolong Wang](/researchers/xiaolong-wang) | Hierarchical Style-Based Networks for Motion Synthesis | — | [None](#) |
-| [Xiaolong Wang](/researchers/xiaolong-wang) | EgoPhys: Learning Generalizable Physics Models of Deformable Objects… | — | [2606.16202](https://arxiv.org/abs/2606.16202) |
-| [Yann LeCun](/researchers/yann-lecun) | You Don't Need Strong Assumptions: Visual Representation Learning via… | — | [2606.15956](https://arxiv.org/abs/2606.15956) |
-| [Linfeng Zhang](/researchers/linfeng-zhang) | GameCraft-Bench: Can Agents Build Playable Games End-to-End in a Real… | — | [2606.17861](https://arxiv.org/abs/2606.17861) |
+| [Yilun Du](/researchers/yilun-du) | Implicit State Estimation via Video Replanning | — | [2510.17315](https://arxiv.org/abs/2510.17315) |
+| [Yilun Du](/researchers/yilun-du) | Multi-Modal Manipulation via Multi-Modal Policy Consensus | — | [2509.23468](https://arxiv.org/abs/2509.23468) |
+| [Yilun Du](/researchers/yilun-du) | "Set It Up": Functional Object Arrangement with Compositional Generat… | — | [2508.02068](https://arxiv.org/abs/2508.02068) |
+| [Jiajun Wu](/researchers/jiajun-wu) | Learning Compositional Behaviors from Demonstration and Language | — | [2505.21981](https://arxiv.org/abs/2505.21981) |
+| [Jiajun Wu](/researchers/jiajun-wu) | Neuro-Symbolic Concepts | — | [2505.06191](https://arxiv.org/abs/2505.06191) |
+| [Jiajun Wu](/researchers/jiajun-wu) | Embodied Agent Interface: Benchmarking LLMs for Embodied Decision Mak… | — | [2410.07166](https://arxiv.org/abs/2410.07166) |
+| [Percy Liang](/researchers/percy-liang) | Embodied Agent Interface: Benchmarking LLMs for Embodied Decision Mak… | — | [2410.07166](https://arxiv.org/abs/2410.07166) |
+| [Jiajun Wu](/researchers/jiajun-wu) | What Makes a Maze Look Like a Maze? | — | [2409.08202](https://arxiv.org/abs/2409.08202) |
+| [Yilun Du](/researchers/yilun-du) | Learning Iterative Reasoning through Energy Diffusion | — | [2406.11179](https://arxiv.org/abs/2406.11179) |
+| [Yilun Du](/researchers/yilun-du) | "Set It Up!": Functional Object Arrangement with Compositional Genera… | — | [2405.11928](https://arxiv.org/abs/2405.11928) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -205,102 +201,96 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia
+### No. 01 · PharmaGPT: Domain-Specific Large Language Models for Bio-Pharmaceutical and Chemistry
 
-**Samuel Cahyawijaya** · 一作 · 92 作者 · [arXiv:2503.07920](https://arxiv.org/abs/2503.07920)
+**Linqing Chen** · 一作 · 36 作者 · [arXiv:2406.18045](https://arxiv.org/abs/2406.18045)
 
-*通过众包、爬取与生成构建东南亚多文化视觉语言数据集。*
+_Large language models (LLMs) have revolutionized Natural Language Processing (NLP) by minimizing the need for complex feature engineering. However, the application of LLMs in specialized domains like biopharmaceuticals…_
 
-_Southeast Asia (SEA) is a region of extraordinary linguistic and cultural diversity, yet it remains significantly underrepresented in vision-language (VL) research. This often results in artificial intelligence (AI) mod…_
-
-→ [profile](/researchers/samuel-cahyawijaya)
+→ [profile](/researchers/linqing-chen)
 
 ---
-### No. 02 · INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge
+### No. 02 · Streamlining Biomedical Research with Specialized LLMs
 
-**Angelika Romanou** · 一作 · 59 作者 · [arXiv:2411.19799](https://arxiv.org/abs/2411.19799)
+**Linqing Chen** · 一作 · 33 作者 · [arXiv:2504.12341](https://arxiv.org/abs/2504.12341)
 
-*构建含44种语言区域知识的197k问答对评估多语言LLM。*
+_In this paper, we propose a novel system that integrates state-of-the-art, domain-specific large language models with advanced information retrieval techniques to deliver comprehensive and context-aware responses. Our a…_
 
-_The performance differential of large language models (LLM) between languages hinders their effective deployment in many regions, inhibiting the potential economic and societal value of generative AI tools in many commu…_
-
-→ [profile](/researchers/angelika-romanou)
+→ [profile](/researchers/linqing-chen)
 
 ---
-### No. 03 · Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning
+### No. 03 · PAIWorld: A 3D-Consistent World Foundation Model for Robotic Manipulation
 
-**Shivalika Singh** · 一作 · 33 作者 · [arXiv:2402.06619](https://arxiv.org/abs/2402.06619)
+**Yuhang Huang** · 一作 · 28 作者 · [arXiv:2606.18375](https://arxiv.org/abs/2606.18375)
 
-*构建含65种语言人工标注及114种语言模板化翻译的多语种指令微调数据集。*
+_World foundation models (WFMs) are powerful simulators, yet they predominantly operate in a single-view setting and lack the multi-view 3D consistency required for robotic manipulation. While robotic systems rely on mul…_
 
-_Datasets are foundational to many breakthroughs in modern artificial intelligence. Many recent achievements in the space of natural language processing (NLP) can be attributed to the finetuning of pre-trained models on…_
-
-→ [profile](/researchers/shivalika-singh)
+→ [profile](/researchers/yuhang-huang)
 
 ---
-### No. 04 · Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System
+### No. 04 · PatentGPT: A Large Language Model for Intellectual Property
 
-**Jiazhao Zhang** · 一作 · 33 作者 · [arXiv:2606.18112](https://arxiv.org/abs/2606.18112)
+**Zilong Bai** · 一作 · 27 作者 · [arXiv:2404.18255](https://arxiv.org/abs/2404.18255)
 
-_Agentic navigation systems require a base navigation model whose observation strategy can be externally reconfigured at inference time, because instruction following, object search, target tracking, and autonomous drivi…_
+_In recent years, large language models(LLMs) have attracted significant attention due to their exceptional performance across a multitude of natural language process tasks, and have been widely applied in various fields…_
 
-→ [profile](/researchers/jiazhao-zhang)
-
----
-### No. 05 · Looped World Models
-
-**Hongyuan Adam Lu** · 一作 · 31 作者 · [arXiv:2606.18208](https://arxiv.org/abs/2606.18208)
-
-_Current world models face a fundamental tension: faithful long-horizon simulation demands deep computation, but deeper models are expensive to deploy and prone to compounding errors. We resolve this by introducing Loope…_
-
-→ [profile](/researchers/hongyuan-adam-lu)
+→ [profile](/researchers/zilong-bai)
 
 ---
-### No. 06 · Ling and Ring 2.6 Technical Report: Efficient and Instant Agentic Intelligence at Trillion-Parameter Scale
+### No. 05 · $d$-wave altermagnetism revealed by resonant inelastic X-ray scattering
 
-**Ang Li** · 一作 · 30 作者 · [arXiv:2606.15079](https://arxiv.org/abs/2606.15079)
+**Guangkai Zhang** · 一作 · 19 作者 · [arXiv:2606.18731](https://arxiv.org/abs/2606.18731)
 
-_Efficient and scalable agentic intelligence requires models that can deliver both low-latency responses and strong reasoning capabilities while remaining practical to train, serve, and deploy. In this report, we present…_
+_Altermagnetism defines a third fundamental class of collinear magnetic order, featuring compensated magnetic moments with antiparallel spin alignment, yet lifted Kramers degeneracy without the need for relativistic spin…_
 
-→ [profile](/researchers/ang-li)
-
----
-### No. 07 · Evaluating the Expressive Appropriateness of Speech in Rich Contexts
-
-**Tianrui Wang** · 一作 · 29 作者 · [arXiv:2605.09413](https://arxiv.org/abs/2605.09413)
-
-_Evaluating expressive speech remains challenging, as existing methods mainly assess emotional intensity and overlook whether a speech sample is expressively appropriate for its contextual setting. This limitation hinder…_
-
-→ [profile](/researchers/tianrui-wang)
+→ [profile](/researchers/guangkai-zhang)
 
 ---
-### No. 08 · Photoinduced enhancement of chemical shift sensitivity to local vibrations
+### No. 06 · Scaling Reinforcement Learning for Content Moderation with Large Language Models
 
-**Ana Martínez Gutiérrez** · 一作 · 29 作者 · [arXiv:2606.17776](https://arxiv.org/abs/2606.17776)
+**Hamed Firooz** · 一作 · 18 作者 · [arXiv:2512.20061](https://arxiv.org/abs/2512.20061)
 
-_The advent of novel free-electron laser sources enabling time-resolved x-ray photoelectron spectroscopy (tr-XPS) provides a unique opportunity to monitor local chemical environments in real time by measuring sub-eV shif…_
+_Content moderation at scale remains one of the most pressing challenges in today's digital ecosystem, where billions of user- and AI-generated artifacts must be continuously evaluated for policy violations. Although rec…_
 
-→ [profile](/researchers/ana-mart-nez-guti-rrez)
-
----
-### No. 09 · Cradle: Empowering Foundation Agents Towards General Computer Control
-
-**Weihao Tan** · 一作 · 28 作者 · [arXiv:2403.03186](https://arxiv.org/abs/2403.03186)
-
-*用截图输入、键盘鼠标输出实现通用计算机控制。*
-
-_Despite the success in specific scenarios, existing foundation agents still struggle to generalize across various virtual scenarios, mainly due to the dramatically different encapsulations of environments with manually…_
-
-→ [profile](/researchers/weihao-tan)
+→ [profile](/researchers/hamed-firooz)
 
 ---
-### No. 10 · GameCraft-Bench: Can Agents Build Playable Games End-to-End in a Real Game Engine?
+### No. 07 · Externalizing Research Synthesis and Validation in AI Scientists through a Research Harness
 
-**Tongxu Luo** · 一作 · 25 作者 · [arXiv:2606.17861](https://arxiv.org/abs/2606.17861)
+**Zijian Wang** · 一作 · 18 作者 · [arXiv:2606.18874](https://arxiv.org/abs/2606.18874)
 
-_Game generation is an emerging application of coding agents, requiring models to transform natural-language specifications into playable interactive systems. Unlike traditional coding tasks, game generation takes place…_
+_AI systems can increasingly automate scientific workflows, but the reasoning that links prior evidence, generated ideas, experiments and final claims often remains implicit inside model inference. Here we introduce Xcie…_
 
-→ [profile](/researchers/tongxu-luo)
+→ [profile](/researchers/zijian-wang)
+
+---
+### No. 08 · Reinforcing Dual-Path Reasoning in Spatial Vision Language Models
+
+**Yatai Ji** · 一作 · 16 作者 · [arXiv:2606.17539](https://arxiv.org/abs/2606.17539)
+
+_Spatial VLMs have made substantial progress in geometric perception, yet complex spatial reasoning requiring multi-step inference over depth, distance, and scene relations remains challenging. Moreover, different spatia…_
+
+→ [profile](/researchers/yatai-ji)
+
+---
+### No. 09 · Embodied Agent Interface: Benchmarking LLMs for Embodied Decision Making
+
+**Manling Li** · 一作 · 15 作者 · [arXiv:2410.07166](https://arxiv.org/abs/2410.07166)
+
+*提出统一接口与细粒度指标评估LLM具身决策能力。*
+
+_We aim to evaluate Large Language Models (LLMs) for embodied decision making. While a significant body of work has been leveraging LLMs for decision making in embodied environments, we still lack a systematic understand…_
+
+→ [profile](/researchers/manling-li)
+
+---
+### No. 10 · Revealing unusual bandgap shifts with temperature and bandgap renormalization effect in phase-stabilized metal halide perovskite thin films
+
+**Haochen Zhang** · 一作 · 14 作者 · [arXiv:2308.11104](https://arxiv.org/abs/2308.11104)
+
+_Hybrid organic-inorganic metal halide perovskites are emerging materials in photovoltaics, whose bandgap is one of the most crucial parameters governing their light harvesting performance. Here we present the temperatur…_
+
+→ [profile](/researchers/haochen-zhang)
 
 ---
 
@@ -310,63 +300,59 @@ _Game generation is an emerging application of coding agents, requiring models t
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge
+### No. 01 · PharmaGPT: Domain-Specific Large Language Models for Bio-Pharmaceutical and Chemistry
 
-**Angelika Romanou** · 一作 · 59 作者 · [arXiv:2411.19799](https://arxiv.org/abs/2411.19799)
+**Linqing Chen** · 一作 · 36 作者 · [arXiv:2406.18045](https://arxiv.org/abs/2406.18045)
 
-*构建含44种语言区域知识的197k问答对评估多语言LLM。*
+_Large language models (LLMs) have revolutionized Natural Language Processing (NLP) by minimizing the need for complex feature engineering. However, the application of LLMs in specialized domains like biopharmaceuticals…_
 
-_The performance differential of large language models (LLM) between languages hinders their effective deployment in many regions, inhibiting the potential economic and societal value of generative AI tools in many commu…_
+**▸ 选中原因：首次出现 · 36 作者合作（疑似大组新人）**
 
-**▸ 选中原因：首次出现 · 59 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/angelika-romanou)
+→ [profile](/researchers/linqing-chen)
 
 ---
-### No. 02 · Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning
+### No. 02 · Streamlining Biomedical Research with Specialized LLMs
 
-**Shivalika Singh** · 一作 · 33 作者 · [arXiv:2402.06619](https://arxiv.org/abs/2402.06619)
+**Linqing Chen** · 一作 · 33 作者 · [arXiv:2504.12341](https://arxiv.org/abs/2504.12341)
 
-*构建含65种语言人工标注及114种语言模板化翻译的多语种指令微调数据集。*
-
-_Datasets are foundational to many breakthroughs in modern artificial intelligence. Many recent achievements in the space of natural language processing (NLP) can be attributed to the finetuning of pre-trained models on…_
+_In this paper, we propose a novel system that integrates state-of-the-art, domain-specific large language models with advanced information retrieval techniques to deliver comprehensive and context-aware responses. Our a…_
 
 **▸ 选中原因：首次出现 · 33 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/shivalika-singh)
+→ [profile](/researchers/linqing-chen)
 
 ---
-### No. 03 · Looped World Models
+### No. 03 · PAIWorld: A 3D-Consistent World Foundation Model for Robotic Manipulation
 
-**Hongyuan Adam Lu** · 一作 · 31 作者 · [arXiv:2606.18208](https://arxiv.org/abs/2606.18208)
+**Yuhang Huang** · 一作 · 28 作者 · [arXiv:2606.18375](https://arxiv.org/abs/2606.18375)
 
-_Current world models face a fundamental tension: faithful long-horizon simulation demands deep computation, but deeper models are expensive to deploy and prone to compounding errors. We resolve this by introducing Loope…_
+_World foundation models (WFMs) are powerful simulators, yet they predominantly operate in a single-view setting and lack the multi-view 3D consistency required for robotic manipulation. While robotic systems rely on mul…_
 
-**▸ 选中原因：首次出现 · 31 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 28 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/hongyuan-adam-lu)
+→ [profile](/researchers/yuhang-huang)
 
 ---
-### No. 04 · EBench: Elemental Diagnosis of Generalist Mobile Manipulation Policies
+### No. 04 · Do as I Do: Dexterous Manipulation Data from Everyday Human Videos
 
-**Ning Gao** · 一作 · 25 作者 · [arXiv:2606.18239](https://arxiv.org/abs/2606.18239)
+**Bhawna Paliwal** · 一作 · 6 作者 · [arXiv:2606.19333](https://arxiv.org/abs/2606.19333)
 
-_We present EBench, a simulation benchmark that diagnoses generalist mobile manipulation policies beyond a single success-rate scalar. EBench comprises 26 diverse and challenging manipulation tasks annotated along 5 capa…_
+_How can we scalably generate data for robotic manipulation, especially on human-like platforms such as dexterous multi-fingered hands? Learning from human videos has recently emerged as a likely answer to this question.…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/ning-gao)
+→ [profile](/researchers/bhawna-paliwal)
 
 ---
-### No. 05 · Reversal Q-Learning
+### No. 05 · Reinforcing Dual-Path Reasoning in Spatial Vision Language Models
 
-**Aditya Oberai** · 一作 · 3 作者 · [arXiv:2606.17551](https://arxiv.org/abs/2606.17551)
+**Yatai Ji** · 一作 · 16 作者 · [arXiv:2606.17539](https://arxiv.org/abs/2606.17539)
 
-_Iterative generative modeling techniques, such as flow matching, provide powerful tools to model complex behaviors for effective offline reinforcement learning (RL). In this work, we propose a new off-policy RL algorith…_
+_Spatial VLMs have made substantial progress in geometric perception, yet complex spatial reasoning requiring multi-step inference over depth, distance, and scene relations remains challenging. Moreover, different spatia…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/aditya-oberai)
+→ [profile](/researchers/yatai-ji)
 
 ---
 
