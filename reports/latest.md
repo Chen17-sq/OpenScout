@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 039                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · MONDAY, JUNE 22, 2026
+VOL. 1 · NO. 040                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · TUESDAY, JUNE 23, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 039 · 2026-06-22
+> *All The Researchers Fit To Watch* — Vol. 1, No. 040 · 2026-06-23
 
-_Auto-generated at 2026-06-22T06:37:26+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-06-23T05:14:39+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,126 +15,121 @@ _Auto-generated at 2026-06-22T06:37:26+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **27949** | 12 | 67 | 8 | 74 |
+| **28907** | 261 | 958 | 8 | 74 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Visual Reasoning Tracer: Object-Level Grounded Reasoning Benchmark
+### No. 01 · Intelligent Perception Assisted Light Modulation for real-time and program-free nanofabrication and particle manipulation
 
-**Haobo Yuan** · 一作 · 10 作者 · [arXiv:2512.05091](https://arxiv.org/abs/2512.05091)
+**Weixin Zhu** · 一作 · 10 作者 · [arXiv:2606.13080](https://arxiv.org/abs/2606.13080)
 
-*提出VRT任务与基准，要求模型显式预测推理路径中的中间对象。*
+*融合手部动作识别与空间光调制的无编程飞秒激光加工。*
 
-_Recent advances in Multimodal Large Language Models (MLLMs) have significantly improved performance on tasks such as visual grounding and visual question answering. However, the reasoning processes of these models remai…_
+_In this paper, we present an Intelligent Perception-Assisted Light Modulation (IPALM) technique, for femtosecond laser nanofabrication and particle manipulation. IPALM technique integrates real-time hand-motion recognit…_
 
-→ [profile](/researchers/haobo-yuan)
-
----
-### No. 02 · Contactless Modulation of Intralayer and Interlayer Excitons in MoS2/WSe2 heterostructures with Acoustoelectric Fields
-
-**Yueyi Sun** · 一作 · 12 作者 · [arXiv:2511.03301](https://arxiv.org/abs/2511.03301)
-
-*用声表面波场无接触调控MoS2/WSe2异质结的层内与层间激子。*
-
-_This work presents a platform that enables surface acoustic wave (SAW) modulation of both intralayer and interlayer excitons in MoS2/WSe2 heterostructures. Harnessing the coupled piezoelectric and strain fields of SAWs,…_
-
-→ [profile](/researchers/yueyi-sun)
+→ [profile](/researchers/weixin-zhu)
 
 ---
-### No. 03 · Mixed-R1: Unified Reward Perspective For Reasoning Capability in Multimodal Large Language Models
+### No. 02 · Post-Trained MoE Can Skip Half Experts via Self-Distillation
 
-**Shilin Xu** · 一作 · 12 作者 · [arXiv:2505.24164](https://arxiv.org/abs/2505.24164)
+**Xingtai Lv** · 一作 · 15 作者 · [arXiv:2605.18643](https://arxiv.org/abs/2605.18643)
 
-*提出混合奖励函数与数据集，统一多模态大模型强化学习推理。*
+_Mixture-of-Experts (MoE) scales language models efficiently through sparse expert activation, and its dynamic variant further reduces computation by adjusting the activated experts in an input-dependent manner. Existing…_
 
-_Recent works on large language models (LLMs) have successfully demonstrated the emergence of reasoning capabilities via reinforcement learning (RL). Although recent efforts leverage group relative policy optimization (G…_
-
-→ [profile](/researchers/shilin-xu)
+→ [profile](/researchers/xingtai-lv)
 
 ---
-### No. 04 · Comprehensive Analog Signal Processing Platform Enabled with Acoustic Charge Transport in Two-dimensional Materials
+### No. 03 · Can AI Be a Good Peer Reviewer? A Survey of Peer Review Process, Evaluation, and the Future
 
-**Yueyi Sun** · 一作 · 6 作者 · [arXiv:2501.14213](https://arxiv.org/abs/2501.14213)
+**Sihong Wu** · 一作 · 8 作者 · [arXiv:2604.27924](https://arxiv.org/abs/2604.27924)
 
-*二维声电平台实现交直流信号实时处理与调控。*
+_Peer review is a multi-stage process involving reviews, rebuttals, meta-reviews, final decisions, and subsequent manuscript revisions. Recent advances in large language models (LLMs) have motivated methods that assist o…_
 
-_Two-dimensional Acoustic Charge Transport (2D-ACT) devices, which integrate two dimensional semiconductor field-effect transistor (FET) with high-frequency surface acoustic wave (SAW) device provide a potential compact…_
-
-→ [profile](/researchers/yueyi-sun)
+→ [profile](/researchers/sihong-wu)
 
 ---
-### No. 05 · Sa2VA: Marrying SAM2 with LLaVA for Dense Grounded Understanding of Images and Videos
+### No. 04 · TIR-Agent: Training an Explorative and Efficient Agent for Image Restoration
 
-**Haobo Yuan** · 一作 · 11 作者 · [arXiv:2501.04001](https://arxiv.org/abs/2501.04001)
+**Yisheng Zhang** · 一作 · 14 作者 · [arXiv:2603.27742](https://arxiv.org/abs/2603.27742)
 
-*融合SAM2与LLaVA实现图文视频密集指代分割。*
+_Vision-language agents that orchestrate specialized tools for image restoration (IR) have emerged as a promising method, yet most existing frameworks operate in a training-free manner. They rely on heuristic task schedu…_
 
-_This work presents Sa2VA, the first comprehensive, unified model for dense grounded understanding of both images and videos. Unlike existing multi-modal large language models, which are often limited to specific modalit…_
-
-→ [profile](/researchers/haobo-yuan)
+→ [profile](/researchers/yisheng-zhang)
 
 ---
-### No. 06 · Boosting the Self-driven Properties of 2D Photodetectors through Synergistic Asymmetrical Effects
+### No. 05 · How Far Can Unsupervised RLVR Scale LLM Training?
 
-**Yihong Sun** · 一作 · 8 作者 · [arXiv:2501.02186](https://arxiv.org/abs/2501.02186)
+**Bingxiang He** · 一作 · 21 作者 · [arXiv:2603.08660](https://arxiv.org/abs/2603.08660)
 
-*利用非对称电极与几何协同效应提升WSe₂光探测器自驱动性能。*
+_Unsupervised reinforcement learning with verifiable rewards (URLVR) offers a pathway to scale LLM training beyond the supervision bottleneck by deriving rewards without ground truth labels. Recent works leverage model i…_
 
-_Self-driven photodetectors (SDPDs) transform photon energy into electrical energy without external voltage, which makes them highly advantageous for applications such as low-power communication and imaging systems. Two-…_
-
-→ [profile](/researchers/yihong-sun)
+→ [profile](/researchers/bingxiang-he)
 
 ---
-### No. 07 · SegSTRONG-C: Segmenting Surgical Tools Robustly On Non-adversarial Generated Corruptions -- An EndoVis'24 Challenge
+### No. 06 · Emotion-Director: Bridging Affective Shortcut in Emotion-Oriented Image Generation
 
-**Hao Ding** · 一作 · 42 作者 · [arXiv:2407.11906](https://arxiv.org/abs/2407.11906)
+**Guoli Jia** · 一作 · 8 作者 · [arXiv:2512.19479](https://arxiv.org/abs/2512.19479)
 
-*提出用对抗性重放生成数据评估手术工具分割鲁棒性。*
+_Image generation based on diffusion models has demonstrated impressive capability, motivating exploration into diverse and specialized applications. Owing to the importance of emotion in advertising, emotion-oriented im…_
 
-_Surgical data science has seen rapid advancement with the excellent performance of end-to-end deep neural networks (DNNs). Despite their successes, DNNs have been proven susceptible to minor "corruptions," introducing a…_
-
-→ [profile](/researchers/hao-ding)
+→ [profile](/researchers/guoli-jia)
 
 ---
-### No. 08 · PerceptionDLM: Parallel Region Perception with Multimodal Diffusion Language Models
+### No. 07 · JustRL: Scaling a 1.5B LLM with a Simple RL Recipe
 
-**Yueyi Sun** · 一作 · 11 作者 · [arXiv:2606.19534](https://arxiv.org/abs/2606.19534)
+**Bingxiang He** · 一作 · 12 作者 · [arXiv:2512.16649](https://arxiv.org/abs/2512.16649)
 
-*利用扩散语言模型并行解码实现多区域感知。*
+_Recent advances in reinforcement learning for large language models have converged on increasing complexity: multi-stage training pipelines, dynamic hyperparameter schedules, and curriculum learning strategies. This rai…_
 
-_Multimodal large language models (MLLMs) have achieved remarkable progress in visual understanding tasks. However, most existing MLLMs rely on autoregressive generation, which limits their efficiency for perception task…_
-
-→ [profile](/researchers/yueyi-sun)
+→ [profile](/researchers/bingxiang-he)
 
 ---
-### No. 09 · GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents
+### No. 08 · From Perception to Cognition: A Survey of Vision-Language Interactive Reasoning in Multimodal Large Language Models
 
-**Zhe Ren** · 一作 · 10 作者 · [arXiv:2606.18829](https://arxiv.org/abs/2606.18829)
+**Chenyue Zhou** · 一作 · 22 作者 · [arXiv:2509.25373](https://arxiv.org/abs/2509.25373)
 
-*提出多主体共享记忆基准GateMem，评估效用、访问控制与遗忘。*
+_Multimodal Large Language Models (MLLMs) strive to achieve a profound, human-like understanding of and interaction with the physical world, but often exhibit a shallow and incoherent integration when acquiring informati…_
 
-_Memory benchmarks for LLM agents largely assume single-user settings, leaving shared assistants for hospitals, workplaces, campuses, and households understudied. In these deployments, multiple principals write to a comm…_
-
-→ [profile](/researchers/zhe-ren)
+→ [profile](/researchers/chenyue-zhou)
 
 ---
-### No. 10 · Distilling Examples into Task Instructions: Enhanced In-Context Learning for Real-World B2B Conversations
+### No. 09 · FlowRL: Matching Reward Distributions for LLM Reasoning
 
-**Guy Rotman** · 一作 · 4 作者 · [arXiv:2606.15641](https://arxiv.org/abs/2606.15641)
+**Xuekai Zhu** · 一作 · 23 作者 · [arXiv:2509.15207](https://arxiv.org/abs/2509.15207)
 
-*将示例蒸馏为任务指令，压缩99%令牌并提升B2B对话分类AUC。*
+_We propose FlowRL: matching the full reward distribution via flow balancing instead of maximizing rewards in large language model (LLM) reinforcement learning (RL). Recent advanced reasoning models adopt reward-maximizi…_
 
-_In-context learning (ICL) is the standard method for low-resource classification, yet its efficacy in specialized domains remains largely unexplored. We address the challenge of classifying semantically complex, multi-p…_
+→ [profile](/researchers/xuekai-zhu)
 
-→ [profile](/researchers/guy-rotman)
+---
+### No. 10 · A Survey of Reinforcement Learning for Large Reasoning Models
+
+**Kaiyan Zhang** · 一作 · 39 作者 · [arXiv:2509.08827](https://arxiv.org/abs/2509.08827)
+
+*用强化学习将大语言模型转化为推理模型（LRM）。*
+
+_In this paper, we survey recent advances in Reinforcement Learning (RL) for reasoning with Large Language Models (LLMs). RL has achieved remarkable success in advancing the frontier of LLM capabilities, particularly in…_
+
+→ [profile](/researchers/kaiyan-zhang)
 
 ---
 
-## Section B · 🔄 动态更新 · 0 项
+## Section B · 🔄 动态更新 · 10 项
 
-_库内已知人今日无新动作。_
+| 研究者 | 新工作 | 主题 | arXiv |
+| --- | --- | --- | --- |
+| [Bowen Zhou](/researchers/bowen-zhou) | Post-Trained MoE Can Skip Half Experts via Self-Distillation | — | [2605.18643](https://arxiv.org/abs/2605.18643) |
+| [Bowen Zhou](/researchers/bowen-zhou) | MARS$^2$: Scaling Multi-Agent Tree Search via Reinforcement Learning… | — | [2604.14564](https://arxiv.org/abs/2604.14564) |
+| [Bowen Zhou](/researchers/bowen-zhou) | TIR-Agent: Training an Explorative and Efficient Agent for Image Rest… | — | [2603.27742](https://arxiv.org/abs/2603.27742) |
+| [Bowen Zhou](/researchers/bowen-zhou) | How Far Can Unsupervised RLVR Scale LLM Training? | — | [2603.08660](https://arxiv.org/abs/2603.08660) |
+| [Bowen Zhou](/researchers/bowen-zhou) | MARTI-MARS$^2$: Scaling Multi-Agent Self-Search via Reinforcement Lea… | — | [2602.07848](https://arxiv.org/abs/2602.07848) |
+| [Bowen Zhou](/researchers/bowen-zhou) | PRISMA: Reinforcement Learning Guided Two-Stage Policy Optimization i… | — | [2601.05465](https://arxiv.org/abs/2601.05465) |
+| [Bowen Zhou](/researchers/bowen-zhou) | Emotion-Director: Bridging Affective Shortcut in Emotion-Oriented Ima… | — | [2512.19479](https://arxiv.org/abs/2512.19479) |
+| [Jianfeng Gao](/researchers/jianfeng-gao) | FlowRL: Matching Reward Distributions for LLM Reasoning | — | [2509.15207](https://arxiv.org/abs/2509.15207) |
+| [Bowen Zhou](/researchers/bowen-zhou) | FlowRL: Matching Reward Distributions for LLM Reasoning | — | [2509.15207](https://arxiv.org/abs/2509.15207) |
+| [Bowen Zhou](/researchers/bowen-zhou) | SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning | — | [2509.09674](https://arxiv.org/abs/2509.09674) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -224,160 +219,162 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · SegSTRONG-C: Segmenting Surgical Tools Robustly On Non-adversarial Generated Corruptions -- An EndoVis'24 Challenge
+### No. 01 · A Survey of Reinforcement Learning for Large Reasoning Models
 
-**Hao Ding** · 一作 · 42 作者 · [arXiv:2407.11906](https://arxiv.org/abs/2407.11906)
+**Kaiyan Zhang** · 一作 · 39 作者 · [arXiv:2509.08827](https://arxiv.org/abs/2509.08827)
 
-*提出用对抗性重放生成数据评估手术工具分割鲁棒性。*
+*用强化学习将大语言模型转化为推理模型（LRM）。*
 
-_Surgical data science has seen rapid advancement with the excellent performance of end-to-end deep neural networks (DNNs). Despite their successes, DNNs have been proven susceptible to minor "corruptions," introducing a…_
+_In this paper, we survey recent advances in Reinforcement Learning (RL) for reasoning with Large Language Models (LLMs). RL has achieved remarkable success in advancing the frontier of LLM capabilities, particularly in…_
 
-→ [profile](/researchers/hao-ding)
-
----
-### No. 02 · DenseWorld-1M: Towards Detailed Dense Grounded Caption in the Real World
-
-**Xiangtai Li** · 一作 · 16 作者 · [arXiv:2506.24102](https://arxiv.org/abs/2506.24102)
-
-*提出首个大规模密集接地字幕数据集DenseWorld-1M及三阶段标注流程。*
-
-_Multimodal Large Language Models (MLLMs) demonstrate a complex understanding of scenes, benefiting from large-scale and high-quality datasets. Most existing caption datasets lack the ground locations and relations for v…_
-
-→ [profile](/researchers/xiangtai-li)
+→ [profile](/researchers/kaiyan-zhang)
 
 ---
-### No. 03 · Contactless Modulation of Intralayer and Interlayer Excitons in MoS2/WSe2 heterostructures with Acoustoelectric Fields
+### No. 02 · Deep Research in Physical Sciences: A Multi-Agent Framework and Comprehensive Benchmark
 
-**Yueyi Sun** · 一作 · 12 作者 · [arXiv:2511.03301](https://arxiv.org/abs/2511.03301)
+**Yigeng Jiang** · 一作 · 28 作者 · [arXiv:2606.18648](https://arxiv.org/abs/2606.18648)
 
-*用声表面波场无接触调控MoS2/WSe2异质结的层内与层间激子。*
+_Deep research agents are Large Language Model (LLM)-based systems designed for autonomous, multi-step scientific reasoning, and they hold immense potential for accelerating research in the physical sciences. However, co…_
 
-_This work presents a platform that enables surface acoustic wave (SAW) modulation of both intralayer and interlayer excitons in MoS2/WSe2 heterostructures. Harnessing the coupled piezoelectric and strain fields of SAWs,…_
-
-→ [profile](/researchers/yueyi-sun)
+→ [profile](/researchers/yigeng-jiang)
 
 ---
-### No. 04 · Mixed-R1: Unified Reward Perspective For Reasoning Capability in Multimodal Large Language Models
+### No. 03 · Training Open Models for Agentic Phone Use
 
-**Shilin Xu** · 一作 · 12 作者 · [arXiv:2505.24164](https://arxiv.org/abs/2505.24164)
+**Zhengyang Tang** · 一作 · 26 作者 · [arXiv:2606.23049](https://arxiv.org/abs/2606.23049)
 
-*提出混合奖励函数与数据集，统一多模态大模型强化学习推理。*
+_Phones are becoming an important execution surface for general-purpose agents, but training open models for reliable phone use remains difficult because the environment that matters at deployment, real devices running r…_
 
-_Recent works on large language models (LLMs) have successfully demonstrated the emergence of reasoning capabilities via reinforcement learning (RL). Although recent efforts leverage group relative policy optimization (G…_
-
-→ [profile](/researchers/shilin-xu)
+→ [profile](/researchers/zhengyang-tang)
 
 ---
-### No. 05 · Sa2VA: Marrying SAM2 with LLaVA for Dense Grounded Understanding of Images and Videos
+### No. 04 · Process Reinforcement through Implicit Rewards
 
-**Haobo Yuan** · 一作 · 11 作者 · [arXiv:2501.04001](https://arxiv.org/abs/2501.04001)
+**Ganqu Cui** · 一作 · 25 作者 · [arXiv:2502.01456](https://arxiv.org/abs/2502.01456)
 
-*融合SAM2与LLaVA实现图文视频密集指代分割。*
+*通过隐式奖励实现过程奖励模型在线更新，避免昂贵标注。*
 
-_This work presents Sa2VA, the first comprehensive, unified model for dense grounded understanding of both images and videos. Unlike existing multi-modal large language models, which are often limited to specific modalit…_
+_Dense process rewards have proven a more effective alternative to the sparse outcome-level rewards in the inference-time scaling of large language models (LLMs), particularly in tasks requiring complex multi-step reason…_
 
-→ [profile](/researchers/haobo-yuan)
-
----
-### No. 06 · PerceptionDLM: Parallel Region Perception with Multimodal Diffusion Language Models
-
-**Yueyi Sun** · 一作 · 11 作者 · [arXiv:2606.19534](https://arxiv.org/abs/2606.19534)
-
-*利用扩散语言模型并行解码实现多区域感知。*
-
-_Multimodal large language models (MLLMs) have achieved remarkable progress in visual understanding tasks. However, most existing MLLMs rely on autoregressive generation, which limits their efficiency for perception task…_
-
-→ [profile](/researchers/yueyi-sun)
+→ [profile](/researchers/ganqu-cui)
 
 ---
-### No. 07 · Visual Reasoning Tracer: Object-Level Grounded Reasoning Benchmark
+### No. 05 · MARTI-MARS$^2$: Scaling Multi-Agent Self-Search via Reinforcement Learning for Code Generation
 
-**Haobo Yuan** · 一作 · 10 作者 · [arXiv:2512.05091](https://arxiv.org/abs/2512.05091)
+**Shijie Wang** · 一作 · 24 作者 · [arXiv:2602.07848](https://arxiv.org/abs/2602.07848)
 
-*提出VRT任务与基准，要求模型显式预测推理路径中的中间对象。*
+_While the complex reasoning capability of Large Language Models (LLMs) has attracted significant attention, single-agent systems often encounter inherent performance ceilings in complex tasks such as code generation. Mu…_
 
-_Recent advances in Multimodal Large Language Models (MLLMs) have significantly improved performance on tasks such as visual grounding and visual question answering. However, the reasoning processes of these models remai…_
-
-→ [profile](/researchers/haobo-yuan)
+→ [profile](/researchers/shijie-wang)
 
 ---
-### No. 08 · GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents
+### No. 06 · FlowRL: Matching Reward Distributions for LLM Reasoning
 
-**Zhe Ren** · 一作 · 10 作者 · [arXiv:2606.18829](https://arxiv.org/abs/2606.18829)
+**Xuekai Zhu** · 一作 · 23 作者 · [arXiv:2509.15207](https://arxiv.org/abs/2509.15207)
 
-*提出多主体共享记忆基准GateMem，评估效用、访问控制与遗忘。*
+_We propose FlowRL: matching the full reward distribution via flow balancing instead of maximizing rewards in large language model (LLM) reinforcement learning (RL). Recent advanced reasoning models adopt reward-maximizi…_
 
-_Memory benchmarks for LLM agents largely assume single-user settings, leaving shared assistants for hospitals, workplaces, campuses, and households understudied. In these deployments, multiple principals write to a comm…_
-
-→ [profile](/researchers/zhe-ren)
+→ [profile](/researchers/xuekai-zhu)
 
 ---
-### No. 09 · Boosting the Self-driven Properties of 2D Photodetectors through Synergistic Asymmetrical Effects
+### No. 07 · FOCA: Future-Oriented Conditioning for Data-Efficient Vision-Language-Action Adaptation
 
-**Yihong Sun** · 一作 · 8 作者 · [arXiv:2501.02186](https://arxiv.org/abs/2501.02186)
+**Duc Minh Nguyen** · 一作 · 23 作者 · [arXiv:2606.20867](https://arxiv.org/abs/2606.20867)
 
-*利用非对称电极与几何协同效应提升WSe₂光探测器自驱动性能。*
+_Vision-Language-Action (VLA) models enable general-purpose robotic control via large-scale multimodal pretraining, yet their effectiveness under few-shot imitation learning remains limited. We conduct a systematic stres…_
 
-_Self-driven photodetectors (SDPDs) transform photon energy into electrical energy without external voltage, which makes them highly advantageous for applications such as low-power communication and imaging systems. Two-…_
-
-→ [profile](/researchers/yihong-sun)
+→ [profile](/researchers/duc-minh-nguyen)
 
 ---
-### No. 10 · Comprehensive Analog Signal Processing Platform Enabled with Acoustic Charge Transport in Two-dimensional Materials
+### No. 08 · From Perception to Cognition: A Survey of Vision-Language Interactive Reasoning in Multimodal Large Language Models
 
-**Yueyi Sun** · 一作 · 6 作者 · [arXiv:2501.14213](https://arxiv.org/abs/2501.14213)
+**Chenyue Zhou** · 一作 · 22 作者 · [arXiv:2509.25373](https://arxiv.org/abs/2509.25373)
 
-*二维声电平台实现交直流信号实时处理与调控。*
+_Multimodal Large Language Models (MLLMs) strive to achieve a profound, human-like understanding of and interaction with the physical world, but often exhibit a shallow and incoherent integration when acquiring informati…_
 
-_Two-dimensional Acoustic Charge Transport (2D-ACT) devices, which integrate two dimensional semiconductor field-effect transistor (FET) with high-frequency surface acoustic wave (SAW) device provide a potential compact…_
+→ [profile](/researchers/chenyue-zhou)
 
-→ [profile](/researchers/yueyi-sun)
+---
+### No. 09 · The USTC-NERCSLIP Systems for the CHiME-9 MCoRec Challenge
+
+**Ya Jiang** · 一作 · 22 作者 · [arXiv:2603.01415](https://arxiv.org/abs/2603.01415)
+
+_This report details our submission to the CHiME-9 MCoRec Challenge on recognizing and clustering multiple concurrent natural conversations within indoor social settings. Unlike conventional meetings centered on a single…_
+
+→ [profile](/researchers/ya-jiang)
+
+---
+### No. 10 · How Far Can Unsupervised RLVR Scale LLM Training?
+
+**Bingxiang He** · 一作 · 21 作者 · [arXiv:2603.08660](https://arxiv.org/abs/2603.08660)
+
+_Unsupervised reinforcement learning with verifiable rewards (URLVR) offers a pathway to scale LLM training beyond the supervision bottleneck by deriving rewards without ground truth labels. Recent works leverage model i…_
+
+→ [profile](/researchers/bingxiang-he)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 3 个
+## Section F · 🌙 Sleeper Picks · 5 个
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · SegSTRONG-C: Segmenting Surgical Tools Robustly On Non-adversarial Generated Corruptions -- An EndoVis'24 Challenge
+### No. 01 · A Survey of Reinforcement Learning for Large Reasoning Models
 
-**Hao Ding** · 一作 · 42 作者 · [arXiv:2407.11906](https://arxiv.org/abs/2407.11906)
+**Kaiyan Zhang** · 一作 · 39 作者 · [arXiv:2509.08827](https://arxiv.org/abs/2509.08827)
 
-*提出用对抗性重放生成数据评估手术工具分割鲁棒性。*
+*用强化学习将大语言模型转化为推理模型（LRM）。*
 
-_Surgical data science has seen rapid advancement with the excellent performance of end-to-end deep neural networks (DNNs). Despite their successes, DNNs have been proven susceptible to minor "corruptions," introducing a…_
+_In this paper, we survey recent advances in Reinforcement Learning (RL) for reasoning with Large Language Models (LLMs). RL has achieved remarkable success in advancing the frontier of LLM capabilities, particularly in…_
 
-**▸ 选中原因：首次出现 · 42 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 39 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/hao-ding)
-
----
-### No. 02 · Contactless Modulation of Intralayer and Interlayer Excitons in MoS2/WSe2 heterostructures with Acoustoelectric Fields
-
-**Yueyi Sun** · 一作 · 12 作者 · [arXiv:2511.03301](https://arxiv.org/abs/2511.03301)
-
-*用声表面波场无接触调控MoS2/WSe2异质结的层内与层间激子。*
-
-_This work presents a platform that enables surface acoustic wave (SAW) modulation of both intralayer and interlayer excitons in MoS2/WSe2 heterostructures. Harnessing the coupled piezoelectric and strain fields of SAWs,…_
-
-**▸ 选中原因：首次出现 · 12 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/yueyi-sun)
+→ [profile](/researchers/kaiyan-zhang)
 
 ---
-### No. 03 · Mixed-R1: Unified Reward Perspective For Reasoning Capability in Multimodal Large Language Models
+### No. 02 · Deep Research in Physical Sciences: A Multi-Agent Framework and Comprehensive Benchmark
 
-**Shilin Xu** · 一作 · 12 作者 · [arXiv:2505.24164](https://arxiv.org/abs/2505.24164)
+**Yigeng Jiang** · 一作 · 28 作者 · [arXiv:2606.18648](https://arxiv.org/abs/2606.18648)
 
-*提出混合奖励函数与数据集，统一多模态大模型强化学习推理。*
+_Deep research agents are Large Language Model (LLM)-based systems designed for autonomous, multi-step scientific reasoning, and they hold immense potential for accelerating research in the physical sciences. However, co…_
 
-_Recent works on large language models (LLMs) have successfully demonstrated the emergence of reasoning capabilities via reinforcement learning (RL). Although recent efforts leverage group relative policy optimization (G…_
+**▸ 选中原因：首次出现 · 28 作者合作（疑似大组新人）**
 
-**▸ 选中原因：首次出现 · 12 作者合作（疑似大组新人）**
+→ [profile](/researchers/yigeng-jiang)
 
-→ [profile](/researchers/shilin-xu)
+---
+### No. 03 · FlowRL: Matching Reward Distributions for LLM Reasoning
+
+**Xuekai Zhu** · 一作 · 23 作者 · [arXiv:2509.15207](https://arxiv.org/abs/2509.15207)
+
+_We propose FlowRL: matching the full reward distribution via flow balancing instead of maximizing rewards in large language model (LLM) reinforcement learning (RL). Recent advanced reasoning models adopt reward-maximizi…_
+
+**▸ 选中原因：首次出现 · 23 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/xuekai-zhu)
+
+---
+### No. 04 · Learning Process Rewards via Success Visitation Matching for Efficient RL
+
+**Raymond Tsao** · 一作 · 3 作者 · [arXiv:2606.23640](https://arxiv.org/abs/2606.23640)
+
+_In many modern applications of reinforcement learning (RL), the natural reward for a task of interest is inherently sparse: a reward of 0 is given everywhere except when the task is completed, when a reward of +1 is giv…_
+
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+
+→ [profile](/researchers/raymond-tsao)
+
+---
+### No. 05 · SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors
+
+**Pratyaksh Rao** · 一作 · 5 作者 · [arXiv:2606.23444](https://arxiv.org/abs/2606.23444)
+
+_Accurate dynamics models are critical for informed decision-making in robotic systems, particularly for agile aerial vehicles operating under uncertainty. Neural network dynamics models are attractive for capturing comp…_
+
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+
+→ [profile](/researchers/pratyaksh-rao)
 
 ---
 
