@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 040                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · TUESDAY, JUNE 23, 2026
+VOL. 1 · NO. 041                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · WEDNESDAY, JUNE 24, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 040 · 2026-06-23
+> *All The Researchers Fit To Watch* — Vol. 1, No. 041 · 2026-06-24
 
-_Auto-generated at 2026-06-23T05:14:39+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-06-24T05:23:19+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,125 +15,139 @@ _Auto-generated at 2026-06-23T05:14:39+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **28907** | 261 | 958 | 8 | 74 |
+| **29424** | 128 | 517 | 9 | 74 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Intelligent Perception Assisted Light Modulation for real-time and program-free nanofabrication and particle manipulation
+### No. 01 · Towards Knowledgeable Deep Research: Framework and Benchmark
 
-**Weixin Zhu** · 一作 · 10 作者 · [arXiv:2606.13080](https://arxiv.org/abs/2606.13080)
+**Wenxuan Liu** · 一作 · 16 作者 · [arXiv:2604.07720](https://arxiv.org/abs/2604.07720)
 
-*融合手部动作识别与空间光调制的无编程飞秒激光加工。*
+*提出HKA框架，融合结构化知识与多模态生成实现深度研究。*
 
-_In this paper, we present an Intelligent Perception-Assisted Light Modulation (IPALM) technique, for femtosecond laser nanofabrication and particle manipulation. IPALM technique integrates real-time hand-motion recognit…_
+_Deep Research (DR) requires LLM agents to autonomously perform multi-step information seeking, processing, and reasoning to generate comprehensive reports. In contrast to existing studies that mainly focus on unstructur…_
 
-→ [profile](/researchers/weixin-zhu)
-
----
-### No. 02 · Post-Trained MoE Can Skip Half Experts via Self-Distillation
-
-**Xingtai Lv** · 一作 · 15 作者 · [arXiv:2605.18643](https://arxiv.org/abs/2605.18643)
-
-_Mixture-of-Experts (MoE) scales language models efficiently through sparse expert activation, and its dynamic variant further reduces computation by adjusting the activated experts in an input-dependent manner. Existing…_
-
-→ [profile](/researchers/xingtai-lv)
+→ [profile](/researchers/wenxuan-liu)
 
 ---
-### No. 03 · Can AI Be a Good Peer Reviewer? A Survey of Peer Review Process, Evaluation, and the Future
+### No. 02 · TR-ICRL: Test-Time Rethinking for In-Context Reinforcement Learning
 
-**Sihong Wu** · 一作 · 8 作者 · [arXiv:2604.27924](https://arxiv.org/abs/2604.27924)
+**Wenxuan Jiang** · 一作 · 11 作者 · [arXiv:2604.00438](https://arxiv.org/abs/2604.00438)
 
-_Peer review is a multi-stage process involving reviews, rebuttals, meta-reviews, final decisions, and subsequent manuscript revisions. Recent advances in large language models (LLMs) have motivated methods that assist o…_
+*用伪标签投票生成反馈，迭代优化上下文强化学习。*
 
-→ [profile](/researchers/sihong-wu)
+_In-Context Reinforcement Learning (ICRL) enables Large Language Models (LLMs) to learn online from external rewards directly within the context window. However, a central challenge in ICRL is reward estimation, as model…_
 
----
-### No. 04 · TIR-Agent: Training an Explorative and Efficient Agent for Image Restoration
-
-**Yisheng Zhang** · 一作 · 14 作者 · [arXiv:2603.27742](https://arxiv.org/abs/2603.27742)
-
-_Vision-language agents that orchestrate specialized tools for image restoration (IR) have emerged as a promising method, yet most existing frameworks operate in a training-free manner. They rely on heuristic task schedu…_
-
-→ [profile](/researchers/yisheng-zhang)
+→ [profile](/researchers/wenxuan-jiang)
 
 ---
-### No. 05 · How Far Can Unsupervised RLVR Scale LLM Training?
+### No. 03 · WebWorld: A Large-Scale World Model for Web Agent Training
 
-**Bingxiang He** · 一作 · 21 作者 · [arXiv:2603.08660](https://arxiv.org/abs/2603.08660)
+**Zikai Xiao** · 一作 · 10 作者 · [arXiv:2602.14721](https://arxiv.org/abs/2602.14721)
 
-_Unsupervised reinforcement learning with verifiable rewards (URLVR) offers a pathway to scale LLM training beyond the supervision bottleneck by deriving rewards without ground truth labels. Recent works leverage model i…_
+*用百万级开放网页交互训练WebWorld模拟器，提升智能体性能。*
 
-→ [profile](/researchers/bingxiang-he)
+_Web agents require massive trajectories to generalize, yet real-world training is constrained by network latency, rate limits, and safety risks. We introduce \textbf{WebWorld} series, the first open-web simulator traine…_
 
----
-### No. 06 · Emotion-Director: Bridging Affective Shortcut in Emotion-Oriented Image Generation
-
-**Guoli Jia** · 一作 · 8 作者 · [arXiv:2512.19479](https://arxiv.org/abs/2512.19479)
-
-_Image generation based on diffusion models has demonstrated impressive capability, motivating exploration into diverse and specialized applications. Owing to the importance of emotion in advertising, emotion-oriented im…_
-
-→ [profile](/researchers/guoli-jia)
+→ [profile](/researchers/zikai-xiao)
 
 ---
-### No. 07 · JustRL: Scaling a 1.5B LLM with a Simple RL Recipe
+### No. 04 · Towards Event Extraction with Massive Types: LLM-based Collaborative Annotation and Partitioning Extraction
 
-**Bingxiang He** · 一作 · 12 作者 · [arXiv:2512.16649](https://arxiv.org/abs/2512.16649)
+**Wenxuan Liu** · 一作 · 8 作者 · [arXiv:2503.02628](https://arxiv.org/abs/2503.02628)
 
-_Recent advances in reinforcement learning for large language models have converged on increasing complexity: multi-stage training pipelines, dynamic hyperparameter schedules, and curriculum learning strategies. This rai…_
+*用LLM协作标注与分区抽取解决海量事件类型提取难题。*
 
-→ [profile](/researchers/bingxiang-he)
+_Developing a general-purpose extraction system that can extract events with massive types is a long-standing target in Event Extraction (EE). In doing so, the challenge comes from two aspects: 1) The absence of an effic…_
 
----
-### No. 08 · From Perception to Cognition: A Survey of Vision-Language Interactive Reasoning in Multimodal Large Language Models
-
-**Chenyue Zhou** · 一作 · 22 作者 · [arXiv:2509.25373](https://arxiv.org/abs/2509.25373)
-
-_Multimodal Large Language Models (MLLMs) strive to achieve a profound, human-like understanding of and interaction with the physical world, but often exhibit a shallow and incoherent integration when acquiring informati…_
-
-→ [profile](/researchers/chenyue-zhou)
+→ [profile](/researchers/wenxuan-liu)
 
 ---
-### No. 09 · FlowRL: Matching Reward Distributions for LLM Reasoning
+### No. 05 · KnowCoder: Coding Structured Knowledge into LLMs for Universal Information Extraction
 
-**Xuekai Zhu** · 一作 · 23 作者 · [arXiv:2509.15207](https://arxiv.org/abs/2509.15207)
+**Zixuan Li** · 一作 · 17 作者 · [arXiv:2403.07969](https://arxiv.org/abs/2403.07969)
 
-_We propose FlowRL: matching the full reward distribution via flow balancing instead of maximizing rewards in large language model (LLM) reinforcement learning (RL). Recent advanced reasoning models adopt reward-maximizi…_
+*用代码式模式表示统一30,000种知识，提升LLM信息抽取泛化能力。*
 
-→ [profile](/researchers/xuekai-zhu)
+_In this paper, we propose KnowCoder, a Large Language Model (LLM) to conduct Universal Information Extraction (UIE) via code generation. KnowCoder aims to develop a kind of unified schema representation that LLMs can ea…_
 
----
-### No. 10 · A Survey of Reinforcement Learning for Large Reasoning Models
-
-**Kaiyan Zhang** · 一作 · 39 作者 · [arXiv:2509.08827](https://arxiv.org/abs/2509.08827)
-
-*用强化学习将大语言模型转化为推理模型（LRM）。*
-
-_In this paper, we survey recent advances in Reinforcement Learning (RL) for reasoning with Large Language Models (LLMs). RL has achieved remarkable success in advancing the frontier of LLM capabilities, particularly in…_
-
-→ [profile](/researchers/kaiyan-zhang)
+→ [profile](/researchers/zixuan-li)
 
 ---
+### No. 06 · Vista4D: Video Reshooting with 4D Point Clouds
 
-## Section B · 🔄 动态更新 · 10 项
+**Kuan Heng Lin** · 一作 · 12 作者 · [arXiv:2604.21915](https://arxiv.org/abs/2604.21915)
+
+*用4D点云实现视频重拍，提升动态场景一致性与相机控制。*
+
+_We present Vista4D, a robust and flexible video reshooting framework that grounds the input video and target cameras in a 4D point cloud. Specifically, given an input video, our method re-synthesizes the scene with the…_
+
+→ [profile](/researchers/kuan-heng-lin)
+
+---
+### No. 07 · SG-I2V: Self-Guided Trajectory Control in Image-to-Video Generation
+
+**Koichi Namekata** · 一作 · 6 作者 · [arXiv:2411.04989](https://arxiv.org/abs/2411.04989)
+
+*零样本控制视频运动，无需微调扩散模型。*
+
+_Methods for image-to-video generation have achieved impressive, photo-realistic quality. However, adjusting specific elements in generated videos, such as object motion or camera movement, is often a tedious process of…_
+
+→ [profile](/researchers/koichi-namekata)
+
+---
+### No. 08 · EmerDiff: Emerging Pixel-level Semantic Knowledge in Diffusion Models
+
+**Koichi Namekata** · 一作 · 4 作者 · [arXiv:2401.11739](https://arxiv.org/abs/2401.11739)
+
+*利用扩散模型生成过程提取像素级语义知识实现无训练分割。*
+
+_Diffusion models have recently received increasing research attention for their remarkable transfer abilities in semantic segmentation tasks. However, generating fine-grained segmentation masks with diffusion models oft…_
+
+→ [profile](/researchers/koichi-namekata)
+
+---
+### No. 09 · AC-ODM: Actor--Critic Online Data Mixing for Sample-Efficient LLM Pretraining
+
+**Jing Ma** · 一作 · 3 作者 · [arXiv:2505.23878](https://arxiv.org/abs/2505.23878)
+
+*用强化学习动态混合数据，提升LLM预训练样本效率。*
+
+_Optimizing pretraining data composition is pivotal for LLM generalization. While dynamic mixing outperforms static strategies by capturing evolving training dynamics, current methods fail to reconcile computational effi…_
+
+→ [profile](/researchers/jing-ma)
+
+---
+### No. 10 · An Exploratory Case Study of LLM-Assisted Refactoring and Gameplay Feature Generation in an Endless Runner Game
+
+**Jan Wunderlich** · 一作 · 3 作者 · [arXiv:2606.21171](https://arxiv.org/abs/2606.21171)
+
+*GPT-4o在无尽跑酷游戏中重构成功但生成玩法特征仅1/3集成。*
+
+_Large language models (LLMs) are increasingly used to support software development, but their practical usefulness in applied game-development settings remains underexplored, especially when generated code must be integ…_
+
+→ [profile](/researchers/jan-wunderlich)
+
+---
+
+## Section B · 🔄 动态更新 · 8 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Bowen Zhou](/researchers/bowen-zhou) | Post-Trained MoE Can Skip Half Experts via Self-Distillation | — | [2605.18643](https://arxiv.org/abs/2605.18643) |
-| [Bowen Zhou](/researchers/bowen-zhou) | MARS$^2$: Scaling Multi-Agent Tree Search via Reinforcement Learning… | — | [2604.14564](https://arxiv.org/abs/2604.14564) |
-| [Bowen Zhou](/researchers/bowen-zhou) | TIR-Agent: Training an Explorative and Efficient Agent for Image Rest… | — | [2603.27742](https://arxiv.org/abs/2603.27742) |
-| [Bowen Zhou](/researchers/bowen-zhou) | How Far Can Unsupervised RLVR Scale LLM Training? | — | [2603.08660](https://arxiv.org/abs/2603.08660) |
-| [Bowen Zhou](/researchers/bowen-zhou) | MARTI-MARS$^2$: Scaling Multi-Agent Self-Search via Reinforcement Lea… | — | [2602.07848](https://arxiv.org/abs/2602.07848) |
-| [Bowen Zhou](/researchers/bowen-zhou) | PRISMA: Reinforcement Learning Guided Two-Stage Policy Optimization i… | — | [2601.05465](https://arxiv.org/abs/2601.05465) |
-| [Bowen Zhou](/researchers/bowen-zhou) | Emotion-Director: Bridging Affective Shortcut in Emotion-Oriented Ima… | — | [2512.19479](https://arxiv.org/abs/2512.19479) |
-| [Jianfeng Gao](/researchers/jianfeng-gao) | FlowRL: Matching Reward Distributions for LLM Reasoning | — | [2509.15207](https://arxiv.org/abs/2509.15207) |
-| [Bowen Zhou](/researchers/bowen-zhou) | FlowRL: Matching Reward Distributions for LLM Reasoning | — | [2509.15207](https://arxiv.org/abs/2509.15207) |
-| [Bowen Zhou](/researchers/bowen-zhou) | SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning | — | [2509.09674](https://arxiv.org/abs/2509.09674) |
+| [Bowen Zhou](/researchers/bowen-zhou) | P1: Mastering Physics Olympiads with Reinforcement Learning | — | [2511.13612](https://arxiv.org/abs/2511.13612) |
+| [Bowen Zhou](/researchers/bowen-zhou) | The Entropy Mechanism of Reinforcement Learning for Reasoning Languag… | — | [2505.22617](https://arxiv.org/abs/2505.22617) |
+| [Bowen Zhou](/researchers/bowen-zhou) | MedXpertQA: Benchmarking Expert-Level Medical Reasoning and Understan… | — | [2501.18362](https://arxiv.org/abs/2501.18362) |
+| [Bowen Zhou](/researchers/bowen-zhou) | Automating Exploratory Proteomics Research via Language Models | — | [2411.03743](https://arxiv.org/abs/2411.03743) |
+| [Bolei Zhou](/researchers/bolei-zhou) | Vista4D: Video Reshooting with 4D Point Clouds | — | [2604.21915](https://arxiv.org/abs/2604.21915) |
+| [Bowen Zhou](/researchers/bowen-zhou) | NatureBench: Can Coding Agents Match the Published SOTA of Nature-Fam… | — | [2606.24530](https://arxiv.org/abs/2606.24530) |
+| [Ya-Qin Zhang](/researchers/yaqin-zhang) | AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficie… | — | [2606.23449](https://arxiv.org/abs/2606.23449) |
+| [Jiajun Wu](/researchers/jiajun-wu) | InSight: Self-Guided Skill Acquisition via Steerable VLAs | embodied | [2606.24884](https://arxiv.org/abs/2606.24884) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section C · 🎓 即将毕业 PhD · Top 7
+## Section C · 🎓 即将毕业 PhD · Top 8
 
 _v0 fallback: 最高产的 auto-discovered first-author（proxy for 活跃晚期）._
 
@@ -210,6 +224,17 @@ _We address the task of multi-view image editing from sparse input views, where 
 → [profile](/researchers/daniel-gilo)
 
 ---
+### No. 08 · SG-I2V: Self-Guided Trajectory Control in Image-to-Video Generation
+
+**Koichi Namekata** · 一作 · 6 作者 · [arXiv:2411.04989](https://arxiv.org/abs/2411.04989)
+
+*零样本控制视频运动，无需微调扩散模型。*
+
+_Methods for image-to-video generation have achieved impressive, photo-realistic quality. However, adjusting specific elements in generated videos, such as object motion or camera movement, is often a tedious process of…_
+
+→ [profile](/researchers/koichi-namekata)
+
+---
 
 ## Section D · 🚀 即将入职 AP · Top 10
 
@@ -219,98 +244,104 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · A Survey of Reinforcement Learning for Large Reasoning Models
+### No. 01 · OpenThoughts-Agent: Data Recipes for Agentic Models
 
-**Kaiyan Zhang** · 一作 · 39 作者 · [arXiv:2509.08827](https://arxiv.org/abs/2509.08827)
+**Negin Raoof** · 一作 · 30 作者 · [arXiv:2606.24855](https://arxiv.org/abs/2606.24855)
 
-*用强化学习将大语言模型转化为推理模型（LRM）。*
+_Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents. Existing open efforts such as SWE-Smith, SERA, and Nemotron-T…_
 
-_In this paper, we survey recent advances in Reinforcement Learning (RL) for reasoning with Large Language Models (LLMs). RL has achieved remarkable success in advancing the frontier of LLM capabilities, particularly in…_
-
-→ [profile](/researchers/kaiyan-zhang)
+→ [profile](/researchers/negin-raoof)
 
 ---
-### No. 02 · Deep Research in Physical Sciences: A Multi-Agent Framework and Comprehensive Benchmark
+### No. 02 · Qwen-AgentWorld: Language World Models for General Agents
 
-**Yigeng Jiang** · 一作 · 28 作者 · [arXiv:2606.18648](https://arxiv.org/abs/2606.18648)
+**Yuxin Zuo** · 一作 · 30 作者 · [arXiv:2606.24597](https://arxiv.org/abs/2606.24597)
 
-_Deep research agents are Large Language Model (LLM)-based systems designed for autonomous, multi-step scientific reasoning, and they hold immense potential for accelerating research in the physical sciences. However, co…_
+_A world model predicts environment dynamics based on current observations and actions, serving as a core cognitive mechanism for reasoning and planning. In this work, we investigate how world modeling based on language…_
 
-→ [profile](/researchers/yigeng-jiang)
-
----
-### No. 03 · Training Open Models for Agentic Phone Use
-
-**Zhengyang Tang** · 一作 · 26 作者 · [arXiv:2606.23049](https://arxiv.org/abs/2606.23049)
-
-_Phones are becoming an important execution surface for general-purpose agents, but training open models for reliable phone use remains difficult because the environment that matters at deployment, real devices running r…_
-
-→ [profile](/researchers/zhengyang-tang)
+→ [profile](/researchers/yuxin-zuo)
 
 ---
-### No. 04 · Process Reinforcement through Implicit Rewards
+### No. 03 · P1: Mastering Physics Olympiads with Reinforcement Learning
 
-**Ganqu Cui** · 一作 · 25 作者 · [arXiv:2502.01456](https://arxiv.org/abs/2502.01456)
+**Jiacheng Chen** · 一作 · 28 作者 · [arXiv:2511.13612](https://arxiv.org/abs/2511.13612)
 
-*通过隐式奖励实现过程奖励模型在线更新，避免昂贵标注。*
+*用强化学习训练开源模型，在IPhO 2025获金牌。*
 
-_Dense process rewards have proven a more effective alternative to the sparse outcome-level rewards in the inference-time scaling of large language models (LLMs), particularly in tasks requiring complex multi-step reason…_
+_Recent progress in large language models (LLMs) has moved the frontier from puzzle-solving to science-grade reasoning-the kind needed to tackle problems whose answers must stand against nature, not merely fit a rubric.…_
+
+→ [profile](/researchers/jiacheng-chen)
+
+---
+### No. 04 · Breaking Bottlenecks in Solid Electrolyte Discovery with Large Artificial Intelligence Models
+
+**Eric Jianfeng Cheng** · 一作 · 25 作者 · [arXiv:2606.24480](https://arxiv.org/abs/2606.24480)
+
+_Solid electrolytes (SEs) are central to next-generation metal batteries, yet their discovery remains constrained by fragmented data, limited transferability of simulations, and slow experimental iteration. Unlike cataly…_
+
+→ [profile](/researchers/eric-jianfeng-cheng)
+
+---
+### No. 05 · The Entropy Mechanism of Reinforcement Learning for Reasoning Language Models
+
+**Ganqu Cui** · 一作 · 17 作者 · [arXiv:2505.22617](https://arxiv.org/abs/2505.22617)
+
+*发现策略熵崩溃瓶颈并提Clip-Cov与KL-Cov控制熵。*
+
+_This paper aims to overcome a major obstacle in scaling RL for reasoning with LLMs, namely the collapse of policy entropy. Such phenomenon is consistently observed across vast RL runs without entropy intervention, where…_
 
 → [profile](/researchers/ganqu-cui)
 
 ---
-### No. 05 · MARTI-MARS$^2$: Scaling Multi-Agent Self-Search via Reinforcement Learning for Code Generation
+### No. 06 · KnowCoder: Coding Structured Knowledge into LLMs for Universal Information Extraction
 
-**Shijie Wang** · 一作 · 24 作者 · [arXiv:2602.07848](https://arxiv.org/abs/2602.07848)
+**Zixuan Li** · 一作 · 17 作者 · [arXiv:2403.07969](https://arxiv.org/abs/2403.07969)
 
-_While the complex reasoning capability of Large Language Models (LLMs) has attracted significant attention, single-agent systems often encounter inherent performance ceilings in complex tasks such as code generation. Mu…_
+*用代码式模式表示统一30,000种知识，提升LLM信息抽取泛化能力。*
 
-→ [profile](/researchers/shijie-wang)
+_In this paper, we propose KnowCoder, a Large Language Model (LLM) to conduct Universal Information Extraction (UIE) via code generation. KnowCoder aims to develop a kind of unified schema representation that LLMs can ea…_
 
----
-### No. 06 · FlowRL: Matching Reward Distributions for LLM Reasoning
-
-**Xuekai Zhu** · 一作 · 23 作者 · [arXiv:2509.15207](https://arxiv.org/abs/2509.15207)
-
-_We propose FlowRL: matching the full reward distribution via flow balancing instead of maximizing rewards in large language model (LLM) reinforcement learning (RL). Recent advanced reasoning models adopt reward-maximizi…_
-
-→ [profile](/researchers/xuekai-zhu)
+→ [profile](/researchers/zixuan-li)
 
 ---
-### No. 07 · FOCA: Future-Oriented Conditioning for Data-Efficient Vision-Language-Action Adaptation
+### No. 07 · NatureBench: Can Coding Agents Match the Published SOTA of Nature-Family Papers?
 
-**Duc Minh Nguyen** · 一作 · 23 作者 · [arXiv:2606.20867](https://arxiv.org/abs/2606.20867)
+**Yuru Wang** · 一作 · 17 作者 · [arXiv:2606.24530](https://arxiv.org/abs/2606.24530)
 
-_Vision-Language-Action (VLA) models enable general-purpose robotic control via large-scale multimodal pretraining, yet their effectiveness under few-shot imitation learning remains limited. We conduct a systematic stres…_
+_We introduce NatureBench, a cross-discipline benchmark of 90 tasks distilled from peer-reviewed Nature-family publications, designed to evaluate whether AI coding agents can move beyond reproduction toward discovery on…_
 
-→ [profile](/researchers/duc-minh-nguyen)
-
----
-### No. 08 · From Perception to Cognition: A Survey of Vision-Language Interactive Reasoning in Multimodal Large Language Models
-
-**Chenyue Zhou** · 一作 · 22 作者 · [arXiv:2509.25373](https://arxiv.org/abs/2509.25373)
-
-_Multimodal Large Language Models (MLLMs) strive to achieve a profound, human-like understanding of and interaction with the physical world, but often exhibit a shallow and incoherent integration when acquiring informati…_
-
-→ [profile](/researchers/chenyue-zhou)
+→ [profile](/researchers/yuru-wang)
 
 ---
-### No. 09 · The USTC-NERCSLIP Systems for the CHiME-9 MCoRec Challenge
+### No. 08 · Enabling Electrical Readout of Néel vector reversal in a van der Waals Antiferromagnet
 
-**Ya Jiang** · 一作 · 22 作者 · [arXiv:2603.01415](https://arxiv.org/abs/2603.01415)
+**Raghvendra Posti** · 一作 · 17 作者 · [arXiv:2606.24527](https://arxiv.org/abs/2606.24527)
 
-_This report details our submission to the CHiME-9 MCoRec Challenge on recognizing and clustering multiple concurrent natural conversations within indoor social settings. Unlike conventional meetings centered on a single…_
+_Owing to its robustness against external perturbations and intrinsically ultrafast dynamics, the Néel vector in antiferromagnets (AFMs) can enable the development of next-generation spintronic and magnonic devices for m…_
 
-→ [profile](/researchers/ya-jiang)
+→ [profile](/researchers/raghvendra-posti)
 
 ---
-### No. 10 · How Far Can Unsupervised RLVR Scale LLM Training?
+### No. 09 · Towards Knowledgeable Deep Research: Framework and Benchmark
 
-**Bingxiang He** · 一作 · 21 作者 · [arXiv:2603.08660](https://arxiv.org/abs/2603.08660)
+**Wenxuan Liu** · 一作 · 16 作者 · [arXiv:2604.07720](https://arxiv.org/abs/2604.07720)
 
-_Unsupervised reinforcement learning with verifiable rewards (URLVR) offers a pathway to scale LLM training beyond the supervision bottleneck by deriving rewards without ground truth labels. Recent works leverage model i…_
+*提出HKA框架，融合结构化知识与多模态生成实现深度研究。*
 
-→ [profile](/researchers/bingxiang-he)
+_Deep Research (DR) requires LLM agents to autonomously perform multi-step information seeking, processing, and reasoning to generate comprehensive reports. In contrast to existing studies that mainly focus on unstructur…_
+
+→ [profile](/researchers/wenxuan-liu)
+
+---
+### No. 10 · Automating Exploratory Proteomics Research via Language Models
+
+**Ning Ding** · 一作 · 16 作者 · [arXiv:2411.03743](https://arxiv.org/abs/2411.03743)
+
+*用LLM自动规划蛋白质组学分析流程并生成假设。*
+
+_With the development of artificial intelligence, its contribution to science is evolving from simulating a complex problem to automating entire research processes and producing novel discoveries. Achieving this advancem…_
+
+→ [profile](/researchers/ning-ding)
 
 ---
 
@@ -320,61 +351,59 @@ _Unsupervised reinforcement learning with verifiable rewards (URLVR) offers a pa
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · A Survey of Reinforcement Learning for Large Reasoning Models
+### No. 01 · OpenThoughts-Agent: Data Recipes for Agentic Models
 
-**Kaiyan Zhang** · 一作 · 39 作者 · [arXiv:2509.08827](https://arxiv.org/abs/2509.08827)
+**Negin Raoof** · 一作 · 30 作者 · [arXiv:2606.24855](https://arxiv.org/abs/2606.24855)
 
-*用强化学习将大语言模型转化为推理模型（LRM）。*
+_Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents. Existing open efforts such as SWE-Smith, SERA, and Nemotron-T…_
 
-_In this paper, we survey recent advances in Reinforcement Learning (RL) for reasoning with Large Language Models (LLMs). RL has achieved remarkable success in advancing the frontier of LLM capabilities, particularly in…_
+**▸ 选中原因：首次出现 · 30 作者合作（疑似大组新人）**
 
-**▸ 选中原因：首次出现 · 39 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/kaiyan-zhang)
+→ [profile](/researchers/negin-raoof)
 
 ---
-### No. 02 · Deep Research in Physical Sciences: A Multi-Agent Framework and Comprehensive Benchmark
+### No. 02 · Breaking Bottlenecks in Solid Electrolyte Discovery with Large Artificial Intelligence Models
 
-**Yigeng Jiang** · 一作 · 28 作者 · [arXiv:2606.18648](https://arxiv.org/abs/2606.18648)
+**Eric Jianfeng Cheng** · 一作 · 25 作者 · [arXiv:2606.24480](https://arxiv.org/abs/2606.24480)
 
-_Deep research agents are Large Language Model (LLM)-based systems designed for autonomous, multi-step scientific reasoning, and they hold immense potential for accelerating research in the physical sciences. However, co…_
+_Solid electrolytes (SEs) are central to next-generation metal batteries, yet their discovery remains constrained by fragmented data, limited transferability of simulations, and slow experimental iteration. Unlike cataly…_
 
-**▸ 选中原因：首次出现 · 28 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 25 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/yigeng-jiang)
-
----
-### No. 03 · FlowRL: Matching Reward Distributions for LLM Reasoning
-
-**Xuekai Zhu** · 一作 · 23 作者 · [arXiv:2509.15207](https://arxiv.org/abs/2509.15207)
-
-_We propose FlowRL: matching the full reward distribution via flow balancing instead of maximizing rewards in large language model (LLM) reinforcement learning (RL). Recent advanced reasoning models adopt reward-maximizi…_
-
-**▸ 选中原因：首次出现 · 23 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/xuekai-zhu)
+→ [profile](/researchers/eric-jianfeng-cheng)
 
 ---
-### No. 04 · Learning Process Rewards via Success Visitation Matching for Efficient RL
+### No. 03 · Enabling Electrical Readout of Néel vector reversal in a van der Waals Antiferromagnet
 
-**Raymond Tsao** · 一作 · 3 作者 · [arXiv:2606.23640](https://arxiv.org/abs/2606.23640)
+**Raghvendra Posti** · 一作 · 17 作者 · [arXiv:2606.24527](https://arxiv.org/abs/2606.24527)
 
-_In many modern applications of reinforcement learning (RL), the natural reward for a task of interest is inherently sparse: a reward of 0 is given everywhere except when the task is completed, when a reward of +1 is giv…_
+_Owing to its robustness against external perturbations and intrinsically ultrafast dynamics, the Néel vector in antiferromagnets (AFMs) can enable the development of next-generation spintronic and magnonic devices for m…_
+
+**▸ 选中原因：首次出现 · 17 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/raghvendra-posti)
+
+---
+### No. 04 · InSight: Self-Guided Skill Acquisition via Steerable VLAs
+
+**Maggie Wang** · 一作 · 6 作者 · [arXiv:2606.24884](https://arxiv.org/abs/2606.24884)
+
+_Vision-language-action (VLA) models can learn manipulation skills from demonstrations, but their capabilities are bounded by the skills in the training data. We present InSight, a framework that unlocks autonomous skill…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/raymond-tsao)
+→ [profile](/researchers/maggie-wang)
 
 ---
-### No. 05 · SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors
+### No. 05 · AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction
 
-**Pratyaksh Rao** · 一作 · 5 作者 · [arXiv:2606.23444](https://arxiv.org/abs/2606.23444)
+**Shanhui Zhao** · 一作 · 16 作者 · [arXiv:2606.23449](https://arxiv.org/abs/2606.23449)
 
-_Accurate dynamics models are critical for informed decision-making in robotic systems, particularly for agile aerial vehicles operating under uncertainty. Neural network dynamics models are attractive for capturing comp…_
+_AI agents are driving a new software paradigm, with the ability to autonomously call tools, extract information, manage memory, and complete tasks that span applications and data sources. Most existing end-user operatin…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/pratyaksh-rao)
+→ [profile](/researchers/shanhui-zhao)
 
 ---
 
