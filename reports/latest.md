@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 043                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · FRIDAY, JUNE 26, 2026
+VOL. 1 · NO. 044                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, JUNE 27, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 043 · 2026-06-26
+> *All The Researchers Fit To Watch* — Vol. 1, No. 044 · 2026-06-27
 
-_Auto-generated at 2026-06-26T05:28:12+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-06-27T05:07:28+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,137 +15,120 @@ _Auto-generated at 2026-06-26T05:28:12+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **30083** | 164 | 659 | 9 | 74 |
+| **30320** | 47 | 237 | 9 | 74 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · QPILOTS: Efficient Test-Time Q-Steering for Flow Policies
+### No. 01 · SpatialFlow-GRPO: Where Spatial Credit Drives Image Editing
 
-**Yifan Ruan** · 一作 · 10 作者 · [arXiv:2606.14801](https://arxiv.org/abs/2606.14801)
+**Yankai Yang** · 一作 · 10 作者 · [arXiv:2606.26872](https://arxiv.org/abs/2606.26872)
 
-*在推理时通过投影中间噪声到干净动作计算评论家梯度来引导扩散策略。*
+_Recent online reinforcement learning has substantially improved image editing quality. However, existing Flow-GRPO-style methods usually rely on a single whole-image reward, which makes fine-grained editing optimization…_
 
-_Flow-matching and diffusion policies are expressive action generators, but optimizing them with temporal-difference reinforcement learning (RL) remains difficult. Effective policy extraction requires exploiting the crit…_
-
-→ [profile](/researchers/yifan-ruan)
+→ [profile](/researchers/yankai-yang)
 
 ---
-### No. 02 · Beyond Value Benchmarks: Measuring Value-Structure Alignment in Large Language Models via Symmetric Q-Sorts
+### No. 02 · AgentX: Towards Agent-Driven Self-Iteration of Industrial Recommender Systems
 
-**Jingting Zheng** · 一作 · 5 作者 · [arXiv:2606.21939](https://arxiv.org/abs/2606.21939)
+**Changxin Lao** · 一作 · 60 作者 · [arXiv:2606.26859](https://arxiv.org/abs/2606.26859)
 
-*用Q方法测量大模型与人类价值结构的对齐度。*
+_Recommendation algorithm iteration is moving from an artisanal, engineer-bound process toward an industrialized research loop, but this transition remains blocked by a structural execution bottleneck: the idea-to-launch…_
 
-_Large Language Models (LLMs) are increasingly deployed in contexts requiring complex moral reasoning and value trade-offs. However, existing evaluations typically rely on item-level behavioral metrics, which fail to cap…_
-
-→ [profile](/researchers/jingting-zheng)
+→ [profile](/researchers/changxin-lao)
 
 ---
-### No. 03 · MASS: Deep Research for Social Sciences with Memory-Augmented Social Simulation
+### No. 03 · StaminaBench: Stress-Testing Coding Agents over 100 Interaction Turns
 
-**Yongrui Liu** · 一作 · 2 作者 · [arXiv:2606.09198](https://arxiv.org/abs/2606.09198)
+**Vlad Sobal** · 一作 · 5 作者 · [arXiv:2606.19613](https://arxiv.org/abs/2606.19613)
 
-*用社会模拟与记忆增强提升LLM社科论文创新性。*
+_We introduce StaminaBench, a benchmark that measures the stamina of coding agents: how many consecutive interaction turns (change requests) they can handle before failing. Unlike the prevailing fraction-of-tasks-solved…_
 
-_Deep Research agents powered by Large Language Models (LLMs) have exhibited extraordinary potential in automated paper writing tasks. However, existing systems rely heavily on literature retrieval and synthesis through…_
-
-→ [profile](/researchers/yongrui-liu)
+→ [profile](/researchers/vlad-sobal)
 
 ---
-### No. 04 · TENP: Trapezoidal Expert Neuron Pruning For Mixture-of-Experts
+### No. 04 · LLMZero: Discovering Adaptive Training Strategies for RL Post-Training via LLM Agents
 
-**Jiangyang He** · 一作 · 3 作者 · [arXiv:2606.09885](https://arxiv.org/abs/2606.09885)
+**Haoyang Fang** · 一作 · 14 作者 · [arXiv:2606.18388](https://arxiv.org/abs/2606.18388)
 
-*提出梯形专家神经元剪枝，保留重要专家与神经元。*
+_RL post-training strategies are dataset-dependent and reveal a recurring empirical pattern: capacity parameters accumulate monotonically across stages, while regularization parameters predominantly oscillate in response…_
 
-_Mixture-of-Experts large language models (LLMs) scale efficiently through sparse activation, yet their deployment is fundamentally constrained by the large static parameter footprint of experts. Existing compression app…_
-
-→ [profile](/researchers/jiangyang-he)
+→ [profile](/researchers/haoyang-fang)
 
 ---
-### No. 05 · CELEUS: Certifiable and Efficient LLM Evaluation via E-Processes
+### No. 05 · $E_\infty^{1,2}$-type Lieb-Schultz-Mattis anomalies, deconfined quantum critical points, and non-invertible symmetry breaking
 
-**Zhijian Zhou** · 一作 · 5 作者 · [arXiv:2606.20820](https://arxiv.org/abs/2606.20820)
+**Hao-Ran Zhang** · 一作 · 4 作者 · [arXiv:2606.06343](https://arxiv.org/abs/2606.06343)
 
-*用E-processes构建任意有效置信区间，实现高效可认证LLM评估。*
+_We study deconfined quantum critical points (DQCP) associated with Lieb-Schultz-Mattis (LSM) anomalies in one-dimensional spin chains. Our starting point is a structural characterization of the LSM anomaly in the Lyndon…_
 
-_Can we trust evaluation scores to capture an LLM's true real-world performance? Certifiable evaluation answers this question by providing guarantee for LLM evaluation. In particular, existing methods sequentially curate…_
-
-→ [profile](/researchers/zhijian-zhou)
+→ [profile](/researchers/hao-ran-zhang)
 
 ---
-### No. 06 · Pulse: Training Acceleration for Large Diffusion Models with Automatic Pipeline Parallelism
+### No. 06 · DLLG: Dynamic Logit-Level Gating of LLM Experts
 
-**Boran Sun** · 一作 · 11 作者 · [arXiv:2606.19163](https://arxiv.org/abs/2606.19163)
+**Bingnan Li** · 一作 · 9 作者 · [arXiv:2606.04378](https://arxiv.org/abs/2606.04378)
 
-*通过同设备放置跳跃连接层消除通信瓶颈，加速扩散模型训练。*
+*用动态logit门控融合多专家输出，无需重训练。*
 
-_Diffusion models are now a dominant approach for high-fidelity image and video generation, yet scaling their training across GPU clusters remains challenging. Unlike transformer-only architectures, diffusion backbones c…_
+_Leveraging multiple specialized LLMs can combine complementary strengths, but existing approaches trade adaptability for stability: routing commits prematurely, heuristic ensembling depends on fragile proxies, and param…_
 
-→ [profile](/researchers/boran-sun)
-
----
-### No. 07 · FragFuse: Bypassing Access Control of Large Language Model Agents via Memory-Based Query Fragmentation and Fusion
-
-**Zixin Rao** · 一作 · 8 作者 · [arXiv:2606.15609](https://arxiv.org/abs/2606.15609)
-
-*利用记忆碎片化与融合绕过LLM代理访问控制。*
-
-_Large language model (LLM) agents increasingly rely on long-term memory to support complex task execution, user personalization, and domain adaptation. Meanwhile, emerging access-control mechanisms for LLM agents are be…_
-
-→ [profile](/researchers/zixin-rao)
+→ [profile](/researchers/bingnan-li)
 
 ---
-### No. 08 · Approximate Maximin Share with Subjective Divisibility: Beating the 1/2 Barrier
+### No. 07 · Consolidating Rewarded Perturbations for LLM Post-Training
 
-**Xiaohui Bei** · 一作 · 4 作者 · [arXiv:2606.13057](https://arxiv.org/abs/2606.13057)
+**Zheyu Zhang** · 一作 · 3 作者 · [arXiv:2605.31494](https://arxiv.org/abs/2605.31494)
 
-*主观可分性下MMS近似比突破1/2至5/9。*
+*提出CoRP梯度无关算子，将奖励扰动合并为单模型。*
 
-_Maximin share (MMS) stands out as a central notion in fair resource allocation. It is known that exact MMS fairness is not always attainable, especially when agents differ along two dimensions: their valuations and thei…_
+_Post-training of language models is commonly framed as a sample-score-update loop implemented by gradient descent. A recent line of work, exemplified by RandOpt, relocates this loop to weight space, sampling Gaussian pe…_
 
-→ [profile](/researchers/xiaohui-bei)
-
----
-### No. 09 · Is Spurious Correlation Removal Always Learnable?
-
-**Yibo Zhou** · 一作 · 6 作者 · [arXiv:2606.12930](https://arxiv.org/abs/2606.12930)
-
-*证明不变学习存在计算障碍，需指数级样本。*
-
-_Invariant learning can fail even when the invariant structure is statistically identifiable. We show a conditional computational barrier: under a black-box samplable supervised sparse recovery primitive motivated by ave…_
-
-→ [profile](/researchers/yibo-zhou)
+→ [profile](/researchers/zheyu-zhang)
 
 ---
-### No. 10 · Skill-Augmented AI Agents for Medical Research Analysis: An Exploratory Multi-Model Human Evaluation in an NSCLC Transcriptomic Biomarker Task
+### No. 08 · LATTE: Forecasting Peer Anchored Preference Trajectories for Personalized LLM Generation
 
-**Qianyu Yao** · 一作 · 13 作者 · [arXiv:2606.11830](https://arxiv.org/abs/2606.11830)
+**Jinze Li** · 一作 · 8 作者 · [arXiv:2605.26612](https://arxiv.org/abs/2605.26612)
 
-*通过技能增强AI代理提升医学研究分析质量。*
+*用轨迹预测和锚定对比状态实现个性化LLM生成。*
 
-_Background. Large language models and AI agents are increasingly used to support biomedical research, but native model outputs may omit key analytical steps, misuse methods, or overstate conclusions. We evaluated whethe…_
+_Personalized generation with frozen large language models requires a conditioning signal that is both compact and current. Existing personalization methods typically retrieve or summarize user histories in text, or comp…_
 
-→ [profile](/researchers/qianyu-yao)
+→ [profile](/researchers/jinze-li)
+
+---
+### No. 09 · Beyond the Target: From Imitation to Collaboration in Speculative Decoding
+
+**Jinze Li** · 一作 · 10 作者 · [arXiv:2605.24793](https://arxiv.org/abs/2605.24793)
+
+*用强化学习训练仲裁策略，在分歧时选择草稿或目标模型令牌。*
+
+_Speculative decoding (SPD) accelerates large language model (LLM) inference by letting a smaller draft model propose multiple future tokens that are verified in parallel by a larger target model. The dominant SPD paradi…_
+
+→ [profile](/researchers/jinze-li)
+
+---
+### No. 10 · NasZip: Software and Hardware Co-Design to Accelerate Approximate Nearest Neighbor Search with DIMM-Based Near-Data Processing
+
+**Cheng Zou** · 一作 · 9 作者 · [arXiv:2605.21952](https://arxiv.org/abs/2605.21952)
+
+*软硬协同设计，用PCA引导早期退出加速近似最近邻搜索。*
+
+_As large language models (LLMs) continue to advance, retrieval-augmented generation (RAG) has become the key mechanism for expanding model knowledge and reducing hallucinations. Central to RAG is approximate nearest nei…_
+
+→ [profile](/researchers/cheng-zou)
 
 ---
 
-## Section B · 🔄 动态更新 · 10 项
+## Section B · 🔄 动态更新 · 3 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Bo Li](/researchers/bo-li-uchicago) | CELEUS: Certifiable and Efficient LLM Evaluation via E-Processes | — | [2606.20820](https://arxiv.org/abs/2606.20820) |
-| [Bo Li](/researchers/bo-li-uchicago) | Pulse: Training Acceleration for Large Diffusion Models with Automati… | — | [2606.19163](https://arxiv.org/abs/2606.19163) |
-| [Bo Li](/researchers/bo-li-uchicago) | FragFuse: Bypassing Access Control of Large Language Model Agents via… | — | [2606.15609](https://arxiv.org/abs/2606.15609) |
-| [Bo Li](/researchers/bo-li-uchicago) | Approximate Maximin Share with Subjective Divisibility: Beating the 1… | — | [2606.13057](https://arxiv.org/abs/2606.13057) |
-| [Bo Li](/researchers/bo-li-uchicago) | Is Spurious Correlation Removal Always Learnable? | — | [2606.12930](https://arxiv.org/abs/2606.12930) |
-| [Bo Li](/researchers/bo-li-uchicago) | Non-Hermitian Delocalization Realizes Random Dirac Criticality in One… | — | [2606.12089](https://arxiv.org/abs/2606.12089) |
-| [Bo Li](/researchers/bo-li-uchicago) | Skill-Augmented AI Agents for Medical Research Analysis: An Explorato… | — | [2606.11830](https://arxiv.org/abs/2606.11830) |
-| [Bo Li](/researchers/bo-li-uchicago) | regcorr: An R Package for Regression Models of Pearson Correlation Co… | — | [2606.05676](https://arxiv.org/abs/2606.05676) |
-| [Bo Li](/researchers/bo-li-uchicago) | New Benchmarking Shows Limited Generalization Power of TCR Antigenic… | — | [2606.04994](https://arxiv.org/abs/2606.04994) |
-| [Bo Li](/researchers/bo-li-uchicago) | Quantifying the Energy Floor: Direct Measurement and Replay Buffer Bi… | — | [2606.01665](https://arxiv.org/abs/2606.01665) |
+| [Ya-Qin Zhang](/researchers/yaqin-zhang) | Visual Tracking Based on Siamese Network of Fused Score Map | — | [None](#) |
+| [Pieter Abbeel](/researchers/pieter-abbeel) | Auto-Tuned Sim-to-Real Transfer | — | [None](#) |
+| [Deepak Pathak](/researchers/deepak-pathak) | Auto-Tuned Sim-to-Real Transfer | — | [None](#) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -246,162 +229,148 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation
+### No. 01 · AgentX: Towards Agent-Driven Self-Iteration of Industrial Recommender Systems
 
-**Zekai Zhang** · 一作 · 21 作者 · [arXiv:2606.26907](https://arxiv.org/abs/2606.26907)
+**Changxin Lao** · 一作 · 60 作者 · [arXiv:2606.26859](https://arxiv.org/abs/2606.26859)
 
-_While text-to-image (T2I) models have achieved remarkable progress, they struggle with real-world requests that are often underspecified, implicit, or dependent on up-to-date knowledge. We identify this challenge as the…_
+_Recommendation algorithm iteration is moving from an artisanal, engineer-bound process toward an industrialized research loop, but this transition remains blocked by a structural execution bottleneck: the idea-to-launch…_
 
-→ [profile](/researchers/zekai-zhang)
-
----
-### No. 02 · COrigami: An AI Pipeline for Co-Designing Flat-Foldable Visually Recognisable Origami
-
-**Tom Zahavy** · 一作 · 19 作者 · [arXiv:2606.26299](https://arxiv.org/abs/2606.26299)
-
-_While generative AI has achieved remarkable success in solving problems with verifiable solutions, generating physical art that satisfies both strict geometric constraints and subjective visual aesthetics remains a chal…_
-
-→ [profile](/researchers/tom-zahavy)
+→ [profile](/researchers/changxin-lao)
 
 ---
-### No. 03 · 3D Imaging of Complex Skyrmion and Hopf Topologies in an Extended Sample
+### No. 02 · Running the Gauntlet: Re-evaluating the Capabilities of Agents Beyond Familiar Environments
 
-**I. Binnie** · 一作 · 19 作者 · [arXiv:2606.27365](https://arxiv.org/abs/2606.27365)
+**Mykola Vysotskyi** · 一作 · 25 作者 · [arXiv:2606.14397](https://arxiv.org/abs/2606.14397)
 
-_Spin textures are key for emergent magnetic phenomena such as topological protection and underpin novel spintronic device paradigms based on racetrack memory, logic gates, and neuromorphic computing. Using a coherent di…_
+_As agentic systems continue to evolve and are widely deployed in real-world scenarios, there is a growing demand to faithfully evaluate their capabilities. However, current benchmarks are typically built on popular appl…_
 
-→ [profile](/researchers/i-binnie)
-
----
-### No. 04 · Scalable Behavior Cloning with Open Data, Training, and Evaluation
-
-**Arthur Allshire** · 一作 · 18 作者 · [arXiv:2606.27375](https://arxiv.org/abs/2606.27375)
-
-_We introduce ABC, a fully open-source stack for manipulation with behavior cloning. At its core is ABC-130K: the largest open-source teleoperation dataset to date, featuring 3,500 hours of data spanning over 130K episod…_
-
-→ [profile](/researchers/arthur-allshire)
+→ [profile](/researchers/mykola-vysotskyi)
 
 ---
-### No. 05 · Giant and Broadband Circular Dichroism from Particle-Hole Symmetry Breaking in Weyl Semimetals
+### No. 03 · LLM Agents Enable User-Governed Personalization Beyond Platform Boundaries
 
-**Xiangyu Jiang** · 一作 · 17 作者 · [arXiv:2606.26810](https://arxiv.org/abs/2606.26810)
+**Jiacheng Lin** · 一作 · 18 作者 · [arXiv:2605.09794](https://arxiv.org/abs/2605.09794)
 
-_Circular dichroism originates from symmetry breaking of material structure, leading to differential absorption of left- and right-circularly polarized light. However, circular dichroism in most materials is inherently w…_
+*用LLM代理实现跨平台用户自主个性化整合。*
 
-→ [profile](/researchers/xiangyu-jiang)
+_Personalization today is fundamentally platform-centric: services build user representations from the behavioral fragments they observe. Yet no platform can construct a complete picture of the user, as competitive incen…_
 
----
-### No. 06 · PhysEditWorld: A Large-Scale Dataset Toward Physics-Editable World Models
-
-**Bin Hu** · 一作 · 17 作者 · [arXiv:2606.26694](https://arxiv.org/abs/2606.26694)
-
-_Recent game world models can synthesize visually plausible, action-conditioned rollouts. However, their interaction behaviors often remain limited to exploratory or wandering trajectories, and physical dynamics are typi…_
-
-→ [profile](/researchers/bin-hu)
+→ [profile](/researchers/jiacheng-lin)
 
 ---
-### No. 07 · LA4VLA: Learning to Act without Seeing via Language-Action Pretraining
+### No. 04 · Pythia: Exploiting Workflow Predictability for Efficient Agent-Native LLM Serving
 
-**Tao Lin** · 一作 · 16 作者 · [arXiv:2606.27295](https://arxiv.org/abs/2606.27295)
+**Shan Yu** · 一作 · 17 作者 · [arXiv:2604.25899](https://arxiv.org/abs/2604.25899)
 
-_Vision-Language-Action (VLA) models are commonly pretrained on robot demonstrations by jointly mapping visual observations and language instructions to actions. However, dense visual-action supervision can dominate the…_
+*利用工作流可预测性优化多代理LLM服务性能。*
 
-→ [profile](/researchers/tao-lin)
+_As LLM applications grow more complex, developers are increasingly adopting multi-agent architectures to decompose workflows into specialized, collaborative components, introducing structure that constrains agent behavi…_
 
----
-### No. 08 · DPA-2: a large atomic model as a multi-task learner
-
-**Duo Zhang** · 一作 · 15 作者 · [arXiv:None](#)
-
-*多任务预训练大原子模型DPA-2提升下游泛化能力。*
-
-_The rapid advancements in artificial intelligence (AI) are catalyzing transformative changes in atomic modeling, simulation, and design. AI-driven potential energy models have demonstrated the capability to conduct larg…_
-
-→ [profile](/researchers/duo-zhang)
+→ [profile](/researchers/shan-yu)
 
 ---
-### No. 09 · Accessing both electrochemical SEIRA and SERS with ultrasensitive metamaterials for enhanced molecular identification
+### No. 05 · LLMZero: Discovering Adaptive Training Strategies for RL Post-Training via LLM Agents
 
-**Nicolas Spiesshofer** · 一作 · 14 作者 · [arXiv:2606.27367](https://arxiv.org/abs/2606.27367)
+**Haoyang Fang** · 一作 · 14 作者 · [arXiv:2606.18388](https://arxiv.org/abs/2606.18388)
 
-_Surface-enhanced IR absorption (SEIRA) and surface-enhanced Raman spectroscopy (SERS) are complementary techniques that allow for ultrasensitive chemical fingerprinting. Non-invasive optical sensing would be significant…_
+_RL post-training strategies are dataset-dependent and reveal a recurring empirical pattern: capacity parameters accumulate monotonically across stages, while regularization parameters predominantly oscillate in response…_
 
-→ [profile](/researchers/nicolas-spiesshofer)
+→ [profile](/researchers/haoyang-fang)
 
 ---
-### No. 10 · Skill-Augmented AI Agents for Medical Research Analysis: An Exploratory Multi-Model Human Evaluation in an NSCLC Transcriptomic Biomarker Task
+### No. 06 · TouchAnything: A Dataset and Framework for Bimanual Tactile Estimation from Egocentric Video
 
-**Qianyu Yao** · 一作 · 13 作者 · [arXiv:2606.11830](https://arxiv.org/abs/2606.11830)
+**Jianyi Zhou** · 一作 · 14 作者 · [arXiv:2605.13083](https://arxiv.org/abs/2605.13083)
 
-*通过技能增强AI代理提升医学研究分析质量。*
+*多视图视觉推断触觉信号，提升双手交互物理表征。*
 
-_Background. Large language models and AI agents are increasingly used to support biomedical research, but native model outputs may omit key analytical steps, misuse methods, or overstate conclusions. We evaluated whethe…_
+_Egocentric human video data, which captures rich human-environment interactions and can be collected at scale, has become a key driver of embodied intelligence research. However, existing egocentric datasets typically l…_
 
-→ [profile](/researchers/qianyu-yao)
+→ [profile](/researchers/jianyi-zhou)
+
+---
+### No. 07 · Bian Que: An Agentic Framework with Flexible Skill Arrangement for Online System Operations
+
+**Bochao Liu** · 一作 · 13 作者 · [arXiv:2604.26805](https://arxiv.org/abs/2604.26805)
+
+*提出灵活技能编排的智能运维框架，降低告警量75%。*
+
+_Operating and maintaining (O&M) large-scale online engine systems (eg, search, recommendation and advertising) demands substantial human effort for release monitoring, alert response, and root cause analysis. Despite th…_
+
+→ [profile](/researchers/bochao-liu)
+
+---
+### No. 08 · JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting
+
+**Lanxiang Hu** · 一作 · 12 作者 · [arXiv:2606.18394](https://arxiv.org/abs/2606.18394)
+
+_Speculative decoding (SD) accelerates autoregressive Large Language Models (LLMs) by drafting multiple tokens and verifying them in parallel, but it faces a scaling limitation: increasing the draft budget improves speed…_
+
+→ [profile](/researchers/lanxiang-hu)
+
+---
+### No. 09 · Clipping Bottleneck: Stabilizing RLVR via Stochastic Recovery of Near-Boundary Signals
+
+**Shuo Yang** · 一作 · 11 作者 · [arXiv:2605.22703](https://arxiv.org/abs/2605.22703)
+
+*随机恢复近边界信号稳定强化学习验证奖励训练。*
+
+_Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as a central paradigm for scaling LLM reasoning, yet its optimization often suffers from training instability and suboptimal convergence. Through a syste…_
+
+→ [profile](/researchers/shuo-yang)
+
+---
+### No. 10 · Magnetic Evolution of Highly-Sheared Region in Active Region 13842 Producing Large X9.0 Flare
+
+**Yijun Hou** · 一作 · 11 作者 · [arXiv:2605.10892](https://arxiv.org/abs/2605.10892)
+
+*揭示对冲剪切磁极性线驱动磁绳反复形成引发大耀斑。*
+
+_Shearing motion and magnetic flux cancellation around the polarity inversion line (PIL) play significant roles in the build-up of free magnetic energy and magnetic flux rope (MFR) in source region of major solar flares.…_
+
+→ [profile](/researchers/yijun-hou)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 5 个
+## Section F · 🌙 Sleeper Picks · 3 个
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · 3D Imaging of Complex Skyrmion and Hopf Topologies in an Extended Sample
+### No. 01 · AgentX: Towards Agent-Driven Self-Iteration of Industrial Recommender Systems
 
-**I. Binnie** · 一作 · 19 作者 · [arXiv:2606.27365](https://arxiv.org/abs/2606.27365)
+**Changxin Lao** · 一作 · 60 作者 · [arXiv:2606.26859](https://arxiv.org/abs/2606.26859)
 
-_Spin textures are key for emergent magnetic phenomena such as topological protection and underpin novel spintronic device paradigms based on racetrack memory, logic gates, and neuromorphic computing. Using a coherent di…_
+_Recommendation algorithm iteration is moving from an artisanal, engineer-bound process toward an industrialized research loop, but this transition remains blocked by a structural execution bottleneck: the idea-to-launch…_
 
-**▸ 选中原因：首次出现 · 19 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 60 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/i-binnie)
-
----
-### No. 02 · COrigami: An AI Pipeline for Co-Designing Flat-Foldable Visually Recognisable Origami
-
-**Tom Zahavy** · 一作 · 19 作者 · [arXiv:2606.26299](https://arxiv.org/abs/2606.26299)
-
-_While generative AI has achieved remarkable success in solving problems with verifiable solutions, generating physical art that satisfies both strict geometric constraints and subjective visual aesthetics remains a chal…_
-
-**▸ 选中原因：首次出现 · 19 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/tom-zahavy)
+→ [profile](/researchers/changxin-lao)
 
 ---
-### No. 03 · Scalable Behavior Cloning with Open Data, Training, and Evaluation
+### No. 02 · Running the Gauntlet: Re-evaluating the Capabilities of Agents Beyond Familiar Environments
 
-**Arthur Allshire** · 一作 · 18 作者 · [arXiv:2606.27375](https://arxiv.org/abs/2606.27375)
+**Mykola Vysotskyi** · 一作 · 25 作者 · [arXiv:2606.14397](https://arxiv.org/abs/2606.14397)
 
-_We introduce ABC, a fully open-source stack for manipulation with behavior cloning. At its core is ABC-130K: the largest open-source teleoperation dataset to date, featuring 3,500 hours of data spanning over 130K episod…_
+_As agentic systems continue to evolve and are widely deployed in real-world scenarios, there is a growing demand to faithfully evaluate their capabilities. However, current benchmarks are typically built on popular appl…_
+
+**▸ 选中原因：首次出现 · 25 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/mykola-vysotskyi)
+
+---
+### No. 03 · LLM Agents Enable User-Governed Personalization Beyond Platform Boundaries
+
+**Jiacheng Lin** · 一作 · 18 作者 · [arXiv:2605.09794](https://arxiv.org/abs/2605.09794)
+
+*用LLM代理实现跨平台用户自主个性化整合。*
+
+_Personalization today is fundamentally platform-centric: services build user representations from the behavioral fragments they observe. Yet no platform can construct a complete picture of the user, as competitive incen…_
 
 **▸ 选中原因：首次出现 · 18 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/arthur-allshire)
-
----
-### No. 04 · Risk-Aware Selective Multimodal Driver Monitoring with Driver-State World Modeling
-
-**Daosheng Qiu** · 一作 · 7 作者 · [arXiv:2606.26922](https://arxiv.org/abs/2606.26922)
-
-_Continuous driver monitoring in automated vehicles requires low-latency inference while avoiding unsafe decisions under uncertain driver states. Large vision-language models provide broad multimodal priors, but their la…_
-
-**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
-
-→ [profile](/researchers/daosheng-qiu)
-
----
-### No. 05 · CELEUS: Certifiable and Efficient LLM Evaluation via E-Processes
-
-**Zhijian Zhou** · 一作 · 5 作者 · [arXiv:2606.20820](https://arxiv.org/abs/2606.20820)
-
-*用E-processes构建任意有效置信区间，实现高效可认证LLM评估。*
-
-_Can we trust evaluation scores to capture an LLM's true real-world performance? Certifiable evaluation answers this question by providing guarantee for LLM evaluation. In particular, existing methods sequentially curate…_
-
-**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
-
-→ [profile](/researchers/zhijian-zhou)
+→ [profile](/researchers/jiacheng-lin)
 
 ---
 
