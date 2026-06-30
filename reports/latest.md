@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 046                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · MONDAY, JUNE 29, 2026
+VOL. 1 · NO. 047                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · TUESDAY, JUNE 30, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 046 · 2026-06-29
+> *All The Researchers Fit To Watch* — Vol. 1, No. 047 · 2026-06-30
 
-_Auto-generated at 2026-06-29T05:46:51+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-06-30T05:20:51+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,121 +15,129 @@ _Auto-generated at 2026-06-29T05:46:51+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **30737** | 96 | 415 | 9 | 76 |
+| **31819** | 246 | 1082 | 10 | 76 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Formalizing Latent Thoughts: Four Axioms of Thought Representation in LLMs
+### No. 01 · CRISP: Compressing Redundancy in Chain-of-Thought via Intrinsic Saliency Pruning
 
-**Fahd Seddik** · 一作 · 2 作者 · [arXiv:2606.27378](https://arxiv.org/abs/2606.27378)
+**Yangsong Lan** · 一作 · 3 作者 · [arXiv:2604.17297](https://arxiv.org/abs/2604.17297)
 
-*提出四公理量化评估LLM潜在思维表征缺陷。*
+_Long Chain-of-Thought (CoT) reasoning is pivotal for the success of recent reasoning models but suffers from high computational overhead and latency. While prior works attempt to compress CoT via external compressor, th…_
 
-_We introduce an axiomatic evaluation framework for latent thought representations in LLMs, comprising metrics that are independent of downstream benchmark scores and reveal representational failures that benchmark accur…_
-
-→ [profile](/researchers/fahd-seddik)
+→ [profile](/researchers/yangsong-lan)
 
 ---
-### No. 02 · SingGuard: A Policy-Adaptive Multimodal LLM Guardrail with Dynamic Reasoning
+### No. 02 · AgentVLN: Towards Agentic Vision-and-Language Navigation
 
-**SingGuard Team** · 一作 · 1 作者 · [arXiv:2606.22873](https://arxiv.org/abs/2606.22873)
+**Zihao Xin** · 一作 · 9 作者 · [arXiv:2603.17670](https://arxiv.org/abs/2603.17670)
 
-*将动态策略作为运行时输入，用快慢解耦强化学习优化多模态LLM安全推理。*
+_Vision-and-Language Navigation (VLN) requires an embodied agent to ground complex natural-language instructions into long-horizon navigation in unseen environments. While Vision-Language Models (VLMs) offer strong 2D se…_
 
-_Vision-language models (VLMs) are increasingly deployed in consumer, medical, financial, and enterprise applications. This broad deployment expands the safety surface: risks can arise from multimodal question answering,…_
-
-→ [profile](/researchers/singguard-team)
+→ [profile](/researchers/zihao-xin)
 
 ---
-### No. 03 · ProMSA:Progressive Multimodal Search Agents for Knowledge-Based Visual Question Answering
+### No. 03 · Temporal Guidance for Large Language Models
 
-**ZhengXian Wu** · 一作 · 11 作者 · [arXiv:2606.27974](https://arxiv.org/abs/2606.27974)
+**Hong-Kai Zheng** · 一作 · 2 作者 · [arXiv:2601.21744](https://arxiv.org/abs/2601.21744)
 
-*用强化学习训练多模态搜索代理，动态选择工具并去重。*
+_Contrastive Decoding (CD) enhances the generation quality of large language models (LLMs) but incurs significant additional computational overhead due to the need for an auxiliary model. Existing internal self-contrasti…_
 
-_Knowledge-based Visual Question Answering (KB-VQA) requires models to combine image understanding with external knowledge. Most prior methods use a fixed retrieve-then-generate pipeline with a pre-selected retriever and…_
-
-→ [profile](/researchers/zhengxian-wu)
+→ [profile](/researchers/hong-kai-zheng)
 
 ---
-### No. 04 · Boundary-Aware Context Grounding for A Low-Channel EEG Agent
+### No. 04 · Hallucination Mitigating for Medical Report Generation
 
-**Zhiyuan Xu** · 一作 · 4 作者 · [arXiv:2606.26519](https://arxiv.org/abs/2606.26519)
+**Ruoqing Zhao** · 一作 · 3 作者 · [arXiv:2601.15745](https://arxiv.org/abs/2601.15745)
 
-*分离确定性EEG引擎与LLM层实现硬件感知边界约束。*
+_In the realm of medical report generation (MRG), the integration of natural language processing has emerged as a vital tool to alleviate the workload of radiologists. Despite the impressive capabilities demonstrated by…_
 
-_Large language models (LLMs) can make scientific software easier to use. However, a general model does not automatically know which measurements a particular sensor can support, which algorithms are implemented in the c…_
-
-→ [profile](/researchers/zhiyuan-xu)
+→ [profile](/researchers/ruoqing-zhao)
 
 ---
-### No. 05 · Optimal parameterization of nonequilibrium generalized master equations from discrete-time experimental data
+### No. 05 · LSRS: Latent Scale Rejection Sampling for Visual Autoregressive Modeling
 
-**Chih-Wei Joshua Liu** · 一作 · 3 作者 · [arXiv:2606.28289](https://arxiv.org/abs/2606.28289)
+**Hong-Kai Zheng** · 一作 · 2 作者 · [arXiv:2512.03796](https://arxiv.org/abs/2512.03796)
 
-_Kinetic analyses of experiments often require coarse-grained descriptions, but complex systems rarely conform to the widely used modeling assumptions of Markovianity and thermodynamic equilibrium. Memory is indeed a gen…_
+_Visual Autoregressive (VAR) modeling approach for image generation proposes autoregressive processing across hierarchical scales, decoding multiple tokens per scale in parallel. This method achieves high-quality generat…_
 
-→ [profile](/researchers/chih-wei-joshua-liu)
-
----
-### No. 06 · Efficient targeting of arbitrary excited states with quantum inverse power iteration through filtering polynomials
-
-**Srushti Patil** · 一作 · 2 作者 · [arXiv:2606.28255](https://arxiv.org/abs/2606.28255)
-
-_In this work, we introduce a quantum inverse power iteration (QIPI) algorithm based on the quantum singular value transformation (QSVT) to target arbitrary excited states. Given an energy shift $ω$, QIPI prepares the ta…_
-
-→ [profile](/researchers/srushti-patil)
+→ [profile](/researchers/hong-kai-zheng)
 
 ---
-### No. 07 · Moiré Phonons and Emergent Exciton-Phonon Coupling in a Moiré Heterobilayer
+### No. 06 · Group-Wise Optimization for Self-Extensible Codebooks in Vector Quantized Models
 
-**Can B. Uzundal** · 一作 · 16 作者 · [arXiv:2606.28185](https://arxiv.org/abs/2606.28185)
+**Hong-Kai Zheng** · 一作 · 2 作者 · [arXiv:2510.13331](https://arxiv.org/abs/2510.13331)
 
-_Moiré superlattices have emerged as a new platform for engineering electronic and optical properties in van der Waals heterostructures, enabling control over correlated and excitonic phenomena. Yet the impact of moiré s…_
+_Vector Quantized Variational Autoencoders (VQ-VAEs) leverage self-supervised learning through reconstruction tasks to represent continuous vectors using the closest vectors in a codebook. However, issues such as codeboo…_
 
-→ [profile](/researchers/can-b-uzundal)
-
----
-### No. 08 · Uniaxial compression of crystalline HCP titanium: an atomistic modelling study of size effects
-
-**Fatemeh Safari** · 一作 · 2 作者 · [arXiv:2606.28155](https://arxiv.org/abs/2606.28155)
-
-_Understanding the deformation behaviour of titanium is important not only for technological advances associated with industrially-relevant applications, but also essential to achieve a fundamental understanding of the m…_
-
-→ [profile](/researchers/fatemeh-safari)
+→ [profile](/researchers/hong-kai-zheng)
 
 ---
-### No. 09 · A single platform with van der Pauw geometry for measurement of Seebeck coefficient, resistivity, and Hall effect of thin films
+### No. 07 · From Reasoning LLMs to BERT: A Two-Stage Distillation Framework for Search Relevance
 
-**Niraj Kumar Singh** · 一作 · 6 作者 · [arXiv:2606.28137](https://arxiv.org/abs/2606.28137)
+**Runze Xia** · 一作 · 6 作者 · [arXiv:2510.11056](https://arxiv.org/abs/2510.11056)
 
-_A modular thermoelectric properties measurement setup in van der Pauw configuration was developed for a straightforward and simultaneous measurement of electrical resistivity and Seebeck coefficient in an extensive temp…_
+*两阶段推理蒸馏框架将LLM推理能力迁移至轻量BERT模型。*
 
-→ [profile](/researchers/niraj-kumar-singh)
+_Query-service relevance prediction in e-commerce search systems faces strict latency requirements that prevent the direct application of Large Language Models (LLMs). To bridge this gap, we propose a two-stage reasoning…_
 
----
-### No. 10 · A Reproducible Pipeline for Symmetry-Respecting Excited States on Near-Term Quantum Computers: The H2O/STO-3G Case
-
-**Huajing Song** · 一作 · 1 作者 · [arXiv:2606.28130](https://arxiv.org/abs/2606.28130)
-
-_Variational excited-state quantum algorithms fail for reasons usually studied in isolation: barren plateaus, symmetry contamination, finite-sampling instability, and hardware cost. Using one small but complete system --…_
-
-→ [profile](/researchers/huajing-song)
+→ [profile](/researchers/runze-xia)
 
 ---
+### No. 08 · M-BRe: Discovering Training Samples for Relation Extraction from Unlabeled Texts with Large Language Models
 
-## Section B · 🔄 动态更新 · 2 项
+**Zexuan Li** · 一作 · 3 作者 · [arXiv:2509.07730](https://arxiv.org/abs/2509.07730)
+
+*用LLM分组与二分类结合自动抽取RE训练样本。*
+
+_For Relation Extraction (RE), the manual annotation of training data may be prohibitively expensive, since the sentences that contain the target relations in texts can be very scarce and difficult to find. It is therefo…_
+
+→ [profile](/researchers/zexuan-li)
+
+---
+### No. 09 · Investigating Advanced Reasoning of Large Language Models via Black-Box Environment Interaction
+
+**Congchi Yin** · 一作 · 8 作者 · [arXiv:2508.19035](https://arxiv.org/abs/2508.19035)
+
+*通过黑箱环境交互评估大模型综合推理能力。*
+
+_Existing tasks fall short in evaluating reasoning ability of Large Language Models (LLMs) in an interactive, unknown environment. This deficiency leads to the isolated assessment of deductive, inductive, and abductive r…_
+
+→ [profile](/researchers/congchi-yin)
+
+---
+### No. 10 · SaraCoder: Orchestrating Semantic and Structural Cues for Resource-Optimized Repository-Level Code Completion
+
+**Xiaohan Chen** · 一作 · 10 作者 · [arXiv:2508.10068](https://arxiv.org/abs/2508.10068)
+
+*分层特征优化与外部感知消歧提升仓库级代码补全。*
+
+_Despite Retrieval-Augmented Generation improving code completion, traditional retrieval methods struggle with information redundancy and a lack of diversity within limited context windows. To solve this, we propose a re…_
+
+→ [profile](/researchers/xiaohan-chen)
+
+---
+
+## Section B · 🔄 动态更新 · 10 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Yuke Zhu](/researchers/yuke-zhu) | SimFoundry: Modular and Automated Scene Generation for Policy Learnin… | embodied | [2606.28276](https://arxiv.org/abs/2606.28276) |
-| [Chuang Gan](/researchers/chuang-gan) | LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agen… | embodied | [2606.28182](https://arxiv.org/abs/2606.28182) |
+| [Bowen Zhou](/researchers/bowen-zhou) | Earth-o1: A Grid-free Observation-native Atmospheric World Model | — | [2605.06337](https://arxiv.org/abs/2605.06337) |
+| [Bowen Zhou](/researchers/bowen-zhou) | ViraHinter: a dual-modal artificial intelligence framework for predic… | — | [2604.02842](https://arxiv.org/abs/2604.02842) |
+| [Bowen Zhou](/researchers/bowen-zhou) | MolClaw: An Autonomous Agent with Hierarchical Skills for Drug Molecu… | — | [2604.21937](https://arxiv.org/abs/2604.21937) |
+| [Yuke Zhu](/researchers/yuke-zhu) | World Action Models are Zero-shot Policies | — | [2602.15922](https://arxiv.org/abs/2602.15922) |
+| [Yilun Du](/researchers/yilun-du) | World Action Models are Zero-shot Policies | — | [2602.15922](https://arxiv.org/abs/2602.15922) |
+| [Yuke Zhu](/researchers/yuke-zhu) | FLARE: Robot Learning with Implicit World Modeling | — | [2505.15659](https://arxiv.org/abs/2505.15659) |
+| [Yuke Zhu](/researchers/yuke-zhu) | DreamGen: Unlocking Generalization in Robot Learning through Video Wo… | — | [2505.12705](https://arxiv.org/abs/2505.12705) |
+| [Jianfeng Gao](/researchers/jianfeng-gao) | Phi-3 Technical Report: A Highly Capable Language Model Locally on Yo… | — | [2404.14219](https://arxiv.org/abs/2404.14219) |
+| [Yuke Zhu](/researchers/yuke-zhu) | Vesta: A Generalist Embodied Reasoning Model | — | [2606.20905](https://arxiv.org/abs/2606.20905) |
+| [Dahua Lin](/researchers/dahua-lin) | Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter… | — | [2606.30616](https://arxiv.org/abs/2606.30616) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section C · 🎓 即将毕业 PhD · Top 8
+## Section C · 🎓 即将毕业 PhD · Top 9
 
 _v0 fallback: 最高产的 auto-discovered first-author（proxy for 活跃晚期）._
 
@@ -217,6 +225,15 @@ _Methods for image-to-video generation have achieved impressive, photo-realistic
 → [profile](/researchers/koichi-namekata)
 
 ---
+### No. 09 · Marco-ASR: A Principled and Metric-Driven Framework for Fine-Tuning Large-Scale ASR Models for Domain Adaptation
+
+**Xuanfan Ni** · 一作 · 9 作者 · [arXiv:2512.22165](https://arxiv.org/abs/2512.22165)
+
+_Automatic Speech Recognition (ASR) models have achieved remarkable accuracy in general settings, yet their performance often degrades in domain-specific applications due to data mismatch and linguistic variability. This…_
+
+→ [profile](/researchers/xuanfan-ni)
+
+---
 
 ## Section D · 🚀 即将入职 AP · Top 10
 
@@ -226,102 +243,94 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Emergence of millimeter-wave resonances in self-assembled ferroelectric metamaterials
+### No. 01 · Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone
 
-**Florian Bergmann** · 一作 · 29 作者 · [arXiv:2606.27616](https://arxiv.org/abs/2606.27616)
+**Marah Abdin** · 一作 · 129 作者 · [arXiv:2404.14219](https://arxiv.org/abs/2404.14219)
 
-*自组装铁电超晶格中涌现毫米波共振模式。*
+_We introduce phi-3-mini, a 3.8 billion parameter language model trained on 3.3 trillion tokens, whose overall performance, as measured by both academic benchmarks and internal testing, rivals that of models such as Mixt…_
 
-_Resonators are a key component in modern communications and computing. As demand and technological advances push component requirements into the terahertz regime, there is significant research devoted to the search for…_
-
-→ [profile](/researchers/florian-bergmann)
+→ [profile](/researchers/marah-abdin)
 
 ---
-### No. 02 · Qwen-Image-2.0-RL Technical Report
+### No. 02 · Project Imaging-X: A Survey of 1000+ Open-Access Medical Imaging Datasets for Foundation Model Development
 
-**Yixian Xu** · 一作 · 28 作者 · [arXiv:2606.27608](https://arxiv.org/abs/2606.27608)
+**Zhongying Deng** · 一作 · 127 作者 · [arXiv:2603.27460](https://arxiv.org/abs/2603.27460)
 
-*用RLHF和OPD提升扩散模型的图像质量与指令遵循能力。*
+_Foundation models have demonstrated remarkable success across diverse domains and tasks, primarily due to the thrive of large-scale, diverse, and high-quality datasets. However, in the field of medical imaging, the cura…_
 
-_We present Qwen-Image-2.0-RL, a post-training pipeline that applies reinforcement learning from human feedback (RLHF) and on-policy distillation (OPD) to improve both the visual quality and instruction-following capabil…_
-
-→ [profile](/researchers/yixian-xu)
+→ [profile](/researchers/zhongying-deng)
 
 ---
-### No. 03 · A BRAVE Alloy Design Campaign (Bayesian Risk-aware Alloy discoVery and Exploration)
+### No. 03 · SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks
 
-**Mrinalini Mulukutla** · 一作 · 26 作者 · [arXiv:2606.27522](https://arxiv.org/abs/2606.27522)
+**Xiangyi Li** · 一作 · 78 作者 · [arXiv:2602.12670](https://arxiv.org/abs/2602.12670)
 
-*风险感知贝叶斯优化平衡相稳定边界与实验失败风险。*
+_Agent Skills are structured packages of procedural knowledge that augment large language model (LLM) agents at inference time. Despite rapid adoption, there is no standard way to measure whether they actually help. We p…_
 
-_In constrained alloy optimization, the compositions with the highest performance potential often reside at the boundary of phase stability -- where the risk of experimental failure is also highest. This work demonstrate…_
-
-→ [profile](/researchers/mrinalini-mulukutla)
+→ [profile](/researchers/xiangyi-li)
 
 ---
-### No. 04 · Unlocking Cryogenic Energy Storage by Constructing Dipole Glass with Unit-cell-level Polar Disorder
+### No. 04 · World Action Models are Zero-shot Policies
 
-**Yangyang Si** · 一作 · 24 作者 · [arXiv:2606.27887](https://arxiv.org/abs/2606.27887)
+**Seonghyeon Ye** · 一作 · 36 作者 · [arXiv:2602.15922](https://arxiv.org/abs/2602.15922)
 
-_Cryogenic energy storage is vital for frontier technologies including deep-space exploration and quantum computing, yet conventional electrochemical energy systems fail below ~230 K due to frozen ion migration. While re…_
+_State-of-the-art Vision-Language-Action (VLA) models excel at semantic generalization but struggle to generalize to unseen physical motions in novel environments. We introduce DreamZero, a World Action Model (WAM) built…_
 
-→ [profile](/researchers/yangyang-si)
-
----
-### No. 05 · SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation
-
-**Nadun Ranawaka** · 一作 · 18 作者 · [arXiv:2606.28276](https://arxiv.org/abs/2606.28276)
-
-_Training and evaluating robot policies in the real world is costly and difficult to scale. We introduce SimFoundry, a modular and automated system for zero-shot real-to-sim scene construction from a video. SimFoundry ge…_
-
-→ [profile](/researchers/nadun-ranawaka)
+→ [profile](/researchers/seonghyeon-ye)
 
 ---
-### No. 06 · Moiré Phonons and Emergent Exciton-Phonon Coupling in a Moiré Heterobilayer
+### No. 05 · Vesta: A Generalist Embodied Reasoning Model
 
-**Can B. Uzundal** · 一作 · 16 作者 · [arXiv:2606.28185](https://arxiv.org/abs/2606.28185)
+**Johan Bjorck** · 一作 · 30 作者 · [arXiv:2606.20905](https://arxiv.org/abs/2606.20905)
 
-_Moiré superlattices have emerged as a new platform for engineering electronic and optical properties in van der Waals heterostructures, enabling control over correlated and excitonic phenomena. Yet the impact of moiré s…_
+_Robots operating in open-world environments must seamlessly integrate localization, spatial reasoning, navigation, and long-horizon planning. While specialist models excel at individual tasks, deploying a multi-model st…_
 
-→ [profile](/researchers/can-b-uzundal)
-
----
-### No. 07 · HAT-4D: Lifting Monocular Video for 4D Multi-Object Interactions via Human-Agent Collaboration
-
-**Jiaxin Li** · 一作 · 14 作者 · [arXiv:2606.28215](https://arxiv.org/abs/2606.28215)
-
-_Extracting dynamic 4D object interactions from massive, in-the-wild monocular videos offers a highly efficient data collection pathway for scaling Embodied AI and training VLAs. However, existing monocular 4D reconstruc…_
-
-→ [profile](/researchers/jiaxin-li)
+→ [profile](/researchers/johan-bjorck)
 
 ---
-### No. 08 · PhysisForcing: Physics Reinforced World Simulator for Robotic Manipulation
+### No. 06 · Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent
 
-**Peiwen Zhang** · 一作 · 14 作者 · [arXiv:2606.28128](https://arxiv.org/abs/2606.28128)
+**Lei Bai** · 一作 · 30 作者 · [arXiv:2606.30616](https://arxiv.org/abs/2606.30616)
 
-_Video generation models have emerged as a promising paradigm for embodied world simulation. However, both general-domain video generators and robot-specific data fine-tuned models can still produce physically implausibl…_
+_We introduce Agents-A1, a 35B Mixture-of-Experts Agentic Model that reaches trillion-parameter-level performance by scaling the agent horizon. We investigate agent-horizon scaling from two perspectives: scaling long-hor…_
 
-→ [profile](/researchers/peiwen-zhang)
-
----
-### No. 09 · ReWorld: Learning Better Representations for World Action Models
-
-**Tianze Xia** · 一作 · 12 作者 · [arXiv:2606.27504](https://arxiv.org/abs/2606.27504)
-
-_World Action Models (WAMs) model future environment evolution under action conditioning, offering a scalable paradigm for autonomous driving. However, existing approaches focus largely on model architecture design, and…_
-
-→ [profile](/researchers/tianze-xia)
+→ [profile](/researchers/lei-bai)
 
 ---
-### No. 10 · ProMSA:Progressive Multimodal Search Agents for Knowledge-Based Visual Question Answering
+### No. 07 · Orca: The World is in Your Mind
 
-**ZhengXian Wu** · 一作 · 11 作者 · [arXiv:2606.27974](https://arxiv.org/abs/2606.27974)
+**Yihao Wang** · 一作 · 30 作者 · [arXiv:2606.30534](https://arxiv.org/abs/2606.30534)
 
-*用强化学习训练多模态搜索代理，动态选择工具并去重。*
+_We introduce Orca, an initial instantiation of a general world foundation model. Orca learns a unified world latent space from multimodal world signals and exposes it through multimodal readout interfaces. Rather than o…_
 
-_Knowledge-based Visual Question Answering (KB-VQA) requires models to combine image understanding with external knowledge. Most prior methods use a fixed retrieve-then-generate pipeline with a pre-selected retriever and…_
+→ [profile](/researchers/yihao-wang)
 
-→ [profile](/researchers/zhengxian-wu)
+---
+### No. 08 · OSWorld2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks
+
+**Mengqi Yuan** · 一作 · 30 作者 · [arXiv:2606.29537](https://arxiv.org/abs/2606.29537)
+
+_Existing computer-use benchmarks fail to capture the realism, complexity, and long-horizon demands of real-world computer use, limiting their ability to reveal the limitations of frontier agents. We introduce OSWorld 2.…_
+
+→ [profile](/researchers/mengqi-yuan)
+
+---
+### No. 09 · DreamGen: Unlocking Generalization in Robot Learning through Video World Models
+
+**Joel Jang** · 一作 · 28 作者 · [arXiv:2505.12705](https://arxiv.org/abs/2505.12705)
+
+_We introduce DreamGen, a simple yet highly effective 4-stage pipeline for training robot policies that generalize across behaviors and environments through neural trajectories - synthetic robot data generated from video…_
+
+→ [profile](/researchers/joel-jang)
+
+---
+### No. 10 · Agents-K1: Towards Agent-native Knowledge Orchestration
+
+**Zongsheng Cao** · 一作 · 26 作者 · [arXiv:2606.13669](https://arxiv.org/abs/2606.13669)
+
+_Current LLM-based research agents have advanced through agent orchestration, yet largely overlook scientific knowledge orchestration. Existing works often reduce papers to abstracts, surface mentions, and flat \texttt{c…_
+
+→ [profile](/researchers/zongsheng-cao)
 
 ---
 
@@ -331,61 +340,59 @@ _Knowledge-based Visual Question Answering (KB-VQA) requires models to combine i
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · A BRAVE Alloy Design Campaign (Bayesian Risk-aware Alloy discoVery and Exploration)
+### No. 01 · OSWorld2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks
 
-**Mrinalini Mulukutla** · 一作 · 26 作者 · [arXiv:2606.27522](https://arxiv.org/abs/2606.27522)
+**Mengqi Yuan** · 一作 · 30 作者 · [arXiv:2606.29537](https://arxiv.org/abs/2606.29537)
 
-*风险感知贝叶斯优化平衡相稳定边界与实验失败风险。*
+_Existing computer-use benchmarks fail to capture the realism, complexity, and long-horizon demands of real-world computer use, limiting their ability to reveal the limitations of frontier agents. We introduce OSWorld 2.…_
 
-_In constrained alloy optimization, the compositions with the highest performance potential often reside at the boundary of phase stability -- where the risk of experimental failure is also highest. This work demonstrate…_
+**▸ 选中原因：首次出现 · 30 作者合作（疑似大组新人）**
 
-**▸ 选中原因：首次出现 · 26 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/mrinalini-mulukutla)
+→ [profile](/researchers/mengqi-yuan)
 
 ---
-### No. 02 · Unlocking Cryogenic Energy Storage by Constructing Dipole Glass with Unit-cell-level Polar Disorder
+### No. 02 · Orca: The World is in Your Mind
 
-**Yangyang Si** · 一作 · 24 作者 · [arXiv:2606.27887](https://arxiv.org/abs/2606.27887)
+**Yihao Wang** · 一作 · 30 作者 · [arXiv:2606.30534](https://arxiv.org/abs/2606.30534)
 
-_Cryogenic energy storage is vital for frontier technologies including deep-space exploration and quantum computing, yet conventional electrochemical energy systems fail below ~230 K due to frozen ion migration. While re…_
+_We introduce Orca, an initial instantiation of a general world foundation model. Orca learns a unified world latent space from multimodal world signals and exposes it through multimodal readout interfaces. Rather than o…_
 
-**▸ 选中原因：首次出现 · 24 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 30 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/yangyang-si)
-
----
-### No. 03 · SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation
-
-**Nadun Ranawaka** · 一作 · 18 作者 · [arXiv:2606.28276](https://arxiv.org/abs/2606.28276)
-
-_Training and evaluating robot policies in the real world is costly and difficult to scale. We introduce SimFoundry, a modular and automated system for zero-shot real-to-sim scene construction from a video. SimFoundry ge…_
-
-**▸ 选中原因：首次出现 · 18 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/nadun-ranawaka)
+→ [profile](/researchers/yihao-wang)
 
 ---
-### No. 04 · LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agent Behavior
+### No. 03 · X-Mind: Efficient Visual Chain-of-Thought via Predictive World Model for End-to-End Driving
 
-**Qinhong Zhou** · 一作 · 3 作者 · [arXiv:2606.28182](https://arxiv.org/abs/2606.28182)
+**Bohao Zhao** · 一作 · 20 作者 · [arXiv:2606.28758](https://arxiv.org/abs/2606.28758)
 
-_Embodied agents operating in decentralized and partially observable environments have attracted growing attention in recent years. However, existing large language model (LLM)-based agents often exhibit behaviors that a…_
+_Predicting future states is essential for autonomous agents, yet current Vision-Language-Action (VLA) models fundamentally lack this capability, relying instead on reactive perception-action mapping. While integrating P…_
+
+**▸ 选中原因：首次出现 · 20 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/bohao-zhao)
+
+---
+### No. 04 · VLK: Learning Humanoid Loco-Manipulation from Synthetic Interactions in Reconstructed Scenes
+
+**Yen-Jen Wang** · 一作 · 12 作者 · [arXiv:2606.30645](https://arxiv.org/abs/2606.30645)
+
+_Perception-based humanoid loco-manipulation requires connecting egocentric observations and task instructions to whole-body motion. Learning this mapping requires synchronized egocentric images, language commands, and r…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/qinhong-zhou)
+→ [profile](/researchers/yen-jen-wang)
 
 ---
-### No. 05 · PhysisForcing: Physics Reinforced World Simulator for Robotic Manipulation
+### No. 05 · Behavior Prompting Policy: Demonstrations as Prompts for Manipulation
 
-**Peiwen Zhang** · 一作 · 14 作者 · [arXiv:2606.28128](https://arxiv.org/abs/2606.28128)
+**Austin Patel** · 一作 · 4 作者 · [arXiv:2606.30457](https://arxiv.org/abs/2606.30457)
 
-_Video generation models have emerged as a promising paradigm for embodied world simulation. However, both general-domain video generators and robot-specific data fine-tuned models can still produce physically implausibl…_
+_We study behavior prompting, a paradigm that enables robots to perform new tasks at inference time given a single human demonstration, which we call a behavior prompt. To enable this capability, we present contributions…_
 
-**▸ 选中原因：首次出现 · 跨 2 个主题（potential 跨界）**
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/peiwen-zhang)
+→ [profile](/researchers/austin-patel)
 
 ---
 
