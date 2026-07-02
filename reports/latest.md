@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 048                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · WEDNESDAY, JULY 1, 2026
+VOL. 1 · NO. 049                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · THURSDAY, JULY 2, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 048 · 2026-07-01
+> *All The Researchers Fit To Watch* — Vol. 1, No. 049 · 2026-07-02
 
-_Auto-generated at 2026-07-01T05:42:09+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-07-02T05:16:15+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,118 +15,120 @@ _Auto-generated at 2026-07-01T05:42:09+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **32416** | 160 | 597 | 10 | 76 |
+| **34372** | 247 | 1956 | 10 | 76 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Seeing Beyond Words: Self-Supervised Visual Learning for Multimodal Large Language Models
+### No. 01 · LithoGRPO: Fast Inverse Lithography via GRPO Reinforced Flow Matching
 
-**Davide Caffagni** · 一作 · 8 作者 · [arXiv:2512.15885](https://arxiv.org/abs/2512.15885)
+**Yao Lai** · 一作 · 10 作者 · [arXiv:2606.00228](https://arxiv.org/abs/2606.00228)
 
-*用I-JEPA自监督学习增强MLLM视觉理解，无需文本标注。*
+*用GRPO强化流匹配实现快速逆光刻掩膜优化。*
 
-_Multimodal Large Language Models (MLLMs) have recently demonstrated impressive capabilities in connecting vision and language, yet their proficiency in fundamental visual reasoning tasks remains limited. This limitation…_
+_In semiconductor manufacturing, lithography projects circuit layouts onto silicon wafers through an optical mask. As circuit features shrink below the wavelength of light, optical diffraction causes the printed patterns…_
 
-→ [profile](/researchers/davide-caffagni)
-
----
-### No. 02 · ReAG: Reasoning-Augmented Generation for Knowledge-based Visual Question Answering
-
-**Alberto Compagnoni** · 一作 · 8 作者 · [arXiv:2511.22715](https://arxiv.org/abs/2511.22715)
-
-*结合强化学习与粗精检索过滤，提升知识型VQA推理准确率。*
-
-_Multimodal Large Language Models (MLLMs) have shown impressive capabilities in jointly understanding text, images, and videos, often evaluated via Visual Question Answering (VQA). However, even state-of-the-art MLLMs st…_
-
-→ [profile](/researchers/alberto-compagnoni)
+→ [profile](/researchers/yao-lai)
 
 ---
-### No. 03 · Recurrence Meets Transformers for Universal Multimodal Retrieval
+### No. 02 · LambdaMark: Semantic Audio Watermarking for Robustness and Radioactivity
 
-**Davide Caffagni** · 一作 · 5 作者 · [arXiv:2509.08897](https://arxiv.org/abs/2509.08897)
+**Kexin Li** · 一作 · 4 作者 · [arXiv:2606.21365](https://arxiv.org/abs/2606.21365)
 
-*用LSTM门控循环Transformer实现多模态统一检索。*
+*将多比特水印嵌入语义隐空间实现鲁棒放射水印。*
 
-_With the rapid advancement of multimodal retrieval and its application in LLMs and multimodal LLMs, increasingly complex retrieval tasks have emerged. Existing methods predominantly rely on task-specific fine-tuning of…_
+_Recent advances in generative audio have made voice cloning increasingly effortless, enabling voice fraud, impersonation, and other forms of unauthorized use. A common attack finetunes a speech generation model on recor…_
 
-→ [profile](/researchers/davide-caffagni)
-
----
-### No. 04 · Mitigating Hallucinations in Multimodal LLMs via Object-aware Preference Optimization
-
-**Alberto Compagnoni** · 一作 · 6 作者 · [arXiv:2508.20181](https://arxiv.org/abs/2508.20181)
-
-*用CHAIR指标构建偏好数据，DPO微调多模态大模型减少幻觉。*
-
-_Multimodal Large Language Models (MLLMs) emerge as a unified interface to address a multitude of tasks, ranging from NLP to computer vision. Despite showcasing state-of-the-art results in many benchmarks, a long-standin…_
-
-→ [profile](/researchers/alberto-compagnoni)
+→ [profile](/researchers/kexin-li)
 
 ---
-### No. 05 · LLaVA-MORE: A Comparative Study of LLMs and Visual Backbones for Enhanced Visual Instruction Tuning
+### No. 03 · When to Personalize Household Object Search: A Rigidity-Gated Hybrid Policy
 
-**Federico Cocchi** · 一作 · 7 作者 · [arXiv:2503.15621](https://arxiv.org/abs/2503.15621)
+**Xianyao Li** · 一作 · 6 作者 · [arXiv:2607.00022](https://arxiv.org/abs/2607.00022)
 
-*系统比较多种LLM与视觉编码器在统一框架下的多模态性能。*
+*提出刚性门控混合策略，按物品放置变异性决定是否个性化搜索。*
 
-_Recent progress in Multimodal Large Language Models (MLLMs) has highlighted the critical roles of both the visual backbone and the underlying language model. While prior work has primarily focused on scaling these compo…_
+_Service robots searching for household objects rely on spatial priors to reduce search cost, yet object locations can vary with resident traits. Collecting longitudinal, trait-specific in-home trajectories is invasive a…_
 
-→ [profile](/researchers/federico-cocchi)
-
----
-### No. 06 · Recurrence-Enhanced Vision-and-Language Transformers for Robust Multimodal Document Retrieval
-
-**Davide Caffagni** · 一作 · 5 作者 · [arXiv:2503.01980](https://arxiv.org/abs/2503.01980)
-
-*用LSTM门控机制增强Transformer循环单元实现多模态文档检索。*
-
-_Cross-modal retrieval is gaining increasing efficacy and interest from the research community, thanks to large-scale training, novel architectural and learning designs, and its application in LLMs and multimodal LLMs. I…_
-
-→ [profile](/researchers/davide-caffagni)
+→ [profile](/researchers/xianyao-li)
 
 ---
-### No. 07 · Revisiting Image Captioning Training Paradigm via Direct CLIP-based Optimization
+### No. 04 · Privacy-Preserving Text Sanitization for Distributed Agents Collaboration via Disentangled Representations
 
-**Nicholas Moratelli** · 一作 · 5 作者 · [arXiv:2408.14547](https://arxiv.org/abs/2408.14547)
+**Xuan Liu** · 一作 · 9 作者 · [arXiv:2606.15335](https://arxiv.org/abs/2606.15335)
 
-*提出DiCO，用可学习评估器优化CLIP-Score等指标。*
+*用双流编码解耦文本风格与语义实现隐私净化。*
 
-_The conventional training approach for image captioning involves pre-training a network using teacher forcing and subsequent fine-tuning with Self-Critical Sequence Training to maximize hand-crafted captioning metrics.…_
+_When distributed agents exchange text across organizational boundaries, privacy leakage arises not only from explicit identifiers but also from distributional signatures such as formatting conventions, vocabulary choice…_
 
-→ [profile](/researchers/nicholas-moratelli)
-
----
-### No. 08 · Wiki-LLaVA: Hierarchical Retrieval-Augmented Generation for Multimodal LLMs
-
-**Davide Caffagni** · 一作 · 7 作者 · [arXiv:2404.15406](https://arxiv.org/abs/2404.15406)
-
-*分层检索增强多模态LLM的外部知识问答能力。*
-
-_Multimodal LLMs are the natural evolution of LLMs, and enlarge their capabilities so as to work beyond the pure textual modality. As research is being carried out to design novel architectures and vision-and-language ad…_
-
-→ [profile](/researchers/davide-caffagni)
+→ [profile](/researchers/xuan-liu)
 
 ---
-### No. 09 · The Revolution of Multimodal Large Language Models: A Survey
+### No. 05 · A Comprehensive Inference-Time Augmentation Framework in Physiological Signals: Application to PPG-Based AF Detection
 
-**Davide Caffagni** · 一作 · 8 作者 · [arXiv:2402.12451](https://arxiv.org/abs/2402.12451)
+**Davood Fattahi** · 一作 · 5 作者 · [arXiv:2606.10410](https://arxiv.org/abs/2606.10410)
 
-*综述视觉MLLM架构、多模态对齐与训练技术。*
+*用贝叶斯优化13种推理时增强方法提升PPG房颤检测鲁棒性。*
 
-_Connecting text and visual modalities plays an essential role in generative intelligence. For this reason, inspired by the success of large language models, significant research efforts are being devoted to the developm…_
+_Objective: Accurate classification of physiological signals in real-world deployments is challenged by sensor noise, motion artifacts, and distribution shifts between training and deployment data. Inference-time augment…_
 
-→ [profile](/researchers/davide-caffagni)
+→ [profile](/researchers/davood-fattahi)
 
 ---
-### No. 10 · Beyond IID: How General Are Tabular Foundation Models, Really?
+### No. 06 · Interaction-Limited Safe Continuous-Time RL for Dynamical Medical Treatment
 
-**Lennart Purucker** · 一作 · 10 作者 · [arXiv:2606.30410](https://arxiv.org/abs/2606.30410)
+**Xun Shen** · 一作 · 16 作者 · [arXiv:2606.01051](https://arxiv.org/abs/2606.01051)
 
-_Foundation models for predictive machine learning on tabular data have recently gained significant traction in academia and industry. Research communities across disciplines are increasingly evaluating tabular foundatio…_
+*将连续治疗问题转化为选项式半马尔可夫决策过程并收紧安全约束。*
 
-→ [profile](/researchers/lennart-purucker)
+_Dynamic medical treatment requires deciding treatment intensity and intervention timing, while patient states evolve continuously and adverse events may occur between clinical interactions. Most existing treatment learn…_
+
+→ [profile](/researchers/xun-shen)
+
+---
+### No. 07 · MedGym:A Unified Continuous-Time Benchmark for Dynamic Medical Treatment Reinforcement Learning
+
+**Yuepeng Wang** · 一作 · 14 作者 · [arXiv:2606.01028](https://arxiv.org/abs/2606.01028)
+
+*提出连续时间医疗RL基准MedGym，用物理信息神经网络建模。*
+
+_Medical treatment recommendation poses several challenges to reinforcement learning (RL): patient physiology evolves in continuous time, measurements and interventions are performed at irregular intervals, and treatment…_
+
+→ [profile](/researchers/yuepeng-wang)
+
+---
+### No. 08 · PEAR: Permutation-Equivariant Adaptive Routing Multi-Agent Debate
+
+**Yang Feng** · 一作 · 4 作者 · [arXiv:2606.20621](https://arxiv.org/abs/2606.20621)
+
+*用置换等变自适应路由动态重构多智能体辩论拓扑。*
+
+_Multi-agent debate improves the reliability of large language models (LLMs) through iterative peer critiques. However, fixed topologies often introduce persistent positional biases, amplify unreliable agents, and cause…_
+
+→ [profile](/researchers/yang-feng)
+
+---
+### No. 09 · A Hypothesis-Testing Analysis of Blind Recognition for Polar Codes
+
+**Changwei Tu** · 一作 · 4 作者 · [arXiv:2606.17705](https://arxiv.org/abs/2606.17705)
+
+*从假设检验视角推导极化码盲识别错误界，关联Bhattacharyya参数。*
+
+_Blind recognition of polar-coded transmissions is an important task in non-cooperative wireless forensics and security-oriented signal analysis. When the code length is known or has been estimated, recovering the frozen…_
+
+→ [profile](/researchers/changwei-tu)
+
+---
+### No. 10 · From Brewing to Resolution: Tracing the Internal Lifecycle of Code Reasoning in LLMs
+
+**Siyue Chen** · 一作 · 12 作者 · [arXiv:2606.17648](https://arxiv.org/abs/2606.17648)
+
+*提出层探针与CSD框架，揭示LLM代码推理四类失败模式。*
+
+_Standard accuracy metrics cannot explain why LLMs handle variable tracking but fail on semantically equivalent loops. We study an internal lifecycle of code reasoning in which models first brew the answer, making it lin…_
+
+→ [profile](/researchers/siyue-chen)
 
 ---
 
@@ -134,16 +136,16 @@ _Foundation models for predictive machine learning on tabular data have recently
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Zongqing Lu](/researchers/zongqing-lu) | Task Allocation for Mobile Cloud Computing in Heterogeneous Wireless… | — | [None](#) |
-| [Danijar Hafner](/researchers/danijar-hafner) | Mastering Diverse Domains through World Models | — | [2301.04104](https://arxiv.org/abs/2301.04104) |
-| [Pieter Abbeel](/researchers/pieter-abbeel) | Planning to Explore via Self-Supervised World Models | — | [2005.05960](https://arxiv.org/abs/2005.05960) |
-| [Deepak Pathak](/researchers/deepak-pathak) | Planning to Explore via Self-Supervised World Models | — | [2005.05960](https://arxiv.org/abs/2005.05960) |
-| [Danijar Hafner](/researchers/danijar-hafner) | Planning to Explore via Self-Supervised World Models | — | [2005.05960](https://arxiv.org/abs/2005.05960) |
-| [Deepak Pathak](/researchers/deepak-pathak) | Topologically-Aware Deformation Fields for Single-View 3D Reconstruct… | — | [None](#) |
-| [Yilun Du](/researchers/yilun-du) | Compositional Visual Generation with Energy Based Models | — | [None](#) |
-| [Igor Mordatch](/researchers/igor-mordatch) | Compositional Visual Generation with Energy Based Models | — | [None](#) |
-| [Igor Mordatch](/researchers/igor-mordatch) | ViewCube | — | [None](#) |
-| [Bo Li](/researchers/bo-li-uchicago) | Cross Domain Object Detection by Target-Perceived Dual Branch Distill… | — | [None](#) |
+| [Ping Luo](/researchers/ping-luo) | LithoGRPO: Fast Inverse Lithography via GRPO Reinforced Flow Matching | — | [2606.00228](https://arxiv.org/abs/2606.00228) |
+| [Jian Tang](/researchers/jian-tang) | Initial performance results of the JUNO detector | — | [2511.14590](https://arxiv.org/abs/2511.14590) |
+| [Bo Li](/researchers/bo-li-uchicago) | Initial performance results of the JUNO detector | — | [2511.14590](https://arxiv.org/abs/2511.14590) |
+| [Jian Tang](/researchers/jian-tang) | Prospects for geoneutrino detection with JUNO | — | [2511.07227](https://arxiv.org/abs/2511.07227) |
+| [Jian Tang](/researchers/jian-tang) | First measurement of reactor neutrino oscillations at JUNO | — | [2511.14593](https://arxiv.org/abs/2511.14593) |
+| [Bo Li](/researchers/bo-li-uchicago) | First measurement of reactor neutrino oscillations at JUNO | — | [2511.14593](https://arxiv.org/abs/2511.14593) |
+| [Danijar Hafner](/researchers/danijar-hafner) | Bayesian Layers: A Module for Neural Network Uncertainty | — | [1812.03973](https://arxiv.org/abs/1812.03973) |
+| [Jun Zhu](/researchers/jun-zhu) | TurboServe: Serving Streaming Video Generation Efficiently and Econom… | — | [2606.19271](https://arxiv.org/abs/2606.19271) |
+| [Yilun Du](/researchers/yilun-du) | Structured 4D Latent Predictive Model for Robot Planning | embodied, world_models | [2607.01166](https://arxiv.org/abs/2607.01166) |
+| [Shuran Song](/researchers/shuran-song) | ROSA: A Robotics Foundation Model Serving System for Robot Factories | embodied | [2607.01088](https://arxiv.org/abs/2607.01088) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -253,94 +255,94 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Xiaomi-GUI-0 Technical Report
+### No. 01 · Initial performance results of the JUNO detector
 
-**Wanxia Cao** · 一作 · 30 作者 · [arXiv:2606.31410](https://arxiv.org/abs/2606.31410)
+**Angel Abusleme** · 一作 · 1134 作者 · [arXiv:2511.14590](https://arxiv.org/abs/2511.14590)
 
-_Graphical user interface (GUI) agents build on vision-language models to complete user tasks end-to-end in real applications through interface actions such as tapping, swiping, text entry, and navigation. However, exist…_
+_The Jiangmen Underground Neutrino Observatory (JUNO) started physics data taking on 26 August 2025. JUNO consists of a 20-kton liquid scintillator central detector, surrounded by a 35 kton water pool serving as a Cheren…_
 
-→ [profile](/researchers/wanxia-cao)
-
----
-### No. 02 · Learning to Learn Faster from Human Feedback with Language Model Predictive Control
-
-**Jacky Liang** · 一作 · 26 作者 · [arXiv:None](#)
-
-__
-
-→ [profile](/researchers/jacky-liang)
+→ [profile](/researchers/angel-abusleme)
 
 ---
-### No. 03 · Plasmonic-cavity Modulator for the Mid-IR with a Semi-transparent and Nonlinear Heavily-doped Semiconductor Mirror
+### No. 02 · First measurement of reactor neutrino oscillations at JUNO
 
-**Tommaso Venanzi** · 一作 · 18 作者 · [arXiv:2606.31438](https://arxiv.org/abs/2606.31438)
+**Angel Abusleme** · 一作 · 1134 作者 · [arXiv:2511.14593](https://arxiv.org/abs/2511.14593)
 
-_We present a free-space plasmonic modulator based on a single heavily-doped semiconductor layer. We investigate its ability to modulate both the linear and nonlinear response at mid-infrared frequencies slightly below t…_
+_Neutrino oscillations, a quantum effect manifesting at macroscopic scales, are governed by lepton flavor mixing angles and neutrino mass-squared differences that are fundamental parameters of particle physics, represent…_
 
-→ [profile](/researchers/tommaso-venanzi)
-
----
-### No. 04 · Human-as-Humanoid: Enabling Zero-Shot Humanoid Learning from Ego-Exo Human Videos with Human-Aligned Embodiments
-
-**Xiaopeng Lin** · 一作 · 17 作者 · [arXiv:2606.32009](https://arxiv.org/abs/2606.32009)
-
-_Vision-language-action (VLA) models across robot embodiments require high-quality observation--action supervision to learn deployable action distributions, yet scaling such robot data remains difficult, especially for h…_
-
-→ [profile](/researchers/xiaopeng-lin)
+→ [profile](/researchers/angel-abusleme)
 
 ---
-### No. 05 · DOPD: Dual On-policy Distillation
+### No. 03 · Prospects for geoneutrino detection with JUNO
 
-**Xinlei Yu** · 一作 · 16 作者 · [arXiv:2606.30626](https://arxiv.org/abs/2606.30626)
+**Thomas Adam** · 一作 · 628 作者 · [arXiv:2511.07227](https://arxiv.org/abs/2511.07227)
 
-_On-policy distillation (OPD) offers superior capacity transfer by supervising student-sampled trajectories with dense token-level signals. To furnish high-quality supervision sources and thereby elevate the performance…_
+_Geoneutrinos, which are antineutrinos emitted during the decay of long-lived radioactive elements inside Earth, serve as a unique tool for studying the composition and heat budget of our planet. The Jiangmen Underground…_
 
-→ [profile](/researchers/xinlei-yu)
-
----
-### No. 06 · WorldRoamBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models
-
-**Ting-Bing Xu** · 一作 · 14 作者 · [arXiv:2606.31672](https://arxiv.org/abs/2606.31672)
-
-_Despite rapid progress in interactive world models (IWMs), existing benchmarks evaluate action following only at trajectory level and ignore memory and interaction physics. We introduce WorldRoamBench, an open-world ben…_
-
-→ [profile](/researchers/ting-bing-xu)
+→ [profile](/researchers/thomas-adam)
 
 ---
-### No. 07 · Delta-JEPA: Learning Action-Sensitive World Models via Latent Difference Decoding
+### No. 04 · Ai2-Kit: Streamlining AI-Accelerated Ab Initio Workflows for Complex Chemical Systems
 
-**Zhenghao Zhang** · 一作 · 14 作者 · [arXiv:2606.31232](https://arxiv.org/abs/2606.31232)
+**Sheng Bi** · 一作 · 50 作者 · [arXiv:2607.00613](https://arxiv.org/abs/2607.00613)
 
-_Learning visual world models for planning requires compact latent dynamics that remain sensitive to actions, yet reconstruction-free joint-embedding objectives can collapse to action-insensitive representations. We prop…_
+_Molecular simulations of complex chemical systems, such as catalysis, electrochemistry, and energy storage, often need to capture the interplay of effects such as electronic structure, finite-temperature fluctuations, a…_
 
-→ [profile](/researchers/zhenghao-zhang)
-
----
-### No. 08 · Dockerless: Environment-Free Program Verifier for Coding Agents
-
-**Wenhao Zeng** · 一作 · 13 作者 · [arXiv:2606.28436](https://arxiv.org/abs/2606.28436)
-
-_Program verifiers play a central role in training coding agents, including selecting trajectories for supervised fine-tuning (SFT) and providing rewards for reinforcement learning (RL). Standard execution-based verifica…_
-
-→ [profile](/researchers/wenhao-zeng)
+→ [profile](/researchers/sheng-bi)
 
 ---
-### No. 09 · What enables GaOx as hole transport layer for a 16 percent 1.0 eV CuInSe2 Bottom Cells with VOC above 550 mV?
+### No. 05 · Coachable agents for interactive gameplay
 
-**Francesco Lodola** · 一作 · 13 作者 · [arXiv:2606.31923](https://arxiv.org/abs/2606.31923)
+**Roberto Capobianco** · 一作 · 41 作者 · [arXiv:2607.00642](https://arxiv.org/abs/2607.00642)
 
-_Among the highly efficient photovoltaic technologies, that do not rely on epitaxy, only chalcopyrites have a bandgap tunable down to 1.00 eV, the ideal for tandem applications. This is obtained with a pure CuInSe2 absor…_
+_Reinforcement learning has proven to be a valuable tool in the creation of advanced AI and robotic systems, contributing to everything from game playing to robotics to foundation models. Through trial-and-error, these A…_
 
-→ [profile](/researchers/francesco-lodola)
+→ [profile](/researchers/roberto-capobianco)
 
 ---
-### No. 10 · Illuminating Unified Multimodal Model for Free-form Interleaved Text-Image Generation
+### No. 06 · Creating Impactful Autonomous Driving Datasets: A Strategic Guide from Research Gap to Benchmark
 
-**Chonghuinan Wang** · 一作 · 12 作者 · [arXiv:2606.30054](https://arxiv.org/abs/2606.30054)
+**Richard Schwarzkopf** · 一作 · 25 作者 · [arXiv:2607.00710](https://arxiv.org/abs/2607.00710)
 
-_The advancement of generative AI models capable of producing text and image marks a critical step forward in the realm of multimodal intelligence, particularly for tasks involving the interleaving of both modalities. To…_
+_Well-designed autonomous driving datasets have fundamentally shaped research progress, yet existing literature primarily describes what datasets contain rather than how to strategically design impactful ones. This is es…_
 
-→ [profile](/researchers/chonghuinan-wang)
+→ [profile](/researchers/richard-schwarzkopf)
+
+---
+### No. 07 · ABot-M0.5: Unified Mobility-and-Manipulation World Action Model
+
+**Ronghan Chen** · 一作 · 21 作者 · [arXiv:2607.00678](https://arxiv.org/abs/2607.00678)
+
+_Mobile manipulation is a key capability for general-purpose robots, yet remains challenging for current embodied learning methods. VLA policies are typically reactive and lack explicit world modeling, while existing Wor…_
+
+→ [profile](/researchers/ronghan-chen)
+
+---
+### No. 08 · Nuclear Ptychoscopy: A Ptychographic Framework for Nuclear Spectroscopy
+
+**Ziyang Yuan** · 一作 · 19 作者 · [arXiv:2511.04924](https://arxiv.org/abs/2511.04924)
+
+_Accessing both amplitude and phase of nuclear response functions is central to fully characterizing light-matter interactions in the X-ray-nuclear regime. Recent work has demonstrated phase retrieval in two-dimensional…_
+
+→ [profile](/researchers/ziyang-yuan)
+
+---
+### No. 09 · LatentChem: From Textual CoT to Latent Thinking in Chemical Reasoning
+
+**Xinwu Ye** · 一作 · 19 作者 · [arXiv:2602.07075](https://arxiv.org/abs/2602.07075)
+
+_Current chemical large language models (LLMs) predominantly rely on explicit Chain-of-Thought (CoT) to solve complex reasoning problems. However, forcing nonverbal tacit chemical logic into discrete natural language imp…_
+
+→ [profile](/researchers/xinwu-ye)
+
+---
+### No. 10 · Room-Temperature Electrical Readout of Spin Defects in van der Waals Materials
+
+**Shihao Ru** · 一作 · 17 作者 · [arXiv:2511.08874](https://arxiv.org/abs/2511.08874)
+
+_Negatively charged boron vacancy ($\mathrm{V_B^-}$) in hexagonal boron nitride (hBN) is the most extensively studied room-temperature quantum spin system in two-dimensional (2D) materials. Nevertheless, the current effe…_
+
+→ [profile](/researchers/shihao-ru)
 
 ---
 
@@ -350,59 +352,59 @@ _The advancement of generative AI models capable of producing text and image mar
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · Xiaomi-GUI-0 Technical Report
+### No. 01 · First measurement of reactor neutrino oscillations at JUNO
 
-**Wanxia Cao** · 一作 · 30 作者 · [arXiv:2606.31410](https://arxiv.org/abs/2606.31410)
+**Angel Abusleme** · 一作 · 1134 作者 · [arXiv:2511.14593](https://arxiv.org/abs/2511.14593)
 
-_Graphical user interface (GUI) agents build on vision-language models to complete user tasks end-to-end in real applications through interface actions such as tapping, swiping, text entry, and navigation. However, exist…_
+_Neutrino oscillations, a quantum effect manifesting at macroscopic scales, are governed by lepton flavor mixing angles and neutrino mass-squared differences that are fundamental parameters of particle physics, represent…_
 
-**▸ 选中原因：首次出现 · 30 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 1134 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/wanxia-cao)
-
----
-### No. 02 · Plasmonic-cavity Modulator for the Mid-IR with a Semi-transparent and Nonlinear Heavily-doped Semiconductor Mirror
-
-**Tommaso Venanzi** · 一作 · 18 作者 · [arXiv:2606.31438](https://arxiv.org/abs/2606.31438)
-
-_We present a free-space plasmonic modulator based on a single heavily-doped semiconductor layer. We investigate its ability to modulate both the linear and nonlinear response at mid-infrared frequencies slightly below t…_
-
-**▸ 选中原因：首次出现 · 18 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/tommaso-venanzi)
+→ [profile](/researchers/angel-abusleme)
 
 ---
-### No. 03 · WorldRoamBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models
+### No. 02 · Initial performance results of the JUNO detector
 
-**Ting-Bing Xu** · 一作 · 14 作者 · [arXiv:2606.31672](https://arxiv.org/abs/2606.31672)
+**Angel Abusleme** · 一作 · 1134 作者 · [arXiv:2511.14590](https://arxiv.org/abs/2511.14590)
 
-_Despite rapid progress in interactive world models (IWMs), existing benchmarks evaluate action following only at trajectory level and ignore memory and interaction physics. We introduce WorldRoamBench, an open-world ben…_
+_The Jiangmen Underground Neutrino Observatory (JUNO) started physics data taking on 26 August 2025. JUNO consists of a 20-kton liquid scintillator central detector, surrounded by a 35 kton water pool serving as a Cheren…_
 
-**▸ 选中原因：首次出现 · 14 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 1134 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/ting-bing-xu)
+→ [profile](/researchers/angel-abusleme)
 
 ---
-### No. 04 · Freeform Preference Learning for Robotic Manipulation
+### No. 03 · Prospects for geoneutrino detection with JUNO
 
-**Marcel Torne** · 一作 · 4 作者 · [arXiv:2606.32027](https://arxiv.org/abs/2606.32027)
+**Thomas Adam** · 一作 · 628 作者 · [arXiv:2511.07227](https://arxiv.org/abs/2511.07227)
 
-_Reward design remains a central bottleneck for autonomous robot policy improvement, especially in long-horizon manipulation tasks where sparse success labels provide too little signal and binary preferences collapse man…_
+_Geoneutrinos, which are antineutrinos emitted during the decay of long-lived radioactive elements inside Earth, serve as a unique tool for studying the composition and heat budget of our planet. The Jiangmen Underground…_
+
+**▸ 选中原因：首次出现 · 628 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/thomas-adam)
+
+---
+### No. 04 · Structured 4D Latent Predictive Model for Robot Planning
+
+**Zhiyi Li** · 一作 · 5 作者 · [arXiv:2607.01166](https://arxiv.org/abs/2607.01166)
+
+_Video predictive models are emerging as a powerful paradigm in robotics, offering a promising path toward task generalization, long-horizon planning, and flexible decision-making. However, prevailing approaches often op…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/marcel-torne)
+→ [profile](/researchers/zhiyi-li)
 
 ---
-### No. 05 · Adapting Generalist Robot Policies with Semantic Reinforcement Learning
+### No. 05 · ROSA: A Robotics Foundation Model Serving System for Robot Factories
 
-**Jagdeep Singh Bhatia** · 一作 · 4 作者 · [arXiv:2606.31958](https://arxiv.org/abs/2606.31958)
+**Wenqi Jiang** · 一作 · 8 作者 · [arXiv:2607.01088](https://arxiv.org/abs/2607.01088)
 
-_Generalist robot policies learn a diverse repertoire of behaviors from large-scale pretraining. In principle, this makes them excellent priors for downstream adaptation via reinforcement learning (RL). In practice, howe…_
+_Robotics foundation models (RFMs) are making general-purpose robots increasingly practical for factory deployments. While RFM serving systems are central to this vision, existing systems are largely shaped by a single-r…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/jagdeep-singh-bhatia)
+→ [profile](/researchers/wenqi-jiang)
 
 ---
 
