@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 052                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · SUNDAY, JULY 5, 2026
+VOL. 1 · NO. 058                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, JULY 11, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 052 · 2026-07-05
+> *All The Researchers Fit To Watch* — Vol. 1, No. 058 · 2026-07-11
 
-_Auto-generated at 2026-07-05T05:13:12+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-07-11T04:24:25+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,31 +15,135 @@ _Auto-generated at 2026-07-05T05:13:12+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **34991** | 3 | 1 | 10 | 76 |
+| **35764** | 184 | 773 | 11 | 80 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section B · 🆕 今日新冒头 · 1 人
+## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Improving Sparse-View 3DGS Generalization via Flat Minima Optimization
+### No. 01 · OpFlow: Learning Opportunity-Conditioned Choice Potentials for Robust OD Flow Prediction
 
-**Kangmin Seo** · 一作 · 4 作者 · [arXiv:2607.00885](https://arxiv.org/abs/2607.00885)
+**Changjian Liu** · 一作 · 8 作者 · [arXiv:2607.03200](https://arxiv.org/abs/2607.03200)
 
-*通过平坦极小值优化提升稀疏视角3DGS泛化性。*
+*用曝光-选择机制解耦OD流，学习可迁移的条件选择势。*
 
-_Recent advances in neural rendering have established 3D Gaussian Splatting (3DGS) as a highly efficient representation for novel view synthesis, enabling fast training and real-time rendering with strong fidelity. Howev…_
+_Origin-destination (OD) flow prediction is central to urban analytics, yet deep models trained on raw counts remain vulnerable to distribution shift. The core problem is that raw count supervision cannot distinguish tra…_
 
-→ [profile](/researchers/kangmin-seo)
+→ [profile](/researchers/changjian-liu)
+
+---
+### No. 02 · Towards LLM Accelerated Rapid Reviews for Software Tool Discovery -- Case for Log Anomaly Detection
+
+**Jesse Nyyssölä** · 一作 · 9 作者 · [arXiv:2606.16839](https://arxiv.org/abs/2606.16839)
+
+*用LLM筛选+编码代理自动化工具发现与复现。*
+
+_In software engineering research, the primary outcome is frequently a tool. However, for practitioners and academics alike, it is hard to tell which tools are maintained and do they work out of the box. In this paper, w…_
+
+→ [profile](/researchers/jesse-nyyss-l)
+
+---
+### No. 03 · EVIDENT: Routing MLLM Adaptation through Entity-Grounded Visual Evidence for Cross-Domain Video Temporal Grounding
+
+**Geo Ahn** · 一作 · 5 作者 · [arXiv:2605.26104](https://arxiv.org/abs/2605.26104)
+
+*实体瓶颈适配器与实体门控机制增强跨域视频时序定位鲁棒性。*
+
+_Fine-tuning MLLMs for Video Temporal Grounding (VTG) often improves in-domain performance but degrades sharply under domain shift. In this work, we find that this failure is primarily driven not just by unseen query con…_
+
+→ [profile](/researchers/geo-ahn)
+
+---
+### No. 04 · SlotVTG: Object-Centric Adapter for Generalizable Video Temporal Grounding
+
+**Jiwook Han** · 一作 · 4 作者 · [arXiv:2603.25733](https://arxiv.org/abs/2603.25733)
+
+*用slot注意力适配器增强MLLM视频时序定位的跨域泛化。*
+
+_Multimodal Large Language Models (MLLMs) have shown strong performance on Video Temporal Grounding (VTG). However, their coarse recognition capabilities are insufficient for fine-grained temporal understanding, making t…_
+
+→ [profile](/researchers/jiwook-han)
+
+---
+### No. 05 · PCEvE: Part Contribution Evaluation Based Model Explanation for Human Figure Drawing Assessment and Beyond
+
+**Jongseo Lee** · 一作 · 4 作者 · [arXiv:2409.18260](https://arxiv.org/abs/2409.18260)
+
+*用Shapley值评估部件贡献，实现模型决策的部件级解释。*
+
+_For automatic human figure drawing (HFD) assessment tasks, such as diagnosing autism spectrum disorder (ASD) using HFD images, the clarity and explainability of a model decision are crucial. Existing pixel-level attribu…_
+
+→ [profile](/researchers/jongseo-lee)
+
+---
+### No. 06 · DEVIAS: Learning Disentangled Video Representations of Action and Scene
+
+**Kyungho Bae** · 一作 · 4 作者 · [arXiv:2312.00826](https://arxiv.org/abs/2312.00826)
+
+*用槽注意力与掩码解码器解耦动作与场景表征。*
+
+_Video recognition models often learn scene-biased action representation due to the spurious correlation between actions and scenes in the training data. Such models show poor performance when the test data consists of v…_
+
+→ [profile](/researchers/kyungho-bae)
+
+---
+### No. 07 · Probabilistic Vision-Language Representation for Weakly Supervised Temporal Action Localization
+
+**Geuntaek Lim** · 一作 · 4 作者 · [arXiv:2408.05955](https://arxiv.org/abs/2408.05955)
+
+*用概率嵌入对齐人类动作与VLP知识，提升弱监督时序定位。*
+
+_Weakly supervised temporal action localization (WTAL) aims to detect action instances in untrimmed videos using only video-level annotations. Since many existing works optimize WTAL models based on action classification…_
+
+→ [profile](/researchers/geuntaek-lim)
+
+---
+### No. 08 · VVS: Video-to-Video Retrieval with Irrelevant Frame Suppression
+
+**Won Jo** · 一作 · 6 作者 · [arXiv:2303.08906](https://arxiv.org/abs/2303.08906)
+
+*用VVS网络抑制无关帧实现视频级高效检索。*
+
+_In content-based video retrieval (CBVR), dealing with large-scale collections, efficiency is as important as accuracy; thus, several video-level feature-based studies have actively been conducted. Nevertheless, owing to…_
+
+→ [profile](/researchers/won-jo)
+
+---
+### No. 09 · TESSERA: Temporal Embeddings of Surface Spectra for Earth Representation and Analysis
+
+**Zhengpeng Feng** · 一作 · 14 作者 · [arXiv:2506.20380](https://arxiv.org/abs/2506.20380)
+
+_Satellite Earth-observation (EO) time series in the optical and microwave ranges of the electromagnetic spectrum are often irregular due to orbital patterns and cloud obstruction. Compositing addresses these issues but…_
+
+→ [profile](/researchers/zhengpeng-feng)
+
+---
+### No. 10 · SAR Despeckling via Regional Denoising Diffusion Probabilistic Model
+
+**Xuran Hu** · 一作 · 6 作者 · [arXiv:2401.03122](https://arxiv.org/abs/2401.03122)
+
+*用区域去噪扩散模型实现多尺度SAR图像去斑。*
+
+_Speckle noise poses a significant challenge in maintaining the quality of synthetic aperture radar (SAR) images, so SAR despeckling techniques have drawn increasing attention. Despite the tremendous advancements of deep…_
+
+→ [profile](/researchers/xuran-hu)
 
 ---
 
-## Section B · 🔄 动态更新 · 3 项
+## Section B · 🔄 动态更新 · 10 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Hao Su](/researchers/hao-su) | RigAnything: Template-Free Autoregressive Rigging for Diverse 3D Asse… | — | [None](#) |
-| [Xiaolong Wang](/researchers/xiaolong-wang) | RigAnything: Template-Free Autoregressive Rigging for Diverse 3D Asse… | — | [None](#) |
-| [Shuaicheng Liu](/researchers/shuaicheng-liu) | Ghost-free High Dynamic Range Imaging with Context-Aware Transformer | — | [None](#) |
+| [Chunhua Shen](/researchers/chunhua-shen) | Framer: Interactive Frame Interpolation | — | [2410.18978](https://arxiv.org/abs/2410.18978) |
+| [Chunhua Shen](/researchers/chunhua-shen) | FreeCompose: Generic Zero-Shot Image Composition with Diffusion Prior | — | [2407.04947](https://arxiv.org/abs/2407.04947) |
+| [Chunhua Shen](/researchers/chunhua-shen) | AutoStory: Generating Diverse Storytelling Images with Minimal Human… | — | [2311.11243](https://arxiv.org/abs/2311.11243) |
+| [Yoshua Bengio](/researchers/yoshua-bengio) | MAgNet: Mesh Agnostic Neural PDE Solver | — | [None](#) |
+| [Jun Zhu](/researchers/jun-zhu) | Vidu S1: A Real-Time Interactive Video Generation Model | — | [2607.03118](https://arxiv.org/abs/2607.03118) |
+| [Bowen Zhou](/researchers/bowen-zhou) | Accurate, Interdisciplinary and Transparent Structure-property Unders… | ai4sci | [2607.07708](https://arxiv.org/abs/2607.07708) |
+| [Yi Ma](/researchers/yi-ma) | DexVerse: A Modular Benchmark for Multi-Task, Multi-Embodiment Dexter… | embodied | [2607.08751](https://arxiv.org/abs/2607.08751) |
+| [Cewu Lu](/researchers/cewu-lu) | AnyDexRT: Calibration-Free Dexterous Hand Retargeting with Few-Shot H… | embodied | [2607.08341](https://arxiv.org/abs/2607.08341) |
+| [Jiajun Wu](/researchers/jiajun-wu) | APIVOT: Adaptive Planning with Interleaved Vision-Language Thoughts | embodied | [2607.08024](https://arxiv.org/abs/2607.08024) |
+| [He Wang](/researchers/he-wang) | WAM-TTT: Steering World-Action Models by Watching Human Play at Test… | world_models | [2607.06988](https://arxiv.org/abs/2607.06988) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -147,45 +251,162 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section E · 🔥 热门工作 · Top 3
+## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · RigAnything: Template-Free Autoregressive Rigging for Diverse 3D Assets
+### No. 01 · Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning
 
-**Isabella Liu** · 一作 · 5 作者 · [arXiv:None](#)
+**Chen Tang** · 一作 · 29 作者 · [arXiv:2607.07708](https://arxiv.org/abs/2607.07708)
 
-*自回归扩散模型无模板生成3D骨架与蒙皮权重。*
+_Structure-property relationships are foundational to biology, chemistry and materials science, where function, reactivity and physical response emerge from spatial, chemical and periodic organization. Mechanistically ex…_
 
-_We present RigAnything , a novel autoregressive transformer-based model, which makes 3D assets rig-ready by probabilistically generating joints and skeleton topologies and assigning skinning weights in a template-free m…_
-
-→ [profile](/researchers/isabella-liu)
+→ [profile](/researchers/chen-tang)
 
 ---
-### No. 02 · Improving Sparse-View 3DGS Generalization via Flat Minima Optimization
+### No. 02 · Native Video-Action Pretraining for Generalizable Robot Control
 
-**Kangmin Seo** · 一作 · 4 作者 · [arXiv:2607.00885](https://arxiv.org/abs/2607.00885)
+**Qihang Zhang** · 一作 · 29 作者 · [arXiv:2607.08639](https://arxiv.org/abs/2607.08639)
 
-*通过平坦极小值优化提升稀疏视角3DGS泛化性。*
+_The advent of video-action models offers a promising path for robot control. Nevertheless, we argue that repurposing video generative models designed for digital content creation is inherently inadequate for physical en…_
 
-_Recent advances in neural rendering have established 3D Gaussian Splatting (3DGS) as a highly efficient representation for novel view synthesis, enabling fast training and real-time rendering with strong fidelity. Howev…_
-
-→ [profile](/researchers/kangmin-seo)
+→ [profile](/researchers/qihang-zhang)
 
 ---
-### No. 03 · Ghost-free High Dynamic Range Imaging with Context-Aware Transformer
+### No. 03 · MoWorld: A Flash World Model
 
-**Zhen Liu** · 一作 · 2 作者 · [arXiv:None](#)
+**Team Moxin** · 一作 · 29 作者 · [arXiv:2607.06216](https://arxiv.org/abs/2607.06216)
 
-__
+_The future of World Models depends not only on scaling model capability, but also on scaling practicality and inference efficiency. High-frame-rate inference enables responsive perception, planning, and control in real-…_
 
-→ [profile](/researchers/zhen-liu)
+→ [profile](/researchers/team-moxin)
+
+---
+### No. 04 · Vidu S1: A Real-Time Interactive Video Generation Model
+
+**Jintao Zhang** · 一作 · 27 作者 · [arXiv:2607.03118](https://arxiv.org/abs/2607.03118)
+
+_We introduce Vidu S1, a real-time interactive video generation model supporting voice control of digital characters. Users can control video generation content at any moment through voice instructions. Vidu S1 supports…_
+
+→ [profile](/researchers/jintao-zhang)
+
+---
+### No. 05 · Multiplayer Interactive World Models with Representation Autoencoders
+
+**Anthony Hu** · 一作 · 27 作者 · [arXiv:2607.05352](https://arxiv.org/abs/2607.05352)
+
+_We introduce the first multiplayer world model for highly dynamic environments governed by complex physical interactions. Whereas single-player world models treat the other agents as part of the environment, ours condit…_
+
+→ [profile](/researchers/anthony-hu)
+
+---
+### No. 06 · Quantum Dot Moiré from Crossed MoS2 Nanoribbons
+
+**Xinting Shuai** · 一作 · 25 作者 · [arXiv:2607.07871](https://arxiv.org/abs/2607.07871)
+
+_Twisted atomically thin layers have attracted much attention for Moiré potential and correlated quantum phenomena. However, existing Moiré superlattices have largely been limited to extensive wavefunction without latera…_
+
+→ [profile](/researchers/xinting-shuai)
+
+---
+### No. 07 · Infinite Worlds with Versatile Interactions
+
+**Zelin Gao** · 一作 · 20 作者 · [arXiv:2607.07534](https://arxiv.org/abs/2607.07534)
+
+_We present LingBot-World 2.0 (also known as LingBot-World-Infinity), an advanced iteration of LingBot-World featuring four distinct upgrades. (1) Our model achieves an unbounded interaction horizon while maintaining con…_
+
+→ [profile](/researchers/zelin-gao)
+
+---
+### No. 08 · Atomistic Modeling for Electro-chemical Reactions
+
+**K. Doblhoff-Dier** · 一作 · 19 作者 · [arXiv:2607.07933](https://arxiv.org/abs/2607.07933)
+
+_Computational modeling plays a central role in advancing our understanding of electro-chemical reactions and may thus guide the rational development of sustainable energy technologies. Despite significant methodological…_
+
+→ [profile](/researchers/k-doblhoff-dier)
+
+---
+### No. 09 · Trapping 11,000 Atoms in a Tweezer Array Generated by a Single Metasurface
+
+**Yuqing Wang** · 一作 · 17 作者 · [arXiv:2606.02715](https://arxiv.org/abs/2606.02715)
+
+*单超表面生成阵列捕获11000原子，突破量子比特规模。*
+
+_The scalability of physical qubit numbers is a central challenge toward a universal fault-tolerant quantum computer. The inherent scalability of atom array quantum computers stems from the identical nature of atomic qub…_
+
+→ [profile](/researchers/yuqing-wang)
+
+---
+### No. 10 · Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation
+
+**Yifan Zhou** · 一作 · 17 作者 · [arXiv:2607.08758](https://arxiv.org/abs/2607.08758)
+
+_Scientific ideas rarely start from a blank page. They inherit mechanisms, repair known limitations, and recombine pieces of earlier work, much like biological genomes. Current benchmarks still say little about whether A…_
+
+→ [profile](/researchers/yifan-zhou)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 0 个
+## Section F · 🌙 Sleeper Picks · 5 个
 
-_今日无符合算法的 Sleeper Pick — 算法看上去保守了，或今日确实没有合规候选._
+_算法挑的「非显式但值得看」，每个写明被选中的原因。_
+
+### No. 01 · MoWorld: A Flash World Model
+
+**Team Moxin** · 一作 · 29 作者 · [arXiv:2607.06216](https://arxiv.org/abs/2607.06216)
+
+_The future of World Models depends not only on scaling model capability, but also on scaling practicality and inference efficiency. High-frame-rate inference enables responsive perception, planning, and control in real-…_
+
+**▸ 选中原因：首次出现 · 29 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/team-moxin)
+
+---
+### No. 02 · Multiplayer Interactive World Models with Representation Autoencoders
+
+**Anthony Hu** · 一作 · 27 作者 · [arXiv:2607.05352](https://arxiv.org/abs/2607.05352)
+
+_We introduce the first multiplayer world model for highly dynamic environments governed by complex physical interactions. Whereas single-player world models treat the other agents as part of the environment, ours condit…_
+
+**▸ 选中原因：首次出现 · 27 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/anthony-hu)
+
+---
+### No. 03 · Quantum Dot Moiré from Crossed MoS2 Nanoribbons
+
+**Xinting Shuai** · 一作 · 25 作者 · [arXiv:2607.07871](https://arxiv.org/abs/2607.07871)
+
+_Twisted atomically thin layers have attracted much attention for Moiré potential and correlated quantum phenomena. However, existing Moiré superlattices have largely been limited to extensive wavefunction without latera…_
+
+**▸ 选中原因：首次出现 · 25 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/xinting-shuai)
+
+---
+### No. 04 · APIVOT: Adaptive Planning with Interleaved Vision-Language Thoughts
+
+**Emily Jin** · 一作 · 6 作者 · [arXiv:2607.08024](https://arxiv.org/abs/2607.08024)
+
+_Long-horizon robot planning requires jointly reasoning over semantic task structure and geometric feasibility. To successfully execute a task, a robot must decompose goals, select task-relevant objects, and sequence act…_
+
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+
+→ [profile](/researchers/emily-jin)
+
+---
+### No. 05 · WAM-TTT: Steering World-Action Models by Watching Human Play at Test Time
+
+**Yusen Feng** · 一作 · 16 作者 · [arXiv:2607.06988](https://arxiv.org/abs/2607.06988)
+
+_Steering robot foundation models (RFMs) toward new task variants or user-preferred behaviors remains challenging, often requiring additional robot demonstrations, task-specific fine-tuning, or long-context conditioning.…_
+
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+
+→ [profile](/researchers/yusen-feng)
+
+---
 
 ---
 
