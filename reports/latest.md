@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 058                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, JULY 11, 2026
+VOL. 1 · NO. 059                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · SUNDAY, JULY 12, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 058 · 2026-07-11
+> *All The Researchers Fit To Watch* — Vol. 1, No. 059 · 2026-07-12
 
-_Auto-generated at 2026-07-11T04:24:25+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-07-12T04:45:16+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,135 +15,115 @@ _Auto-generated at 2026-07-11T04:24:25+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **35764** | 184 | 773 | 11 | 80 |
+| **35895** | 18 | 131 | 11 | 80 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section B · 🆕 今日新冒头 · 10 人
+## Section B · 🆕 今日新冒头 · 9 人
 
-### No. 01 · OpFlow: Learning Opportunity-Conditioned Choice Potentials for Robust OD Flow Prediction
+### No. 01 · TSHA: A Benchmark for Visual Language Models in Trustworthy Safety Hazard Assessment Scenarios
 
-**Changjian Liu** · 一作 · 8 作者 · [arXiv:2607.03200](https://arxiv.org/abs/2607.03200)
+**Qiucheng Yu** · 一作 · 4 作者 · [arXiv:2603.29759](https://arxiv.org/abs/2603.29759)
 
-*用曝光-选择机制解耦OD流，学习可迁移的条件选择势。*
+*构建含66k真实场景QA对的视觉语言安全评估基准TSHA。*
 
-_Origin-destination (OD) flow prediction is central to urban analytics, yet deep models trained on raw counts remain vulnerable to distribution shift. The core problem is that raw count supervision cannot distinguish tra…_
+_Recent advances in vision-language models (VLMs) have accelerated their application to indoor safety hazards assessment. However, existing benchmarks suffer from three fundamental limitations: (1) heavy reliance on synt…_
 
-→ [profile](/researchers/changjian-liu)
-
----
-### No. 02 · Towards LLM Accelerated Rapid Reviews for Software Tool Discovery -- Case for Log Anomaly Detection
-
-**Jesse Nyyssölä** · 一作 · 9 作者 · [arXiv:2606.16839](https://arxiv.org/abs/2606.16839)
-
-*用LLM筛选+编码代理自动化工具发现与复现。*
-
-_In software engineering research, the primary outcome is frequently a tool. However, for practitioners and academics alike, it is hard to tell which tools are maintained and do they work out of the box. In this paper, w…_
-
-→ [profile](/researchers/jesse-nyyss-l)
+→ [profile](/researchers/qiucheng-yu)
 
 ---
-### No. 03 · EVIDENT: Routing MLLM Adaptation through Entity-Grounded Visual Evidence for Cross-Domain Video Temporal Grounding
+### No. 02 · -8 dB SNR + 90% Packet Loss: MamVSC -- CSI-Guided Semantic Mamba for Extreme-Robust Video Semantic Communication
 
-**Geo Ahn** · 一作 · 5 作者 · [arXiv:2605.26104](https://arxiv.org/abs/2605.26104)
+**Lei Teng** · 一作 · 6 作者 · [arXiv:2607.07293](https://arxiv.org/abs/2607.07293)
 
-*实体瓶颈适配器与实体门控机制增强跨域视频时序定位鲁棒性。*
+*CSI引导Mamba动态调整语义粒度与聚类中心抗噪声丢包。*
 
-_Fine-tuning MLLMs for Video Temporal Grounding (VTG) often improves in-domain performance but degrades sharply under domain shift. In this work, we find that this failure is primarily driven not just by unseen query con…_
+_Semantic communication, leveraging joint source-channel coding, is designed to mitigate semantic distortion introduced by the channel. However, most current studies focus solely on semantic deviation distortion caused b…_
 
-→ [profile](/researchers/geo-ahn)
-
----
-### No. 04 · SlotVTG: Object-Centric Adapter for Generalizable Video Temporal Grounding
-
-**Jiwook Han** · 一作 · 4 作者 · [arXiv:2603.25733](https://arxiv.org/abs/2603.25733)
-
-*用slot注意力适配器增强MLLM视频时序定位的跨域泛化。*
-
-_Multimodal Large Language Models (MLLMs) have shown strong performance on Video Temporal Grounding (VTG). However, their coarse recognition capabilities are insufficient for fine-grained temporal understanding, making t…_
-
-→ [profile](/researchers/jiwook-han)
+→ [profile](/researchers/lei-teng)
 
 ---
-### No. 05 · PCEvE: Part Contribution Evaluation Based Model Explanation for Human Figure Drawing Assessment and Beyond
+### No. 03 · STCC: A Unified Source-Channel Semantic Token Coding Framework for Semantic Communications
 
-**Jongseo Lee** · 一作 · 4 作者 · [arXiv:2409.18260](https://arxiv.org/abs/2409.18260)
+**Zhicheng Bao** · 一作 · 9 作者 · [arXiv:2606.11819](https://arxiv.org/abs/2606.11819)
 
-*用Shapley值评估部件贡献，实现模型决策的部件级解释。*
+*用三重损失MLP编码器将信道噪声转为语义拓扑错误。*
 
-_For automatic human figure drawing (HFD) assessment tasks, such as diagnosing autism spectrum disorder (ASD) using HFD images, the clarity and explainability of a model decision are crucial. Existing pixel-level attribu…_
+_Deep Joint Source-Channel Coding (JSCC) has emerged as a promising paradigm for overcoming the ``cliff effect" in wireless communications. However, existing Deep JSCC frameworks operate directly on raw analog data such…_
 
-→ [profile](/researchers/jongseo-lee)
-
----
-### No. 06 · DEVIAS: Learning Disentangled Video Representations of Action and Scene
-
-**Kyungho Bae** · 一作 · 4 作者 · [arXiv:2312.00826](https://arxiv.org/abs/2312.00826)
-
-*用槽注意力与掩码解码器解耦动作与场景表征。*
-
-_Video recognition models often learn scene-biased action representation due to the spurious correlation between actions and scenes in the training data. Such models show poor performance when the test data consists of v…_
-
-→ [profile](/researchers/kyungho-bae)
+→ [profile](/researchers/zhicheng-bao)
 
 ---
-### No. 07 · Probabilistic Vision-Language Representation for Weakly Supervised Temporal Action Localization
+### No. 04 · RefGlass-GS: A UAV-Enabled Fusion Framework for Photorealistic, Semantic and Interactive Digitization of Reflective Glass Facades via Gaussian Splatting
 
-**Geuntaek Lim** · 一作 · 4 作者 · [arXiv:2408.05955](https://arxiv.org/abs/2408.05955)
+**Zhenyu Liang** · 一作 · 8 作者 · [arXiv:2606.28826](https://arxiv.org/abs/2606.28826)
 
-*用概率嵌入对齐人类动作与VLP知识，提升弱监督时序定位。*
+*用高斯溅射与反射MLP实现反光玻璃幕墙高保真数字化。*
 
-_Weakly supervised temporal action localization (WTAL) aims to detect action instances in untrimmed videos using only video-level annotations. Since many existing works optimize WTAL models based on action classification…_
+_Existing digitization of buildings with reflective glass facades suffers from geometric reconstruction distortion, unrealistic view-dependent texture rendering, and difficulties in object-based semantic enhancement. The…_
 
-→ [profile](/researchers/geuntaek-lim)
-
----
-### No. 08 · VVS: Video-to-Video Retrieval with Irrelevant Frame Suppression
-
-**Won Jo** · 一作 · 6 作者 · [arXiv:2303.08906](https://arxiv.org/abs/2303.08906)
-
-*用VVS网络抑制无关帧实现视频级高效检索。*
-
-_In content-based video retrieval (CBVR), dealing with large-scale collections, efficiency is as important as accuracy; thus, several video-level feature-based studies have actively been conducted. Nevertheless, owing to…_
-
-→ [profile](/researchers/won-jo)
+→ [profile](/researchers/zhenyu-liang)
 
 ---
-### No. 09 · TESSERA: Temporal Embeddings of Surface Spectra for Earth Representation and Analysis
+### No. 05 · Neutron Star Mass-Radius Constraints for EXO 0748$-$676 from 2008-2025 Quiescent X-ray Spectra
 
-**Zhengpeng Feng** · 一作 · 14 作者 · [arXiv:2506.20380](https://arxiv.org/abs/2506.20380)
+**Mingyang Wang** · 一作 · 3 作者 · [arXiv:2606.23466](https://arxiv.org/abs/2606.23466)
 
-_Satellite Earth-observation (EO) time series in the optical and microwave ranges of the electromagnetic spectrum are often irregular due to orbital patterns and cloud obstruction. Compositing addresses these issues but…_
+*联合分析20次宁静X射线光谱，约束中子星质量半径。*
 
-→ [profile](/researchers/zhengpeng-feng)
+_We present new constraints on the mass and radius of the neutron star in the neutron star low-mass X-ray binary EXO 0748$-$676 obtained from a joint analysis of 20 quiescent X-ray observations obtained between 2008 and…_
+
+→ [profile](/researchers/mingyang-wang)
 
 ---
-### No. 10 · SAR Despeckling via Regional Denoising Diffusion Probabilistic Model
+### No. 06 · Mirage: a Clean-Label Backdoor against LiDAR 3D Object Detection
 
-**Xuran Hu** · 一作 · 6 作者 · [arXiv:2401.03122](https://arxiv.org/abs/2401.03122)
+**Ziba Parsons** · 一作 · 2 作者 · [arXiv:2606.20752](https://arxiv.org/abs/2606.20752)
 
-*用区域去噪扩散模型实现多尺度SAR图像去斑。*
+*黑盒干净标签后门攻击LiDAR 3D检测，仅0.5%投毒率。*
 
-_Speckle noise poses a significant challenge in maintaining the quality of synthetic aperture radar (SAR) images, so SAR despeckling techniques have drawn increasing attention. Despite the tremendous advancements of deep…_
+_Deep neural network-based LiDAR 3D object detection serves as a critical perception component in safety-critical autonomous systems. However, recent studies have revealed its vulnerability to backdoor attacks. Existing…_
 
-→ [profile](/researchers/xuran-hu)
+→ [profile](/researchers/ziba-parsons)
+
+---
+### No. 07 · Splaxel: Efficient Distributed Training of 3D Gaussian Splatting for Large-scale Scene Reconstruction via Pixel-level Communication
+
+**Wenqi Jia** · 一作 · 13 作者 · [arXiv:2606.18588](https://arxiv.org/abs/2606.18588)
+
+*基于像素级通信的分布式3DGS训练，通信量稳定。*
+
+_3D Gaussian Splatting (3DGS) enables high-fidelity and real-time 3D scene reconstruction, but scaling training to large-scale scenes requires optimizing hundreds of millions of Gaussians across multiple GPUs. Existing d…_
+
+→ [profile](/researchers/wenqi-jia)
+
+---
+### No. 08 · VOID: Defeating Unauthorized Mimicry in Latent Diffusion Models
+
+**Chunlin Qiu** · 一作 · 10 作者 · [arXiv:2606.12263](https://arxiv.org/abs/2606.12263)
+
+*通过扰动扩散模型随机性破坏语义结构防御未授权模仿。*
+
+_While Latent Diffusion Models (LDMs) have revolutionized visual synthesis, they are increasingly exploited for unauthorized mimicry of individuals. Existing defenses inject deceptive perturbations to steer the generated…_
+
+→ [profile](/researchers/chunlin-qiu)
+
+---
+### No. 09 · Characterization of Speech Imagery in Scalp EEG and Comparison with Motor Imagery
+
+**Bob Van Dyck** · 一作 · 5 作者 · [arXiv:2606.12223](https://arxiv.org/abs/2606.12223)
+
+*揭示言语想象在头皮脑电中以弥散α增强为主，区别于运动想象的μ/β去同步。*
+
+_Speech imagery is attractive as a brain-computer interface paradigm for communication because it is endogenous and intrinsically linguistic. Yet despite growing interest, its dominant scalp-EEG spatiotemporal characteri…_
+
+→ [profile](/researchers/bob-van-dyck)
 
 ---
 
-## Section B · 🔄 动态更新 · 10 项
+## Section B · 🔄 动态更新 · 0 项
 
-| 研究者 | 新工作 | 主题 | arXiv |
-| --- | --- | --- | --- |
-| [Chunhua Shen](/researchers/chunhua-shen) | Framer: Interactive Frame Interpolation | — | [2410.18978](https://arxiv.org/abs/2410.18978) |
-| [Chunhua Shen](/researchers/chunhua-shen) | FreeCompose: Generic Zero-Shot Image Composition with Diffusion Prior | — | [2407.04947](https://arxiv.org/abs/2407.04947) |
-| [Chunhua Shen](/researchers/chunhua-shen) | AutoStory: Generating Diverse Storytelling Images with Minimal Human… | — | [2311.11243](https://arxiv.org/abs/2311.11243) |
-| [Yoshua Bengio](/researchers/yoshua-bengio) | MAgNet: Mesh Agnostic Neural PDE Solver | — | [None](#) |
-| [Jun Zhu](/researchers/jun-zhu) | Vidu S1: A Real-Time Interactive Video Generation Model | — | [2607.03118](https://arxiv.org/abs/2607.03118) |
-| [Bowen Zhou](/researchers/bowen-zhou) | Accurate, Interdisciplinary and Transparent Structure-property Unders… | ai4sci | [2607.07708](https://arxiv.org/abs/2607.07708) |
-| [Yi Ma](/researchers/yi-ma) | DexVerse: A Modular Benchmark for Multi-Task, Multi-Embodiment Dexter… | embodied | [2607.08751](https://arxiv.org/abs/2607.08751) |
-| [Cewu Lu](/researchers/cewu-lu) | AnyDexRT: Calibration-Free Dexterous Hand Retargeting with Few-Shot H… | embodied | [2607.08341](https://arxiv.org/abs/2607.08341) |
-| [Jiajun Wu](/researchers/jiajun-wu) | APIVOT: Adaptive Planning with Interleaved Vision-Language Thoughts | embodied | [2607.08024](https://arxiv.org/abs/2607.08024) |
-| [He Wang](/researchers/he-wang) | WAM-TTT: Steering World-Action Models by Watching Human Play at Test… | world_models | [2607.06988](https://arxiv.org/abs/2607.06988) |
+_库内已知人今日无新动作。_
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -253,158 +233,160 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning
+### No. 01 · DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence
 
-**Chen Tang** · 一作 · 29 作者 · [arXiv:2607.07708](https://arxiv.org/abs/2607.07708)
+**DeepSeek-AI** · 一作 · 318 作者 · [arXiv:2606.19348](https://arxiv.org/abs/2606.19348)
 
-_Structure-property relationships are foundational to biology, chemistry and materials science, where function, reactivity and physical response emerge from spatial, chemical and periodic organization. Mechanistically ex…_
+*混合注意力架构与Muon优化器实现百万token高效推理。*
 
-→ [profile](/researchers/chen-tang)
+_We present a preview version of DeepSeek-V4 series, including two strong Mixture-of-Experts (MoE) language models -- DeepSeek-V4-Pro with 1.6T parameters (49B activated) and DeepSeek-V4-Flash with 284B parameters (13B a…_
 
----
-### No. 02 · Native Video-Action Pretraining for Generalizable Robot Control
-
-**Qihang Zhang** · 一作 · 29 作者 · [arXiv:2607.08639](https://arxiv.org/abs/2607.08639)
-
-_The advent of video-action models offers a promising path for robot control. Nevertheless, we argue that repurposing video generative models designed for digital content creation is inherently inadequate for physical en…_
-
-→ [profile](/researchers/qihang-zhang)
+→ [profile](/researchers/deepseek-ai)
 
 ---
-### No. 03 · MoWorld: A Flash World Model
+### No. 02 · TacGen: Touch Is a Necessary Dimension of Physical-World Representation -- Addressing Tactile Data Scarcity with Scalable Vision-to-Touch Alignment and Generation
 
-**Team Moxin** · 一作 · 29 作者 · [arXiv:2607.06216](https://arxiv.org/abs/2607.06216)
+**Wanghao Ye** · 一作 · 22 作者 · [arXiv:2606.29173](https://arxiv.org/abs/2606.29173)
 
-_The future of World Models depends not only on scaling model capability, but also on scaling practicality and inference efficiency. High-frame-rate inference enables responsive perception, planning, and control in real-…_
+*用视觉-触觉对齐与生成缓解触觉数据稀缺，提升物理属性表征。*
 
-→ [profile](/researchers/team-moxin)
+_Touch resolves the physical-property ambiguity left by vision: exploratory contact recovers shape, texture, compliance, and material, and visuo-haptic object representations converge in ventral visual cortex. We ask whe…_
 
----
-### No. 04 · Vidu S1: A Real-Time Interactive Video Generation Model
-
-**Jintao Zhang** · 一作 · 27 作者 · [arXiv:2607.03118](https://arxiv.org/abs/2607.03118)
-
-_We introduce Vidu S1, a real-time interactive video generation model supporting voice control of digital characters. Users can control video generation content at any moment through voice instructions. Vidu S1 supports…_
-
-→ [profile](/researchers/jintao-zhang)
+→ [profile](/researchers/wanghao-ye)
 
 ---
-### No. 05 · Multiplayer Interactive World Models with Representation Autoencoders
+### No. 03 · Splaxel: Efficient Distributed Training of 3D Gaussian Splatting for Large-scale Scene Reconstruction via Pixel-level Communication
 
-**Anthony Hu** · 一作 · 27 作者 · [arXiv:2607.05352](https://arxiv.org/abs/2607.05352)
+**Wenqi Jia** · 一作 · 13 作者 · [arXiv:2606.18588](https://arxiv.org/abs/2606.18588)
 
-_We introduce the first multiplayer world model for highly dynamic environments governed by complex physical interactions. Whereas single-player world models treat the other agents as part of the environment, ours condit…_
+*基于像素级通信的分布式3DGS训练，通信量稳定。*
 
-→ [profile](/researchers/anthony-hu)
+_3D Gaussian Splatting (3DGS) enables high-fidelity and real-time 3D scene reconstruction, but scaling training to large-scale scenes requires optimizing hundreds of millions of Gaussians across multiple GPUs. Existing d…_
 
----
-### No. 06 · Quantum Dot Moiré from Crossed MoS2 Nanoribbons
-
-**Xinting Shuai** · 一作 · 25 作者 · [arXiv:2607.07871](https://arxiv.org/abs/2607.07871)
-
-_Twisted atomically thin layers have attracted much attention for Moiré potential and correlated quantum phenomena. However, existing Moiré superlattices have largely been limited to extensive wavefunction without latera…_
-
-→ [profile](/researchers/xinting-shuai)
+→ [profile](/researchers/wenqi-jia)
 
 ---
-### No. 07 · Infinite Worlds with Versatile Interactions
+### No. 04 · VOID: Defeating Unauthorized Mimicry in Latent Diffusion Models
 
-**Zelin Gao** · 一作 · 20 作者 · [arXiv:2607.07534](https://arxiv.org/abs/2607.07534)
+**Chunlin Qiu** · 一作 · 10 作者 · [arXiv:2606.12263](https://arxiv.org/abs/2606.12263)
 
-_We present LingBot-World 2.0 (also known as LingBot-World-Infinity), an advanced iteration of LingBot-World featuring four distinct upgrades. (1) Our model achieves an unbounded interaction horizon while maintaining con…_
+*通过扰动扩散模型随机性破坏语义结构防御未授权模仿。*
 
-→ [profile](/researchers/zelin-gao)
+_While Latent Diffusion Models (LDMs) have revolutionized visual synthesis, they are increasingly exploited for unauthorized mimicry of individuals. Existing defenses inject deceptive perturbations to steer the generated…_
 
----
-### No. 08 · Atomistic Modeling for Electro-chemical Reactions
-
-**K. Doblhoff-Dier** · 一作 · 19 作者 · [arXiv:2607.07933](https://arxiv.org/abs/2607.07933)
-
-_Computational modeling plays a central role in advancing our understanding of electro-chemical reactions and may thus guide the rational development of sustainable energy technologies. Despite significant methodological…_
-
-→ [profile](/researchers/k-doblhoff-dier)
+→ [profile](/researchers/chunlin-qiu)
 
 ---
-### No. 09 · Trapping 11,000 Atoms in a Tweezer Array Generated by a Single Metasurface
+### No. 05 · STCC: A Unified Source-Channel Semantic Token Coding Framework for Semantic Communications
 
-**Yuqing Wang** · 一作 · 17 作者 · [arXiv:2606.02715](https://arxiv.org/abs/2606.02715)
+**Zhicheng Bao** · 一作 · 9 作者 · [arXiv:2606.11819](https://arxiv.org/abs/2606.11819)
 
-*单超表面生成阵列捕获11000原子，突破量子比特规模。*
+*用三重损失MLP编码器将信道噪声转为语义拓扑错误。*
 
-_The scalability of physical qubit numbers is a central challenge toward a universal fault-tolerant quantum computer. The inherent scalability of atom array quantum computers stems from the identical nature of atomic qub…_
+_Deep Joint Source-Channel Coding (JSCC) has emerged as a promising paradigm for overcoming the ``cliff effect" in wireless communications. However, existing Deep JSCC frameworks operate directly on raw analog data such…_
 
-→ [profile](/researchers/yuqing-wang)
+→ [profile](/researchers/zhicheng-bao)
 
 ---
-### No. 10 · Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation
+### No. 06 · AUTOGATE: Automated Clock Gating via Toggling-Aware LLM-based RTL Rewriting
 
-**Yifan Zhou** · 一作 · 17 作者 · [arXiv:2607.08758](https://arxiv.org/abs/2607.08758)
+**Yiting Wang** · 一作 · 9 作者 · [arXiv:2606.17461](https://arxiv.org/abs/2606.17461)
 
-_Scientific ideas rarely start from a blank page. They inherit mechanisms, repair known limitations, and recombine pieces of earlier work, much like biological genomes. Current benchmarks still say little about whether A…_
+*用ML聚类压缩波形数据，引导LLM重写RTL实现自动门控。*
 
-→ [profile](/researchers/yifan-zhou)
+_Fine-grain clock gating (FGCG) is among the most effective techniques for reducing dynamic power, yet current FGCG optimization flows remain largely manual. Recent LLM-based RTL optimization approaches remain limited by…_
+
+→ [profile](/researchers/yiting-wang)
+
+---
+### No. 07 · RefGlass-GS: A UAV-Enabled Fusion Framework for Photorealistic, Semantic and Interactive Digitization of Reflective Glass Facades via Gaussian Splatting
+
+**Zhenyu Liang** · 一作 · 8 作者 · [arXiv:2606.28826](https://arxiv.org/abs/2606.28826)
+
+*用高斯溅射与反射MLP实现反光玻璃幕墙高保真数字化。*
+
+_Existing digitization of buildings with reflective glass facades suffers from geometric reconstruction distortion, unrealistic view-dependent texture rendering, and difficulties in object-based semantic enhancement. The…_
+
+→ [profile](/researchers/zhenyu-liang)
+
+---
+### No. 08 · Inverse-squeezing receivers for squeezed-state pulse-position modulation under ideal and phase-diffusion conditions
+
+**Enhao Bai** · 一作 · 7 作者 · [arXiv:2606.31541](https://arxiv.org/abs/2606.31541)
+
+*提出逆压缩条件脉冲归零接收机提升光子效率通信。*
+
+_We introduce a squeezed-state pulse-position modulation (S-PPM) format, where the empty slots are squeezed vacuum states and the pulse slot is a displaced squeezed state. Based on this property, we propose an inverse-sq…_
+
+→ [profile](/researchers/enhao-bai)
+
+---
+### No. 09 · -8 dB SNR + 90% Packet Loss: MamVSC -- CSI-Guided Semantic Mamba for Extreme-Robust Video Semantic Communication
+
+**Lei Teng** · 一作 · 6 作者 · [arXiv:2607.07293](https://arxiv.org/abs/2607.07293)
+
+*CSI引导Mamba动态调整语义粒度与聚类中心抗噪声丢包。*
+
+_Semantic communication, leveraging joint source-channel coding, is designed to mitigate semantic distortion introduced by the channel. However, most current studies focus solely on semantic deviation distortion caused b…_
+
+→ [profile](/researchers/lei-teng)
+
+---
+### No. 10 · Deep Reinforcement Learning-Enhanced Event-Triggered Data-Driven Predictive Control for a 3D Cable-Driven Soft Robotic Arm
+
+**Cheng Ouyang** · 一作 · 6 作者 · [arXiv:2606.26048](https://arxiv.org/abs/2606.26048)
+
+*强化学习触发DeePC优化，降频66%保精度。*
+
+_Soft robots are challenging to control due to their nonlinear and time-varying dynamics. Data-enabled predictive control (DeePC) offers a model-free alternative by directly leveraging measured input-output trajectories…_
+
+→ [profile](/researchers/cheng-ouyang)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 5 个
+## Section F · 🌙 Sleeper Picks · 3 个
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · MoWorld: A Flash World Model
+### No. 01 · Splaxel: Efficient Distributed Training of 3D Gaussian Splatting for Large-scale Scene Reconstruction via Pixel-level Communication
 
-**Team Moxin** · 一作 · 29 作者 · [arXiv:2607.06216](https://arxiv.org/abs/2607.06216)
+**Wenqi Jia** · 一作 · 13 作者 · [arXiv:2606.18588](https://arxiv.org/abs/2606.18588)
 
-_The future of World Models depends not only on scaling model capability, but also on scaling practicality and inference efficiency. High-frame-rate inference enables responsive perception, planning, and control in real-…_
+*基于像素级通信的分布式3DGS训练，通信量稳定。*
 
-**▸ 选中原因：首次出现 · 29 作者合作（疑似大组新人）**
+_3D Gaussian Splatting (3DGS) enables high-fidelity and real-time 3D scene reconstruction, but scaling training to large-scale scenes requires optimizing hundreds of millions of Gaussians across multiple GPUs. Existing d…_
 
-→ [profile](/researchers/team-moxin)
+**▸ 选中原因：首次出现 · 13 作者合作（疑似大组新人）**
 
----
-### No. 02 · Multiplayer Interactive World Models with Representation Autoencoders
-
-**Anthony Hu** · 一作 · 27 作者 · [arXiv:2607.05352](https://arxiv.org/abs/2607.05352)
-
-_We introduce the first multiplayer world model for highly dynamic environments governed by complex physical interactions. Whereas single-player world models treat the other agents as part of the environment, ours condit…_
-
-**▸ 选中原因：首次出现 · 27 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/anthony-hu)
+→ [profile](/researchers/wenqi-jia)
 
 ---
-### No. 03 · Quantum Dot Moiré from Crossed MoS2 Nanoribbons
+### No. 02 · VOID: Defeating Unauthorized Mimicry in Latent Diffusion Models
 
-**Xinting Shuai** · 一作 · 25 作者 · [arXiv:2607.07871](https://arxiv.org/abs/2607.07871)
+**Chunlin Qiu** · 一作 · 10 作者 · [arXiv:2606.12263](https://arxiv.org/abs/2606.12263)
 
-_Twisted atomically thin layers have attracted much attention for Moiré potential and correlated quantum phenomena. However, existing Moiré superlattices have largely been limited to extensive wavefunction without latera…_
+*通过扰动扩散模型随机性破坏语义结构防御未授权模仿。*
 
-**▸ 选中原因：首次出现 · 25 作者合作（疑似大组新人）**
+_While Latent Diffusion Models (LDMs) have revolutionized visual synthesis, they are increasingly exploited for unauthorized mimicry of individuals. Existing defenses inject deceptive perturbations to steer the generated…_
 
-→ [profile](/researchers/xinting-shuai)
+**▸ 选中原因：首次出现 · 10 作者合作（疑似大组新人）**
 
----
-### No. 04 · APIVOT: Adaptive Planning with Interleaved Vision-Language Thoughts
-
-**Emily Jin** · 一作 · 6 作者 · [arXiv:2607.08024](https://arxiv.org/abs/2607.08024)
-
-_Long-horizon robot planning requires jointly reasoning over semantic task structure and geometric feasibility. To successfully execute a task, a robot must decompose goals, select task-relevant objects, and sequence act…_
-
-**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
-
-→ [profile](/researchers/emily-jin)
+→ [profile](/researchers/chunlin-qiu)
 
 ---
-### No. 05 · WAM-TTT: Steering World-Action Models by Watching Human Play at Test Time
+### No. 03 · STCC: A Unified Source-Channel Semantic Token Coding Framework for Semantic Communications
 
-**Yusen Feng** · 一作 · 16 作者 · [arXiv:2607.06988](https://arxiv.org/abs/2607.06988)
+**Zhicheng Bao** · 一作 · 9 作者 · [arXiv:2606.11819](https://arxiv.org/abs/2606.11819)
 
-_Steering robot foundation models (RFMs) toward new task variants or user-preferred behaviors remains challenging, often requiring additional robot demonstrations, task-specific fine-tuning, or long-context conditioning.…_
+*用三重损失MLP编码器将信道噪声转为语义拓扑错误。*
 
-**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+_Deep Joint Source-Channel Coding (JSCC) has emerged as a promising paradigm for overcoming the ``cliff effect" in wireless communications. However, existing Deep JSCC frameworks operate directly on raw analog data such…_
 
-→ [profile](/researchers/yusen-feng)
+**▸ 选中原因：首次出现 · 9 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/zhicheng-bao)
 
 ---
 
