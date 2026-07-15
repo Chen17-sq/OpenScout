@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 061                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · TUESDAY, JULY 14, 2026
+VOL. 1 · NO. 062                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · WEDNESDAY, JULY 15, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 061 · 2026-07-14
+> *All The Researchers Fit To Watch* — Vol. 1, No. 062 · 2026-07-15
 
-_Auto-generated at 2026-07-14T04:13:22+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-07-15T04:09:05+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,129 +15,130 @@ _Auto-generated at 2026-07-14T04:13:22+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **37033** | 151 | 644 | 11 | 80 |
+| **37399** | 99 | 366 | 12 | 80 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · CookingSense: A Culinary Knowledgebase with Multidisciplinary Assertions
+### No. 01 · On-the-fly Repulsion in the Contextual Space for Rich Diversity in Diffusion Transformers
 
-**Donghee Choi** · 一作 · 7 作者 · [arXiv:2405.00523](https://arxiv.org/abs/2405.00523)
+**Omer Dahary** · 一作 · 4 作者 · [arXiv:2603.28762](https://arxiv.org/abs/2603.28762)
 
-*构建多学科烹饪知识库CookingSense提升检索增强语言模型性能。*
+*在上下文空间施加排斥力提升扩散Transformer多样性。*
 
-_This paper introduces CookingSense, a descriptive collection of knowledge assertions in the culinary domain extracted from various sources, including web data, scientific papers, and recipes, from which knowledge coveri…_
+_Modern Text-to-Image (T2I) diffusion models have achieved remarkable semantic alignment, yet they often suffer from a significant lack of variety, converging on a narrow set of visual solutions for any given prompt. Thi…_
 
-→ [profile](/researchers/donghee-choi)
-
----
-### No. 02 · Small Language Models Learn Enhanced Reasoning Skills from Medical Textbooks
-
-**Hyunjae Kim** · 一作 · 10 作者 · [arXiv:2404.00376](https://arxiv.org/abs/2404.00376)
-
-*用18本医学教材的思维链数据训练小模型，超越GPT-4。*
-
-_While recent advancements in commercial large language models (LM) have shown promising results in medical tasks, their closed-source nature poses significant privacy and security concerns, hindering their widespread us…_
-
-→ [profile](/researchers/hyunjae-kim)
+→ [profile](/researchers/omer-dahary)
 
 ---
-### No. 03 · Fine-tuning CLIP Text Encoders with Two-step Paraphrasing
+### No. 02 · SAEdit: Token-level control for continuous image editing via Sparse AutoEncoder
 
-**Hyunjae Kim** · 一作 · 7 作者 · [arXiv:2402.15120](https://arxiv.org/abs/2402.15120)
+**Ronen Kamenetsky** · 一作 · 6 作者 · [arXiv:2510.05081](https://arxiv.org/abs/2510.05081)
 
-*用两步释义生成微调CLIP文本编码器提升检索鲁棒性。*
+*用SAE稀疏潜空间实现文本嵌入的连续解耦图像编辑。*
 
-_Contrastive language-image pre-training (CLIP) models have demonstrated considerable success across various vision-language tasks, such as text-to-image retrieval, where the model is required to effectively process natu…_
+_Large-scale text-to-image diffusion models have become the backbone of modern image editing, yet text prompts alone do not offer adequate control over the editing process. Two properties are especially desirable: disent…_
 
-→ [profile](/researchers/hyunjae-kim)
-
----
-### No. 04 · KU-DMIS-MSRA at RadSum23: Pre-trained Vision-Language Model for Radiology Report Summarization
-
-**Gangwoo Kim** · 一作 · 10 作者 · [arXiv:2307.07409](https://arxiv.org/abs/2307.07409)
-
-*预训练视觉语言模型统一多任务序列到序列生成放射报告。*
-
-_In this paper, we introduce CheXOFA, a new pre-trained vision-language model (VLM) for the chest X-ray domain. Our model is initially pre-trained on various multimodal datasets within the general domain before being tra…_
-
-→ [profile](/researchers/gangwoo-kim)
+→ [profile](/researchers/ronen-kamenetsky)
 
 ---
-### No. 05 · Automatic Creation of Named Entity Recognition Datasets by Querying Phrase Representations
+### No. 03 · Tight Inversion: Image-Conditioned Inversion for Real Image Editing
 
-**Hyunjae Kim** · 一作 · 4 作者 · [arXiv:2210.07586](https://arxiv.org/abs/2210.07586)
+**Edo Kadosh** · 一作 · 5 作者 · [arXiv:2502.20376](https://arxiv.org/abs/2502.20376)
 
-*用短语嵌入搜索生成高覆盖伪字典提升NER数据集质量。*
+*利用输入图像自身作为精确条件，提升扩散模型反转重建与可编辑性。*
 
-_Most weakly supervised named entity recognition (NER) models rely on domain-specific dictionaries provided by experts. This approach is infeasible in many domains where dictionaries do not exist. While a phrase retrieva…_
+_Text-to-image diffusion models offer powerful image editing capabilities. To edit real images, many methods rely on the inversion of the image into Gaussian noise. A common approach to invert an image is to gradually ad…_
 
-→ [profile](/researchers/hyunjae-kim)
-
----
-### No. 06 · Simple Questions Generate Named Entity Recognition Datasets
-
-**Hyunjae Kim** · 一作 · 5 作者 · [arXiv:2112.08808](https://arxiv.org/abs/2112.08808)
-
-*用简单问题生成NER数据集，超越低资源模型。*
-
-_Recent named entity recognition (NER) models often rely on human-annotated datasets, requiring the significant engagement of professional knowledge on the target domain and entities. This research introduces an ask-to-g…_
-
-→ [profile](/researchers/hyunjae-kim)
+→ [profile](/researchers/edo-kadosh)
 
 ---
-### No. 07 · Improving Tagging Consistency and Entity Coverage for Chemical Identification in Full-text Articles
+### No. 04 · TokenVerse: Versatile Multi-concept Personalization in Token Modulation Space
 
-**Hyunjae Kim** · 一作 · 5 作者 · [arXiv:2111.10584](https://arxiv.org/abs/2111.10584)
+**Daniel Garibi** · 一作 · 9 作者 · [arXiv:2501.12224](https://arxiv.org/abs/2501.12224)
 
-*用投票与混合法提升全文中化学NER一致性与覆盖率。*
+*在调制空间解耦多图像概念，实现DiT扩散模型个性化生成。*
 
-_This paper is a technical report on our system submitted to the chemical identification task of the BioCreative VII Track 2 challenge. The main feature of this challenge is that the data consists of full-text articles,…_
+_We present TokenVerse -- a method for multi-concept personalization, leveraging a pre-trained text-to-image diffusion model. Our framework can disentangle complex visual elements and attributes from as little as a singl…_
 
-→ [profile](/researchers/hyunjae-kim)
-
----
-### No. 08 · Learn to Resolve Conversational Dependency: A Consistency Training Framework for Conversational Question Answering
-
-**Gangwoo Kim** · 一作 · 4 作者 · [arXiv:2106.11575](https://arxiv.org/abs/2106.11575)
-
-*用一致性训练显式指导模型解决对话依赖问题。*
-
-_One of the main challenges in conversational question answering (CQA) is to resolve the conversational dependency, such as anaphora and ellipsis. However, existing approaches do not explicitly train QA models on how to…_
-
-→ [profile](/researchers/gangwoo-kim)
+→ [profile](/researchers/daniel-garibi)
 
 ---
-### No. 09 · "Killing Me" Is Not a Spoiler: Spoiler Detection Model using Graph Neural Networks with Dependency Relation-Aware Attention Mechanism
+### No. 05 · TurboEdit: Text-Based Image Editing Using Few-Step Diffusion Models
 
-**Buru Chang** · 一作 · 4 作者 · [arXiv:2101.05972](https://arxiv.org/abs/2101.05972)
+**Gilad Deutch** · 一作 · 5 作者 · [arXiv:2408.00735](https://arxiv.org/abs/2408.00735)
 
-*用依赖关系感知图神经网络提升剧透检测性能。*
+*用三步扩散模型实现文本图像编辑，提出偏移噪声调度与伪引导。*
 
-_Several machine learning-based spoiler detection models have been proposed recently to protect users from spoilers on review websites. Although dependency relations between context words are important for detecting spoi…_
+_Diffusion models have opened the path to a wide range of text-based image editing frameworks. However, these typically build on the multi-step nature of the diffusion backwards process, and adapting them to distilled, f…_
 
-→ [profile](/researchers/buru-chang)
-
----
-### No. 10 · How Do Your Biomedical Named Entity Recognition Models Generalize to Novel Entities?
-
-**Hyunjae Kim** · 一作 · 2 作者 · [arXiv:2101.00160](https://arxiv.org/abs/2101.00160)
-
-*揭示BioNER模型对未知实体泛化不足，提出统计去偏方法改进。*
-
-_The number of biomedical literature on new biomedical concepts is rapidly increasing, which necessitates a reliable biomedical named entity recognition (BioNER) model for identifying new and unseen entity mentions. Howe…_
-
-→ [profile](/researchers/hyunjae-kim)
+→ [profile](/researchers/gilad-deutch)
 
 ---
+### No. 06 · ReNoise: Real Image Inversion Through Iterative Noising
 
-## Section B · 🔄 动态更新 · 2 项
+**Daniel Garibi** · 一作 · 5 作者 · [arXiv:2403.14602](https://arxiv.org/abs/2403.14602)
+
+*迭代重噪机制提升扩散模型实图反演重建精度。*
+
+_Recent advancements in text-guided diffusion models have unlocked powerful image manipulation capabilities. However, applying these methods to real images necessitates the inversion of the images into the domain of the…_
+
+→ [profile](/researchers/daniel-garibi)
+
+---
+### No. 07 · Cross-Image Attention for Zero-Shot Appearance Transfer
+
+**Yuval Alaluf** · 一作 · 5 作者 · [arXiv:2311.03335](https://arxiv.org/abs/2311.03335)
+
+*跨图像注意力机制实现零样本外观迁移。*
+
+_Recent advancements in text-to-image generative models have demonstrated a remarkable ability to capture a deep semantic understanding of images. In this work, we leverage this semantic knowledge to transfer the visual…_
+
+→ [profile](/researchers/yuval-alaluf)
+
+---
+### No. 08 · 4D Human-Scene Reconstruction from Low-Overlap Captures
+
+**Minhyuk Hwang** · 一作 · 5 作者 · [arXiv:2607.09125](https://arxiv.org/abs/2607.09125)
+
+*用视频扩散模型与可变形高斯体重建低重叠4D人体场景。*
+
+_Existing volumetric capture of dynamic human performance achieves high fidelity with dense camera arrays. However, in real-world scenarios, only a handful of low-overlap cameras are available, which degrades the output…_
+
+→ [profile](/researchers/minhyuk-hwang)
+
+---
+### No. 09 · Metacognition in LLMs: Foundations, Progress, and Opportunities
+
+**Gabrielle Kaili-May Liu** · 一作 · 6 作者 · [arXiv:2607.11881](https://arxiv.org/abs/2607.11881)
+
+*首次系统综述LLM元认知能力评估与提升方法。*
+
+_Metacognition is a foundational component of intelligence critical to effective learning, problem solving, decision-making, communication, and more. In recent years, it has become increasingly recognized as a cornerston…_
+
+→ [profile](/researchers/gabrielle-kaili-may-liu)
+
+---
+### No. 10 · CtrlVTON: Controllable Virtual Try-On via Visual-Instance-Prompt Segmentation
+
+**Seungyong Lee** · 一作 · 4 作者 · [arXiv:2607.09362](https://arxiv.org/abs/2607.09362)
+
+*用VIP-SAM分割与扩散模型实现服装布局像素级控制。*
+
+_Virtual try-on (VTO) has made significant progress in realistically transferring garments onto a target person. Yet most systems give the user little control over how a garment should be worn -- its size (loose or fitte…_
+
+→ [profile](/researchers/seungyong-lee)
+
+---
+
+## Section B · 🔄 动态更新 · 3 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Ya-Qin Zhang](/researchers/yaqin-zhang) | Weak-to-Strong Generalization via Direct On-Policy Distillation | — | [2607.05394](https://arxiv.org/abs/2607.05394) |
-| [Shuran Song](/researchers/shuran-song) | Mixture of Frames Policy: Multi-Frame Action Denoising for Bimanual M… | embodied | [2607.11884](https://arxiv.org/abs/2607.11884) |
+| [Ping Luo](/researchers/ping-luo) | UR-VC: Unsupervised Robotic Value Correction for Time-Derived Progres… | embodied | [2607.12892](https://arxiv.org/abs/2607.12892) |
+| [Yunhe Wang](/researchers/yunhe-wang) | Jetson-PI: Towards Onboard Real-Time Robot Control via Foresight-Alig… | embodied | [2607.12659](https://arxiv.org/abs/2607.12659) |
+| [Linfeng Zhang](/researchers/linfeng-zhang) | Reducing Temporal Redundancy for Efficient Vision-Language-Action Inf… | embodied | [2607.12287](https://arxiv.org/abs/2607.12287) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -247,96 +248,98 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · ABot-3DWorld 0: A Universal World Model to Explore Any 3D Space
+### No. 01 · Quantized Photocurrents in Gapless Topological Matter
 
-**Mingchao Sun** · 一作 · 37 作者 · [arXiv:2607.11673](https://arxiv.org/abs/2607.11673)
+**Byunghoon Kim** · 一作 · 20 作者 · [arXiv:2607.12420](https://arxiv.org/abs/2607.12420)
 
-_We present ABot-3DWorld 0, a universal multimodal 3D world model that turns text, image, and video inputs into high-fidelity, explorable 3D worlds. At the heart of our framework is a unified Spatial Generative Primitive…_
+_The quantum Hall effect in gapped systems represents a defining signature of nontrivial topology. Realizing this principle in gapless matter has remained a central challenge in quantum materials. Chiral topological semi…_
 
-→ [profile](/researchers/mingchao-sun)
-
----
-### No. 02 · BEnchmarking LLMs for Ophthalmology (BELO) for Ophthalmological Knowledge and Reasoning
-
-**Sahana Srinivasan** · 一作 · 32 作者 · [arXiv:2507.15717](https://arxiv.org/abs/2507.15717)
-
-_Current benchmarks evaluating large language models (LLMs) in ophthalmology are limited in scope and disproportionately prioritise accuracy. We introduce BELO (BEnchmarking LLMs for Ophthalmology), a standardized and co…_
-
-→ [profile](/researchers/sahana-srinivasan)
+→ [profile](/researchers/byunghoon-kim)
 
 ---
-### No. 03 · LEME: Open Large Language Models for Ophthalmology with Advanced Reasoning and Clinical Validation
+### No. 02 · Influence of compaction pressure on the impedance of Gadolinium Doped Ceria electrolytes for IT-SOFCs
 
-**Hyunjae Kim** · 一作 · 30 作者 · [arXiv:2410.03740](https://arxiv.org/abs/2410.03740)
+**Renato A. N. de Oliveira** · 一作 · 18 作者 · [arXiv:2607.12719](https://arxiv.org/abs/2607.12719)
 
-*指令微调与强化学习结合构建眼科大语言模型LEME。*
+_Gadolinium doped ceria (GDC) is one promising oxygen-ion conducting ceramic electrolyte for intermediate-temperature solid oxide fuel cells (IT-SOFCs), due to its high ionic conductivity at reduced operating temperature…_
 
-_The rising prevalence of eye diseases poses a growing public health burden. Large language models (LLMs) offer a promising path to reduce documentation workload and support clinical decision-making. However, few have be…_
-
-→ [profile](/researchers/hyunjae-kim)
+→ [profile](/researchers/renato-a-n-de-oliveira)
 
 ---
-### No. 04 · ABot-N1: Toward a General Visual Language Navigation Foundation Model
+### No. 03 · EgoSteer: A Full-Stack System Towards Steerable Dexterous Manipulation from Egocentric Videos
 
-**Ruiyan Gong** · 一作 · 30 作者 · [arXiv:2607.10383](https://arxiv.org/abs/2607.10383)
+**Yifan Zhong** · 一作 · 16 作者 · [arXiv:2607.09701](https://arxiv.org/abs/2607.09701)
 
-_Visual Language Navigation foundation models aim to unify deep reasoning for grounded spatial decisions with broad versatility for diverse embodied tasks. Current approaches typically achieve this integration via monoli…_
+*用第一人称视频训练可操控灵巧操作的VLA系统。*
 
-→ [profile](/researchers/ruiyan-gong)
+_Steerability is a defining capability of generalist robot policies, yet remains largely absent in dexterous-hand systems for lack of large-scale, language-aligned, and action-accurate demonstration data. To address this…_
 
----
-### No. 05 · MedPMC: A Systematic Framework for Scaling High-Fidelity Medical Multimodal Data for Foundation Models
-
-**Hyunjae Kim** · 一作 · 28 作者 · [arXiv:2607.07673](https://arxiv.org/abs/2607.07673)
-
-_Medicine is inherently multimodal, requiring clinicians to synthesize information across diverse data streams. Yet the development of multimodal foundation models is constrained by limited access to large-scale, high-qu…_
-
-→ [profile](/researchers/hyunjae-kim)
+→ [profile](/researchers/yifan-zhong)
 
 ---
-### No. 06 · Rethinking Retrieval-Augmented Generation for Medicine: A Large-Scale, Systematic Expert Evaluation and Practical Insights
+### No. 04 · FlowWAM: Optical Flow as a Unified Action Representation for World Action Models
 
-**Hyunjae Kim** · 一作 · 27 作者 · [arXiv:2511.06738](https://arxiv.org/abs/2511.06738)
+**Yixiang Chen** · 一作 · 16 作者 · [arXiv:2607.13017](https://arxiv.org/abs/2607.13017)
 
-_Large language models (LLMs) are transforming the landscape of medicine, yet two fundamental challenges persist: keeping up with rapidly evolving medical knowledge and providing verifiable, evidence-grounded reasoning.…_
+_World Action Models (WAMs) are able to leverage pretrained video generators for both world modeling and action prediction. However, directly leveraging such video generators for control raises a new challenge: how to re…_
 
-→ [profile](/researchers/hyunjae-kim)
-
----
-### No. 07 · ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory
-
-**Jiayi Tian** · 一作 · 27 作者 · [arXiv:2607.10350](https://arxiv.org/abs/2607.10350)
-
-_Recent VLM and VLA systems have improved robotic perception and action prediction, yet long-horizon embodied agents still require a general runtime layer for reasoning, memory, tool use, verification, and cross-embodime…_
-
-→ [profile](/researchers/jiayi-tian)
+→ [profile](/researchers/yixiang-chen)
 
 ---
-### No. 08 · Xiaomi-Robotics-U0: Unified Embodied Synthesis with World Foundation Model
+### No. 05 · Emergent toroidal induction in a polar Weyl ferromagnet
 
-**Xinghang Li** · 一作 · 24 作者 · [arXiv:2607.11643](https://arxiv.org/abs/2607.11643)
+**Yuuri Suzuki** · 一作 · 15 作者 · [arXiv:2607.12322](https://arxiv.org/abs/2607.12322)
 
-_Recent foundation image and video generation models offer strong generalization and controllability, but their direct application to embodied scenarios is limited by requirements for multi-view consistency, geometric co…_
+_Spin-orbit coupling (SOC) underpins modern spintronics by enabling the electrical generation of spin torques. Its reciprocal counterpart, in which magnetization dynamics produce electromotive forces through a spin-depen…_
 
-→ [profile](/researchers/xinghang-li)
-
----
-### No. 09 · Memorization in Large Language Models in Medicine: Prevalence, Characteristics, and Implications
-
-**Anran Li** · 一作 · 21 作者 · [arXiv:2509.08604](https://arxiv.org/abs/2509.08604)
-
-_Large Language Models (LLMs) have demonstrated significant potential in medicine, with many studies adapting them through continued pre-training or fine-tuning on medical data to enhance domain-specific accuracy and saf…_
-
-→ [profile](/researchers/anran-li)
+→ [profile](/researchers/yuuri-suzuki)
 
 ---
-### No. 10 · A Federated and Parameter-Efficient Framework for Large Language Model Training in Medicine
+### No. 06 · The self-organized vacancy order in Pr$_9$Ge$_{16}$
 
-**Anran Li** · 一作 · 19 作者 · [arXiv:2601.22124](https://arxiv.org/abs/2601.22124)
+**Jayashani S. T. Wickramasinghe** · 一作 · 14 作者 · [arXiv:2607.12781](https://arxiv.org/abs/2607.12781)
 
-_Large language models (LLMs) have demonstrated strong performance on medical benchmarks, including question answering and diagnosis. To enable their use in clinical settings, LLMs are typically further adapted through c…_
+_In this work, we report the discovery of a new crystal structure on the Ge-rich side of the Pr-Ge binary phase diagram. Using a high-temperature flux technique, we grew single crystals of $Pr_9Ge_{16}$, which adopt a pr…_
 
-→ [profile](/researchers/anran-li)
+→ [profile](/researchers/jayashani-s-t-wickramasinghe)
+
+---
+### No. 07 · A critical consideration of X-ray detectors based on Ga2O3: excitation, carrier transport mechanisms and performance standardization
+
+**Alfred Moore** · 一作 · 14 作者 · [arXiv:2607.12638](https://arxiv.org/abs/2607.12638)
+
+_X-ray detection underpins a wide range of applications in medicine, security, industrial inspection, scientific research for non-destructive imaging and material analysis. The rapid development of Ga2O3-based X-ray dete…_
+
+→ [profile](/researchers/alfred-moore)
+
+---
+### No. 08 · Generating Developable 3D Molecules via Pocket-Conditioned Diffusion and Property-Aware Optimization
+
+**Ruoxi Gao** · 一作 · 13 作者 · [arXiv:2607.12349](https://arxiv.org/abs/2607.12349)
+
+_Drug discovery and development is time-consuming and resource-intensive, motivating computational approaches such as diffusion models for de novo drug design. Many such models follow the structure-based drug design (SBD…_
+
+→ [profile](/researchers/ruoxi-gao)
+
+---
+### No. 09 · Know Before Fix: QA-Driven Repository Knowledge Acquisition for Software Issue Resolution
+
+**Haotian Lin** · 一作 · 11 作者 · [arXiv:2607.11111](https://arxiv.org/abs/2607.11111)
+
+*用QA驱动解耦知识获取与补丁生成，提升修复准确率。*
+
+_LLM-based coding agents have significantly advanced automated software issue resolution, yet they remain highly prone to factual errors caused by insufficient repository understanding. Recent methods attempt to mitigate…_
+
+→ [profile](/researchers/haotian-lin)
+
+---
+### No. 10 · Phase-Controlled Epitaxy and Anisotropic Antiferromagnetism of Polar Wurtzite MnTe
+
+**Janusz Sadowski** · 一作 · 11 作者 · [arXiv:2607.12191](https://arxiv.org/abs/2607.12191)
+
+_Altermagnetic spintronics requires materials in which compensated magnetic order, symmetry-controlled electronic responses, and epitaxial tunability can be combined in experimentally accessible thin films. MnTe is a key…_
+
+→ [profile](/researchers/janusz-sadowski)
 
 ---
 
@@ -346,61 +349,61 @@ _Large language models (LLMs) have demonstrated strong performance on medical be
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · BEnchmarking LLMs for Ophthalmology (BELO) for Ophthalmological Knowledge and Reasoning
+### No. 01 · Quantized Photocurrents in Gapless Topological Matter
 
-**Sahana Srinivasan** · 一作 · 32 作者 · [arXiv:2507.15717](https://arxiv.org/abs/2507.15717)
+**Byunghoon Kim** · 一作 · 20 作者 · [arXiv:2607.12420](https://arxiv.org/abs/2607.12420)
 
-_Current benchmarks evaluating large language models (LLMs) in ophthalmology are limited in scope and disproportionately prioritise accuracy. We introduce BELO (BEnchmarking LLMs for Ophthalmology), a standardized and co…_
+_The quantum Hall effect in gapped systems represents a defining signature of nontrivial topology. Realizing this principle in gapless matter has remained a central challenge in quantum materials. Chiral topological semi…_
 
-**▸ 选中原因：首次出现 · 32 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 20 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/sahana-srinivasan)
-
----
-### No. 02 · LEME: Open Large Language Models for Ophthalmology with Advanced Reasoning and Clinical Validation
-
-**Hyunjae Kim** · 一作 · 30 作者 · [arXiv:2410.03740](https://arxiv.org/abs/2410.03740)
-
-*指令微调与强化学习结合构建眼科大语言模型LEME。*
-
-_The rising prevalence of eye diseases poses a growing public health burden. Large language models (LLMs) offer a promising path to reduce documentation workload and support clinical decision-making. However, few have be…_
-
-**▸ 选中原因：首次出现 · 30 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/hyunjae-kim)
+→ [profile](/researchers/byunghoon-kim)
 
 ---
-### No. 03 · MedPMC: A Systematic Framework for Scaling High-Fidelity Medical Multimodal Data for Foundation Models
+### No. 02 · EgoSteer: A Full-Stack System Towards Steerable Dexterous Manipulation from Egocentric Videos
 
-**Hyunjae Kim** · 一作 · 28 作者 · [arXiv:2607.07673](https://arxiv.org/abs/2607.07673)
+**Yifan Zhong** · 一作 · 16 作者 · [arXiv:2607.09701](https://arxiv.org/abs/2607.09701)
 
-_Medicine is inherently multimodal, requiring clinicians to synthesize information across diverse data streams. Yet the development of multimodal foundation models is constrained by limited access to large-scale, high-qu…_
+*用第一人称视频训练可操控灵巧操作的VLA系统。*
 
-**▸ 选中原因：首次出现 · 28 作者合作（疑似大组新人）**
+_Steerability is a defining capability of generalist robot policies, yet remains largely absent in dexterous-hand systems for lack of large-scale, language-aligned, and action-accurate demonstration data. To address this…_
 
-→ [profile](/researchers/hyunjae-kim)
+**▸ 选中原因：首次出现 · 16 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/yifan-zhong)
 
 ---
-### No. 04 · Mixture of Frames Policy: Multi-Frame Action Denoising for Bimanual Mobile Manipulation
+### No. 03 · Emergent toroidal induction in a polar Weyl ferromagnet
 
-**Dian Wang** · 一作 · 6 作者 · [arXiv:2607.11884](https://arxiv.org/abs/2607.11884)
+**Yuuri Suzuki** · 一作 · 15 作者 · [arXiv:2607.12322](https://arxiv.org/abs/2607.12322)
 
-_Robotic manipulation is inherently multi-frame: local actions may be simple in an end-effector frame, while transport, upright-object handling, and whole-body coordination are better represented in a base-aligned frame.…_
+_Spin-orbit coupling (SOC) underpins modern spintronics by enabling the electrical generation of spin torques. Its reciprocal counterpart, in which magnetization dynamics produce electromotive forces through a spin-depen…_
+
+**▸ 选中原因：首次出现 · 15 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/yuuri-suzuki)
+
+---
+### No. 04 · UR-VC: Unsupervised Robotic Value Correction for Time-Derived Progress Proxies
+
+**Lirui Zhao** · 一作 · 6 作者 · [arXiv:2607.12892](https://arxiv.org/abs/2607.12892)
+
+_Modern robot learning systems increasingly rely on dense progress or value signals to evaluate intermediate states, guide policy learning, and detect task completion, making the quality of these signals critical. Since…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/dian-wang)
+→ [profile](/researchers/lirui-zhao)
 
 ---
-### No. 05 · Weak-to-Strong Generalization via Direct On-Policy Distillation
+### No. 05 · Jetson-PI: Towards Onboard Real-Time Robot Control via Foresight-Aligned Asynchronous Inference
 
-**Shiyuan Feng** · 一作 · 10 作者 · [arXiv:2607.05394](https://arxiv.org/abs/2607.05394)
+**Zebin Yang** · 一作 · 9 作者 · [arXiv:2607.12659](https://arxiv.org/abs/2607.12659)
 
-_Reinforcement learning with verifiable rewards (RLVR) is a powerful recipe for improving language-model reasoning, but it is expensive to repeat on every new strong model because the target model must generate many roll…_
+_Vision-Language-Action (VLA) models have achieved impressive performance on diverse embodied tasks. However, deploying VLA models on low-power onboard devices, such as the Jetson Orin, remains challenging due to their h…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/shiyuan-feng)
+→ [profile](/researchers/zebin-yang)
 
 ---
 
