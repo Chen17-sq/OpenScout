@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 062                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · WEDNESDAY, JULY 15, 2026
+VOL. 1 · NO. 063                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · THURSDAY, JULY 16, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 062 · 2026-07-15
+> *All The Researchers Fit To Watch* — Vol. 1, No. 063 · 2026-07-16
 
-_Auto-generated at 2026-07-15T04:09:05+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-07-16T04:22:55+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,130 +15,117 @@ _Auto-generated at 2026-07-15T04:09:05+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **37399** | 99 | 366 | 12 | 80 |
+| **38194** | 636 | 795 | 12 | 80 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · On-the-fly Repulsion in the Contextual Space for Rich Diversity in Diffusion Transformers
+### No. 01 · SPTS v2: Single-Point Scene Text Spotting
 
-**Omer Dahary** · 一作 · 4 作者 · [arXiv:2603.28762](https://arxiv.org/abs/2603.28762)
+**Yuliang Liu** · 一作 · 7 作者 · [arXiv:None](#)
 
-*在上下文空间施加排斥力提升扩散Transformer多样性。*
+_End-to-end scene text spotting has made significant progress due to its intrinsic synergy between text detection and recognition. Previous methods commonly regard manual annotations such as horizontal rectangles, rotate…_
 
-_Modern Text-to-Image (T2I) diffusion models have achieved remarkable semantic alignment, yet they often suffer from a significant lack of variety, converging on a narrow set of visual solutions for any given prompt. Thi…_
-
-→ [profile](/researchers/omer-dahary)
+→ [profile](/researchers/yuliang-liu)
 
 ---
-### No. 02 · SAEdit: Token-level control for continuous image editing via Sparse AutoEncoder
+### No. 02 · Principled Analysis of Deep Reinforcement Learning Evaluation and Design Paradigms
 
-**Ronen Kamenetsky** · 一作 · 6 作者 · [arXiv:2510.05081](https://arxiv.org/abs/2510.05081)
+**Ezgi Korkmaz** · 一作 · 1 作者 · [arXiv:2607.07769](https://arxiv.org/abs/2607.07769)
 
-*用SAE稀疏潜空间实现文本嵌入的连续解耦图像编辑。*
+_Starting from the utilization of deep neural networks to approximate the state-action value function that led to winning one of the most challenging games, to algorithmic advancements that allowed solving problems witho…_
 
-_Large-scale text-to-image diffusion models have become the backbone of modern image editing, yet text prompts alone do not offer adequate control over the editing process. Two properties are especially desirable: disent…_
-
-→ [profile](/researchers/ronen-kamenetsky)
+→ [profile](/researchers/ezgi-korkmaz)
 
 ---
-### No. 03 · Tight Inversion: Image-Conditioned Inversion for Real Image Editing
+### No. 03 · MuScriptor: An Open Model for Multi-Instrument Music Transcription
 
-**Edo Kadosh** · 一作 · 5 作者 · [arXiv:2502.20376](https://arxiv.org/abs/2502.20376)
+**Simon Rouard** · 一作 · 5 作者 · [arXiv:2607.08168](https://arxiv.org/abs/2607.08168)
 
-*利用输入图像自身作为精确条件，提升扩散模型反转重建与可编辑性。*
+_Existing methods for automatic music transcription are often limited to single-instrument recordings or fail on complex, real music mixes. Although previous work utilizes synthetic training data, the resulting models ge…_
 
-_Text-to-image diffusion models offer powerful image editing capabilities. To edit real images, many methods rely on the inversion of the image into Gaussian noise. A common approach to invert an image is to gradually ad…_
-
-→ [profile](/researchers/edo-kadosh)
+→ [profile](/researchers/simon-rouard)
 
 ---
-### No. 04 · TokenVerse: Versatile Multi-concept Personalization in Token Modulation Space
+### No. 04 · Let RGB Be the Language of Vision
 
-**Daniel Garibi** · 一作 · 9 作者 · [arXiv:2501.12224](https://arxiv.org/abs/2501.12224)
+**Timing Yang** · 一作 · 14 作者 · [arXiv:2607.12450](https://arxiv.org/abs/2607.12450)
 
-*在调制空间解耦多图像概念，实现DiT扩散模型个性化生成。*
+_This work introduces a unified formulation for vision models, where diverse forms of visual information beyond natural images, such as masks, depth maps, and other structured visual signals, are all represented as RGB i…_
 
-_We present TokenVerse -- a method for multi-concept personalization, leveraging a pre-trained text-to-image diffusion model. Our framework can disentangle complex visual elements and attributes from as little as a singl…_
-
-→ [profile](/researchers/daniel-garibi)
+→ [profile](/researchers/timing-yang)
 
 ---
-### No. 05 · TurboEdit: Text-Based Image Editing Using Few-Step Diffusion Models
+### No. 05 · MonkeyOCRv2: A Visual-Text Foundation Model for Document AI
 
-**Gilad Deutch** · 一作 · 5 作者 · [arXiv:2408.00735](https://arxiv.org/abs/2408.00735)
+**Yuliang Liu** · 一作 · 14 作者 · [arXiv:2607.11562](https://arxiv.org/abs/2607.11562)
 
-*用三步扩散模型实现文本图像编辑，提出偏移噪声调度与伪引导。*
+_Mainstream visual encoders are pretrained on natural images and cannot be effectively applied to document images without document-oriented adaptation, as dense text and fine-grained character strokes demand character-le…_
 
-_Diffusion models have opened the path to a wide range of text-based image editing frameworks. However, these typically build on the multi-step nature of the diffusion backwards process, and adapting them to distilled, f…_
-
-→ [profile](/researchers/gilad-deutch)
+→ [profile](/researchers/yuliang-liu)
 
 ---
-### No. 06 · ReNoise: Real Image Inversion Through Iterative Noising
+### No. 06 · SynthDocBench: Controlled Benchmark for Long-Context Visual Document Understanding
 
-**Daniel Garibi** · 一作 · 5 作者 · [arXiv:2403.14602](https://arxiv.org/abs/2403.14602)
+**Abhigya Verma** · 一作 · 7 作者 · [arXiv:2607.10400](https://arxiv.org/abs/2607.10400)
 
-*迭代重噪机制提升扩散模型实图反演重建精度。*
+_Vision language models (VLMs) have achieved strong performance on visual document understanding benchmarks such as DocVQA, ChartQA, and MMLongBench-Doc. However, real-world documents combine multiple factors such as len…_
 
-_Recent advancements in text-guided diffusion models have unlocked powerful image manipulation capabilities. However, applying these methods to real images necessitates the inversion of the images into the domain of the…_
-
-→ [profile](/researchers/daniel-garibi)
+→ [profile](/researchers/abhigya-verma)
 
 ---
-### No. 07 · Cross-Image Attention for Zero-Shot Appearance Transfer
+### No. 07 · What LLM Forecasters Know but Don't Say: Probing Internal Representations for Calibration and Faithfulness
 
-**Yuval Alaluf** · 一作 · 5 作者 · [arXiv:2311.03335](https://arxiv.org/abs/2311.03335)
+**Raphaël Sarfati** · 一作 · 6 作者 · [arXiv:2607.08046](https://arxiv.org/abs/2607.08046)
 
-*跨图像注意力机制实现零样本外观迁移。*
+_Large language models fine-tuned for forecasting can be accurate yet poorly calibrated, and their chain-of-thought (CoT) reasoning may not faithfully reflect the evidence behind a forecast. We ask whether internal repre…_
 
-_Recent advancements in text-to-image generative models have demonstrated a remarkable ability to capture a deep semantic understanding of images. In this work, we leverage this semantic knowledge to transfer the visual…_
-
-→ [profile](/researchers/yuval-alaluf)
+→ [profile](/researchers/rapha-l-sarfati)
 
 ---
-### No. 08 · 4D Human-Scene Reconstruction from Low-Overlap Captures
+### No. 08 · Navigating the Mirage: A Dual-Path Agentic Framework for Robust Misleading Chart Question Answering
 
-**Minhyuk Hwang** · 一作 · 5 作者 · [arXiv:2607.09125](https://arxiv.org/abs/2607.09125)
+**Yanjie Zhang** · 一作 · 8 作者 · [arXiv:2603.28583](https://arxiv.org/abs/2603.28583)
 
-*用视频扩散模型与可变形高斯体重建低重叠4D人体场景。*
+_Despite the success of Vision-Language Models (VLMs), misleading charts remain a significant challenge due to their deceptive visual structures and distorted data representations. We present ChartCynics, an agentic dual…_
 
-_Existing volumetric capture of dynamic human performance achieves high fidelity with dense camera arrays. However, in real-world scenarios, only a handful of low-overlap cameras are available, which degrades the output…_
-
-→ [profile](/researchers/minhyuk-hwang)
+→ [profile](/researchers/yanjie-zhang)
 
 ---
-### No. 09 · Metacognition in LLMs: Foundations, Progress, and Opportunities
+### No. 09 · Are LLMs Ready for Scientific Discovery? A Capability-Oriented Benchmark for AI Scientists
 
-**Gabrielle Kaili-May Liu** · 一作 · 6 作者 · [arXiv:2607.11881](https://arxiv.org/abs/2607.11881)
+**Chuhan Shi** · 一作 · 6 作者 · [arXiv:2607.11079](https://arxiv.org/abs/2607.11079)
 
-*首次系统综述LLM元认知能力评估与提升方法。*
+_Existing benchmarks for scientific data analysis evaluate LLMs primarily on code execution or workflow completion, overlooking that scientific analysis serves to support distinct types of scientific claims: hypothesis e…_
 
-_Metacognition is a foundational component of intelligence critical to effective learning, problem solving, decision-making, communication, and more. In recent years, it has become increasingly recognized as a cornerston…_
-
-→ [profile](/researchers/gabrielle-kaili-may-liu)
+→ [profile](/researchers/chuhan-shi)
 
 ---
-### No. 10 · CtrlVTON: Controllable Virtual Try-On via Visual-Instance-Prompt Segmentation
+### No. 10 · MAGIC: Transition-Aware Generation of Navigable Multi-Scene Game Worlds with Large Language Models
 
-**Seungyong Lee** · 一作 · 4 作者 · [arXiv:2607.09362](https://arxiv.org/abs/2607.09362)
+**Tsz Hei Fan** · 一作 · 5 作者 · [arXiv:2607.11594](https://arxiv.org/abs/2607.11594)
 
-*用VIP-SAM分割与扩散模型实现服装布局像素级控制。*
+_Multi-scene navigation (clearing an objective in one bounded space and then crossing a portal into the next) is a defining feature of contemporary 3D games, but authoring it is laborious: every portal must have consiste…_
 
-_Virtual try-on (VTO) has made significant progress in realistically transferring garments onto a target person. Yet most systems give the user little control over how a garment should be worn -- its size (loose or fitte…_
-
-→ [profile](/researchers/seungyong-lee)
+→ [profile](/researchers/tsz-hei-fan)
 
 ---
 
-## Section B · 🔄 动态更新 · 3 项
+## Section B · 🔄 动态更新 · 10 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Ping Luo](/researchers/ping-luo) | UR-VC: Unsupervised Robotic Value Correction for Time-Derived Progres… | embodied | [2607.12892](https://arxiv.org/abs/2607.12892) |
-| [Yunhe Wang](/researchers/yunhe-wang) | Jetson-PI: Towards Onboard Real-Time Robot Control via Foresight-Alig… | embodied | [2607.12659](https://arxiv.org/abs/2607.12659) |
-| [Linfeng Zhang](/researchers/linfeng-zhang) | Reducing Temporal Redundancy for Efficient Vision-Language-Action Inf… | embodied | [2607.12287](https://arxiv.org/abs/2607.12287) |
+| [Jiajun Wu](/researchers/jiajun-wu) | Interaction Modeling with Multiplex Attention | — | [2208.10660](https://arxiv.org/abs/2208.10660) |
+| [Jiajun Wu](/researchers/jiajun-wu) | Topology-aware Federated Learning in Edge Computing: A Comprehensive… | — | [2302.02573](https://arxiv.org/abs/2302.02573) |
+| [Jiajun Wu](/researchers/jiajun-wu) | BEHAVIOR-1K: A Human-Centered, Embodied AI Benchmark with 1,000 Every… | — | [2403.09227](https://arxiv.org/abs/2403.09227) |
+| [Sherry Yang](/researchers/sherry-yang) | Cutaneous B-Cell Lymphoblastic Lymphoma | — | [None](#) |
+| [He Wang](/researchers/he-wang) | Mechanism of ADP-ribosylation removal revealed by the structure and l… | — | [None](#) |
+| [Yoshua Bengio](/researchers/yoshua-bengio) | Incorporating Second-Order Functional Knowledge for Better Option Pri… | — | [None](#) |
+| [Yoshua Bengio](/researchers/yoshua-bengio) | Manifold Parzen Windows | — | [None](#) |
+| [Yoshua Bengio](/researchers/yoshua-bengio) | Learning from Partial Labels with Minimum Entropy | — | [None](#) |
+| [Yoshua Bengio](/researchers/yoshua-bengio) | A Walk with SGD: How SGD Explores Regions of Deep Network Loss? | — | [None](#) |
+| [Yilun Du](/researchers/yilun-du) | Sulphide melt evolution in upper mantle to upper crust magmas, Tongli… | — | [None](#) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -246,100 +233,62 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section E · 🔥 热门工作 · Top 10
+## Section E · 🔥 热门工作 · Top 6
 
-### No. 01 · Quantized Photocurrents in Gapless Topological Matter
+### No. 01 · Precision quantum simulation of magnon spectra and interactions
 
-**Byunghoon Kim** · 一作 · 20 作者 · [arXiv:2607.12420](https://arxiv.org/abs/2607.12420)
+**Trond I. Andersen** · 一作 · 332 作者 · [arXiv:2607.13301](https://arxiv.org/abs/2607.13301)
 
-_The quantum Hall effect in gapped systems represents a defining signature of nontrivial topology. Realizing this principle in gapless matter has remained a central challenge in quantum materials. Chiral topological semi…_
+_Quantum simulation promises to advance materials discovery by accurately simulating complex states of matter, their microscopic excitations, and macroscopic response functions. The central challenge in resolving the und…_
 
-→ [profile](/researchers/byunghoon-kim)
-
----
-### No. 02 · Influence of compaction pressure on the impedance of Gadolinium Doped Ceria electrolytes for IT-SOFCs
-
-**Renato A. N. de Oliveira** · 一作 · 18 作者 · [arXiv:2607.12719](https://arxiv.org/abs/2607.12719)
-
-_Gadolinium doped ceria (GDC) is one promising oxygen-ion conducting ceramic electrolyte for intermediate-temperature solid oxide fuel cells (IT-SOFCs), due to its high ionic conductivity at reduced operating temperature…_
-
-→ [profile](/researchers/renato-a-n-de-oliveira)
+→ [profile](/researchers/trond-i-andersen)
 
 ---
-### No. 03 · EgoSteer: A Full-Stack System Towards Steerable Dexterous Manipulation from Egocentric Videos
+### No. 02 · GigaWorld-Policy-0.5: A Faster and Stronger WAM Empowered by AutoResearch
 
-**Yifan Zhong** · 一作 · 16 作者 · [arXiv:2607.09701](https://arxiv.org/abs/2607.09701)
+**GigaWorld Team** · 一作 · 29 作者 · [arXiv:2607.13960](https://arxiv.org/abs/2607.13960)
 
-*用第一人称视频训练可操控灵巧操作的VLA系统。*
+_World Action Models (WAMs) improve robot policy learning by jointly modeling actions and future visual observations, using future scene evolution as dense supervision for physically grounded action generation. However,…_
 
-_Steerability is a defining capability of generalist robot policies, yet remains largely absent in dexterous-hand systems for lack of large-scale, language-aligned, and action-accurate demonstration data. To address this…_
-
-→ [profile](/researchers/yifan-zhong)
+→ [profile](/researchers/gigaworld-team)
 
 ---
-### No. 04 · FlowWAM: Optical Flow as a Unified Action Representation for World Action Models
+### No. 03 · How far are we to GPT-4V? Closing the gap to commercial multimodal models with open-source suites
 
-**Yixiang Chen** · 一作 · 16 作者 · [arXiv:2607.13017](https://arxiv.org/abs/2607.13017)
+**Zhe Chen** · 一作 · 24 作者 · [arXiv:None](#)
 
-_World Action Models (WAMs) are able to leverage pretrained video generators for both world modeling and action prediction. However, directly leveraging such video generators for control raises a new challenge: how to re…_
+__
 
-→ [profile](/researchers/yixiang-chen)
-
----
-### No. 05 · Emergent toroidal induction in a polar Weyl ferromagnet
-
-**Yuuri Suzuki** · 一作 · 15 作者 · [arXiv:2607.12322](https://arxiv.org/abs/2607.12322)
-
-_Spin-orbit coupling (SOC) underpins modern spintronics by enabling the electrical generation of spin torques. Its reciprocal counterpart, in which magnetization dynamics produce electromotive forces through a spin-depen…_
-
-→ [profile](/researchers/yuuri-suzuki)
+→ [profile](/researchers/zhe-chen)
 
 ---
-### No. 06 · The self-organized vacancy order in Pr$_9$Ge$_{16}$
+### No. 04 · PhysClaw-0: A Symbiotic Agentic System for Robot Autonomy via Language Corrections
 
-**Jayashani S. T. Wickramasinghe** · 一作 · 14 作者 · [arXiv:2607.12781](https://arxiv.org/abs/2607.12781)
+**Boyuan Wang** · 一作 · 19 作者 · [arXiv:2607.14047](https://arxiv.org/abs/2607.14047)
 
-_In this work, we report the discovery of a new crystal structure on the Ge-rich side of the Pr-Ge binary phase diagram. Using a high-temperature flux technique, we grew single crystals of $Pr_9Ge_{16}$, which adopt a pr…_
+_Autonomous data collection governs the volume and quality of real-world trajectories for manipulation policy learning. Existing pipelines reduce human effort via self-resetting, VLM verification, or language-guided corr…_
 
-→ [profile](/researchers/jayashani-s-t-wickramasinghe)
-
----
-### No. 07 · A critical consideration of X-ray detectors based on Ga2O3: excitation, carrier transport mechanisms and performance standardization
-
-**Alfred Moore** · 一作 · 14 作者 · [arXiv:2607.12638](https://arxiv.org/abs/2607.12638)
-
-_X-ray detection underpins a wide range of applications in medicine, security, industrial inspection, scientific research for non-destructive imaging and material analysis. The rapid development of Ga2O3-based X-ray dete…_
-
-→ [profile](/researchers/alfred-moore)
+→ [profile](/researchers/boyuan-wang)
 
 ---
-### No. 08 · Generating Developable 3D Molecules via Pocket-Conditioned Diffusion and Property-Aware Optimization
+### No. 05 · FlowTrain: Flow-Based Decoupled Training for Industrial-Grade Vision-Language Models
 
-**Ruoxi Gao** · 一作 · 13 作者 · [arXiv:2607.12349](https://arxiv.org/abs/2607.12349)
+**Zhida Jiang** · 一作 · 17 作者 · [arXiv:2606.23087](https://arxiv.org/abs/2606.23087)
 
-_Drug discovery and development is time-consuming and resource-intensive, motivating computational approaches such as diffusion models for de novo drug design. Many such models follow the structure-based drug design (SBD…_
+*流式解耦训练框架，通过统一内存池协调异构并行。*
 
-→ [profile](/researchers/ruoxi-gao)
+_Industrial-grade distributed training of vision-language models (VLMs) remains far less efficient than that of unimodal LLMs. Existing solutions either follow a monolithic design that assigns uniform parallelism to hete…_
 
----
-### No. 09 · Know Before Fix: QA-Driven Repository Knowledge Acquisition for Software Issue Resolution
-
-**Haotian Lin** · 一作 · 11 作者 · [arXiv:2607.11111](https://arxiv.org/abs/2607.11111)
-
-*用QA驱动解耦知识获取与补丁生成，提升修复准确率。*
-
-_LLM-based coding agents have significantly advanced automated software issue resolution, yet they remain highly prone to factual errors caused by insufficient repository understanding. Recent methods attempt to mitigate…_
-
-→ [profile](/researchers/haotian-lin)
+→ [profile](/researchers/zhida-jiang)
 
 ---
-### No. 10 · Phase-Controlled Epitaxy and Anisotropic Antiferromagnetism of Polar Wurtzite MnTe
+### No. 06 · Electric field controlled spin transport in a topological insulator interfaced with a ferroelectric antiferromagnet
 
-**Janusz Sadowski** · 一作 · 11 作者 · [arXiv:2607.12191](https://arxiv.org/abs/2607.12191)
+**Yogesh Kumar** · 一作 · 17 作者 · [arXiv:2607.14031](https://arxiv.org/abs/2607.14031)
 
-_Altermagnetic spintronics requires materials in which compensated magnetic order, symmetry-controlled electronic responses, and epitaxial tunability can be combined in experimentally accessible thin films. MnTe is a key…_
+_Topological insulators have been explored extensively for spin-charge interconversion via magnetic interfaces, yet the true response of their spin-charge conversion, particularly in the absence of an external magnetic f…_
 
-→ [profile](/researchers/janusz-sadowski)
+→ [profile](/researchers/yogesh-kumar)
 
 ---
 
@@ -349,61 +298,59 @@ _Altermagnetic spintronics requires materials in which compensated magnetic orde
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · Quantized Photocurrents in Gapless Topological Matter
+### No. 01 · Precision quantum simulation of magnon spectra and interactions
 
-**Byunghoon Kim** · 一作 · 20 作者 · [arXiv:2607.12420](https://arxiv.org/abs/2607.12420)
+**Trond I. Andersen** · 一作 · 332 作者 · [arXiv:2607.13301](https://arxiv.org/abs/2607.13301)
 
-_The quantum Hall effect in gapped systems represents a defining signature of nontrivial topology. Realizing this principle in gapless matter has remained a central challenge in quantum materials. Chiral topological semi…_
+_Quantum simulation promises to advance materials discovery by accurately simulating complex states of matter, their microscopic excitations, and macroscopic response functions. The central challenge in resolving the und…_
 
-**▸ 选中原因：首次出现 · 20 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 332 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/byunghoon-kim)
-
----
-### No. 02 · EgoSteer: A Full-Stack System Towards Steerable Dexterous Manipulation from Egocentric Videos
-
-**Yifan Zhong** · 一作 · 16 作者 · [arXiv:2607.09701](https://arxiv.org/abs/2607.09701)
-
-*用第一人称视频训练可操控灵巧操作的VLA系统。*
-
-_Steerability is a defining capability of generalist robot policies, yet remains largely absent in dexterous-hand systems for lack of large-scale, language-aligned, and action-accurate demonstration data. To address this…_
-
-**▸ 选中原因：首次出现 · 16 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/yifan-zhong)
+→ [profile](/researchers/trond-i-andersen)
 
 ---
-### No. 03 · Emergent toroidal induction in a polar Weyl ferromagnet
+### No. 02 · GigaWorld-Policy-0.5: A Faster and Stronger WAM Empowered by AutoResearch
 
-**Yuuri Suzuki** · 一作 · 15 作者 · [arXiv:2607.12322](https://arxiv.org/abs/2607.12322)
+**GigaWorld Team** · 一作 · 29 作者 · [arXiv:2607.13960](https://arxiv.org/abs/2607.13960)
 
-_Spin-orbit coupling (SOC) underpins modern spintronics by enabling the electrical generation of spin torques. Its reciprocal counterpart, in which magnetization dynamics produce electromotive forces through a spin-depen…_
+_World Action Models (WAMs) improve robot policy learning by jointly modeling actions and future visual observations, using future scene evolution as dense supervision for physically grounded action generation. However,…_
 
-**▸ 选中原因：首次出现 · 15 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 29 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/yuuri-suzuki)
+→ [profile](/researchers/gigaworld-team)
 
 ---
-### No. 04 · UR-VC: Unsupervised Robotic Value Correction for Time-Derived Progress Proxies
+### No. 03 · PhysClaw-0: A Symbiotic Agentic System for Robot Autonomy via Language Corrections
 
-**Lirui Zhao** · 一作 · 6 作者 · [arXiv:2607.12892](https://arxiv.org/abs/2607.12892)
+**Boyuan Wang** · 一作 · 19 作者 · [arXiv:2607.14047](https://arxiv.org/abs/2607.14047)
 
-_Modern robot learning systems increasingly rely on dense progress or value signals to evaluate intermediate states, guide policy learning, and detect task completion, making the quality of these signals critical. Since…_
+_Autonomous data collection governs the volume and quality of real-world trajectories for manipulation policy learning. Existing pipelines reduce human effort via self-resetting, VLM verification, or language-guided corr…_
+
+**▸ 选中原因：首次出现 · 19 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/boyuan-wang)
+
+---
+### No. 04 · SPTS v2: Single-Point Scene Text Spotting
+
+**Yuliang Liu** · 一作 · 7 作者 · [arXiv:None](#)
+
+_End-to-end scene text spotting has made significant progress due to its intrinsic synergy between text detection and recognition. Previous methods commonly regard manual annotations such as horizontal rectangles, rotate…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/lirui-zhao)
+→ [profile](/researchers/yuliang-liu)
 
 ---
-### No. 05 · Jetson-PI: Towards Onboard Real-Time Robot Control via Foresight-Aligned Asynchronous Inference
+### No. 05 · M$^\text{4}$World: A Multi-view Multimodal Driving World Model for Interactive Object Manipulation and Minute-long Streaming
 
-**Zebin Yang** · 一作 · 9 作者 · [arXiv:2607.12659](https://arxiv.org/abs/2607.12659)
+**Ke Cheng** · 一作 · 11 作者 · [arXiv:2607.14005](https://arxiv.org/abs/2607.14005)
 
-_Vision-Language-Action (VLA) models have achieved impressive performance on diverse embodied tasks. However, deploying VLA models on low-power onboard devices, such as the Jetson Orin, remains challenging due to their h…_
+_Driving-world generation has emerged as a core capability for scalable autonomous-driving simulation, yet existing methods remain limited in object-level controllability and long-horizon stability. We present M$^\text{4…_
 
-**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+**▸ 选中原因：首次出现 · 跨 2 个主题（potential 跨界）**
 
-→ [profile](/researchers/zebin-yang)
+→ [profile](/researchers/ke-cheng)
 
 ---
 
