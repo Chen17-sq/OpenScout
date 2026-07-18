@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 064                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · FRIDAY, JULY 17, 2026
+VOL. 1 · NO. 065                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, JULY 18, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 064 · 2026-07-17
+> *All The Researchers Fit To Watch* — Vol. 1, No. 065 · 2026-07-18
 
-_Auto-generated at 2026-07-17T04:19:02+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-07-18T04:07:45+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,137 +15,128 @@ _Auto-generated at 2026-07-17T04:19:02+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **39271** | 291 | 1077 | 12 | 80 |
+| **39810** | 118 | 539 | 12 | 80 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Revisiting Autoregressive Models for Generative Image Classification
+### No. 01 · MA-DLE: Speech-based Automatic Depression Level Estimation via Memory Augmentation
 
-**Ilia Sudakov** · 一作 · 3 作者 · [arXiv:2603.19122](https://arxiv.org/abs/2603.19122)
+**Xuzhi Wang** · 一作 · 5 作者 · [arXiv:2606.11197](https://arxiv.org/abs/2606.11197)
 
-*利用任意顺序自回归模型实现排序边缘化预测，分类效率提升25倍。*
+_Speech-based automatic estimation of depression levels is essential for enabling early detection and timely intervention, particularly in resource-constrained mental health settings. In recent years, deep learning has d…_
 
-_Class-conditional generative models have emerged as accurate and robust classifiers, with diffusion models demonstrating clear advantages over other visual generative paradigms, including autoregressive (AR) models. In…_
-
-→ [profile](/researchers/ilia-sudakov)
+→ [profile](/researchers/xuzhi-wang)
 
 ---
-### No. 02 · MADrive: Memory-Augmented Driving Scene Modeling
+### No. 02 · Realizing Immersive Volumetric Video: A Multimodal Framework for 6-DoF VR Engagement
 
-**Polina Karpikova** · 一作 · 6 作者 · [arXiv:2506.21520](https://arxiv.org/abs/2506.21520)
+**Zhengxian Yang** · 一作 · 11 作者 · [arXiv:2604.09473](https://arxiv.org/abs/2604.09473)
 
-*用外部记忆库检索3D资产替换车辆实现场景重光照合成。*
+_Fully immersive experiences that tightly integrate 6-DoF visual and auditory interaction are essential for virtual and augmented reality. While such experiences can be achieved through computer-generated content, constr…_
 
-_Recent advances in scene reconstruction have pushed toward highly realistic modeling of autonomous driving (AD) environments using 3D Gaussian splatting. However, the resulting reconstructions remain closely tied to the…_
-
-→ [profile](/researchers/polina-karpikova)
+→ [profile](/researchers/zhengxian-yang)
 
 ---
-### No. 03 · Alchemist: Turning Public Text-to-Image Data into Generative Gold
+### No. 03 · Edit Content, Preserve Acoustics: Imperceptible Text-Based Speech Editing via Self-Consistency Rewards
 
-**Valerii Startsev** · 一作 · 5 作者 · [arXiv:2505.19297](https://arxiv.org/abs/2505.19297)
+**Yong Ren** · 一作 · 6 作者 · [arXiv:2602.00560](https://arxiv.org/abs/2602.00560)
 
-*用生成模型筛选高影响样本构建通用SFT数据集。*
+_Imperceptible text-based speech editing modifies spoken content through transcript manipulation while preserving acoustic continuity. Prior acoustic-space approaches suffer from content-style entanglement, causing unsta…_
 
-_Pre-training equips text-to-image (T2I) models with broad world knowledge, but this alone is often insufficient to achieve high aesthetic quality and alignment. Consequently, supervised fine-tuning (SFT) is crucial for…_
-
-→ [profile](/researchers/valerii-startsev)
+→ [profile](/researchers/yong-ren)
 
 ---
-### No. 04 · CasTex: Cascaded Text-to-Texture Synthesis via Explicit Texture Maps and Physically-Based Shading
+### No. 04 · OV-InstructTTS: Towards Open-Vocabulary Instruct Text-to-Speech
 
-**Mishan Aliev** · 一作 · 3 作者 · [arXiv:2504.06856](https://arxiv.org/abs/2504.06856)
+**Yong Ren** · 一作 · 8 作者 · [arXiv:2601.01459](https://arxiv.org/abs/2601.01459)
 
-*级联扩散模型生成显式物理纹理图提升真实感。*
+_Instruct Text-to-Speech (InstructTTS) leverages natural language descriptions as style prompts to guide speech synthesis. However, existing InstructTTS methods mainly rely on a direct combination of audio-related labels…_
 
-_This work investigates text-to-texture synthesis using diffusion models to generate physically-based texture maps. We aim to achieve realistic model appearances under varying lighting conditions. A prominent solution fo…_
-
-→ [profile](/researchers/mishan-aliev)
+→ [profile](/researchers/yong-ren)
 
 ---
-### No. 05 · Inverse Bridge Matching Distillation
+### No. 05 · DashFusion: Dual-stream Alignment with Hierarchical Bottleneck Fusion for Multimodal Sentiment Analysis
 
-**Nikita Gushchin** · 一作 · 6 作者 · [arXiv:2502.01362](https://arxiv.org/abs/2502.01362)
+**Yuhua Wen** · 一作 · 7 作者 · [arXiv:2512.05515](https://arxiv.org/abs/2512.05515)
 
-*逆桥匹配蒸馏实现扩散桥模型4-100倍加速。*
+*双流对齐与层级瓶颈融合提升多模态情感分析性能。*
 
-_Learning diffusion bridge models is easy; making them fast and practical is an art. Diffusion bridge models (DBMs) are a promising extension of diffusion models for applications in image-to-image translation. However, l…_
+_Multimodal sentiment analysis (MSA) integrates various modalities, such as text, image, and audio, to provide a more comprehensive understanding of sentiment. However, effective MSA is challenged by alignment and fusion…_
 
-→ [profile](/researchers/nikita-gushchin)
-
----
-### No. 06 · Switti: Designing Scale-Wise Transformers for Text-to-Image Synthesis
-
-**Anton Voronov** · 一作 · 5 作者 · [arXiv:2412.01819](https://arxiv.org/abs/2412.01819)
-
-*提出非因果尺度变换器，加速文本图像生成并提升细节。*
-
-_This work presents Switti, a scale-wise transformer for text-to-image generation. We start by adapting an existing next-scale prediction autoregressive (AR) architecture to T2I generation, investigating and mitigating t…_
-
-→ [profile](/researchers/anton-voronov)
+→ [profile](/researchers/yuhua-wen)
 
 ---
-### No. 07 · Results of the Big ANN: NeurIPS'23 competition
+### No. 06 · PSA-MF: Personality-Sentiment Aligned Multi-Level Fusion for Multimodal Sentiment Analysis
 
-**Harsha Vardhan Simhadri** · 一作 · 23 作者 · [arXiv:2409.17424](https://arxiv.org/abs/2409.17424)
+**Heng Xie** · 一作 · 7 作者 · [arXiv:2512.01442](https://arxiv.org/abs/2512.01442)
 
-*聚焦过滤、稀疏及流式ANNS的索引与搜索算法创新。*
+*引入人格特质对齐文本情感嵌入，多级融合文本视觉音频模态。*
 
-_The 2023 Big ANN Challenge, held at NeurIPS 2023, focused on advancing the state-of-the-art in indexing data structures and search algorithms for practical variants of Approximate Nearest Neighbor (ANN) search that refl…_
+_Multimodal sentiment analysis (MSA) is a research field that recognizes human sentiments by combining textual, visual, and audio modalities. The main challenge lies in integrating sentiment-related information from diff…_
 
-→ [profile](/researchers/harsha-vardhan-simhadri)
-
----
-### No. 08 · Accurate Compression of Text-to-Image Diffusion Models via Vector Quantization
-
-**Vage Egiazarian** · 一作 · 8 作者 · [arXiv:2409.00492](https://arxiv.org/abs/2409.00492)
-
-*用向量量化将文本到图像扩散模型压缩至约3比特。*
-
-_Text-to-image diffusion models have emerged as a powerful framework for high-quality image generation given textual prompts. Their success has driven the rapid development of production-grade diffusion models that consi…_
-
-→ [profile](/researchers/vage-egiazarian)
+→ [profile](/researchers/heng-xie)
 
 ---
-### No. 09 · Distributed Inference and Fine-tuning of Large Language Models Over The Internet
+### No. 07 · Source-Free Object Detection with Detection Transformer
 
-**Alexander Borzunov** · 一作 · 8 作者 · [arXiv:2312.08361](https://arxiv.org/abs/2312.08361)
+**Huizai Yao** · 一作 · 10 作者 · [arXiv:2510.11090](https://arxiv.org/abs/2510.11090)
 
-*利用容错推理和负载均衡协议，在互联网上分布式运行70B+大模型。*
+*为DETR设计查询中心特征重加权与对比学习网络。*
 
-_Large language models (LLMs) are useful in many NLP tasks and become more capable with size, with the best open-source models having over 50 billion parameters. However, using these 50B+ models requires high-end hardwar…_
+_Source-Free Object Detection (SFOD) enables knowledge transfer from a source domain to an unsupervised target domain for object detection without access to source data. Most existing SFOD approaches are either confined…_
 
-→ [profile](/researchers/alexander-borzunov)
+→ [profile](/researchers/huizai-yao)
 
 ---
-### No. 10 · DeDrift: Robust Similarity Search under Content Drift
+### No. 08 · Deep Learning Approaches for Multimodal Intent Recognition: A Survey
 
-**Dmitry Baranchuk** · 一作 · 4 作者 · [arXiv:2308.02752](https://arxiv.org/abs/2308.02752)
+**Jingwei Zhao** · 一作 · 11 作者 · [arXiv:2507.22934](https://arxiv.org/abs/2507.22934)
 
-*用在线量化器更新应对内容漂移，速度比全重建快百倍。*
+*用Transformer融合音频、视觉、生理信号实现多模态意图识别。*
 
-_The statistical distribution of content uploaded and searched on media sharing sites changes over time due to seasonal, sociological and technical factors. We investigate the impact of this "content drift" for large-sca…_
+_Intent recognition aims to identify users' underlying intentions, traditionally focusing on text in natural language processing. With growing demands for natural human-computer interaction, the field has evolved through…_
 
-→ [profile](/researchers/dmitry-baranchuk)
+→ [profile](/researchers/jingwei-zhao)
+
+---
+### No. 09 · Manipulated Regions Localization For Partially Deepfake Audio: A Survey
+
+**Jiayi He** · 一作 · 5 作者 · [arXiv:2506.14396](https://arxiv.org/abs/2506.14396)
+
+*首次系统综述部分深度伪造音频的操纵区域定位方法。*
+
+_With the development of audio deepfake techniques, attacks with partially deepfake audio are beginning to rise. Compared to fully deepfake, it is much harder to be identified by the detector due to the partially cryptic…_
+
+→ [profile](/researchers/jiayi-he)
+
+---
+### No. 10 · MetricHMSR:Metric Human Mesh and Scene Recovery from Monocular Images
+
+**Chentao Song** · 一作 · 7 作者 · [arXiv:2506.09919](https://arxiv.org/abs/2506.09919)
+
+*用射线图与混合专家解耦人体姿态与全局度量位置。*
+
+_We introduce MetricHMSR, a novel framework for recovering metric human meshes and 3D scenes from a single monocular image. Existing methods struggle to recover metric scale due to monocular scale ambiguity and weak-pers…_
+
+→ [profile](/researchers/chentao-song)
 
 ---
 
-## Section B · 🔄 动态更新 · 10 项
+## Section B · 🔄 动态更新 · 9 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Bo Li](/researchers/bo-li-uchicago) | Safety in Embodied AI: A Survey of Risks, Attacks, and Defenses | — | [2605.02900](https://arxiv.org/abs/2605.02900) |
-| [Dahua Lin](/researchers/dahua-lin) | SGMD: Score Gradient Matching Distillation for Few-Step Video Diffusi… | — | [2605.30116](https://arxiv.org/abs/2605.30116) |
-| [Jiajun Wu](/researchers/jiajun-wu) | LLMC+: Benchmarking Vision-Language Model Compression with a Plug-and… | — | [2508.09981](https://arxiv.org/abs/2508.09981) |
-| [Saining Xie](/researchers/saining-xie) | PISA Experiments: Exploring Physics Post-Training for Video Diffusion… | — | [2503.09595](https://arxiv.org/abs/2503.09595) |
-| [Chuang Gan](/researchers/chuang-gan) | Retrospectives on the Embodied AI Workshop | — | [2210.06849](https://arxiv.org/abs/2210.06849) |
-| [Jiajun Wu](/researchers/jiajun-wu) | Retrospectives on the Embodied AI Workshop | — | [2210.06849](https://arxiv.org/abs/2210.06849) |
-| [Jian Tang](/researchers/jian-tang) | Keep Your Promise: Mechanism Design Against Free-Riding and False-Rep… | — | [None](#) |
-| [Chelsea Finn](/researchers/chelsea-finn) | WILDS: A Benchmark of in-the-Wild Distribution Shifts | — | [None](#) |
-| [Sergey Levine](/researchers/sergey-levine) | WILDS: A Benchmark of in-the-Wild Distribution Shifts | — | [None](#) |
-| [Percy Liang](/researchers/percy-liang) | WILDS: A Benchmark of in-the-Wild Distribution Shifts | — | [None](#) |
+| [Yang Gao](/researchers/yang-gao) | Tool-Aware Optimization with Entropy Guidance for Efficient Agentic R… | — | [2606.03762](https://arxiv.org/abs/2606.03762) |
+| [Yang Gao](/researchers/yang-gao) | Thinking-Based Non-Thinking: Solving the Reward Hacking Problem in Tr… | — | [2601.04805](https://arxiv.org/abs/2601.04805) |
+| [Yang Gao](/researchers/yang-gao) | Efficient Reinforcement Learning with Semantic and Token Entropy for… | — | [2512.04359](https://arxiv.org/abs/2512.04359) |
+| [Yang Gao](/researchers/yang-gao) | Reconsidering Overthinking: Penalizing Internal and External Redundan… | — | [2508.02178](https://arxiv.org/abs/2508.02178) |
+| [Xiaolong Wang](/researchers/xiaolong-wang) | Learning to Discover at Test Time | — | [2601.16175](https://arxiv.org/abs/2601.16175) |
+| [Xiaolong Wang](/researchers/xiaolong-wang) | End-to-End Test-Time Training for Long Context | — | [2512.23675](https://arxiv.org/abs/2512.23675) |
+| [Chuang Gan](/researchers/chuang-gan) | CFC: Simulating Character-Fluid Coupling using a Two-Level World Model | — | [None](#) |
+| [Ziwei Liu](/researchers/ziwei-liu) | VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video… | — | [2607.14935](https://arxiv.org/abs/2607.14935) |
+| [Ya-Qin Zhang](/researchers/yaqin-zhang) | Spectral Rewiring for Exploration, Purification, and Model Merging | — | [2607.03065](https://arxiv.org/abs/2607.03065) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -255,94 +246,98 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Beam Test Characterization of Silicon Microstrip Detector Flight-Model Ladders for the AMS-02 Upgrade
+### No. 01 · Kimi K2.5: Visual Agentic Intelligence
 
-**Dexing Miao** · 一作 · 59 作者 · [arXiv:2603.25085](https://arxiv.org/abs/2603.25085)
+**Kimi Team** · 一作 · 325 作者 · [arXiv:2602.02276](https://arxiv.org/abs/2602.02276)
 
-_The AMS-02 experiment plans to install a new silicon microstrip tracker layer (Layer-0) on top of the existing detector, increasing the cosmic-ray acceptance by a factor of 3. Layer-0 employs a design in which multiple…_
+_We introduce Kimi K2.5, an open-source multimodal agentic model designed to advance general agentic intelligence. K2.5 emphasizes the joint optimization of text and vision so that two modalities enhance each other. This…_
 
-→ [profile](/researchers/dexing-miao)
-
----
-### No. 02 · NTIRE 2026 The 3rd Restore Any Image Model (RAIM) Challenge: Professional Image Quality Assessment (Track 1)
-
-**Guanyi Qin** · 一作 · 53 作者 · [arXiv:2604.12512](https://arxiv.org/abs/2604.12512)
-
-_In this paper, we present an overview of the NTIRE 2026 challenge on the 3rd Restore Any Image Model in the Wild, specifically focusing on Track 1: Professional Image Quality Assessment. Conventional Image Quality Asses…_
-
-→ [profile](/researchers/guanyi-qin)
+→ [profile](/researchers/kimi-team)
 
 ---
-### No. 03 · A Telescope System for Charge and Position Measurement of High Energy Nuclei
+### No. 02 · Kimi-VL Technical Report
 
-**Dexing Miao** · 一作 · 46 作者 · [arXiv:2603.25080](https://arxiv.org/abs/2603.25080)
+**Kimi Team** · 一作 · 95 作者 · [arXiv:2504.07491](https://arxiv.org/abs/2504.07491)
 
-_A high-granularity telescope system with a large sensitive area and low material budget has been developed for high-energy heavy ion beam tests. The telescope consists of nine layers of silicon microstrip detectors (SSD…_
+_We present Kimi-VL, an efficient open-source Mixture-of-Experts (MoE) vision-language model (VLM) that offers advanced multimodal reasoning, long-context understanding, and strong agent capabilities - all while activati…_
 
-→ [profile](/researchers/dexing-miao)
-
----
-### No. 04 · Retrospectives on the Embodied AI Workshop
-
-**Matt Deitke** · 一作 · 39 作者 · [arXiv:2210.06849](https://arxiv.org/abs/2210.06849)
-
-_We present a retrospective on the state of Embodied AI research. Our analysis focuses on 13 challenges presented at the Embodied AI Workshop at CVPR. These challenges are grouped into three themes: (1) visual navigation…_
-
-→ [profile](/researchers/matt-deitke)
+→ [profile](/researchers/kimi-team)
 
 ---
-### No. 05 · Safety in Embodied AI: A Survey of Risks, Attacks, and Defenses
+### No. 03 · VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding
 
-**Xiao Li** · 一作 · 38 作者 · [arXiv:2605.02900](https://arxiv.org/abs/2605.02900)
+**Xinhao Li** · 一作 · 27 作者 · [arXiv:2607.14935](https://arxiv.org/abs/2607.14935)
 
-_Embodied Artificial Intelligence (Embodied AI) integrates perception, cognition, planning, and interaction into agents that operate in open-world, safety-critical environments. As these systems gain autonomy and enter d…_
+_Recent advances in video understanding have spanned motion, long video, and streaming interaction, driving this field toward real-world applications. Despite this progress, current open-source models remain limited in s…_
 
-→ [profile](/researchers/xiao-li)
-
----
-### No. 06 · Open-AoE: An Open Egocentric Manipulation Dataset and Toolchain for Embodied Learning
-
-**Zishuo Li** · 一作 · 32 作者 · [arXiv:2607.14183](https://arxiv.org/abs/2607.14183)
-
-_Egocentric videos of human manipulation provide scalable supervision for embodied intelligence, yet existing resources rarely combine low-cost continuous capture, manipulation-level structured annotations, and reusable…_
-
-→ [profile](/researchers/zishuo-li)
+→ [profile](/researchers/xinhao-li)
 
 ---
-### No. 07 · Boogu-Image-0.1: Boosting Open-Source Unified Multimodal Understanding and Generation
+### No. 04 · Towards Multimodal Lifelong Understanding: A Dataset and Agentic Baseline
 
-**Guoxuan Chen** · 一作 · 30 作者 · [arXiv:2607.13125](https://arxiv.org/abs/2607.13125)
+**Guo Chen** · 一作 · 20 作者 · [arXiv:2603.05484](https://arxiv.org/abs/2603.05484)
 
-_We introduce Boogu-Image-0.1, an open-source unified multimodal understanding and generation model family, comprising Base, Turbo, Edit, and Edit-Turbo variants. It delivers competitive performance in high-quality text-…_
+_While datasets for video understanding have scaled to hour-long durations, they typically consist of densely concatenated clips that differ from natural, unscripted daily life. To bridge this gap, we introduce MM-Lifelo…_
 
-→ [profile](/researchers/guoxuan-chen)
-
----
-### No. 08 · RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination
-
-**Haotian Liang** · 一作 · 30 作者 · [arXiv:2607.14187](https://arxiv.org/abs/2607.14187)
-
-_Embodied cognition requires agents to connect high-level task reasoning with the physical states to be achieved. We introduce Hy-Embodied-RxBrain, an embodied cognition foundation model with joint language-visual reason…_
-
-→ [profile](/researchers/haotian-liang)
+→ [profile](/researchers/guo-chen)
 
 ---
-### No. 09 · HyperVL: An Efficient and Dynamic Multimodal Large Language Model for Edge Devices
+### No. 05 · LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget
 
-**HyperAI Team** · 一作 · 29 作者 · [arXiv:2512.14052](https://arxiv.org/abs/2512.14052)
+**Changhai Zhou** · 一作 · 20 作者 · [arXiv:2607.14952](https://arxiv.org/abs/2607.14952)
 
-_Current multimodal large lanauge models possess strong perceptual and reasoning capabilities, however high computational and memory requirements make them difficult to deploy directly on on-device environments. While sm…_
+_A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length ge…_
 
-→ [profile](/researchers/hyperai-team)
+→ [profile](/researchers/changhai-zhou)
 
 ---
-### No. 10 · MERaLiON-SER: Robust Speech Emotion Recognition Model for English and SEA Languages
+### No. 06 · MER 2026: From Discriminative Emotion Recognition to Generative Emotion Understanding
 
-**Hardik B. Sailor** · 一作 · 29 作者 · [arXiv:2511.04914](https://arxiv.org/abs/2511.04914)
+**Zheng Lian** · 一作 · 18 作者 · [arXiv:2604.19417](https://arxiv.org/abs/2604.19417)
 
-_We present MERaLiON-SER, a robust speech emotion recognition model designed for English and Southeast Asian languages. The model is trained using a hybrid objective combining weighted categorical cross-entropy and Conco…_
+_MER2026 marks the fourth edition of the MER series of challenges. The MER series provides valuable data resources to the research community and offers tasks centered on recent research trends, establishing itself as one…_
 
-→ [profile](/researchers/hardik-b-sailor)
+→ [profile](/researchers/zheng-lian)
+
+---
+### No. 07 · MER 2025: When Affective Computing Meets Large Language Models
+
+**Zheng Lian** · 一作 · 18 作者 · [arXiv:2504.19423](https://arxiv.org/abs/2504.19423)
+
+*用LLM驱动生成式方法替代传统情感分类框架。*
+
+_MER2025 is the third year of our MER series of challenges, aiming to bring together researchers in the affective computing community to explore emerging trends and future directions in the field. Previously, MER2023 foc…_
+
+→ [profile](/researchers/zheng-lian)
+
+---
+### No. 08 · Scaling Parallel Sequence Models to Foundation-Scale Vision Encoders
+
+**Yitong Jiang** · 一作 · 18 作者 · [arXiv:2606.00746](https://arxiv.org/abs/2606.00746)
+
+_Vision foundation models are bottlenecked by the quadratic cost of self-attention, which limits usable resolution and increases the cost of large-scale pretraining. Subquadratic alternatives such as linear attention and…_
+
+→ [profile](/researchers/yitong-jiang)
+
+---
+### No. 09 · Instant NuRec: Feed-Forward 3D Gaussian Reconstruction for Driving Scene Simulation
+
+**NVIDIA** · 一作 · 17 作者 · [arXiv:2607.14203](https://arxiv.org/abs/2607.14203)
+
+*前馈3DGS重建实现1.5秒多视角驾驶场景模拟。*
+
+_3D simulation platforms are critical for autonomous driving because they enable end-to-end policy evaluation, thereby reducing development costs and improving safety. In recent years, neural simulation has become predom…_
+
+→ [profile](/researchers/nvidia)
+
+---
+### No. 10 · StructureClaw: Traceable LLM Agents and an Executable Benchmark for Structural Engineering Workflows
+
+**Sizhong Qin** · 一作 · 16 作者 · [arXiv:2607.14896](https://arxiv.org/abs/2607.14896)
+
+_Addressing a structural-engineering request requires more than a single answer; it requires a chain of interdependent artifacts: interpreted requirements, a computable model, validation records, solver outputs, code-che…_
+
+→ [profile](/researchers/sizhong-qin)
 
 ---
 
@@ -352,59 +347,59 @@ _We present MERaLiON-SER, a robust speech emotion recognition model designed for
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · Beam Test Characterization of Silicon Microstrip Detector Flight-Model Ladders for the AMS-02 Upgrade
+### No. 01 · Kimi K2.5: Visual Agentic Intelligence
 
-**Dexing Miao** · 一作 · 59 作者 · [arXiv:2603.25085](https://arxiv.org/abs/2603.25085)
+**Kimi Team** · 一作 · 325 作者 · [arXiv:2602.02276](https://arxiv.org/abs/2602.02276)
 
-_The AMS-02 experiment plans to install a new silicon microstrip tracker layer (Layer-0) on top of the existing detector, increasing the cosmic-ray acceptance by a factor of 3. Layer-0 employs a design in which multiple…_
+_We introduce Kimi K2.5, an open-source multimodal agentic model designed to advance general agentic intelligence. K2.5 emphasizes the joint optimization of text and vision so that two modalities enhance each other. This…_
 
-**▸ 选中原因：首次出现 · 59 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 325 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/dexing-miao)
-
----
-### No. 02 · NTIRE 2026 The 3rd Restore Any Image Model (RAIM) Challenge: Professional Image Quality Assessment (Track 1)
-
-**Guanyi Qin** · 一作 · 53 作者 · [arXiv:2604.12512](https://arxiv.org/abs/2604.12512)
-
-_In this paper, we present an overview of the NTIRE 2026 challenge on the 3rd Restore Any Image Model in the Wild, specifically focusing on Track 1: Professional Image Quality Assessment. Conventional Image Quality Asses…_
-
-**▸ 选中原因：首次出现 · 53 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/guanyi-qin)
+→ [profile](/researchers/kimi-team)
 
 ---
-### No. 03 · A Telescope System for Charge and Position Measurement of High Energy Nuclei
+### No. 02 · Kimi-VL Technical Report
 
-**Dexing Miao** · 一作 · 46 作者 · [arXiv:2603.25080](https://arxiv.org/abs/2603.25080)
+**Kimi Team** · 一作 · 95 作者 · [arXiv:2504.07491](https://arxiv.org/abs/2504.07491)
 
-_A high-granularity telescope system with a large sensitive area and low material budget has been developed for high-energy heavy ion beam tests. The telescope consists of nine layers of silicon microstrip detectors (SSD…_
+_We present Kimi-VL, an efficient open-source Mixture-of-Experts (MoE) vision-language model (VLM) that offers advanced multimodal reasoning, long-context understanding, and strong agent capabilities - all while activati…_
 
-**▸ 选中原因：首次出现 · 46 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 95 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/dexing-miao)
+→ [profile](/researchers/kimi-team)
 
 ---
-### No. 04 · DriftWorld: Fast World Modeling through Drifting
+### No. 03 · VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding
 
-**Susie Lu** · 一作 · 4 作者 · [arXiv:2607.15065](https://arxiv.org/abs/2607.15065)
+**Xinhao Li** · 一作 · 27 作者 · [arXiv:2607.14935](https://arxiv.org/abs/2607.14935)
 
-_Predictive world models enable robots to plan by imagining the outcomes of their actions, but their value for control hinges on generating many rollouts quickly. This creates a bottleneck for diffusion-based world model…_
+_Recent advances in video understanding have spanned motion, long video, and streaming interaction, driving this field toward real-world applications. Despite this progress, current open-source models remain limited in s…_
+
+**▸ 选中原因：首次出现 · 27 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/xinhao-li)
+
+---
+### No. 04 · Learning to Discover at Test Time
+
+**Mert Yuksekgonul** · 一作 · 11 作者 · [arXiv:2601.16175](https://arxiv.org/abs/2601.16175)
+
+_How can we use AI to discover a new state of the art for a scientific problem? Prior work in test-time scaling, such as AlphaEvolve, performs search by prompting a frozen LLM. We perform reinforcement learning at test t…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/susie-lu)
+→ [profile](/researchers/mert-yuksekgonul)
 
 ---
-### No. 05 · Open-AoE: An Open Egocentric Manipulation Dataset and Toolchain for Embodied Learning
+### No. 05 · End-to-End Test-Time Training for Long Context
 
-**Zishuo Li** · 一作 · 32 作者 · [arXiv:2607.14183](https://arxiv.org/abs/2607.14183)
+**Arnuv Tandon** · 一作 · 14 作者 · [arXiv:2512.23675](https://arxiv.org/abs/2512.23675)
 
-_Egocentric videos of human manipulation provide scalable supervision for embodied intelligence, yet existing resources rarely combine low-cost continuous capture, manipulation-level structured annotations, and reusable…_
+_We formulate long-context language modeling as a problem in continual learning rather than architecture design. Under this formulation, we only use a standard architecture -- a Transformer with sliding-window attention.…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/zishuo-li)
+→ [profile](/researchers/arnuv-tandon)
 
 ---
 
