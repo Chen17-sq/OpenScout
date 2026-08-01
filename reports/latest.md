@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 078                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · FRIDAY, JULY 31, 2026
+VOL. 1 · NO. 079                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, AUGUST 1, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 078 · 2026-07-31
+> *All The Researchers Fit To Watch* — Vol. 1, No. 079 · 2026-08-01
 
-_Auto-generated at 2026-07-31T04:42:24+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-08-01T04:41:12+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,125 +15,128 @@ _Auto-generated at 2026-07-31T04:42:24+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **40722** | 256 | 912 | 12 | 88 |
+| **41086** | 106 | 364 | 12 | 88 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · CARA: Concept-Aware Risk Attention for Interpretable Collision Anticipation
+### No. 01 · Data Pyramid for Embodied Manipulation
 
-**Zhishan Tao** · 一作 · 9 作者 · [arXiv:2607.22494](https://arxiv.org/abs/2607.22494)
+**Yifan Ye** · 一作 · 29 作者 · [arXiv:2607.24744](https://arxiv.org/abs/2607.24744)
 
-*用风险概念轨迹引导时空注意力实现可解释碰撞预警。*
+*构建五源数据金字塔，按对齐度调配机器人学习配方。*
 
-_Collision anticipation in autonomous driving requires not only accurate early warnings but also interpretable reasoning about what risk factors are being tracked and how risk evolves over time. Existing methods fall sho…_
+_Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These…_
 
-→ [profile](/researchers/zhishan-tao)
-
----
-### No. 02 · MemOps: Benchmarking Lifecycle Memory Operations in Long-Horizon Conversations
-
-**Xixuan Hao** · 一作 · 9 作者 · [arXiv:2607.12893](https://arxiv.org/abs/2607.12893)
-
-_Long-term memory has become a foundational capability for LLM-based agents that accompany users across extended, multi-session interactions. Existing benchmarks, however, evaluate such memory almost exclusively through…_
-
-→ [profile](/researchers/xixuan-hao)
+→ [profile](/researchers/yifan-ye)
 
 ---
-### No. 03 · Reflect-R1: Evidence-Driven Reflection for Self-Correction in Long Video Understanding
+### No. 02 · IGGT4D: Streaming 4D Instance-Grounded Geometry Transformer
 
-**Shuimu Chen** · 一作 · 10 作者 · [arXiv:2606.27922](https://arxiv.org/abs/2606.27922)
+**Zhengyu Zou** · 一作 · 10 作者 · [arXiv:2607.19228](https://arxiv.org/abs/2607.19228)
 
-_Current multimodal reflection mechanisms for long video understanding predominantly rely on closed-loop self-reflection within internal parameters. Lacking objective external evidence, models are frequently trapped in b…_
+*流式因果建模统一几何与实例，实现4D动态场景理解。*
 
-→ [profile](/researchers/shuimu-chen)
+_Real-world spatial intelligence requires agents to understand scenes from continuous video streams, where objects move, persist, disappear, and reappear over time. While recent spatial foundation models have enabled gen…_
 
----
-### No. 04 · Gold Points Sniper: Self-guided Visual Reasoning in VLM for Fine-grained Action Understanding
-
-**Haodi Liu** · 一作 · 6 作者 · [arXiv:2606.22409](https://arxiv.org/abs/2606.22409)
-
-_Robots operating in everyday environments must understand fine-grained human actions, intentions, and contextual cues from broad views where people occupy only small regions, a capability unmet by current systems. While…_
-
-→ [profile](/researchers/haodi-liu)
+→ [profile](/researchers/zhengyu-zou)
 
 ---
-### No. 05 · DELTAMEM: Incremental Experience Memory for LLM Agents via Residual Trees
+### No. 03 · SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revisions
 
-**Haoran Tan** · 一作 · 5 作者 · [arXiv:2606.03083](https://arxiv.org/abs/2606.03083)
+**Yasheng Sun** · 一作 · 7 作者 · [arXiv:2607.15272](https://arxiv.org/abs/2607.15272)
 
-_Large Language Model (LLM)-based agents increasingly rely on memory to learn from experiences over continual interactions. However, storing experiences as independent, flat units leads to substantial redundancy and retr…_
+*从论文修订中学习矢量图编辑的技能演化框架。*
 
-→ [profile](/researchers/haoran-tan)
+_Editing the figures in a research paper is a routine and time-consuming part of everyday research practice: authors relabel components, rearrange panels, and restyle visuals as they revise their manuscripts. Automating…_
 
----
-### No. 06 · From Profiles to Steering Vectors: Global Sparse Priors and Local Semantic Calibration for Personalized Text Generation
-
-**Liuji Chen** · 一作 · 7 作者 · [arXiv:2607.21620](https://arxiv.org/abs/2607.21620)
-
-*稀疏自编码器提取全局风格先验并注入局部对比向量实现免训练个性化生成。*
-
-_Personalized text generation requires models to capture user-specific writing styles from historical data. Existing approaches based on retrieval, parameter-efficient fine-tuning, or activation steering either introduce…_
-
-→ [profile](/researchers/liuji-chen)
+→ [profile](/researchers/yasheng-sun)
 
 ---
-### No. 07 · From Coarse to Fine: Self-Adaptive Hierarchical Planning for LLM Agents
+### No. 04 · Vision as Unified Multimodal Generation
 
-**Haoran Tan** · 一作 · 6 作者 · [arXiv:2604.23194](https://arxiv.org/abs/2604.23194)
+**Xiaoyang Han** · 一作 · 17 作者 · [arXiv:2607.06560](https://arxiv.org/abs/2607.06560)
 
-*自适应分层规划按任务难度渐进细化，提升执行率。*
+*统一多模态生成实现视觉任务无专用架构。*
 
-_Large language model-based agents have recently emerged as powerful approaches for solving dynamic and multi-step tasks. Most existing agents employ planning mechanisms to guide long-term actions in dynamic environments…_
+_We formulate computer vision as unified multimodal generation, where heterogeneous visual tasks are expressed in the native text and image generation spaces of a unified multimodal model, without task-specific architect…_
 
-→ [profile](/researchers/haoran-tan)
-
----
-### No. 08 · HSG: Hyperbolic Scene Graph
-
-**Liyang Wang** · 一作 · 3 作者 · [arXiv:2604.17454](https://arxiv.org/abs/2604.17454)
-
-*用双曲空间嵌入场景图，提升层级结构与检索性能。*
-
-_Scene graph representations enable structured visual understanding by modeling objects and their relationships, and have been widely used for multiview and 3D scene reasoning. Existing methods such as MSG learn scene gr…_
-
-→ [profile](/researchers/liyang-wang)
+→ [profile](/researchers/xiaoyang-han)
 
 ---
-### No. 09 · MobileWorld: Benchmarking Autonomous Mobile Agents in Agent-User Interactive and MCP-Augmented Environments
+### No. 05 · LKValues: Aligning Large Language Models with Sri Lankan Societal Values
 
-**Quyu Kong** · 一作 · 13 作者 · [arXiv:2512.19432](https://arxiv.org/abs/2512.19432)
+**Nethmi Muthugala** · 一作 · 10 作者 · [arXiv:2607.20410](https://arxiv.org/abs/2607.20410)
 
-_Among existing online mobile-use benchmarks, AndroidWorld has emerged as the dominant benchmark due to its reproducible environment and deterministic evaluation; however, recent agents achieving over 90% success rates i…_
+*首个斯里兰卡价值观对齐数据集LKValues及微调基准。*
 
-→ [profile](/researchers/quyu-kong)
+_Value alignment of Large Language Models (LLMs) has been shown to be culturally biased toward Western norms. This results in the mishandling of local values in multilingual societies such as Sri Lanka that have their un…_
 
----
-### No. 10 · Restoring Pruned Large Language Models via Lost Component Compensation
-
-**Zijian Feng** · 一作 · 8 作者 · [arXiv:2510.21834](https://arxiv.org/abs/2510.21834)
-
-_Pruning is a widely used technique to reduce the size and inference cost of large language models (LLMs), but it often causes performance degradation. To mitigate this, existing restoration methods typically employ para…_
-
-→ [profile](/researchers/zijian-feng)
+→ [profile](/researchers/nethmi-muthugala)
 
 ---
+### No. 06 · Divergence Decoding: Training-Free Capability Fusion
 
-## Section B · 🔄 动态更新 · 10 项
+**Yimi Wang** · 一作 · 9 作者 · [arXiv:2607.27248](https://arxiv.org/abs/2607.27248)
+
+*用JS散度路由融合通用与专业模型能力。*
+
+_While large language models excel in reasoning, these generalists often lack knowledge for specialized scientific domains. Conversely, domain models~(specialists), while knowledgeable, suffer from specialization side-ef…_
+
+→ [profile](/researchers/yimi-wang)
+
+---
+### No. 07 · A High-Precision Numerical Framework for Time-Varying Solar Neutrino Flux with Full Earth Matter Oscillation Corrections for Global Underground Laboratories
+
+**Keyu Han** · 一作 · 6 作者 · [arXiv:2607.24421](https://arxiv.org/abs/2607.24421)
+
+_Solar neutrinos have been studied for over half a century to test both the Standard Solar Model and the electroweak sector of the Standard Model of particle physics. Contemporary experiments are now entering an era of h…_
+
+→ [profile](/researchers/keyu-han)
+
+---
+### No. 08 · SciForge: An AI-Native, Multimodal Workbench for Scientific Discovery
+
+**SciForge Team** · 一作 · 13 作者 · [arXiv:2607.16038](https://arxiv.org/abs/2607.16038)
+
+_Scientific work increasingly spans heterogeneous artifacts -- papers, code, datasets, scientific file formats, model outputs, figures, manuscripts, and team decisions -- yet general-purpose AI assistants rarely preserve…_
+
+→ [profile](/researchers/sciforge-team)
+
+---
+### No. 09 · TSSM: Triaxial State Space Model for Global Station Weather Forecasting with Temporal-Variable-Historical Modeling
+
+**Songru Yang** · 一作 · 10 作者 · [arXiv:2607.13101](https://arxiv.org/abs/2607.13101)
+
+_Global Station Weather Forecasting (GSWF) is pivotal for localized and extreme weather prediction over key regions. Despite efforts to exploit look-back windows, existing methods show limited accuracy gains and struggle…_
+
+→ [profile](/researchers/songru-yang)
+
+---
+### No. 10 · Active rejection enables reliable generalization of universal machine-learning interatomic potentials
+
+**Mingxiang Luo** · 一作 · 6 作者 · [arXiv:2607.09456](https://arxiv.org/abs/2607.09456)
+
+_Universal machine learning interatomic potentials (uMLIPs) bridge quantum-mechanical accuracy and large-scale molecular dynamics, but the cost of high-accuracy calculations such as r$^2$SCAN limits training to datasets…_
+
+→ [profile](/researchers/mingxiang-luo)
+
+---
+
+## Section B · 🔄 动态更新 · 9 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Jitendra Malik](/researchers/jitendra-malik) | ForceBand: Learning Forceful Manipulation with sEMG | — | [2606.26093](https://arxiv.org/abs/2606.26093) |
-| [Chelsea Finn](/researchers/chelsea-finn) | Open X-Embodiment: Robotic Learning Datasets and RT-X Models | — | [2310.08864](https://arxiv.org/abs/2310.08864) |
-| [Deepak Pathak](/researchers/deepak-pathak) | Open X-Embodiment: Robotic Learning Datasets and RT-X Models | — | [2310.08864](https://arxiv.org/abs/2310.08864) |
-| [Cewu Lu](/researchers/cewu-lu) | Open X-Embodiment: Robotic Learning Datasets and RT-X Models | — | [2310.08864](https://arxiv.org/abs/2310.08864) |
-| [Hao Su](/researchers/hao-su) | Open X-Embodiment: Robotic Learning Datasets and RT-X Models | — | [2310.08864](https://arxiv.org/abs/2310.08864) |
-| [Igor Mordatch](/researchers/igor-mordatch) | Open X-Embodiment: Robotic Learning Datasets and RT-X Models | — | [2310.08864](https://arxiv.org/abs/2310.08864) |
-| [Hao Su](/researchers/hao-su) | Effect of ultrasonic vibration on thermal and material flow behavior,… | — | [None](#) |
-| [Hao Su](/researchers/hao-su) | Concurrent influences of tool offset and ultrasonic vibration on the… | — | [None](#) |
-| [Xiaolong Wang](/researchers/xiaolong-wang) | Vision-Guided Quadrupedal Locomotion in the Wild with Multi-Modal Del… | — | [None](#) |
-| [Sergey Tulyakov](/researchers/sergey-tulyakov) | 4D-fy: Text-to-4D Generation Using Hybrid Score Distillation Sampling | — | [None](#) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Data Pyramid for Embodied Manipulation | — | [2607.24744](https://arxiv.org/abs/2607.24744) |
+| [Ping Luo](/researchers/ping-luo) | Data Pyramid for Embodied Manipulation | — | [2607.24744](https://arxiv.org/abs/2607.24744) |
+| [Ziwei Liu](/researchers/ziwei-liu) | IGGT4D: Streaming 4D Instance-Grounded Geometry Transformer | — | [2607.19228](https://arxiv.org/abs/2607.19228) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Apple-$π$: Benchmarking Thinking with Video Towards Law-Grounded Phys… | — | [2607.16401](https://arxiv.org/abs/2607.16401) |
+| [Ziwei Liu](/researchers/ziwei-liu) | SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revis… | — | [2607.15272](https://arxiv.org/abs/2607.15272) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Vision as Unified Multimodal Generation | — | [2607.06560](https://arxiv.org/abs/2607.06560) |
+| [Dahua Lin](/researchers/dahua-lin) | Vision as Unified Multimodal Generation | — | [2607.06560](https://arxiv.org/abs/2607.06560) |
+| [Ziwei Liu](/researchers/ziwei-liu) | 3D and 4D World Modeling: A Survey | — | [2509.07996](https://arxiv.org/abs/2509.07996) |
+| [Bowen Zhou](/researchers/bowen-zhou) | SafeWork-R1: Coevolving Safety and Intelligence under the AI-45$^{\ci… | — | [2507.18576](https://arxiv.org/abs/2507.18576) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -241,149 +244,159 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section E · 🔥 热门工作 · Top 9
+## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · LongCat-Flash-Thinking-2601 Technical Report
+### No. 01 · SafeWork-R1: Coevolving Safety and Intelligence under the AI-45$^{\circ}$ Law
 
-**Meituan LongCat Team** · 一作 · 165 作者 · [arXiv:2601.16725](https://arxiv.org/abs/2601.16725)
+**Shanghai AI Lab** · 一作 · 118 作者 · [arXiv:2507.18576](https://arxiv.org/abs/2507.18576)
 
-_We introduce LongCat-Flash-Thinking-2601, a 560-billion-parameter open-source Mixture-of-Experts (MoE) reasoning model with superior agentic reasoning capability. LongCat-Flash-Thinking-2601 achieves state-of-the-art pe…_
+_We introduce SafeWork-R1, a cutting-edge multimodal reasoning model that demonstrates the coevolution of capabilities and safety. It is developed by our proposed SafeLadder framework, which incorporates large-scale, pro…_
 
-→ [profile](/researchers/meituan-longcat-team)
-
----
-### No. 02 · The Fourth Monocular Depth Estimation Challenge
-
-**Anton Obukhov** · 一作 · 57 作者 · [arXiv:2504.17787](https://arxiv.org/abs/2504.17787)
-
-_This paper presents the results of the fourth edition of the Monocular Depth Estimation Challenge (MDEC), which focuses on zero-shot generalization to the SYNS-Patches benchmark, a dataset featuring challenging environm…_
-
-→ [profile](/researchers/anton-obukhov)
+→ [profile](/researchers/shanghai-ai-lab)
 
 ---
-### No. 03 · VideoCoCo: Code-as-CoT for Physically-Consistent Video Generation via an Agentic Dual-Engine System
+### No. 02 · Data Pyramid for Embodied Manipulation
 
-**Haodong Li** · 一作 · 28 作者 · [arXiv:2607.27380](https://arxiv.org/abs/2607.27380)
+**Yifan Ye** · 一作 · 29 作者 · [arXiv:2607.24744](https://arxiv.org/abs/2607.24744)
 
-_Text-to-video models have achieved remarkable visual quality, yet they still struggle to generate physically consistent dynamics because the temporal evolution of a scene must be inferred implicitly from a highly compre…_
+*构建五源数据金字塔，按对齐度调配机器人学习配方。*
 
-→ [profile](/researchers/haodong-li)
+_Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These…_
 
----
-### No. 04 · Unconventional and Fragile Magnetic Exciton in a van der Waals Quantum Magnet
-
-**Kai-Xuan Zhang** · 一作 · 28 作者 · [arXiv:2607.27695](https://arxiv.org/abs/2607.27695)
-
-_The recently discovered magnetic exciton in the van der Waals (vdW) antiferromagnet NiPS3 exemplifies these phenomena, exhibiting several distinctive characteristics. Despite extensive investigation, much of its physics…_
-
-→ [profile](/researchers/kai-xuan-zhang)
+→ [profile](/researchers/yifan-ye)
 
 ---
-### No. 05 · Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering
+### No. 03 · 3D and 4D World Modeling: A Survey
 
-**Junlin Yang** · 一作 · 24 作者 · [arXiv:2607.28568](https://arxiv.org/abs/2607.28568)
+**Lingdong Kong** · 一作 · 23 作者 · [arXiv:2509.07996](https://arxiv.org/abs/2509.07996)
 
-_Recursive self-improvement (RSI) requires AI systems that improve the process of building AI (i.e., AI4AI); machine learning engineering (MLE) offers a concrete, executable testbed for studying this capability. We intro…_
+_World modeling has become a cornerstone in AI research, enabling agents to understand, represent, and predict the dynamic environments they inhabit. While prior work largely emphasizes generative methods for 2D image an…_
 
-→ [profile](/researchers/junlin-yang)
-
----
-### No. 06 · DINO-X: A Unified Vision Model for Open-World Object Detection and Understanding
-
-**Tianhe Ren** · 一作 · 20 作者 · [arXiv:2411.14347](https://arxiv.org/abs/2411.14347)
-
-_In this paper, we introduce DINO-X, which is a unified object-centric vision model developed by IDEA Research with the best open-world object detection performance to date. DINO-X employs the same Transformer-based enco…_
-
-→ [profile](/researchers/tianhe-ren)
+→ [profile](/researchers/lingdong-kong)
 
 ---
-### No. 07 · RefCaptioner: Multi-Reference Image-Grounded Video Captioning
+### No. 04 · Vision as Unified Multimodal Generation
 
-**Tengfei Liu** · 一作 · 19 作者 · [arXiv:2607.28509](https://arxiv.org/abs/2607.28509)
+**Xiaoyang Han** · 一作 · 17 作者 · [arXiv:2607.06560](https://arxiv.org/abs/2607.06560)
 
-_Existing video captioning models generate natural descriptions of video content but cannot explicitly ground local visual elements to multiple reference images. We introduce multi-reference image-grounded video captioni…_
+*统一多模态生成实现视觉任务无专用架构。*
 
-→ [profile](/researchers/tengfei-liu)
+_We formulate computer vision as unified multimodal generation, where heterogeneous visual tasks are expressed in the native text and image generation spaces of a unified multimodal model, without task-specific architect…_
 
----
-### No. 08 · HumanCLAW: Can Vision-Language Models Act Through a Body?
-
-**Siyao Li** · 一作 · 18 作者 · [arXiv:2607.27180](https://arxiv.org/abs/2607.27180)
-
-_Evaluating whether a vision-language model (VLM) can act through a physical body is challenging. The outcome of an action couples the VLM's decision with motor control. When a task fails, it is hard to tell whether the…_
-
-→ [profile](/researchers/siyao-li)
+→ [profile](/researchers/xiaoyang-han)
 
 ---
-### No. 09 · Metis: Memory Foundation Model
+### No. 05 · Competing Chern states revealed by quasiparticle charging in moiré rhombohedral graphene
 
-**Zeyu Zhang** · 一作 · 17 作者 · [arXiv:2607.26760](https://arxiv.org/abs/2607.26760)
+**Hongyuan Li** · 一作 · 16 作者 · [arXiv:2607.08710](https://arxiv.org/abs/2607.08710)
 
-_Recent advances in AI agents have increasingly internalized native capabilities into their underlying foundation models, giving rise to multimodal foundation models and large reasoning models. However, agent memory is s…_
+_Moiré materials realize a versatile platform for exploring the physics of fractional Chern insulators (FCIs). The recently observed evolution from FCIs to an extended quantum anomalous Hall background upon lowering the…_
 
-→ [profile](/researchers/zeyu-zhang)
+→ [profile](/researchers/hongyuan-li)
+
+---
+### No. 06 · Apple-$π$: Benchmarking Thinking with Video Towards Law-Grounded Physical Intelligence
+
+**Runmao Yao** · 一作 · 14 作者 · [arXiv:2607.16401](https://arxiv.org/abs/2607.16401)
+
+*首个视频模型物理定律推理三阶段基准Apple-π。*
+
+_Modern video generation models are increasingly hailed as emerging world models with an internalized grasp of physical law. Yet existing benchmarks largely evaluate physical plausibility only at the output level, withou…_
+
+→ [profile](/researchers/runmao-yao)
+
+---
+### No. 07 · A Self-Evolving Agentic System for Automated Generation and Execution of Biological Protocols
+
+**Yankai Jiang** · 一作 · 14 作者 · [arXiv:2606.31763](https://arxiv.org/abs/2606.31763)
+
+_Autonomous wet-lab experimentation requires more than plausible protocol text: biological intent, quantitative procedures, device constraints and experimental feedback must remain aligned from protocol and SOP design to…_
+
+→ [profile](/researchers/yankai-jiang)
+
+---
+### No. 08 · SciForge: An AI-Native, Multimodal Workbench for Scientific Discovery
+
+**SciForge Team** · 一作 · 13 作者 · [arXiv:2607.16038](https://arxiv.org/abs/2607.16038)
+
+_Scientific work increasingly spans heterogeneous artifacts -- papers, code, datasets, scientific file formats, model outputs, figures, manuscripts, and team decisions -- yet general-purpose AI assistants rarely preserve…_
+
+→ [profile](/researchers/sciforge-team)
+
+---
+### No. 09 · Camel: Frame-Level Bandwidth Estimation for Low-Latency Live Streaming under Video Bitrate Undershooting
+
+**Liming Liu** · 一作 · 13 作者 · [arXiv:2602.09500](https://arxiv.org/abs/2602.09500)
+
+_Low-latency live streaming (LLS) has emerged as a popular web application, with many platforms adopting real-time protocols such as WebRTC to minimize end-to-end latency. However, we observe a counter-intuitive phenomen…_
+
+→ [profile](/researchers/liming-liu)
+
+---
+### No. 10 · Adjoint Sampling: Highly Scalable Diffusion Samplers via Adjoint Matching
+
+**Aaron Havens** · 一作 · 13 作者 · [arXiv:2504.11713](https://arxiv.org/abs/2504.11713)
+
+_We introduce Adjoint Sampling, a highly scalable and efficient algorithm for learning diffusion processes that sample from unnormalized densities, or energy functions. It is the first on-policy approach that allows sign…_
+
+→ [profile](/researchers/aaron-havens)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 5 个
+## Section F · 🌙 Sleeper Picks · 4 个
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · The Fourth Monocular Depth Estimation Challenge
+### No. 01 · SafeWork-R1: Coevolving Safety and Intelligence under the AI-45$^{\circ}$ Law
 
-**Anton Obukhov** · 一作 · 57 作者 · [arXiv:2504.17787](https://arxiv.org/abs/2504.17787)
+**Shanghai AI Lab** · 一作 · 118 作者 · [arXiv:2507.18576](https://arxiv.org/abs/2507.18576)
 
-_This paper presents the results of the fourth edition of the Monocular Depth Estimation Challenge (MDEC), which focuses on zero-shot generalization to the SYNS-Patches benchmark, a dataset featuring challenging environm…_
+_We introduce SafeWork-R1, a cutting-edge multimodal reasoning model that demonstrates the coevolution of capabilities and safety. It is developed by our proposed SafeLadder framework, which incorporates large-scale, pro…_
 
-**▸ 选中原因：首次出现 · 57 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 118 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/anton-obukhov)
-
----
-### No. 02 · DINO-X: A Unified Vision Model for Open-World Object Detection and Understanding
-
-**Tianhe Ren** · 一作 · 20 作者 · [arXiv:2411.14347](https://arxiv.org/abs/2411.14347)
-
-_In this paper, we introduce DINO-X, which is a unified object-centric vision model developed by IDEA Research with the best open-world object detection performance to date. DINO-X employs the same Transformer-based enco…_
-
-**▸ 选中原因：首次出现 · 20 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/tianhe-ren)
+→ [profile](/researchers/shanghai-ai-lab)
 
 ---
-### No. 03 · Physics-Constrained Diffusion Reconstruction with Posterior Correction for Quantitative and Fast PET Imaging
+### No. 02 · Data Pyramid for Embodied Manipulation
 
-**Yucun Hou** · 一作 · 16 作者 · [arXiv:2508.14364](https://arxiv.org/abs/2508.14364)
+**Yifan Ye** · 一作 · 29 作者 · [arXiv:2607.24744](https://arxiv.org/abs/2607.24744)
 
-_Deep learning-based reconstruction of positron emission tomography(PET) data has gained increasing attention in recent years. While these methods achieve fast reconstruction,concerns remain regarding quantitative accura…_
+*构建五源数据金字塔，按对齐度调配机器人学习配方。*
 
-**▸ 选中原因：首次出现 · 16 作者合作（疑似大组新人）**
+_Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These…_
 
-→ [profile](/researchers/yucun-hou)
+**▸ 选中原因：首次出现 · 29 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/yifan-ye)
 
 ---
-### No. 04 · FA-RDP: A Frequency-Adaptive Reactive Diffusion Policy for Contact-Rich Manipulation
+### No. 03 · Vision as Unified Multimodal Generation
 
-**Lifeng Zhuo** · 一作 · 7 作者 · [arXiv:2607.28596](https://arxiv.org/abs/2607.28596)
+**Xiaoyang Han** · 一作 · 17 作者 · [arXiv:2607.06560](https://arxiv.org/abs/2607.06560)
 
-_In contact-rich manipulation, action multimodality and reactivity dominate different stages of a single episode. Before contact, multiple trajectories might be equally valid, making it important to preserve diverse acti…_
+*统一多模态生成实现视觉任务无专用架构。*
+
+_We formulate computer vision as unified multimodal generation, where heterogeneous visual tasks are expressed in the native text and image generation spaces of a unified multimodal model, without task-specific architect…_
+
+**▸ 选中原因：首次出现 · 17 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/xiaoyang-han)
+
+---
+### No. 04 · IGGT4D: Streaming 4D Instance-Grounded Geometry Transformer
+
+**Zhengyu Zou** · 一作 · 10 作者 · [arXiv:2607.19228](https://arxiv.org/abs/2607.19228)
+
+*流式因果建模统一几何与实例，实现4D动态场景理解。*
+
+_Real-world spatial intelligence requires agents to understand scenes from continuous video streams, where objects move, persist, disappear, and reappear over time. While recent spatial foundation models have enabled gen…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/lifeng-zhuo)
-
----
-### No. 05 · EgoGenesis: Egocentric World-Action Modeling with Online Anchored Projective Memory and Action-3D RoPE
-
-**Zexuan Yan** · 一作 · 12 作者 · [arXiv:2607.28243](https://arxiv.org/abs/2607.28243)
-
-_Egocentric video offers rich manipulation experience for embodied AI, yet collecting diverse egocentric data across scenes, objects, motions, and embodiments remains costly. We present \method, an egocentric world-actio…_
-
-**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
-
-→ [profile](/researchers/zexuan-yan)
+→ [profile](/researchers/zhengyu-zou)
 
 ---
 
