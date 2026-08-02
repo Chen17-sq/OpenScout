@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 079                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, AUGUST 1, 2026
+VOL. 1 · NO. 080                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · SUNDAY, AUGUST 2, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 079 · 2026-08-01
+> *All The Researchers Fit To Watch* — Vol. 1, No. 080 · 2026-08-02
 
-_Auto-generated at 2026-08-01T04:41:12+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-08-02T04:45:27+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,128 +15,135 @@ _Auto-generated at 2026-08-01T04:41:12+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **41086** | 106 | 364 | 12 | 88 |
+| **41233** | 40 | 147 | 12 | 88 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Data Pyramid for Embodied Manipulation
+### No. 01 · VIPER: Visual In-Context Physics Reasoning for Physically Plausible Video Generation
 
-**Yifan Ye** · 一作 · 29 作者 · [arXiv:2607.24744](https://arxiv.org/abs/2607.24744)
+**Tianxiao Chen** · 一作 · 6 作者 · [arXiv:2607.23472](https://arxiv.org/abs/2607.23472)
 
-*构建五源数据金字塔，按对齐度调配机器人学习配方。*
+*用参考视频作物理演示，经MLLM提取线索引导视频生成。*
 
-_Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These…_
+_Modern video generation models can synthesize visually compelling and temporally coherent clips, yet controlling their physical behavior remains difficult with standard text and image conditions. The core challenge is a…_
 
-→ [profile](/researchers/yifan-ye)
-
----
-### No. 02 · IGGT4D: Streaming 4D Instance-Grounded Geometry Transformer
-
-**Zhengyu Zou** · 一作 · 10 作者 · [arXiv:2607.19228](https://arxiv.org/abs/2607.19228)
-
-*流式因果建模统一几何与实例，实现4D动态场景理解。*
-
-_Real-world spatial intelligence requires agents to understand scenes from continuous video streams, where objects move, persist, disappear, and reappear over time. While recent spatial foundation models have enabled gen…_
-
-→ [profile](/researchers/zhengyu-zou)
+→ [profile](/researchers/tianxiao-chen)
 
 ---
-### No. 03 · SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revisions
+### No. 02 · Beyond Episodic Evaluation: Memory Architectural Bottlenecks in Sequential Embodied Question Answering
 
-**Yasheng Sun** · 一作 · 7 作者 · [arXiv:2607.15272](https://arxiv.org/abs/2607.15272)
+**Zikui Cai** · 一作 · 18 作者 · [arXiv:2607.21571](https://arxiv.org/abs/2607.21571)
 
-*从论文修订中学习矢量图编辑的技能演化框架。*
+*结构化空间记忆突破顺序EQA精度效率瓶颈。*
 
-_Editing the figures in a research paper is a routine and time-consuming part of everyday research practice: authors relabel components, rearrange panels, and restyle visuals as they revise their manuscripts. Automating…_
+_Embodied question answering (EQA) is traditionally evaluated under an episodic formulation, where agents solve each task independently and reset internal state between episodes. However, real-world robots operate contin…_
 
-→ [profile](/researchers/yasheng-sun)
-
----
-### No. 04 · Vision as Unified Multimodal Generation
-
-**Xiaoyang Han** · 一作 · 17 作者 · [arXiv:2607.06560](https://arxiv.org/abs/2607.06560)
-
-*统一多模态生成实现视觉任务无专用架构。*
-
-_We formulate computer vision as unified multimodal generation, where heterogeneous visual tasks are expressed in the native text and image generation spaces of a unified multimodal model, without task-specific architect…_
-
-→ [profile](/researchers/xiaoyang-han)
+→ [profile](/researchers/zikui-cai)
 
 ---
-### No. 05 · LKValues: Aligning Large Language Models with Sri Lankan Societal Values
+### No. 03 · Imaginarity as a Resource within Quantum Coherence: Geometric Decomposition and Operational Conversion
 
-**Nethmi Muthugala** · 一作 · 10 作者 · [arXiv:2607.20410](https://arxiv.org/abs/2607.20410)
+**Meng-Li Guo** · 一作 · 5 作者 · [arXiv:2607.14435](https://arxiv.org/abs/2607.14435)
 
-*首个斯里兰卡价值观对齐数据集LKValues及微调基准。*
+*几何分解量子相干，实现虚部资源与相干性操作互转。*
 
-_Value alignment of Large Language Models (LLMs) has been shown to be culturally biased toward Western norms. This results in the mishandling of local values in multilingual societies such as Sri Lanka that have their un…_
+_We establish a rigorous framework that identifies imaginarity as a fundamental resource inherent in quantum coherence. By means of a geometric decomposition, we partition coherence into distinct imaginarity and residual…_
 
-→ [profile](/researchers/nethmi-muthugala)
-
----
-### No. 06 · Divergence Decoding: Training-Free Capability Fusion
-
-**Yimi Wang** · 一作 · 9 作者 · [arXiv:2607.27248](https://arxiv.org/abs/2607.27248)
-
-*用JS散度路由融合通用与专业模型能力。*
-
-_While large language models excel in reasoning, these generalists often lack knowledge for specialized scientific domains. Conversely, domain models~(specialists), while knowledgeable, suffer from specialization side-ef…_
-
-→ [profile](/researchers/yimi-wang)
+→ [profile](/researchers/meng-li-guo)
 
 ---
-### No. 07 · A High-Precision Numerical Framework for Time-Varying Solar Neutrino Flux with Full Earth Matter Oscillation Corrections for Global Underground Laboratories
+### No. 04 · Beyond Looking Up, Try Looking Around: Harmonizing Global Structure and Local Consistency in Optimal Transport for Short Text Clustering
 
-**Keyu Han** · 一作 · 6 作者 · [arXiv:2607.24421](https://arxiv.org/abs/2607.24421)
+**Zhihao Yao** · 一作 · 4 作者 · [arXiv:2607.10548](https://arxiv.org/abs/2607.10548)
 
-_Solar neutrinos have been studied for over half a century to test both the Standard Solar Model and the electroweak sector of the Standard Model of particle physics. Contemporary experiments are now entering an era of h…_
+*融合实例注意力与最优传输，兼顾局部一致与全局结构。*
 
-→ [profile](/researchers/keyu-han)
+_Pseudo-labeling based on Optimal Transport (OT) has become an effective mechanism for enhancing short text clustering. Existing OT methods are short in modeling semantic consistencies between samples, which may assign d…_
 
----
-### No. 08 · SciForge: An AI-Native, Multimodal Workbench for Scientific Discovery
-
-**SciForge Team** · 一作 · 13 作者 · [arXiv:2607.16038](https://arxiv.org/abs/2607.16038)
-
-_Scientific work increasingly spans heterogeneous artifacts -- papers, code, datasets, scientific file formats, model outputs, figures, manuscripts, and team decisions -- yet general-purpose AI assistants rarely preserve…_
-
-→ [profile](/researchers/sciforge-team)
+→ [profile](/researchers/zhihao-yao)
 
 ---
-### No. 09 · TSSM: Triaxial State Space Model for Global Station Weather Forecasting with Temporal-Variable-Historical Modeling
+### No. 05 · Charge radii of calcium isotopes within relativistic configuration-interaction density functional theory
 
-**Songru Yang** · 一作 · 10 作者 · [arXiv:2607.13101](https://arxiv.org/abs/2607.13101)
+**Teng Qu** · 一作 · 3 作者 · [arXiv:2607.08478](https://arxiv.org/abs/2607.08478)
 
-_Global Station Weather Forecasting (GSWF) is pivotal for localized and extreme weather prediction over key regions. Despite efforts to exploit look-back windows, existing methods show limited accuracy gains and struggle…_
+*相对论组态混合密度泛函重现钙同位素电荷半径奇偶效应。*
 
-→ [profile](/researchers/songru-yang)
+_The charge radii of calcium isotopes are investigated within the framework of relativistic configuration-interaction density functional (ReCD) theory. The ReCD theory microscopically incorporates beyond-mean-field corre…_
 
----
-### No. 10 · Active rejection enables reliable generalization of universal machine-learning interatomic potentials
-
-**Mingxiang Luo** · 一作 · 6 作者 · [arXiv:2607.09456](https://arxiv.org/abs/2607.09456)
-
-_Universal machine learning interatomic potentials (uMLIPs) bridge quantum-mechanical accuracy and large-scale molecular dynamics, but the cost of high-accuracy calculations such as r$^2$SCAN limits training to datasets…_
-
-→ [profile](/researchers/mingxiang-luo)
+→ [profile](/researchers/teng-qu)
 
 ---
+### No. 06 · H3D: Benchmarking Unsupervised Text Hashing for Fine-Grained Document Deduplication
 
-## Section B · 🔄 动态更新 · 9 项
+**Qianren Mao** · 一作 · 7 作者 · [arXiv:2607.08382](https://arxiv.org/abs/2607.08382)
+
+*构建无监督文本哈希基准，对比语义与词法指纹去重。*
+
+_Document hashing provides compact representations for efficient similarity search and document deduplication, but existing studies rarely compare hashing pipelines under a unified protocol for fine-grained scientific do…_
+
+→ [profile](/researchers/qianren-mao)
+
+---
+### No. 07 · Physics-Informed Feature Engineering 1D-CNN for Multilayer Cloud Detection from Geostationary Satellites
+
+**Fu Wang** · 一作 · 8 作者 · [arXiv:2607.16270](https://arxiv.org/abs/2607.16270)
+
+*物理信息特征工程嵌入1D-CNN提升多层云检测。*
+
+_Multilayer cloud detection from active--passive observation is vital for numerical weather prediction. In this study, channel selections derived from threshold-based algorithms are embedded as feature-engineering priors…_
+
+→ [profile](/researchers/fu-wang)
+
+---
+### No. 08 · Interfacial Noncollinear Filtering of Spin Hall Currents
+
+**Dan-Yang Han** · 一作 · 9 作者 · [arXiv:2607.05912](https://arxiv.org/abs/2607.05912)
+
+*界面非共线滤波将隐藏体自旋纹理转为非常规自旋流。*
+
+_Spin Hall currents generated in nonmagnetic materials are conventionally regarded as bulk responses whose polarization is fixed by crystal symmetry. This view has motivated the search for intrinsically low-symmetry spin…_
+
+→ [profile](/researchers/dan-yang-han)
+
+---
+### No. 09 · AIR-BENCH Live: An Evolving Safety Benchmark for Foundation Models
+
+**Rohan Naphade** · 一作 · 3 作者 · [arXiv:2607.22671](https://arxiv.org/abs/2607.22671)
+
+*自动更新法规与提示词，动态扩展风险分类的基准。*
+
+_Foundation-model safety benchmarks capture the AI risks of their time of publication: as models improve and governments pass new AI-safety legislation, their risk taxonomies become incomprehensive and their attack promp…_
+
+→ [profile](/researchers/rohan-naphade)
+
+---
+### No. 10 · When Derived Measurements Mislead: Quantifying and Mitigating LLM Over-Trust with Privileged-Modality Reliability Evidence
+
+**Zongheng Guo** · 一作 · 9 作者 · [arXiv:2607.28421](https://arxiv.org/abs/2607.28421)
+
+_Derived measurements increasingly enter large language model (LLM) pipelines as direct facts despite their instance-dependent validity. We define derived-feature over-trust (DFOT) as the failure in which a downstream LL…_
+
+→ [profile](/researchers/zongheng-guo)
+
+---
+
+## Section B · 🔄 动态更新 · 10 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Ziwei Liu](/researchers/ziwei-liu) | Data Pyramid for Embodied Manipulation | — | [2607.24744](https://arxiv.org/abs/2607.24744) |
-| [Ping Luo](/researchers/ping-luo) | Data Pyramid for Embodied Manipulation | — | [2607.24744](https://arxiv.org/abs/2607.24744) |
-| [Ziwei Liu](/researchers/ziwei-liu) | IGGT4D: Streaming 4D Instance-Grounded Geometry Transformer | — | [2607.19228](https://arxiv.org/abs/2607.19228) |
-| [Ziwei Liu](/researchers/ziwei-liu) | Apple-$π$: Benchmarking Thinking with Video Towards Law-Grounded Phys… | — | [2607.16401](https://arxiv.org/abs/2607.16401) |
-| [Ziwei Liu](/researchers/ziwei-liu) | SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revis… | — | [2607.15272](https://arxiv.org/abs/2607.15272) |
-| [Ziwei Liu](/researchers/ziwei-liu) | Vision as Unified Multimodal Generation | — | [2607.06560](https://arxiv.org/abs/2607.06560) |
-| [Dahua Lin](/researchers/dahua-lin) | Vision as Unified Multimodal Generation | — | [2607.06560](https://arxiv.org/abs/2607.06560) |
-| [Ziwei Liu](/researchers/ziwei-liu) | 3D and 4D World Modeling: A Survey | — | [2509.07996](https://arxiv.org/abs/2509.07996) |
-| [Bowen Zhou](/researchers/bowen-zhou) | SafeWork-R1: Coevolving Safety and Intelligence under the AI-45$^{\ci… | — | [2507.18576](https://arxiv.org/abs/2507.18576) |
+| [Bo Li](/researchers/bo-li-uchicago) | VIPER: Visual In-Context Physics Reasoning for Physically Plausible V… | — | [2607.23472](https://arxiv.org/abs/2607.23472) |
+| [Yuke Zhu](/researchers/yuke-zhu) | Beyond Episodic Evaluation: Memory Architectural Bottlenecks in Seque… | — | [2607.21571](https://arxiv.org/abs/2607.21571) |
+| [Bo Li](/researchers/bo-li-uchicago) | Beyond Episodic Evaluation: Memory Architectural Bottlenecks in Seque… | — | [2607.21571](https://arxiv.org/abs/2607.21571) |
+| [Bo Li](/researchers/bo-li-uchicago) | Do Pathology Vision-Language Models Truly See Pathology? | — | [2607.21065](https://arxiv.org/abs/2607.21065) |
+| [Bo Li](/researchers/bo-li-uchicago) | MagicMakeup: A Region-Controllable Diffusion Transformer for High-Fid… | — | [2607.20924](https://arxiv.org/abs/2607.20924) |
+| [Bo Li](/researchers/bo-li-uchicago) | Twin Agent: Context Residual Compression for Privilege Separated Agen… | — | [2607.19595](https://arxiv.org/abs/2607.19595) |
+| [Bo Li](/researchers/bo-li-uchicago) | Imaginarity as a Resource within Quantum Coherence: Geometric Decompo… | — | [2607.14435](https://arxiv.org/abs/2607.14435) |
+| [Bo Li](/researchers/bo-li-uchicago) | A Unified Credit Expansion Theory on Housing Cycle: Causal Evidence f… | — | [2607.12205](https://arxiv.org/abs/2607.12205) |
+| [Bo Li](/researchers/bo-li-uchicago) | Beyond Looking Up, Try Looking Around: Harmonizing Global Structure a… | — | [2607.10548](https://arxiv.org/abs/2607.10548) |
+| [Bo Li](/researchers/bo-li-uchicago) | Charge radii of calcium isotopes within relativistic configuration-in… | — | [2607.08478](https://arxiv.org/abs/2607.08478) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -246,157 +253,172 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · SafeWork-R1: Coevolving Safety and Intelligence under the AI-45$^{\circ}$ Law
+### No. 01 · Technical Report on the CVPR 2026@AdvML Workshop Challenge
 
-**Shanghai AI Lab** · 一作 · 118 作者 · [arXiv:2507.18576](https://arxiv.org/abs/2507.18576)
+**Tianyuan Zhang** · 一作 · 50 作者 · [arXiv:2607.11560](https://arxiv.org/abs/2607.11560)
 
-_We introduce SafeWork-R1, a cutting-edge multimodal reasoning model that demonstrates the coevolution of capabilities and safety. It is developed by our proposed SafeLadder framework, which incorporates large-scale, pro…_
+*对抗多视角驾驶VLA，图像后缀攻击与跨视角优化。*
 
-→ [profile](/researchers/shanghai-ai-lab)
+_Vision-language agents (VLAs) are increasingly used to interpret complex driving scenes and support safety-critical reasoning. This report presents the CVPR 2026@AdvML Workshop Challenge on adversarial multimodal attack…_
 
----
-### No. 02 · Data Pyramid for Embodied Manipulation
-
-**Yifan Ye** · 一作 · 29 作者 · [arXiv:2607.24744](https://arxiv.org/abs/2607.24744)
-
-*构建五源数据金字塔，按对齐度调配机器人学习配方。*
-
-_Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These…_
-
-→ [profile](/researchers/yifan-ye)
+→ [profile](/researchers/tianyuan-zhang)
 
 ---
-### No. 03 · 3D and 4D World Modeling: A Survey
+### No. 02 · Rethinking Scientific Discovery in the Agentic Era
 
-**Lingdong Kong** · 一作 · 23 作者 · [arXiv:2509.07996](https://arxiv.org/abs/2509.07996)
+**Yining Zheng** · 一作 · 30 作者 · [arXiv:2607.03863](https://arxiv.org/abs/2607.03863)
 
-_World modeling has become a cornerstone in AI research, enabling agents to understand, represent, and predict the dynamic environments they inhabit. While prior work largely emphasizes generative methods for 2D image an…_
+_Artificial intelligence has advanced scientific discovery, but most AI4Science systems remain fragmented tools that rely on humans to coordinate problem formulation, literature grounding, model use, simulation, validati…_
 
-→ [profile](/researchers/lingdong-kong)
-
----
-### No. 04 · Vision as Unified Multimodal Generation
-
-**Xiaoyang Han** · 一作 · 17 作者 · [arXiv:2607.06560](https://arxiv.org/abs/2607.06560)
-
-*统一多模态生成实现视觉任务无专用架构。*
-
-_We formulate computer vision as unified multimodal generation, where heterogeneous visual tasks are expressed in the native text and image generation spaces of a unified multimodal model, without task-specific architect…_
-
-→ [profile](/researchers/xiaoyang-han)
+→ [profile](/researchers/yining-zheng)
 
 ---
-### No. 05 · Competing Chern states revealed by quasiparticle charging in moiré rhombohedral graphene
+### No. 03 · An Early Warning of Emerging Biosecurity Risks in Frontier LLMs
 
-**Hongyuan Li** · 一作 · 16 作者 · [arXiv:2607.08710](https://arxiv.org/abs/2607.08710)
+**Zhida He** · 一作 · 23 作者 · [arXiv:2607.18056](https://arxiv.org/abs/2607.18056)
 
-_Moiré materials realize a versatile platform for exploring the physics of fractional Chern insulators (FCIs). The recently observed evolution from FCIs to an extended quantum anomalous Hall background upon lowering the…_
+*构建生物红队模型Intern-BioBreaker，耦合湿实验验证前沿LLM生物…*
 
-→ [profile](/researchers/hongyuan-li)
+_Frontier large language models (LLMs) are increasingly integrated into scientific workflows, yet their growing biological capabilities may outpace current safeguards. To assess the biological risks of frontier models, w…_
 
----
-### No. 06 · Apple-$π$: Benchmarking Thinking with Video Towards Law-Grounded Physical Intelligence
-
-**Runmao Yao** · 一作 · 14 作者 · [arXiv:2607.16401](https://arxiv.org/abs/2607.16401)
-
-*首个视频模型物理定律推理三阶段基准Apple-π。*
-
-_Modern video generation models are increasingly hailed as emerging world models with an internalized grasp of physical law. Yet existing benchmarks largely evaluate physical plausibility only at the output level, withou…_
-
-→ [profile](/researchers/runmao-yao)
+→ [profile](/researchers/zhida-he)
 
 ---
-### No. 07 · A Self-Evolving Agentic System for Automated Generation and Execution of Biological Protocols
+### No. 04 · Beyond Episodic Evaluation: Memory Architectural Bottlenecks in Sequential Embodied Question Answering
 
-**Yankai Jiang** · 一作 · 14 作者 · [arXiv:2606.31763](https://arxiv.org/abs/2606.31763)
+**Zikui Cai** · 一作 · 18 作者 · [arXiv:2607.21571](https://arxiv.org/abs/2607.21571)
 
-_Autonomous wet-lab experimentation requires more than plausible protocol text: biological intent, quantitative procedures, device constraints and experimental feedback must remain aligned from protocol and SOP design to…_
+*结构化空间记忆突破顺序EQA精度效率瓶颈。*
 
-→ [profile](/researchers/yankai-jiang)
+_Embodied question answering (EQA) is traditionally evaluated under an episodic formulation, where agents solve each task independently and reset internal state between episodes. However, real-world robots operate contin…_
 
----
-### No. 08 · SciForge: An AI-Native, Multimodal Workbench for Scientific Discovery
-
-**SciForge Team** · 一作 · 13 作者 · [arXiv:2607.16038](https://arxiv.org/abs/2607.16038)
-
-_Scientific work increasingly spans heterogeneous artifacts -- papers, code, datasets, scientific file formats, model outputs, figures, manuscripts, and team decisions -- yet general-purpose AI assistants rarely preserve…_
-
-→ [profile](/researchers/sciforge-team)
+→ [profile](/researchers/zikui-cai)
 
 ---
-### No. 09 · Camel: Frame-Level Bandwidth Estimation for Low-Latency Live Streaming under Video Bitrate Undershooting
+### No. 05 · Layout-Conditioned Autoregressive Text-to-Image Generation via Structured Masking
 
-**Liming Liu** · 一作 · 13 作者 · [arXiv:2602.09500](https://arxiv.org/abs/2602.09500)
+**Zirui Zheng** · 一作 · 15 作者 · [arXiv:2509.12046](https://arxiv.org/abs/2509.12046)
 
-_Low-latency live streaming (LLS) has emerged as a popular web application, with many platforms adopting real-time protocols such as WebRTC to minimize end-to-end latency. However, we observe a counter-intuitive phenomen…_
+_Although autoregressive (AR) models have demonstrated remarkable success in image generation, extending these models to layout-conditioned generation remains challenging due to the sparse nature of layout conditions and…_
 
-→ [profile](/researchers/liming-liu)
+→ [profile](/researchers/zirui-zheng)
 
 ---
-### No. 10 · Adjoint Sampling: Highly Scalable Diffusion Samplers via Adjoint Matching
+### No. 06 · Do Pathology Vision-Language Models Truly See Pathology?
 
-**Aaron Havens** · 一作 · 13 作者 · [arXiv:2504.11713](https://arxiv.org/abs/2504.11713)
+**Chengyang Zhang** · 一作 · 13 作者 · [arXiv:2607.21065](https://arxiv.org/abs/2607.21065)
 
-_We introduce Adjoint Sampling, a highly scalable and efficient algorithm for learning diffusion processes that sample from unnormalized densities, or energy functions. It is the first on-policy approach that allows sign…_
+*揭示病理VLM视觉绑定缺陷，提出PathBind基准。*
 
-→ [profile](/researchers/aaron-havens)
+_Pathology vision-language models (VLMs) have recently progressed rapidly and are commonly evaluated by answer accuracy on pathology VQA benchmarks. However, we dig into current evaluations and identify three overlooked…_
+
+→ [profile](/researchers/chengyang-zhang)
+
+---
+### No. 07 · SyncCache: Exploiting Asymmetric Dynamics for Fast Audio-Driven Portrait Animation
+
+**Juncheng Ma** · 一作 · 11 作者 · [arXiv:2606.30849](https://arxiv.org/abs/2606.30849)
+
+*利用非对称动态的免训练缓存加速肖像动画生成。*
+
+_Diffusion Transformers (DiTs) have significantly advanced audio-driven portrait animation, but their high computational cost leads to substantial inference latency. Although training-free diffusion caching accelerates i…_
+
+→ [profile](/researchers/juncheng-ma)
+
+---
+### No. 08 · Mapping Text to Multiplex Graph: Prompt Compression as Lévy Walk-Guided Graph Pruning
+
+**Yaxin Gao** · 一作 · 10 作者 · [arXiv:2607.01241](https://arxiv.org/abs/2607.01241)
+
+_Existing prompt compression methods treat text as flat token sequences, failing to capture the distributed nature of important information, which is often spread across multiple locations and connected through both loca…_
+
+→ [profile](/researchers/yaxin-gao)
+
+---
+### No. 09 · Interfacial Noncollinear Filtering of Spin Hall Currents
+
+**Dan-Yang Han** · 一作 · 9 作者 · [arXiv:2607.05912](https://arxiv.org/abs/2607.05912)
+
+*界面非共线滤波将隐藏体自旋纹理转为非常规自旋流。*
+
+_Spin Hall currents generated in nonmagnetic materials are conventionally regarded as bulk responses whose polarization is fixed by crystal symmetry. This view has motivated the search for intrinsically low-symmetry spin…_
+
+→ [profile](/researchers/dan-yang-han)
+
+---
+### No. 10 · When Derived Measurements Mislead: Quantifying and Mitigating LLM Over-Trust with Privileged-Modality Reliability Evidence
+
+**Zongheng Guo** · 一作 · 9 作者 · [arXiv:2607.28421](https://arxiv.org/abs/2607.28421)
+
+_Derived measurements increasingly enter large language model (LLM) pipelines as direct facts despite their instance-dependent validity. We define derived-feature over-trust (DFOT) as the failure in which a downstream LL…_
+
+→ [profile](/researchers/zongheng-guo)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 4 个
+## Section F · 🌙 Sleeper Picks · 5 个
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · SafeWork-R1: Coevolving Safety and Intelligence under the AI-45$^{\circ}$ Law
+### No. 01 · Rethinking Scientific Discovery in the Agentic Era
 
-**Shanghai AI Lab** · 一作 · 118 作者 · [arXiv:2507.18576](https://arxiv.org/abs/2507.18576)
+**Yining Zheng** · 一作 · 30 作者 · [arXiv:2607.03863](https://arxiv.org/abs/2607.03863)
 
-_We introduce SafeWork-R1, a cutting-edge multimodal reasoning model that demonstrates the coevolution of capabilities and safety. It is developed by our proposed SafeLadder framework, which incorporates large-scale, pro…_
+_Artificial intelligence has advanced scientific discovery, but most AI4Science systems remain fragmented tools that rely on humans to coordinate problem formulation, literature grounding, model use, simulation, validati…_
 
-**▸ 选中原因：首次出现 · 118 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 30 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/shanghai-ai-lab)
-
----
-### No. 02 · Data Pyramid for Embodied Manipulation
-
-**Yifan Ye** · 一作 · 29 作者 · [arXiv:2607.24744](https://arxiv.org/abs/2607.24744)
-
-*构建五源数据金字塔，按对齐度调配机器人学习配方。*
-
-_Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These…_
-
-**▸ 选中原因：首次出现 · 29 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/yifan-ye)
+→ [profile](/researchers/yining-zheng)
 
 ---
-### No. 03 · Vision as Unified Multimodal Generation
+### No. 02 · Beyond Episodic Evaluation: Memory Architectural Bottlenecks in Sequential Embodied Question Answering
 
-**Xiaoyang Han** · 一作 · 17 作者 · [arXiv:2607.06560](https://arxiv.org/abs/2607.06560)
+**Zikui Cai** · 一作 · 18 作者 · [arXiv:2607.21571](https://arxiv.org/abs/2607.21571)
 
-*统一多模态生成实现视觉任务无专用架构。*
+*结构化空间记忆突破顺序EQA精度效率瓶颈。*
 
-_We formulate computer vision as unified multimodal generation, where heterogeneous visual tasks are expressed in the native text and image generation spaces of a unified multimodal model, without task-specific architect…_
+_Embodied question answering (EQA) is traditionally evaluated under an episodic formulation, where agents solve each task independently and reset internal state between episodes. However, real-world robots operate contin…_
 
-**▸ 选中原因：首次出现 · 17 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 18 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/xiaoyang-han)
+→ [profile](/researchers/zikui-cai)
 
 ---
-### No. 04 · IGGT4D: Streaming 4D Instance-Grounded Geometry Transformer
+### No. 03 · Mapping Text to Multiplex Graph: Prompt Compression as Lévy Walk-Guided Graph Pruning
 
-**Zhengyu Zou** · 一作 · 10 作者 · [arXiv:2607.19228](https://arxiv.org/abs/2607.19228)
+**Yaxin Gao** · 一作 · 10 作者 · [arXiv:2607.01241](https://arxiv.org/abs/2607.01241)
 
-*流式因果建模统一几何与实例，实现4D动态场景理解。*
+_Existing prompt compression methods treat text as flat token sequences, failing to capture the distributed nature of important information, which is often spread across multiple locations and connected through both loca…_
 
-_Real-world spatial intelligence requires agents to understand scenes from continuous video streams, where objects move, persist, disappear, and reappear over time. While recent spatial foundation models have enabled gen…_
+**▸ 选中原因：首次出现 · 10 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/yaxin-gao)
+
+---
+### No. 04 · Weak-to-Strong On-Policy Distillation
+
+**Fangxu Yu** · 一作 · 7 作者 · [arXiv:2607.26246](https://arxiv.org/abs/2607.26246)
+
+_On-policy distillation (OPD), which aligns a student with the teacher's token-level distribution on the student's own rollouts, is an effective paradigm for transferring capabilities across LLMs. Prevailing approaches a…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/zhengyu-zou)
+→ [profile](/researchers/fangxu-yu)
+
+---
+### No. 05 · VIPER: Visual In-Context Physics Reasoning for Physically Plausible Video Generation
+
+**Tianxiao Chen** · 一作 · 6 作者 · [arXiv:2607.23472](https://arxiv.org/abs/2607.23472)
+
+*用参考视频作物理演示，经MLLM提取线索引导视频生成。*
+
+_Modern video generation models can synthesize visually compelling and temporally coherent clips, yet controlling their physical behavior remains difficult with standard text and image conditions. The core challenge is a…_
+
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+
+→ [profile](/researchers/tianxiao-chen)
 
 ---
 
