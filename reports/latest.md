@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 081                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · MONDAY, AUGUST 3, 2026
+VOL. 1 · NO. 082                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · TUESDAY, AUGUST 4, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 081 · 2026-08-03
+> *All The Researchers Fit To Watch* — Vol. 1, No. 082 · 2026-08-04
 
-_Auto-generated at 2026-08-03T04:50:30+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-08-04T04:22:56+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,124 +15,117 @@ _Auto-generated at 2026-08-03T04:50:30+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **41799** | 156 | 566 | 13 | 88 |
+| **42426** | 159 | 627 | 14 | 88 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · MechMath Agent Team: LLM Driven Agents for Mathematical Research
+### No. 01 · M2Note: Continual Evolution of Vision Language Models via Mistake Notebook Learning
 
-**Yichuan Cao** · 一作 · 8 作者 · [arXiv:2607.04394](https://arxiv.org/abs/2607.04394)
+**Haiwen Li** · 一作 · 5 作者 · [arXiv:2607.00685](https://arxiv.org/abs/2607.00685)
 
-*三元解耦架构驱动多智能体闭环生成形式化数学证明。*
+*用RAG外置错误笔记，免训练持续进化视觉语言模型。*
 
-_AI reasoning has become a central focus in contemporary artificial intelligence, largely driven by the success of large language models. However, mathematical research, which is characterized by non-linear derivation pa…_
+_Vision Language Models (VLMs) have demonstrated remarkable capabilities in multimodal reasoning tasks, yet they still suffer from recurring failures, such as skipping key visual checks, misapplying domain rules, and hal…_
 
-→ [profile](/researchers/yichuan-cao)
-
----
-### No. 02 · How to Build Digital Humans? From Priors to Photorealistic Avatars
-
-**Wojciech Zielonka** · 一作 · 11 作者 · [arXiv:2607.04341](https://arxiv.org/abs/2607.04341)
-
-*三维数字人构建：先验学习到照片级渲染。*
-
-_This state-of-the-art report provides an overview of controllable 3D human avatar creation. We describe current 3D avatar systems, which typically consist of three stages: (i) learning priors of human appearance and mot…_
-
-→ [profile](/researchers/wojciech-zielonka)
+→ [profile](/researchers/haiwen-li)
 
 ---
-### No. 03 · WGDnet: Wishart-guided Geometric-aware Deep Network for PolSAR Image Classification
+### No. 02 · OmniDance: Multimodal Driven Dance Video Generation with Large-scale Internet Data
 
-**Junfei Shi** · 一作 · 4 作者 · [arXiv:2607.23638](https://arxiv.org/abs/2607.23638)
+**Kaixing Yang** · 一作 · 11 作者 · [arXiv:2606.30019](https://arxiv.org/abs/2606.30019)
 
-*可学习Wishart卷积与几何自适应卷积提升PolSAR分类。*
+*构建CIPE-Dance数据集与OmniDance框架实现音乐视频生成。*
 
-_Polarimetric Synthetic Aperture Radar (PolSAR) classification underpins all-weather Earth observation. Conventional Wishart methods depend on rigid handcrafted operators with limited adaptability, while mainstream deep…_
+_Music-driven dance video generation aims to synthesize expressive human motion that is temporally aligned with music while maintaining high visual fidelity. Despite recent progress, existing methods still face two key l…_
 
-→ [profile](/researchers/junfei-shi)
-
----
-### No. 04 · Direction-adaptive Mamba: Spatial-Frequency Dual-Domain Collaborative Learning for PolSAR Image Classification
-
-**Junfei Shi** · 一作 · 6 作者 · [arXiv:2607.23464](https://arxiv.org/abs/2607.23464)
-
-*方向自适应Mamba双域协同，NSCT提取各向异性特征。*
-
-_Deep learning dominates polarimetric synthetic aperture radar (PolSAR) image classification, with Mamba architectures serving as favorable backbones due to linear complexity and strong global modeling capacity. However,…_
-
-→ [profile](/researchers/junfei-shi)
+→ [profile](/researchers/kaixing-yang)
 
 ---
-### No. 05 · TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters
+### No. 03 · Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification
 
-**Zhiwen Mo** · 一作 · 15 作者 · [arXiv:2607.22432](https://arxiv.org/abs/2607.22432)
+**Yunhao Feng** · 一作 · 15 作者 · [arXiv:2607.01793](https://arxiv.org/abs/2607.01793)
 
-*以tile为核心统一建模核内流水、缓存与跨GPU通信。*
+_LLM agents increasingly perform autonomous actions through external tools, leading to complex and evolving safety risks. However, existing safety testing targets expert-designed safety violations, and the corresponding…_
 
-_Recent GPU programming frameworks such as Triton, TileLang, and CUDA Tile adopt tiles as first-class primitives, making tile-centric programming the prevailing approach for high-performance GPU kernels. Performance-anal…_
-
-→ [profile](/researchers/zhiwen-mo)
+→ [profile](/researchers/yunhao-feng)
 
 ---
-### No. 06 · PReM: Learning What to Preserve and When to Refresh for Context Compression
+### No. 04 · UniviewVLA: A Unified Multiview Vision-Language-Action Model with World Modeling
 
-**Bohan Yu** · 一作 · 8 作者 · [arXiv:2607.14327](https://arxiv.org/abs/2607.14327)
+**Tao Xu** · 一作 · 10 作者 · [arXiv:2606.21501](https://arxiv.org/abs/2606.21501)
 
-*用KV记忆层选保留与刷新，压缩长上下文。*
+_Occluded tasks remain a bottleneck in robot manipulation. Existing solutions either deploy additional physical cameras requiring training-inference camera parity, or rely on explicit 3D reconstruction with high computat…_
 
-_Efficient long-context inference is not only about reducing memory cost, but also about keeping useful contextual evidence accessible as generation proceeds. However, existing compression-oriented approaches, such as ke…_
-
-→ [profile](/researchers/bohan-yu)
+→ [profile](/researchers/tao-xu)
 
 ---
-### No. 07 · Bridging Interleaved Multi-Modal Reasoning as a Unified Decision Process
+### No. 05 · BraveGuard: From Open-World Threats to Safer Computer-Use Agents
 
-**Zican Hu** · 一作 · 13 作者 · [arXiv:2607.03748](https://arxiv.org/abs/2607.03748)
+**Yunhao Feng** · 一作 · 16 作者 · [arXiv:2606.01166](https://arxiv.org/abs/2606.01166)
 
-*将交错图文推理统一为MDP，联合优化文本与图像生成。*
+_Computer-use agents extend language models from text generation to sustained interaction with files, terminals, browsers, and external tools. This shift creates safety risks that are difficult to detect from isolated pr…_
 
-_Unified multi-modal models (UMMs) have shown promising interleaved text-image reasoning capabilities, yet effectively optimizing such multi-turn generation via reinforcement learning (RL) remains an open challenge. Exis…_
-
-→ [profile](/researchers/zican-hu)
+→ [profile](/researchers/yunhao-feng)
 
 ---
-### No. 08 · Simulating altermagnets using mumax+
+### No. 06 · SLAP: Stratified Loss-based Pruning for On-Policy Data-Efficient Instruction Tuning
 
-**Lars Moreels** · 一作 · 5 作者 · [arXiv:2604.15454](https://arxiv.org/abs/2604.15454)
+**Run Zou** · 一作 · 6 作者 · [arXiv:2605.23969](https://arxiv.org/abs/2605.23969)
 
-_In this paper, we demonstrate how altermagnets can be simulated in the recently released micromagnetic simulation package mumax+. We have added a new magnet class for d-wave altermagnets and demonstrate how mumax+ is ab…_
+_Instruction tuning has optimized the specialized capabilities of large language models (LLMs), but it often requires extensive datasets and prolonged training times. The challenge lies in developing specific capabilitie…_
 
-→ [profile](/researchers/lars-moreels)
-
----
-### No. 09 · Coercivity-size map of magnetic nanoflowers: spin disorder tunes the vortex reversal mechanism and tailors the hyperthermia sweet spot
-
-**Elizabeth M Jefremovas** · 一作 · 3 作者 · [arXiv:2507.02154](https://arxiv.org/abs/2507.02154)
-
-_Iron-oxide nanoflowers (NFs) are one of the most efficient nanoheaters for magnetic hyperthermia therapy (MHT). However, the physics underlying the spin texture of disordered iron-oxide nanoparticles beyond the single-d…_
-
-→ [profile](/researchers/elizabeth-m-jefremovas-2)
+→ [profile](/researchers/run-zou)
 
 ---
-### No. 10 · mumax+: extensible GPU-accelerated micromagnetics and beyond
+### No. 07 · ChipLight: Cross-Layer Optimization of Chiplet Design with Optical Interconnects for LLM Training
 
-**Lars Moreels** · 一作 · 8 作者 · [arXiv:2411.18194](https://arxiv.org/abs/2411.18194)
+**Kangbo Bai** · 一作 · 4 作者 · [arXiv:2604.18909](https://arxiv.org/abs/2604.18909)
 
-_We present mumax+, an extensible GPU-accelerated micromagnetic simulator with a Python user interface, to address the challenges posed by current magnetism research into systems with complex magnetic ordering and interf…_
+_In large-scale distributed LLM training, communication between devices becomes the key performance bottleneck. Chiplet technology can integrate multiple dies into a package to scale-up node performance with higher bandw…_
 
-→ [profile](/researchers/lars-moreels)
+→ [profile](/researchers/kangbo-bai)
+
+---
+### No. 08 · SkillTrojan: Backdoor Attacks on Skill-Based Agent Systems
+
+**Yunhao Feng** · 一作 · 9 作者 · [arXiv:2604.06811](https://arxiv.org/abs/2604.06811)
+
+_Skill-based agent systems tackle complex tasks by composing reusable skills, improving modularity and scalability while introducing a largely unexamined security attack surface. We propose SkillTrojan, a backdoor attack…_
+
+→ [profile](/researchers/yunhao-feng)
+
+---
+### No. 09 · AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents
+
+**Yunhao Feng** · 一作 · 9 作者 · [arXiv:2604.02947](https://arxiv.org/abs/2604.02947)
+
+_Computer-use agents extend language models from text generation to persistent action over tools, files, and execution environments. Unlike chat systems, they maintain state across interactions and translate intermediate…_
+
+→ [profile](/researchers/yunhao-feng)
+
+---
+### No. 10 · InEdit-Bench: Benchmarking Intermediate Logical Pathways for Intelligent Image Editing Models
+
+**Zhiqiang Sheng** · 一作 · 9 作者 · [arXiv:2603.03657](https://arxiv.org/abs/2603.03657)
+
+_Multimodal generative models have made significant strides in image editing, demonstrating impressive performance on a variety of static tasks. However, their proficiency typically does not extend to complex scenarios r…_
+
+→ [profile](/researchers/zhiqiang-sheng)
 
 ---
 
-## Section B · 🔄 动态更新 · 3 项
+## Section B · 🔄 动态更新 · 6 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Yebin Liu](/researchers/yebin-liu) | How to Build Digital Humans? From Priors to Photorealistic Avatars | — | [2607.04341](https://arxiv.org/abs/2607.04341) |
-| [Jian Tang](/researchers/jian-tang) | Final assessment of radioactive impurities in the JUNO detector | — | [2607.17509](https://arxiv.org/abs/2607.17509) |
-| [Jian Tang](/researchers/jian-tang) | A Low-energy Threshold and Multi-messenger Trigger System for the JUN… | — | [2607.13427](https://arxiv.org/abs/2607.13427) |
+| [Bo Li](/researchers/bo-li-uchicago) | A Safety Report on GPT-5.2, Gemini 3 Pro, Qwen3-VL, Grok 4.1 Fast, Na… | — | [2601.10527](https://arxiv.org/abs/2601.10527) |
+| [Bo Li](/researchers/bo-li-uchicago) | Towards General Auditory Intelligence: Large Multimodal Models for Ma… | — | [2511.01299](https://arxiv.org/abs/2511.01299) |
+| [Bowen Zhou](/researchers/bowen-zhou) | Towards General Auditory Intelligence: Large Multimodal Models for Ma… | — | [2511.01299](https://arxiv.org/abs/2511.01299) |
+| [Shuaicheng Liu](/researchers/shuaicheng-liu) | AIM 2025 challenge on Inverse Tone Mapping Report: Methods and Results | — | [2508.13479](https://arxiv.org/abs/2508.13479) |
+| [Jun Zhu](/researchers/jun-zhu) | WorldExam: Benchmarking World Models from Apparent Appearance to Inhe… | world_models | [2608.02603](https://arxiv.org/abs/2608.02603) |
+| [Sergey Levine](/researchers/sergey-levine) | Why Does Action Chunking Improve Behavioral Cloning Performance in Ro… | embodied | [2608.02547](https://arxiv.org/abs/2608.02547) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -242,106 +235,100 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Final assessment of radioactive impurities in the JUNO detector
+### No. 01 · Towards General Auditory Intelligence: Large Multimodal Models for Machine Listening and Speaking
 
-**Thomas Adam** · 一作 · 572 作者 · [arXiv:2607.17509](https://arxiv.org/abs/2607.17509)
+**Siyin Wang** · 一作 · 29 作者 · [arXiv:2511.01299](https://arxiv.org/abs/2511.01299)
 
-*JUNO探测器放射性杂质终评，本底达标。*
+*综述音频大模型：理解、生成、交互、视听融合。*
 
-_The Jiangmen Underground Neutrino Observatory (JUNO) collaboration has completed the construction of the 20,000-ton liquid scintillator detector and the associated muon veto detector system. To meet the physics objectiv…_
+_In the era of large language models (LLMs) and artificial general intelligence (AGI), computer audition must evolve beyond traditional paradigms to fully leverage the capabilities of foundation models, towards more comp…_
 
-→ [profile](/researchers/thomas-adam)
-
----
-### No. 02 · A Low-energy Threshold and Multi-messenger Trigger System for the JUNO Experiment
-
-**Thomas Adam** · 一作 · 566 作者 · [arXiv:2607.13427](https://arxiv.org/abs/2607.13427)
-
-*低阈值多信使触发系统，实现110keV超新星监测。*
-
-_The Jiangmen Underground Neutrino Observatory (JUNO) is a 20-kiloton liquid scintillator neutrino detector, located 650 meters (1800 m.w.e.) underground in Jiangmen, Guangdong, China. JUNO is primarily designed for reac…_
-
-→ [profile](/researchers/thomas-adam)
+→ [profile](/researchers/siyin-wang)
 
 ---
-### No. 03 · Wan-Streamer v0.2: Higher Resolution, Same Latency
+### No. 02 · AIM 2025 challenge on Inverse Tone Mapping Report: Methods and Results
 
-**Lianghua Huang** · 一作 · 26 作者 · [arXiv:2607.04443](https://arxiv.org/abs/2607.04443)
+**Chao Wang** · 一作 · 28 作者 · [arXiv:2508.13479](https://arxiv.org/abs/2508.13479)
 
-*高分辨率流式交互模型，多GPU上下文并行保延迟。*
+*逆色调映射挑战：PU21-PSNR达29.22dB的HDR重建新基准。*
 
-_We present Wan-Streamer v0.2, a latency-preserving upgrade of the native-streaming, end-to-end audio-visual interaction model. v0.2 keeps the v0.1 modeling formulation, but raises the interactive output stream from 192x…_
+_This paper presents a comprehensive review of the AIM 2025 Challenge on Inverse Tone Mapping (ITM). The challenge aimed to push forward the development of effective ITM algorithms for HDR image reconstruction from singl…_
 
-→ [profile](/researchers/lianghua-huang)
-
----
-### No. 04 · AISPA: User-Centric System Prompt Auditing for Large Language Model Applications
-
-**Xiangning Lin** · 一作 · 26 作者 · [arXiv:2607.28617](https://arxiv.org/abs/2607.28617)
-
-_System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to the public or regula…_
-
-→ [profile](/researchers/xiangning-lin)
+→ [profile](/researchers/chao-wang)
 
 ---
-### No. 05 · One-Step Epitaxial Access to Rhombohedral Graphene Flat-Band States on Step-Bunched SiC
+### No. 03 · A Safety Report on GPT-5.2, Gemini 3 Pro, Qwen3-VL, Grok 4.1 Fast, Nano Banana Pro, and Seedream 4.5
 
-**Hao Zhong** · 一作 · 18 作者 · [arXiv:2607.29022](https://arxiv.org/abs/2607.29022)
+**Xingjun Ma** · 一作 · 21 作者 · [arXiv:2601.10527](https://arxiv.org/abs/2601.10527)
 
-_Rhombohedral graphene multilayers provide a moiré-free platform for correlated and topological flat-band physics, but direct, transfer-free epitaxial access to thickness-tunable multilayers remains limited. Here we repo…_
+*统一协议评测六模型，揭示安全多维失衡与脆弱性。*
 
-→ [profile](/researchers/hao-zhong)
+_The rapid evolution of Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs) has driven major gains in reasoning, perception, and generation across language and vision, yet whether these advances tra…_
 
----
-### No. 06 · TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters
-
-**Zhiwen Mo** · 一作 · 15 作者 · [arXiv:2607.22432](https://arxiv.org/abs/2607.22432)
-
-*以tile为核心统一建模核内流水、缓存与跨GPU通信。*
-
-_Recent GPU programming frameworks such as Triton, TileLang, and CUDA Tile adopt tiles as first-class primitives, making tile-centric programming the prevailing approach for high-performance GPU kernels. Performance-anal…_
-
-→ [profile](/researchers/zhiwen-mo)
+→ [profile](/researchers/xingjun-ma)
 
 ---
-### No. 07 · ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts
+### No. 04 · SyncPlan: Long-Horizon LLM Coordination with Explicit Synchronization and Adaptive Correction
 
-**Mingxin Wang** · 一作 · 15 作者 · [arXiv:2607.28993](https://arxiv.org/abs/2607.28993)
+**Shen You** · 一作 · 20 作者 · [arXiv:2608.01652](https://arxiv.org/abs/2608.01652)
 
-_World Action Models (WAMs) have emerged as a promising paradigm by jointly modeling robot actions and future visual dynamics. However, their reliance on pixel-generative future supervision can entangle action-relevant s…_
+_LLM-based multi-agent coordination faces a fundamental trade-off between efficiency and adaptivity in dynamic environments. Existing approaches typically rely on repeated LLM invocations or multi-round communication to…_
 
-→ [profile](/researchers/mingxin-wang)
-
----
-### No. 08 · Quantum Acoustics Demystifies the Strange Metals
-
-**Eric J. Heller** · 一作 · 14 作者 · [arXiv:2511.01853](https://arxiv.org/abs/2511.01853)
-
-_Phonons have long been thought to be incapable of explaining key phenomena in strange metals, including linear-in-\textit{T} Planckian resistivity from high to very low temperatures. We argue that these conclusions were…_
-
-→ [profile](/researchers/eric-j-heller)
+→ [profile](/researchers/shen-you)
 
 ---
-### No. 09 · Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills
+### No. 05 · Charge Tunable Optical Nonlinearity of Moiré Exciton-Polaritons
 
-**Siyuan Huang** · 一作 · 13 作者 · [arXiv:2607.22529](https://arxiv.org/abs/2607.22529)
+**Zhijie Li** · 一作 · 19 作者 · [arXiv:2608.02165](https://arxiv.org/abs/2608.02165)
 
-*技能自博弈协同进化，强化学习桥接验证与开放探索。*
+_Transition metal dichalcogenides represent a versatile platform to study strong light-matter interactions based on excitons and electrons in ordered lattices. Twist-engineering of moiré structures further enables the ma…_
 
-_LLM training is shifting from manual design and annotation to interaction-driven self-evolution. However, existing self-evolutionary methods face a fundamental dilemma between task diversity and verification reliability…_
-
-→ [profile](/researchers/siyuan-huang)
+→ [profile](/researchers/zhijie-li)
 
 ---
-### No. 10 · xHC: Expanded Hyper-Connections
+### No. 06 · Magnetically tunable symmetry-enforced nodal lines producing huge anomalous Hall conductivity in altermagnetic $α$-MnTe
 
-**Xiangdong Zhang** · 一作 · 13 作者 · [arXiv:2607.14530](https://arxiv.org/abs/2607.14530)
+**Mathews Benny** · 一作 · 18 作者 · [arXiv:2608.02416](https://arxiv.org/abs/2608.02416)
 
-*稀疏残差流扩展至16路，降训练开销。*
+_Altermagnetic $α$-MnTe exhibits huge anomalous Hall conductivity (AHC) up to room-temperature together with weak ferromagnetism arising from spin and orbital polarizations. We clarify the origin of the large value of th…_
 
-_Hyper-Connections (HC) expand the residual stream of Transformers into $N$ parallel streams, providing a form of memory scaling beyond model width and depth. Manifold-Constrained HC (mHC) stabilizes this formulation at…_
+→ [profile](/researchers/mathews-benny)
 
-→ [profile](/researchers/xiangdong-zhang)
+---
+### No. 07 · Exciton-induced magnons carrying orbital angular momentum in CrI3
+
+**Martin Pavelka** · 一作 · 18 作者 · [arXiv:2608.02010](https://arxiv.org/abs/2608.02010)
+
+_Magnons are collective spin excitations that contain and transport spin angular momentum in magnetic materials. It has been suggested that they can also carry orbital angular momentum in analogy to the electronic motion…_
+
+→ [profile](/researchers/martin-pavelka)
+
+---
+### No. 08 · Resonantly-enhanced Raman response in graphene-capped bismuthene on SiC
+
+**Lukas Gehrig** · 一作 · 18 作者 · [arXiv:2608.01961](https://arxiv.org/abs/2608.01961)
+
+_Two-dimensional quantum spin Hall insulators based on atomic monolayers offer a promising route toward dissipationless electronics, yet their practical use is often limited by environmental instability. Encapsulating th…_
+
+→ [profile](/researchers/lukas-gehrig)
+
+---
+### No. 09 · BraveGuard: From Open-World Threats to Safer Computer-Use Agents
+
+**Yunhao Feng** · 一作 · 16 作者 · [arXiv:2606.01166](https://arxiv.org/abs/2606.01166)
+
+_Computer-use agents extend language models from text generation to sustained interaction with files, terminals, browsers, and external tools. This shift creates safety risks that are difficult to detect from isolated pr…_
+
+→ [profile](/researchers/yunhao-feng)
+
+---
+### No. 10 · WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity
+
+**Yuxue Yang** · 一作 · 16 作者 · [arXiv:2608.02603](https://arxiv.org/abs/2608.02603)
+
+_Controllable video generation models are increasingly being developed as world models. Accordingly, evaluating them in this role extends beyond the apparent appearance of generated videos to the inherent reactivity of t…_
+
+→ [profile](/researchers/yuxue-yang)
 
 ---
 
@@ -351,63 +338,59 @@ _Hyper-Connections (HC) expand the residual stream of Transformers into $N$ para
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · AISPA: User-Centric System Prompt Auditing for Large Language Model Applications
+### No. 01 · SyncPlan: Long-Horizon LLM Coordination with Explicit Synchronization and Adaptive Correction
 
-**Xiangning Lin** · 一作 · 26 作者 · [arXiv:2607.28617](https://arxiv.org/abs/2607.28617)
+**Shen You** · 一作 · 20 作者 · [arXiv:2608.01652](https://arxiv.org/abs/2608.01652)
 
-_System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to the public or regula…_
+_LLM-based multi-agent coordination faces a fundamental trade-off between efficiency and adaptivity in dynamic environments. Existing approaches typically rely on repeated LLM invocations or multi-round communication to…_
 
-**▸ 选中原因：首次出现 · 26 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 20 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/xiangning-lin)
+→ [profile](/researchers/shen-you)
 
 ---
-### No. 02 · One-Step Epitaxial Access to Rhombohedral Graphene Flat-Band States on Step-Bunched SiC
+### No. 02 · Exciton-induced magnons carrying orbital angular momentum in CrI3
 
-**Hao Zhong** · 一作 · 18 作者 · [arXiv:2607.29022](https://arxiv.org/abs/2607.29022)
+**Martin Pavelka** · 一作 · 18 作者 · [arXiv:2608.02010](https://arxiv.org/abs/2608.02010)
 
-_Rhombohedral graphene multilayers provide a moiré-free platform for correlated and topological flat-band physics, but direct, transfer-free epitaxial access to thickness-tunable multilayers remains limited. Here we repo…_
+_Magnons are collective spin excitations that contain and transport spin angular momentum in magnetic materials. It has been suggested that they can also carry orbital angular momentum in analogy to the electronic motion…_
 
 **▸ 选中原因：首次出现 · 18 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/hao-zhong)
+→ [profile](/researchers/martin-pavelka)
 
 ---
-### No. 03 · TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters
+### No. 03 · Resonantly-enhanced Raman response in graphene-capped bismuthene on SiC
 
-**Zhiwen Mo** · 一作 · 15 作者 · [arXiv:2607.22432](https://arxiv.org/abs/2607.22432)
+**Lukas Gehrig** · 一作 · 18 作者 · [arXiv:2608.01961](https://arxiv.org/abs/2608.01961)
 
-*以tile为核心统一建模核内流水、缓存与跨GPU通信。*
+_Two-dimensional quantum spin Hall insulators based on atomic monolayers offer a promising route toward dissipationless electronics, yet their practical use is often limited by environmental instability. Encapsulating th…_
 
-_Recent GPU programming frameworks such as Triton, TileLang, and CUDA Tile adopt tiles as first-class primitives, making tile-centric programming the prevailing approach for high-performance GPU kernels. Performance-anal…_
+**▸ 选中原因：首次出现 · 18 作者合作（疑似大组新人）**
 
-**▸ 选中原因：首次出现 · 15 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/zhiwen-mo)
+→ [profile](/researchers/lukas-gehrig)
 
 ---
-### No. 04 · How to Build Digital Humans? From Priors to Photorealistic Avatars
+### No. 04 · Why Does Action Chunking Improve Behavioral Cloning Performance in Robotic Control?
 
-**Wojciech Zielonka** · 一作 · 11 作者 · [arXiv:2607.04341](https://arxiv.org/abs/2607.04341)
+**Filippo Lazzati** · 一作 · 6 作者 · [arXiv:2608.02547](https://arxiv.org/abs/2608.02547)
 
-*三维数字人构建：先验学习到照片级渲染。*
-
-_This state-of-the-art report provides an overview of controllable 3D human avatar creation. We describe current 3D avatar systems, which typically consist of three stages: (i) learning priors of human appearance and mot…_
+_Action chunking---predicting and executing multiple actions instead of a single action---has proven to be a critical component for learning effective robotic control policies. However, our precise understanding of why a…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/wojciech-zielonka)
+→ [profile](/researchers/filippo-lazzati)
 
 ---
-### No. 05 · BWM: A Low-Cost High-Fidelity World Simulator for Robot Learning
+### No. 05 · WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity
 
-**BWM Team** · 一作 · 1 作者 · [arXiv:2607.29302](https://arxiv.org/abs/2607.29302)
+**Yuxue Yang** · 一作 · 16 作者 · [arXiv:2608.02603](https://arxiv.org/abs/2608.02603)
 
-_Reliable robot learning requires a world simulator that can predict action consequences before execution on physical hardware, including risky and failure-prone outcomes. Existing physics simulators require substantial…_
+_Controllable video generation models are increasingly being developed as world models. Accordingly, evaluating them in this role extends beyond the apparent appearance of generated videos to the inherent reactivity of t…_
 
-**▸ 选中原因：首次出现 · 跨 2 个主题（potential 跨界）**
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/bwm-team)
+→ [profile](/researchers/yuxue-yang)
 
 ---
 
