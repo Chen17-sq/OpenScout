@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 083                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · WEDNESDAY, AUGUST 5, 2026
+VOL. 1 · NO. 086                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, AUGUST 8, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 083 · 2026-08-05
+> *All The Researchers Fit To Watch* — Vol. 1, No. 086 · 2026-08-08
 
-_Auto-generated at 2026-08-05T04:14:01+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-08-08T03:16:06+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,106 +15,120 @@ _Auto-generated at 2026-08-05T04:14:01+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **42939** | 109 | 513 | 14 | 88 |
+| **43909** | 180 | 970 | 14 | 91 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · AgentSociety 2: An Integrated Research Environment for Executable Social Science
+### No. 01 · Illumination Estimation Challenge: experience of past two years
 
-**Jinghua Piao** · 一作 · 19 作者 · [arXiv:2607.11895](https://arxiv.org/abs/2607.11895)
+**Egor Ershov** · 一作 · 18 作者 · [arXiv:2012.15779](https://arxiv.org/abs/2012.15779)
 
-*耦合双角色LLM智能体，实现端到端可执行社会科学研究。*
+*举办IEC#2挑战赛，提供5000张同传感器图像及手动标注。*
 
-_AI scientist systems are beginning to automate parts of scientific research, but social science poses a distinct challenge: its objects of inquiry are not merely datasets or laboratory protocols, but integrated social p…_
+_Illumination estimation is the essential step of computational color constancy, one of the core parts of various image processing pipelines of modern digital cameras. Having an accurate and reliable illumination estimat…_
 
-→ [profile](/researchers/jinghua-piao)
-
----
-### No. 02 · Qwen-Audio-3.0-Gen-Preview Technical Report
-
-**Junyu Dai** · 一作 · 17 作者 · [arXiv:2607.27011](https://arxiv.org/abs/2607.27011)
-
-*用DiT和共享VAE统一生成多轨时序音频波形。*
-
-_Existing single-domain and multi-task audio systems remain limited in directly organizing heterogeneous audio components, ambience, and multiple roles into long-form temporal scenes. We present Qwen-Audio-3.0-Gen-Previe…_
-
-→ [profile](/researchers/junyu-dai)
+→ [profile](/researchers/egor-ershov)
 
 ---
-### No. 03 · Pushing the Frontier of Full-Song Generation: Hierarchical Autoregressive Planning Meets Flow-Matching Rendering
+### No. 02 · The Cube++ Illumination Estimation Dataset
 
-**Junyu Dai** · 一作 · 17 作者 · [arXiv:2607.20253](https://arxiv.org/abs/2607.20253)
+**Egor Ershov** · 一作 · 9 作者 · [arXiv:2011.10028](https://arxiv.org/abs/2011.10028)
 
-*分层自回归规划与流匹配渲染统一全曲生成。*
+*构建含双光照真值的Cube++数据集，支持单双光源估计。*
 
-_In this report, we present a unified song generation framework capable of producing high-quality full-length music from lyrics, text descriptions, and musical attributes. The proposed framework supports three tasks: Lyr…_
+_Computational color constancy has the important task of reducing the influence of the scene illumination on the object colors. As such, it is an essential part of the image processing pipelines of most digital cameras.…_
 
-→ [profile](/researchers/junyu-dai)
-
----
-### No. 04 · A table-top few-femtosecond broadband extreme-ultraviolet absorption spectrometer with cryogenic cooling
-
-**Sheng-Chih Lin** · 一作 · 8 作者 · [arXiv:2608.03955](https://arxiv.org/abs/2608.03955)
-
-_We present a table-top cryogenic ultrafast broadband XUV absorption spectroscopy (c-UBXAS) beamline designed for temperature-dependent and time-resolved investigations of quantum materials. The instrument combines a bro…_
-
-→ [profile](/researchers/sheng-chih-lin)
+→ [profile](/researchers/egor-ershov)
 
 ---
-### No. 05 · Emergence of Chiral Helimagnetic Order in Chromium-intercalated Tantalum Disulfide CrTa$_3$S$_6$ Powders with Controlled Intercalation
+### No. 03 · Lipsum-FT: Robust Fine-Tuning of Zero-Shot Models Using Random Text Guidance
 
-**Ayaka Toshima** · 一作 · 6 作者 · [arXiv:2608.03953](https://arxiv.org/abs/2608.03953)
+**Giung Nam** · 一作 · 3 作者 · [arXiv:2404.00860](https://arxiv.org/abs/2404.00860)
 
-_We report a highly sensitive change in magnetic properties of a chiral Cr-intercalated transition-metal dichalcogenide Cr$_{x}$Ta$_{3}$S$_{6}$. Magnetization curves and small-angle neutron scattering data revealed that…_
+*用随机文本引导微调，保零样本鲁棒性。*
 
-→ [profile](/researchers/ayaka-toshima)
+_Large-scale contrastive vision-language pre-trained models provide the zero-shot model achieving competitive performance across a range of image classification tasks without requiring training on downstream data. Recent…_
 
----
-### No. 06 · Understanding and Designing Phase Change Materials: Insights from Atom Probe Tomography
-
-**Jan Köttgen** · 一作 · 4 作者 · [arXiv:2608.03932](https://arxiv.org/abs/2608.03932)
-
-_Phase Change Materials (PCMs) can be rapidly and reversibly switched between their amorphous and crystalline state; a transition which is accompanied by a pronounced change of optoelectronic properties. Here progress is…_
-
-→ [profile](/researchers/jan-k-ttgen)
+→ [profile](/researchers/giung-nam)
 
 ---
-### No. 07 · A variational hybrid continuous-variable discrete-variable quantum algorithm for adiabatic nuclear dynamics
+### No. 04 · Rotary Position Embedding for Vision Transformer
 
-**Rami Gherib** · 一作 · 8 作者 · [arXiv:2608.03907](https://arxiv.org/abs/2608.03907)
+**Byeongho Heo** · 一作 · 4 作者 · [arXiv:2403.13298](https://arxiv.org/abs/2403.13298)
 
-_Gaussian wavepacket (GWP) methods are prevalent means of solving the nuclear time-dependent Schrodinger equation (TDSE) on classical computers. They consist of representing the nuclear wave function as a superposition o…_
+*将RoPE扩展至2D视觉，提升ViT外推与下游任务性能。*
 
-→ [profile](/researchers/rami-gherib)
+_Rotary Position Embedding (RoPE) performs remarkably on language models, especially for length extrapolation of Transformers. However, the impacts of RoPE on computer vision domains have been underexplored, even though…_
 
----
-### No. 08 · Phonon-based determination of elastic coefficients in the Weyl semimetal TaAs
-
-**Fabián Jofré-Parra** · 一作 · 3 作者 · [arXiv:2608.03903](https://arxiv.org/abs/2608.03903)
-
-_Reliable determination of elastic properties in topological semimetals is essential for understanding strain-related effects, but is often hindered by methodological and computational limitations. In this work, we combi…_
-
-→ [profile](/researchers/fabi-n-jofr-parra)
+→ [profile](/researchers/byeongho-heo)
 
 ---
-### No. 09 · Optical centers in cubic boron nitride and diamond: remarkable similarities
+### No. 05 · SeiT++: Masked Token Modeling Improves Storage-efficient Training
 
-**Konstantin Iakoubovskiia** · 一作 · 4 作者 · [arXiv:2608.03901](https://arxiv.org/abs/2608.03901)
+**Minhyun Lee** · 一作 · 5 作者 · [arXiv:2312.10105](https://arxiv.org/abs/2312.10105)
 
-_We present a comparative study of optical absorption and luminescence from cubic boron nitride (cBN) and diamond grown by the high-pressure high-temperature technique in the same cubic press. We note remarkable similari…_
+*用掩码令牌建模扩展SeiT，自监督训练降存储。*
 
-→ [profile](/researchers/konstantin-iakoubovskiia)
+_Recent advancements in Deep Neural Network (DNN) models have significantly improved performance across computer vision tasks. However, achieving highly generalizable and high-performing vision models requires expansive…_
+
+→ [profile](/researchers/minhyun-lee)
 
 ---
-### No. 10 · High-Order Response Functions with Duschinsky Coupling and Finite Temperature: Application to Two-Dimensional Resonance Raman Spectroscopy
+### No. 06 · Match me if you can: Semi-Supervised Semantic Correspondence Learning with Unpaired Images
 
-**Luca Nils Philipp** · 一作 · 2 作者 · [arXiv:2608.03879](https://arxiv.org/abs/2608.03879)
+**Jiwon Kim** · 一作 · 5 作者 · [arXiv:2311.18540](https://arxiv.org/abs/2311.18540)
 
-_In this work, we derive closed-form expressions for multi-time correlation functions underlying higher-order nonlinear spectroscopic response functions within the harmonic approximation. Our method includes displacement…_
+*机器标注稠密关键点，半监督提升语义对应学习。*
 
-→ [profile](/researchers/luca-nils-philipp)
+_Semantic correspondence methods have advanced to obtaining high-quality correspondences employing complicated networks, aiming to maximize the model capacity. However, despite the performance improvements, they may rema…_
+
+→ [profile](/researchers/jiwon-kim)
+
+---
+### No. 07 · Masking meets Supervision: A Strong Learning Alliance
+
+**Byeongho Heo** · 一作 · 4 作者 · [arXiv:2306.11339](https://arxiv.org/abs/2306.11339)
+
+*掩码子分支结合自蒸馏损失稳定监督训练。*
+
+_Pre-training with random masked inputs has emerged as a novel trend in self-supervised training. However, supervised learning still faces a challenge in adopting masking augmentations, primarily due to unstable training…_
+
+→ [profile](/researchers/byeongho-heo)
+
+---
+### No. 08 · What Do Self-Supervised Vision Transformers Learn?
+
+**Namuk Park** · 一作 · 5 作者 · [arXiv:2305.00729](https://arxiv.org/abs/2305.00729)
+
+*对比学习与掩码图像建模互补，ViT表征各具优势。*
+
+_We present a comparative study on how and why contrastive learning (CL) and masked image modeling (MIM) differ in their representations and in their performance of downstream tasks. In particular, we demonstrate that se…_
+
+→ [profile](/researchers/namuk-park)
+
+---
+### No. 09 · SeiT: Storage-Efficient Vision Training with Tokens Using 1% of Pixel Storage
+
+**Song Park** · 一作 · 5 作者 · [arXiv:2303.11114](https://arxiv.org/abs/2303.11114)
+
+*用1%存储的1024 tokens替代像素训练视觉模型。*
+
+_We need billion-scale images to achieve more generalizable and ground-breaking vision models, as well as massive dataset storage to ship the images (e.g., the LAION-4B dataset needs 240TB storage space). However, it has…_
+
+→ [profile](/researchers/song-park)
+
+---
+### No. 10 · Similarity of Neural Architectures using Adversarial Attack Transferability
+
+**Jaehui Hwang** · 一作 · 6 作者 · [arXiv:2210.11407](https://arxiv.org/abs/2210.11407)
+
+*用对抗攻击迁移性量化神经网络架构相似度。*
+
+_In recent years, many deep neural architectures have been developed for image classification. Whether they are similar or dissimilar and what factors contribute to their (dis)similarities remains curious. To address thi…_
+
+→ [profile](/researchers/jaehui-hwang)
 
 ---
 
@@ -122,9 +136,9 @@ _In this work, we derive closed-form expressions for multi-time correlation func
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Cewu Lu](/researchers/cewu-lu) | Track4Action: Distilling World-Centric 3D Tracker into Vision-Languag… | embodied | [2608.03727](https://arxiv.org/abs/2608.03727) |
-| [Cewu Lu](/researchers/cewu-lu) | Tired Actor: Fatigue-Informed Character Control | embodied | [2608.03528](https://arxiv.org/abs/2608.03528) |
-| [He Wang](/researchers/he-wang) | PACE: Adaptive Budget Allocation for Time-Efficient Embodied Planning | embodied | [2608.03034](https://arxiv.org/abs/2608.03034) |
+| [Sherry Yang](/researchers/sherry-yang) | Generative Hierarchical Materials Search | — | [None](#) |
+| [Igor Mordatch](/researchers/igor-mordatch) | Generative Hierarchical Materials Search | — | [None](#) |
+| [Chunhua Shen](/researchers/chunhua-shen) | GAUGE: A Measurement-Grounded Benchmark for Physical Fidelity in Simu… | embodied, world_models | [2608.05948](https://arxiv.org/abs/2608.05948) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -234,170 +248,140 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · PhyAI: Real-Time Physical AI at the Edge, Scalable Rollouts in the Cloud
+### No. 01 · HyperCLOVA X Technical Report
 
-**Chenghua Wang** · 一作 · 22 作者 · [arXiv:2608.03682](https://arxiv.org/abs/2608.03682)
+**Kang Min Yoo** · 一作 · 396 作者 · [arXiv:2404.01954](https://arxiv.org/abs/2404.01954)
 
-_Physical AI policies require inference throughout their lifecycle, including model evaluation, cloud reinforcement learning rollout, edge GPU serving, and onboard deployment. Although these settings share the same check…_
+*韩语定制大模型HyperCLOVA X，双语推理与文化适配。*
 
-→ [profile](/researchers/chenghua-wang)
+_We introduce HyperCLOVA X, a family of large language models (LLMs) tailored to the Korean language and culture, along with competitive capabilities in English, math, and coding. HyperCLOVA X was trained on a balanced m…_
 
----
-### No. 02 · Vector-field control and emergent basal-plane anisotropy of magnetic textures in noncentrosymmetric (Fe$_{0.63}$Ni$_{0.3}$Pd$_{0.07}$)$_3$P
-
-**Victor Ukleev** · 一作 · 20 作者 · [arXiv:2608.03513](https://arxiv.org/abs/2608.03513)
-
-_(Fe$_{0.63}$Ni$_{0.3}$Pd$_{0.07}$)$_3$P is a room-temperature magnet with $S_4$ symmetry that hosts a rich variety of topological spin textures. Here, we report a combined resonant small-angle x-ray scattering and ptych…_
-
-→ [profile](/researchers/victor-ukleev)
+→ [profile](/researchers/kang-min-yoo)
 
 ---
-### No. 03 · Pressure induced magnetic-field-free superconducting diode effect in NbSe2 flake
+### No. 02 · X-ray Driven Trihydrogen Formation on Silica Nanosurfaces
 
-**Shihao Zhu** · 一作 · 20 作者 · [arXiv:2608.03072](https://arxiv.org/abs/2608.03072)
+**Samuel Sahel-Schackis** · 一作 · 32 作者 · [arXiv:2608.05590](https://arxiv.org/abs/2608.05590)
 
-*压力诱导NbSe2零场超导二极管效应，破缺反演对称。*
+_The trihydrogen cation ($\mathrm{H_3^+}$) initiates the ion-molecule reactions that build molecular complexity in interstellar space. Whether its canonical formation reaction, $\mathrm{H_2^+ + H_2 \rightarrow H_3^+ + H}…_
 
-_The superconducting diode effect (SDE) is a fascinating nonreciprocal phenomenon where the critical current is different for opposite current directions. It is widely believed that realizing SDE requires breaking both i…_
-
-→ [profile](/researchers/shihao-zhu)
+→ [profile](/researchers/samuel-sahel-schackis)
 
 ---
-### No. 04 · Quo Vadis, World Modeling?
+### No. 03 · OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models
 
-**Yu Yang** · 一作 · 20 作者 · [arXiv:2608.02713](https://arxiv.org/abs/2608.02713)
+**Qiushi Sun** · 一作 · 23 作者 · [arXiv:2607.28609](https://arxiv.org/abs/2607.28609)
 
-_Continually improving agents require dynamic interaction feedback beyond static supervision, yet direct real-environment interaction is costly, slow, unsafe, and hard to parallelize. World modeling offers a natural inte…_
+_Computer-using agents (CUAs) are advancing rapidly across the digital world. A CUA trajectory records the agent's actions, states, and reasoning. Verifying whether it fulfilled the task instruction is central to CUA eva…_
 
-→ [profile](/researchers/yu-yang)
-
----
-### No. 05 · AgentSociety 2: An Integrated Research Environment for Executable Social Science
-
-**Jinghua Piao** · 一作 · 19 作者 · [arXiv:2607.11895](https://arxiv.org/abs/2607.11895)
-
-*耦合双角色LLM智能体，实现端到端可执行社会科学研究。*
-
-_AI scientist systems are beginning to automate parts of scientific research, but social science poses a distinct challenge: its objects of inquiry are not merely datasets or laboratory protocols, but integrated social p…_
-
-→ [profile](/researchers/jinghua-piao)
+→ [profile](/researchers/qiushi-sun)
 
 ---
-### No. 06 · Qwen-Audio-3.0-Gen-Preview Technical Report
+### No. 04 · Illumination Estimation Challenge: experience of past two years
 
-**Junyu Dai** · 一作 · 17 作者 · [arXiv:2607.27011](https://arxiv.org/abs/2607.27011)
+**Egor Ershov** · 一作 · 18 作者 · [arXiv:2012.15779](https://arxiv.org/abs/2012.15779)
 
-*用DiT和共享VAE统一生成多轨时序音频波形。*
+*举办IEC#2挑战赛，提供5000张同传感器图像及手动标注。*
 
-_Existing single-domain and multi-task audio systems remain limited in directly organizing heterogeneous audio components, ambience, and multiple roles into long-form temporal scenes. We present Qwen-Audio-3.0-Gen-Previe…_
+_Illumination estimation is the essential step of computational color constancy, one of the core parts of various image processing pipelines of modern digital cameras. Having an accurate and reliable illumination estimat…_
 
-→ [profile](/researchers/junyu-dai)
-
----
-### No. 07 · Pushing the Frontier of Full-Song Generation: Hierarchical Autoregressive Planning Meets Flow-Matching Rendering
-
-**Junyu Dai** · 一作 · 17 作者 · [arXiv:2607.20253](https://arxiv.org/abs/2607.20253)
-
-*分层自回归规划与流匹配渲染统一全曲生成。*
-
-_In this report, we present a unified song generation framework capable of producing high-quality full-length music from lyrics, text descriptions, and musical attributes. The proposed framework supports three tasks: Lyr…_
-
-→ [profile](/researchers/junyu-dai)
+→ [profile](/researchers/egor-ershov)
 
 ---
-### No. 08 · Pressure-induced Superconductivity in Thermoelectric Semiconductor Mg3Sb2
+### No. 05 · SkillRise: Agentic Reinforcement Learning for Cross-Task Skill Evolution
 
-**Cuiying Pei** · 一作 · 17 作者 · [arXiv:2608.03058](https://arxiv.org/abs/2608.03058)
+**Zhiyuan Yao** · 一作 · 16 作者 · [arXiv:2607.26784](https://arxiv.org/abs/2607.26784)
 
-*发现热电半导体Mg3Sb2高压超导及结构相变。*
+_Large language model agents often encounter related yet distinct tasks that share reusable solution patterns. Yet standard agentic reinforcement learning treats tasks as independent episodes, while existing approaches t…_
 
-_The intrinsic electronic structures of narrow bandgap thermoelectric (TE) materials serve as a platform for the investigation of coupling effects of quasi-particles under high pressure, enabling the exploration of emerg…_
-
-→ [profile](/researchers/cuiying-pei)
+→ [profile](/researchers/zhiyuan-yao)
 
 ---
-### No. 09 · PACE: Adaptive Budget Allocation for Time-Efficient Embodied Planning
+### No. 06 · DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation
 
-**Yuchen Huang** · 一作 · 17 作者 · [arXiv:2608.03034](https://arxiv.org/abs/2608.03034)
+**Junfeng Li** · 一作 · 15 作者 · [arXiv:2608.06374](https://arxiv.org/abs/2608.06374)
 
-_Reasoning-enhanced large language models have achieved remarkable improvements in planning tasks, yet their deployment in embodied systems remains impractical due to prohibitive inference delays-often exceeding minutes…_
+_Vision-Language-Action (VLA) models have become a powerful paradigm for robot manipulation, but training a single generalist policy for heterogeneous robot embodiments remains an open problem. Existing methods have two…_
 
-→ [profile](/researchers/yuchen-huang)
+→ [profile](/researchers/junfeng-li)
 
 ---
-### No. 10 · Alloy engineering of excitonic properties in TMD monolayers
+### No. 07 · GAUGE: A Measurement-Grounded Benchmark for Physical Fidelity in Simulation Engines and Video World Models
 
-**Eirini Katsipoulaki** · 一作 · 15 作者 · [arXiv:2608.03347](https://arxiv.org/abs/2608.03347)
+**Shuai Wang** · 一作 · 15 作者 · [arXiv:2608.05948](https://arxiv.org/abs/2608.05948)
 
-_We investigate monolayer MoS$_{2x}$Se$_{2(1-x)}$ alloys across the full composition range using optical spectroscopy. We demonstrate continuous tuning of the optical gap over $\sim$0.35 eV, accompanied by a systematic r…_
+_Physics engines facilitate large-scale training and evaluation for embodied intelligence, while generative video world models are emerging as implicit simulators of future states and interactions. However, existing eval…_
 
-→ [profile](/researchers/eirini-katsipoulaki)
+→ [profile](/researchers/shuai-wang)
+
+---
+### No. 08 · Robust-WAM: Bridging Generative Pretraining and Semantic Foresight in World-Action Models
+
+**Haodong Yan** · 一作 · 15 作者 · [arXiv:2608.05903](https://arxiv.org/abs/2608.05903)
+
+_Mainstream World-Action Models (WAMs) adapt pretrained video generation models (VGMs) for robot control, transferring their learned dynamics prior for action prediction. These VGMs are typically trained in a variational…_
+
+→ [profile](/researchers/haodong-yan)
+
+---
+### No. 09 · ContextMaster: Interactive Multi-Shot Video Creation via Fixed-Budget Sparse Context Routing
+
+**Xu Guo** · 一作 · 14 作者 · [arXiv:2608.04956](https://arxiv.org/abs/2608.04956)
+
+_Recent video models increasingly support generation, reference conditioning, and editing within a single model, yet typically expose them as separate operations over fixed inputs. Practical creation unfolds across multi…_
+
+→ [profile](/researchers/xu-guo)
+
+---
+### No. 10 · DataSpace: Benchmarking Data Agents for Verifiable Analytics over Heterogeneous Workspaces
+
+**Boyan Li** · 一作 · 14 作者 · [arXiv:2608.03451](https://arxiv.org/abs/2608.03451)
+
+_Data agents enable natural-language analytics over organizational workspaces, where relevant evidence may be scattered across databases, structured files, long documents, and multimedia. Existing benchmarks largely isol…_
+
+→ [profile](/researchers/boyan-li)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 5 个
+## Section F · 🌙 Sleeper Picks · 3 个
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · PhyAI: Real-Time Physical AI at the Edge, Scalable Rollouts in the Cloud
+### No. 01 · X-ray Driven Trihydrogen Formation on Silica Nanosurfaces
 
-**Chenghua Wang** · 一作 · 22 作者 · [arXiv:2608.03682](https://arxiv.org/abs/2608.03682)
+**Samuel Sahel-Schackis** · 一作 · 32 作者 · [arXiv:2608.05590](https://arxiv.org/abs/2608.05590)
 
-_Physical AI policies require inference throughout their lifecycle, including model evaluation, cloud reinforcement learning rollout, edge GPU serving, and onboard deployment. Although these settings share the same check…_
+_The trihydrogen cation ($\mathrm{H_3^+}$) initiates the ion-molecule reactions that build molecular complexity in interstellar space. Whether its canonical formation reaction, $\mathrm{H_2^+ + H_2 \rightarrow H_3^+ + H}…_
 
-**▸ 选中原因：首次出现 · 22 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 32 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/chenghua-wang)
-
----
-### No. 02 · Pressure induced magnetic-field-free superconducting diode effect in NbSe2 flake
-
-**Shihao Zhu** · 一作 · 20 作者 · [arXiv:2608.03072](https://arxiv.org/abs/2608.03072)
-
-*压力诱导NbSe2零场超导二极管效应，破缺反演对称。*
-
-_The superconducting diode effect (SDE) is a fascinating nonreciprocal phenomenon where the critical current is different for opposite current directions. It is widely believed that realizing SDE requires breaking both i…_
-
-**▸ 选中原因：首次出现 · 20 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/shihao-zhu)
+→ [profile](/researchers/samuel-sahel-schackis)
 
 ---
-### No. 03 · AgentSociety 2: An Integrated Research Environment for Executable Social Science
+### No. 02 · Illumination Estimation Challenge: experience of past two years
 
-**Jinghua Piao** · 一作 · 19 作者 · [arXiv:2607.11895](https://arxiv.org/abs/2607.11895)
+**Egor Ershov** · 一作 · 18 作者 · [arXiv:2012.15779](https://arxiv.org/abs/2012.15779)
 
-*耦合双角色LLM智能体，实现端到端可执行社会科学研究。*
+*举办IEC#2挑战赛，提供5000张同传感器图像及手动标注。*
 
-_AI scientist systems are beginning to automate parts of scientific research, but social science poses a distinct challenge: its objects of inquiry are not merely datasets or laboratory protocols, but integrated social p…_
+_Illumination estimation is the essential step of computational color constancy, one of the core parts of various image processing pipelines of modern digital cameras. Having an accurate and reliable illumination estimat…_
 
-**▸ 选中原因：首次出现 · 19 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 18 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/jinghua-piao)
-
----
-### No. 04 · Tired Actor: Fatigue-Informed Character Control
-
-**Shengyuan Zhang** · 一作 · 8 作者 · [arXiv:2608.03528](https://arxiv.org/abs/2608.03528)
-
-_Replicating human behavior with physics simulation has been a long-expected goal in character animation. Existing efforts have achieved impressive performance in imitating a wide span of general motions. However, most e…_
-
-**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
-
-→ [profile](/researchers/shengyuan-zhang)
+→ [profile](/researchers/egor-ershov)
 
 ---
-### No. 05 · PACE: Adaptive Budget Allocation for Time-Efficient Embodied Planning
+### No. 03 · DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation
 
-**Yuchen Huang** · 一作 · 17 作者 · [arXiv:2608.03034](https://arxiv.org/abs/2608.03034)
+**Junfeng Li** · 一作 · 15 作者 · [arXiv:2608.06374](https://arxiv.org/abs/2608.06374)
 
-_Reasoning-enhanced large language models have achieved remarkable improvements in planning tasks, yet their deployment in embodied systems remains impractical due to prohibitive inference delays-often exceeding minutes…_
+_Vision-Language-Action (VLA) models have become a powerful paradigm for robot manipulation, but training a single generalist policy for heterogeneous robot embodiments remains an open problem. Existing methods have two…_
 
-**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+**▸ 选中原因：首次出现 · 15 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/yuchen-huang)
+→ [profile](/researchers/junfeng-li)
 
 ---
 
