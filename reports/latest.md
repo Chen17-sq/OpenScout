@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 098                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · THURSDAY, AUGUST 20, 2026
+VOL. 1 · NO. 099                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · FRIDAY, AUGUST 21, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 098 · 2026-08-20
+> *All The Researchers Fit To Watch* — Vol. 1, No. 099 · 2026-08-21
 
-_Auto-generated at 2026-08-20T02:37:13+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-08-21T02:40:57+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,129 +15,124 @@ _Auto-generated at 2026-08-20T02:37:13+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **44892** | 264 | 983 | 14 | 91 |
+| **45618** | 189 | 726 | 14 | 91 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · P2Fusion: Prompt-based Progressive Infrared-Visible Image Fusion via Dual-Prior Distillation
+### No. 01 · Observation of quantum nonclassicality without freedom of choice in a minimal causal network
 
-**Yi Shi** · 一作 · 10 作者 · [arXiv:2608.13045](https://arxiv.org/abs/2608.13045)
+**Ya Xiao** · 一作 · 9 作者 · [arXiv:2608.03552](https://arxiv.org/abs/2608.03552)
 
-*双内禀先验蒸馏与门控动态专家校准的渐进融合。*
+*最小无选择自由因果网络中实现量子非经典性验证。*
 
-_Infrared-visible image fusion (IVIF) is pivotal for multimodal perception, yet reconciling the inherent information disparity between thermal and textural features remains a fundamental challenge. Existing prior-guided…_
+_Quantum causal networks enable tests of nonclassicality beyond Bell nonlocality while relaxing some physically unwarranted assumptions. By relaxing the freedom-of-choice and spacelike-separation assumptions, the unrelat…_
 
-→ [profile](/researchers/yi-shi)
-
----
-### No. 02 · VADER: Adaptive Debiasing for Hallucination Mitigation in Video Large Language Models
-
-**Dong Xing** · 一作 · 6 作者 · [arXiv:2608.08622](https://arxiv.org/abs/2608.08622)
-
-*自适应证据重加权与选择性擦除，缓解视频大模型幻觉。*
-
-_Large vision-language models (LVLMs) have demonstrated strong performance in open-ended video understanding, yet they remain prone to fluent responses unsupported by video evidence. Existing training-free methods typica…_
-
-→ [profile](/researchers/dong-xing)
+→ [profile](/researchers/ya-xiao)
 
 ---
-### No. 03 · ParticleGen: A Multi-Agent System for Particle Effects Generation
+### No. 02 · Momentum Structure of Superconductivity and Sublattice Effects from Quasiparticle Interference in CsV$_3$Sb$_5$
 
-**Junhao Zhuge** · 一作 · 6 作者 · [arXiv:2608.00629](https://arxiv.org/abs/2608.00629)
+**Aaron G. Greenberg** · 一作 · 14 作者 · [arXiv:2607.27148](https://arxiv.org/abs/2607.27148)
 
-*多智能体系统从文本生成可编辑粒子特效。*
+*QPI揭示CsV₃Sb₅各向同性超导能隙，排除PDW调制。*
 
-_Particle systems are widely used in digital entertainment to create dynamic scene elements and visual effects. However, authoring high-quality particle effects remains labor-intensive and demands specialized expertise,…_
+_Quantum interference encoded in the sublattice texture of kagome Bloch wavefunctions has been widely invoked as a route to correlated states, including chiral charge order, unconventional superconductivity, and their po…_
 
-→ [profile](/researchers/junhao-zhuge)
-
----
-### No. 04 · ELBench: A Multi-Dimensional Benchmark for Education-Facing Large Language Models
-
-**Yilin Jiang** · 一作 · 12 作者 · [arXiv:2608.09548](https://arxiv.org/abs/2608.09548)
-
-*首个四维教育大模型评测基准ELBench。*
-
-_Large language models are increasingly deployed in education as tutors, teaching assistants, and content generators. These roles place demands that ordinary question answering does not: a usable education-facing model i…_
-
-→ [profile](/researchers/yilin-jiang)
+→ [profile](/researchers/aaron-g-greenberg)
 
 ---
-### No. 05 · PCSD: Persistent Consistency for Self-Distillation in Agentic Reinforcement Learning
+### No. 03 · SIDMA: Semantic Interleave Division Multiple Access Communication System
 
-**Chunji Lv** · 一作 · 9 作者 · [arXiv:2608.01837](https://arxiv.org/abs/2608.01837)
+**Yunlu Wang** · 一作 · 7 作者 · [arXiv:2607.08777](https://arxiv.org/abs/2607.08777)
 
-*基于持久性加权的自蒸馏强化学习优化。*
+*语义交织域置乱与功率分配提升多址重构保真度。*
 
-_Large language model agents have shown strong potential in complex interactive tasks, yet their reinforcement learning (RL) is often hindered by sparse rewards, as a long multi-turn trajectory may receive only a single…_
+_Multiple Access (MA) technology has consistently served as the core driving force behind the evolution of mobile communications. As a promising paradigm for next-generation communications, Semantic Communication explore…_
 
-→ [profile](/researchers/chunji-lv)
-
----
-### No. 06 · Liouville Rigidity for Real and Complex Degenerate Hessian Equations
-
-**Hao Fang** · 一作 · 3 作者 · [arXiv:2607.21024](https://arxiv.org/abs/2607.21024)
-
-*证明退化Hessian方程刘维尔刚性等价于容许集几何条件。*
-
-_We prove Liouville rigidity theorems for translation-invariant real and complex Hessian equations in the viscosity sense, where the PDE is encoded by an admissible set $\mathcal{A}$. The main structural notion is Liouvi…_
-
-→ [profile](/researchers/hao-fang)
+→ [profile](/researchers/yunlu-wang)
 
 ---
-### No. 07 · CommBench: Can LLMs Write Correct and Efficient GPU Communication Code?
+### No. 04 · URSA: Chemistry-Aware Benchmark for Utilitarian Retrosynthesis Assessment
 
-**Shuang Ma** · 一作 · 15 作者 · [arXiv:2608.04450](https://arxiv.org/abs/2608.04450)
+**Bogdan Zagribelnyy** · 一作 · 10 作者 · [arXiv:2607.04688](https://arxiv.org/abs/2607.04688)
 
-_Training and serving large language models (LLMs) rely heavily on high-performance GPU communication, yet implementing efficient GPU communication primitives requires deep expertise in GPU architectures, networking hard…_
+*提出URSA基准，化学感知评估逆合成路线与LLM。*
 
-→ [profile](/researchers/shuang-ma)
+_Synthesis planning aiming to find pathways of reactions for a target molecule is one of the most important and challenging tasks in drug discovery. Recent progress has produced both specialized deep-learning retrosynthe…_
 
----
-### No. 08 · Denial of Deadline: Network-Driven Accuracy Collapse in Distributed Inference Pipelines
-
-**Jhonatan Tavori** · 一作 · 4 作者 · [arXiv:2607.24692](https://arxiv.org/abs/2607.24692)
-
-_Inference systems increasingly combine a fast path that returns predictions within the application's latency deadline together with a higher-accuracy slow path that runs higher-compute methods on stronger, remote hardwa…_
-
-→ [profile](/researchers/jhonatan-tavori)
+→ [profile](/researchers/bogdan-zagribelnyy)
 
 ---
-### No. 09 · Fantastic Adaptive Taxonomies and How to Use Them
+### No. 05 · MMAI Gym for Science: Training Liquid Foundation Models for Drug Discovery
 
-**Mert Cemri** · 一作 · 12 作者 · [arXiv:2607.16387](https://arxiv.org/abs/2607.16387)
+**Maksim Kuznetsov** · 一作 · 20 作者 · [arXiv:2603.03517](https://arxiv.org/abs/2603.03517)
 
-_An agent system's execution traces record how it fails, and procedures that improve such a system without changing model weights (trajectory selection, prompt and workflow optimization, runtime monitoring) read these tr…_
+*用多模态分子数据训练液态基础模型，超越大型通用模型。*
 
-→ [profile](/researchers/mert-cemri)
+_General-purpose large language models (LLMs) that rely on in-context learning do not reliably deliver the scientific understanding and performance required for drug discovery tasks. Simply increasing model size or intro…_
 
----
-### No. 10 · Antiproof: Synthesizing Vulnerability Detectors and Proofs of Exploitability
-
-**Alon Shakevsky** · 一作 · 4 作者 · [arXiv:2607.12316](https://arxiv.org/abs/2607.12316)
-
-_Discovering vulnerabilities before attackers exploit them requires high recall and reliable automatic validation, but existing approaches struggle to achieve both without prohibitive cost. We present Antiproof, an end-t…_
-
-→ [profile](/researchers/alon-shakevsky)
+→ [profile](/researchers/maksim-kuznetsov)
 
 ---
+### No. 06 · When Single Answer Is Not Enough: Rethinking Single-Step Retrosynthesis Benchmarks for LLMs
 
-## Section B · 🔄 动态更新 · 10 项
+**Bogdan Zagribelnyy** · 一作 · 13 作者 · [arXiv:2602.03554](https://arxiv.org/abs/2602.03554)
+
+*提出ChemCensor指标与CREED数据集，重估单步逆合成基准。*
+
+_Recent progress has expanded the use of large language models (LLMs) in drug discovery, including synthesis planning. However, objective evaluation of retrosynthesis performance remains limited. Existing benchmarks and…_
+
+→ [profile](/researchers/bogdan-zagribelnyy)
+
+---
+### No. 07 · Chemistry42: An AI-based platform for de novo molecular design
+
+**Yan A. Ivanenkov** · 一作 · 10 作者 · [arXiv:2101.09050](https://arxiv.org/abs/2101.09050)
+
+*整合AI与计算化学，生成预定义性质新分子。*
+
+_Chemistry42 is a software platform for de novo small molecule design that integrates Artificial Intelligence (AI) techniques with computational and medicinal chemistry methods. Chemistry42 is unique in its ability to ge…_
+
+→ [profile](/researchers/yan-a-ivanenkov)
+
+---
+### No. 08 · Debate Training Reduces Reward Hacking in RLAIF
+
+**Zachary Kenton** · 一作 · 11 作者 · [arXiv:2608.17776](https://arxiv.org/abs/2608.17776)
+
+_We demonstrate that RL finetuning an LLM using debate, a two-player adversarial game between a generator and a critic adjudicated by a weaker LLM judge, reduces reward hacking compared to a reinforcement learning from A…_
+
+→ [profile](/researchers/zachary-kenton)
+
+---
+### No. 09 · Pigeonholing: how bad prompts hurt models, causing collapse and mistakes
+
+**Hyunji Nam** · 一作 · 4 作者 · [arXiv:2606.24267](https://arxiv.org/abs/2606.24267)
+
+_While in-context learning is generally shown to be effective in Large Language Models (LLMs), bad contexts can cause performance degradation and mode collapse, a phenomenon we call "pigeonholing." **Unintentionally bad*…_
+
+→ [profile](/researchers/hyunji-nam)
+
+---
+### No. 10 · Do as the Romans Do: Learning Universal Behaviors from Heterogeneous Agents
+
+**Caleb Chang** · 一作 · 4 作者 · [arXiv:2606.18537](https://arxiv.org/abs/2606.18537)
+
+_Humans often acquire new skills by observing others, since observed behaviors implicitly reveal how to act in an environment. However, observations drawn from a heterogeneous population introduce conflicting behavioral…_
+
+→ [profile](/researchers/caleb-chang)
+
+---
+
+## Section B · 🔄 动态更新 · 3 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Yang Gao](/researchers/yang-gao) | EgoTac: In-the-wild Tactile Prediction from Egocentric Vision | — | [2608.15060](https://arxiv.org/abs/2608.15060) |
-| [Yi Ma](/researchers/yi-ma) | MERaLiON-GR: Speech Gender Recognition Model for English and SEA Lang… | — | [2608.04433](https://arxiv.org/abs/2608.04433) |
-| [Yang Gao](/researchers/yang-gao) | PCSD: Persistent Consistency for Self-Distillation in Agentic Reinfor… | — | [2608.01837](https://arxiv.org/abs/2608.01837) |
-| [Chelsea Finn](/researchers/chelsea-finn) | LLM-as-a-Verifier: A General-Purpose Verification Framework | — | [2607.05391](https://arxiv.org/abs/2607.05391) |
-| [Jun Zhu](/researchers/jun-zhu) | SageBwd: A Trainable Low-bit Attention | — | [2603.02170](https://arxiv.org/abs/2603.02170) |
-| [Ya-Qin Zhang](/researchers/yaqin-zhang) | InVDriver: Intra-Instance Aware Vectorized Query-Based Autonomous Dri… | — | [None](#) |
-| [Xiaoyong Du](/researchers/xiaoyong-du) | CompressDB: Enabling Efficient Compressed Data Direct Processing for… | — | [None](#) |
-| [Shuaicheng Liu](/researchers/shuaicheng-liu) | LightenDiffusion: Unsupervised Low-Light Image Enhancement with Laten… | — | [None](#) |
-| [Frank Noé](/researchers/frank-noe) | VAMPnets for deep learning of molecular kinetics | — | [None](#) |
-| [Linfeng Zhang](/researchers/linfeng-zhang) | Universal Machine-learning Molecular Dynamics at the Speed of Empiric… | ai4sci | [2608.19041](https://arxiv.org/abs/2608.19041) |
+| [Sergey Levine](/researchers/sergey-levine) | Consistently Simulating Human Personas with Multi-Turn Reinforcement… | — | [2511.00222](https://arxiv.org/abs/2511.00222) |
+| [Sergey Levine](/researchers/sergey-levine) | Evaluating & Reducing Deceptive Dialogue From Language Models with Mu… | — | [2510.14318](https://arxiv.org/abs/2510.14318) |
+| [Saining Xie](/researchers/saining-xie) | AutoCode: LLMs as Problem Setters for Competitive Programming | — | [2510.12803](https://arxiv.org/abs/2510.12803) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -247,98 +242,96 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · HarnessEval-W: Agentifying the Evaluation of Visual Worlds
+### No. 01 · Evaluating Generalization Capabilities of LLM-Based Agents in Mixed-Motive Scenarios Using Concordia
 
-**Weiliang Chen** · 一作 · 43 作者 · [arXiv:2608.16859](https://arxiv.org/abs/2608.16859)
+**Chandler Smith** · 一作 · 86 作者 · [arXiv:2512.03318](https://arxiv.org/abs/2512.03318)
 
-_A benchmark should deliver more than a scalar score: what makes an evaluation trustworthy is the reasoning that justifies the score. This is especially critical for world models, where judging a rollout requires underst…_
+_Large Language Model (LLM) agents have demonstrated impressive capabilities for social interaction and are increasingly being deployed in situations where they might engage with both human and artificial agents. These i…_
 
-→ [profile](/researchers/weiliang-chen)
-
----
-### No. 02 · LUAI Challenge 2021 on Learning to Understand Aerial Images
-
-**Gui-Song Xia** · 一作 · 36 作者 · [arXiv:2108.13246](https://arxiv.org/abs/2108.13246)
-
-_This report summarizes the results of Learning to Understand Aerial Images (LUAI) 2021 challenge held on ICCV 2021, which focuses on object detection and semantic segmentation in aerial images. Using DOTA-v2.0 and GID-1…_
-
-→ [profile](/researchers/gui-song-xia)
+→ [profile](/researchers/chandler-smith)
 
 ---
-### No. 03 · AIM 2020 Challenge on Rendering Realistic Bokeh
+### No. 02 · VeriWeb: Verifiable Long-Chain Web Benchmark for Agentic Information-Seeking
 
-**Andrey Ignatov** · 一作 · 35 作者 · [arXiv:2011.04988](https://arxiv.org/abs/2011.04988)
+**Shunyu Liu** · 一作 · 34 作者 · [arXiv:2508.04026](https://arxiv.org/abs/2508.04026)
 
-_This paper reviews the second AIM realistic bokeh effect rendering challenge and provides the description of the proposed solutions and results. The participating teams were solving a real-world bokeh simulation problem…_
+_Recent advances have showcased the extraordinary capabilities of Large Language Model (LLM) agents in tackling web-based information-seeking tasks. However, existing efforts mainly focus on single-fact retrieval and rel…_
 
-→ [profile](/researchers/andrey-ignatov)
-
----
-### No. 04 · ASI-Bench: At the Dawn of Artificial Superintelligence
-
-**Junwei Zhou** · 一作 · 30 作者 · [arXiv:2608.17271](https://arxiv.org/abs/2608.17271)
-
-_Artificial superintelligence (ASI) requires AI to move beyond mastering existing knowledge toward exploring the unknown, creating new knowledge, and turning new ideas into verifiable results. However, the capabilities o…_
-
-→ [profile](/researchers/junwei-zhou)
+→ [profile](/researchers/shunyu-liu)
 
 ---
-### No. 05 · Writing and erasing skyrmions by single ultrafast laser pulses in monolayer Janus 2D magnets
+### No. 03 · Cumulative X-ray Damage in Bismuth Selenide Examined by Simultaneous TXM and XRD
 
-**Guangyao Miao** · 一作 · 24 作者 · [arXiv:2608.18278](https://arxiv.org/abs/2608.18278)
+**Sophie E Parsons** · 一作 · 24 作者 · [arXiv:2608.19341](https://arxiv.org/abs/2608.19341)
 
-_Skyrmions in 2D magnets are promising candidates for nonvolatile, low-power, and high-density spintronic memories. However, their experimental realization at the 2D limit remains challenging, owing to the difficulty in…_
+_Bismuth selenide (Bi2Se3) is a topological insulator with potential applications in thermoelectrics, spintronics, and optoelectronics. However, its response to radiation remains poorly understood. We investigate cumulat…_
 
-→ [profile](/researchers/guangyao-miao)
-
----
-### No. 06 · MERaLiON-GR: Speech Gender Recognition Model for English and SEA Languages
-
-**Qiongqiong Wang** · 一作 · 21 作者 · [arXiv:2608.04433](https://arxiv.org/abs/2608.04433)
-
-*微调LoRA+ECAPA-TDNN实现跨语种性别识别。*
-
-_We present MERaLiON-GR, a speech gender recognition system that performs binary classification (female / male) on English and Southeast Asian (SEA) languages. The model finetunes MERaLiON-SpeechEncoder-2, a large confor…_
-
-→ [profile](/researchers/qiongqiong-wang)
+→ [profile](/researchers/sophie-e-parsons)
 
 ---
-### No. 07 · GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction
+### No. 04 · AutoCode: LLMs as Problem Setters for Competitive Programming
 
-**Ziyang Cheng** · 一作 · 20 作者 · [arXiv:2608.18234](https://arxiv.org/abs/2608.18234)
+**Shang Zhou** · 一作 · 21 作者 · [arXiv:2510.12803](https://arxiv.org/abs/2510.12803)
 
-_Whole-body motion tracking policies turn a humanoid into a robust control interface: the teleoperator---or an upstream model---only supplies a coarse movement intent, while the low-level policy keeps the robot balanced…_
+_Writing competitive programming problems is exacting. Authors must: set constraints, input distributions, and edge cases that rule out shortcuts; target specific algorithms (e.g., max-flow, dynamic programming, data str…_
 
-→ [profile](/researchers/ziyang-cheng)
-
----
-### No. 08 · SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation
-
-**Bowen Jing** · 一作 · 18 作者 · [arXiv:2608.18701](https://arxiv.org/abs/2608.18701)
-
-_Physical interaction quality is central to deformable-object manipulation, yet most benchmarks evaluate task success alone. A policy may complete the task while allowing slip or causing excessive compression. A primary…_
-
-→ [profile](/researchers/bowen-jing)
+→ [profile](/researchers/shang-zhou)
 
 ---
-### No. 09 · EvoX: Meta-Evolution for Automated Discovery
+### No. 05 · MMAI Gym for Science: Training Liquid Foundation Models for Drug Discovery
 
-**Shu Liu** · 一作 · 17 作者 · [arXiv:2602.23413](https://arxiv.org/abs/2602.23413)
+**Maksim Kuznetsov** · 一作 · 20 作者 · [arXiv:2603.03517](https://arxiv.org/abs/2603.03517)
 
-*联合进化解与搜索策略，动态自适应优化。*
+*用多模态分子数据训练液态基础模型，超越大型通用模型。*
 
-_Recent work such as AlphaEvolve has shown that combining LLM-driven optimization with evolutionary search can effectively improve programs, prompts, and algorithms across domains. In this paradigm, previously evaluated…_
+_General-purpose large language models (LLMs) that rely on in-context learning do not reliably deliver the scientific understanding and performance required for drug discovery tasks. Simply increasing model size or intro…_
 
-→ [profile](/researchers/shu-liu)
+→ [profile](/researchers/maksim-kuznetsov)
 
 ---
-### No. 10 · From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation
+### No. 06 · LongCoT: Benchmarking Long-Horizon Chain-of-Thought Reasoning
 
-**Xingjian Wang** · 一作 · 17 作者 · [arXiv:2608.18076](https://arxiv.org/abs/2608.18076)
+**Sumeet Ramesh Motwani** · 一作 · 20 作者 · [arXiv:2604.14140](https://arxiv.org/abs/2604.14140)
 
-_Large-scale image generation has benefited from advances in data scale, quality, rebalancing, and recaptioning, yet conventional pipelines typically optimize task-specific datasets in isolation. A central challenge is n…_
+_As language models are increasingly deployed for complex autonomous tasks, their ability to reason accurately over longer horizons becomes critical. An essential component of this ability is planning and managing a long…_
 
-→ [profile](/researchers/xingjian-wang)
+→ [profile](/researchers/sumeet-ramesh-motwani)
+
+---
+### No. 07 · Amorphous and Nanocrystalline Topological Semimetal YPtBi/W/CoFeB Heterostructures for BEOL-Compatible Spin-Orbit Torque Devices
+
+**Quang Le** · 一作 · 20 作者 · [arXiv:2608.20021](https://arxiv.org/abs/2608.20021)
+
+_Spin-orbit torque (SOT) devices require spin-source materials that combine efficient charge-to-spin conversion with back-end-of-line (BEOL) thermal compatibility. Here, we show that YPtBi/W/CoFeB heterostructures deposi…_
+
+→ [profile](/researchers/quang-le)
+
+---
+### No. 08 · Tilted $p$-wave magnet candidate CeNiAsO
+
+**Zhuo Wang** · 一作 · 20 作者 · [arXiv:2608.19856](https://arxiv.org/abs/2608.19856)
+
+_The unexpectedly small ordered moments of CeNiAsO, a candidate for correlated $p$-wave magnet, have posed a serious challenge to the precise determination of its magnetic structure, hindering the understanding of its fu…_
+
+→ [profile](/researchers/zhuo-wang)
+
+---
+### No. 09 · SPADE: Self-Play in Adaptive Synthetic Executable Environments
+
+**Bo Liu** · 一作 · 18 作者 · [arXiv:2608.19197](https://arxiv.org/abs/2608.19197)
+
+_Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, or frozen-verifier)…_
+
+→ [profile](/researchers/bo-liu)
+
+---
+### No. 10 · Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking
+
+**Tao Huang** · 一作 · 18 作者 · [arXiv:2608.20087](https://arxiv.org/abs/2608.20087)
+
+_Humanoid robots have recently demonstrated promising capabilities in real-world ball sports. However, achieving professional motion styles while maintaining strong task performance remains challenging. In this work, we…_
+
+→ [profile](/researchers/tao-huang)
 
 ---
 
@@ -348,61 +341,59 @@ _Large-scale image generation has benefited from advances in data scale, quality
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · HarnessEval-W: Agentifying the Evaluation of Visual Worlds
+### No. 01 · Evaluating Generalization Capabilities of LLM-Based Agents in Mixed-Motive Scenarios Using Concordia
 
-**Weiliang Chen** · 一作 · 43 作者 · [arXiv:2608.16859](https://arxiv.org/abs/2608.16859)
+**Chandler Smith** · 一作 · 86 作者 · [arXiv:2512.03318](https://arxiv.org/abs/2512.03318)
 
-_A benchmark should deliver more than a scalar score: what makes an evaluation trustworthy is the reasoning that justifies the score. This is especially critical for world models, where judging a rollout requires underst…_
+_Large Language Model (LLM) agents have demonstrated impressive capabilities for social interaction and are increasingly being deployed in situations where they might engage with both human and artificial agents. These i…_
 
-**▸ 选中原因：首次出现 · 43 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 86 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/weiliang-chen)
-
----
-### No. 02 · LUAI Challenge 2021 on Learning to Understand Aerial Images
-
-**Gui-Song Xia** · 一作 · 36 作者 · [arXiv:2108.13246](https://arxiv.org/abs/2108.13246)
-
-_This report summarizes the results of Learning to Understand Aerial Images (LUAI) 2021 challenge held on ICCV 2021, which focuses on object detection and semantic segmentation in aerial images. Using DOTA-v2.0 and GID-1…_
-
-**▸ 选中原因：首次出现 · 36 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/gui-song-xia)
+→ [profile](/researchers/chandler-smith)
 
 ---
-### No. 03 · AIM 2020 Challenge on Rendering Realistic Bokeh
+### No. 02 · Cumulative X-ray Damage in Bismuth Selenide Examined by Simultaneous TXM and XRD
 
-**Andrey Ignatov** · 一作 · 35 作者 · [arXiv:2011.04988](https://arxiv.org/abs/2011.04988)
+**Sophie E Parsons** · 一作 · 24 作者 · [arXiv:2608.19341](https://arxiv.org/abs/2608.19341)
 
-_This paper reviews the second AIM realistic bokeh effect rendering challenge and provides the description of the proposed solutions and results. The participating teams were solving a real-world bokeh simulation problem…_
+_Bismuth selenide (Bi2Se3) is a topological insulator with potential applications in thermoelectrics, spintronics, and optoelectronics. However, its response to radiation remains poorly understood. We investigate cumulat…_
 
-**▸ 选中原因：首次出现 · 35 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 24 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/andrey-ignatov)
+→ [profile](/researchers/sophie-e-parsons)
 
 ---
-### No. 04 · LLM-as-a-Verifier: A General-Purpose Verification Framework
+### No. 03 · AutoCode: LLMs as Problem Setters for Competitive Programming
 
-**Jacky Kwok** · 一作 · 9 作者 · [arXiv:2607.05391](https://arxiv.org/abs/2607.05391)
+**Shang Zhou** · 一作 · 21 作者 · [arXiv:2510.12803](https://arxiv.org/abs/2510.12803)
 
-_Scaling pre-training, post-training, and test-time compute have become the central paradigms for improving the capabilities of LLMs. In this work, we identify verification, the ability to determine the correctness of a…_
+_Writing competitive programming problems is exacting. Authors must: set constraints, input distributions, and edge cases that rule out shortcuts; target specific algorithms (e.g., max-flow, dynamic programming, data str…_
+
+**▸ 选中原因：首次出现 · 21 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/shang-zhou)
+
+---
+### No. 04 · Consistently Simulating Human Personas with Multi-Turn Reinforcement Learning
+
+**Marwa Abdulhai** · 一作 · 6 作者 · [arXiv:2511.00222](https://arxiv.org/abs/2511.00222)
+
+_Large Language Models (LLMs) are increasingly used to simulate human users in interactive settings such as therapy, education, and social role-play. While these simulations enable scalable training and evaluation of AI…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/jacky-kwok)
+→ [profile](/researchers/marwa-abdulhai)
 
 ---
-### No. 05 · PCSD: Persistent Consistency for Self-Distillation in Agentic Reinforcement Learning
+### No. 05 · Evaluating & Reducing Deceptive Dialogue From Language Models with Multi-turn RL
 
-**Chunji Lv** · 一作 · 9 作者 · [arXiv:2608.01837](https://arxiv.org/abs/2608.01837)
+**Marwa Abdulhai** · 一作 · 6 作者 · [arXiv:2510.14318](https://arxiv.org/abs/2510.14318)
 
-*基于持久性加权的自蒸馏强化学习优化。*
-
-_Large language model agents have shown strong potential in complex interactive tasks, yet their reinforcement learning (RL) is often hindered by sparse rewards, as a long multi-turn trajectory may receive only a single…_
+_Large Language Models (LLMs) interact with millions of people worldwide in applications such as customer support, education and healthcare. However, their ability to produce deceptive outputs, whether intentionally or i…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/chunji-lv)
+→ [profile](/researchers/marwa-abdulhai)
 
 ---
 
