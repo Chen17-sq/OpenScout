@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 102                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · MONDAY, AUGUST 24, 2026
+VOL. 1 · NO. 103                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · TUESDAY, AUGUST 25, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 102 · 2026-08-24
+> *All The Researchers Fit To Watch* — Vol. 1, No. 103 · 2026-08-25
 
-_Auto-generated at 2026-08-24T02:39:19+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-08-25T02:33:44+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,129 +15,129 @@ _Auto-generated at 2026-08-24T02:39:19+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **46001** | 106 | 383 | 14 | 91 |
+| **46731** | 202 | 730 | 14 | 91 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · SkillEvo: Self-Renewing Evolution Gradients from Multi-Turn Interaction Feedback
+### No. 01 · Training-Free VLM Personalization via Calibrated Residual Decoding
 
-**Qianxi Yan** · 一作 · 6 作者 · [arXiv:2608.13120](https://arxiv.org/abs/2608.13120)
+**Jiaao Yu** · 一作 · 5 作者 · [arXiv:2608.22263](https://arxiv.org/abs/2608.22263)
 
-*多轮交互反馈生成自更新演化梯度，治理层修复漂移。*
+*校准残差解码实现免训练VLM个性化。*
 
-_Agent Skills are today either hand-authored or produced in a single LLM generation pass, and consequently possess no closed loop through which they might improve from the interaction failures they actually cause. Recent…_
+_Vision-language models can be personalized in a training-free manner by directly providing user profiles, preferences, or visual references at inference time, without updating model parameters. However, direct personali…_
 
-→ [profile](/researchers/qianxi-yan)
-
----
-### No. 02 · Listening Forward: Next Patch Embedding Prediction Enables Scalable Audio Learners
-
-**Umberto Cappellazzo** · 一作 · 4 作者 · [arXiv:2608.19863](https://arxiv.org/abs/2608.19863)
-
-*因果掩码自回归预测下一音频patch嵌入实现SOTA。*
-
-_Self-supervised learning (SSL) has driven substantial progress in audio representation learning, though existing methods have increasingly relied on elaborate pre-training recipes to reach competitive performance. A mar…_
-
-→ [profile](/researchers/umberto-cappellazzo)
+→ [profile](/researchers/jiaao-yu)
 
 ---
-### No. 03 · NARU: A Benchmark for NARrative Evolution and Cultural Nuance Understanding in Japanese Extreme Long Video
+### No. 02 · Discovery of Three Glitches in the previously quiet pulsar PSR J1637$-$4642
 
-**Yuheng Huang** · 一作 · 9 作者 · [arXiv:2608.13210](https://arxiv.org/abs/2608.13210)
+**Zhaoyi Wang** · 一作 · 7 作者 · [arXiv:2608.19555](https://arxiv.org/abs/2608.19555)
 
-*提出NARU基准，评估日文长视频叙事与文化推理。*
+*发现PSR J1637-4642三次自转突变，支持超流体glitch模型。*
 
-_Long-form video understanding encompasses tasks that go beyond retrieving isolated events, including tracking an evolving narrative and interpreting social meaning that may remain implicit. However, existing benchmarks…_
+_We present the discovery and analysis of three rotational glitches in the young pulsar PSR J1637$-$4642. The timing observations span from 19 February 2009 to 6 October 2024 (MJD 54881$-$60589) from the Murriyang radio…_
 
-→ [profile](/researchers/yuheng-huang)
-
----
-### No. 04 · Hierarchical Self-Improvement: A Framework for Task-Specific Evolvable Agent Harnesses
-
-**Tailin Zhou** · 一作 · 1 作者 · [arXiv:2608.08466](https://arxiv.org/abs/2608.08466)
-
-*分层自改进框架：冻结LLM经任务环热替换实现持续进化。*
-
-_Modern LLM agents are often improved by modifying prompts, tools, or workflows manually, while the executable scaffold surrounding the model---the harness---is typically treated as a fixed artifact after deployment. Thi…_
-
-→ [profile](/researchers/tailin-zhou)
+→ [profile](/researchers/zhaoyi-wang)
 
 ---
-### No. 05 · QuoteBench: How Matched Scores Can Hide Command-Path Failures
+### No. 03 · AMPLIFAI: A Multiphase CT Dataset for Benchmarking Clinical Reasoning in LI-RADS Assessment of Liver Lesions
 
-**Shangao Li** · 一作 · 4 作者 · [arXiv:2608.13547](https://arxiv.org/abs/2608.13547)
+**Pranav Kulkarni** · 一作 · 12 作者 · [arXiv:2608.14778](https://arxiv.org/abs/2608.14778)
 
-*提出QuoteBench基准，揭示命令路径故障与匹配分数脱节。*
+*首个公开多期CT数据集，含LI-RADS标注与分割。*
 
-_LLM coding agents issue Bash commands through interfaces that may serialize, wrap, and reparse model output. Matched execution scores alone cannot distinguish command-generation errors from failures introduced after gen…_
+_Hepatocellular carcinoma (HCC) is the third leading cause of cancer-related mortality worldwide, with early detection improving survival from <20% to >70%. The standardized Liver Imaging Reporting and Data System (LI-RA…_
 
-→ [profile](/researchers/shangao-li)
-
----
-### No. 06 · τ_0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation
-
-**Xiaowei Cai** · 一作 · 30 作者 · [arXiv:2608.16885](https://arxiv.org/abs/2608.16885)
-
-*世界模型引导测试时计算，分层生成子任务。*
-
-_Long-horizon robot manipulation requires a robot to both execute individual skills reliably and sequence them coherently over extended tasks. Most hierarchical vision-language-action (VLA) models make each such decision…_
-
-→ [profile](/researchers/xiaowei-cai)
+→ [profile](/researchers/pranav-kulkarni)
 
 ---
-### No. 07 · TinyCast: Probabilistic Zero-Shot Forecasting with Computed Periodicity
+### No. 04 · Toward a Measurement of the Higgs Boson Mass with Natural-Width Precision at FCC-ee
 
-**Armin Steinhauser** · 一作 · 1 作者 · [arXiv:2608.15767](https://arxiv.org/abs/2608.15767)
+**Jan Eysermans** · 一作 · 6 作者 · [arXiv:2608.12071](https://arxiv.org/abs/2608.12071)
 
-*仅146K参数，频谱周期折叠加卷积实现零样本概率预测。*
+*FCC-ee轻子ZH反冲法达4MeV希格斯质量精度。*
 
-_We introduce TinyCast, an attention-free zero-shot forecaster that emits a predictive distribution from 146,505 parameters, on the premise that at this size the periodic structure of a context is worth computing rather…_
+_Higgs boson mass measurements with sub-10 MeV precision enable sub-percent determinations of Higgs boson couplings and prevent the Higgs boson mass from becoming a limiting input to electroweak fits. Probing the electro…_
 
-→ [profile](/researchers/armin-steinhauser)
-
----
-### No. 08 · FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills
-
-**Zeyu Ren** · 一作 · 8 作者 · [arXiv:2607.21596](https://arxiv.org/abs/2607.21596)
-
-*推理时协同进化工作流与可执行技能库。*
-
-_Large language model agents can adapt to complex tasks by constructing workflows at inference time, but procedures discovered in one episode are usually discarded after execution. Existing skill libraries provide reusab…_
-
-→ [profile](/researchers/zeyu-ren)
+→ [profile](/researchers/jan-eysermans)
 
 ---
-### No. 09 · Llama-Mobile: Efficient 2.7-Bit Quantization of VLMs
+### No. 05 · RoboSynChallenge: Mastering Real-World Dexterity via Generalizing Synthesized Manipulation Skills
 
-**Luka Ribar** · 一作 · 3 作者 · [arXiv:2608.21134](https://arxiv.org/abs/2608.21134)
+**Runyi Zhao** · 一作 · 18 作者 · [arXiv:2608.12416](https://arxiv.org/abs/2608.12416)
 
-*2.7-bit量化VLM，自生成数据训练，Arm CPU高效推理。*
+*合成数据训练策略，实现真实世界灵巧操作泛化。*
 
-_Deploying vision-language models (VLMs) on mobile devices is challenging due to their significant memory and compute requirements. We present a framework for quantizing VLMs for efficient inference on resource-constrain…_
+_Achieving generalizable robotic manipulation remains a central challenge in embodied intelligence. Despite rapid advances in model architectures and learning algorithms, progress is often limited by the scarcity and nar…_
 
-→ [profile](/researchers/luka-ribar)
-
----
-### No. 10 · InfinityEdit: Infinite Video Editing with a Lightweight Edit-Ignition Adapter
-
-**Yunze Tong** · 一作 · 12 作者 · [arXiv:2608.20910](https://arxiv.org/abs/2608.20910)
-
-_With large pretrained models, existing methods have effectively improved instruction-based video editing. However, most of them rely on an in-place editing assumption. They align the edited video with the given source c…_
-
-→ [profile](/researchers/yunze-tong)
+→ [profile](/researchers/runyi-zhao)
 
 ---
+### No. 06 · An Agentic Generative Large Language Model for Treatment Planning of Colorectal Cancer
 
-## Section B · 🔄 动态更新 · 4 项
+**Mengxian Lyu** · 一作 · 21 作者 · [arXiv:2608.09142](https://arxiv.org/abs/2608.09142)
+
+*融合智能体RAG与强化学习的结直肠癌治疗规划LLM。*
+
+_Treatment planning in precision oncology requires synthesizing heterogeneous patient information with rapidly evolving clinical guidelines to ensure guideline-concordant care. While large language models (LLMs) show pro…_
+
+→ [profile](/researchers/mengxian-lyu)
+
+---
+### No. 07 · Implementation of Split Deadlines in a Large CS1 Course
+
+**Hongxuan Chen** · 一作 · 4 作者 · [arXiv:2608.06753](https://arxiv.org/abs/2608.06753)
+
+*CS1课程错峰截止日期提升答疑效率且不影响成绩。*
+
+_Office hour utilization in computer science courses can spike near deadlines, producing long wait times, frustrated students, and overworked staff. To address this problem, a large CS1 course implemented a split deadlin…_
+
+→ [profile](/researchers/hongxuan-chen)
+
+---
+### No. 08 · A Robotic System for Automated Manufacturing of Dielectric Elastomer Actuators
+
+**Van Remenar** · 一作 · 7 作者 · [arXiv:2608.00369](https://arxiv.org/abs/2608.00369)
+
+*自动化机器人制造介电弹性体执行器，旋涂与CNT电极冲压。*
+
+_This letter presents an automated robotic manufacturing system for soft capacitors which operate as actuators and sensors. Emphasis is placed on the two processes that most directly govern device quality, dielectric lay…_
+
+→ [profile](/researchers/van-remenar)
+
+---
+### No. 09 · From Semantics to Readout: Mechanistic Understanding of Audio Tokens after Fine-Tuning for Temporal Audio Grounding
+
+**Yujian Ma** · 一作 · 5 作者 · [arXiv:2607.25355](https://arxiv.org/abs/2607.25355)
+
+*微调提升解码器读取音频token事件证据及时序对齐。*
+
+_Large audio-language models (LALMs) convey acoustic evidence to language decoders through native audio tokens, yet the internal roles of these tokens remain poorly understood. Using temporal audio grounding as a diagnos…_
+
+→ [profile](/researchers/yujian-ma)
+
+---
+### No. 10 · An adaptive phase field framework for large-scale interface evolution problems using a strong-form gradient smoothing approach
+
+**Zirui Mao** · 一作 · 7 作者 · [arXiv:2607.25142](https://arxiv.org/abs/2607.25142)
+
+*梯度平滑法耦合自适应网格实现近线性复杂度界面演化。*
+
+_Multiscale problems with evolving interfaces are ubiquitous in science and engineering. Phase-field models are a powerful tool for simulating interface-dominated phenomena in computational mechanics and materials modeli…_
+
+→ [profile](/researchers/zirui-mao)
+
+---
+
+## Section B · 🔄 动态更新 · 2 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [He Wang](/researchers/he-wang) | Illite/Poly(vinyl alcohol) Hydrogel Electrolytes with High Mechanical… | — | [None](#) |
-| [Tess Smidt](/researchers/tess-smidt) | Stabilizing Structural Transitional States between 1- and 2-Dimension… | — | [None](#) |
-| [Sergey Tulyakov](/researchers/sergey-tulyakov) | EpiGRAF: Rethinking training of 3D GANs | — | [None](#) |
-| [Yebin Liu](/researchers/yebin-liu) | Animatable Gaussians: Learning Pose-Dependent Gaussian Maps for High-… | — | [None](#) |
+| [Yann LeCun](/researchers/yann-lecun) | LpWM: A Case for Sparse Representations in World Models | world_models | [2608.22764](https://arxiv.org/abs/2608.22764) |
+| [Yi Ma](/researchers/yi-ma) | The Imitator Game: Benchmarking Robot Imitative Ability Beyond Action… | embodied | [2608.22301](https://arxiv.org/abs/2608.22301) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -247,153 +247,162 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · τ_0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation
+### No. 01 · OneReason Technical Report
 
-**Xiaowei Cai** · 一作 · 30 作者 · [arXiv:2608.16885](https://arxiv.org/abs/2608.16885)
+**OneRec Team** · 一作 · 84 作者 · [arXiv:2606.06260](https://arxiv.org/abs/2606.06260)
 
-*世界模型引导测试时计算，分层生成子任务。*
+_Generative recommendation models in the OneRec family have been widely deployed in many real-world services, such as short-video, live-streaming, advertising, and e-commerce. However, these generative models can only be…_
 
-_Long-horizon robot manipulation requires a robot to both execute individual skills reliably and sequence them coherently over extended tasks. Most hierarchical vision-language-action (VLA) models make each such decision…_
-
-→ [profile](/researchers/xiaowei-cai)
+→ [profile](/researchers/onerec-team)
 
 ---
-### No. 02 · ClawGym II: Exploring Black-Box RL on Agent Harness
+### No. 02 · X-ray driven displacive excitation of coherent phonons
 
-**Huatong Song** · 一作 · 20 作者 · [arXiv:2608.16798](https://arxiv.org/abs/2608.16798)
+**Oleg Dogadov** · 一作 · 32 作者 · [arXiv:2608.23080](https://arxiv.org/abs/2608.23080)
 
-*黑盒RL经沙盒前缀树优化通用智能体训练。*
+_Modulating electron-phonon coupling offers a route to control structural displacements and tune material functionality. Valence-to-conduction band transitions, however, provide limited leverage over the driving force. H…_
 
-_Agent harnesses have substantially improved performance on long-horizon tasks by coordinating agent interactions with the environment. However, reinforcement learning through complex harnesses remains largely unexplored…_
-
-→ [profile](/researchers/huatong-song)
+→ [profile](/researchers/oleg-dogadov)
 
 ---
-### No. 03 · Beyond Correctness: Benchmarking and Aligning Response Behaviors in Hybrid-Thinking MLLMs
+### No. 03 · Graph Engineering in the Era of LLM Agents: From Individual Intelligence to System Intelligence
 
-**Xinming Wang** · 一作 · 16 作者 · [arXiv:2608.12781](https://arxiv.org/abs/2608.12781)
+**Yuyuan Feng** · 一作 · 30 作者 · [arXiv:2608.21156](https://arxiv.org/abs/2608.21156)
 
-*提出PatternEval与PatternRL，对齐混合思维MLLM响应行为。*
+_LLMs have evolved from language generators to autonomous agents capable of complex, long-horizon tasks. This evolution has produced paradigms including Prompt Engineering to elicit model capabilities, Context Engineerin…_
 
-_Hybrid-thinking multimodal large language models (MLLMs) allow a single model to alternate between deliberative thinking and latency-efficient non-thinking inference. Although these modes differ in reasoning budget, the…_
-
-→ [profile](/researchers/xinming-wang)
+→ [profile](/researchers/yuyuan-feng)
 
 ---
-### No. 04 · Mining beyond Earth with Space Robots: Exploration, Sampling, and Extraction
+### No. 04 · EchoWM: Open and Enterable Omnimodal World Models
 
-**Dong Li** · 一作 · 14 作者 · [arXiv:2608.21358](https://arxiv.org/abs/2608.21358)
+**Songchun Zhang** · 一作 · 22 作者 · [arXiv:2608.23189](https://arxiv.org/abs/2608.23189)
 
-_Space resource acquisition and utilization, commonly referred to as Space Mining, represent critical pathways for enabling sustained human exploration and unlocking commercial opportunities in space. These resources mai…_
+_We present EchoWM, an omnimodal world model for enterable generative media that responds to continuous navigation while jointly generating 720p video, environmental sound, music and speech. We organize interaction aroun…_
 
-→ [profile](/researchers/dong-li)
-
----
-### No. 05 · InfinityEdit: Infinite Video Editing with a Lightweight Edit-Ignition Adapter
-
-**Yunze Tong** · 一作 · 12 作者 · [arXiv:2608.20910](https://arxiv.org/abs/2608.20910)
-
-_With large pretrained models, existing methods have effectively improved instruction-based video editing. However, most of them rely on an in-place editing assumption. They align the edited video with the given source c…_
-
-→ [profile](/researchers/yunze-tong)
+→ [profile](/researchers/songchun-zhang)
 
 ---
-### No. 06 · Quasi-one-dimensional topological band structure and van Hove singularities in monolayer TaIrTe$_4$ from laser $μ$-ARPES
+### No. 05 · An Agentic Generative Large Language Model for Treatment Planning of Colorectal Cancer
 
-**Honey Boban** · 一作 · 12 作者 · [arXiv:2608.20978](https://arxiv.org/abs/2608.20978)
+**Mengxian Lyu** · 一作 · 21 作者 · [arXiv:2608.09142](https://arxiv.org/abs/2608.09142)
 
-_Recent transport experiments reported a quantum spin Hall insulator phase in monolayer 1T-TaIrTe$_4$ gated away from charge neutrality. This phase is not predicted by band structure calculations and has been attributed…_
+*融合智能体RAG与强化学习的结直肠癌治疗规划LLM。*
 
-→ [profile](/researchers/honey-boban)
+_Treatment planning in precision oncology requires synthesizing heterogeneous patient information with rapidly evolving clinical guidelines to ensure guideline-concordant care. While large language models (LLMs) show pro…_
 
----
-### No. 07 · Certified Multi-Turn Robustness for LLM Safety via Compositional Bounds and Safety Persistence
-
-**Yang Liu** · 一作 · 12 作者 · [arXiv:2608.20820](https://arxiv.org/abs/2608.20820)
-
-_Large language models (LLMs) are vulnerable to multi-turn jailbreak attacks that progressively manipulate conversation context. Existing certified robustness methods are limited to single-turn inputs; naive multi-turn c…_
-
-→ [profile](/researchers/yang-liu)
+→ [profile](/researchers/mengxian-lyu)
 
 ---
-### No. 08 · EndoLIFT: Language-Disambiguated Latent-Conditioned Rectified Flow for Bidirectional Endoscopic Control
+### No. 06 · Sub-Doppler cooling of a trapped ion in a phase-stable polarization gradient
 
-**Chi Kit Ng** · 一作 · 12 作者 · [arXiv:2608.20478](https://arxiv.org/abs/2608.20478)
+**Ethan Clements** · 一作 · 20 作者 · [arXiv:2411.06026](https://arxiv.org/abs/2411.06026)
 
-_Routine gastrointestinal endoscopy is intrinsically bidirectional: the instrument is advanced to reach target anatomy and later withdrawn or retroflexed for inspection, while an external cue may require earlier reversal…_
+_Trapped ions provide a highly controlled platform for quantum sensors, clocks, simulators, and computers, all of which depend on cooling ions close to their motional ground state. Existing methods like Doppler, resolved…_
 
-→ [profile](/researchers/chi-kit-ng-2)
-
----
-### No. 09 · Sulfur-rich Spirofluorene-Bridged N Heterotriangulene Redox-Active Polymers
-
-**Angelina Jocic** · 一作 · 11 作者 · [arXiv:2608.21037](https://arxiv.org/abs/2608.21037)
-
-_Sulfur-rich spirofluorene-bridged N-heterotriangulene (FTN) polymers featuring covalently linked oligosulfide units and a terthiophene-based analogue were synthesized via nucleophilic aromatic substitution and Stille cr…_
-
-→ [profile](/researchers/angelina-jocic)
+→ [profile](/researchers/ethan-clements)
 
 ---
-### No. 10 · Scalable Cyclic Olefin Copolymer Encapsulation for High Optical Quality of TMD Monolayers
+### No. 07 · The Achilles tendon enthesis rebuilds its mineralization front on reloading but retains a nanoscale imprint of unloading
 
-**Suprova Das** · 一作 · 11 作者 · [arXiv:2608.20973](https://arxiv.org/abs/2608.20973)
+**M. L. Stammer** · 一作 · 19 作者 · [arXiv:2608.23210](https://arxiv.org/abs/2608.23210)
 
-_Monolayer transition metal dichalcogenides (TMDs) combine a direct bandgap, strongly bound excitons, and pronounced second-order optical nonlinearity, which makes them promising materials for ultrathin optoelectronic an…_
+_The enthesis is a graded fibrocartilaginous interface that transfers load between tendon and bone, yet the nanoscale mechanisms stabilizing its mineralization front remain unclear. Here, we combine multimodal 2D/3D X-ra…_
 
-→ [profile](/researchers/suprova-das)
+→ [profile](/researchers/m-l-stammer)
+
+---
+### No. 08 · RoboSynChallenge: Mastering Real-World Dexterity via Generalizing Synthesized Manipulation Skills
+
+**Runyi Zhao** · 一作 · 18 作者 · [arXiv:2608.12416](https://arxiv.org/abs/2608.12416)
+
+*合成数据训练策略，实现真实世界灵巧操作泛化。*
+
+_Achieving generalizable robotic manipulation remains a central challenge in embodied intelligence. Despite rapid advances in model architectures and learning algorithms, progress is often limited by the scarcity and nar…_
+
+→ [profile](/researchers/runyi-zhao)
+
+---
+### No. 09 · InstructMove: A Text-Indispensable Benchmark for Instruction-Following Manipulation
+
+**Mengao Zhao** · 一作 · 18 作者 · [arXiv:2608.22990](https://arxiv.org/abs/2608.22990)
+
+_Vision-language-action (VLA) models have made general-purpose robot manipulation increasingly plausible by conditioning robot actions on natural-language instructions. A key test of such generality is whether policies a…_
+
+→ [profile](/researchers/mengao-zhao)
+
+---
+### No. 10 · Every Coin Has Two Sides: On the Dual Nature of Generalization in On-Policy Distillation of Large Language Models
+
+**Zhaoyi Li** · 一作 · 16 作者 · [arXiv:2608.16647](https://arxiv.org/abs/2608.16647)
+
+_On-policy distillation (OPD) transfers teacher capabilities by supervising trajectories sampled from the student's own policy, yet its generalization behavior remains poorly understood, as most studies evaluate OPD on a…_
+
+→ [profile](/researchers/zhaoyi-li)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 4 个
+## Section F · 🌙 Sleeper Picks · 5 个
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · τ_0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation
+### No. 01 · OneReason Technical Report
 
-**Xiaowei Cai** · 一作 · 30 作者 · [arXiv:2608.16885](https://arxiv.org/abs/2608.16885)
+**OneRec Team** · 一作 · 84 作者 · [arXiv:2606.06260](https://arxiv.org/abs/2606.06260)
 
-*世界模型引导测试时计算，分层生成子任务。*
+_Generative recommendation models in the OneRec family have been widely deployed in many real-world services, such as short-video, live-streaming, advertising, and e-commerce. However, these generative models can only be…_
 
-_Long-horizon robot manipulation requires a robot to both execute individual skills reliably and sequence them coherently over extended tasks. Most hierarchical vision-language-action (VLA) models make each such decision…_
+**▸ 选中原因：首次出现 · 84 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/onerec-team)
+
+---
+### No. 02 · Graph Engineering in the Era of LLM Agents: From Individual Intelligence to System Intelligence
+
+**Yuyuan Feng** · 一作 · 30 作者 · [arXiv:2608.21156](https://arxiv.org/abs/2608.21156)
+
+_LLMs have evolved from language generators to autonomous agents capable of complex, long-horizon tasks. This evolution has produced paradigms including Prompt Engineering to elicit model capabilities, Context Engineerin…_
 
 **▸ 选中原因：首次出现 · 30 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/xiaowei-cai)
+→ [profile](/researchers/yuyuan-feng)
 
 ---
-### No. 02 · Quasi-one-dimensional topological band structure and van Hove singularities in monolayer TaIrTe$_4$ from laser $μ$-ARPES
+### No. 03 · An Agentic Generative Large Language Model for Treatment Planning of Colorectal Cancer
 
-**Honey Boban** · 一作 · 12 作者 · [arXiv:2608.20978](https://arxiv.org/abs/2608.20978)
+**Mengxian Lyu** · 一作 · 21 作者 · [arXiv:2608.09142](https://arxiv.org/abs/2608.09142)
 
-_Recent transport experiments reported a quantum spin Hall insulator phase in monolayer 1T-TaIrTe$_4$ gated away from charge neutrality. This phase is not predicted by band structure calculations and has been attributed…_
+*融合智能体RAG与强化学习的结直肠癌治疗规划LLM。*
 
-**▸ 选中原因：首次出现 · 12 作者合作（疑似大组新人）**
+_Treatment planning in precision oncology requires synthesizing heterogeneous patient information with rapidly evolving clinical guidelines to ensure guideline-concordant care. While large language models (LLMs) show pro…_
 
-→ [profile](/researchers/honey-boban)
+**▸ 选中原因：首次出现 · 21 作者合作（疑似大组新人）**
 
----
-### No. 03 · InfinityEdit: Infinite Video Editing with a Lightweight Edit-Ignition Adapter
-
-**Yunze Tong** · 一作 · 12 作者 · [arXiv:2608.20910](https://arxiv.org/abs/2608.20910)
-
-_With large pretrained models, existing methods have effectively improved instruction-based video editing. However, most of them rely on an in-place editing assumption. They align the edited video with the given source c…_
-
-**▸ 选中原因：首次出现 · 12 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/yunze-tong)
+→ [profile](/researchers/mengxian-lyu)
 
 ---
-### No. 04 · IMU-Free Body-Frame State Estimation with Sparse Scene Flow for Quadcopters
+### No. 04 · The Imitator Game: Benchmarking Robot Imitative Ability Beyond Action Prediction
 
-**Daniel Grønhaug** · 一作 · 3 作者 · [arXiv:2608.20891](https://arxiv.org/abs/2608.20891)
+**Xunzhe Zhou** · 一作 · 12 作者 · [arXiv:2608.22301](https://arxiv.org/abs/2608.22301)
 
-_We present a vision-only state estimation system for X-configuration quadcopters equipped with a canonical stereo camera pair and no inertial sensors. The system operates entirely in the body frame, requiring only synch…_
+_Humans imitate at the level of intent: given a demonstration, we infer its goal and carry it out with whatever tools, objects, and layouts are at hand. Current robot policies instead learn observation-to-action mappings…_
 
-**▸ 选中原因：首次出现 · 跨 2 个主题（potential 跨界）**
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/daniel-gr-nhaug)
+→ [profile](/researchers/xunzhe-zhou)
+
+---
+### No. 05 · LpWM: A Case for Sparse Representations in World Models
+
+**Yilun Kuang** · 一作 · 6 作者 · [arXiv:2608.22764](https://arxiv.org/abs/2608.22764)
+
+_Joint-embedding predictive architectures (JEPAs) learn latent dynamics for planning and avoid representation collapse by matching features to maximum-entropy distributions such as isotropic Gaussians, yielding dense rep…_
+
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+
+→ [profile](/researchers/yilun-kuang)
 
 ---
 
