@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 128                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, SEPTEMBER 19, 2026
+VOL. 1 · NO. 149                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, OCTOBER 10, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 128 · 2026-09-19
+> *All The Researchers Fit To Watch* — Vol. 1, No. 149 · 2026-10-10
 
-_Auto-generated at 2026-09-19T05:38:15+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-10-10T06:57:34+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,114 +15,129 @@ _Auto-generated at 2026-09-19T05:38:15+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **48706** | 147 | 333 | 17 | 111 |
+| **49760** | 348 | 1054 | 17 | 119 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Discrete Diffusion Models Exploit Asymmetry to Solve Lookahead Planning Tasks
+### No. 01 · Reflections and Fragments: Securing LLMs Against Sequential Mosaic Attacks
 
-**Itamar Trainin** · 一作 · 4 作者 · [arXiv:2602.19980](https://arxiv.org/abs/2602.19980)
+**Emanuele La Malfa** · 一作 · 7 作者 · [arXiv:2610.05346](https://arxiv.org/abs/2610.05346)
 
-_While Autoregressive (AR) Transformer-based Generative Language Models are frequently employed for lookahead tasks, recent research suggests a potential discrepancy in their ability to perform planning tasks that requir…_
+*用watchman在线状态防多轮拼接攻击*
 
-→ [profile](/researchers/itamar-trainin)
+_Self-play red-teaming improves language-model safety by pitting attacker and defender roles against each other in a zero-sum game. However, real adversaries increasingly use mosaic attacks: multi-turn sequences whose in…_
 
----
-### No. 02 · Causal Effect Estimation with Latent Textual Treatments
-
-**Omri Feldman** · 一作 · 4 作者 · [arXiv:2602.15730](https://arxiv.org/abs/2602.15730)
-
-_Understanding the causal effects of text on downstream outcomes is a central task in many applications. Estimating such effects requires researchers to run controlled experiments that systematically vary textual feature…_
-
-→ [profile](/researchers/omri-feldman)
+→ [profile](/researchers/emanuele-la-malfa)
 
 ---
-### No. 03 · STATe-of-Thoughts: Structured Action Templates for Tree-of-Thoughts
+### No. 02 · PhysEvo: Astra Can Act, Let It
 
-**Zachary Bamberger** · 一作 · 6 作者 · [arXiv:2602.14265](https://arxiv.org/abs/2602.14265)
+**Wenqing Tian** · 一作 · 6 作者 · [arXiv:2610.08995](https://arxiv.org/abs/2610.08995)
 
-_Inference-Time-Compute (ITC) methods like Best-of-$n$ and Tree-of-Thoughts are meant to produce output candidates that are both high-quality and diverse, but their use of high-temperature sampling often fails to achieve…_
+_Astra can act, yet reliable manipulation depends on the system through which it observes and controls the world. We introduce PhysEvo, a framework for physical recursive self-improvement (RSI) around a single frozen mod…_
 
-→ [profile](/researchers/zachary-bamberger)
-
----
-### No. 04 · Model Directions, Not Words: Mechanistic Topic Models Using Sparse Autoencoders
-
-**Carolina Zheng** · 一作 · 8 作者 · [arXiv:2507.23220](https://arxiv.org/abs/2507.23220)
-
-_Traditional topic models are effective at uncovering latent themes in large text collections. However, due to their reliance on bag-of-words representations, they struggle to capture semantically abstract features. Whil…_
-
-→ [profile](/researchers/carolina-zheng)
+→ [profile](/researchers/wenqing-tian)
 
 ---
-### No. 05 · Multi-environment Topic Models
+### No. 03 · PWM: Personalized World Models with Online Reinforcement Learning
 
-**Dominic Sobhani** · 一作 · 3 作者 · [arXiv:2410.24126](https://arxiv.org/abs/2410.24126)
+**Zhexin Lou** · 一作 · 6 作者 · [arXiv:2610.04920](https://arxiv.org/abs/2610.04920)
 
-_Probabilistic topic models are a powerful tool for extracting latent themes from large text datasets. In many text datasets, we also observe per-document covariates (e.g., source, style, political affiliation) that act…_
+_Pretrained world models can generate diverse environments, yet users often want to explore a particular scene specified by their own video. This requires learning the scene's visual identity while retaining the quality…_
 
-→ [profile](/researchers/dominic-sobhani)
-
----
-### No. 06 · Exploring the Learning Capabilities of Language Models using LEVERWORLDS
-
-**Eitan Wagner** · 一作 · 3 作者 · [arXiv:2410.00519](https://arxiv.org/abs/2410.00519)
-
-_Learning a model of a stochastic setting often involves learning both general structure rules and specific properties of the instance. This paper investigates the interplay between learning the general and the specific…_
-
-→ [profile](/researchers/eitan-wagner)
+→ [profile](/researchers/zhexin-lou)
 
 ---
-### No. 07 · Distributional reasoning in LLMs: Parallel reasoning processes in multi-hop reasoning
+### No. 04 · False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents
 
-**Yuval Shalev** · 一作 · 3 作者 · [arXiv:2406.13858](https://arxiv.org/abs/2406.13858)
+**Meijia Chen** · 一作 · 15 作者 · [arXiv:2609.39102](https://arxiv.org/abs/2609.39102)
 
-_Large language models (LLMs) have shown an impressive ability to perform tasks believed to require thought processes. When the model does not document an explicit thought process, it becomes difficult to understand the…_
+_Self-evolving search agents build their own training curricula by jointly optimizing a proposer that generates questions and a solver that answers them. This closed loop introduces a failure mode we call co-cheating: th…_
 
-→ [profile](/researchers/yuval-shalev)
-
----
-### No. 08 · Does Fine-Tuning LLMs on New Knowledge Encourage Hallucinations?
-
-**Zorik Gekhman** · 一作 · 7 作者 · [arXiv:2405.05904](https://arxiv.org/abs/2405.05904)
-
-_When large language models are aligned via supervised fine-tuning, they may encounter new factual information that was not acquired through pre-training. It is often conjectured that this can teach the model the behavio…_
-
-→ [profile](/researchers/zorik-gekhman)
+→ [profile](/researchers/meijia-chen)
 
 ---
-### No. 09 · LLMs Accelerate Annotation for Medical Information Extraction
+### No. 05 · HumanoidTTT: Test-Time Capability Reuse for Efficient Humanoid Control
 
-**Akshay Goel** · 一作 · 13 作者 · [arXiv:2312.02296](https://arxiv.org/abs/2312.02296)
+**Jingtai Yang** · 一作 · 5 作者 · [arXiv:2610.00198](https://arxiv.org/abs/2610.00198)
 
-_The unstructured nature of clinical notes within electronic health records often conceals vital patient-related information, making it challenging to access or interpret. To uncover this hidden information, specialized…_
+_Recent advances in motion generation and whole-body tracking have enabled humanoid robots to execute increasingly diverse motions, yet the same motion capabilities may be requested repeatedly during continual deployment…_
 
-→ [profile](/researchers/akshay-goel)
-
----
-### No. 10 · Data Augmentations for Improved (Large) Language Model Generalization
-
-**Amir Feder** · 一作 · 5 作者 · [arXiv:2310.12803](https://arxiv.org/abs/2310.12803)
-
-_The reliance of text classifiers on spurious correlations can lead to poor generalization at deployment, raising concerns about their use in safety-critical domains such as healthcare. In this work, we propose to use co…_
-
-→ [profile](/researchers/amir-feder)
+→ [profile](/researchers/jingtai-yang)
 
 ---
+### No. 06 · BlueLM-GUI Technical Report: A Real-Device-Centric Flywheel for Self-Improving Mobile GUI Agents
 
-## Section B · 🔄 动态更新 · 7 项
+**Tong Ye** · 一作 · 43 作者 · [arXiv:2609.12394](https://arxiv.org/abs/2609.12394)
+
+*真机强化学习飞轮实现自我提升GUI智能体*
+
+_Mobile GUI agents are shifting from multi-module frameworks to native models trained end-to-end, yet industrial deployment faces three persistent gaps. Sandbox training produces a distribution mismatch with production e…_
+
+→ [profile](/researchers/tong-ye)
+
+---
+### No. 07 · Adaptive Vision-Language Grasping via Composable Foundation Priors and Generalizable Grasp Synthesis
+
+**Sixu Yan** · 一作 · 14 作者 · [arXiv:2609.04096](https://arxiv.org/abs/2609.04096)
+
+*解耦物理抓取合成与任务理解，可组合基础先验实现跨手抓取。*
+
+_This paper proposes AdaRoboVLG, a task-adaptive Vision-Language-Grasp (VLG) framework that supports generalizable grasp synthesis across different robotic hands. Unlike existing VLG methods that tightly couple foundatio…_
+
+→ [profile](/researchers/sixu-yan)
+
+---
+### No. 08 · APEx: Distillation of Agent Procedural Experience for Adaptive Deep Research Question Answering
+
+**Jie Ding** · 一作 · 5 作者 · [arXiv:2609.02253](https://arxiv.org/abs/2609.02253)
+
+*分层经验蒸馏结合GRPO闭环优化深度研究智能体*
+
+_Deep research agents augment large language models with external tools to answer complex, long-horizon questions through multi-turn reasoning. Learning from prior experience is crucial for continual improvement, yet exi…_
+
+→ [profile](/researchers/jie-ding)
+
+---
+### No. 09 · ZipTok3D: High-Fidelity 3D Tokenization with Compact Token Prefixes
+
+**Mingda Lin** · 一作 · 10 作者 · [arXiv:2609.01740](https://arxiv.org/abs/2609.01740)
+
+*嵌套dropout前缀式3D token化，单token高保真重建。*
+
+_Compact token sequences are essential for efficient 3D generation. However, existing 3D tokenizers typically organize latent representations either over spatial regions or as fixed-size sets of global tokens, both suffe…_
+
+→ [profile](/researchers/mingda-lin)
+
+---
+### No. 10 · Learning how to Forget: Fine-tuning for Long-Context Sparse Attention
+
+**Matthias Seeger** · 一作 · 5 作者 · [arXiv:2608.19920](https://arxiv.org/abs/2608.19920)
+
+*微调任意稀疏注意力策略实现长上下文推理*
+
+_A lot of prior work addressed key-value (KV) cache selection and compression by sparse attention to enable long-context inference for transformer language models without excessive hardware budgets. We provide a new meth…_
+
+→ [profile](/researchers/matthias-seeger)
+
+---
+
+## Section B · 🔄 动态更新 · 10 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Bowen Zhou](/researchers/bowen-zhou) | SciTS: Scientific Time Series Understanding and Generation with LLMs | — | [2510.03255](https://arxiv.org/abs/2510.03255) |
-| [Bo Li](/researchers/bo-li-uchicago) | PPA-Game: Characterizing and Learning Competitive Dynamics Among Onli… | — | [2403.15524](https://arxiv.org/abs/2403.15524) |
-| [Bo Li](/researchers/bo-li-uchicago) | Competing for Shareable Arms in Multi-Player Multi-Armed Bandits | — | [2305.19158](https://arxiv.org/abs/2305.19158) |
-| [Bo Li](/researchers/bo-li-uchicago) | Product Ranking for Revenue Maximization with Multiple Purchases | — | [2210.08268](https://arxiv.org/abs/2210.08268) |
-| [Hao Su](/researchers/hao-su) | A Recipe for Efficient Sim-to-Real Transfer in Manipulation with Onli… | — | [2510.02538](https://arxiv.org/abs/2510.02538) |
-| [Bo Li](/researchers/bo-li-uchicago) | Anyprefer: An Agentic Framework for Preference Data Synthesis | — | [2504.19276](https://arxiv.org/abs/2504.19276) |
-| [Quanshi Zhang](/researchers/quanshi-zhang) | Can the Inference Logic of Large Language Models be Disentangled into… | — | [2304.01083](https://arxiv.org/abs/2304.01083) |
+| [Bowen Zhou](/researchers/bowen-zhou) | Block-Sparse Attention with Semantic-Geometric Decoupled Routing | — | [2609.22884](https://arxiv.org/abs/2609.22884) |
+| [Dahua Lin](/researchers/dahua-lin) | SciDocBench: A Workflow-Centered Benchmark and Data Pipeline for Scie… | — | [2609.05141](https://arxiv.org/abs/2609.05141) |
+| [Dahua Lin](/researchers/dahua-lin) | HPSD: Hybrid-Policy Self-Distillation for Text-Image-to-Video Diffusi… | — | [2608.13205](https://arxiv.org/abs/2608.13205) |
+| [Linfeng Zhang](/researchers/linfeng-zhang) | ProtoCycle: Reflective Tool-Augmented Planning for Text-Guided Protei… | — | [2604.16896](https://arxiv.org/abs/2604.16896) |
+| [Linfeng Zhang](/researchers/linfeng-zhang) | MolReasoner: Toward Effective and Interpretable Reasoning for Molecul… | — | [2508.02066](https://arxiv.org/abs/2508.02066) |
+| [He Wang](/researchers/he-wang) | Chumor 2.0: Towards Benchmarking Chinese Humor Understanding | — | [2412.17729](https://arxiv.org/abs/2412.17729) |
+| [He Wang](/researchers/he-wang) | Chumor 1.0: A Truly Funny and Challenging Chinese Humor Understanding… | — | [2406.12754](https://arxiv.org/abs/2406.12754) |
+| [Maosong Sun](/researchers/maosong-sun) | Scaling Large Language Model-based Multi-Agent Collaboration | — | [2406.07155](https://arxiv.org/abs/2406.07155) |
+| [Chelsea Finn](/researchers/chelsea-finn) | π*₀.₆: a VLA That Learns From Experience | — | [None](#) |
+| [Sergey Levine](/researchers/sergey-levine) | π*₀.₆: a VLA That Learns From Experience | — | [None](#) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -230,100 +245,96 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · Qwen Technical Report
+### No. 01 · StepAudio 3 Realtime Technical Report
 
-**Jinze Bai** · 一作 · 48 作者 · [arXiv:2309.16609](https://arxiv.org/abs/2309.16609)
+**Bin Lin** · 一作 · 90 作者 · [arXiv:2609.14005](https://arxiv.org/abs/2609.14005)
 
-_Large language models (LLMs) have revolutionized the field of artificial intelligence, enabling natural language processing tasks that were previously thought to be exclusive to humans. In this work, we introduce Qwen,…_
+_Realtime spoken interaction demands deep reasoning, prompt responses, and fluid turn-taking. We present StepAudio 3 Realtime, an audio-language foundation model organized around a continuous listen-converse-think-act lo…_
 
-→ [profile](/researchers/jinze-bai)
-
----
-### No. 02 · LimiX: Unleashing Structured-Data Modeling Capability for Generalist Intelligence
-
-**Xingxuan Zhang** · 一作 · 38 作者 · [arXiv:2509.03505](https://arxiv.org/abs/2509.03505)
-
-_We argue that progress toward general intelligence requires complementary foundation models grounded in language, the physical world, and structured data. This report presents LimiX-16M and LimiX-2M, two instantiations…_
-
-→ [profile](/researchers/xingxuan-zhang)
+→ [profile](/researchers/bin-lin)
 
 ---
-### No. 03 · AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration
+### No. 02 · StepAudio 3 Gen Technical Report
 
-**Jiaqi Liu** · 一作 · 36 作者 · [arXiv:2605.20025](https://arxiv.org/abs/2605.20025)
+**Bin Lin** · 一作 · 71 作者 · [arXiv:2609.12945](https://arxiv.org/abs/2609.12945)
 
-_Automating scientific discovery requires more than generating papers from ideas. Real research is iterative: hypotheses are challenged from multiple perspectives, experiments fail and inform the next attempt, and lesson…_
+_We introduce StepAudio 3 Gen, a general-purpose audio generation model that supports zero-shot text-to-speech (TTS), voice design, vocal generation, sound effects, music, vibe speech, and mixtures of multiple audio type…_
 
-→ [profile](/researchers/jiaqi-liu)
-
----
-### No. 04 · The Temporal Structure of Language Processing in the Human Brain Corresponds to The Layered Hierarchy of Deep Language Models
-
-**Ariel Goldstein** · 一作 · 20 作者 · [arXiv:2310.07106](https://arxiv.org/abs/2310.07106)
-
-*深度语言模型分层对应人脑语言处理时序。*
-
-_Deep Language Models (DLMs) provide a novel computational paradigm for understanding the mechanisms of natural language processing in the human brain. Unlike traditional psycholinguistic models, DLMs use layered sequenc…_
-
-→ [profile](/researchers/ariel-goldstein)
+→ [profile](/researchers/bin-lin)
 
 ---
-### No. 05 · Anyprefer: An Agentic Framework for Preference Data Synthesis
+### No. 03 · Three-dimensional imaging of isolated membrane-protein complexes in vacuo with an X-ray laser
 
-**Yiyang Zhou** · 一作 · 16 作者 · [arXiv:2504.19276](https://arxiv.org/abs/2504.19276)
+**Kartik Ayyer** · 一作 · 54 作者 · [arXiv:2610.11729](https://arxiv.org/abs/2610.11729)
 
-_High-quality preference data is essential for aligning foundation models with human values through preference learning. However, manual annotation of such data is often time-consuming and costly. Recent methods often ad…_
+_The prospect of imaging single biomolecules, viruses and cells with intense, ultrashort X-ray pulses has driven the development of X-ray free-electron lasers (XFELs). However, the weak scattering from small particles is…_
 
-→ [profile](/researchers/yiyang-zhou)
-
----
-### No. 06 · SciTS: Scientific Time Series Understanding and Generation with LLMs
-
-**Wen Wu** · 一作 · 15 作者 · [arXiv:2510.03255](https://arxiv.org/abs/2510.03255)
-
-_The scientific reasoning ability of large language models (LLMs) has recently attracted significant attention. Time series, as a fundamental modality in scientific data, presents unique challenges that are often overloo…_
-
-→ [profile](/researchers/wen-wu)
+→ [profile](/researchers/kartik-ayyer)
 
 ---
-### No. 07 · Dr. Claw: An AI Scientist Workspace for Vibe Research
+### No. 04 · Sizing the Universe with DESI Galaxy Sizes: Plain Fundamentals of Fundamental-Plane Lensing
 
-**Dingjie Song** · 一作 · 13 作者 · [arXiv:2609.00365](https://arxiv.org/abs/2609.00365)
+**Kun Xu** · 一作 · 47 作者 · [arXiv:2609.09151](https://arxiv.org/abs/2609.09151)
 
-*用可审计人在环工作流编排编码智能体做研究。*
+_Weak gravitational lensing provides a powerful way to map cosmic structure, but most current measurements rely on galaxy shape distortions from deep imaging surveys and are affected by systematics such as intrinsic alig…_
 
-_Command-line coding agents (e.g., Claude Code, Gemini CLI) can already read and write files and sustain long sessions, yet end-to-end research still fragments across chat tools, IDEs, terminals, and writing environments…_
-
-→ [profile](/researchers/dingjie-song)
+→ [profile](/researchers/kun-xu)
 
 ---
-### No. 08 · LLMs Accelerate Annotation for Medical Information Extraction
+### No. 05 · BlueLM-GUI Technical Report: A Real-Device-Centric Flywheel for Self-Improving Mobile GUI Agents
 
-**Akshay Goel** · 一作 · 13 作者 · [arXiv:2312.02296](https://arxiv.org/abs/2312.02296)
+**Tong Ye** · 一作 · 43 作者 · [arXiv:2609.12394](https://arxiv.org/abs/2609.12394)
 
-_The unstructured nature of clinical notes within electronic health records often conceals vital patient-related information, making it challenging to access or interpret. To uncover this hidden information, specialized…_
+*真机强化学习飞轮实现自我提升GUI智能体*
 
-→ [profile](/researchers/akshay-goel)
+_Mobile GUI agents are shifting from multi-module frameworks to native models trained end-to-end, yet industrial deployment faces three persistent gaps. Sandbox training produces a distribution mismatch with production e…_
 
----
-### No. 09 · Causal Inference in Natural Language Processing: Estimation, Prediction, Interpretation and Beyond
-
-**Amir Feder** · 一作 · 13 作者 · [arXiv:2109.00725](https://arxiv.org/abs/2109.00725)
-
-*统一NLP因果推断，提升鲁棒性、公平性与可解释性。*
-
-_A fundamental goal of scientific research is to learn about causal relationships. However, despite its critical role in the life and social sciences, causality has not had the same importance in Natural Language Process…_
-
-→ [profile](/researchers/amir-feder)
+→ [profile](/researchers/tong-ye)
 
 ---
-### No. 10 · Evaluating Alignment of Behavioral Dispositions in LLMs
+### No. 06 · Assessing the Impact of High-Resolution Imaging on Statistical Validation of TESS Planet Candidates
 
-**Amir Taubenfeld** · 一作 · 11 作者 · [arXiv:2602.11328](https://arxiv.org/abs/2602.11328)
+**Michael Collier** · 一作 · 41 作者 · [arXiv:2608.21560](https://arxiv.org/abs/2608.21560)
 
-_As LLMs integrate into our daily lives, understanding their behavior becomes essential. In this work, we focus on behavioral dispositions$-$the underlying tendencies that shape responses in social contexts$-$and introdu…_
+_High-resolution imaging is widely used to constrain false-positive scenarios in exoplanet validation, but it is a finite follow-up resource that reaches only a subset of candidates, and its population-level impact on va…_
 
-→ [profile](/researchers/amir-taubenfeld)
+→ [profile](/researchers/michael-collier)
+
+---
+### No. 07 · On Scaling Up a Multilingual Vision and Language Model
+
+**Xi Chen** · 一作 · 30 作者 · [arXiv:None](#)
+
+_We explore the boundaries of scaling up a multilingual vision and language model, both in terms of size of the components and the breadth of its training task mixture. Our model achieves new levels of performance on a w…_
+
+→ [profile](/researchers/xi-chen)
+
+---
+### No. 08 · RL Starts before RL: On Policy Distillation for Better Reinforcement Learning
+
+**Shuai Dong** · 一作 · 29 作者 · [arXiv:2609.28145](https://arxiv.org/abs/2609.28145)
+
+_Reinforcement learning (RL) improves reasoning, but its performance depends on the policy from which training begins. We study on-policy distillation (OPD) as a preparation stage for RL and ask whether its benefits exte…_
+
+→ [profile](/researchers/shuai-dong)
+
+---
+### No. 09 · ELUCID-DESI II. Revealing dark matter mass, tidal, and velocity (MTV) fields using galaxy group phase information
+
+**Qingyang Li** · 一作 · 27 作者 · [arXiv:2608.26668](https://arxiv.org/abs/2608.26668)
+
+_We introduce a novel method for reconstructing the cosmic mass, tidal, and velocity (MTV) fields over the redshift range $0 < z < 0.6$ using the phase information of galaxy groups. This approach replaces the explicit th…_
+
+→ [profile](/researchers/qingyang-li)
+
+---
+### No. 10 · Zero2Repo: Can Coding Agents Build Repositories from Scratch?
+
+**Pei Yang** · 一作 · 26 作者 · [arXiv:2609.38269](https://arxiv.org/abs/2609.38269)
+
+_Coding agents are increasingly asked to build software rather than patch it, yet benchmarks for from-scratch repository construction are mostly limited to a single language and depend on manually curated tasks. We intro…_
+
+→ [profile](/researchers/pei-yang)
 
 ---
 
@@ -333,61 +344,61 @@ _As LLMs integrate into our daily lives, understanding their behavior becomes es
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · Qwen Technical Report
+### No. 01 · Three-dimensional imaging of isolated membrane-protein complexes in vacuo with an X-ray laser
 
-**Jinze Bai** · 一作 · 48 作者 · [arXiv:2309.16609](https://arxiv.org/abs/2309.16609)
+**Kartik Ayyer** · 一作 · 54 作者 · [arXiv:2610.11729](https://arxiv.org/abs/2610.11729)
 
-_Large language models (LLMs) have revolutionized the field of artificial intelligence, enabling natural language processing tasks that were previously thought to be exclusive to humans. In this work, we introduce Qwen,…_
+_The prospect of imaging single biomolecules, viruses and cells with intense, ultrashort X-ray pulses has driven the development of X-ray free-electron lasers (XFELs). However, the weak scattering from small particles is…_
 
-**▸ 选中原因：首次出现 · 48 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 54 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/jinze-bai)
-
----
-### No. 02 · The Temporal Structure of Language Processing in the Human Brain Corresponds to The Layered Hierarchy of Deep Language Models
-
-**Ariel Goldstein** · 一作 · 20 作者 · [arXiv:2310.07106](https://arxiv.org/abs/2310.07106)
-
-*深度语言模型分层对应人脑语言处理时序。*
-
-_Deep Language Models (DLMs) provide a novel computational paradigm for understanding the mechanisms of natural language processing in the human brain. Unlike traditional psycholinguistic models, DLMs use layered sequenc…_
-
-**▸ 选中原因：首次出现 · 20 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/ariel-goldstein)
+→ [profile](/researchers/kartik-ayyer)
 
 ---
-### No. 03 · Anyprefer: An Agentic Framework for Preference Data Synthesis
+### No. 02 · BlueLM-GUI Technical Report: A Real-Device-Centric Flywheel for Self-Improving Mobile GUI Agents
 
-**Yiyang Zhou** · 一作 · 16 作者 · [arXiv:2504.19276](https://arxiv.org/abs/2504.19276)
+**Tong Ye** · 一作 · 43 作者 · [arXiv:2609.12394](https://arxiv.org/abs/2609.12394)
 
-_High-quality preference data is essential for aligning foundation models with human values through preference learning. However, manual annotation of such data is often time-consuming and costly. Recent methods often ad…_
+*真机强化学习飞轮实现自我提升GUI智能体*
 
-**▸ 选中原因：首次出现 · 16 作者合作（疑似大组新人）**
+_Mobile GUI agents are shifting from multi-module frameworks to native models trained end-to-end, yet industrial deployment faces three persistent gaps. Sandbox training produces a distribution mismatch with production e…_
 
-→ [profile](/researchers/yiyang-zhou)
+**▸ 选中原因：首次出现 · 43 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/tong-ye)
 
 ---
-### No. 04 · PPA-Game: Characterizing and Learning Competitive Dynamics Among Online Content Creators
+### No. 03 · Assessing the Impact of High-Resolution Imaging on Statistical Validation of TESS Planet Candidates
 
-**Renzhe Xu** · 一作 · 5 作者 · [arXiv:2403.15524](https://arxiv.org/abs/2403.15524)
+**Michael Collier** · 一作 · 41 作者 · [arXiv:2608.21560](https://arxiv.org/abs/2608.21560)
 
-_In this paper, we present the Proportional Payoff Allocation Game (PPA-Game), which characterizes situations where agents compete for divisible resources. In the PPA-game, agents select from available resources, and the…_
+_High-resolution imaging is widely used to constrain false-positive scenarios in exoplanet validation, but it is a finite follow-up resource that reaches only a subset of candidates, and its population-level impact on va…_
+
+**▸ 选中原因：首次出现 · 41 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/michael-collier)
+
+---
+### No. 04 · ProtoCycle: Reflective Tool-Augmented Planning for Text-Guided Protein Design
+
+**Yutang Ge** · 一作 · 10 作者 · [arXiv:2604.16896](https://arxiv.org/abs/2604.16896)
+
+_Designing proteins that satisfy natural language functional requirements is a central goal in protein engineering. A straightforward baseline is to fine-tune generic instruction-tuned LLMs as direct text-to-sequence gen…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/renzhe-xu)
+→ [profile](/researchers/yutang-ge)
 
 ---
-### No. 05 · Competing for Shareable Arms in Multi-Player Multi-Armed Bandits
+### No. 05 · MolReasoner: Toward Effective and Interpretable Reasoning for Molecular LLMs
 
-**Renzhe Xu** · 一作 · 5 作者 · [arXiv:2305.19158](https://arxiv.org/abs/2305.19158)
+**Guojiang Zhao** · 一作 · 16 作者 · [arXiv:2508.02066](https://arxiv.org/abs/2508.02066)
 
-_Competitions for shareable and limited resources have long been studied with strategic agents. In reality, agents often have to learn and maximize the rewards of the resources at the same time. To design an individualiz…_
+_Large Language Models (LLMs) have shown impressive performance across various domains, but their ability to perform molecular reasoning remains underexplored. Existing methods mostly rely on general-purpose prompting, w…_
 
 **▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
 
-→ [profile](/researchers/renzhe-xu)
+→ [profile](/researchers/guojiang-zhao)
 
 ---
 
