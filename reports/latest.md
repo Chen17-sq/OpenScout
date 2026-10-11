@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 149                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · SATURDAY, OCTOBER 10, 2026
+VOL. 1 · NO. 150                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · SUNDAY, OCTOBER 11, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 149 · 2026-10-10
+> *All The Researchers Fit To Watch* — Vol. 1, No. 150 · 2026-10-11
 
-_Auto-generated at 2026-10-10T06:57:34+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-10-11T07:03:21+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,129 +15,119 @@ _Auto-generated at 2026-10-10T06:57:34+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **49760** | 348 | 1054 | 17 | 119 |
+| **50063** | 81 | 303 | 18 | 119 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · Reflections and Fragments: Securing LLMs Against Sequential Mosaic Attacks
+### No. 01 · LightSplat: Real-Time High-Fidelity 3D Gaussian SLAM with Loop Closure
 
-**Emanuele La Malfa** · 一作 · 7 作者 · [arXiv:2610.05346](https://arxiv.org/abs/2610.05346)
+**Junze Bao** · 一作 · 8 作者 · [arXiv:2609.07274](https://arxiv.org/abs/2609.07274)
 
-*用watchman在线状态防多轮拼接攻击*
+*混合表示3DGS SLAM，支持在线回环与实时高保真建图。*
 
-_Self-play red-teaming improves language-model safety by pitting attacker and defender roles against each other in a zero-sum game. However, real adversaries increasingly use mosaic attacks: multi-turn sequences whose in…_
+_SLAM systems based on 3D Gaussian Splatting (3DGS) have recently demonstrated promising reconstruction accuracy for dense 3D scene representations. However, current 3DGS systems struggle to meet the strict demands of re…_
 
-→ [profile](/researchers/emanuele-la-malfa)
-
----
-### No. 02 · PhysEvo: Astra Can Act, Let It
-
-**Wenqing Tian** · 一作 · 6 作者 · [arXiv:2610.08995](https://arxiv.org/abs/2610.08995)
-
-_Astra can act, yet reliable manipulation depends on the system through which it observes and controls the world. We introduce PhysEvo, a framework for physical recursive self-improvement (RSI) around a single frozen mod…_
-
-→ [profile](/researchers/wenqing-tian)
+→ [profile](/researchers/junze-bao)
 
 ---
-### No. 03 · PWM: Personalized World Models with Online Reinforcement Learning
+### No. 02 · Benchmarking Open-Source Speech Emotion Recognition in Naturalistic Mandarin Spine Clinic Consultations: A Pilot Validation Study
 
-**Zhexin Lou** · 一作 · 6 作者 · [arXiv:2610.04920](https://arxiv.org/abs/2610.04920)
+**Tsz Yuet Yeung** · 一作 · 6 作者 · [arXiv:2609.26054](https://arxiv.org/abs/2609.26054)
 
-_Pretrained world models can generate diverse environments, yet users often want to explore a particular scene specified by their own video. This requires learning the scene's visual identity while retaining the quality…_
+*在真实普通话门诊语音中基准测试开源语音情感识别模型*
 
-→ [profile](/researchers/zhexin-lou)
+_Speech emotion recognition (SER) may enable passive affect monitoring in clinical encounters, but most systems are validated on acted laboratory speech rather than naturalistic Mandarin outpatient consultations. We benc…_
 
----
-### No. 04 · False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents
-
-**Meijia Chen** · 一作 · 15 作者 · [arXiv:2609.39102](https://arxiv.org/abs/2609.39102)
-
-_Self-evolving search agents build their own training curricula by jointly optimizing a proposer that generates questions and a solver that answers them. This closed loop introduces a failure mode we call co-cheating: th…_
-
-→ [profile](/researchers/meijia-chen)
+→ [profile](/researchers/tsz-yuet-yeung)
 
 ---
-### No. 05 · HumanoidTTT: Test-Time Capability Reuse for Efficient Humanoid Control
+### No. 03 · Homogeneous Semantic Alignment and Hierarchical Expert Routing for Radiology Report Generation
 
-**Jingtai Yang** · 一作 · 5 作者 · [arXiv:2610.00198](https://arxiv.org/abs/2610.00198)
+**Erjian Zhang** · 一作 · 6 作者 · [arXiv:2610.04499](https://arxiv.org/abs/2610.04499)
 
-_Recent advances in motion generation and whole-body tracking have enabled humanoid robots to execute increasingly diverse motions, yet the same motion capabilities may be requested repeatedly during continual deployment…_
+*同质语义对齐与分层专家路由生成放射报告*
 
-→ [profile](/researchers/jingtai-yang)
+_Radiology report generation (RRG) aims to convert medical images into diagnostic texts to assist in clinical decision-making and alleviate the workload of physicians. Although existing methods have made extensive progre…_
 
----
-### No. 06 · BlueLM-GUI Technical Report: A Real-Device-Centric Flywheel for Self-Improving Mobile GUI Agents
-
-**Tong Ye** · 一作 · 43 作者 · [arXiv:2609.12394](https://arxiv.org/abs/2609.12394)
-
-*真机强化学习飞轮实现自我提升GUI智能体*
-
-_Mobile GUI agents are shifting from multi-module frameworks to native models trained end-to-end, yet industrial deployment faces three persistent gaps. Sandbox training produces a distribution mismatch with production e…_
-
-→ [profile](/researchers/tong-ye)
+→ [profile](/researchers/erjian-zhang)
 
 ---
-### No. 07 · Adaptive Vision-Language Grasping via Composable Foundation Priors and Generalizable Grasp Synthesis
+### No. 04 · Metonymic Circuits for Abstract Concept Grounding in Vision Transformers
 
-**Sixu Yan** · 一作 · 14 作者 · [arXiv:2609.04096](https://arxiv.org/abs/2609.04096)
+**Jing Ding** · 一作 · 5 作者 · [arXiv:2610.06928](https://arxiv.org/abs/2610.06928)
 
-*解耦物理抓取合成与任务理解，可组合基础先验实现跨手抓取。*
+*用Transcoders揭示ViT抽象概念的转喻电路。*
 
-_This paper proposes AdaRoboVLG, a task-adaptive Vision-Language-Grasp (VLG) framework that supports generalizable grasp synthesis across different robotic hands. Unlike existing VLG methods that tightly couple foundatio…_
+_We study how Vision Transformers ground abstract concepts (e.g., angry) when training data provide limited direct referential evidence. We hypothesize a metonymic grounding mechanism in which abstract predictions are dr…_
 
-→ [profile](/researchers/sixu-yan)
-
----
-### No. 08 · APEx: Distillation of Agent Procedural Experience for Adaptive Deep Research Question Answering
-
-**Jie Ding** · 一作 · 5 作者 · [arXiv:2609.02253](https://arxiv.org/abs/2609.02253)
-
-*分层经验蒸馏结合GRPO闭环优化深度研究智能体*
-
-_Deep research agents augment large language models with external tools to answer complex, long-horizon questions through multi-turn reasoning. Learning from prior experience is crucial for continual improvement, yet exi…_
-
-→ [profile](/researchers/jie-ding)
+→ [profile](/researchers/jing-ding)
 
 ---
-### No. 09 · ZipTok3D: High-Fidelity 3D Tokenization with Compact Token Prefixes
+### No. 05 · SIMLIFE: Pattern Understanding for Long-Horizon Human-Agent Partnership
 
-**Mingda Lin** · 一作 · 10 作者 · [arXiv:2609.01740](https://arxiv.org/abs/2609.01740)
+**Run Peng** · 一作 · 10 作者 · [arXiv:2609.19610](https://arxiv.org/abs/2609.19610)
 
-*嵌套dropout前缀式3D token化，单token高保真重建。*
+*提出SimLife平台评测长时程行为模式理解*
 
-_Compact token sequences are essential for efficient 3D generation. However, existing 3D tokenizers typically organize latent representations either over spatial regions or as fixed-size sets of global tokens, both suffe…_
+_Understanding humans over long horizons requires agents to infer not only what people need in the moment, but also how routines form, why they repeat, and when they change. We introduce SimLife, a scalable platform for…_
 
-→ [profile](/researchers/mingda-lin)
+→ [profile](/researchers/run-peng)
 
 ---
-### No. 10 · Learning how to Forget: Fine-tuning for Long-Context Sparse Attention
+### No. 06 · Neuro-Symbolic Computer Use: Learning Reusable Policies for Reliable and Efficient Execution
 
-**Matthias Seeger** · 一作 · 5 作者 · [arXiv:2608.19920](https://arxiv.org/abs/2608.19920)
+**Hyewon Suh** · 一作 · 8 作者 · [arXiv:2609.36927](https://arxiv.org/abs/2609.36927)
 
-*微调任意稀疏注意力策略实现长上下文推理*
+_Many computer tasks recur: the same workflow runs many times, with new inputs and from different starting states. Current computer-use agents re-plan every step of every run, which makes them costly and unreliable on su…_
 
-_A lot of prior work addressed key-value (KV) cache selection and compression by sparse attention to enable long-context inference for transformer language models without excessive hardware budgets. We provide a new meth…_
+→ [profile](/researchers/hyewon-suh)
 
-→ [profile](/researchers/matthias-seeger)
+---
+### No. 07 · Decoder Model Compatibility Provides Information beyond the Logical Gap under Drifting and Correlated Quantum Noise
+
+**Aaron C. Hoyt** · 一作 · 11 作者 · [arXiv:2609.29018](https://arxiv.org/abs/2609.29018)
+
+_Quantum error-correcting decoders provide both corrections and confidence estimates for the logical-error risk of individual measurement records. Such confidence can guide postselection, but it depends on the accuracy o…_
+
+→ [profile](/researchers/aaron-c-hoyt)
+
+---
+### No. 08 · Assessing Adversarial Robustness of Latent Reasoning Models
+
+**Shaolong Chen** · 一作 · 4 作者 · [arXiv:2609.22228](https://arxiv.org/abs/2609.22228)
+
+_Large language models increasingly rely on long chain-of-thought (CoT) trajectories for complex reasoning, but autoregressive generation brings substantial memory and inference costs. Latent reasoning models (LRMs) offe…_
+
+→ [profile](/researchers/shaolong-chen)
+
+---
+### No. 09 · What Guides the Agent? Adjudicating Unauthorized Behavior via Localizing Behavior-Guiding Instructions
+
+**Yichao Gao** · 一作 · 7 作者 · [arXiv:2608.24022](https://arxiv.org/abs/2608.24022)
+
+_LLM agents integrated with external resources gain complex task capabilities, yet the unified natural-language context channel makes them vulnerable to injection attacks: untrusted external data may be dynamically parse…_
+
+→ [profile](/researchers/yichao-gao)
+
+---
+### No. 10 · Answer Presence Drives RAG Rewriting Gains
+
+**Yuejie Li** · 一作 · 10 作者 · [arXiv:2606.05633](https://arxiv.org/abs/2606.05633)
+
+_Retrieval-augmented QA pipelines often route retrieved passages through an LLM \emph{rewriter} before a smaller reader, lifting F1 by tens of points on multi-hop benchmarks; this gain is typically credited to improved e…_
+
+→ [profile](/researchers/yuejie-li)
 
 ---
 
-## Section B · 🔄 动态更新 · 10 项
+## Section B · 🔄 动态更新 · 2 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Bowen Zhou](/researchers/bowen-zhou) | Block-Sparse Attention with Semantic-Geometric Decoupled Routing | — | [2609.22884](https://arxiv.org/abs/2609.22884) |
-| [Dahua Lin](/researchers/dahua-lin) | SciDocBench: A Workflow-Centered Benchmark and Data Pipeline for Scie… | — | [2609.05141](https://arxiv.org/abs/2609.05141) |
-| [Dahua Lin](/researchers/dahua-lin) | HPSD: Hybrid-Policy Self-Distillation for Text-Image-to-Video Diffusi… | — | [2608.13205](https://arxiv.org/abs/2608.13205) |
-| [Linfeng Zhang](/researchers/linfeng-zhang) | ProtoCycle: Reflective Tool-Augmented Planning for Text-Guided Protei… | — | [2604.16896](https://arxiv.org/abs/2604.16896) |
-| [Linfeng Zhang](/researchers/linfeng-zhang) | MolReasoner: Toward Effective and Interpretable Reasoning for Molecul… | — | [2508.02066](https://arxiv.org/abs/2508.02066) |
-| [He Wang](/researchers/he-wang) | Chumor 2.0: Towards Benchmarking Chinese Humor Understanding | — | [2412.17729](https://arxiv.org/abs/2412.17729) |
-| [He Wang](/researchers/he-wang) | Chumor 1.0: A Truly Funny and Challenging Chinese Humor Understanding… | — | [2406.12754](https://arxiv.org/abs/2406.12754) |
-| [Maosong Sun](/researchers/maosong-sun) | Scaling Large Language Model-based Multi-Agent Collaboration | — | [2406.07155](https://arxiv.org/abs/2406.07155) |
-| [Chelsea Finn](/researchers/chelsea-finn) | π*₀.₆: a VLA That Learns From Experience | — | [None](#) |
-| [Sergey Levine](/researchers/sergey-levine) | π*₀.₆: a VLA That Learns From Experience | — | [None](#) |
+| [Yilun Du](/researchers/yilun-du) | Robot Learning with Visual Predicted Force | — | [2610.04741](https://arxiv.org/abs/2610.04741) |
+| [Jiajun Wu](/researchers/jiajun-wu) | Robot Learning with Visual Predicted Force | — | [2610.04741](https://arxiv.org/abs/2610.04741) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -205,7 +195,16 @@ _We present Flash-GMM, a fused Triton kernel for efficient computation of Gaussi
 → [profile](/researchers/gal-bloch)
 
 ---
-### No. 07 · Vinamax: a macrospin simulation tool for magnetic nanoparticles
+### No. 07 · Harnessing Streaming Video in the Wild
+
+**Dingyu Yao** · 一作 · 11 作者 · [arXiv:2606.08615](https://arxiv.org/abs/2606.08615)
+
+_Vision-Language Models (VLMs) are increasingly required to process unbounded video streams in applications such as video-call assistants, live commentary, and embodied robots. An ideal streaming system should support pr…_
+
+→ [profile](/researchers/dingyu-yao)
+
+---
+### No. 08 · Vinamax: a macrospin simulation tool for magnetic nanoparticles
 
 **Jonathan Leliaert** · 一作 · 5 作者 · [arXiv:1408.0908](https://arxiv.org/abs/1408.0908)
 
@@ -214,7 +213,7 @@ _We present Vinamax, a simulation tool for nanoparticles that aims at simulating
 → [profile](/researchers/jonathan-leliaert)
 
 ---
-### No. 08 · Why Personalizing Deep Learning-Based Code Completion Tools Matters
+### No. 09 · Why Personalizing Deep Learning-Based Code Completion Tools Matters
 
 **Alessandro Giagnorio** · 一作 · 3 作者 · [arXiv:2503.14201](https://arxiv.org/abs/2503.14201)
 
@@ -223,17 +222,6 @@ _We present Vinamax, a simulation tool for nanoparticles that aims at simulating
 _Deep learning (DL)-based code completion tools have transformed software development by enabling advanced code generation. These tools leverage models trained on vast amounts of code from numerous repositories, capturin…_
 
 → [profile](/researchers/alessandro-giagnorio)
-
----
-### No. 09 · InstructMix2Mix: Consistent Sparse-View Editing Through Multi-View Model Personalization
-
-**Daniel Gilo** · 一作 · 2 作者 · [arXiv:2511.14899](https://arxiv.org/abs/2511.14899)
-
-*用2D扩散模型蒸馏到多视图扩散模型实现稀疏视角一致编辑。*
-
-_We address the task of multi-view image editing from sparse input views, where the inputs can be seen as a mix of images capturing the scene from different viewpoints. The goal is to modify the scene according to a text…_
-
-→ [profile](/researchers/daniel-gilo)
 
 ---
 
@@ -245,160 +233,138 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · StepAudio 3 Realtime Technical Report
+### No. 01 · MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement
 
-**Bin Lin** · 一作 · 90 作者 · [arXiv:2609.14005](https://arxiv.org/abs/2609.14005)
+**Xiaomi LLM-Core Team** · 一作 · 150 作者 · [arXiv:2610.11959](https://arxiv.org/abs/2610.11959)
 
-_Realtime spoken interaction demands deep reasoning, prompt responses, and fluid turn-taking. We present StepAudio 3 Realtime, an audio-language foundation model organized around a continuous listen-converse-think-act lo…_
+_Reinforcement learning (RL) is the central training paradigm for advancing large foundation models towards self-improvement. This report introduces the MiMo-V2.6 series, an omni-modal family that pushes the frontier of…_
 
-→ [profile](/researchers/bin-lin)
-
----
-### No. 02 · StepAudio 3 Gen Technical Report
-
-**Bin Lin** · 一作 · 71 作者 · [arXiv:2609.12945](https://arxiv.org/abs/2609.12945)
-
-_We introduce StepAudio 3 Gen, a general-purpose audio generation model that supports zero-shot text-to-speech (TTS), voice design, vocal generation, sound effects, music, vibe speech, and mixtures of multiple audio type…_
-
-→ [profile](/researchers/bin-lin)
+→ [profile](/researchers/xiaomi-llm-core-team)
 
 ---
-### No. 03 · Three-dimensional imaging of isolated membrane-protein complexes in vacuo with an X-ray laser
+### No. 02 · Dense Cores in the Vicinity of an HII Region
 
-**Kartik Ayyer** · 一作 · 54 作者 · [arXiv:2610.11729](https://arxiv.org/abs/2610.11729)
+**Ruofei Zhang** · 一作 · 26 作者 · [arXiv:2608.27913](https://arxiv.org/abs/2608.27913)
 
-_The prospect of imaging single biomolecules, viruses and cells with intense, ultrashort X-ray pulses has driven the development of X-ray free-electron lasers (XFELs). However, the weak scattering from small particles is…_
+_Massive stars strongly influence their surroundings through radiative and mechanical feedback, but its effects on dense gas structures at sub-pc scales remain poorly constrained. We investigate how feedback from a newly…_
 
-→ [profile](/researchers/kartik-ayyer)
-
----
-### No. 04 · Sizing the Universe with DESI Galaxy Sizes: Plain Fundamentals of Fundamental-Plane Lensing
-
-**Kun Xu** · 一作 · 47 作者 · [arXiv:2609.09151](https://arxiv.org/abs/2609.09151)
-
-_Weak gravitational lensing provides a powerful way to map cosmic structure, but most current measurements rely on galaxy shape distortions from deep imaging surveys and are affected by systematics such as intrinsic alig…_
-
-→ [profile](/researchers/kun-xu)
+→ [profile](/researchers/ruofei-zhang)
 
 ---
-### No. 05 · BlueLM-GUI Technical Report: A Real-Device-Centric Flywheel for Self-Improving Mobile GUI Agents
+### No. 03 · The Past Frames the Future: Memory for Autoregressive Video Generation
 
-**Tong Ye** · 一作 · 43 作者 · [arXiv:2609.12394](https://arxiv.org/abs/2609.12394)
+**Harold Haodong Chen** · 一作 · 25 作者 · [arXiv:2609.28466](https://arxiv.org/abs/2609.28466)
 
-*真机强化学习飞轮实现自我提升GUI智能体*
+_Advances in generative models have improved video fidelity, enabling long-horizon generation, interactive world modeling, and evolving visual environments. Autoregressive (AR) video generation extends visual sequences t…_
 
-_Mobile GUI agents are shifting from multi-module frameworks to native models trained end-to-end, yet industrial deployment faces three persistent gaps. Sandbox training produces a distribution mismatch with production e…_
-
-→ [profile](/researchers/tong-ye)
+→ [profile](/researchers/harold-haodong-chen)
 
 ---
-### No. 06 · Assessing the Impact of High-Resolution Imaging on Statistical Validation of TESS Planet Candidates
+### No. 04 · Magnetic Fields in Massive Star-forming Regions (MagMaR). IX. Radiative Torque Alignment and Disruption in NGC6334I
 
-**Michael Collier** · 一作 · 41 作者 · [arXiv:2608.21560](https://arxiv.org/abs/2608.21560)
+**Vineet Rawat** · 一作 · 21 作者 · [arXiv:2609.03458](https://arxiv.org/abs/2609.03458)
 
-_High-resolution imaging is widely used to constrain false-positive scenarios in exoplanet validation, but it is a finite follow-up resource that reaches only a subset of candidates, and its population-level impact on va…_
+_Intense radiation from high-mass stars is expected to significantly affect dust grain alignment and evolution through RAdiative Torques (RATs). We investigate this effect in a massive star-forming region, NGC6334I, usin…_
 
-→ [profile](/researchers/michael-collier)
-
----
-### No. 07 · On Scaling Up a Multilingual Vision and Language Model
-
-**Xi Chen** · 一作 · 30 作者 · [arXiv:None](#)
-
-_We explore the boundaries of scaling up a multilingual vision and language model, both in terms of size of the components and the breadth of its training task mixture. Our model achieves new levels of performance on a w…_
-
-→ [profile](/researchers/xi-chen)
+→ [profile](/researchers/vineet-rawat)
 
 ---
-### No. 08 · RL Starts before RL: On Policy Distillation for Better Reinforcement Learning
+### No. 05 · ReDeck: Step-Level Render-Grounded Refinement for Document-to-Slide Generation
 
-**Shuai Dong** · 一作 · 29 作者 · [arXiv:2609.28145](https://arxiv.org/abs/2609.28145)
+**Muzhao Tian** · 一作 · 17 作者 · [arXiv:2609.00194](https://arxiv.org/abs/2609.00194)
 
-_Reinforcement learning (RL) improves reasoning, but its performance depends on the policy from which training begins. We study on-policy distillation (OPD) as a preparation stage for RL and ask whether its benefits exte…_
+*步骤级渲染反馈的幻灯片迭代优化*
 
-→ [profile](/researchers/shuai-dong)
+_Document-to-slide generation is challenging because slides are dense editable artifacts that require both faithful content selection and precise spatial layout. Recent slide agents adopt iterative reflection, but typica…_
 
----
-### No. 09 · ELUCID-DESI II. Revealing dark matter mass, tidal, and velocity (MTV) fields using galaxy group phase information
-
-**Qingyang Li** · 一作 · 27 作者 · [arXiv:2608.26668](https://arxiv.org/abs/2608.26668)
-
-_We introduce a novel method for reconstructing the cosmic mass, tidal, and velocity (MTV) fields over the redshift range $0 < z < 0.6$ using the phase information of galaxy groups. This approach replaces the explicit th…_
-
-→ [profile](/researchers/qingyang-li)
+→ [profile](/researchers/muzhao-tian)
 
 ---
-### No. 10 · Zero2Repo: Can Coding Agents Build Repositories from Scratch?
+### No. 06 · An Eccentric Massive Protobinary Assembled via a Core-merger Parabolic Encounter
 
-**Pei Yang** · 一作 · 26 作者 · [arXiv:2609.38269](https://arxiv.org/abs/2609.38269)
+**Yao Wang** · 一作 · 17 作者 · [arXiv:2609.07390](https://arxiv.org/abs/2609.07390)
 
-_Coding agents are increasingly asked to build software rather than patch it, yet benchmarks for from-scratch repository construction are mostly limited to a single language and depend on manually curated tasks. We intro…_
+_Most massive stars form in binary systems, which profoundly influence their subsequent evolution. However, how such systems form remains poorly understood, with several competing scenarios proposed, including disk fragm…_
 
-→ [profile](/researchers/pei-yang)
+→ [profile](/researchers/yao-wang)
+
+---
+### No. 07 · Audio Editing in the Era of Foundation Models: A Survey
+
+**Changhao Pan** · 一作 · 16 作者 · [arXiv:2606.23139](https://arxiv.org/abs/2606.23139)
+
+_Audio editing aims to modify a given synthetic or real-world audio signal to satisfy specific user needs. As a promising yet challenging direction in AIGC, it has attracted increasing attention. Recent advances in audio…_
+
+→ [profile](/researchers/changhao-pan)
+
+---
+### No. 08 · SafeCoEvo: Co-Evolving Safety Harnesses and Guards for LLM Agents at Test-Time
+
+**Yu Cheng** · 一作 · 15 作者 · [arXiv:2609.36580](https://arxiv.org/abs/2609.36580)
+
+_LLM agents deployed in real-world environments continually encounter new tasks and safety risks, while execution feedback typically becomes available only after each task is completed. However, existing self-evolving ap…_
+
+→ [profile](/researchers/yu-cheng)
+
+---
+### No. 09 · HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing
+
+**Jianyu Wei** · 一作 · 15 作者 · [arXiv:2609.26368](https://arxiv.org/abs/2609.26368)
+
+_Long-horizon and multi-turn agents typically generate short actions and process long observations from tools and environments. This growing context demands efficient prefill, compact KV-cache storage, and accurate long-…_
+
+→ [profile](/researchers/jianyu-wei)
+
+---
+### No. 10 · AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks
+
+**Hongjin Qian** · 一作 · 14 作者 · [arXiv:2609.38288](https://arxiv.org/abs/2609.38288)
+
+*用长程反思数据训练LLM智能体自我改进*
+
+_We present AREX-2, an effort to advance the self-improving capability of LLM agents, which we define as the ability to iteratively refine a solution at test time. This ability rests on two complementary capabilities: re…_
+
+→ [profile](/researchers/hongjin-qian)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 5 个
+## Section F · 🌙 Sleeper Picks · 3 个
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · Three-dimensional imaging of isolated membrane-protein complexes in vacuo with an X-ray laser
+### No. 01 · MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement
 
-**Kartik Ayyer** · 一作 · 54 作者 · [arXiv:2610.11729](https://arxiv.org/abs/2610.11729)
+**Xiaomi LLM-Core Team** · 一作 · 150 作者 · [arXiv:2610.11959](https://arxiv.org/abs/2610.11959)
 
-_The prospect of imaging single biomolecules, viruses and cells with intense, ultrashort X-ray pulses has driven the development of X-ray free-electron lasers (XFELs). However, the weak scattering from small particles is…_
+_Reinforcement learning (RL) is the central training paradigm for advancing large foundation models towards self-improvement. This report introduces the MiMo-V2.6 series, an omni-modal family that pushes the frontier of…_
 
-**▸ 选中原因：首次出现 · 54 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 150 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/kartik-ayyer)
-
----
-### No. 02 · BlueLM-GUI Technical Report: A Real-Device-Centric Flywheel for Self-Improving Mobile GUI Agents
-
-**Tong Ye** · 一作 · 43 作者 · [arXiv:2609.12394](https://arxiv.org/abs/2609.12394)
-
-*真机强化学习飞轮实现自我提升GUI智能体*
-
-_Mobile GUI agents are shifting from multi-module frameworks to native models trained end-to-end, yet industrial deployment faces three persistent gaps. Sandbox training produces a distribution mismatch with production e…_
-
-**▸ 选中原因：首次出现 · 43 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/tong-ye)
+→ [profile](/researchers/xiaomi-llm-core-team)
 
 ---
-### No. 03 · Assessing the Impact of High-Resolution Imaging on Statistical Validation of TESS Planet Candidates
+### No. 02 · Dense Cores in the Vicinity of an HII Region
 
-**Michael Collier** · 一作 · 41 作者 · [arXiv:2608.21560](https://arxiv.org/abs/2608.21560)
+**Ruofei Zhang** · 一作 · 26 作者 · [arXiv:2608.27913](https://arxiv.org/abs/2608.27913)
 
-_High-resolution imaging is widely used to constrain false-positive scenarios in exoplanet validation, but it is a finite follow-up resource that reaches only a subset of candidates, and its population-level impact on va…_
+_Massive stars strongly influence their surroundings through radiative and mechanical feedback, but its effects on dense gas structures at sub-pc scales remain poorly constrained. We investigate how feedback from a newly…_
 
-**▸ 选中原因：首次出现 · 41 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 26 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/michael-collier)
-
----
-### No. 04 · ProtoCycle: Reflective Tool-Augmented Planning for Text-Guided Protein Design
-
-**Yutang Ge** · 一作 · 10 作者 · [arXiv:2604.16896](https://arxiv.org/abs/2604.16896)
-
-_Designing proteins that satisfy natural language functional requirements is a central goal in protein engineering. A straightforward baseline is to fine-tune generic instruction-tuned LLMs as direct text-to-sequence gen…_
-
-**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
-
-→ [profile](/researchers/yutang-ge)
+→ [profile](/researchers/ruofei-zhang)
 
 ---
-### No. 05 · MolReasoner: Toward Effective and Interpretable Reasoning for Molecular LLMs
+### No. 03 · The Past Frames the Future: Memory for Autoregressive Video Generation
 
-**Guojiang Zhao** · 一作 · 16 作者 · [arXiv:2508.02066](https://arxiv.org/abs/2508.02066)
+**Harold Haodong Chen** · 一作 · 25 作者 · [arXiv:2609.28466](https://arxiv.org/abs/2609.28466)
 
-_Large Language Models (LLMs) have shown impressive performance across various domains, but their ability to perform molecular reasoning remains underexplored. Existing methods mostly rely on general-purpose prompting, w…_
+_Advances in generative models have improved video fidelity, enabling long-horizon generation, interactive world modeling, and evolving visual environments. Autoregressive (AR) video generation extends visual sequences t…_
 
-**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+**▸ 选中原因：首次出现 · 25 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/guojiang-zhao)
+→ [profile](/researchers/harold-haodong-chen)
 
 ---
 
