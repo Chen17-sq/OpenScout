@@ -1,13 +1,13 @@
 ```
-VOL. 1 · NO. 150                              BEIJING EDITION
-DAILY · 具身 / 世界模型 / AI4SCI · SUNDAY, OCTOBER 11, 2026
+VOL. 1 · NO. 151                              BEIJING EDITION
+DAILY · 具身 / 世界模型 / AI4SCI · MONDAY, OCTOBER 12, 2026
 ```
 
 # OpenScout
 
-> *All The Researchers Fit To Watch* — Vol. 1, No. 150 · 2026-10-11
+> *All The Researchers Fit To Watch* — Vol. 1, No. 151 · 2026-10-12
 
-_Auto-generated at 2026-10-11T07:03:21+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
+_Auto-generated at 2026-10-12T07:03:41+00:00 · [完整看板](http://localhost:5174) · [API](/briefs/today)_
 
 ---
 
@@ -15,119 +15,125 @@ _Auto-generated at 2026-10-11T07:03:21+00:00 · [完整看板](http://localhost:
 
 | Tracked | 今日新增 paper | 新冒头 | 毕业季 PhD | 即将入职 AP |
 | ---: | ---: | ---: | ---: | ---: |
-| **50063** | 81 | 303 | 18 | 119 |
+| **51466** | 235 | 1403 | 18 | 119 |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
 ## Section B · 🆕 今日新冒头 · 10 人
 
-### No. 01 · LightSplat: Real-Time High-Fidelity 3D Gaussian SLAM with Loop Closure
+### No. 01 · Smaller Models, Better Rejects: Preference Distillation Scaling
 
-**Junze Bao** · 一作 · 8 作者 · [arXiv:2609.07274](https://arxiv.org/abs/2609.07274)
+**Rui Cai** · 一作 · 18 作者 · [arXiv:2609.38987](https://arxiv.org/abs/2609.38987)
 
-*混合表示3DGS SLAM，支持在线回环与实时高保真建图。*
+*小模型生成拒绝样本可低成本提升偏好蒸馏效果*
 
-_SLAM systems based on 3D Gaussian Splatting (3DGS) have recently demonstrated promising reconstruction accuracy for dense 3D scene representations. However, current 3DGS systems struggle to meet the strict demands of re…_
+_Preference distillation typically treats a teacher response as preferred and the student's own response as rejected. This assumes that self-generated failures are the most informative negatives and that rejects must com…_
 
-→ [profile](/researchers/junze-bao)
-
----
-### No. 02 · Benchmarking Open-Source Speech Emotion Recognition in Naturalistic Mandarin Spine Clinic Consultations: A Pilot Validation Study
-
-**Tsz Yuet Yeung** · 一作 · 6 作者 · [arXiv:2609.26054](https://arxiv.org/abs/2609.26054)
-
-*在真实普通话门诊语音中基准测试开源语音情感识别模型*
-
-_Speech emotion recognition (SER) may enable passive affect monitoring in clinical encounters, but most systems are validated on acted laboratory speech rather than naturalistic Mandarin outpatient consultations. We benc…_
-
-→ [profile](/researchers/tsz-yuet-yeung)
+→ [profile](/researchers/rui-cai)
 
 ---
-### No. 03 · Homogeneous Semantic Alignment and Hierarchical Expert Routing for Radiology Report Generation
+### No. 02 · The GUI Is Not the State: Diagnosing State Aliasing in GUI World Models
 
-**Erjian Zhang** · 一作 · 6 作者 · [arXiv:2610.04499](https://arxiv.org/abs/2610.04499)
+**Dongsheng Liu** · 一作 · 10 作者 · [arXiv:2609.32679](https://arxiv.org/abs/2609.32679)
 
-*同质语义对齐与分层专家路由生成放射报告*
+*揭示GUI世界模型状态别名并做预测状态恢复*
 
-_Radiology report generation (RRG) aims to convert medical images into diagnostic texts to assist in clinical decision-making and alleviate the workload of physicians. Although existing methods have made extensive progre…_
+_GUI World Models (GUI-WMs) are increasingly used to predict future states for agent planning and simulation, yet most existing formulations condition only on the current GUI observation and action. We identify state ali…_
 
-→ [profile](/researchers/erjian-zhang)
-
----
-### No. 04 · Metonymic Circuits for Abstract Concept Grounding in Vision Transformers
-
-**Jing Ding** · 一作 · 5 作者 · [arXiv:2610.06928](https://arxiv.org/abs/2610.06928)
-
-*用Transcoders揭示ViT抽象概念的转喻电路。*
-
-_We study how Vision Transformers ground abstract concepts (e.g., angry) when training data provide limited direct referential evidence. We hypothesize a metonymic grounding mechanism in which abstract predictions are dr…_
-
-→ [profile](/researchers/jing-ding)
+→ [profile](/researchers/dongsheng-liu)
 
 ---
-### No. 05 · SIMLIFE: Pattern Understanding for Long-Horizon Human-Agent Partnership
+### No. 03 · MM-VeriAgent: Learning to Use Extensive Tools to Verify Multimodal Misinformation with Reinforcement Learning
 
-**Run Peng** · 一作 · 10 作者 · [arXiv:2609.19610](https://arxiv.org/abs/2609.19610)
+**Peipei Li** · 一作 · 5 作者 · [arXiv:2609.30698](https://arxiv.org/abs/2609.30698)
 
-*提出SimLife平台评测长时程行为模式理解*
+*强化学习训练LVLM用工具验证多模态虚假信息*
 
-_Understanding humans over long horizons requires agents to infer not only what people need in the moment, but also how routines form, why they repeat, and when they change. We introduce SimLife, a scalable platform for…_
+_Real-world multimodal misinformation often involves mixed forgery sources, requiring sample-specific detection strategies. Existing tool-augmented methods rely on predefined workflows or inference-time planning, limitin…_
 
-→ [profile](/researchers/run-peng)
-
----
-### No. 06 · Neuro-Symbolic Computer Use: Learning Reusable Policies for Reliable and Efficient Execution
-
-**Hyewon Suh** · 一作 · 8 作者 · [arXiv:2609.36927](https://arxiv.org/abs/2609.36927)
-
-_Many computer tasks recur: the same workflow runs many times, with new inputs and from different starting states. Current computer-use agents re-plan every step of every run, which makes them costly and unreliable on su…_
-
-→ [profile](/researchers/hyewon-suh)
+→ [profile](/researchers/peipei-li)
 
 ---
-### No. 07 · Decoder Model Compatibility Provides Information beyond the Logical Gap under Drifting and Correlated Quantum Noise
+### No. 04 · Bridging the Confidence Gap: Temperature Scaling for Calibrating Test-Time Prompt Tuning
 
-**Aaron C. Hoyt** · 一作 · 11 作者 · [arXiv:2609.29018](https://arxiv.org/abs/2609.29018)
+**Yuwei Liang** · 一作 · 5 作者 · [arXiv:2609.17386](https://arxiv.org/abs/2609.17386)
 
-_Quantum error-correcting decoders provide both corrections and confidence estimates for the logical-error risk of individual measurement records. Such confidence can guide postselection, but it depends on the accuracy o…_
+*温度缩放校准测试时提示微调，保精度。*
 
-→ [profile](/researchers/aaron-c-hoyt)
+_Test-time prompt tuning (TPT) enables adaptation on a single test instance, achieving improved accuracy but often sacrificing calibration performance. Most existing calibration methods introduce additional regularizatio…_
 
----
-### No. 08 · Assessing Adversarial Robustness of Latent Reasoning Models
-
-**Shaolong Chen** · 一作 · 4 作者 · [arXiv:2609.22228](https://arxiv.org/abs/2609.22228)
-
-_Large language models increasingly rely on long chain-of-thought (CoT) trajectories for complex reasoning, but autoregressive generation brings substantial memory and inference costs. Latent reasoning models (LRMs) offe…_
-
-→ [profile](/researchers/shaolong-chen)
+→ [profile](/researchers/yuwei-liang)
 
 ---
-### No. 09 · What Guides the Agent? Adjudicating Unauthorized Behavior via Localizing Behavior-Guiding Instructions
+### No. 05 · Looped Diffusion Transformer
 
-**Yichao Gao** · 一作 · 7 作者 · [arXiv:2608.24022](https://arxiv.org/abs/2608.24022)
+**Yong Xien Chng** · 一作 · 10 作者 · [arXiv:2609.40305](https://arxiv.org/abs/2609.40305)
 
-_LLM agents integrated with external resources gain complex task capabilities, yet the unified natural-language context channel makes them vulnerable to injection attacks: untrusted external data may be dynamically parse…_
+_Improving text-to-image models has traditionally relied on increasing model size or the number of denoising steps. In this work, we explore an alternative way to scale computation by repeatedly running shared Transforme…_
 
-→ [profile](/researchers/yichao-gao)
+→ [profile](/researchers/yong-xien-chng)
 
 ---
-### No. 10 · Answer Presence Drives RAG Rewriting Gains
+### No. 06 · AURORA-LM: Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling
 
-**Yuejie Li** · 一作 · 10 作者 · [arXiv:2606.05633](https://arxiv.org/abs/2606.05633)
+**Jiajun Liang** · 一作 · 15 作者 · [arXiv:2608.02602](https://arxiv.org/abs/2608.02602)
 
-_Retrieval-augmented QA pipelines often route retrieved passages through an LLM \emph{rewriter} before a smaller reader, lifting F1 by tens of points on multi-hop benchmarks; this gain is typically credited to improved e…_
+_Language remains an outlier in generative modeling: while images, video, and audio are increasingly modeled in continuous latent spaces, text generation still relies predominantly on discrete tokens. Existing continuous…_
 
-→ [profile](/researchers/yuejie-li)
+→ [profile](/researchers/jiajun-liang)
+
+---
+### No. 07 · Is Semantics Enough for Speech Mean Opinion Score Prediction?
+
+**Tianyu Lan** · 一作 · 6 作者 · [arXiv:2609.03283](https://arxiv.org/abs/2609.03283)
+
+_Mean Opinion Score (MOS) is the gold standard for evaluating synthesized speech naturalness. However, current automatic MOS predictors are dominated by self-supervised learning (SSL) models that prioritize high-level se…_
+
+→ [profile](/researchers/tianyu-lan)
+
+---
+### No. 08 · Coherent manipulation of the biphoton generation in cavity-QED system
+
+**Jia-Ni Yang** · 一作 · 5 作者 · [arXiv:2606.29764](https://arxiv.org/abs/2606.29764)
+
+_We theoretically investigate the coherent manipulation of biphoton generation via spontaneous four-wave mixing in a cavity-QED system with a single atom. The atom is driven by pumping, coupling, and driving fields, and…_
+
+→ [profile](/researchers/jia-ni-yang)
+
+---
+### No. 09 · Broadband multiwavelength properties of the archetypal blazar 3C 279 during the 2017 Event Horizon Telescope campaign
+
+**G. Principe** · 一作 · 532 作者 · [arXiv:2606.25868](https://arxiv.org/abs/2606.25868)
+
+_The archetypal blazar 3C 279 hosts a prominent relativistic jet and exhibits strong broadband variability across the electromagnetic spectrum. In April 2017, the Event Horizon Telescope (EHT) observed 3C 279, alongside…_
+
+→ [profile](/researchers/g-principe)
+
+---
+### No. 10 · A Jet from a Nearly Dormant Black Hole
+
+**Xiaopeng Cheng** · 一作 · 14 作者 · [arXiv:2606.11900](https://arxiv.org/abs/2606.11900)
+
+_Most galaxies host supermassive black holes (SMBHs) that remain weakly accreting or dormant for much of their lifetimes. At the lowest accretion rates, these systems may represent the transition between active nuclei an…_
+
+→ [profile](/researchers/xiaopeng-cheng)
 
 ---
 
-## Section B · 🔄 动态更新 · 2 项
+## Section B · 🔄 动态更新 · 10 项
 
 | 研究者 | 新工作 | 主题 | arXiv |
 | --- | --- | --- | --- |
-| [Yilun Du](/researchers/yilun-du) | Robot Learning with Visual Predicted Force | — | [2610.04741](https://arxiv.org/abs/2610.04741) |
-| [Jiajun Wu](/researchers/jiajun-wu) | Robot Learning with Visual Predicted Force | — | [2610.04741](https://arxiv.org/abs/2610.04741) |
+| [Ping Luo](/researchers/ping-luo) | Beyond Future Prediction: Denoising as Generative Adaptation for Robo… | — | [2609.28339](https://arxiv.org/abs/2609.28339) |
+| [Bo Li](/researchers/bo-li-uchicago) | Atria Dawn: The Dawn of Agentic Superintelligence | — | [2609.15818](https://arxiv.org/abs/2609.15818) |
+| [Bowen Zhou](/researchers/bowen-zhou) | Atria Dawn: The Dawn of Agentic Superintelligence | — | [2609.15818](https://arxiv.org/abs/2609.15818) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Beamforming and Trajectory Optimization for Aerial RIS-Aided Secure I… | — | [2610.04885](https://arxiv.org/abs/2610.04885) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Looped Diffusion Transformer | — | [2609.40305](https://arxiv.org/abs/2609.40305) |
+| [Gao Huang](/researchers/gao-huang) | Looped Diffusion Transformer | — | [2609.40305](https://arxiv.org/abs/2609.40305) |
+| [Dahua Lin](/researchers/dahua-lin) | Looped Diffusion Transformer | — | [2609.40305](https://arxiv.org/abs/2609.40305) |
+| [Ziwei Liu](/researchers/ziwei-liu) | EgoTools: Towards Tool-Centric Reasoning in Real-World Egocentric Vid… | — | [2609.39378](https://arxiv.org/abs/2609.39378) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Learning Native Reflection in Unified Models with Interleaved Reinfor… | — | [2609.35767](https://arxiv.org/abs/2609.35767) |
+| [Ziwei Liu](/researchers/ziwei-liu) | Video-HopChain: Multi-Hop Questions and Confidence-Gated Exploration… | — | [2609.25773](https://arxiv.org/abs/2609.25773) |
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
@@ -233,138 +239,160 @@ _coming soon — 需要 faculty announcement scraper (清华/北大/Stanford 招
 
 ## Section E · 🔥 热门工作 · Top 10
 
-### No. 01 · MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement
+### No. 01 · Broadband multiwavelength properties of the archetypal blazar 3C 279 during the 2017 Event Horizon Telescope campaign
 
-**Xiaomi LLM-Core Team** · 一作 · 150 作者 · [arXiv:2610.11959](https://arxiv.org/abs/2610.11959)
+**G. Principe** · 一作 · 532 作者 · [arXiv:2606.25868](https://arxiv.org/abs/2606.25868)
 
-_Reinforcement learning (RL) is the central training paradigm for advancing large foundation models towards self-improvement. This report introduces the MiMo-V2.6 series, an omni-modal family that pushes the frontier of…_
+_The archetypal blazar 3C 279 hosts a prominent relativistic jet and exhibits strong broadband variability across the electromagnetic spectrum. In April 2017, the Event Horizon Telescope (EHT) observed 3C 279, alongside…_
 
-→ [profile](/researchers/xiaomi-llm-core-team)
-
----
-### No. 02 · Dense Cores in the Vicinity of an HII Region
-
-**Ruofei Zhang** · 一作 · 26 作者 · [arXiv:2608.27913](https://arxiv.org/abs/2608.27913)
-
-_Massive stars strongly influence their surroundings through radiative and mechanical feedback, but its effects on dense gas structures at sub-pc scales remain poorly constrained. We investigate how feedback from a newly…_
-
-→ [profile](/researchers/ruofei-zhang)
+→ [profile](/researchers/g-principe)
 
 ---
-### No. 03 · The Past Frames the Future: Memory for Autoregressive Video Generation
+### No. 02 · Dynamics and geometry of the inner sub-parsec-scale jet in 3C 279 observed with the Event Horizon Telescope
 
-**Harold Haodong Chen** · 一作 · 25 作者 · [arXiv:2609.28466](https://arxiv.org/abs/2609.28466)
+**Hendrik Mueller** · 一作 · 278 作者 · [arXiv:2607.16104](https://arxiv.org/abs/2607.16104)
 
-_Advances in generative models have improved video fidelity, enabling long-horizon generation, interactive world modeling, and evolving visual environments. Autoregressive (AR) video generation extends visual sequences t…_
+_The 2021 Event Horizon Telescope observations resolve the innermost jet region of the blazar 3C279 with unprecedented detail. The reconstructed images consistently reveal a compact core elongated nearly orthogonal to th…_
 
-→ [profile](/researchers/harold-haodong-chen)
-
----
-### No. 04 · Magnetic Fields in Massive Star-forming Regions (MagMaR). IX. Radiative Torque Alignment and Disruption in NGC6334I
-
-**Vineet Rawat** · 一作 · 21 作者 · [arXiv:2609.03458](https://arxiv.org/abs/2609.03458)
-
-_Intense radiation from high-mass stars is expected to significantly affect dust grain alignment and evolution through RAdiative Torques (RATs). We investigate this effect in a massive star-forming region, NGC6334I, usin…_
-
-→ [profile](/researchers/vineet-rawat)
+→ [profile](/researchers/hendrik-mueller)
 
 ---
-### No. 05 · ReDeck: Step-Level Render-Grounded Refinement for Document-to-Slide Generation
+### No. 03 · Atria Dawn: The Dawn of Agentic Superintelligence
 
-**Muzhao Tian** · 一作 · 17 作者 · [arXiv:2609.00194](https://arxiv.org/abs/2609.00194)
+**Honglin Guo** · 一作 · 142 作者 · [arXiv:2609.15818](https://arxiv.org/abs/2609.15818)
 
-*步骤级渲染反馈的幻灯片迭代优化*
+*可验证经验管线训练科研智能体*
 
-_Document-to-slide generation is challenging because slides are dense editable artifacts that require both faithful content selection and precise spatial layout. Recent slide agents adopt iterative reflection, but typica…_
+_As AI agents become participants in the development of their successors, they reshape both the production of intelligence and the role of human researchers. We introduce Atria Dawn Preview, a foundation agentic language…_
 
-→ [profile](/researchers/muzhao-tian)
-
----
-### No. 06 · An Eccentric Massive Protobinary Assembled via a Core-merger Parabolic Encounter
-
-**Yao Wang** · 一作 · 17 作者 · [arXiv:2609.07390](https://arxiv.org/abs/2609.07390)
-
-_Most massive stars form in binary systems, which profoundly influence their subsequent evolution. However, how such systems form remains poorly understood, with several competing scenarios proposed, including disk fragm…_
-
-→ [profile](/researchers/yao-wang)
+→ [profile](/researchers/honglin-guo)
 
 ---
-### No. 07 · Audio Editing in the Era of Foundation Models: A Survey
+### No. 04 · SenseNova-U1.5: Towards Native Unified Visual Intelligence
 
-**Changhao Pan** · 一作 · 16 作者 · [arXiv:2606.23139](https://arxiv.org/abs/2606.23139)
+**Haiwen Diao** · 一作 · 65 作者 · [arXiv:2609.11929](https://arxiv.org/abs/2609.11929)
 
-_Audio editing aims to modify a given synthetic or real-world audio signal to satisfy specific user needs. As a promising yet challenging direction in AIGC, it has attracted increasing attention. Recent advances in audio…_
+_We launch SenseNova-U1.5, an 8B-MoT native unified multimodal model that understands, reasons about, and generates visual content within an encoder-free and VAE-free architecture. We strengthen its visual interface thro…_
 
-→ [profile](/researchers/changhao-pan)
-
----
-### No. 08 · SafeCoEvo: Co-Evolving Safety Harnesses and Guards for LLM Agents at Test-Time
-
-**Yu Cheng** · 一作 · 15 作者 · [arXiv:2609.36580](https://arxiv.org/abs/2609.36580)
-
-_LLM agents deployed in real-world environments continually encounter new tasks and safety risks, while execution feedback typically becomes available only after each task is completed. However, existing self-evolving ap…_
-
-→ [profile](/researchers/yu-cheng)
+→ [profile](/researchers/haiwen-diao)
 
 ---
-### No. 09 · HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing
+### No. 05 · VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning
 
-**Jianyu Wei** · 一作 · 15 作者 · [arXiv:2609.26368](https://arxiv.org/abs/2609.26368)
+**Junxiang Xu** · 一作 · 52 作者 · [arXiv:2608.26105](https://arxiv.org/abs/2608.26105)
 
-_Long-horizon and multi-turn agents typically generate short actions and process long observations from tools and environments. This growing context demands efficient prefill, compact KV-cache storage, and accurate long-…_
+_Native visual reasoning treats visual generation as the medium of reasoning itself: visual states (i.e. images and videos) are not merely inputs to be understood or outputs to be rendered, but first-class substrates for…_
 
-→ [profile](/researchers/jianyu-wei)
+→ [profile](/researchers/junxiang-xu)
 
 ---
-### No. 10 · AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks
+### No. 06 · SeekBrain: An Autonomous Multi-Agent System for Accelerating Neuroscience Discovery
 
-**Hongjin Qian** · 一作 · 14 作者 · [arXiv:2609.38288](https://arxiv.org/abs/2609.38288)
+**Jiamin Wu** · 一作 · 29 作者 · [arXiv:2607.29347](https://arxiv.org/abs/2607.29347)
 
-*用长程反思数据训练LLM智能体自我改进*
+*多智能体框架SeekBrain加速神经科学发现*
 
-_We present AREX-2, an effort to advance the self-improving capability of LLM agents, which we define as the ability to iteratively refine a solution at test time. This ability rests on two complementary capabilities: re…_
+_Modern neuroscience relies on integrating multi-scale, multimodal datasets to uncover the neural principles underlying intelligence. However, analytical challenges posed by highly heterogeneous data and fragmented workf…_
 
-→ [profile](/researchers/hongjin-qian)
+→ [profile](/researchers/jiamin-wu)
+
+---
+### No. 07 · InternVLA-A1.5: Unifying Understanding, Latent Foresight, and Action for Compositional Generalization
+
+**Haoxiang Ma** · 一作 · 29 作者 · [arXiv:2607.04988](https://arxiv.org/abs/2607.04988)
+
+_Unified models for robot manipulation aim to equip one policy with both the semantic priors of pretrained VLMs and the physical dynamics learned through future prediction. In practice, existing designs tend to erode the…_
+
+→ [profile](/researchers/haoxiang-ma)
+
+---
+### No. 08 · PhotoIFU: NIRCam as a Photometric Integral Field Unit for Mapping Feedback in Galaxies
+
+**Yongda Zhu** · 一作 · 28 作者 · [arXiv:2607.23020](https://arxiv.org/abs/2607.23020)
+
+_We present PhotoIFU, a workflow that uses deep multi-band imaging as a low-resolution photometric integral field unit. Applied to PSF-matched JWST/NIRCam imaging, PhotoIFU treats each spatial pixel as a coarse SED eleme…_
+
+→ [profile](/researchers/yongda-zhu)
+
+---
+### No. 09 · A Silicon Microstrip Detector for Power-Limited and Large Sensitive Area Applications
+
+**Dexing Miao** · 一作 · 27 作者 · [arXiv:2505.23050](https://arxiv.org/abs/2505.23050)
+
+_A silicon microstrip detector (SSD) has been developed to have state of the art spatial resolution and a large sensitive area under stringent power constraints. The design incorporates three floating strips with their b…_
+
+→ [profile](/researchers/dexing-miao)
+
+---
+### No. 10 · Can AI Agents Learn Their Way to the Top? Evaluating Heuristic Learning in a Long-Running Game Agent Competition
+
+**Kaisen Yang** · 一作 · 27 作者 · [arXiv:2610.12341](https://arxiv.org/abs/2610.12341)
+
+_Adversarial games have driven advances from heuristic search to reinforcement learning, yet learning and adapting strategies from limited samples remain challenging. AI agents offer an alternative by turning game experi…_
+
+→ [profile](/researchers/kaisen-yang)
 
 ---
 
 ✦ &nbsp; ✦ &nbsp; ✦
 
-## Section F · 🌙 Sleeper Picks · 3 个
+## Section F · 🌙 Sleeper Picks · 5 个
 
 _算法挑的「非显式但值得看」，每个写明被选中的原因。_
 
-### No. 01 · MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement
+### No. 01 · Broadband multiwavelength properties of the archetypal blazar 3C 279 during the 2017 Event Horizon Telescope campaign
 
-**Xiaomi LLM-Core Team** · 一作 · 150 作者 · [arXiv:2610.11959](https://arxiv.org/abs/2610.11959)
+**G. Principe** · 一作 · 532 作者 · [arXiv:2606.25868](https://arxiv.org/abs/2606.25868)
 
-_Reinforcement learning (RL) is the central training paradigm for advancing large foundation models towards self-improvement. This report introduces the MiMo-V2.6 series, an omni-modal family that pushes the frontier of…_
+_The archetypal blazar 3C 279 hosts a prominent relativistic jet and exhibits strong broadband variability across the electromagnetic spectrum. In April 2017, the Event Horizon Telescope (EHT) observed 3C 279, alongside…_
 
-**▸ 选中原因：首次出现 · 150 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 532 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/xiaomi-llm-core-team)
-
----
-### No. 02 · Dense Cores in the Vicinity of an HII Region
-
-**Ruofei Zhang** · 一作 · 26 作者 · [arXiv:2608.27913](https://arxiv.org/abs/2608.27913)
-
-_Massive stars strongly influence their surroundings through radiative and mechanical feedback, but its effects on dense gas structures at sub-pc scales remain poorly constrained. We investigate how feedback from a newly…_
-
-**▸ 选中原因：首次出现 · 26 作者合作（疑似大组新人）**
-
-→ [profile](/researchers/ruofei-zhang)
+→ [profile](/researchers/g-principe)
 
 ---
-### No. 03 · The Past Frames the Future: Memory for Autoregressive Video Generation
+### No. 02 · Dynamics and geometry of the inner sub-parsec-scale jet in 3C 279 observed with the Event Horizon Telescope
 
-**Harold Haodong Chen** · 一作 · 25 作者 · [arXiv:2609.28466](https://arxiv.org/abs/2609.28466)
+**Hendrik Mueller** · 一作 · 278 作者 · [arXiv:2607.16104](https://arxiv.org/abs/2607.16104)
 
-_Advances in generative models have improved video fidelity, enabling long-horizon generation, interactive world modeling, and evolving visual environments. Autoregressive (AR) video generation extends visual sequences t…_
+_The 2021 Event Horizon Telescope observations resolve the innermost jet region of the blazar 3C279 with unprecedented detail. The reconstructed images consistently reveal a compact core elongated nearly orthogonal to th…_
 
-**▸ 选中原因：首次出现 · 25 作者合作（疑似大组新人）**
+**▸ 选中原因：首次出现 · 278 作者合作（疑似大组新人）**
 
-→ [profile](/researchers/harold-haodong-chen)
+→ [profile](/researchers/hendrik-mueller)
+
+---
+### No. 03 · PhotoIFU: NIRCam as a Photometric Integral Field Unit for Mapping Feedback in Galaxies
+
+**Yongda Zhu** · 一作 · 28 作者 · [arXiv:2607.23020](https://arxiv.org/abs/2607.23020)
+
+_We present PhotoIFU, a workflow that uses deep multi-band imaging as a low-resolution photometric integral field unit. Applied to PSF-matched JWST/NIRCam imaging, PhotoIFU treats each spatial pixel as a coarse SED eleme…_
+
+**▸ 选中原因：首次出现 · 28 作者合作（疑似大组新人）**
+
+→ [profile](/researchers/yongda-zhu)
+
+---
+### No. 04 · Chronos Policy: Learning Robot Policies on Physical Time
+
+**Changhao Wang** · 一作 · 3 作者 · [arXiv:2610.13929](https://arxiv.org/abs/2610.13929)
+
+_Robot policies often convert sensing and control into fixed-rate observation-action sequences, leaving physical time implicit in sequence position. This assumption breaks when observation rates or delays vary, or when i…_
+
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+
+→ [profile](/researchers/changhao-wang)
+
+---
+### No. 05 · Evolution and breakdown of chiral anomaly in Weyl semiconductor tellurium
+
+**Zhifeng Xue** · 一作 · 19 作者 · [arXiv:2610.13084](https://arxiv.org/abs/2610.13084)
+
+_Chiral anomaly in topological materials manifests as negative longitudinal magnetoresistance, yet the tunability and evolution of this effect remain elusive. Here we show that doped tellurium serves as a versatile platf…_
+
+**▸ 选中原因：首次出现 · 与已知 anchor 同作论文（疑似学生）**
+
+→ [profile](/researchers/zhifeng-xue)
 
 ---
 
